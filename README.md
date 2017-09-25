@@ -1,4 +1,4 @@
 Installation
 ============
 
-Run ./install_dependencies.sh
+Run `make install-deps`.
