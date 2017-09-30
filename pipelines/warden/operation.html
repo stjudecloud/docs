@@ -1,0 +1,473 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Pipeline Operation &mdash; St. Jude Tools Documentation 1.0.0b documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="St. Jude Tools Documentation 1.0.0b documentation" href="../../index.html"/>
+        <link rel="up" title="WARDEN Differential Expression" href="index.html"/>
+        <link rel="next" title="Monitoring Run Progress" href="monitoring.html"/>
+        <link rel="prev" title="Overview" href="overview.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> St. Jude Tools Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tool Guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../rapid-rnaseq/index.html">Rapid RNA-Seq</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chipseq/index.html">ChIP-Seq Peak Calling</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">WARDEN Differential Expression</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Pipeline Operation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#uploading-data">Uploading Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sample-sheet-preparation">Sample Sheet Preparation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#microsoft-excel">Microsoft Excel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#text-editor">Text Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pipeline-configuration">Pipeline Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-bootstrap-workflow">Step 1: Bootstrap Workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-run-workflow">Step 2: Run Workflow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="monitoring.html">Monitoring Run Progress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigate.html">Navigating Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html">Analysis of Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../neoepitope/index.html">HLA Typing and Neoepitope Prediction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Visualization Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../visualizations/bigwig.html">ProteinPaint BigWig Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../visualizations/fusion-viewer.html">ProteinPaint Fusion Viewer</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../dx-toolkit.html">Command Line Interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../desktop-application.html">St. Jude Cloud Desktop Application</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">St. Jude Tools Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">WARDEN Differential Expression</a> &raquo;</li>
+        
+      <li>Pipeline Operation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/pipelines/warden/operation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pipeline-operation">
+<h1>Pipeline Operation<a class="headerlink" href="#pipeline-operation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="uploading-data">
+<span id="warden-upload"></span><h2>Uploading Data<a class="headerlink" href="#uploading-data" title="Permalink to this headline">¶</a></h2>
+<p>The WARDEN Differential Expression analysis pipeline takes Gzipped FastQ files generated from
+RNA-Seq data as input. You can upload the files you would like to run using the
+<a class="reference internal" href="../../desktop-application.html#desktop-application"><span class="std std-ref">St. Jude Cloud Desktop Application</span></a> or by uploading data manually using the <a class="reference internal" href="../../dx-toolkit.html#dx-toolkit"><span class="std std-ref">Command Line Interaction</span></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You should click &#8220;Launch this tool&#8221; before attempting to upload data
+to the tool (the tool&#8217;s workspace is only created once you do this). After you
+are redirected, you can safely close the tab that was just opened.</p>
+</div>
+</div>
+<div class="section" id="sample-sheet-preparation">
+<span id="warden-sample-sheet"></span><h2>Sample Sheet Preparation<a class="headerlink" href="#sample-sheet-preparation" title="Permalink to this headline">¶</a></h2>
+<p>Once your data is uploaded, you&#8217;ll need to create a sample sheet which describes
+the relationship between case and control samples, phenotype/condition information,
+and the comparisons you would like to perform. The sample sheet is a tab-delimited
+text document that can be created in Microsoft Excel (recommended) or a text editor.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You will also need to upload your sample sheet following the instructions
+at <a class="reference internal" href="#warden-upload"><span class="std std-ref">Uploading Data</span></a>.</p>
+</div>
+<div class="section" id="microsoft-excel">
+<h3>Microsoft Excel<a class="headerlink" href="#microsoft-excel" title="Permalink to this headline">¶</a></h3>
+<p><strong>Recommended</strong>: Download the <a class="reference download internal" href="../../_downloads/samplesheet.xlsx" download=""><code class="xref download docutils literal"><span class="pre">sample</span> <span class="pre">excel</span> <span class="pre">spreadsheet</span></code></a>.</p>
+<p>The final product for the excel spreadsheet will look like this. The
+screenshot below. If you create the sample sheet from scratch, please
+ensure the the columns are <em>exactly</em> in this order.</p>
+<blockquote>
+<div><img alt="../../_images/Excel_example.png" src="../../_images/Excel_example.png" />
+</div></blockquote>
+<div class="section" id="sample-rows">
+<h4>Sample Rows<a class="headerlink" href="#sample-rows" title="Permalink to this headline">¶</a></h4>
+<p>Each row in the spreadsheet (disregarding the last row) corresponds to
+a sample (either one or two fastq files). You should fill in these rows
+based on your data.</p>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p>Please use these guidelines when filling in the sample sheet.</p>
+<ul class="last simple">
+<li>The sample name should be unique and should only contain letters, numbers and underscores.</li>
+<li>The condition/phenotype column associates similar samples together. The values should contain only letters, numbers and underscores.</li>
+<li>ReadFile1 should contain forward reads (e.g. <code class="code docutils literal"><span class="pre">*.R1.fastq.gz</span></code> or <code class="code docutils literal"><span class="pre">*_1.fastq.gz</span></code>)</li>
+<li>ReadFile2 will contain reads in reverse orientation to ReadFile2. (e.g. <code class="code docutils literal"><span class="pre">*.R2.fastq.gz</span></code> or <code class="code docutils literal"><span class="pre">*_2.fastq.gz</span></code>).</li>
+<li>For single end reads a single dash (&#8216;-&#8216;) should be entered in the ReadFile2 column.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="comparison-row">
+<h4>Comparison Row<a class="headerlink" href="#comparison-row" title="Permalink to this headline">¶</a></h4>
+<p>The last line in the sample sheet is called the &#8220;comparison row&#8221;. This line
+specifies the comparisons to be done between conditions/phenotypes.
+All pairwise combinations can be analyzed.
+To specifiy the comparisons, on a seperate line, include <code class="code docutils literal"><span class="pre">#comparisons=</span></code>  followed be a comma separated list of two conditions separated by a dash.
+The following lines are all valid examples.</p>
+<ol class="arabic simple">
+<li><code class="code docutils literal"><span class="pre">#comparisons=KO-WT</span></code></li>
+<li><code class="code docutils literal"><span class="pre">#comparisons=Condition1-Control,Condition2-Control</span></code></li>
+<li><code class="code docutils literal"><span class="pre">#comparisons=Phenotype2-Phenotype1,Phenotype3-Phenotype2,Phenotype3-Phenotype1</span></code></li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If a comparison has at least 3 samples for each condition/phenotype, VOOM/LIMMA will be run.  A simple differential comparison will be run on all samples.</p>
+</div>
+</div>
+<div class="section" id="finalizing-the-sample-sheet">
+<h4>Finalizing the Sample Sheet<a class="headerlink" href="#finalizing-the-sample-sheet" title="Permalink to this headline">¶</a></h4>
+<p>To finalize the sample sheet, save the Microsoft Excel file with whatever name
+you like. Save the file as an Excel Workbook with the .xlsx extension.</p>
+</div>
+</div>
+<div class="section" id="text-editor">
+<h3>Text Editor<a class="headerlink" href="#text-editor" title="Permalink to this headline">¶</a></h3>
+<p>Creating a sample sheet with a text editor is an option for advanced users.</p>
+<p><strong>Recommended</strong>: Download the <a class="reference download internal" href="../../_downloads/samplesheet.txt" download=""><code class="xref download docutils literal"><span class="pre">sample</span> <span class="pre">text</span> <span class="pre">file</span></code></a>.</p>
+<p>The process of creating a sample sheet with a text editor is the same as creating
+one with Microsoft Excel, with the small difference that you must manually create
+your columns using the tab character.  Save the file with a .txt extension.</p>
+</div>
+</div>
+<div class="section" id="pipeline-configuration">
+<h2>Pipeline Configuration<a class="headerlink" href="#pipeline-configuration" title="Permalink to this headline">¶</a></h2>
+<p>Click “Launch this tool” on the <a class="reference external" href="https://platform.stjude.cloud/tools/4">tool’s landing page</a>.
+You will be redirected to the tool’s workspace, and the workflow screen should
+automatically pop up.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The WARDEN tool operation is slightly different than the other pipelines
+because it accepts a variable number of samples. <strong>First</strong>, you will run
+a &#8220;bootstrapping&#8221; step that creates a custom executable for your analysis.
+<strong>Second</strong>, you will need to manually execute the generated workflow from
+the first step. This allows us to take
+advantage of many nice features, like checkpointing and cost-reduction.</p>
+</div>
+<div class="section" id="step-1-bootstrap-workflow">
+<h3>Step 1: Bootstrap Workflow<a class="headerlink" href="#step-1-bootstrap-workflow" title="Permalink to this headline">¶</a></h3>
+<p>The required inputs appear on the left side of the
+screen. You should see an image similar to the picture below.</p>
+<img alt="../../_images/warden-inputs.png" src="../../_images/warden-inputs.png" />
+<ol class="arabic">
+<li><p class="first">Click on the <code class="code docutils literal"><span class="pre">FASTQ_FILES</span></code> field.</p>
+<img alt="../../_images/FASTQ_select.png" src="../../_images/FASTQ_select.png" />
+</li>
+<li><p class="first">In the file dialog that pops up, select the FastQ files that will be included in the analysis.
+Where the FastQ files will be depends on how you uploaded them, but usually, they will either
+be in the main folder that pops up or the &#8220;uploads&#8221; folder in the left pane.</p>
+<img alt="../../_images/Select_fastqs.png" src="../../_images/Select_fastqs.png" />
+</li>
+<li><p class="first">Once you are done selecting FastQ files, press &#8220;Select&#8221;.</p>
+<img alt="../../_images/FASTQS_press_select.png" src="../../_images/FASTQS_press_select.png" />
+</li>
+<li><p class="first">Click on the the <code class="code docutils literal"><span class="pre">sampleList</span></code> input box.</p>
+<img alt="../../_images/SampleSheet_select.png" src="../../_images/SampleSheet_select.png" />
+</li>
+<li><p class="first">Select the sample sheet that you uploaded in <a class="reference internal" href="#warden-sample-sheet"><span class="std std-ref">Sample Sheet Preparation</span></a>.  This should be an Excel workbook with the .xlsx extension or a plain tab-delimited text file with a .txt extension.</p>
+<img alt="../../_images/SampleSheet_select_2.png" src="../../_images/SampleSheet_select_2.png" />
+</li>
+</ol>
+<p>All of the input files should now be hooked up. Next, we need to configure the
+remaining parameters for the pipeline, such as reference genome and sequencing method.</p>
+<ol class="arabic">
+<li><p class="first">Click on the black box labelled <code class="code docutils literal"><span class="pre">WARDEN</span> <span class="pre">WORKFLOW</span> <span class="pre">GENERATOR</span></code>.</p>
+<img alt="../../_images/Parameter_select2.png" src="../../_images/Parameter_select2.png" />
+</li>
+<li><p class="first">In the <code class="code docutils literal"><span class="pre">Output</span> <span class="pre">Folder</span></code> field, select a folder to output to. You can structure your
+experiments however you like (if you&#8217;re not sure, just use <code class="code docutils literal"><span class="pre">/</span></code>).</p>
+<img alt="../../_images/OutputFolder.png" src="../../_images/OutputFolder.png" />
+</li>
+<li><p class="first">In the <code class="code docutils literal"><span class="pre">analysisName</span></code> field, enter a prefix for all of the output files.</p>
+<img alt="../../_images/AnalysisName.png" src="../../_images/AnalysisName.png" />
+</li>
+<li><p class="first">Select the <code class="code docutils literal"><span class="pre">sequenceStandedness</span></code> pull down menu. Choose the appropriate box.  This information can be determined from the sequencing or source of the data.  If unknown select &#8220;no&#8221;.</p>
+<img alt="../../_images/select_strandedness.png" src="../../_images/select_strandedness.png" />
+</li>
+<li><p class="first">Select the <code class="code docutils literal"><span class="pre">Genome</span></code> pulldown menu. Choose the appropriate box.</p>
+<img alt="../../_images/select_genome.png" src="../../_images/select_genome.png" />
+</li>
+<li><p class="first">The LIMMA parameters can be left alone for most analyses. If you
+are an advanced LIMMA user, you can change the various settings
+exposed below the required parameters.</p>
+</li>
+<li><p class="first">When all parameters have been set, the save button can be selected.</p>
+<img alt="../../_images/parameters_save.png" src="../../_images/parameters_save.png" />
+</li>
+</ol>
+<p>Once your inputs are selected, you should be able to start the workflow by clicking the
+&#8220;Run as Analysis...&#8221; button in the top right hand corner of the workflow dialog.</p>
+<img alt="Running the workflow" src="../../_images/Run_as_analysis.png" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you cannot click this button, please ensure that <strong>(1)</strong> all of the inputs are correctly hooked up and <strong>(2)</strong> all of the required parameters are set.</p>
+</div>
+</div>
+<div class="section" id="step-2-run-workflow">
+<h3>Step 2: Run Workflow<a class="headerlink" href="#step-2-run-workflow" title="Permalink to this headline">¶</a></h3>
+<p>You will see the workflow generator running, similar to the screenshot below.</p>
+<blockquote>
+<div><img alt="../../_images/warden_generator_in_progress.png" src="../../_images/warden_generator_in_progress.png" />
+</div></blockquote>
+<p>When the custom workflow has finished generating, the word &#8216;Done&#8217; will
+appear in green in the status column. This indicates that the bootstrapping
+step has completed successfully. Now, you need to run the custom workflow
+manually.</p>
+<ol class="arabic">
+<li><p class="first">Wait for the workflow generator to finish.</p>
+</li>
+<li><p class="first">Click on the WARDEN name in the name column.</p>
+<img alt="../../_images/warden_generator_done.png" src="../../_images/warden_generator_done.png" />
+</li>
+<li><p class="first">You will now be on a page specific to the running of the workflow.  On the left side, you will see the inputs you selected for the workflow generator.  On the right side are the output files (including the generated workflow). Select the generated workflow as shown in the picture below.</p>
+<img alt="../../_images/Workflow_generator_output.png" src="../../_images/Workflow_generator_output.png" />
+</li>
+<li><p class="first">You will now be within the output folder you specified earlier. Select the file that begins with &#8216;WARDEN WORKFLOW:&#8217;</p>
+<img alt="../../_images/Select_WARDEN_WORKFLOW.png" src="../../_images/Select_WARDEN_WORKFLOW.png" />
+</li>
+<li><p class="first">A workflow generated for your data will be presented to you.  Select &#8216;Run as analysis&#8217; in the upper right.</p>
+<img alt="../../_images/run_as_analysis_2.png" src="../../_images/run_as_analysis_2.png" />
+</li>
+<li><p class="first">The workflow will initiate, and you will be brought to the &#8216;Monitor&#8217; page.  (Note to get back to this page, you can select &#8216;Monitor&#8217; on one of the menu bars near the top )  Expand the the workflow progress be selecting the &#8216;+&#8217; sign next to &#8216;In Progress&#8217;</p>
+<img alt="../../_images/workflowrunning.png" src="../../_images/workflowrunning.png" />
+</li>
+<li><p class="first">As parts of the pipeline are run, you will see different tasks in different colors.  Green means done, blue is running, orange is waiting, and red means error.</p>
+<img alt="../../_images/Workflow_running_status.png" src="../../_images/Workflow_running_status.png" />
+</li>
+<li><p class="first">When done the status will be shown as &#8216;Done&#8217;. Select the Workflow name under Status.</p>
+<img alt="../../_images/Workflow_done.png" src="../../_images/Workflow_done.png" />
+</li>
+<li><p class="first">You will be brought to a page that show more information about the workflow analysis.  Click on the output folder to go to the output.</p>
+<img alt="../../_images/Workflow_done2.png" src="../../_images/Workflow_done2.png" />
+</li>
+<li><p class="first">The output folders will now be shown.</p>
+<img alt="../../_images/Workflow_output.png" src="../../_images/Workflow_output.png" />
+</li>
+</ol>
+<p>For a description of the output, please refer to <a class="reference internal" href="results.html#warden-results"><span class="std std-ref">Analysis of Results</span></a>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="monitoring.html" class="btn btn-neutral float-right" title="Monitoring Run Progress" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="overview.html" class="btn btn-neutral" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2017 St. Jude Developers.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0b',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
