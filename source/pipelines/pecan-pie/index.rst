@@ -16,7 +16,9 @@ PeCan PIE
 Introduction
 ------------
 
-The growing popularity of genome-wide germline genetic testing highlights a need for improved variant annotation, triage and pathogenicity classification. We developed "PeCan-PIE" (the **Pe**\ diatric **Can**\ cer Variant **P**\ athogenicity **I**\ nformation **E**\ xchange) – a web portal facilitating:
+PeCan PIE (the **Pe**\ diatric **Can**\ cer Variant **P**\ athogenicity **I**\ nformation **E**\ xchange) is a free cloud-based variant annotation and presentation service. This tool annotates and prioritizes variants, then displays them in an interactive web interface ready for review. Pecan PIE utilizes St. Jude Medal Ceremony - the same pipeline that powers our clinical and research genomics projects. Go to https://pecan.stjude.org/pie to get started!
+
+The growing popularity of genome-wide germline genetic testing highlights a need for improved variant annotation, triage and pathogenicity classification. We developed "PeCan-PIE"  – a web portal facilitating:
 
 
 1. automated annotation, classification and triage with our "Medal Ceremony" pipeline
@@ -25,6 +27,8 @@ The growing popularity of genome-wide germline genetic testing highlights a need
 
 
 Medal Ceremony provides a 3-level ranking - Gold, Silver or Bronze - of putative pathogenicity for mutations within cancer-related genes. Medal assignment is based on matches to 22 mutation databases, mutation type, population frequency, tumor suppressor status and predicted functional impact. The evidence used for medal assignment is imported into an interactive variant review page where an analyst can enter additional curated information such as primary diagnosis, presence of subsequent neoplasm, family history and literature. ACMG/AMP classification tags can be manually assigned to curated data enabling automated calculation of pathogenicity rating based on ACMG/AMP 2015 guidelines.
+
+ 
 
 Contents
 --------
