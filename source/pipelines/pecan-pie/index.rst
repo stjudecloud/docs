@@ -3,7 +3,7 @@
 PeCan PIE
 =========
 
-* **Authors**: Aman Patel, Michael Edmonson
+* **Authors**: Michael Edmonson, Aman Patel
 * **Technical Support**: `Aman Patel <mailto:aman.patel@stjude.org>`_ (PIE portal), `Michael Edmonson <mailto:michael.edmonson@stjude.org>`_ (Medal Ceremony)
 * **Publication**: `Zhang et al., NEJM 2015 <http://www.nejm.org/doi/full/10.1056/NEJMoa1508054#t=article>`_ (supplementary appendix pp. 7-10)
 * **Input**: VCF file of SNVs and indels
@@ -25,6 +25,9 @@ The growing popularity of genome-wide germline genetic testing highlights a need
 
 
 Medal Ceremony provides a 3-level ranking - Gold, Silver or Bronze - of putative pathogenicity for mutations within cancer-related genes. Medal assignment is based on matches to 22 mutation databases, mutation type, population frequency, tumor suppressor status and predicted functional impact. The evidence used for medal assignment is imported into an interactive variant review page where an analyst can enter additional curated information such as primary diagnosis, presence of subsequent neoplasm, family history and literature. ACMG/AMP classification tags can be manually assigned to curated data enabling automated calculation of pathogenicity rating based on ACMG/AMP 2015 guidelines.
+
+See :download:`slides <resources/pecanpie_ASHG_2017.pptx>` presented at the ASHG 2017 annual meeting.
+
 
 Contents
 --------
