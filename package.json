@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/stjude/sjcloud-docs#readme",
   "scripts": {
-    "deploy": "gh-pages-deploy"
+    "deploy": "gh-pages-deploy",
+    "makehtml": "make html"
   },
   "gh-pages-deploy": {
     "staticpath": "build/html",
