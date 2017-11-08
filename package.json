@@ -22,7 +22,7 @@
   "gh-pages-deploy": {
     "staticpath": "build/html",
     "prep": [
-      "make html"
+      "makehtml"
     ],
     "noprompt": false
   },
