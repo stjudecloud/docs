@@ -5,28 +5,22 @@ PeCan PIE
 
 * **Authors**: Michael Edmonson, Aman Patel
 * **Technical Support**: `Aman Patel <mailto:aman.patel@stjude.org>`_ (PIE portal), `Michael Edmonson <mailto:michael.edmonson@stjude.org>`_ (Medal Ceremony)
-* **Publication**: `Zhang et al., NEJM 2015 <http://www.nejm.org/doi/full/10.1056/NEJMoa1508054#t=article>`_ (supplementary appendix pp. 7-10)
+* **Publication**: `Zhang et al., NEJM 2015 <http://www.nejm.org/doi/full/10.1056/NEJMoa1508054#t=article>`_, supplementary appendix pp. 7-10
 * **Input**: VCF file of SNVs and indels
 * **Output**: gold, silver, and bronze classifications of potential clinical signficance
 * **Supported Genome Builds**: GRCh37 (hg19)
-
-.. TO DO: ASHG 2017 slides, internal links
 
   
 Introduction
 ------------
 
-The growing popularity of genome-wide germline genetic testing highlights a need for improved variant annotation, triage and pathogenicity classification. We developed "PeCan-PIE" (the **Pe**\ diatric **Can**\ cer Variant **P**\ athogenicity **I**\ nformation **E**\ xchange) – a web portal facilitating:
+PeCan PIE (the **Pe**\ diatric **Can**\ cer Variant **P**\ athogenicity **I**\ nformation **E**\ xchange) is a cloud-based variant classification and interpretation service.  It annotates and ranks variants by putative pathogenicity, then displays them in an interactive web interface for formal review and classification following ACMG guidelines. The portal also contains a repository of expert-reviewed germline mutations that may predispose individuals to cancer.  It is free for non-commercial use.
 
+Pecan PIE utilizes St. Jude Medal Ceremony, the same pipeline that powers our clinical and research genomics projects.  Medal Ceremony provides a 3-level ranking of putative pathogenity - Gold, Silver or Bronze - for mutations within cancer-related genes. Medal assignment is based on matches to 22 mutation databases, mutation type, population frequency, tumor suppressor status and predicted functional impact. The evidence used for medal assignment is imported into an interactive variant review page where an analyst can enter additional curated information such as primary diagnosis, presence of subsequent neoplasm, family history and related literature. Classification tags can be manually assigned to curated data enabling automated calculation of pathogenicity rating based on ACMG/AMP 2015 guidelines.
 
-1. automated annotation, classification and triage with our "Medal Ceremony" pipeline
-2. an interactive variant page for curation and committee review
-3. a repository of expert-reviewed germline mutations that may predispose individuals to cancer
+See :download:`PowerPoint slides <resources/pecanpie_ASHG_2017.pptx>` presented at the ASHG 2017 annual meeting.
 
-
-Medal Ceremony provides a 3-level ranking - Gold, Silver or Bronze - of putative pathogenicity for mutations within cancer-related genes. Medal assignment is based on matches to 22 mutation databases, mutation type, population frequency, tumor suppressor status and predicted functional impact. The evidence used for medal assignment is imported into an interactive variant review page where an analyst can enter additional curated information such as primary diagnosis, presence of subsequent neoplasm, family history and literature. ACMG/AMP classification tags can be manually assigned to curated data enabling automated calculation of pathogenicity rating based on ACMG/AMP 2015 guidelines.
-
-See :download:`slides <resources/pecanpie_ASHG_2017.pptx>` presented at the ASHG 2017 annual meeting.
+Go to https://pecan.stjude.org/pie to get started!
 
 
 Contents
