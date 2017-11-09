@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Frequently Asked Questions &mdash; St. Jude Tools Documentation 1.0.0b documentation</title>
+  <title>Pipeline Operation &mdash; St. Jude Tools Documentation 1.0.0b documentation</title>
   
 
   
@@ -38,9 +38,9 @@
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="St. Jude Tools Documentation 1.0.0b documentation" href="../../index.html"/>
-        <link rel="up" title="ChIP-Seq Peak Calling" href="index.html"/>
-        <link rel="next" title="WARDEN Differential Expression" href="../warden/index.html"/>
-        <link rel="prev" title="Analysis of Results" href="results.html"/> 
+        <link rel="up" title="PeCan PIE" href="index.html"/>
+        <link rel="next" title="Analysis of Results" href="results.html"/>
+        <link rel="prev" title="Overview" href="overview.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -96,17 +96,25 @@
               <p class="caption"><span class="caption-text">Tool Guides</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../rapid-rnaseq/index.html">Rapid RNA-Seq</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">ChIP-Seq Peak Calling</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="operation.html">Pipeline Operation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="monitoring.html">Monitoring Run Progress</a></li>
-<li class="toctree-l2"><a class="reference internal" href="navigate.html">Navigating Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="results.html">Analysis of Results</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Frequently Asked Questions</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../chipseq/index.html">ChIP-Seq Peak Calling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../warden/index.html">WARDEN Differential Expression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../neoepitope/index.html">HLA Typing and Neoepitope Prediction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pecan-pie/index.html">PeCan PIE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">PeCan PIE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#introduction">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#contents">Contents</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Pipeline Operation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#logging-in">Logging in</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#uploading-data">Uploading Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#progress-page">Progress page</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="results.html">Analysis of Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Visualization Guides</span></p>
 <ul>
@@ -161,15 +169,15 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">ChIP-Seq Peak Calling</a> &raquo;</li>
+          <li><a href="index.html">PeCan PIE</a> &raquo;</li>
         
-      <li>Frequently Asked Questions</li>
+      <li>Pipeline Operation</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/pipelines/chipseq/faq.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/pipelines/pecan-pie/operation.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -182,27 +190,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="frequently-asked-questions">
-<span id="chipseq-faq"></span><h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h1>
-<p>If you have any questions not covered here, feel free to reach out on
-<a class="reference external" href="https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-contact/">our contact form</a>.</p>
-<p><strong>Q: Should I choose narrow peak calling pipeline or broad peak calling pipeline?</strong></p>
-<blockquote>
-<div>We built two workflows: one for narrow peak calling and another broad peak calling.
-If your target protein is a transcription factor, please use
-narrow peak calling workflow. For histone marks H3K4me3, H3K4me2, H3K9-14ac,
-H3K27ac and H2A.Z, you could try narrow peak calling workflow. For histone
-marks H3K36me3, H3K79me2, H3K27me3, H3K9me3 and H3K9me1, you could try broad
-peak calling workflow. In some scenario, H3K4me1, H3K9me2 and H3K9me3 might
-behave between narrow and broad shape, you might need to look into each peak
-region and consult experts.</div></blockquote>
-<p><strong>Q. What to do if your fragment size is less than 50 base pairs?</strong></p>
-<blockquote>
-<div>We estimate fragment size from the data based on the cross correlation plot.
-Usually the fragment size is above 50bp. If the estimated fragment size lower
-than 50bp, the workflow will stop at the peak calling stage (MACS2/SICER)
-after BWA mapping finishes. You can rerun the analysis with a specified
-fragment length.</div></blockquote>
+  <div class="section" id="pipeline-operation">
+<h1>Pipeline Operation<a class="headerlink" href="#pipeline-operation" title="Permalink to this headline">¶</a></h1>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">This pipeline assumes GRCh37/hg19 coordinates.</p>
+</div>
+<div class="section" id="logging-in">
+<h2>Logging in<a class="headerlink" href="#logging-in" title="Permalink to this headline">¶</a></h2>
+<p>Start by logging into the portal with a dnanexus account, creating an account if you need one.  PIE uses dnanexus as a secure cloud backend; logging in is required for private storage of your data and so that we can send you e-mail notifications when your analysis jobs are complete.  PIE is free for non-commercial use; St. Jude pays the (small) cloud computing costs, your dnanexus account will not be billed.</p>
+</div>
+<div class="section" id="uploading-data">
+<h2>Uploading Data<a class="headerlink" href="#uploading-data" title="Permalink to this headline">¶</a></h2>
+<p>PeCan PIE takes standard VCF files as input.  The files must comply
+with the VCF specification, see the <a class="reference internal" href="faq.html"><span class="doc">FAQ</span></a> for information about how
+to verify your files are compatible.</p>
+<p>Click on the upload button and select a VCF file from your computer, or drag-and-drop your VCF file to upload it.</p>
+</div>
+<div class="section" id="progress-page">
+<h2>Progress page<a class="headerlink" href="#progress-page" title="Permalink to this headline">¶</a></h2>
+<p>After uploading is complete you will be taken to a status screen showing
+the progress of your job through the system.  Analysis typically
+takes 10-15 minutes depending on file size and system availability.</p>
+<p>It isn’t necessary to keep your browser open on this page until your
+results are ready: the system will e-mail you with a link to return
+to your results.  Optional browser notifications are also available.</p>
+</div>
 </div>
 
 
@@ -215,10 +228,10 @@ fragment length.</div></blockquote>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../warden/index.html" class="btn btn-neutral float-right" title="WARDEN Differential Expression" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="results.html" class="btn btn-neutral float-right" title="Analysis of Results" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="results.html" class="btn btn-neutral" title="Analysis of Results" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="overview.html" class="btn btn-neutral" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

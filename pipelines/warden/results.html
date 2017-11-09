@@ -148,6 +148,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../neoepitope/index.html">HLA Typing and Neoepitope Prediction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pecan-pie/index.html">PeCan PIE</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Visualization Guides</span></p>
 <ul>
@@ -247,7 +248,7 @@
 <p>Several files on DNAnexus allow the data to be viewed in the Protein Paint viewer.  (Note: We plan to have links downloaded in the future to allow the viewing of these files off of DNAnexus.)</p>
 <div class="section" id="limma-differential-expression-viewer">
 <h3>LIMMA differential expression viewer<a class="headerlink" href="#limma-differential-expression-viewer" title="Permalink to this headline">¶</a></h3>
-<p>Within LIMMA/VIEWERS direcory (note if no comparisons meet the 3 sample condition, the LIMMA folder will not exist),  there will be a viewer file for each valid comparison ( <strong>results.*.txt.viewer</strong>).  Simply select the file and press &#8216;Launch viewer&#8217; in the lower right.   A viewer will pop up showing both the MA Plot and Volcano plot.  By moving the mouse over a circle, the circle will hilight and the corresponding gene on the other graph will also hilight.  Additional information about the gene and its expression values will also be shown.  One can also type in multiple gene symbols in the provided text box.  By pressing &#8216;Show gene labels&#8217;  all these genes will show up on the plots.</p>
+<p>Within LIMMA/VIEWERS direcory (note if no comparisons meet the 3 sample condition, the LIMMA folder will not exist),  there will be a viewer file for each valid comparison ( <strong>results.*.txt.viewer</strong>).  Simply select the file and press ‘Launch viewer’ in the lower right.   A viewer will pop up showing both the MA Plot and Volcano plot.  By moving the mouse over a circle, the circle will hilight and the corresponding gene on the other graph will also hilight.  Additional information about the gene and its expression values will also be shown.  One can also type in multiple gene symbols in the provided text box.  By pressing ‘Show gene labels’  all these genes will show up on the plots.</p>
 <img alt="../../_images/ma_volcano.png" src="../../_images/ma_volcano.png" />
 </div>
 <div class="section" id="simple-differential-expression-viewer">
@@ -256,7 +257,7 @@
 </div>
 <div class="section" id="bigwig-viewer">
 <h3>bigWig viewer<a class="headerlink" href="#bigwig-viewer" title="Permalink to this headline">¶</a></h3>
-<p>In the BIGWIG_VIEWER directory there will be a bigwigViewer file. Select this file and then &#8216;Launch viewer&#8217;.  A graph of coverage for the genome should be visible.</p>
+<p>In the BIGWIG_VIEWER directory there will be a bigwigViewer file. Select this file and then ‘Launch viewer’.  A graph of coverage for the genome should be visible.</p>
 </div>
 </div>
 <div class="section" id="additional-results">
@@ -272,7 +273,7 @@
 <p>(Within the DNAnexus  output directory structure, these files will be in the LIMMA directory.)</p>
 <p>For plain text results from the simple differential expresison analysis, the files will be named <strong>simpleDE.*.txt</strong>.</p>
 <p>(Within the DNAnexus  output directory structure, these files will be in the SIMPLE_DIFEX directory.)</p>
-<p>Prelabelled MA and volcano plots are provided for the analysis. These files are labeled <strong>maPlot.*.png</strong> amd <strong>volcanoPlot.*.png</strong> where &#8216;*&#8217; is the comparison (e.g. ko_vs_wt)</p>
+<p>Prelabelled MA and volcano plots are provided for the analysis. These files are labeled <strong>maPlot.*.png</strong> amd <strong>volcanoPlot.*.png</strong> where ‘*’ is the comparison (e.g. ko_vs_wt)</p>
 <p>The MA plot shows the average expression of the gene on the X-axis, and Log2 fold change between condition/phenotype is on the Y-axis (if the name is for example maPlot.condition2-condition1.png then the fold change would represent condition1 minus condition2).  Each gene is represented by a circle.  The top 20 genes (by p-value) are identified on the plot.  The genes are color coded by the chosen multiple testing correction method (False Discovery Rate (FDR) by default.  An exmaple MA plot can be seen below.</p>
 <p>(Within the DNAnexus output directory structure, these files will be in the LIMMA directory.)</p>
 <img alt="../../_images/maPlot.png" src="../../_images/maPlot.png" />
@@ -291,17 +292,17 @@
 </div>
 <div class="section" id="coverage-results">
 <h3>Coverage results<a class="headerlink" href="#coverage-results" title="Permalink to this headline">¶</a></h3>
-<p>bigWig files will be generated for use in genome browsers (such as IGV <a class="reference external" href="http://software.broadinstitute.org/software/igv/">http://software.broadinstitute.org/software/igv/</a>).  For each smaple, multiple bigWig files will be found.  For all types of sequencing strandedness,  there will be bigWig files labelled, <strong>*.sortedCoverageFile.bed.bw</strong> where &#8216;*&#8217; is the sample name.  For stranded data there will also be <strong>*.sortedPosCoverageFile.bed.bw</strong> and <strong>*.sortedNegCoverageFile.bed.bw</strong> which contains coverage information for the positive and negative strand of the genome.</p>
+<p>bigWig files will be generated for use in genome browsers (such as IGV <a class="reference external" href="http://software.broadinstitute.org/software/igv/">http://software.broadinstitute.org/software/igv/</a>).  For each smaple, multiple bigWig files will be found.  For all types of sequencing strandedness,  there will be bigWig files labelled, <strong>*.sortedCoverageFile.bed.bw</strong> where ‘*’ is the sample name.  For stranded data there will also be <strong>*.sortedPosCoverageFile.bed.bw</strong> and <strong>*.sortedNegCoverageFile.bed.bw</strong> which contains coverage information for the positive and negative strand of the genome.</p>
 <p>(Within the DNAnexus  output directory structure, these files will be in the BIGWIG directory.)</p>
 </div>
 <div class="section" id="quality-control-results-fastqc">
 <h3>Quality Control Results (FASTQC)<a class="headerlink" href="#quality-control-results-fastqc" title="Permalink to this headline">¶</a></h3>
-<p>Within the FASTQC directory, foreach sample and read direction there will be an html file and a zip file (<strong>*.fastqc.html</strong> <strong>*.fastqc.zip</strong> where &#8216;*&#8217; is the base FastQ name), containing results from FASTQTC.  For the average user the html file is sufficient.  This file can give some basic statistics on the quality of the data.</p>
+<p>Within the FASTQC directory, foreach sample and read direction there will be an html file and a zip file (<strong>*.fastqc.html</strong> <strong>*.fastqc.zip</strong> where ‘*’ is the base FastQ name), containing results from FASTQTC.  For the average user the html file is sufficient.  This file can give some basic statistics on the quality of the data.</p>
 <p>(Within the DNAnexus  output directory structure, these files will be in the FASTQC directory.)</p>
 </div>
 <div class="section" id="bam-alignment-files">
 <h3>BAM alignment files<a class="headerlink" href="#bam-alignment-files" title="Permalink to this headline">¶</a></h3>
-<p>There are two BAM files generated per sample that contain mapping information for all reads.  The first is labeled <strong>*.Aligned.sortedByCoord.dup.bam</strong> where &#8216;*&#8217; is the sample name.  The BAM file is sorted by coordinates and has duplicates marked.  The second file is <strong>*.Aligned.toTranscriptome.out.bam</strong> and contains reads mapped to transcripts.</p>
+<p>There are two BAM files generated per sample that contain mapping information for all reads.  The first is labeled <strong>*.Aligned.sortedByCoord.dup.bam</strong> where ‘*’ is the sample name.  The BAM file is sorted by coordinates and has duplicates marked.  The second file is <strong>*.Aligned.toTranscriptome.out.bam</strong> and contains reads mapped to transcripts.</p>
 <p>(Within the DNAnexus  output directory structure, these files will be in the ALIGN directory.)</p>
 </div>
 <div class="section" id="chimeric-reads-and-junction-files">
@@ -311,7 +312,7 @@
 </div>
 <div class="section" id="fpkm-and-count-files-per-sample">
 <h3>FPKM and count files (per sample)<a class="headerlink" href="#fpkm-and-count-files-per-sample" title="Permalink to this headline">¶</a></h3>
-<p>Per sample files containing FPKM and raw count values for each gene can be found in <strong>*.fpkm.txt</strong> and <strong>*.htseq_counts.txt</strong> where &#8216;*&#8217; is the sample name.</p>
+<p>Per sample files containing FPKM and raw count values for each gene can be found in <strong>*.fpkm.txt</strong> and <strong>*.htseq_counts.txt</strong> where ‘*’ is the sample name.</p>
 <p>(Within the DNAnexus  output directory structure, these files will be in the <strong>NOTE FIND OUT WHICH DIRECOTRRY</strong> directory.)</p>
 </div>
 <div class="section" id="methods-files">
@@ -435,6 +436,7 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
             VERSION:'1.0.0b',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -444,7 +446,7 @@
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 

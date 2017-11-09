@@ -17,6 +17,7 @@ please reach out on `our contact form <https://hospital.stjude.org/apps/forms/fb
    pipelines/chipseq/index
    pipelines/warden/index
    pipelines/neoepitope/index
+   pipelines/pecan-pie/index
 
 .. toctree::
    :maxdepth: 1

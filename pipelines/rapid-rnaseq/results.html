@@ -112,6 +112,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../chipseq/index.html">ChIP-Seq Peak Calling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../warden/index.html">WARDEN Differential Expression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../neoepitope/index.html">HLA Typing and Neoepitope Prediction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pecan-pie/index.html">PeCan PIE</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Visualization Guides</span></p>
 <ul>
@@ -252,16 +253,16 @@ output file.</p>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>junction</td>
-<td>Splice junction in the TCGA format &#8220;chrX:start:+,chrX:end,+&#8221;. &#8220;start&#8221; and &#8220;end&#8221; are the 1-based position of the last mapped nucleotide before the skip and the first mapped nucleotide after the skip (i.e. the last base of the previous exon and the first base of the next exon). Note that in .bed output these coordinates will be different, see the .bed output section below. The &#8220;+&#8221; is currently hardcoded, though this may change in the future.</td>
+<td>Splice junction in the TCGA format “chrX:start:+,chrX:end,+”. “start” and “end” are the 1-based position of the last mapped nucleotide before the skip and the first mapped nucleotide after the skip (i.e. the last base of the previous exon and the first base of the next exon). Note that in .bed output these coordinates will be different, see the .bed output section below. The “+” is currently hardcoded, though this may change in the future.</td>
 </tr>
 <tr class="row-odd"><td>count</td>
 <td>Raw count of reads supporting the junction. During correction counts for ambiguous junctions can be combined, though obviously these additional reads will not be visible in the raw BAM file.</td>
 </tr>
 <tr class="row-even"><td>type</td>
-<td>either &#8220;known&#8221; (matching a reference junction) or &#8220;novel&#8221; (not observed in the reference junction collection).</td>
+<td>either “known” (matching a reference junction) or “novel” (not observed in the reference junction collection).</td>
 </tr>
 <tr class="row-odd"><td>genes</td>
-<td>gene symbols from the junction calling process. These still need work in the raw junction calling process, it&#8217;s recommended to use the &#8220;annotated&#8221; output files instead which assign matching HUGO gene symbols based on the UCSC refGene table.</td>
+<td>gene symbols from the junction calling process. These still need work in the raw junction calling process, it’s recommended to use the “annotated” output files instead which assign matching HUGO gene symbols based on the UCSC refGene table.</td>
 </tr>
 <tr class="row-even"><td>transcripts</td>
 <td>list of known transcript IDs matching the junction.</td>
@@ -279,7 +280,7 @@ output file.</p>
 <td>Count of supporting reads with perfect alignments (no reference mismatches of quality 15+, indels, or soft clips).</td>
 </tr>
 <tr class="row-odd"><td>qc_clean_reads</td>
-<td>Count of supporting reads whose alignments are not perfect but which have a ratio of &lt;= 5% of reference mismatches of quality 15+, indels, or soft clips relative to the count of aligned bases on both the left and right flanking sequence. Note: qc_clean_reads does NOT include qc_perfect_reads: to get a count of &#8220;perfect plus pretty good&#8221; reads the two values must be added together.</td>
+<td>Count of supporting reads whose alignments are not perfect but which have a ratio of &lt;= 5% of reference mismatches of quality 15+, indels, or soft clips relative to the count of aligned bases on both the left and right flanking sequence. Note: qc_clean_reads does NOT include qc_perfect_reads: to get a count of “perfect plus pretty good” reads the two values must be added together.</td>
 </tr>
 </tbody>
 </table>
@@ -344,6 +345,7 @@ and then follow the <a class="reference internal" href="../../visualizations/big
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
             VERSION:'1.0.0b',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -353,7 +355,7 @@ and then follow the <a class="reference internal" href="../../visualizations/big
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 

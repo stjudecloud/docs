@@ -119,6 +119,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../warden/index.html">WARDEN Differential Expression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../neoepitope/index.html">HLA Typing and Neoepitope Prediction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pecan-pie/index.html">PeCan PIE</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Visualization Guides</span></p>
 <ul>
@@ -203,18 +204,18 @@ IP data as input. You can upload the files you would like to run using the
 <a class="reference internal" href="../../desktop-application.html#desktop-application"><span class="std std-ref">St. Jude Cloud Desktop Application</span></a> or by uploading data manually using the <a class="reference internal" href="../../dx-toolkit.html#dx-toolkit"><span class="std std-ref">Command Line Interaction</span></a>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">You should click &#8220;Launch this tool&#8221; before attempting to upload data
-to the tool (the tool&#8217;s workspace is only created once you do this). After you
+<p class="last">You should click “Launch this tool” before attempting to upload data
+to the tool (the tool’s workspace is only created once you do this). After you
 are redirected, you can safely close the tab that was just opened.</p>
 </div>
 </div>
 <div class="section" id="parameter-configuration">
 <span id="chipseq-parameter-config"></span><h2>Parameter Configuration<a class="headerlink" href="#parameter-configuration" title="Permalink to this headline">¶</a></h2>
-<p>Click &#8220;Launch this tool&#8221; on the <a class="reference external" href="https://platform.stjude.cloud/tools/6">tool&#8217;s landing page</a>.
-You will be redirected to the tool&#8217;s workspace, which contains four different pipelines that can
-be run based on your input data. Initially, you&#8217;ll need to decide <strong>(1)</strong> whether you&#8217;d like to run broad/narrow peak calling <em>and</em>
+<p>Click “Launch this tool” on the <a class="reference external" href="https://platform.stjude.cloud/tools/6">tool’s landing page</a>.
+You will be redirected to the tool’s workspace, which contains four different pipelines that can
+be run based on your input data. Initially, you’ll need to decide <strong>(1)</strong> whether you’d like to run broad/narrow peak calling <em>and</em>
 <strong>(2)</strong> whether you have case vs. control or only case data. You should choose the correct
-workflow based on their names. After you&#8217;ve selected your base pipeline, there are various other
+workflow based on their names. After you’ve selected your base pipeline, there are various other
 parameters that you can set.</p>
 <img alt="The four different ChIP-Seq pipelines" src="../../_images/four-pipelines.png" />
 <div class="admonition warning">
@@ -298,7 +299,7 @@ example value. Any questions about parameters should be directed to pipeline sup
 </tr>
 <tr class="row-even"><td>Fragment length</td>
 <td>Hardcoded fragment length of your reads.
-&#8216;NA&#8217; for auto-detect.</td>
+‘NA’ for auto-detect.</td>
 <td>NA</td>
 </tr>
 </tbody>
@@ -310,8 +311,8 @@ example value. Any questions about parameters should be directed to pipeline sup
 <ul class="last simple">
 <li>Do not use spaces anywhere in your input file names,
 your output prefix, or any of the other parameters. This is
-generally bad practice and doesn&#8217;t play well with the pipeline
-(consider using &#8220;_&#8221; instead).</li>
+generally bad practice and doesn’t play well with the pipeline
+(consider using “_” instead).</li>
 <li>Do not change the output directory when you run the pipeline.
 At the top of parameter input page, there is a text box that allows
 you to change the output folder. <em>Please ignore that field</em>.
@@ -338,13 +339,13 @@ Once you click on the input boxes, you should be able to select all of the input
 that follow (see image below).</p>
 <img alt="Selecting all fastq inputs" src="../../_images/select-input.png" />
 <p>Here, you can select the FastQ file for the case sample and click
-&#8220;Select&#8221;. You should see the dialog box dissappear and the files you selected propogate
+“Select”. You should see the dialog box dissappear and the files you selected propogate
 in the input box. If applicable, repeat this process for the control sample.</p>
 </div>
 <div class="section" id="starting-the-workflow">
 <h3>Starting the workflow<a class="headerlink" href="#starting-the-workflow" title="Permalink to this headline">¶</a></h3>
 <p>Once your inputs are selected, you should be able to start the workflow by clicking the
-&#8220;Run as Analysis...&#8221; button in the top right hand corner of the workflow dialog.</p>
+“Run as Analysis…” button in the top right hand corner of the workflow dialog.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">If you cannot click this button, please ensure that <strong>(1)</strong> all of the inputs are correctly
@@ -401,6 +402,7 @@ set (see <a class="reference internal" href="#chipseq-parameter-config"><span cl
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
             VERSION:'1.0.0b',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -410,7 +412,7 @@ set (see <a class="reference internal" href="#chipseq-parameter-config"><span cl
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 

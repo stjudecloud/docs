@@ -98,6 +98,7 @@
 <li class="toctree-l1"><a class="reference internal" href="pipelines/chipseq/index.html">ChIP-Seq Peak Calling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pipelines/warden/index.html">WARDEN Differential Expression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pipelines/neoepitope/index.html">HLA Typing and Neoepitope Prediction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipelines/pecan-pie/index.html">PeCan PIE</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Visualization Guides</span></p>
 <ul>
@@ -179,10 +180,10 @@
   <div class="section" id="command-line-interaction">
 <span id="dx-toolkit"></span><h1>Command Line Interaction<a class="headerlink" href="#command-line-interaction" title="Permalink to this headline">¶</a></h1>
 <p>In most normal cases, we recommend that you use the <a class="reference internal" href="desktop-application.html#desktop-application"><span class="std std-ref">St. Jude Cloud Desktop Application</span></a>
-to upload or download your data. However, we&#8217;ve built St. Jude
+to upload or download your data. However, we’ve built St. Jude
 Cloud to be easily accessible from the command line. Before you
 can begin uploading and downloading data to the platform,
-you&#8217;ll need to understand a few fundamentals about how St. Jude Cloud
+you’ll need to understand a few fundamentals about how St. Jude Cloud
 is built.</p>
 <p>St. Jude Cloud is built on top of the genomics processing engine
 provided by <a class="reference external" href="https://www.dnanexus.com/">DNAnexus</a>. To understand
@@ -193,30 +194,30 @@ similar to the screenshot below.</p>
 <img alt="_images/platform-dnanexus.png" src="_images/platform-dnanexus.png" />
 <p>DNAnexus is organized by projects, and in St. Jude Cloud, each tool
 has a its own project in DNAnexus. This project is created once you click
-&#8220;Launch this Tool&#8221; on one of the tool description pages (example: <a class="reference external" href="https://platform.stjude.cloud/tools/10">Rapid RNA-Seq description page</a>).
+“Launch this Tool” on one of the tool description pages (example: <a class="reference external" href="https://platform.stjude.cloud/tools/10">Rapid RNA-Seq description page</a>).
 You should see a project for each of the tools that you have previously
 launched, as well as some other ancillary projects.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">If you do not see any projects, you likely haven&#8217;t tried to run
+<p class="last">If you do not see any projects, you likely haven’t tried to run
 any tools yet. Navigate to the
 <a class="reference external" href="https://platform.stjude.cloud/tools">St. Jude Cloud tools page</a>,
-select &#8220;View&#8221; for a tool you want to run, click &#8220;Launch this Tool&#8221;
+select “View” for a tool you want to run, click “Launch this Tool”
 on the left side-panel, and try again.</p>
 </div>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>Behind the scenes, open-source software provided by DNAnexus called the
-&#8220;dx-toolkit&#8221; is being used to interact with the DNAnexus genomics
+“dx-toolkit” is being used to interact with the DNAnexus genomics
 platform to create these projects, upload and download data, and many other operations.
-Before you can interact with St. Jude Cloud on the command line, you&#8217;ll
+Before you can interact with St. Jude Cloud on the command line, you’ll
 need to install that software on your computer by following
 <a class="reference external" href="https://wiki.dnanexus.com/Downloads#DNAnexus-Platform-SDK">this guide</a>.</p>
 </div>
 <div class="section" id="selecting-a-project">
 <span id="id2"></span><h2>Selecting a project<a class="headerlink" href="#selecting-a-project" title="Permalink to this headline">¶</a></h2>
 <p>Before uploading or downloading data from a St. Jude Cloud tool,
-you&#8217;ll need to specify which tool you are wanting to either upload to
+you’ll need to specify which tool you are wanting to either upload to
 or download from. You can do this by issuing the following command</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>dx <span class="k">select</span>
 </pre></div>
@@ -236,7 +237,7 @@ correct project for your tool (see <a class="reference internal" href="#selectin
 </pre></div>
 </div>
 <p>Once data is uploaded to St. Jude Cloud, you can select it for processing
-by following the specific tool&#8217;s intructions.</p>
+by following the specific tool’s intructions.</p>
 <p>To download results from St. Jude Cloud, you might find the following commands
 useful.</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># list available files for the tool for the main folder</span>
@@ -303,6 +304,7 @@ dx download &lt;FILENAME_IN_CLOUD&gt;
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'1.0.0b',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -312,7 +314,7 @@ dx download &lt;FILENAME_IN_CLOUD&gt;
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 

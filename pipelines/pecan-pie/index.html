@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Rapid RNA-Seq &mdash; St. Jude Tools Documentation 1.0.0b documentation</title>
+  <title>PeCan PIE &mdash; St. Jude Tools Documentation 1.0.0b documentation</title>
   
 
   
@@ -39,7 +39,7 @@
         <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="St. Jude Tools Documentation 1.0.0b documentation" href="../../index.html"/>
         <link rel="next" title="Overview" href="overview.html"/>
-        <link rel="prev" title="St. Jude Cloud (Beta)" href="../../index.html"/> 
+        <link rel="prev" title="Frequently Asked Questions" href="../neoepitope/faq.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -94,20 +94,21 @@
             
               <p class="caption"><span class="caption-text">Tool Guides</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Rapid RNA-Seq</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation.html">Pipeline Operation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="monitoring.html">Monitoring Run Progress</a></li>
-<li class="toctree-l2"><a class="reference internal" href="navigate.html">Navigating Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="results.html">Analysis of Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="known-issues.html">Known Issues</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../rapid-rnaseq/index.html">Rapid RNA-Seq</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chipseq/index.html">ChIP-Seq Peak Calling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../warden/index.html">WARDEN Differential Expression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../neoepitope/index.html">HLA Typing and Neoepitope Prediction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pecan-pie/index.html">PeCan PIE</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">PeCan PIE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contents">Contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="operation.html">Pipeline Operation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="results.html">Analysis of Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Visualization Guides</span></p>
 <ul>
@@ -162,13 +163,13 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-      <li>Rapid RNA-Seq</li>
+      <li>PeCan PIE</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/pipelines/rapid-rnaseq/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/pipelines/pecan-pie/index.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -181,56 +182,51 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="rapid-rna-seq">
-<span id="rapid-rnaseq"></span><h1>Rapid RNA-Seq<a class="headerlink" href="#rapid-rna-seq" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="pecan-pie">
+<span id="id1"></span><h1>PeCan PIE<a class="headerlink" href="#pecan-pie" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><strong>Authors</strong>: Scott Newman, Clay McLeod, Yongjin Li</li>
-<li><strong>Technical Support</strong>: <a class="reference external" href="mailto:scott&#46;newman&#37;&#52;&#48;stjude&#46;org">Scott Newman</a>, <a class="reference external" href="mailto:clay&#46;mcleod&#37;&#52;&#48;stjude&#46;org">Clay McLeod</a></li>
-<li><strong>Publication</strong>: N/A (not published)</li>
-<li><strong>Input</strong>: Paired RNA-Seq FASTQs, aligned RNA-Seq BAM</li>
-<li><strong>Output</strong>: Predicted gene fusions, coverage bigWig, splice junction read counts, interactive fusion gene visualization</li>
-<li><strong>Supported Genome Builds</strong>: HG19 (GRCh37)</li>
+<li><strong>Authors</strong>: Michael Edmonson, Aman Patel</li>
+<li><strong>Technical Support</strong>: <a class="reference external" href="mailto:aman&#46;patel&#37;&#52;&#48;stjude&#46;org">Aman Patel</a> (PIE portal), <a class="reference external" href="mailto:michael&#46;edmonson&#37;&#52;&#48;stjude&#46;org">Michael Edmonson</a> (Medal Ceremony)</li>
+<li><strong>Publication</strong>: <a class="reference external" href="http://www.nejm.org/doi/full/10.1056/NEJMoa1508054#t=article">Zhang et al., NEJM 2015</a>, supplementary appendix pp. 7-10</li>
+<li><strong>Input</strong>: VCF file of SNVs and indels</li>
+<li><strong>Output</strong>: gold, silver, and bronze classifications of potential clinical signficance</li>
+<li><strong>Supported Genome Builds</strong>: GRCh37 (hg19)</li>
 </ul>
-<h2>Introduction</h2><p>Fusion genes are important for cancer diagnosis, subtype definition and targeted
-therapy. RNASeq is useful for detecting fusion transcripts. Computational
-methods face challenges to identify fusion transcripts arising from internal
-tandem duplication (ITD), multiple genes, low expression or non-templated
-insertions. Here we present an end-to-end clinically validated pipeline “Rapid
-RNA-Seq” that detects gene fusions and ITDs from human transcriptome data.</p>
-<h2>Contents</h2><div class="toctree-wrapper compound">
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>PeCan PIE (the <strong>Pe</strong>diatric <strong>Can</strong>cer Variant <strong>P</strong>athogenicity <strong>I</strong>nformation <strong>E</strong>xchange) is a cloud-based variant classification and interpretation service.  It annotates and ranks variants by putative pathogenicity, then displays them in an interactive web interface for formal review and classification following ACMG guidelines. The portal also contains a repository of expert-reviewed germline mutations that may predispose individuals to cancer.  It is free for non-commercial use.</p>
+<p>Pecan PIE utilizes St. Jude Medal Ceremony, the same pipeline that powers our clinical and research genomics projects.  Medal Ceremony provides a 3-level ranking of putative pathogenity - Gold, Silver or Bronze - for mutations within cancer-related genes. Medal assignment is based on matches to 22 mutation databases, mutation type, population frequency, tumor suppressor status and predicted functional impact. The evidence used for medal assignment is imported into an interactive variant review page where an analyst can enter additional curated information such as primary diagnosis, presence of subsequent neoplasm, family history and related literature. Classification tags can be manually assigned to curated data enabling automated calculation of pathogenicity rating based on ACMG/AMP 2015 guidelines.</p>
+<p>See <a class="reference download internal" href="../../_downloads/pecanpie_ASHG_2017.pptx" download=""><code class="xref download docutils literal"><span class="pre">PowerPoint</span> <span class="pre">slides</span></code></a> presented at the ASHG 2017 annual meeting.</p>
+<p>Go to <a class="reference external" href="https://pecan.stjude.org/pie">https://pecan.stjude.org/pie</a> to get started!</p>
+</div>
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="overview.html#inputs">Inputs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="overview.html#outputs">Outputs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="overview.html#process">Process</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="operation.html">Pipeline Operation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="operation.html#logging-in">Logging in</a></li>
 <li class="toctree-l2"><a class="reference internal" href="operation.html#uploading-data">Uploading Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation.html#input-file-configuration">Input File Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation.html#parameter-configuration">Parameter Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation.html#running-the-pipeline">Running the Pipeline</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="monitoring.html">Monitoring Run Progress</a></li>
-<li class="toctree-l1"><a class="reference internal" href="navigate.html">Navigating Results</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="navigate.html#raw-result-files">Raw result files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="navigate.html#custom-visualization-results">Custom visualization results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation.html#progress-page">Progress page</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="results.html">Analysis of Results</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="results.html#raw-result-files">Raw Result Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="results.html#proteinpaint-visualizations">ProteinPaint Visualizations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#results-browser">Results browser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#gold-silver-and-bronze-medals">Gold, Silver, and Bronze medals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#variant-page">Variant page</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="known-issues.html">Known Issues</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="known-issues.html#adapter-contamination">Adapter contamination</a></li>
-<li class="toctree-l2"><a class="reference internal" href="known-issues.html#high-coverage-regions">High coverage regions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="known-issues.html#interactive-visualizations-exon-vs-intron-nomenclature">Interactive Visualizations Exon vs Intron Nomenclature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#q-which-files-are-supported">Q: Which files are supported?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#q-why-is-the-classification-column-blank-in-my-results">Q. Why is the classification column blank in my results?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#q-what-do-the-medals-mean">Q. What do the medals mean?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#q-why-are-some-of-my-variants-missing">Q. Why are some of my variants missing?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#q-why-does-the-exac-allele-frequency-shown-differ-from-the-exac-portal">Q. Why does the ExAC allele frequency shown differ from the ExAC portal?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#q-is-it-free">Q. Is it free?</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
 </ul>
+</div>
 </div>
 </div>
 
@@ -247,7 +243,7 @@ RNA-Seq” that detects gene fusions and ITDs from human transcriptome data.</p>
         <a href="overview.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../../index.html" class="btn btn-neutral" title="St. Jude Cloud (Beta)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../neoepitope/faq.html" class="btn btn-neutral" title="Frequently Asked Questions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
