@@ -90,6 +90,13 @@ if "%1" == "dirhtml" (
 	goto end
 )
 
+if "%1" == "livehtml" (
+	%SPHINXBUILD% -b html %ALLSPHINXOPTS% %BUILDDIR%/html
+	sphinx-autobuild -b html %ALLSPHINXOPTS% %BUILDDIR%/html
+	if errorlevel 1 exit /b 1
+	goto end
+)
+
 if "%1" == "singlehtml" (
 	%SPHINXBUILD% -b singlehtml %ALLSPHINXOPTS% %BUILDDIR%/singlehtml
 	if errorlevel 1 exit /b 1
