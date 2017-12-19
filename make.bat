@@ -18,6 +18,12 @@ if "%1" == "" goto help
 if "%1" == "help" (
 	:help
 	echo.Please use `make ^<target^>` where ^<target^> is one of
+	echo.
+	echo.  == SJCloud specific commands ==
+	echo.  install-deps   to install SJCloud documentation dependencies
+	echo.  livehtml       to render the website live with changes
+	echo.
+	echo.  == All commands ==
 	echo.  html       to make standalone HTML files
 	echo.  dirhtml    to make HTML files named index.html in directories
 	echo.  singlehtml to make a single large HTML file
@@ -73,6 +79,31 @@ if errorlevel 9009 (
 
 :sphinx_ok
 
+if "%1" == "livehtml" (
+	%SPHINXBUILD% -b html %ALLSPHINXOPTS% %BUILDDIR%/html
+	sphinx-autobuild -b html source/ %BUILDDIR%/html --open
+	if errorlevel 1 exit /b 1
+	goto end
+)
+
+if "%1" == "install-deps" (
+	echo.[*] Installing dependencies...
+	echo.
+	pip install sphinx sphinx-autobuild restructuredtext-lint --upgrade --user
+	git clone --depth 1 https://github.com/rtfd/sphinx_rtd_theme.git
+	cd sphinx_rtd_theme
+	python setup.py install --user
+	cd ..
+	rd /s /q sphinx_rtd_theme
+	echo.
+	echo.[*] Finished!
+	echo.    - Run 'call make.bat html' to compile to html once.
+	echo.    - Run 'call make.bat livehtml' to compile to html continuously. 
+	echo.    - Run 'call make.bat latexpdf' to compile a pdf.
+	echo.    - Run 'call make.bat' to see all of the possible building options.
+	echo.    - All results will be in ./build/
+)
+
 
 if "%1" == "html" (
 	%SPHINXBUILD% -b html %ALLSPHINXOPTS% %BUILDDIR%/html
@@ -87,13 +118,6 @@ if "%1" == "dirhtml" (
 	if errorlevel 1 exit /b 1
 	echo.
 	echo.Build finished. The HTML pages are in %BUILDDIR%/dirhtml.
-	goto end
-)
-
-if "%1" == "livehtml" (
-	%SPHINXBUILD% -b html %ALLSPHINXOPTS% %BUILDDIR%/html
-	sphinx-autobuild -b html %ALLSPHINXOPTS% %BUILDDIR%/html
-	if errorlevel 1 exit /b 1
 	goto end
 )
 

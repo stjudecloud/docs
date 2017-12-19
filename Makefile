@@ -17,6 +17,12 @@ I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
 .PHONY: help
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
+	@echo ""
+	@echo "  == SJCloud specific commands =="
+	@echo "  install-deps   to install SJCloud documentation dependencies"
+	@echo "  livehtml       to render the website live with changes"
+	@echo ""
+	@echo "  == All commands =="
 	@echo "  html       to make standalone HTML files"
 	@echo "  dirhtml    to make HTML files named index.html in directories"
 	@echo "  singlehtml to make a single large HTML file"
@@ -44,6 +50,27 @@ help:
 	@echo "  coverage   to run coverage check of the documentation (if enabled)"
 	@echo "  dummy      to check syntax errors of document sources"
 
+.PHONY: install-deps
+install-deps:
+	echo "[*] Installing dependencies..."
+	echo ""
+	pip install sphinx sphinx-autobuild restructuredtext-lint --upgrade --user
+	git clone --depth 1 https://github.com/rtfd/sphinx_rtd_theme.git
+	cd sphinx_rtd_theme; python setup.py install; cd ..;
+	rm -rf sphinx_rtd_theme
+
+	@echo ""
+	@echo "[*] Finished!"
+	@echo "    - Run 'call make.bat html' to compile to html once.
+	@echo "    - Run 'call make.bat livehtml' to compile to html continuously.
+	@echo "    - Run 'make latexpdf' to compile a pdf."
+	@echo "    - Run 'make' to see all of the possible building options."
+	@echo "    - All results will be in ./build/"
+
+.PHONY: html
+livehtml:
+	sphinx-autobuild -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+
 .PHONY: clean
 clean:
 	rm -rf $(BUILDDIR)/*
@@ -54,9 +81,6 @@ html:
 	cp -R ./source/videos $(BUILDDIR)/html/
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
-
-livehtml:
-	sphinx-autobuild -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 
 .PHONY: dirhtml
 dirhtml:
@@ -228,18 +252,3 @@ dummy:
 	@echo
 	@echo "Build finished. Dummy builder generates no files."
 
-.PHONY: install-deps
-install-deps:
-	echo "[*] Installing dependencies..."
-	echo ""
-	pip install sphinx --upgrade --user
-	git clone --depth 1 https://github.com/rtfd/sphinx_rtd_theme.git
-	cd sphinx_rtd_theme; python setup.py install; cd ..;
-	rm -rf sphinx_rtd_theme
-
-	@echo ""
-	@echo "[*] Finished!"
-	@echo "    - Run 'make html' to compile to html."
-	@echo "    - Run 'make latexpdf' to compile a pdf."
-	@echo "    - Run 'make' to see all of the possible building options."
-	@echo "    - All results will be in ./build/"

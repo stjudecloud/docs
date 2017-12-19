@@ -1,4 +1,1 @@
-Installation
-============
-
-Run `make install-deps`.
+See https://github.com/stjude/sjcloud-docs/wiki.

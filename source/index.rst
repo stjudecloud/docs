@@ -1,7 +1,7 @@
 .. role:: underline
     :class: underline
 
-St. Jude Cloud (Beta)
+St. Jude Cloud (Gamma)
 ========================================================
 
 Welcome to the St. Jude Cloud Platform documentation! We appreciate
