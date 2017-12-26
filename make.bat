@@ -89,12 +89,7 @@ if "%1" == "livehtml" (
 if "%1" == "install-deps" (
 	echo.[*] Installing dependencies...
 	echo.
-	pip install sphinx sphinx-autobuild restructuredtext-lint --upgrade --user
-	git clone --depth 1 https://github.com/rtfd/sphinx_rtd_theme.git
-	cd sphinx_rtd_theme
-	python setup.py install --user
-	cd ..
-	rd /s /q sphinx_rtd_theme
+	pip install sphinx sphinx-autobuild restructuredtext-lint sphinx_rtd_theme --upgrade
 	echo.
 	echo.[*] Finished!
 	echo.    - Run 'call make.bat html' to compile to html once.

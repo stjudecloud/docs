@@ -54,15 +54,12 @@ help:
 install-deps:
 	echo "[*] Installing dependencies..."
 	echo ""
-	pip install sphinx sphinx-autobuild restructuredtext-lint --upgrade --user
-	git clone --depth 1 https://github.com/rtfd/sphinx_rtd_theme.git
-	cd sphinx_rtd_theme; python setup.py install; cd ..;
-	rm -rf sphinx_rtd_theme
+	pip install sphinx sphinx-autobuild restructuredtext-lint sphinx_rtd_theme --upgrade
 
 	@echo ""
 	@echo "[*] Finished!"
-	@echo "    - Run 'call make.bat html' to compile to html once.
-	@echo "    - Run 'call make.bat livehtml' to compile to html continuously.
+	@echo "    - Run 'call make.bat html' to compile to html once."
+	@echo "    - Run 'call make.bat livehtml' to compile to html continuously."
 	@echo "    - Run 'make latexpdf' to compile a pdf."
 	@echo "    - Run 'make' to see all of the possible building options."
 	@echo "    - All results will be in ./build/"
