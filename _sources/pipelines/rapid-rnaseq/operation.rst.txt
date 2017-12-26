@@ -2,8 +2,8 @@ Pipeline Operation
 ==================
 
 .. caution::
-   This pipeline assumes hg19 coordinates. If you BAM file is
-   not hg19, you'll need to realign or provide FastQ input files. 
+   This pipeline assumes HG19 coordinates. If you BAM file is
+   not HG19, you'll need to realign or provide FastQ input files. 
 
 .. _rapid-rnaseq-upload:
 

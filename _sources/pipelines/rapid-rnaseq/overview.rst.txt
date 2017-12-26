@@ -37,7 +37,7 @@ Process
 Synopsis
 ++++++++
 
-1. The raw sequence data is aligned to hg19 using standard STAR mapping.
+1. The raw sequence data is aligned to HG19 using standard STAR mapping.
 2. A coverage bigWig (.bw) file is produced to allow the user to 
    assess sample quality across the genome.
 3. Two gene fusion detection algorithms are run in parallel.

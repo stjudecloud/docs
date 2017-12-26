@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Rapid RNA-Seq &mdash; St. Jude Tools Documentation 1.0.0b documentation</title>
+  <title>Rapid RNA-Seq &mdash; St. Jude Cloud Documentation v1.0.0</title>
   
 
   
@@ -34,12 +34,10 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="St. Jude Tools Documentation 1.0.0b documentation" href="../../index.html"/>
+    <link rel="top" title="St. Jude Cloud Documentation v1.0.0" href="../../index.html"/>
         <link rel="next" title="Overview" href="overview.html"/>
-        <link rel="prev" title="St. Jude Cloud (Beta)" href="../../index.html"/> 
+        <link rel="prev" title="Frequently Asked Questions" href="../pecan-pie/faq.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -58,7 +56,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> St. Jude Tools Documentation
+            <a href="../../index.html" class="icon icon-home"> St. Jude Cloud Documentation
           
 
           
@@ -92,8 +90,14 @@
               
             
             
-              <p class="caption"><span class="caption-text">Tool Guides</span></p>
+              <p class="caption"><span class="caption-text">Data Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../desktop-application.html">St. Jude Cloud Desktop Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dx-toolkit.html">Command Line Interaction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tool Guides</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../pecan-pie/index.html">PeCan PIE</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Rapid RNA-Seq</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="operation.html">Pipeline Operation</a></li>
@@ -107,17 +111,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../chipseq/index.html">ChIP-Seq Peak Calling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../warden/index.html">WARDEN Differential Expression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../neoepitope/index.html">HLA Typing and Neoepitope Prediction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pecan-pie/index.html">PeCan PIE</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Visualization Guides</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../visualizations/bigwig.html">ProteinPaint BigWig Viewer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../visualizations/fusion-viewer.html">ProteinPaint Fusion Viewer</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Other Guides</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../dx-toolkit.html">Command Line Interaction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../desktop-application.html">St. Jude Cloud Desktop Application</a></li>
 </ul>
 
             
@@ -132,7 +130,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">St. Jude Tools Documentation</a>
+          <a href="../../index.html">St. Jude Cloud Documentation</a>
         
       </nav>
 
@@ -168,8 +166,6 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/pipelines/rapid-rnaseq/index.rst.txt" rel="nofollow"> View page source</a>
-          
         
       </li>
     
@@ -183,13 +179,11 @@
             
   <div class="section" id="rapid-rna-seq">
 <span id="rapid-rnaseq"></span><h1>Rapid RNA-Seq<a class="headerlink" href="#rapid-rna-seq" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://genome.ucsc.edu/FAQ/FAQreleases.html#release1"><img alt="HG19" src="https://img.shields.io/badge/Genome-HG19%20(GRCh37)-green.svg" /></a></p>
 <ul class="simple">
 <li><strong>Authors</strong>: Scott Newman, Clay McLeod, Yongjin Li</li>
-<li><strong>Technical Support</strong>: <a class="reference external" href="mailto:scott&#46;newman&#37;&#52;&#48;stjude&#46;org">Scott Newman</a>, <a class="reference external" href="mailto:clay&#46;mcleod&#37;&#52;&#48;stjude&#46;org">Clay McLeod</a></li>
 <li><strong>Publication</strong>: N/A (not published)</li>
-<li><strong>Input</strong>: Paired RNA-Seq FASTQs, aligned RNA-Seq BAM</li>
-<li><strong>Output</strong>: Predicted gene fusions, coverage bigWig, splice junction read counts, interactive fusion gene visualization</li>
-<li><strong>Supported Genome Builds</strong>: HG19 (GRCh37)</li>
+<li><strong>Technical Support</strong>: <a class="reference external" href="https://stjude.cloud/contact">Contact Us</a></li>
 </ul>
 <h2>Introduction</h2><p>Fusion genes are important for cancer diagnosis, subtype definition and targeted
 therapy. RNASeq is useful for detecting fusion transcripts. Computational
@@ -247,7 +241,7 @@ RNA-Seq” that detects gene fusions and ITDs from human transcriptome data.</p>
         <a href="overview.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../../index.html" class="btn btn-neutral" title="St. Jude Cloud (Beta)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../pecan-pie/faq.html" class="btn btn-neutral" title="Frequently Asked Questions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -256,7 +250,7 @@ RNA-Seq” that detects gene fusions and ITDs from human transcriptome data.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016, 2017 St. Jude Developers.
+        &copy; Copyright 2016, 2017, 2018 St. Jude Developers.
 
     </p>
   </div>

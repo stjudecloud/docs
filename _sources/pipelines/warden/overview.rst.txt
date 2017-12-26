@@ -22,7 +22,7 @@ parameters to be set. All other parameters are preset.
 +-------------------+------------+----------------------------------------------------------------+---------------------+
 | Sample sheet      | Input file | Sample sheet generated and uploaded by the user                | *.txt               |
 +-------------------+------------+----------------------------------------------------------------+---------------------+
-| Reference genome  | Parameter  | Supported reference genome (hg19, hg38, mm9, mm10, dm3, dm6)   | hg38                |
+| Reference genome  | Parameter  | Supported reference genome (HG19, HG38, mm9, mm10, dm3, dm6)   | HG38                |
 +-------------------+------------+----------------------------------------------------------------+---------------------+
 | Sequencing method | Parameter  | Sequencing method of experiment (forward, reverse, unstranded) | forward             |
 +-------------------+------------+----------------------------------------------------------------+---------------------+

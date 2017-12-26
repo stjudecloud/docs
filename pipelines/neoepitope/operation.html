@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Pipeline Operation &mdash; St. Jude Tools Documentation 1.0.0b documentation</title>
+  <title>Pipeline Operation &mdash; St. Jude Cloud Documentation v1.0.0</title>
   
 
   
@@ -34,10 +34,8 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="St. Jude Tools Documentation 1.0.0b documentation" href="../../index.html"/>
+    <link rel="top" title="St. Jude Cloud Documentation v1.0.0" href="../../index.html"/>
         <link rel="up" title="HLA Typing and Neoepitope Prediction" href="index.html"/>
         <link rel="next" title="Monitoring Run Progress" href="monitoring.html"/>
         <link rel="prev" title="Overview" href="overview.html"/> 
@@ -59,7 +57,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> St. Jude Tools Documentation
+            <a href="../../index.html" class="icon icon-home"> St. Jude Cloud Documentation
           
 
           
@@ -93,8 +91,14 @@
               
             
             
-              <p class="caption"><span class="caption-text">Tool Guides</span></p>
+              <p class="caption"><span class="caption-text">Data Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../dx-toolkit.html">Command Line Interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../desktop-application.html">St. Jude Cloud Desktop Application</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tool Guides</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../pecan-pie/index.html">PeCan PIE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rapid-rnaseq/index.html">Rapid RNA-Seq</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chipseq/index.html">ChIP-Seq Peak Calling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../warden/index.html">WARDEN Differential Expression</a></li>
@@ -117,17 +121,11 @@
 <li class="toctree-l2"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../pecan-pie/index.html">PeCan PIE</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Visualization Guides</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../visualizations/bigwig.html">ProteinPaint BigWig Viewer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../visualizations/fusion-viewer.html">ProteinPaint Fusion Viewer</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Other Guides</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../dx-toolkit.html">Command Line Interaction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../desktop-application.html">St. Jude Cloud Desktop Application</a></li>
 </ul>
 
             
@@ -142,7 +140,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">St. Jude Tools Documentation</a>
+          <a href="../../index.html">St. Jude Cloud Documentation</a>
         
       </nav>
 
@@ -180,8 +178,6 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/pipelines/neoepitope/operation.rst.txt" rel="nofollow"> View page source</a>
-          
         
       </li>
     
@@ -197,13 +193,13 @@
 <h1>Pipeline Operation<a class="headerlink" href="#pipeline-operation" title="Permalink to this headline">¶</a></h1>
 <div class="admonition caution">
 <p class="first admonition-title">Caution</p>
-<p class="last">This pipeline assumes hg19 coordinates in the mutation file. If the coordinates is based on hg38,
-the coordinates will lifted over to hg19 to perform epitope affinity prediction.</p>
+<p class="last">This pipeline assumes HG19 coordinates in the mutation file. If the coordinates is based on HG38,
+the coordinates will lifted over to HG19 to perform epitope affinity prediction.</p>
 </div>
 <div class="section" id="uploading-data">
 <span id="neoepitope-upload"></span><h2>Uploading Data<a class="headerlink" href="#uploading-data" title="Permalink to this headline">¶</a></h2>
 <p>The HLA Typing and Neoepitope Prediction pipeline takes either a Gzipped FastQ
-file or a BAM file aligned to hg19 or hg38 (WGS, WES or RNAseq). You can upload the files
+file or a BAM file aligned to HG19 or HG38 (WGS, WES or RNAseq). You can upload the files
 you would like to run using the <a class="reference internal" href="../../desktop-application.html#desktop-application"><span class="std std-ref">St. Jude Cloud Desktop Application</span></a> or by uploading data
 manually using the <a class="reference internal" href="../../dx-toolkit.html#dx-toolkit"><span class="std std-ref">Command Line Interaction</span></a>.</p>
 <div class="admonition note">
@@ -271,7 +267,7 @@ are redirected, you can safely close the tab that was just opened.</p>
 <p>The mutation file required a format as shown in the example above.</p>
 <ul class="last simple">
 <li>The chromosome requires a ‘chr’ prefix.</li>
-<li>The position requires a suffix of hg19/hg38 to indicate the human genome assembly version.</li>
+<li>The position requires a suffix of HG19/HG38 to indicate the human genome assembly version.</li>
 <li>Only the missense mutations/gene fusion is supported currently and the other types of mutations will not be processed.</li>
 </ul>
 </div>
@@ -343,7 +339,7 @@ screen. You should see an image similar to the picture below.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016, 2017 St. Jude Developers.
+        &copy; Copyright 2016, 2017, 2018 St. Jude Developers.
 
     </p>
   </div>

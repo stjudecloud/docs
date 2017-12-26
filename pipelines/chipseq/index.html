@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ChIP-Seq Peak Calling &mdash; St. Jude Tools Documentation 1.0.0b documentation</title>
+  <title>ChIP-Seq Peak Calling &mdash; St. Jude Cloud Documentation v1.0.0</title>
   
 
   
@@ -34,11 +34,9 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="St. Jude Tools Documentation 1.0.0b documentation" href="../../index.html"/>
-        <link rel="next" title="Pipeline Operation" href="operation.html"/>
+    <link rel="top" title="St. Jude Cloud Documentation v1.0.0" href="../../index.html"/>
+        <link rel="next" title="Overview" href="overview.html"/>
         <link rel="prev" title="Frequently Asked Questions" href="../rapid-rnaseq/faq.html"/> 
 
   
@@ -58,7 +56,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> St. Jude Tools Documentation
+            <a href="../../index.html" class="icon icon-home"> St. Jude Cloud Documentation
           
 
           
@@ -92,10 +90,17 @@
               
             
             
-              <p class="caption"><span class="caption-text">Tool Guides</span></p>
+              <p class="caption"><span class="caption-text">Data Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../desktop-application.html">St. Jude Cloud Desktop Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dx-toolkit.html">Command Line Interaction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tool Guides</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../pecan-pie/index.html">PeCan PIE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rapid-rnaseq/index.html">Rapid RNA-Seq</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">ChIP-Seq Peak Calling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="operation.html">Pipeline Operation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="monitoring.html">Monitoring Run Progress</a></li>
 <li class="toctree-l2"><a class="reference internal" href="navigate.html">Navigating Results</a></li>
@@ -105,17 +110,11 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../warden/index.html">WARDEN Differential Expression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../neoepitope/index.html">HLA Typing and Neoepitope Prediction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pecan-pie/index.html">PeCan PIE</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Visualization Guides</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../visualizations/bigwig.html">ProteinPaint BigWig Viewer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../visualizations/fusion-viewer.html">ProteinPaint Fusion Viewer</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Other Guides</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../dx-toolkit.html">Command Line Interaction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../desktop-application.html">St. Jude Cloud Desktop Application</a></li>
 </ul>
 
             
@@ -130,7 +129,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">St. Jude Tools Documentation</a>
+          <a href="../../index.html">St. Jude Cloud Documentation</a>
         
       </nav>
 
@@ -166,8 +165,6 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/pipelines/chipseq/index.rst.txt" rel="nofollow"> View page source</a>
-          
         
       </li>
     
@@ -181,13 +178,11 @@
             
   <div class="section" id="chip-seq-peak-calling">
 <h1>ChIP-Seq Peak Calling<a class="headerlink" href="#chip-seq-peak-calling" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://genome.ucsc.edu/FAQ/FAQreleases.html#release1"><img alt="HG19" src="https://img.shields.io/badge/Genome-HG19%20(GRCh37)-green.svg" /></a> <a class="reference external" href="https://genome.ucsc.edu/FAQ/FAQreleases.html#release1"><img alt="HG38" src="https://img.shields.io/badge/Genome-HG38%20(GRCh38)-green.svg" /></a> <a class="reference external" href="https://genome.ucsc.edu/FAQ/FAQreleases.html#release1"><img alt="MM9" src="https://img.shields.io/badge/Genome-MM9-blue.svg" /></a> <a class="reference external" href="https://genome.ucsc.edu/FAQ/FAQreleases.html#release1"><img alt="MM10" src="https://img.shields.io/badge/Genome-MM10%20(GRCm38)-blue.svg" /></a> <a class="reference external" href="https://genome.ucsc.edu/FAQ/FAQreleases.html#release1"><img alt="DM3" src="https://img.shields.io/badge/Genome-DM3%20(BDGP5)-3F51B5.svg" /></a></p>
 <ul class="simple">
 <li><strong>Authors</strong>: Xing Tang, Yong Cheng</li>
-<li><strong>Technical Support</strong>: <a class="reference external" href="mailto:Yiping&#46;Fan&#37;&#52;&#48;STJUDE&#46;org">Yiping Fan</a>, <a class="reference external" href="mailto:Yong&#46;Cheng&#37;&#52;&#48;stjude&#46;org">Yong Cheng</a></li>
 <li><strong>Publication</strong>: N/A (not published)</li>
-<li><strong>Input</strong>: Paired ChIP-Seq FASTQ files</li>
-<li><strong>Output</strong>: Peak coordinates BED file, coverage bigWigs, cross correlation plots to show enrichment quality.</li>
-<li><strong>Supported Genome Builds</strong>: HG19 (GRCh37), HG38 (GRCh38), MM9, MM10 (GRCm38), DM3 (BDGP5)</li>
+<li><strong>Technical Support</strong>: <a class="reference external" href="https://stjude.cloud/contact">Contact Us</a></li>
 </ul>
 <h2>Introduction</h2><p>The ChIP-Seq Peak Caller pipeline is designed for ChIP-Seq peak calling
 data analysis. The pipeline accepts one FastQ file from an IP experiment
@@ -202,6 +197,12 @@ cross correlation plot and general metrics file are generated to help check the
 quality of experiment.</p>
 <h2>Contents</h2><div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#process">Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#inputs">Inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#outputs">Outputs</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="operation.html">Pipeline Operation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="operation.html#uploading-data">Uploading Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="operation.html#parameter-configuration">Parameter Configuration</a></li>
@@ -234,7 +235,7 @@ quality of experiment.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="operation.html" class="btn btn-neutral float-right" title="Pipeline Operation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="overview.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../rapid-rnaseq/faq.html" class="btn btn-neutral" title="Frequently Asked Questions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -246,7 +247,7 @@ quality of experiment.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016, 2017 St. Jude Developers.
+        &copy; Copyright 2016, 2017, 2018 St. Jude Developers.
 
     </p>
   </div>

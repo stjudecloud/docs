@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>HLA Typing and Neoepitope Prediction &mdash; St. Jude Tools Documentation 1.0.0b documentation</title>
+  <title>HLA Typing and Neoepitope Prediction &mdash; St. Jude Cloud Documentation v1.0.0</title>
   
 
   
@@ -34,10 +34,8 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="St. Jude Tools Documentation 1.0.0b documentation" href="../../index.html"/>
+    <link rel="top" title="St. Jude Cloud Documentation v1.0.0" href="../../index.html"/>
         <link rel="next" title="Overview" href="overview.html"/>
         <link rel="prev" title="Frequently Asked Questions" href="../warden/faq.html"/> 
 
@@ -58,7 +56,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> St. Jude Tools Documentation
+            <a href="../../index.html" class="icon icon-home"> St. Jude Cloud Documentation
           
 
           
@@ -92,8 +90,14 @@
               
             
             
-              <p class="caption"><span class="caption-text">Tool Guides</span></p>
+              <p class="caption"><span class="caption-text">Data Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../desktop-application.html">St. Jude Cloud Desktop Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dx-toolkit.html">Command Line Interaction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tool Guides</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../pecan-pie/index.html">PeCan PIE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rapid-rnaseq/index.html">Rapid RNA-Seq</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chipseq/index.html">ChIP-Seq Peak Calling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../warden/index.html">WARDEN Differential Expression</a></li>
@@ -106,17 +110,11 @@
 <li class="toctree-l2"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../pecan-pie/index.html">PeCan PIE</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Visualization Guides</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../visualizations/bigwig.html">ProteinPaint BigWig Viewer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../visualizations/fusion-viewer.html">ProteinPaint Fusion Viewer</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Other Guides</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../dx-toolkit.html">Command Line Interaction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../desktop-application.html">St. Jude Cloud Desktop Application</a></li>
 </ul>
 
             
@@ -131,7 +129,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">St. Jude Tools Documentation</a>
+          <a href="../../index.html">St. Jude Cloud Documentation</a>
         
       </nav>
 
@@ -167,8 +165,6 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/pipelines/neoepitope/index.rst.txt" rel="nofollow"> View page source</a>
-          
         
       </li>
     
@@ -182,13 +178,11 @@
             
   <div class="section" id="hla-typing-and-neoepitope-prediction">
 <h1>HLA Typing and Neoepitope Prediction<a class="headerlink" href="#hla-typing-and-neoepitope-prediction" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://genome.ucsc.edu/FAQ/FAQreleases.html#release1"><img alt="HG19" src="https://img.shields.io/badge/Genome-HG19%20(GRCh37)-green.svg" /></a></p>
 <ul class="simple">
 <li><strong>Authors</strong>: Ti-Cheng Chang</li>
-<li><strong>Technical Support</strong>: <a class="reference external" href="mailto:ti-cheng&#46;chang&#37;&#52;&#48;stjude&#46;org">Ti-Cheng Chang</a></li>
-<li><strong>Publication</strong>: “The Neoepitope Landscape in Pediatric Cancers” (in revision)</li>
-<li><strong>Input</strong>: Single-end/paired-end WGS FASTQ files or an aligned WGS BAM file</li>
-<li><strong>Output</strong>: HLA alleles of the sample, predicted epitope affinities of peptides</li>
-<li><strong>Supported Genome Builds</strong>: HG19 (GRCh37)</li>
+<li><strong>Publication</strong>: <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/28854978">The Neoepitope Landscape in Pediatric Cancers. Genome Medicine. 2017. 9.1: 78</a>.</li>
+<li><strong>Technical Support</strong>: <a class="reference external" href="https://stjude.cloud/contact/">Contact Us</a></li>
 </ul>
 <h2>Introduction</h2><p>Cancers are caused by somatically acquired alterations including
 single nucleotide variations (SNVs), small insertion/deletions (indels),
@@ -198,7 +192,7 @@ of tumor-specific immunogenic epitopes. We developed an analytical workflow for
 identification of putative neoepitopes based on somatic missense mutations and
 gene fusions using whole genome sequencing data. The workflow has been used to
 characterize neoepitope landscape of 23 subtypes of pediatric cancer in the
-Pediatric Cancer Genome Project (PCGP)[1].</p>
+Pediatric Cancer Genome Project <a class="footnote-reference" href="#id2" id="id1">[1]</a>.</p>
 <h2>Content</h2><div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a><ul>
@@ -230,9 +224,12 @@ Pediatric Cancer Genome Project (PCGP)[1].</p>
 </ul>
 </div>
 <p><strong>References</strong></p>
-<ol class="arabic simple">
-<li>Chang T-C, Carter R, Li YJ, Li YX, Wang H, Edmonson M, Chen X, Arnold P, Geiger T, Wu G, Peng JM, Dyer M, Downing J, Green D, Thomas P, Zhang JH: The Neoepitope Landscape in Pediatric Cancers. Genome Medicine. 2017. 9.1: 78.</li>
-</ol>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Downing JR, Wilson RK, Zhang J, et al. The Pediatric Cancer Genome Project. Nature genetics. 2012;44(6):619-622. doi:10.1038/ng.2287.</td></tr>
+</tbody>
+</table>
 </div>
 
 
@@ -257,7 +254,7 @@ Pediatric Cancer Genome Project (PCGP)[1].</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016, 2017 St. Jude Developers.
+        &copy; Copyright 2016, 2017, 2018 St. Jude Developers.
 
     </p>
   </div>

@@ -44,7 +44,7 @@ The following columns will be shown in the output:
   #. :code:`Gene name`: the name of the genes  
   #. :code:`Sample`: the name of the samples  
   #. :code:`Chromosome (chr)`: the chromosome location of the variation
-  #. :code:`Position`: the chromosomal position of the variation. Currently, the position will be lifted over to Hg19 to ensure correct translation of peptide sequences based on the internal annotation database of the pipeline. Therefore, the position will be labeled as hg19
+  #. :code:`Position`: the chromosomal position of the variation. Currently, the position will be lifted over to Hg19 to ensure correct translation of peptide sequences based on the internal annotation database of the pipeline. Therefore, the position will be labeled as HG19
   #. :code:`Class`: class of the varitaion
   #. :code:`Reference allele`: reference allele at the position
   #. :code:`Mutant allele`: mutated allele at the position

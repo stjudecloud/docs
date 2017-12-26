@@ -2,7 +2,7 @@ Pipeline Operation
 ==================
 
 .. caution::
-   This pipeline assumes GRCh37/hg19 coordinates.
+   This pipeline assumes GRCh37/HG19 coordinates.
 
    
 Logging in

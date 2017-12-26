@@ -1,12 +1,11 @@
 ChIP-Seq Peak Calling
 =========================
 
+|HG19| |HG38| |MM9| |MM10| |DM3|
+
 * **Authors**: Xing Tang, Yong Cheng
-* **Technical Support**: `Yiping Fan <mailto:Yiping.Fan@STJUDE.org>`_, `Yong Cheng <mailto:Yong.Cheng@stjude.org>`_
 * **Publication**: N/A (not published)
-* **Input**: Paired ChIP-Seq FASTQ files
-* **Output**: Peak coordinates BED file, coverage bigWigs, cross correlation plots to show enrichment quality.
-* **Supported Genome Builds**: HG19 (GRCh37), HG38 (GRCh38), MM9, MM10 (GRCm38), DM3 (BDGP5)
+* **Technical Support**: `Contact Us <https://stjude.cloud/contact>`_
 
 .. raw:: html
 
@@ -31,8 +30,11 @@ quality of experiment.
 .. toctree::
    :maxdepth: 2 
 
+   overview
    operation
    monitoring
    navigate
    results
    faq
+
+.. include:: ../../partials/genome-shields.rst
