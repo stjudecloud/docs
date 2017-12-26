@@ -2,8 +2,8 @@ Pipeline Operation
 ==================
 
 .. caution::
-   This pipeline assumes hg19 coordinates in the mutation file. If the coordinates is based on hg38, 
-   the coordinates will lifted over to hg19 to perform epitope affinity prediction. 
+   This pipeline assumes HG19 coordinates in the mutation file. If the coordinates is based on HG38, 
+   the coordinates will lifted over to HG19 to perform epitope affinity prediction. 
 
 .. _neoepitope-upload:
 
@@ -11,7 +11,7 @@ Uploading Data
 --------------
 
 The HLA Typing and Neoepitope Prediction pipeline takes either a Gzipped FastQ 
-file or a BAM file aligned to hg19 or hg38 (WGS, WES or RNAseq). You can upload the files
+file or a BAM file aligned to HG19 or HG38 (WGS, WES or RNAseq). You can upload the files
 you would like to run using the :ref:`desktop-application` or by uploading data
 manually using the :ref:`dx-toolkit`.
 
@@ -38,7 +38,7 @@ Mutation file format
 .. note:: The mutation file required a format as shown in the example above. 
           
           * The chromosome requires a 'chr' prefix. 
-          * The position requires a suffix of hg19/hg38 to indicate the human genome assembly version. 
+          * The position requires a suffix of HG19/HG38 to indicate the human genome assembly version. 
           * Only the missense mutations/gene fusion is supported currently and the other types of mutations will not be processed. 
 
 Mutation file example

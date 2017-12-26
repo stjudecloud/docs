@@ -1,12 +1,11 @@
 WARDEN Differential Expression
 =========================
 
+|HG19| |HG38| |MM9| |MM10| |DM3| |DM6|
+
 * **Authors**: Lance Palmer
-* **Technical Support**: `Gang Wu <mailto:Gang.Wu@STJUDE.org>`_, `Yiping Fan <mailto:Yiping.Fan@STJUDE.org>`_
 * **Publication**: N/A (not published)
-* **Input**: Multiple paired RNA-Seq FASTQs, sample list file
-* **Output**: Gene fold changes and statistical significance, interactive MA and volcano plots, aligned BAMs, coverage bigWigs, transcriptome read counts, splice junction read counts
-* **Supported Genome Builds**: HG19 (GRCh37), HG38 (GRCh38), MM9, MM10 (GRCm38), DM3 (BDGP5), DM6 (BDGP6)
+* **Technical Support**: `Contact Us <https://stjude.cloud/contact>`_
 
 .. raw:: html
 
@@ -34,3 +33,5 @@ coverage analysis, gene counts and differential expression analysis.
    navigate
    results
    faq
+
+.. include:: ../../partials/genome-shields.rst

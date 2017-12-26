@@ -3,12 +3,11 @@
 Rapid RNA-Seq
 =========================
 
+|HG19|
+
 * **Authors**: Scott Newman, Clay McLeod, Yongjin Li
-* **Technical Support**: `Scott Newman <mailto:scott.newman@stjude.org>`_, `Clay McLeod <mailto:clay.mcleod@stjude.org>`_
 * **Publication**: N/A (not published)
-* **Input**: Paired RNA-Seq FASTQs, aligned RNA-Seq BAM
-* **Output**: Predicted gene fusions, coverage bigWig, splice junction read counts, interactive fusion gene visualization
-* **Supported Genome Builds**: HG19 (GRCh37)
+* **Technical Support**: `Contact Us <https://stjude.cloud/contact>`_
 
 .. raw:: html
 
@@ -35,3 +34,5 @@ RNA-Seq" that detects gene fusions and ITDs from human transcriptome data.
    results
    known-issues
    faq
+
+.. include:: ../../partials/genome-shields.rst

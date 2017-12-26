@@ -92,7 +92,7 @@ example value. Any questions about parameters should be directed to pipeline sup
 +========================+==================================================================+=========+
 | Output prefix          | A name used a prefix for all outputs in the run                  | SAMPLE1 |
 +------------------------+------------------------------------------------------------------+---------+
-| Reference genome       | Supported reference genome (hg19, hg38, mm9, mm10, dm3)          | hg38    |
+| Reference genome       | Supported reference genome (HG19, HG38, mm9, mm10, dm3)          | HG38    |
 +------------------------+------------------------------------------------------------------+---------+
 | Output bigWig          | Whether or not to include a bigwig file in the output            | True    |
 +------------------------+------------------------------------------------------------------+---------+

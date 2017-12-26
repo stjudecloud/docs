@@ -32,6 +32,7 @@
 # ones.
 extensions = [
         'sphinx.ext.mathjax',
+        'sphinx.ext.todo'
         ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -51,8 +52,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'St. Jude Tools Documentation'
-copyright = '2016, 2017 St. Jude Developers'
+project = 'St. Jude Cloud Documentation'
+copyright = '2016, 2017, 2018 St. Jude Developers'
 author = 'St. Jude Developers'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -114,7 +115,7 @@ pygments_style = 'sphinx'
 # keep_warnings = False
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = False
+todo_include_todos = True
 
 
 # -- Options for HTML output ----------------------------------------------
@@ -123,9 +124,7 @@ todo_include_todos = False
 # a list of builtin themes.
 #
 import sphinx_rtd_theme
-
 html_theme = "sphinx_rtd_theme"
-
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -139,11 +138,11 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
 #
-# html_title = 'St. Jude Cloud Documentation v0.0.1'
+html_title = 'St. Jude Cloud Documentation v1.0.0'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #
-# html_short_title = None
+html_short_title = "St. Jude Cloud Docs"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -176,7 +175,7 @@ html_static_path = ['_static']
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
 #
-# html_use_smartypants = True
+html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
 #
@@ -189,11 +188,11 @@ html_static_path = ['_static']
 
 # If false, no module index is generated.
 #
-# html_domain_indices = True
+html_domain_indices = False
 
 # If false, no index is generated.
 #
-# html_use_index = True
+html_use_index = False
 
 # If true, the index is split into individual pages for each letter.
 #
@@ -201,7 +200,7 @@ html_static_path = ['_static']
 
 # If true, links to the reST sources are added to the pages.
 #
-# html_show_sourcelink = True
+html_show_sourcelink = False
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 #

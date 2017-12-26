@@ -1,7 +1,7 @@
 .. role:: underline
     :class: underline
 
-St. Jude Cloud (Gamma)
+St. Jude Cloud (Beta)
 ========================================================
 
 Welcome to the St. Jude Cloud Platform documentation! We appreciate
@@ -11,13 +11,20 @@ please reach out on `our contact form <https://hospital.stjude.org/apps/forms/fb
 
 .. toctree::
    :maxdepth: 1
+   :caption: Data Guides
+
+   desktop-application
+   dx-toolkit
+
+.. toctree::
+   :maxdepth: 1
    :caption: Tool Guides
 
+   pipelines/pecan-pie/index
    pipelines/rapid-rnaseq/index
    pipelines/chipseq/index
    pipelines/warden/index
    pipelines/neoepitope/index
-   pipelines/pecan-pie/index
 
 .. toctree::
    :maxdepth: 1
@@ -25,15 +32,3 @@ please reach out on `our contact form <https://hospital.stjude.org/apps/forms/fb
 
    visualizations/bigwig
    visualizations/fusion-viewer
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Other Guides
-
-   dx-toolkit
-   desktop-application
-
-Indices and tables
-==================
-
-* :ref:`search`

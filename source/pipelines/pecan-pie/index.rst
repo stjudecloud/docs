@@ -3,13 +3,11 @@
 PeCan PIE
 =========
 
-* **Authors**: Michael Edmonson, Aman Patel
-* **Technical Support**: `Aman Patel <mailto:aman.patel@stjude.org>`_ (PIE portal), `Michael Edmonson <mailto:michael.edmonson@stjude.org>`_ (Medal Ceremony)
-* **Publication**: `Zhang et al., NEJM 2015 <http://www.nejm.org/doi/full/10.1056/NEJMoa1508054#t=article>`_, supplementary appendix pp. 7-10
-* **Input**: VCF file of SNVs and indels
-* **Output**: gold, silver, and bronze classifications of potential clinical signficance
-* **Supported Genome Builds**: GRCh37 (hg19)
+|HG19|
 
+* **Authors**: Michael Edmonson, Aman Patel
+* **Publication**: `Zhang et al., NEJM 2015 <http://www.nejm.org/doi/full/10.1056/NEJMoa1508054#t=article>`_, supplementary appendix pp. 7-10
+* **Technical Support**: `Contact Us <https://stjude.cloud/contact>`_
   
 Introduction
 ------------
@@ -33,3 +31,5 @@ Contents
    operation
    results
    faq
+
+.. include:: ../../partials/genome-shields.rst
