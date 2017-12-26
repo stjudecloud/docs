@@ -1,4 +1,4 @@
-.. _results-navigation:
+.. _rapid-rnaseq-results-navigation:
 
 Navigating Results
 =====================
@@ -16,7 +16,7 @@ Rapid RNA-Seq's description page is `here <https://platform.stjude.cloud/tools/1
 You should see a screen similar to the one in the screenshot below.
 In the left hand pane, select "View Results Files".
 
-.. image:: resources/raw-results.png
+.. image:: ../../resources/raw-results.png
    :alt: Click "View Results Files"
 
 You should now be in the tool's workspace with access to files that
@@ -24,7 +24,7 @@ you uploaded and results files that are generated. How/where the result
 files are generated are specific to each pipeline. Please refer to your
 individual pipeline's documentation on where the output files are kept.
 
-.. image:: resources/raw-results-success.png
+.. image:: ../../resources/raw-results-success.png
 
 Custom visualization results
 ----------------------------
@@ -34,7 +34,7 @@ Rapid RNA-Seq's description page is `here <https://platform.stjude.cloud/tools/1
 You should see a screen similar to the one in the screenshot below.
 In the left hand pane, select "Visualize Results".
 
-.. image:: resources/visualize-results.png
+.. image:: ../../resources/visualize-results.png
    :alt: Click "Visualize Results"
 
 You should now be in the tool's workspace with access to files that
@@ -42,4 +42,4 @@ you uploaded and results files that are generated. How/where the result
 files are generated are specific to each pipeline. Please refer to your
 individual pipeline's documentation on where the output files are kept.
 
-.. image:: resources/visualize-results-success.png
+.. image:: ../../resources/visualize-results-success.png

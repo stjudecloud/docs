@@ -136,7 +136,7 @@ for case and FastQ files for control.
    :alt: ChIP-Seq pipeline with inputs highlighted
 
 Clicking on the input box below will allow you to hook up the data you previously
-uploaded to be analyzed. If you have not yet uploaded your data, see :ref:`upload`.
+uploaded to be analyzed. If you have not yet uploaded your data, see :ref:`chipseq-upload`.
 Once you click on the input boxes, you should be able to select all of the inputs
 that follow (see image below).
 

@@ -1,7 +1,7 @@
 Analysis of Results
 ===================
 
-.. note:: Navigating to the results section of the tool is covered in :ref:`results-navigation`.
+.. note:: Navigating to the results section of the tool is covered in :ref:`chip-seq-results-navigation`.
 
 Raw Results
 -----------
