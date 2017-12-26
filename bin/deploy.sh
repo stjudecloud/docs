@@ -11,7 +11,7 @@ if [[ "$TRAVIS_PULL_REQUEST" != "false" || "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" 
 fi
 
 # Decrypt SSL cert.
-openssl aes-256-cbc -K $encrypted_b6aa36d391e8_key -iv $encrypted_b6aa36d391e8_iv -in SJCloudDeploy.enc -out ~/SJCloudDeploy -d
+openssl aes-256-cbc -K $encrypted_b6aa36d391e8_key -iv $encrypted_b6aa36d391e8_iv -in encrypted/SJCloudDeploy.enc -out ~/SJCloudDeploy -d
 chmod 600 ~/SJCloudDeploy
 eval `ssh-agent -s`
 ssh-add ~/SJCloudDeploy
