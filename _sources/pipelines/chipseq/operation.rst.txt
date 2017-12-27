@@ -10,7 +10,7 @@ The ChIP-Seq Peak Caller takes Gzipped FastQ files generated from
 IP data as input. You can upload the files you would like to run using the
 :ref:`desktop-application` or by uploading data manually using the :ref:`dx-toolkit`.
 
-.. note:: You should click "Launch this tool" before attempting to upload data
+.. note:: You should click "Start" before attempting to upload data
           to the tool (the tool's workspace is only created once you do this). After you
           are redirected, you can safely close the tab that was just opened.
 
@@ -19,7 +19,7 @@ IP data as input. You can upload the files you would like to run using the
 Parameter Configuration
 -----------------------
 
-Click "Launch this tool" on the `tool's landing page <https://platform.stjude.cloud/tools/chip-seq>`_.
+Click "Start" on the `tool's landing page <https://platform.stjude.cloud/tools/chip-seq>`_.
 You will be redirected to the tool's workspace, which contains four different pipelines that can
 be run based on your input data. Initially, you'll need to decide **(1)** whether you'd like to run broad/narrow peak calling *and*
 **(2)** whether you have case vs. control or only case data. You should choose the correct

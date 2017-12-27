@@ -10,7 +10,7 @@ The WARDEN Differential Expression analysis pipeline takes Gzipped FastQ files g
 RNA-Seq data as input. You can upload the files you would like to run using the
 :ref:`desktop-application` or by uploading data manually using the :ref:`dx-toolkit`.
 
-.. note:: You should click "Launch this tool" before attempting to upload data
+.. note:: You should click "Start" before attempting to upload data
           to the tool (the tool's workspace is only created once you do this). After you
           are redirected, you can safely close the tab that was just opened.
 
@@ -88,7 +88,7 @@ your columns using the tab character.  Save the file with a .txt extension.
 Pipeline Configuration
 ----------------------
 
-Click “Launch this tool” on the `tool’s landing page <https://platform.stjude.cloud/tools/warden>`_.
+Click “Start” on the `tool’s landing page <https://platform.stjude.cloud/tools/warden>`_.
 You will be redirected to the tool’s workspace, and the workflow screen should
 automatically pop up. 
 

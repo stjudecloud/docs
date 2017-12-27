@@ -15,7 +15,7 @@ file or a BAM file aligned to HG19 or HG38 (WGS, WES or RNAseq). You can upload 
 you would like to run using the :ref:`desktop-application` or by uploading data
 manually using the :ref:`dx-toolkit`.
 
-.. note:: You should click "Launch this tool" before attempting to upload data
+.. note:: You should click "Start" before attempting to upload data
           to the tool (the tool's workspace is only created once you do this). After you
           are redirected, you can safely close the tab that was just opened.
 
@@ -49,7 +49,7 @@ Mutation file example
 Parameter Configuration
 -----------------------
 
-Click “Launch this tool” on the `tool’s landing page <https://platform.stjude.cloud/tools/neoepitopepred`_.
+Click “Start” on the `tool’s landing page <https://platform.stjude.cloud/tools/neoepitopepred`_.
 You will be redirected to the tool’s workspace, and the workflow screen should
 automatically pop up. 
 
