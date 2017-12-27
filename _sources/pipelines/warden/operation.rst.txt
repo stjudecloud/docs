@@ -45,7 +45,7 @@ Each row in the spreadsheet (disregarding the last row) corresponds to
 a sample (either one or two fastq files). You should fill in these rows
 based on your data.
 
-.. caution:: Please use these guidelines when filling in the sample sheet.
+.. tip:: Please use these guidelines when filling in the sample sheet.
 
              * The sample name should be unique and should only contain letters, numbers and underscores.  
              * The condition/phenotype column associates similar samples together. The values should contain only letters, numbers and underscores.
