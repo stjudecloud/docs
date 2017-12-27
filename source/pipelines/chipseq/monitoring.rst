@@ -10,7 +10,7 @@ Monitoring Run Progress
 
 Monitoring the status of your pipelines in the St. Jude Cloud is
 simple. First, navigate to your tool's description page (for instance,
-Rapid RNA-Seq's description page is `here <https://platform.stjude.cloud/tools/10>`_).
+Rapid RNA-Seq's description page is `here <https://platform.stjude.cloud/tools/rapid_rna-seq>`_).
 You should see a screen similar to the one in the screenshot below.
 In the left hand pane, select "View Running Jobs".
 
