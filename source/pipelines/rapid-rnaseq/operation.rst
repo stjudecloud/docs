@@ -21,7 +21,7 @@ RNA-Seq data as input. You can upload the files you would like to run using the
 Input File Configuration
 ------------------------
 
-Click "Launch this tool" on the `tool's landing page <https://platform.stjude.cloud/tools/10>`_.
+Click "Launch this tool" on the `tool's landing page <https://platform.stjude.cloud/tools/rapid_rna-seq>`_.
 You will redirected to the tool's workspace, with the workflow automatically pulled 
 up.
 
