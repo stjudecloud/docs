@@ -19,7 +19,7 @@ IP data as input. You can upload the files you would like to run using the
 Parameter Configuration
 -----------------------
 
-Click "Launch this tool" on the `tool's landing page <https://platform.stjude.cloud/tools/6>`_.
+Click "Launch this tool" on the `tool's landing page <https://platform.stjude.cloud/tools/chip-seq>`_.
 You will be redirected to the tool's workspace, which contains four different pipelines that can
 be run based on your input data. Initially, you'll need to decide **(1)** whether you'd like to run broad/narrow peak calling *and*
 **(2)** whether you have case vs. control or only case data. You should choose the correct

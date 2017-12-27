@@ -88,7 +88,7 @@ your columns using the tab character.  Save the file with a .txt extension.
 Pipeline Configuration
 ----------------------
 
-Click “Launch this tool” on the `tool’s landing page <https://platform.stjude.cloud/tools/4>`_.
+Click “Launch this tool” on the `tool’s landing page <https://platform.stjude.cloud/tools/warden>`_.
 You will be redirected to the tool’s workspace, and the workflow screen should
 automatically pop up. 
 

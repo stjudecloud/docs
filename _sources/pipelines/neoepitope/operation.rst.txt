@@ -49,7 +49,7 @@ Mutation file example
 Parameter Configuration
 -----------------------
 
-Click “Launch this tool” on the `tool’s landing page <https://platform.stjude.cloud/tools/4>`_.
+Click “Launch this tool” on the `tool’s landing page <https://platform.stjude.cloud/tools/neoepitopepred`_.
 You will be redirected to the tool’s workspace, and the workflow screen should
 automatically pop up. 
 

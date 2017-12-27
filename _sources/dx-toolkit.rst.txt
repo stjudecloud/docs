@@ -21,7 +21,7 @@ similar to the screenshot below.
 
 DNAnexus is organized by projects, and in St. Jude Cloud, each tool
 has a its own project in DNAnexus. This project is created once you click
-"Launch this Tool" on one of the tool description pages (example: `Rapid RNA-Seq description page <https://platform.stjude.cloud/tools/10>`_).
+"Launch this Tool" on one of the tool description pages (example: `Rapid RNA-Seq description page <https://platform.stjude.cloud/tools/rapid_rna-seq>`_).
 You should see a project for each of the tools that you have previously
 launched, as well as some other ancillary projects.
 
