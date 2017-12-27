@@ -30,7 +30,7 @@ Custom visualization results
 ----------------------------
 
 Navigate to your tool's description page (for instance,
-Rapid RNA-Seq's description page is `here <https://platform.stjude.cloud/tools/10>`_).
+Rapid RNA-Seq's description page is `here <https://platform.stjude.cloud/tools/rapid_rna-seq>`_).
 You should see a screen similar to the one in the screenshot below.
 In the left hand pane, select "Visualize Results".
 
