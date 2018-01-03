@@ -35,4 +35,4 @@ RNA-Seq" that detects gene fusions and ITDs from human transcriptome data.
    known-issues
    faq
 
-.. include:: ../../partials/genome-shields.rst
+.. include:: ../../../partials/genome-shields.rst

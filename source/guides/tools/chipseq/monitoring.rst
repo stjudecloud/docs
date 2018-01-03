@@ -1,4 +1,4 @@
-.. _monitoring-jobs:
+.. _chipseq-monitoring-jobs:
 
 Monitoring Run Progress 
 =======================
@@ -14,7 +14,7 @@ Rapid RNA-Seq's description page is `here <https://platform.stjude.cloud/tools/r
 You should see a screen similar to the one in the screenshot below.
 In the left hand pane, select "View Running Jobs".
 
-.. image:: ../../resources/running-jobs.png
+.. image:: ../../../resources/running-jobs.png
    :alt: Click "View Running Jobs"
 
 Here, you will see a list of all of your previous runs for a tool, as
@@ -22,7 +22,7 @@ well as the job status (successful, failed, terminated by user) and
 cost. You can click on the "+" icon to the left of each tool run to see
 all of the different tools that were run.
 
-.. figure:: ../../resources/jobs-basic.png
+.. figure:: ../../../resources/jobs-basic.png
    :alt: Click the "+" beside a run to view more information
 
    Click the "+" beside a run to view more information.
@@ -30,7 +30,7 @@ all of the different tools that were run.
 Other information, such as time, cost of individual job, and even job
 logs are available by clicking on the sub-items.
 
-.. figure:: ../../resources/jobs-advanced.png
+.. figure:: ../../../resources/jobs-advanced.png
    :alt: Advanced job information
 
    Click on individual items in the list to explore detailed information

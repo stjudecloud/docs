@@ -32,4 +32,4 @@ Contents
    results
    faq
 
-.. include:: ../../partials/genome-shields.rst
+.. include:: ../../../partials/genome-shields.rst

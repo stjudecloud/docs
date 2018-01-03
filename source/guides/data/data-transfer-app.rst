@@ -1,6 +1,6 @@
 .. _desktop-application:
 
-St. Jude Cloud Desktop Application
+Data Transfer Application
 ========================================================
 
 The St. Jude Cloud desktop application is still in development.

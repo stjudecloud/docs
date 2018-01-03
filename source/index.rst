@@ -11,24 +11,30 @@ please reach out on `our contact form <https://hospital.stjude.org/apps/forms/fb
 
 .. toctree::
    :maxdepth: 1
+   :caption: General Guides
+
+   faq
+
+.. toctree::
+   :maxdepth: 1
    :caption: Data Guides
 
-   desktop-application
-   dx-toolkit
+   guides/data/data-transfer-app
+   guides/data/command-line
 
 .. toctree::
    :maxdepth: 1
    :caption: Tool Guides
 
-   pipelines/pecan-pie/index
-   pipelines/rapid-rnaseq/index
-   pipelines/chipseq/index
-   pipelines/warden/index
-   pipelines/neoepitope/index
+   guides/tools/pecan-pie/index
+   guides/tools/rapid-rnaseq/index
+   guides/tools/chipseq/index
+   guides/tools/warden/index
+   guides/tools/neoepitope/index
 
 .. toctree::
    :maxdepth: 1
    :caption: Visualization Guides
 
-   visualizations/bigwig
-   visualizations/fusion-viewer
+   guides/visualizations/bigwig
+   guides/visualizations/fusion-viewer

@@ -39,4 +39,4 @@ Pediatric Cancer Genome Project [1]_.
 **References**
 
 .. [1] Downing JR, Wilson RK, Zhang J, et al. The Pediatric Cancer Genome Project. Nature genetics. 2012;44(6):619-622. doi:10.1038/ng.2287.
-.. include:: ../../partials/genome-shields.rst
+.. include:: ../../../partials/genome-shields.rst

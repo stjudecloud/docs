@@ -34,4 +34,4 @@ coverage analysis, gene counts and differential expression analysis.
    results
    faq
 
-.. include:: ../../partials/genome-shields.rst
+.. include:: ../../../partials/genome-shields.rst
