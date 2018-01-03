@@ -1,3 +1,5 @@
+.. _chipseq-index:
+
 ChIP-Seq Peak Calling
 =========================
 

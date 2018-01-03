@@ -1,5 +1,7 @@
-WARDEN Differential Expression
-=========================
+.. _warden-index:
+
+WARDEN Differential Expression Analysis
+=======================================
 
 |HG19| |HG38| |MM9| |MM10| |DM3| |DM6|
 

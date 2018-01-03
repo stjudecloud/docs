@@ -1,3 +1,5 @@
+.. _neoepitope-index:
+
 HLA Typing and Neoepitope Prediction
 =========================
 

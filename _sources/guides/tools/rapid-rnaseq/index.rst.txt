@@ -1,7 +1,7 @@
-.. _rapid-rnaseq:
+.. _rapid-rnaseq-index:
 
-Rapid RNA-Seq
-=========================
+Rapid RNA-Seq Fusion Detection
+==============================
 
 |HG19|
 
