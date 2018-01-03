@@ -58,8 +58,8 @@ install-deps:
 
 	@echo ""
 	@echo "[*] Finished!"
-	@echo "    - Run 'call make.bat html' to compile to html once."
-	@echo "    - Run 'call make.bat livehtml' to compile to html continuously."
+	@echo "    - Run 'make html' to compile to html once."
+	@echo "    - Run 'make livehtml' to compile to html continuously."
 	@echo "    - Run 'make latexpdf' to compile a pdf."
 	@echo "    - Run 'make' to see all of the possible building options."
 	@echo "    - All results will be in ./build/"
