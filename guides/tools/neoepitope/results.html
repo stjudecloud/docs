@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Analysis of Results &mdash; St. Jude Cloud Documentation v1.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="St. Jude Cloud Documentation v1.0.0" href="../../../index.html"/>
+        <link rel="up" title="HLA Typing and Neoepitope Prediction" href="index.html"/>
+        <link rel="next" title="Frequently Asked Questions" href="faq.html"/>
+        <link rel="prev" title="Navigating Results" href="navigate.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> St. Jude Cloud Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                latest
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">General Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">Frequently Asked Questions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Data Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/data-transfer-app.html">Data Transfer Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data/command-line.html">Command Line Interaction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tool Guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../pecan-pie/index.html">PeCan PIE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rapid-rnaseq/index.html">Rapid RNA-Seq</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chipseq/index.html">ChIP-Seq Peak Calling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../warden/index.html">WARDEN Differential Expression</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">HLA Typing and Neoepitope Prediction</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation.html">Pipeline Operation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitoring.html">Monitoring Run Progress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigate.html">Navigating Results</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Analysis of Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hla-typing">HLA typing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#neoepitope-prediction">Neoepitope prediction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Visualization Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../visualizations/bigwig.html">ProteinPaint BigWig Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../visualizations/fusion-viewer.html">ProteinPaint Fusion Viewer</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">St. Jude Cloud Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">HLA Typing and Neoepitope Prediction</a> &raquo;</li>
+        
+      <li>Analysis of Results</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="analysis-of-results">
+<h1>Analysis of Results<a class="headerlink" href="#analysis-of-results" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="hla-typing">
+<h2>HLA typing<a class="headerlink" href="#hla-typing" title="Permalink to this headline">¶</a></h2>
+<p>The output of this app contain the prediction of the HLA class I alleles from OptiType.</p>
+<ul class="simple">
+<li>A folder stamped with the time will present in the output folder (optitype), which contains the raw output.</li>
+</ul>
+<img alt="../../../_images/hlatype_result.png" src="../../../_images/hlatype_result.png" />
+<ul class="simple">
+<li>The file contains the predicted HLA alleles of the sample.</li>
+</ul>
+<img alt="../../../_images/hlatype_result2.png" src="../../../_images/hlatype_result2.png" />
+</div>
+<div class="section" id="neoepitope-prediction">
+<h2>Neoepitope prediction<a class="headerlink" href="#neoepitope-prediction" title="Permalink to this headline">¶</a></h2>
+<p>The output contains one summary HTML, one folder with raw output and one folder with outputs in Excel formats:</p>
+<img alt="../../../_images/epitope_result.png" src="../../../_images/epitope_result.png" />
+<dl class="docutils">
+<dt>Epitope_affinity_prediction.html:</dt>
+<dd><ul class="first last simple">
+<li>This file provides a summary of the epitope prediction that can be visualized directly from web browser.</li>
+<li>The peptides with affinity lower than user-defined cutoff will be highlighted in green in the webpage.</li>
+</ul>
+</dd>
+</dl>
+<img alt="../../../_images/epitope_result2.png" src="../../../_images/epitope_result2.png" />
+<p>Raw_output: this folder contains the raw output of the affinity prediction.</p>
+<img alt="../../../_images/epitope_result3.png" src="../../../_images/epitope_result3.png" />
+<p>There will two major types files present here:</p>
+<img alt="../../../_images/epitope_result4.png" src="../../../_images/epitope_result4.png" />
+<ul class="simple">
+<li>affinity.out: these files are the prediction results from the netMHCcons for each peptide.</li>
+</ul>
+<img alt="../../../_images/epitope_result5.png" src="../../../_images/epitope_result5.png" />
+<p>The following columns will be shown in the output:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><code class="code docutils literal"><span class="pre">Gene</span> <span class="pre">name</span></code>: the name of the genes</li>
+<li><code class="code docutils literal"><span class="pre">Sample</span></code>: the name of the samples</li>
+<li><code class="code docutils literal"><span class="pre">Chromosome</span> <span class="pre">(chr)</span></code>: the chromosome location of the variation</li>
+<li><code class="code docutils literal"><span class="pre">Position</span></code>: the chromosomal position of the variation. Currently, the position will be lifted over to Hg19 to ensure correct translation of peptide sequences based on the internal annotation database of the pipeline. Therefore, the position will be labeled as HG19</li>
+<li><code class="code docutils literal"><span class="pre">Class</span></code>: class of the varitaion</li>
+<li><code class="code docutils literal"><span class="pre">Reference</span> <span class="pre">allele</span></code>: reference allele at the position</li>
+<li><code class="code docutils literal"><span class="pre">Mutant</span> <span class="pre">allele</span></code>: mutated allele at the position</li>
+<li><code class="code docutils literal"><span class="pre">mRNA_acc</span></code>: NCBI accession number of the mRNA</li>
+<li><code class="code docutils literal"><span class="pre">Allele</span></code>: HLA allele tested</li>
+<li><code class="code docutils literal"><span class="pre">Peptide</span></code>: the neoepitope sequences tested</li>
+<li><code class="code docutils literal"><span class="pre">Gene_variant</span></code>: the gene and variant residues</li>
+<li><code class="code docutils literal"><span class="pre">1-log50k</span></code>:  Prediction score from netMHCcons</li>
+<li><code class="code docutils literal"><span class="pre">nM</span></code>: Affinity as IC50 values in nM</li>
+<li><code class="code docutils literal"><span class="pre">%Rank</span></code>: % Rank of prediction score to a set of 200.000 random natural 9mer peptides</li>
+<li><code class="code docutils literal"><span class="pre">HLAtype</span></code>: All of the hla alleles predicted in the specific sample</li>
+</ol>
+</div></blockquote>
+<ul class="simple">
+<li>flanking.seq: these files contain the sequences used for the prediction.</li>
+</ul>
+<img alt="../../../_images/epitope_result6.png" src="../../../_images/epitope_result6.png" />
+<p>XLSX: this folder contains the raw output of the affinity prediction as described above in Excel files. The files can be downloaded and opened with Excel for downstram filtering and analyses</p>
+<img alt="../../../_images/epitope_result7.png" src="../../../_images/epitope_result7.png" />
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="faq.html" class="btn btn-neutral float-right" title="Frequently Asked Questions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="navigate.html" class="btn btn-neutral" title="Navigating Results" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2017, 2018 St. Jude Developers.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'latest',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

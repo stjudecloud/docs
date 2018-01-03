@@ -1,0 +1,376 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Analysis of Results &mdash; St. Jude Cloud Documentation v1.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="St. Jude Cloud Documentation v1.0.0" href="../../../index.html"/>
+        <link rel="up" title="Rapid RNA-Seq" href="index.html"/>
+        <link rel="next" title="Known Issues" href="known-issues.html"/>
+        <link rel="prev" title="Navigating Results" href="navigate.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> St. Jude Cloud Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                latest
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">General Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">Frequently Asked Questions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Data Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/data-transfer-app.html">Data Transfer Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data/command-line.html">Command Line Interaction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tool Guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../pecan-pie/index.html">PeCan PIE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Rapid RNA-Seq</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation.html">Pipeline Operation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitoring.html">Monitoring Run Progress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigate.html">Navigating Results</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Analysis of Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#raw-result-files">Raw Result Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#proteinpaint-visualizations">ProteinPaint Visualizations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="known-issues.html">Known Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../chipseq/index.html">ChIP-Seq Peak Calling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../warden/index.html">WARDEN Differential Expression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../neoepitope/index.html">HLA Typing and Neoepitope Prediction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Visualization Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../visualizations/bigwig.html">ProteinPaint BigWig Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../visualizations/fusion-viewer.html">ProteinPaint Fusion Viewer</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">St. Jude Cloud Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Rapid RNA-Seq</a> &raquo;</li>
+        
+      <li>Analysis of Results</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="analysis-of-results">
+<h1>Analysis of Results<a class="headerlink" href="#analysis-of-results" title="Permalink to this headline">¶</a></h1>
+<p>The complete output file specification is listed on the
+Rapid RNA-Seq <a class="reference internal" href="overview.html#rapid-rnaseq-overview"><span class="std std-ref">Overview</span></a> page. Here, we will
+discuss the different output files and how you can use them.</p>
+<div class="section" id="raw-result-files">
+<h2>Raw Result Files<a class="headerlink" href="#raw-result-files" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first"><strong>Predicted gene fusions</strong>: The predicted gene fusions will be output
+with the filename <code class="code docutils literal"><span class="pre">SAMPLE.final_fusions.txt</span></code>. This file is a tab-delimited
+file containing many fields for each of the predicted SV. The most important
+columns are the following.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="65%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="code docutils literal"><span class="pre">sample</span></code></td>
+<td>Sample name</td>
+</tr>
+<tr class="row-odd"><td><code class="code docutils literal"><span class="pre">gene*</span></code></td>
+<td>Gene name</td>
+</tr>
+<tr class="row-even"><td><code class="code docutils literal"><span class="pre">chr*</span></code></td>
+<td>Chromosome name</td>
+</tr>
+<tr class="row-odd"><td><code class="code docutils literal"><span class="pre">pos*</span></code></td>
+<td>Genomic Locaton</td>
+</tr>
+<tr class="row-even"><td><code class="code docutils literal"><span class="pre">ort*</span></code></td>
+<td>Strand</td>
+</tr>
+<tr class="row-odd"><td><code class="code docutils literal"><span class="pre">reads*</span></code></td>
+<td>Supporting reads</td>
+</tr>
+<tr class="row-even"><td><code class="code docutils literal"><span class="pre">medal</span></code></td>
+<td>Estimated pathogenicity assessment</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p class="first"><strong>Coverage file</strong>: A standard <a class="reference external" href="https://genome.ucsc.edu/goldenpath/help/bigWig.html">bigWig</a> file
+used to describe genomic coverage data.</p>
+</li>
+<li><p class="first"><strong>Splice junction read counts</strong>: A custom file format describing the
+junction read counts. The following fields are included in the tab-delimited
+output file.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="96%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>junction</td>
+<td>Splice junction in the TCGA format “chrX:start:+,chrX:end,+”. “start” and “end” are the 1-based position of the last mapped nucleotide before the skip and the first mapped nucleotide after the skip (i.e. the last base of the previous exon and the first base of the next exon). Note that in .bed output these coordinates will be different, see the .bed output section below. The “+” is currently hardcoded, though this may change in the future.</td>
+</tr>
+<tr class="row-odd"><td>count</td>
+<td>Raw count of reads supporting the junction. During correction counts for ambiguous junctions can be combined, though obviously these additional reads will not be visible in the raw BAM file.</td>
+</tr>
+<tr class="row-even"><td>type</td>
+<td>either “known” (matching a reference junction) or “novel” (not observed in the reference junction collection).</td>
+</tr>
+<tr class="row-odd"><td>genes</td>
+<td>gene symbols from the junction calling process. These still need work in the raw junction calling process, it’s recommended to use the “annotated” output files instead which assign matching HUGO gene symbols based on the UCSC refGene table.</td>
+</tr>
+<tr class="row-even"><td>transcripts</td>
+<td>list of known transcript IDs matching the junction.</td>
+</tr>
+<tr class="row-odd"><td>qc_flanking</td>
+<td>Count of supporting reads passing flanking sequence checks (junctions observed adjacent to read ends require 18+ nt of flanking sequence, otherwise 10+ nt).</td>
+</tr>
+<tr class="row-even"><td>qc_plus</td>
+<td>Count of supporting reads aligned to the + strand.</td>
+</tr>
+<tr class="row-odd"><td>qc_minus</td>
+<td>Count of supporting reads aligned to the - strand.</td>
+</tr>
+<tr class="row-even"><td>qc_perfect_reads</td>
+<td>Count of supporting reads with perfect alignments (no reference mismatches of quality 15+, indels, or soft clips).</td>
+</tr>
+<tr class="row-odd"><td>qc_clean_reads</td>
+<td>Count of supporting reads whose alignments are not perfect but which have a ratio of &lt;= 5% of reference mismatches of quality 15+, indels, or soft clips relative to the count of aligned bases on both the left and right flanking sequence. Note: qc_clean_reads does NOT include qc_perfect_reads: to get a count of “perfect plus pretty good” reads the two values must be added together.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+<div class="section" id="proteinpaint-visualizations">
+<h2>ProteinPaint Visualizations<a class="headerlink" href="#proteinpaint-visualizations" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>Interactive fusion visualization</strong>: The interactive fusion viewer is available as a
+file with the name <code class="code docutils literal"><span class="pre">Putative</span> <span class="pre">Fusions</span> <span class="pre">(SAMPLE.final_fusions)</span></code>. Click on this file
+and then follow the <a class="reference internal" href="../../visualizations/fusion-viewer.html#pp-fusion-viewer"><span class="std std-ref">ProteinPaint Fusion Viewer</span></a> guide.</li>
+<li><strong>Interactive coverage visualization</strong>: The interactive coverage viewer is available as a
+file with the name <code class="code docutils literal"><span class="pre">Coverage</span> <span class="pre">(SAMPLE)</span></code>. Click on this file
+and then follow the <a class="reference internal" href="../../visualizations/bigwig.html#pp-coverage-viewer"><span class="std std-ref">ProteinPaint BigWig Viewer</span></a> guide.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="known-issues.html" class="btn btn-neutral float-right" title="Known Issues" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="navigate.html" class="btn btn-neutral" title="Navigating Results" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2017, 2018 St. Jude Developers.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'latest',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,467 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Analysis of Results &mdash; St. Jude Cloud Documentation v1.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="St. Jude Cloud Documentation v1.0.0" href="../../../index.html"/>
+        <link rel="up" title="WARDEN Differential Expression" href="index.html"/>
+        <link rel="next" title="Frequently Asked Questions" href="faq.html"/>
+        <link rel="prev" title="Navigating Results" href="navigate.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> St. Jude Cloud Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                latest
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">General Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">Frequently Asked Questions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Data Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/data-transfer-app.html">Data Transfer Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data/command-line.html">Command Line Interaction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tool Guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../pecan-pie/index.html">PeCan PIE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rapid-rnaseq/index.html">Rapid RNA-Seq</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chipseq/index.html">ChIP-Seq Peak Calling</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">WARDEN Differential Expression</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation.html">Pipeline Operation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitoring.html">Monitoring Run Progress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigate.html">Navigating Results</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Analysis of Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#initial-analysis-of-results">Initial analysis of results</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#alignment-statistics">Alignment statistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#multidimensional-scaling-mds-plot">Multidimensional scaling (MDS) Plot</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#proteinpaint-visualizations">ProteinPaint Visualizations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#limma-differential-expression-viewer">LIMMA differential expression viewer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#simple-differential-expression-viewer">Simple differential expression viewer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bigwig-viewer">bigWig viewer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-results">Additional Results</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#interactive-ma-volcano-plots">Interactive MA/Volcano Plots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#differential-expression-results">Differential expression results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#differential-analysis-input">Differential analysis input</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coverage-results">Coverage results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#quality-control-results-fastqc">Quality Control Results (FASTQC)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bam-alignment-files">BAM alignment files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chimeric-reads-and-junction-files">Chimeric reads and junction files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fpkm-and-count-files-per-sample">FPKM and count files (per sample)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods-files">Methods Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-output-files">Other output files</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#auxilary-files">Auxilary Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#align">ALIGN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bigwig">BIGWIG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">BIGWIG_VIEWER</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#combined-flagstat">COMBINED_FLAGSTAT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#combined-htseq">COMBINED_HTSEQ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coverage">COVERAGE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fastqc">FASTQC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#htseq">HTSEQ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#limma">LIMMA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">METHODS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#samplelist">SAMPLELIST</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#simple-difex">SIMPLE_DIFEX</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../neoepitope/index.html">HLA Typing and Neoepitope Prediction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Visualization Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../visualizations/bigwig.html">ProteinPaint BigWig Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../visualizations/fusion-viewer.html">ProteinPaint Fusion Viewer</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">St. Jude Cloud Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">WARDEN Differential Expression</a> &raquo;</li>
+        
+      <li>Analysis of Results</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="analysis-of-results">
+<span id="warden-results"></span><h1>Analysis of Results<a class="headerlink" href="#analysis-of-results" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="initial-analysis-of-results">
+<h2>Initial analysis of results<a class="headerlink" href="#initial-analysis-of-results" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="alignment-statistics">
+<h3>Alignment statistics<a class="headerlink" href="#alignment-statistics" title="Permalink to this headline">¶</a></h3>
+<p>Several files should be examined initially to determine the quality of the results.  <strong>alignmentStatistics.txt</strong> shows alignment statistics for all samples. This file is a plain text tab-delimited file that can be opened in Excel or a text editor such as Notepad++.  This file contains information on the total reads per sample, the percantage of duplicate reads and the percentage of mapped reads.  An example of this file is below. (Within the DNAnexus output directory structure, these files will be in the COMBINED_FLAGSTAT directory.)</p>
+<blockquote>
+<div><img alt="../../../_images/alignmentStatistics.png" src="../../../_images/alignmentStatistics.png" />
+</div></blockquote>
+</div>
+<div class="section" id="multidimensional-scaling-mds-plot">
+<h3>Multidimensional scaling (MDS) Plot<a class="headerlink" href="#multidimensional-scaling-mds-plot" title="Permalink to this headline">¶</a></h3>
+<p>The second set of files to look at are the Multidimensional scaling (MDS) plots (<a class="reference external" href="https://en.wikipedia.org/wiki/Multidimensional_scaling">https://en.wikipedia.org/wiki/Multidimensional_scaling</a>) using the plotMDS function within LIMMA.  Similar to PCA, these graphs will show how similar samples are to each other.  There are different sets of MDS plots.  For comparisons where there are 3 or more samples per condition, an MDS plot using Voom (Limma) normalized values are generated.  An example can be seen below.  These files will be labeled <strong>mdsPlot.png</strong>.  For all comparisons, regardless of sample size, and MDS plot will also be generated with Counts per million (CPM) normalized gene counts.  These files will be labeled <strong>mdsPlot.normCPM.png</strong>. (Within the DNAnexus output directory structure, these files will be in the LIMMA directory.)</p>
+<img alt="../../../_images/mdsPlot.png" src="../../../_images/mdsPlot.png" />
+<p>MDS plot from just CPM normalized data.</p>
+<img alt="../../../_images/mdsPlot.normCPM.png" src="../../../_images/mdsPlot.normCPM.png" />
+</div>
+</div>
+<div class="section" id="proteinpaint-visualizations">
+<h2>ProteinPaint Visualizations<a class="headerlink" href="#proteinpaint-visualizations" title="Permalink to this headline">¶</a></h2>
+<p>Several files on DNAnexus allow the data to be viewed in the Protein Paint viewer.  (Note: We plan to have links downloaded in the future to allow the viewing of these files off of DNAnexus.)</p>
+<div class="section" id="limma-differential-expression-viewer">
+<h3>LIMMA differential expression viewer<a class="headerlink" href="#limma-differential-expression-viewer" title="Permalink to this headline">¶</a></h3>
+<p>Within LIMMA/VIEWERS direcory (note if no comparisons meet the 3 sample condition, the LIMMA folder will not exist),  there will be a viewer file for each valid comparison ( <strong>results.*.txt.viewer</strong>).  Simply select the file and press ‘Launch viewer’ in the lower right.   A viewer will pop up showing both the MA Plot and Volcano plot.  By moving the mouse over a circle, the circle will hilight and the corresponding gene on the other graph will also hilight.  Additional information about the gene and its expression values will also be shown.  One can also type in multiple gene symbols in the provided text box.  By pressing ‘Show gene labels’  all these genes will show up on the plots.</p>
+<img alt="../../../_images/ma_volcano.png" src="../../../_images/ma_volcano.png" />
+</div>
+<div class="section" id="simple-differential-expression-viewer">
+<h3>Simple differential expression viewer<a class="headerlink" href="#simple-differential-expression-viewer" title="Permalink to this headline">¶</a></h3>
+<p>There will also be a viewer for the simple differential expresssion analysis in SIMPLE_DIFEX/VIEWERS.  The P-value for the results have all been set to 1, so the volcano plot will not be relevant.</p>
+</div>
+<div class="section" id="bigwig-viewer">
+<h3>bigWig viewer<a class="headerlink" href="#bigwig-viewer" title="Permalink to this headline">¶</a></h3>
+<p>In the BIGWIG_VIEWER directory there will be a bigwigViewer file. Select this file and then ‘Launch viewer’.  A graph of coverage for the genome should be visible.</p>
+</div>
+</div>
+<div class="section" id="additional-results">
+<h2>Additional Results<a class="headerlink" href="#additional-results" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="interactive-ma-volcano-plots">
+<h3>Interactive MA/Volcano Plots<a class="headerlink" href="#interactive-ma-volcano-plots" title="Permalink to this headline">¶</a></h3>
+<p>In addition to viewing the MA and volcano plots through the visualization tool</p>
+</div>
+<div class="section" id="differential-expression-results">
+<h3>Differential expression results<a class="headerlink" href="#differential-expression-results" title="Permalink to this headline">¶</a></h3>
+<p>Other useful differential expression results will be downloaded by the desktop app.  This included tabular output from the differential expression analysis.  For each comparison with three or more samples per condition, <strong>results.*.txt</strong> will be produced.</p>
+<p><strong>GSEA.input.*.txt</strong> and <strong>GSEA.tStat.*.txt</strong> are input files that can be used for GSEA analysis.  The tStat file is preferred for a more accurate analysis, but will not give a heatmap diagram.</p>
+<p>(Within the DNAnexus  output directory structure, these files will be in the LIMMA directory.)</p>
+<p>For plain text results from the simple differential expresison analysis, the files will be named <strong>simpleDE.*.txt</strong>.</p>
+<p>(Within the DNAnexus  output directory structure, these files will be in the SIMPLE_DIFEX directory.)</p>
+<p>Prelabelled MA and volcano plots are provided for the analysis. These files are labeled <strong>maPlot.*.png</strong> amd <strong>volcanoPlot.*.png</strong> where ‘*’ is the comparison (e.g. ko_vs_wt)</p>
+<p>The MA plot shows the average expression of the gene on the X-axis, and Log2 fold change between condition/phenotype is on the Y-axis (if the name is for example maPlot.condition2-condition1.png then the fold change would represent condition1 minus condition2).  Each gene is represented by a circle.  The top 20 genes (by p-value) are identified on the plot.  The genes are color coded by the chosen multiple testing correction method (False Discovery Rate (FDR) by default.  An exmaple MA plot can be seen below.</p>
+<p>(Within the DNAnexus output directory structure, these files will be in the LIMMA directory.)</p>
+<img alt="../../../_images/maPlot.png" src="../../../_images/maPlot.png" />
+<p>The volcano plot shows the Log2Fold change between the conditions on the X-axis, and the -Log10 of the multiple testing corrected P-value on the Y-axis.</p>
+<img alt="../../../_images/volcanoPlot.png" src="../../../_images/volcanoPlot.png" />
+<p>An MA plot is generated for all comparisons regardless of number of samples.  This is the <strong>simpleDEPlot.*.png</strong> no statistics are shown and genes are not labeled.</p>
+<p>(Within the DNAnexus output directory structure, these files will be in the SIMPLE_DIFEX directory.)</p>
+</div>
+<div class="section" id="differential-analysis-input">
+<h3>Differential analysis input<a class="headerlink" href="#differential-analysis-input" title="Permalink to this headline">¶</a></h3>
+<p>Inputs and commands are provided for rerunning differential expression analysis on ones own computer.  The R commands used for the analysis are found  in <strong>voomLimma.R</strong>.  An experienced R user can rerun the analysis with any desired changes.  This analysis requires the input <strong>countFile.txt</strong> which contains counts per genes, the <strong>Rparameters.txt</strong> file containing input parameters, and a processed sample list file <strong>sampleList.txt</strong></p>
+<p>(Within the DNAnexus  output directory structure, these files will be in the LIMMA directory.)</p>
+<p>The input for the simple differential analysis expression will be <strong>Rparameters_simple.txt</strong>,  <strong>simpleDE.R</strong>, <strong>countFile.txt</strong> and <strong>sampleList.txt</strong>.
+<strong>countFile.txt</strong> and <strong>sampleList.txt</strong> are the same files used by the LIMMA analysis.</p>
+<p>(Within the DNAnexus output directory structure, these files will be in the SIMPLE_DIFEX directory.)</p>
+</div>
+<div class="section" id="coverage-results">
+<h3>Coverage results<a class="headerlink" href="#coverage-results" title="Permalink to this headline">¶</a></h3>
+<p>bigWig files will be generated for use in genome browsers (such as IGV <a class="reference external" href="http://software.broadinstitute.org/software/igv/">http://software.broadinstitute.org/software/igv/</a>).  For each smaple, multiple bigWig files will be found.  For all types of sequencing strandedness,  there will be bigWig files labelled, <strong>*.sortedCoverageFile.bed.bw</strong> where ‘*’ is the sample name.  For stranded data there will also be <strong>*.sortedPosCoverageFile.bed.bw</strong> and <strong>*.sortedNegCoverageFile.bed.bw</strong> which contains coverage information for the positive and negative strand of the genome.</p>
+<p>(Within the DNAnexus  output directory structure, these files will be in the BIGWIG directory.)</p>
+</div>
+<div class="section" id="quality-control-results-fastqc">
+<h3>Quality Control Results (FASTQC)<a class="headerlink" href="#quality-control-results-fastqc" title="Permalink to this headline">¶</a></h3>
+<p>Within the FASTQC directory, foreach sample and read direction there will be an html file and a zip file (<strong>*.fastqc.html</strong> <strong>*.fastqc.zip</strong> where ‘*’ is the base FastQ name), containing results from FASTQTC.  For the average user the html file is sufficient.  This file can give some basic statistics on the quality of the data.</p>
+<p>(Within the DNAnexus  output directory structure, these files will be in the FASTQC directory.)</p>
+</div>
+<div class="section" id="bam-alignment-files">
+<h3>BAM alignment files<a class="headerlink" href="#bam-alignment-files" title="Permalink to this headline">¶</a></h3>
+<p>There are two BAM files generated per sample that contain mapping information for all reads.  The first is labeled <strong>*.Aligned.sortedByCoord.dup.bam</strong> where ‘*’ is the sample name.  The BAM file is sorted by coordinates and has duplicates marked.  The second file is <strong>*.Aligned.toTranscriptome.out.bam</strong> and contains reads mapped to transcripts.</p>
+<p>(Within the DNAnexus  output directory structure, these files will be in the ALIGN directory.)</p>
+</div>
+<div class="section" id="chimeric-reads-and-junction-files">
+<h3>Chimeric reads and junction files<a class="headerlink" href="#chimeric-reads-and-junction-files" title="Permalink to this headline">¶</a></h3>
+<p>Additional files created by STAR are provided.  More information on these files can be found at <a class="reference external" href="http://labshare.cshl.edu/shares/gingeraslab/www-data/dobin/STAR/STAR.posix/doc/STARmanual.pdf">http://labshare.cshl.edu/shares/gingeraslab/www-data/dobin/STAR/STAR.posix/doc/STARmanual.pdf</a>. <strong>*.SJ.out.tab</strong> contain splice junction information.   Fusion detectino files are labelled <strong>*.Chimeric.out.bam</strong> and <strong>*.Chimeric.out.junction</strong>.</p>
+<p>(Within the DNAnexus  output directory structure, these files will be in the ALIGN directory.)</p>
+</div>
+<div class="section" id="fpkm-and-count-files-per-sample">
+<h3>FPKM and count files (per sample)<a class="headerlink" href="#fpkm-and-count-files-per-sample" title="Permalink to this headline">¶</a></h3>
+<p>Per sample files containing FPKM and raw count values for each gene can be found in <strong>*.fpkm.txt</strong> and <strong>*.htseq_counts.txt</strong> where ‘*’ is the sample name.</p>
+<p>(Within the DNAnexus  output directory structure, these files will be in the <strong>NOTE FIND OUT WHICH DIRECOTRRY</strong> directory.)</p>
+</div>
+<div class="section" id="methods-files">
+<h3>Methods Files<a class="headerlink" href="#methods-files" title="Permalink to this headline">¶</a></h3>
+<p>A more human readable explanation is found in <strong>methods.docx</strong>.  Detailed documentation can be found in <strong>methods.txt</strong></p>
+<p>(Within the DNAnexus  output directory structure, these files will be in the METHODS directory.)</p>
+</div>
+<div class="section" id="other-output-files">
+<h3>Other output files<a class="headerlink" href="#other-output-files" title="Permalink to this headline">¶</a></h3>
+<p>TBD</p>
+</div>
+</div>
+<div class="section" id="auxilary-files">
+<h2>Auxilary Files<a class="headerlink" href="#auxilary-files" title="Permalink to this headline">¶</a></h2>
+<p>This section describes the files that exist within the DNAnexus output folder.  Most of these files will not be of interest to the average user.  However, interactive viewers are describe in <a class="reference internal" href="#limma-differential-expression-viewer">LIMMA differential expression viewer</a> and <a class="reference internal" href="#simple-differential-expression-viewer">Simple differential expression viewer</a>.</p>
+<p>The output will be divided into multiple folders.  The results being the most useful will be the differential expression analysis results in the LIMMA and SIMPLE_DIFEX folders.  Bigwig files for viewing read coverage will be in the BIGWIG folder.   Other folder contain different types of data and are explained in further detail below.</p>
+<blockquote>
+<div><img alt="../../../_images/Workflow_output.png" src="../../../_images/Workflow_output.png" />
+</div></blockquote>
+<p>The following description of files is sorted by their output directory.</p>
+<div class="section" id="align">
+<h3>ALIGN<a class="headerlink" href="#align" title="Permalink to this headline">¶</a></h3>
+<p>This directory contains the BAM files described in <a class="reference internal" href="#bam-alignment-files">BAM alignment files</a> and the chimeric and junction files are described in <a class="reference internal" href="#chimeric-reads-and-junction-files">Chimeric reads and junction files</a>.  In adition there are 2 log files.  <strong>*Log.final.out</strong> has relevant statistics for the alignemnt.  The <strong>*.Log.out</strong> file just contains a log of the analysis run, including input parameters.  Per sample FLAGSTAT results are found in <strong>*.flagStatOut.txt</strong>.  These flagstat files are combined into the file <strong>alignmentStatistics.txt</strong> described in <a class="reference internal" href="#initial-analysis-of-results">Initial analysis of results</a>.  Finally the ALIGN directory has multiple <em>.starAlign.methods.txt files.  These files can be ignored as they are summarized in the final **methods.docx*</em> and <strong>methods.txt</strong> files described in <a class="reference internal" href="#methods-files">Methods Files</a>.</p>
+</div>
+<div class="section" id="bigwig">
+<h3>BIGWIG<a class="headerlink" href="#bigwig" title="Permalink to this headline">¶</a></h3>
+<p>All of the files here are described in section <a class="reference internal" href="#coverage-results">Coverage results</a>.  The <strong>bgToBw.methods.txt</strong> files can be ignored as they are summarized in the files described in <a class="reference internal" href="#methods-files">Methods Files</a>.</p>
+</div>
+<div class="section" id="id1">
+<h3>BIGWIG_VIEWER<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>See <a class="reference internal" href="#bigwig-viewer">bigWig viewer</a></p>
+</div>
+<div class="section" id="combined-flagstat">
+<h3>COMBINED_FLAGSTAT<a class="headerlink" href="#combined-flagstat" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="combined-htseq">
+<h3>COMBINED_HTSEQ<a class="headerlink" href="#combined-htseq" title="Permalink to this headline">¶</a></h3>
+<p>Used for input in differential expression analysis.  The combineCountFile.txt is the same as countFile.txt described in <a class="reference internal" href="#differential-analysis-input">Differential analysis input</a></p>
+</div>
+<div class="section" id="coverage">
+<h3>COVERAGE<a class="headerlink" href="#coverage" title="Permalink to this headline">¶</a></h3>
+<p>BED graph files used to generate bigWig files are here.</p>
+</div>
+<div class="section" id="fastqc">
+<h3>FASTQC<a class="headerlink" href="#fastqc" title="Permalink to this headline">¶</a></h3>
+<p>See <a class="reference internal" href="#quality-control-results-fastqc">Quality Control Results (FASTQC)</a></p>
+</div>
+<div class="section" id="htseq">
+<h3>HTSEQ<a class="headerlink" href="#htseq" title="Permalink to this headline">¶</a></h3>
+<p>Per-sample HTSEQ-count results (<strong>*.htseq_counts.txt</strong>) and FPKM results (<strong>*.fpkm.txt</strong>).  Temporary methods files are found as *.htseq-count.methods.txt</p>
+</div>
+<div class="section" id="limma">
+<h3>LIMMA<a class="headerlink" href="#limma" title="Permalink to this headline">¶</a></h3>
+<p><strong>mdsPlot.png</strong>, <strong>maPlot.*.png</strong>, <strong>volcanoPlot.*.png</strong>  are described in <a class="reference internal" href="#initial-analysis-of-results">Initial analysis of results</a></p>
+<p><strong>results.*.txt</strong>, <strong>GSEA.input.*.txt</strong> and <strong>GSEA.tStat.*.txt</strong> are describe in <a class="reference internal" href="#differential-expression-results">Differential expression results</a></p>
+<p><strong>voomLimma.R</strong>, <strong>countFile.txt</strong>, <strong>Rparameters.txt</strong>, and <strong>sampleList.txt</strong> are described in <a class="reference internal" href="#differential-analysis-input">Differential analysis input</a></p>
+<p>See <a class="reference internal" href="#limma-differential-expression-viewer">LIMMA differential expression viewer</a> for a description of the VIEWERS directory.</p>
+<p>Other files in the LIMMA directory include contrastFiles.txt contrastsFile.txt, and limmaSampleList.txt which are used internally.  limmaMethods.txt is an intermediate file describing methods. Out.tar.gz is used for testing purposes.  The sessionInfo.txt file describe the R session working parameters and modules loaded.  meanVariance.png is a plot for assessing quality of count data (<a class="reference external" href="https://genomebiology.biomedcentral.com/articles/10.1186/gb-2014-15-2-r29">https://genomebiology.biomedcentral.com/articles/10.1186/gb-2014-15-2-r29</a>)</p>
+</div>
+<div class="section" id="methods">
+<h3>METHODS<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<p>The files here are described in <a class="reference internal" href="#methods-files">Methods Files</a>.</p>
+</div>
+<div class="section" id="samplelist">
+<h3>SAMPLELIST<a class="headerlink" href="#samplelist" title="Permalink to this headline">¶</a></h3>
+<p>These files are used internally by the pipeline.</p>
+</div>
+<div class="section" id="simple-difex">
+<h3>SIMPLE_DIFEX<a class="headerlink" href="#simple-difex" title="Permalink to this headline">¶</a></h3>
+<p><strong>mdsPlot.normCPM.png</strong> and <strong>simpleDEPlot.*.png</strong>  are described in <a class="reference internal" href="#initial-analysis-of-results">Initial analysis of results</a></p>
+<p><strong>simpleDE.*.txt</strong> are describe in <a class="reference internal" href="#differential-expression-results">Differential expression results</a></p>
+<p><strong>simpleDE.R</strong>, <strong>countFile.txt</strong>, <strong>Rparameters_simple.txt</strong>, and <strong>sampleList.txt</strong> are described in <a class="reference internal" href="#differential-analysis-input">Differential analysis input</a></p>
+<p>See <a class="reference internal" href="#simple-differential-expression-viewer">Simple differential expression viewer</a> for a description of the VIEWERS directory.</p>
+<p>Other files in the SIMPLE_DIFEX directory include contrastFiles.txt contrastsFile.txt, and limmaSampleList.txt which are used internally.  simpleDifEx.methods.txt is an intermediate file describing methods. Out.tar.gz is used for testing purposes.  The sessionInfo.txt file describe the R session working parameters and modules loaded.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="faq.html" class="btn btn-neutral float-right" title="Frequently Asked Questions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="navigate.html" class="btn btn-neutral" title="Navigating Results" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2017, 2018 St. Jude Developers.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'latest',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,434 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Pipeline Operation &mdash; St. Jude Cloud Documentation v1.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="St. Jude Cloud Documentation v1.0.0" href="../../../index.html"/>
+        <link rel="up" title="ChIP-Seq Peak Calling" href="index.html"/>
+        <link rel="next" title="Monitoring Run Progress" href="monitoring.html"/>
+        <link rel="prev" title="Overview" href="overview.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> St. Jude Cloud Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                latest
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">General Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">Frequently Asked Questions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Data Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/data-transfer-app.html">Data Transfer Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data/command-line.html">Command Line Interaction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tool Guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../pecan-pie/index.html">PeCan PIE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rapid-rnaseq/index.html">Rapid RNA-Seq</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">ChIP-Seq Peak Calling</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Pipeline Operation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#uploading-data">Uploading Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parameter-configuration">Parameter Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#broad-vs-narrow-peak-calling">Broad vs. Narrow Peak Calling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-parameters">Other parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#running-the-tool">Running the Tool</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#selecting-inputs">Selecting inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starting-the-workflow">Starting the workflow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="monitoring.html">Monitoring Run Progress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigate.html">Navigating Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html">Analysis of Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../warden/index.html">WARDEN Differential Expression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../neoepitope/index.html">HLA Typing and Neoepitope Prediction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Visualization Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../visualizations/bigwig.html">ProteinPaint BigWig Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../visualizations/fusion-viewer.html">ProteinPaint Fusion Viewer</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">St. Jude Cloud Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">ChIP-Seq Peak Calling</a> &raquo;</li>
+        
+      <li>Pipeline Operation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pipeline-operation">
+<h1>Pipeline Operation<a class="headerlink" href="#pipeline-operation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="uploading-data">
+<span id="chipseq-upload"></span><h2>Uploading Data<a class="headerlink" href="#uploading-data" title="Permalink to this headline">¶</a></h2>
+<p>The ChIP-Seq Peak Caller takes Gzipped FastQ files generated from
+IP data as input. You can upload the files you would like to run using the
+<a class="reference internal" href="../../data/data-transfer-app.html#desktop-application"><span class="std std-ref">Data Transfer Application</span></a> or by uploading data manually using the <a class="reference internal" href="../../data/command-line.html#dx-toolkit"><span class="std std-ref">Command Line Interaction</span></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You should click “Start” before attempting to upload data
+to the tool (the tool’s workspace is only created once you do this). After you
+are redirected, you can safely close the tab that was just opened.</p>
+</div>
+</div>
+<div class="section" id="parameter-configuration">
+<span id="chipseq-parameter-config"></span><h2>Parameter Configuration<a class="headerlink" href="#parameter-configuration" title="Permalink to this headline">¶</a></h2>
+<p>Click “Start” on the <a class="reference external" href="https://platform.stjude.cloud/tools/chip-seq">tool’s landing page</a>.
+You will be redirected to the tool’s workspace, which contains four different pipelines that can
+be run based on your input data. Initially, you’ll need to decide <strong>(1)</strong> whether you’d like to run broad/narrow peak calling <em>and</em>
+<strong>(2)</strong> whether you have case vs. control or only case data. You should choose the correct
+workflow based on their names. After you’ve selected your base pipeline, there are various other
+parameters that you can set.</p>
+<img alt="The four different ChIP-Seq pipelines" src="../../../_images/four-pipelines.png" />
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If your fragment size is less than 50 base pairs, please refer
+to the <a class="reference internal" href="faq.html#chipseq-faq"><span class="std std-ref">Frequently Asked Questions</span></a>.</p>
+</div>
+<div class="section" id="broad-vs-narrow-peak-calling">
+<h3>Broad vs. Narrow Peak Calling<a class="headerlink" href="#broad-vs-narrow-peak-calling" title="Permalink to this headline">¶</a></h3>
+<p>Choosing between broad and narrow peak calling depends on the experiment design. The following
+are good rules of thumb for choosing between the two configurations. If you are not sure which
+configuration to use, please consult with an expert or contact the support personel for this pipeline.</p>
+<p><strong>Narrow Peak Calling</strong></p>
+<p>If your target protein is a transcription factor, you should probably choose narrow peak calling.
+You can also try the narrow peak calling workflows for the following histone marks:</p>
+<blockquote>
+<div><ul class="simple">
+<li>H3K4me3</li>
+<li>H3K4me2</li>
+<li>H3K9-14ac</li>
+<li>H3K27ac</li>
+<li>H2A.Z</li>
+</ul>
+</div></blockquote>
+<p><strong>Broad Peak Calling</strong></p>
+<p>You should try the broad peak calling workflows for the following histone marks:</p>
+<blockquote>
+<div><ul class="simple">
+<li>H3K36me3</li>
+<li>H3K79me2</li>
+<li>H3K27me3</li>
+<li>H3K9me3</li>
+<li>H3K9me1</li>
+</ul>
+</div></blockquote>
+<p><strong>Special Cases</strong></p>
+<p>In some scenarios, H3K4me1, H3K9me2 and H3K9me3 might behave between narrow and
+broad shape, you might need to look into each peak region and consult experts.</p>
+</div>
+<div class="section" id="other-parameters">
+<h3>Other parameters<a class="headerlink" href="#other-parameters" title="Permalink to this headline">¶</a></h3>
+<p>Once you have decided on a base pipeline, you can click that pipeline to open up
+the workflow screen. You should see something similar to the screenshot below
+(there might be small differences based on which pipeline you picked). To edit
+settings, click the gear cog near the middle of the screen (surrounded by a red
+rectangle in the picture below).</p>
+<img alt="ChIP-Seq Pipeline with settings highlighted" src="../../../_images/chipseq-pipeline.png" />
+<p>You should now see the application configuration screen. In the bottom right corner
+of the application, you can set a number of different parameters.</p>
+<img alt="ChIP-Seq Settings with parameters highlighted" src="../../../_images/chipseq-parameters.png" />
+<p>The following are the parameters that can be set, as well as a short description and
+example value. Any questions about parameters should be directed to pipeline support personel.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="67%" />
+<col width="9%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameter Name</th>
+<th class="head">Description</th>
+<th class="head">Example</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Output prefix</td>
+<td>A name used a prefix for all outputs in the run</td>
+<td>SAMPLE1</td>
+</tr>
+<tr class="row-odd"><td>Reference genome</td>
+<td>Supported reference genome (HG19, HG38, mm9, mm10, dm3)</td>
+<td>HG38</td>
+</tr>
+<tr class="row-even"><td>Output bigWig</td>
+<td>Whether or not to include a bigwig file in the output</td>
+<td>True</td>
+</tr>
+<tr class="row-odd"><td>Remove blacklist peaks</td>
+<td>Whether or not to remove known problem areas</td>
+<td>True</td>
+</tr>
+<tr class="row-even"><td>Fragment length</td>
+<td>Hardcoded fragment length of your reads.
+‘NA’ for auto-detect.</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<blockquote>
+<div>When setting parameters, please be aware of these common point of failures.</div></blockquote>
+<ul class="last simple">
+<li>Do not use spaces anywhere in your input file names,
+your output prefix, or any of the other parameters. This is
+generally bad practice and doesn’t play well with the pipeline
+(consider using “_” instead).</li>
+<li>Do not change the output directory when you run the pipeline.
+At the top of parameter input page, there is a text box that allows
+you to change the output folder. <em>Please ignore that field</em>.
+You only need to specify an output prefix as described aboce.
+All of the results will be put under /Results/&lt;OUTPUT_PREFIX&gt;.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="running-the-tool">
+<h2>Running the Tool<a class="headerlink" href="#running-the-tool" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="selecting-inputs">
+<span id="id1"></span><h3>Selecting inputs<a class="headerlink" href="#selecting-inputs" title="Permalink to this headline">¶</a></h3>
+<p>If you have not already, click on the appropriate pipeline for your purposes
+(see <a class="reference internal" href="#chipseq-parameter-config"><span class="std std-ref">Parameter Configuration</span></a>). You should see something similar to the screenshot
+below (there might be small differences based on which pipeline you picked). Each
+box on the left side of the screen is an input to the pipeline. As you can see,
+for the paired pipeline picture below, the pipeline needs two inputs: FastQ files
+for case and FastQ files for control.</p>
+<img alt="ChIP-Seq pipeline with inputs highlighted" src="../../../_images/chipseq-pipeline-inputs.png" />
+<p>Clicking on the input box below will allow you to hook up the data you previously
+uploaded to be analyzed. If you have not yet uploaded your data, see <a class="reference internal" href="#chipseq-upload"><span class="std std-ref">Uploading Data</span></a>.
+Once you click on the input boxes, you should be able to select all of the inputs
+that follow (see image below).</p>
+<img alt="Selecting all fastq inputs" src="../../../_images/select-input.png" />
+<p>Here, you can select the FastQ file for the case sample and click
+“Select”. You should see the dialog box dissappear and the files you selected propogate
+in the input box. If applicable, repeat this process for the control sample.</p>
+</div>
+<div class="section" id="starting-the-workflow">
+<h3>Starting the workflow<a class="headerlink" href="#starting-the-workflow" title="Permalink to this headline">¶</a></h3>
+<p>Once your inputs are selected, you should be able to start the workflow by clicking the
+“Run as Analysis…” button in the top right hand corner of the workflow dialog.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you cannot click this button, please ensure that <strong>(1)</strong> all of the inputs are correctly
+hooked up (see <a class="reference internal" href="#selecting-inputs"><span class="std std-ref">Selecting inputs</span></a>) and <strong>(2)</strong> all of the required parameters are
+set (see <a class="reference internal" href="#chipseq-parameter-config"><span class="std std-ref">Parameter Configuration</span></a>).</p>
+</div>
+<img alt="Running the workflow" src="../../../_images/run.png" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="monitoring.html" class="btn btn-neutral float-right" title="Monitoring Run Progress" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="overview.html" class="btn btn-neutral" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2017, 2018 St. Jude Developers.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'latest',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

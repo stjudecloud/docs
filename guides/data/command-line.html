@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Command Line Interaction &mdash; St. Jude Cloud Documentation v1.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="St. Jude Cloud Documentation v1.0.0" href="../../index.html"/>
+        <link rel="next" title="PeCan PIE" href="../tools/pecan-pie/index.html"/>
+        <link rel="prev" title="Data Transfer Application" href="data-transfer-app.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> St. Jude Cloud Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                latest
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">General Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Data Guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="data-transfer-app.html">Data Transfer Application</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command Line Interaction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#selecting-a-project">Selecting a project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uploading-downloading-data">Uploading/Downloading data</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tool Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/pecan-pie/index.html">PeCan PIE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/rapid-rnaseq/index.html">Rapid RNA-Seq</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/chipseq/index.html">ChIP-Seq Peak Calling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/warden/index.html">WARDEN Differential Expression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/neoepitope/index.html">HLA Typing and Neoepitope Prediction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Visualization Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../visualizations/bigwig.html">ProteinPaint BigWig Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../visualizations/fusion-viewer.html">ProteinPaint Fusion Viewer</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">St. Jude Cloud Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Command Line Interaction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="command-line-interaction">
+<span id="dx-toolkit"></span><h1>Command Line Interaction<a class="headerlink" href="#command-line-interaction" title="Permalink to this headline">¶</a></h1>
+<p>In most normal cases, we recommend that you use the <a class="reference internal" href="data-transfer-app.html#desktop-application"><span class="std std-ref">Data Transfer Application</span></a>
+to upload or download your data. However, we’ve built St. Jude
+Cloud to be easily accessible from the command line. Before you
+can begin uploading and downloading data to the platform,
+you’ll need to understand a few fundamentals about how St. Jude Cloud
+is built.</p>
+<p>St. Jude Cloud is built on top of the genomics processing engine
+provided by <a class="reference external" href="https://www.dnanexus.com/">DNAnexus</a>. To understand
+a bit better, navigate to <a class="reference external" href="https://platform.dnanexus.com">https://platform.dnanexus.com</a>
+and log in with your St. Jude Cloud credentials (your DNAnexus account
+and St. Jude Cloud account are the same). St. Jude internal employees should see <a class="footnote-reference" href="#id3" id="id1">[1]</a>. You should see a picture
+similar to the screenshot below.</p>
+<img alt="../../_images/platform-dnanexus.png" src="../../_images/platform-dnanexus.png" />
+<p>DNAnexus is organized by projects, and in St. Jude Cloud, each tool
+has a its own project in DNAnexus. This project is created once you click
+“Launch this Tool” on one of the tool description pages (example: <a class="reference external" href="https://platform.stjude.cloud/tools/rapid_rna-seq">Rapid RNA-Seq description page</a>).
+You should see a project for each of the tools that you have previously
+launched, as well as some other ancillary projects.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you do not see any projects, you likely haven’t tried to run
+any tools yet. Navigate to the
+<a class="reference external" href="https://platform.stjude.cloud/tools">St. Jude Cloud tools page</a>,
+select “View” for a tool you want to run, click “Launch this Tool”
+on the left side-panel, and try again.</p>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Behind the scenes, open-source software provided by DNAnexus called the
+“dx-toolkit” is being used to interact with the DNAnexus genomics
+platform to create these projects, upload and download data, and many other operations.
+Before you can interact with St. Jude Cloud on the command line, you’ll
+need to install that software on your computer by following
+<a class="reference external" href="https://wiki.dnanexus.com/Downloads#DNAnexus-Platform-SDK">this guide</a>.</p>
+</div>
+<div class="section" id="selecting-a-project">
+<span id="id2"></span><h2>Selecting a project<a class="headerlink" href="#selecting-a-project" title="Permalink to this headline">¶</a></h2>
+<p>Before uploading or downloading data from a St. Jude Cloud tool,
+you’ll need to specify which tool you are wanting to either upload to
+or download from. You can do this by issuing the following command</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>dx <span class="k">select</span>
+</pre></div>
+</div>
+<p>This will present with a prompt similar to the below screenshot.
+You should enter the number corresponding to the tool you are
+wanting to interact with. In the example below, the user has
+selected the Rapid RNA-Seq tool.</p>
+<img alt="../../_images/select-project.png" src="../../_images/select-project.png" />
+</div>
+<div class="section" id="uploading-downloading-data">
+<h2>Uploading/Downloading data<a class="headerlink" href="#uploading-downloading-data" title="Permalink to this headline">¶</a></h2>
+<p>Data upload and download is painless once you have selected the
+correct project for your tool (see <a class="reference internal" href="#selecting-a-project"><span class="std std-ref">Selecting a project</span></a> for details).</p>
+<p>To upload data to St. Jude Cloud, execute the following command</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>dx upload &lt;LOCAL_FILENAME&gt;
+</pre></div>
+</div>
+<p>Once data is uploaded to St. Jude Cloud, you can select it for processing
+by following the specific tool’s intructions.</p>
+<p>To download results from St. Jude Cloud, you might find the following commands
+useful.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># list available files for the tool for the main folder</span>
+dx ls
+
+<span class="c1"># list all available files for the tool</span>
+dx find .
+
+<span class="c1"># download remote files to the local disk.</span>
+dx download &lt;FILENAME_IN_CLOUD&gt;
+</pre></div>
+</div>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>St. Jude employees should go to <a class="reference external" href="https://cloud.stjude.org">https://cloud.stjude.org</a> instead and log in with LDAP credentials.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tools/pecan-pie/index.html" class="btn btn-neutral float-right" title="PeCan PIE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="data-transfer-app.html" class="btn btn-neutral" title="Data Transfer Application" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2017, 2018 St. Jude Developers.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'latest',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
