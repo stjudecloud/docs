@@ -1,4 +1,4 @@
-.. _pecan-pie:
+.. _pecan-pie-index:
 
 PeCan PIE
 =========
