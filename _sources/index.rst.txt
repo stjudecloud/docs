@@ -5,13 +5,13 @@ St. Jude Cloud (Beta)
 ========================================================
 
 Welcome to the St. Jude Cloud Platform documentation! We appreciate
-your time to review our pipelines during the St. Jude Cloud beta 
+your time to review our pipelines during the St. Jude Cloud beta
 launch. For any questions about how to use the pipelines or any other issues,
 please reach out on `our contact form <https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-contact/>`_.
 
 .. toctree::
    :maxdepth: 1
-   :caption: General Guides
+   :caption: General
 
    faq
 
@@ -38,3 +38,9 @@ please reach out on `our contact form <https://hospital.stjude.org/apps/forms/fb
 
    guides/visualizations/bigwig
    guides/visualizations/fusion-viewer
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Other Guides
+
+   guides/sj-internal/index
