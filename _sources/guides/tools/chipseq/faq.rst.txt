@@ -26,5 +26,7 @@ If you have any questions not covered here, feel free to reach out on
    after BWA mapping finishes. You can rerun the analysis with a specified
    fragment length.
 
+**Q. Where can I find a version of the data access agreement?**
 
+The latest version of the data access agreement can be found `here <https://platform.stjude.cloud/access_form>`_.
 
