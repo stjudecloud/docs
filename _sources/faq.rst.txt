@@ -7,6 +7,9 @@ Will I be charged for using St. Jude Cloud?
 Although you may be prompted to enter billing information, you will not be charged for
 anything with the exception of the following items:
 
+* If you elect to *download* any data from SJCloud, you will be charged an egress fee by DNAnexus.
+  This fee is usually negligible unless you are downloading entire cohorts. We are actively 
+  investigating ways to minimize or eliminate these costs.
 * If you run the :ref:`warden-index` tool, the :ref:`chipseq-index` tool
   (broad or narrow), the :ref:`rapid-rnaseq-index` tool, or the :ref:`neoepitope-index` tool,
   you will be charged for the compute resources used in producing the results as well as storage
@@ -28,3 +31,8 @@ with the following email.
     Would you please assist me in deleting my St. Jude Cloud account? My username is _____.
 
   Thank you!
+
+Where can I find a copy of the data access agreement?
+-----------------------------------------------------
+
+You can find the latest version of the data access agreement `here <https://platform.stjude.cloud/access_form>`_.
