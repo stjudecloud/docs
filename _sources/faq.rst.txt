@@ -36,3 +36,8 @@ Where can I find a copy of the data access agreement?
 -----------------------------------------------------
 
 You can find the latest version of the data access agreement `here <https://platform.stjude.cloud/access_form>`_.
+
+Where can I find the Terms of Service or the Privacy Polic? 
+------------------------------------------------------------
+
+You can find the Terms of Service `here <https://stjude.cloud/terms-of-use.html>`_ and the Privacy Policy `here <https://platform.stjude.cloud/privacy>`_.
