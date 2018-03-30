@@ -8,7 +8,7 @@ Uploading Data
 
 The ChIP-Seq Peak Caller takes Gzipped FastQ files generated from
 IP data as input. You can upload the files you would like to run using the
-:ref:`desktop-application` or by uploading data manually using the :ref:`dx-toolkit`.
+:ref:`desktop-application` or by uploading data manually using the :ref:`commandline`.
 
 .. note:: You should click "Start" before attempting to upload data
           to the tool (the tool's workspace is only created once you do this). After you
