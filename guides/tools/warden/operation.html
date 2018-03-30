@@ -91,14 +91,14 @@
               
             
             
-              <p class="caption"><span class="caption-text">General</span></p>
-<ul>
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../faq.html">Frequently Asked Questions</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Data Guides</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../data/data-transfer-app.html">Data Transfer Application</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../data/command-line.html">Command Line Interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data/download.html">Downloading Data from Requests</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tool Guides</span></p>
 <ul class="current">
@@ -136,7 +136,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Other Guides</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../sj-internal/index.html">St. Jude Internal Employee Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../internal/index.html">St. Jude Internal Employee Guide</a></li>
 </ul>
 
             
@@ -206,7 +206,7 @@
 <span id="warden-upload"></span><h2>Uploading Data<a class="headerlink" href="#uploading-data" title="Permalink to this headline">¶</a></h2>
 <p>The WARDEN Differential Expression analysis pipeline takes Gzipped FastQ files generated from
 RNA-Seq data as input. You can upload the files you would like to run using the
-<a class="reference internal" href="../../data/data-transfer-app.html#desktop-application"><span class="std std-ref">Data Transfer Application</span></a> or by uploading data manually using the <a class="reference internal" href="../../data/command-line.html#dx-toolkit"><span class="std std-ref">Command Line Interaction</span></a>.</p>
+<a class="reference internal" href="../../data/data-transfer-app.html#desktop-application"><span class="std std-ref">Data Transfer Application</span></a> or by uploading data manually using the <a class="reference internal" href="../../data/command-line.html#commandline"><span class="std std-ref">Command Line Interaction</span></a>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">You should click “Start” before attempting to upload data
@@ -227,7 +227,7 @@ at <a class="reference internal" href="#warden-upload"><span class="std std-ref"
 </div>
 <div class="section" id="microsoft-excel">
 <h3>Microsoft Excel<a class="headerlink" href="#microsoft-excel" title="Permalink to this headline">¶</a></h3>
-<p><strong>Recommended</strong>: Download the <a class="reference download internal" href="../../../_downloads/samplesheet.xlsx" download=""><code class="xref download docutils literal"><span class="pre">sample</span> <span class="pre">excel</span> <span class="pre">spreadsheet</span></code></a>.</p>
+<p><strong>Recommended</strong>: Download the <a class="reference download internal" href="../../../_downloads/samplesheet.xlsx" download=""><code class="xref download docutils literal notranslate"><span class="pre">sample</span> <span class="pre">excel</span> <span class="pre">spreadsheet</span></code></a>.</p>
 <p>The final product for the excel spreadsheet will look like this. The
 screenshot below. If you create the sample sheet from scratch, please
 ensure the the columns are <em>exactly</em> in this order.</p>
@@ -245,8 +245,8 @@ based on your data.</p>
 <ul class="last simple">
 <li>The sample name should be unique and should only contain letters, numbers and underscores.</li>
 <li>The condition/phenotype column associates similar samples together. The values should contain only letters, numbers and underscores.</li>
-<li>ReadFile1 should contain forward reads (e.g. <code class="code docutils literal"><span class="pre">*.R1.fastq.gz</span></code> or <code class="code docutils literal"><span class="pre">*_1.fastq.gz</span></code>)</li>
-<li>ReadFile2 will contain reads in reverse orientation to ReadFile2. (e.g. <code class="code docutils literal"><span class="pre">*.R2.fastq.gz</span></code> or <code class="code docutils literal"><span class="pre">*_2.fastq.gz</span></code>).</li>
+<li>ReadFile1 should contain forward reads (e.g. <code class="code docutils literal notranslate"><span class="pre">*.R1.fastq.gz</span></code> or <code class="code docutils literal notranslate"><span class="pre">*_1.fastq.gz</span></code>)</li>
+<li>ReadFile2 will contain reads in reverse orientation to ReadFile2. (e.g. <code class="code docutils literal notranslate"><span class="pre">*.R2.fastq.gz</span></code> or <code class="code docutils literal notranslate"><span class="pre">*_2.fastq.gz</span></code>).</li>
 <li>For single end reads a single dash (‘-‘) should be entered in the ReadFile2 column.</li>
 </ul>
 </div>
@@ -256,12 +256,12 @@ based on your data.</p>
 <p>The last line in the sample sheet is called the “comparison row”. This line
 specifies the comparisons to be done between conditions/phenotypes.
 All pairwise combinations can be analyzed.
-To specifiy the comparisons, on a seperate line, include <code class="code docutils literal"><span class="pre">#comparisons=</span></code>  followed be a comma separated list of two conditions separated by a dash.
+To specifiy the comparisons, on a seperate line, include <code class="code docutils literal notranslate"><span class="pre">#comparisons=</span></code>  followed be a comma separated list of two conditions separated by a dash.
 The following lines are all valid examples.</p>
 <ol class="arabic simple">
-<li><code class="code docutils literal"><span class="pre">#comparisons=KO-WT</span></code></li>
-<li><code class="code docutils literal"><span class="pre">#comparisons=Condition1-Control,Condition2-Control</span></code></li>
-<li><code class="code docutils literal"><span class="pre">#comparisons=Phenotype2-Phenotype1,Phenotype3-Phenotype2,Phenotype3-Phenotype1</span></code></li>
+<li><code class="code docutils literal notranslate"><span class="pre">#comparisons=KO-WT</span></code></li>
+<li><code class="code docutils literal notranslate"><span class="pre">#comparisons=Condition1-Control,Condition2-Control</span></code></li>
+<li><code class="code docutils literal notranslate"><span class="pre">#comparisons=Phenotype2-Phenotype1,Phenotype3-Phenotype2,Phenotype3-Phenotype1</span></code></li>
 </ol>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -277,7 +277,7 @@ you like. Save the file as an Excel Workbook with the .xlsx extension.</p>
 <div class="section" id="text-editor">
 <h3>Text Editor<a class="headerlink" href="#text-editor" title="Permalink to this headline">¶</a></h3>
 <p>Creating a sample sheet with a text editor is an option for advanced users.</p>
-<p><strong>Recommended</strong>: Download the <a class="reference download internal" href="../../../_downloads/samplesheet.txt" download=""><code class="xref download docutils literal"><span class="pre">sample</span> <span class="pre">text</span> <span class="pre">file</span></code></a>.</p>
+<p><strong>Recommended</strong>: Download the <a class="reference download internal" href="../../../_downloads/samplesheet.txt" download=""><code class="xref download docutils literal notranslate"><span class="pre">sample</span> <span class="pre">text</span> <span class="pre">file</span></code></a>.</p>
 <p>The process of creating a sample sheet with a text editor is the same as creating
 one with Microsoft Excel, with the small difference that you must manually create
 your columns using the tab character.  Save the file with a .txt extension.</p>
@@ -303,7 +303,7 @@ advantage of many nice features, like checkpointing and cost-reduction.</p>
 screen. You should see an image similar to the picture below.</p>
 <img alt="../../../_images/warden-inputs.png" src="../../../_images/warden-inputs.png" />
 <ol class="arabic">
-<li><p class="first">Click on the <code class="code docutils literal"><span class="pre">FASTQ_FILES</span></code> field.</p>
+<li><p class="first">Click on the <code class="code docutils literal notranslate"><span class="pre">FASTQ_FILES</span></code> field.</p>
 <img alt="../../../_images/FASTQ_select.png" src="../../../_images/FASTQ_select.png" />
 </li>
 <li><p class="first">In the file dialog that pops up, select the FastQ files that will be included in the analysis.
@@ -314,7 +314,7 @@ be in the main folder that pops up or the “uploads” folder in the left pane.
 <li><p class="first">Once you are done selecting FastQ files, press “Select”.</p>
 <img alt="../../../_images/FASTQS_press_select.png" src="../../../_images/FASTQS_press_select.png" />
 </li>
-<li><p class="first">Click on the the <code class="code docutils literal"><span class="pre">sampleList</span></code> input box.</p>
+<li><p class="first">Click on the the <code class="code docutils literal notranslate"><span class="pre">sampleList</span></code> input box.</p>
 <img alt="../../../_images/SampleSheet_select.png" src="../../../_images/SampleSheet_select.png" />
 </li>
 <li><p class="first">Select the sample sheet that you uploaded in <a class="reference internal" href="#warden-sample-sheet"><span class="std std-ref">Sample Sheet Preparation</span></a>.  This should be an Excel workbook with the .xlsx extension or a plain tab-delimited text file with a .txt extension.</p>
@@ -324,20 +324,20 @@ be in the main folder that pops up or the “uploads” folder in the left pane.
 <p>All of the input files should now be hooked up. Next, we need to configure the
 remaining parameters for the pipeline, such as reference genome and sequencing method.</p>
 <ol class="arabic">
-<li><p class="first">Click on the black box labelled <code class="code docutils literal"><span class="pre">WARDEN</span> <span class="pre">WORKFLOW</span> <span class="pre">GENERATOR</span></code>.</p>
+<li><p class="first">Click on the black box labelled <code class="code docutils literal notranslate"><span class="pre">WARDEN</span> <span class="pre">WORKFLOW</span> <span class="pre">GENERATOR</span></code>.</p>
 <img alt="../../../_images/Parameter_select2.png" src="../../../_images/Parameter_select2.png" />
 </li>
-<li><p class="first">In the <code class="code docutils literal"><span class="pre">Output</span> <span class="pre">Folder</span></code> field, select a folder to output to. You can structure your
-experiments however you like (if you’re not sure, just use <code class="code docutils literal"><span class="pre">/</span></code>).</p>
+<li><p class="first">In the <code class="code docutils literal notranslate"><span class="pre">Output</span> <span class="pre">Folder</span></code> field, select a folder to output to. You can structure your
+experiments however you like (if you’re not sure, just use <code class="code docutils literal notranslate"><span class="pre">/</span></code>).</p>
 <img alt="../../../_images/OutputFolder.png" src="../../../_images/OutputFolder.png" />
 </li>
-<li><p class="first">In the <code class="code docutils literal"><span class="pre">analysisName</span></code> field, enter a prefix for all of the output files.</p>
+<li><p class="first">In the <code class="code docutils literal notranslate"><span class="pre">analysisName</span></code> field, enter a prefix for all of the output files.</p>
 <img alt="../../../_images/AnalysisName.png" src="../../../_images/AnalysisName.png" />
 </li>
-<li><p class="first">Select the <code class="code docutils literal"><span class="pre">sequenceStandedness</span></code> pull down menu. Choose the appropriate box.  This information can be determined from the sequencing or source of the data.  If unknown select “no”.</p>
+<li><p class="first">Select the <code class="code docutils literal notranslate"><span class="pre">sequenceStandedness</span></code> pull down menu. Choose the appropriate box.  This information can be determined from the sequencing or source of the data.  If unknown select “no”.</p>
 <img alt="../../../_images/select_strandedness.png" src="../../../_images/select_strandedness.png" />
 </li>
-<li><p class="first">Select the <code class="code docutils literal"><span class="pre">Genome</span></code> pulldown menu. Choose the appropriate box.</p>
+<li><p class="first">Select the <code class="code docutils literal notranslate"><span class="pre">Genome</span></code> pulldown menu. Choose the appropriate box.</p>
 <img alt="../../../_images/select_genome.png" src="../../../_images/select_genome.png" />
 </li>
 <li><p class="first">The LIMMA parameters can be left alone for most analyses. If you

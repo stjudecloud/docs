@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ProteinPaint BigWig Viewer &mdash; St. Jude Cloud Documentation v1.0.0</title>
+  <title>Downloading Data from Requests &mdash; St. Jude Cloud Documentation v1.0.0</title>
   
 
   
@@ -36,8 +36,8 @@
   
         <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="St. Jude Cloud Documentation v1.0.0" href="../../index.html"/>
-        <link rel="next" title="ProteinPaint Fusion Viewer" href="fusion-viewer.html"/>
-        <link rel="prev" title="Frequently Asked Questions" href="../tools/neoepitope/faq.html"/> 
+        <link rel="next" title="PeCan PIE" href="../tools/pecan-pie/index.html"/>
+        <link rel="prev" title="Command Line Interaction" href="command-line.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -94,10 +94,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Data Guides</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../data/data-transfer-app.html">Data Transfer Application</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/command-line.html">Command Line Interaction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/download.html">Downloading Data from Requests</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="data-transfer-app.html">Data Transfer Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">Command Line Interaction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Downloading Data from Requests</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#process">Process</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Tool Guides</span></p>
 <ul>
@@ -108,9 +112,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../tools/neoepitope/index.html">HLA Typing and Neoepitope Prediction</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Visualization Guides</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">ProteinPaint BigWig Viewer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fusion-viewer.html">ProteinPaint Fusion Viewer</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../visualizations/bigwig.html">ProteinPaint BigWig Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../visualizations/fusion-viewer.html">ProteinPaint Fusion Viewer</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Other Guides</span></p>
 <ul>
@@ -159,7 +163,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-      <li>ProteinPaint BigWig Viewer</li>
+      <li>Downloading Data from Requests</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -176,27 +180,51 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="proteinpaint-bigwig-viewer">
-<span id="pp-coverage-viewer"></span><h1>ProteinPaint BigWig Viewer<a class="headerlink" href="#proteinpaint-bigwig-viewer" title="Permalink to this headline">¶</a></h1>
-<p>The ProteinPaint interactive coverage viewer is used to visualize
-any bigWig files information. You can follow these steps to
-get an understand of how it works.</p>
+  <div class="section" id="downloading-data-from-requests">
+<span id="data-download"></span><h1>Downloading Data from Requests<a class="headerlink" href="#downloading-data-from-requests" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">To download data from St. Jude Cloud, you must have indicated that you
+wished to download the data in your Data Access Agreement (DAA) during your data request.
+Any downloading of St. Jude data without completing this step is PROHIBITED.</p>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Read the <a class="reference internal" href="command-line.html#commandline"><span class="std std-ref">Command Line Interaction</span></a> guide to install the necessary software and
+get an overview of how to interact with the St. Jude Cloud Platform from
+the command line.</p>
+</div>
+<div class="section" id="process">
+<h2>Process<a class="headerlink" href="#process" title="Permalink to this headline">¶</a></h2>
+<p>You can use the following steps to download data from the St. Jude Cloud Platform:</p>
 <ol class="arabic">
-<li><p class="first">Open up the custom viewer file output by your pipeline. The name
-of this file will vary, so consult the specific pipeline guide to
-know where to find it.</p>
+<li><p class="first">Complete a data request using the St. Jude Cloud Platform.
+In this example, we’ve created a request with the name “Retinoblastoma Data”.</p>
+<img alt="../../_images/retinoblastoma-request-name.png" src="../../_images/retinoblastoma-request-name.png" />
 </li>
-<li><p class="first">Click “Launch” in the bottom right corner to launch the custom
-viewer.</p>
-<img alt="../../_images/bigwig_viewer_startup.png" src="../../_images/bigwig_viewer_startup.png" />
+<li><p class="first">Open up your terminal application and select the cloud workspace relevant to
+your data request as specified in <a class="reference internal" href="command-line.html#selecting-a-project"><span class="std std-ref">Selecting a project</span></a>. For instance,
+in this case we would type <code class="code docutils literal notranslate"><span class="pre">dx</span> <span class="pre">select</span> <span class="pre">&quot;Retinoblastoma</span> <span class="pre">Data&quot;</span></code>.</p>
+<img alt="../../_images/select-retinoblastoma.png" src="../../_images/select-retinoblastoma.png" />
 </li>
-<li><p class="first">Once the page has loaded, you will be able to see the bigWig
-viewer. You can navigate around the genome by gene or genomic
-location. Alongside the coverage track is the GENCODE gene
-reference.</p>
-<img alt="../../_images/bigwig_detail.png" src="../../_images/bigwig_detail.png" />
+<li><p class="first">You can use typical commands like <code class="code docutils literal notranslate"><span class="pre">dx</span> <span class="pre">ls</span></code>, <code class="code docutils literal notranslate"><span class="pre">dx</span> <span class="pre">pwd</span></code>, and <code class="code docutils literal notranslate"><span class="pre">dx</span> <span class="pre">cd</span></code>
+to navigate around your cloud folder as you would a local folder. Your project
+may look different based on what data types you requested and if you needed to be
+approved or not.</p>
+<img alt="../../_images/navigate-data-request.png" src="../../_images/navigate-data-request.png" />
+</li>
+<li><p class="first">In the root of every data request is a file called <code class="code docutils literal notranslate"><span class="pre">manifest.txt</span></code>. This should
+contain all of the information about the samples you checked out as well as the
+associated metadata we provide.</p>
+</li>
+<li><p class="first">To download data from the cloud to local storage, use the <code class="code docutils literal notranslate"><span class="pre">dx</span> <span class="pre">download</span></code> command
+as specified in <a class="reference internal" href="command-line.html#upload-download-data"><span class="std std-ref">Uploading/downloading data</span></a>. For instance, if I wanted to download
+all of the BAM files to my local computer, I would type
+<code class="code docutils literal notranslate"><span class="pre">dx</span> <span class="pre">download</span> <span class="pre">immediate/bam/*</span></code>.</p>
+<img alt="../../_images/download-bams.png" src="../../_images/download-bams.png" />
 </li>
 </ol>
+</div>
 </div>
 
 
@@ -209,10 +237,10 @@ reference.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="fusion-viewer.html" class="btn btn-neutral float-right" title="ProteinPaint Fusion Viewer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../tools/pecan-pie/index.html" class="btn btn-neutral float-right" title="PeCan PIE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../tools/neoepitope/faq.html" class="btn btn-neutral" title="Frequently Asked Questions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="command-line.html" class="btn btn-neutral" title="Command Line Interaction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

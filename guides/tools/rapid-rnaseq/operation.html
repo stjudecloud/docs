@@ -91,14 +91,14 @@
               
             
             
-              <p class="caption"><span class="caption-text">General</span></p>
-<ul>
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../faq.html">Frequently Asked Questions</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Data Guides</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../data/data-transfer-app.html">Data Transfer Application</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../data/command-line.html">Command Line Interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data/download.html">Downloading Data from Requests</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tool Guides</span></p>
 <ul class="current">
@@ -130,7 +130,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Other Guides</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../sj-internal/index.html">St. Jude Internal Employee Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../internal/index.html">St. Jude Internal Employee Guide</a></li>
 </ul>
 
             
@@ -205,7 +205,7 @@ not HG19, you’ll need to realign or provide FastQ input files.</p>
 <span id="rapid-rnaseq-upload"></span><h2>Uploading Data<a class="headerlink" href="#uploading-data" title="Permalink to this headline">¶</a></h2>
 <p>The Rapid RNA-Seq analysis pipeline takes paired, Gzipped FastQ files generated from
 RNA-Seq data as input. You can upload the files you would like to run using the
-<a class="reference internal" href="../../data/data-transfer-app.html#desktop-application"><span class="std std-ref">Data Transfer Application</span></a> or by uploading data manually using the <a class="reference internal" href="../../data/command-line.html#dx-toolkit"><span class="std std-ref">Command Line Interaction</span></a>.</p>
+<a class="reference internal" href="../../data/data-transfer-app.html#desktop-application"><span class="std std-ref">Data Transfer Application</span></a> or by uploading data manually using the <a class="reference internal" href="../../data/command-line.html#commandline"><span class="std std-ref">Command Line Interaction</span></a>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">You should click “Start” before attempting to upload data
@@ -230,13 +230,13 @@ input file slots. The orange color denotes required inputs that you have to comp
 before the pipeline can run. The green “Run as Analysis” button in the top right will
 remain disabled until all inputs are correctly specified.</p>
 <ol class="arabic">
-<li><p class="first">Click the <code class="code docutils literal"><span class="pre">Fastq/R1</span></code> input file slot in orange.</p>
+<li><p class="first">Click the <code class="code docutils literal notranslate"><span class="pre">Fastq/R1</span></code> input file slot in orange.</p>
 <img alt="../../../_images/rrs-startup.png" src="../../../_images/rrs-startup.png" />
 </li>
 <li><p class="first">Select the “read 1” Gzipped FastQ file from your workspace.</p>
 <img alt="../../../_images/rrs-r1-file.png" src="../../../_images/rrs-r1-file.png" />
 </li>
-<li><p class="first">Click the <code class="code docutils literal"><span class="pre">Fastq/R2</span></code> input file slot in orange.</p>
+<li><p class="first">Click the <code class="code docutils literal notranslate"><span class="pre">Fastq/R2</span></code> input file slot in orange.</p>
 <img alt="../../../_images/rrs-intermediate-input.png" src="../../../_images/rrs-intermediate-input.png" />
 </li>
 <li><p class="first">Select the “read 2” Gzipped FastQ file from your workspace.</p>

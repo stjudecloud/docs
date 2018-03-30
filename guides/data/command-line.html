@@ -36,7 +36,7 @@
   
         <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="St. Jude Cloud Documentation v1.0.0" href="../../index.html"/>
-        <link rel="next" title="PeCan PIE" href="../tools/pecan-pie/index.html"/>
+        <link rel="next" title="Downloading Data from Requests" href="download.html"/>
         <link rel="prev" title="Data Transfer Application" href="data-transfer-app.html"/> 
 
   
@@ -90,8 +90,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">General</span></p>
-<ul>
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Data Guides</span></p>
@@ -99,10 +98,12 @@
 <li class="toctree-l1"><a class="reference internal" href="data-transfer-app.html">Data Transfer Application</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Command Line Interaction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#logging-in">Logging in</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#selecting-a-project">Selecting a project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#uploading-downloading-data">Uploading/Downloading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uploading-downloading-data">Uploading/downloading data</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Downloading Data from Requests</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tool Guides</span></p>
 <ul>
@@ -119,7 +120,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Other Guides</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../sj-internal/index.html">St. Jude Internal Employee Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internal/index.html">St. Jude Internal Employee Guide</a></li>
 </ul>
 
             
@@ -182,69 +183,87 @@
            <div itemprop="articleBody">
             
   <div class="section" id="command-line-interaction">
-<span id="dx-toolkit"></span><h1>Command Line Interaction<a class="headerlink" href="#command-line-interaction" title="Permalink to this headline">¶</a></h1>
-<p>In most normal cases, we recommend that you use the <a class="reference internal" href="data-transfer-app.html#desktop-application"><span class="std std-ref">Data Transfer Application</span></a>
-to upload or download your data. However, we’ve built St. Jude
-Cloud to be easily accessible from the command line. Before you
-can begin uploading and downloading data to the platform,
-you’ll need to understand a few fundamentals about how St. Jude Cloud
-is built.</p>
-<p>St. Jude Cloud is built on top of the genomics processing engine
-provided by <a class="reference external" href="https://www.dnanexus.com/">DNAnexus</a>. To understand
-a bit better, navigate to <a class="reference external" href="https://platform.dnanexus.com">https://platform.dnanexus.com</a>
-and log in with your St. Jude Cloud credentials (your DNAnexus account
-and St. Jude Cloud account are the same). St. Jude internal employees should see <a class="footnote-reference" href="#id3" id="id1">[1]</a>. You should see a picture
-similar to the screenshot below.</p>
-<img alt="../../_images/platform-dnanexus.png" src="../../_images/platform-dnanexus.png" />
-<p>DNAnexus is organized by projects, and in St. Jude Cloud, each tool
-has a its own project in DNAnexus. This project is created once you click
-“Launch this Tool” on one of the tool description pages (example: <a class="reference external" href="https://platform.stjude.cloud/tools/rapid_rna-seq">Rapid RNA-Seq description page</a>).
-You should see a project for each of the tools that you have previously
-launched, as well as some other ancillary projects.</p>
-<div class="admonition note">
+<span id="commandline"></span><h1>Command Line Interaction<a class="headerlink" href="#command-line-interaction" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">If you do not see any projects, you likely haven’t tried to run
-any tools yet. Navigate to the
-<a class="reference external" href="https://platform.stjude.cloud/tools">St. Jude Cloud tools page</a>,
-select “View” for a tool you want to run, click “Launch this Tool”
-on the left side-panel, and try again.</p>
+<p class="last">In most cases, we recommend that you use the <a class="reference internal" href="data-transfer-app.html#desktop-application"><span class="std std-ref">Data Transfer Application</span></a>
+to upload or download your data to/from St. Jude Cloud.
+However, we’ve built St. Jude Cloud to be easily accessible from the
+command line for power users.</p>
 </div>
+</div></blockquote>
+<p>Before you begin interacting with St. Jude Cloud Platform from the command line,
+you’ll need to understand how it is implemented.
+The St. Jude Cloud Platform is built on top of the genomics cloud ecosystem
+provided by <a class="reference external" href="https://www.dnanexus.com/">DNAnexus</a>. For a comprehensive overview
+of how DNAnexus works, see <a class="reference external" href="https://www.dnanexus.com/product-overview">this page</a>.
+Your workspace in DNAnexus is organized by projects, which are essentially folders
+in the cloud. Each data request and tool in St. Jude Cloud creates its own unique
+cloud workspace (DNAnexus project). For instance, a data request creates a DNAnexus
+project behind the scenes with the same name as the request name you specify when
+you request data.</p>
+<p>This guide addresses two basic uses cases for interacting with the St. Jude Cloud Portal on the command line:</p>
+<ol class="arabic simple">
+<li>Downloading data from a data request (see <a class="reference internal" href="download.html#data-download"><span class="std std-ref">Downloading Data from Requests</span></a> for full details).</li>
+<li>Uploading input files to or downloading result files from tools in St. Jude Cloud Platform.</li>
+</ol>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>Behind the scenes, open-source software provided by DNAnexus called the
-“dx-toolkit” is being used to interact with the DNAnexus genomics
-platform to create these projects, upload and download data, and many other operations.
-Before you can interact with St. Jude Cloud on the command line, you’ll
-need to install that software on your computer by following
+<p>Open-source software provided by DNAnexus called the
+<a class="reference external" href="https://github.com/dnanexus/dx-toolkit">dx-toolkit</a> is used to interact with
+the St. Jude Cloud Platform from the command line. You can use this to
+create these projects, upload and download data, and many other operations.
+You’ll need to install that software on your computer by following
 <a class="reference external" href="https://wiki.dnanexus.com/Downloads#DNAnexus-Platform-SDK">this guide</a>.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>A quickstart to getting up and running with the dx-toolkit:</p>
+<blockquote class="last">
+<div><ol class="arabic simple">
+<li><a class="reference external" href="https://www.python.org/downloads/">Install Python 2.7.13+</a>.</li>
+<li>Run <code class="code docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">dxpy</span></code>.</li>
+<li>Type <code class="code docutils literal notranslate"><span class="pre">dx</span> <span class="pre">--help</span></code> at the command line.</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="logging-in">
+<h2>Logging in<a class="headerlink" href="#logging-in" title="Permalink to this headline">¶</a></h2>
+<p>To log in using the dx-toolkit, run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dx login --noprojects
+<span class="c1"># enter username and password when prompted</span>
+</pre></div>
+</div>
+<p>If you are a St. Jude internal user, you’ll need to follow <a class="reference external" href="https://wiki.dnanexus.com/Command-Line-Client/Login-and-Logout#Generating-an-authentication-token">this guide</a>
+to log in instead.</p>
 </div>
 <div class="section" id="selecting-a-project">
 <span id="id2"></span><h2>Selecting a project<a class="headerlink" href="#selecting-a-project" title="Permalink to this headline">¶</a></h2>
-<p>Before uploading or downloading data from a St. Jude Cloud tool,
-you’ll need to specify which tool you are wanting to either upload to
-or download from. You can do this by issuing the following command</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>dx <span class="k">select</span>
+<p>First, you’ll need to choose which Cloud workspace you would like to access. This depends
+on if you are downloading data from a request or working with input/output files from
+a tool. You can see the workspaces available to you by running the following command
+in your terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dx <span class="k">select</span>
 </pre></div>
 </div>
-<p>This will present with a prompt similar to the below screenshot.
-You should enter the number corresponding to the tool you are
-wanting to interact with. In the example below, the user has
-selected the Rapid RNA-Seq tool.</p>
+<p>This will present with a prompt similar to the below screenshot. A list of your
+available cloud workspaces will be shown with a number out to the left of each.
+You should enter the number corresponding to the workspace you are wanting
+to interact with. In the example below, the user has selected the Rapid RNA-Seq tool.</p>
 <img alt="../../_images/select-project.png" src="../../_images/select-project.png" />
 </div>
 <div class="section" id="uploading-downloading-data">
-<h2>Uploading/Downloading data<a class="headerlink" href="#uploading-downloading-data" title="Permalink to this headline">¶</a></h2>
-<p>Data upload and download is painless once you have selected the
-correct project for your tool (see <a class="reference internal" href="#selecting-a-project"><span class="std std-ref">Selecting a project</span></a> for details).</p>
-<p>To upload data to St. Jude Cloud, execute the following command</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>dx upload &lt;LOCAL_FILENAME&gt;
+<span id="upload-download-data"></span><h2>Uploading/downloading data<a class="headerlink" href="#uploading-downloading-data" title="Permalink to this headline">¶</a></h2>
+<p>Moving data back and forth between the cloud and your local computer is simple
+once you have selected the correct project for your tool.</p>
+<p>To upload data to St. Jude Cloud, execute the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dx upload &lt;LOCAL_FILENAME&gt;
 </pre></div>
 </div>
-<p>Once data is uploaded to St. Jude Cloud, you can select it for processing
-by following the specific tool’s intructions.</p>
-<p>To download results from St. Jude Cloud, you might find the following commands
-useful.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># list available files for the tool for the main folder</span>
+<p>To download data from St. Jude Cloud, you might find the following commands
+useful:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># list available files for the tool for the main folder</span>
 dx ls
 
 <span class="c1"># list all available files for the tool</span>
@@ -254,12 +273,6 @@ dx find .
 dx download &lt;FILENAME_IN_CLOUD&gt;
 </pre></div>
 </div>
-<table class="docutils footnote" frame="void" id="id3" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>St. Jude employees should go to <a class="reference external" href="https://cloud.stjude.org">https://cloud.stjude.org</a> instead and log in with LDAP credentials.</td></tr>
-</tbody>
-</table>
 </div>
 </div>
 
@@ -273,7 +286,7 @@ dx download &lt;FILENAME_IN_CLOUD&gt;
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../tools/pecan-pie/index.html" class="btn btn-neutral float-right" title="PeCan PIE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="download.html" class="btn btn-neutral float-right" title="Downloading Data from Requests" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="data-transfer-app.html" class="btn btn-neutral" title="Data Transfer Application" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
