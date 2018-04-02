@@ -39,11 +39,16 @@ You'll need to install that software on your computer by following
 
 .. tip::
 
-    A quickstart to getting up and running with the dx-toolkit:
+   A quickstart to getting up and running with the dx-toolkit:
 
-        1. `Install Python 2.7.13+ <https://www.python.org/downloads/>`_.
-        2. Run :code:`pip install dxpy`.
-        3. Type :code:`dx --help` at the command line.
+      1. Install Python 2.7.13+. Note that using the system-level Python
+         is usually not a good idea (by default, system level Python is typically
+         too old/does not support the latest security protocols required). You
+         can install using `Anaconda <https://conda.io/docs/user-guide/getting-started.html>`_ (recommended)
+         or using the default `Python installer <https://www.python.org/downloads/>`_.
+
+      2. Run :code:`pip install dxpy`.
+      3. Type :code:`dx --help` at the command line.
 
 Logging in
 ----------
