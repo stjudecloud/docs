@@ -1,31 +1,32 @@
 .. _commandline:
 
-Command Line Interaction
-========================
-
-.. 
-
-    .. note::
-        In most cases, we recommend that you use the :ref:`desktop-application`
-        to upload or download your data to/from St. Jude Cloud. 
-        However, we've built St. Jude Cloud to be easily accessible from the 
-        command line for power users. 
+Getting Started with the Command Line
+========================================
 
 Before you begin interacting with St. Jude Cloud Platform from the command line, 
-you'll need to understand how it is implemented. 
-The St. Jude Cloud Platform is built on top of the genomics cloud ecosystem
+you'll need to understand some details on the underlying architecture of the platform.
+The St. Jude Cloud Platform is built on top of a genomics cloud ecosystem
 provided by `DNAnexus <https://www.dnanexus.com/>`_. For a comprehensive overview
 of how DNAnexus works, see `this page <https://www.dnanexus.com/product-overview>`_.
-Your workspace in DNAnexus is organized by projects, which are essentially folders
+
+.. _commandline-overview:
+
+Overview
+--------
+
+Workspaces in DNAnexus are organized by projects, which are essentially folders
 in the cloud. Each data request and tool in St. Jude Cloud creates its own unique
 cloud workspace (DNAnexus project). For instance, a data request creates a DNAnexus
 project behind the scenes with the same name as the request name you specify when
 you request data.
 
-This guide addresses two basic uses cases for interacting with the St. Jude Cloud Portal on the command line:
+This guide introduces how to install the command line utility and run some basic commands.
+In addition, you can view the following guides based on what you are trying to do.
+This guide is a prerequisite to completing any of the guides below.
 
-1. Downloading data from a data request (see :ref:`data-download` for full details).
-2. Uploading input files to or downloading result files from tools in St. Jude Cloud Platform.
+1. Uploading input files to be used by tools in St. Jude Cloud Platform (see :ref:`data-upload`).
+2. Downloading result files from tools in St. Jude Cloud Platform.
+3. Downloading data from a data request (see :ref:`data-download-request`).
 
 Installation
 ------------
@@ -60,15 +61,17 @@ To log in using the dx-toolkit, run the following command:
    dx login --noprojects
    # enter username and password when prompted
 
-If you are a St. Jude internal user, you'll need to follow `this guide <https://wiki.dnanexus.com/Command-Line-Client/Login-and-Logout#Generating-an-authentication-token>`_
-to log in instead.
+.. note:: 
+
+    If you are a St. Jude internal user, you'll need to follow `this guide <https://wiki.dnanexus.com/Command-Line-Client/Login-and-Logout#Generating-an-authentication-token>`_
+    to log in instead.
 
 .. _selecting-a-project:
 
 Selecting a project
 -------------------
 
-First, you'll need to choose which Cloud workspace you would like to access. This depends
+First, you'll need to choose which cloud workspace you would like to access. This depends
 on if you are downloading data from a request or working with input/output files from
 a tool. You can see the workspaces available to you by running the following command
 in your terminal:
@@ -86,10 +89,10 @@ to interact with. In the example below, the user has selected the Rapid RNA-Seq 
 
 .. _upload-download-data:
 
-Uploading/downloading data
---------------------------
+Useful commands
+---------------
 
-Moving data back and forth between the cloud and your local computer is simple 
+Moving data back and forth between the cloud and your local computer is simple
 once you have selected the correct project for your tool.
 
 To upload data to St. Jude Cloud, execute the following command:
@@ -111,3 +114,6 @@ useful:
    
    # download remote files to the local disk.
    dx download <FILENAME_IN_CLOUD>
+
+For a full walk-through of how to interaction with St. Jude Cloud Platform,
+please visit any of the other guides listed in :ref:`commandline-overview`.

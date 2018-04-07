@@ -1,14 +1,15 @@
 .. role:: underline
     :class: underline
 
-St. Jude Cloud
-==============
+St. Jude Cloud Documentation
+============================
 
 Welcome to the St. Jude Cloud documentation! For any questions about how to use 
 St. Jude Cloud, please reach out on `our contact form <https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-contact/>`_.
 
 .. toctree::
    :maxdepth: 1
+   :caption: General Guides
 
    overview
    faq
@@ -17,9 +18,10 @@ St. Jude Cloud, please reach out on `our contact form <https://hospital.stjude.o
    :maxdepth: 1
    :caption: Data Guides
 
-   guides/data/data-transfer-app
    guides/data/command-line
-   guides/data/download
+   guides/data/upload-data
+   guides/data/download-data
+   guides/data/data-transfer-app
 
 .. toctree::
    :maxdepth: 1

@@ -1,13 +1,13 @@
 .. _data-download:
 
-Downloading Data from Requests
+Downloading Data from St. Jude Cloud
 ==============================
 
-.. warning::
-
-   To download data from St. Jude Cloud, you must have indicated that you
-   wished to download the data in your Data Access Agreement (DAA) during your data request. 
-   Any downloading of St. Jude data without completing this step is PROHIBITED.
+.. .. note::
+        In most cases, we recommend that you use the :ref:`desktop-application`
+        to upload or download your data to/from St. Jude Cloud. 
+        However, we've built St. Jude Cloud to be easily accessible from the 
+        command line for power users. 
 
 Prerequisites
 -------------
@@ -16,12 +16,20 @@ Read the :ref:`commandline` guide to install the necessary software and
 get an overview of how to interact with the St. Jude Cloud Platform from
 the command line.
 
-Process
--------
+.. _data-download-request:
 
-You can use the following steps to download data from the St. Jude Cloud Platform:
+Downloading data from a data request
+------------------------------------
 
-1. Complete a data request using the St. Jude Cloud Platform. 
+.. warning::
+
+   To download data from a St. Jude Cloud data request, you must have indicated that you
+   wished to download the data in your Data Access Agreement (DAA) during your submission. 
+   Any downloading of St. Jude data without completing this step is strictly PROHIBITED.
+
+You can use the following steps to download data from a St. Jude Cloud data request:
+
+1. Complete a data request using the St. Jude Cloud Platform.
    In this example, we've created a request with the name "Retinoblastoma Data".
 
    .. image:: resources/retinoblastoma-request-name.png
@@ -34,8 +42,10 @@ You can use the following steps to download data from the St. Jude Cloud Platfor
 
 3. You can use typical commands like :code:`dx ls`, :code:`dx pwd`, and :code:`dx cd`
    to navigate around your cloud folder as you would a local folder. Your project
-   may look different based on what data types you requested and if you needed to be 
-   approved or not.
+   may look different based on what data you requested and whether you were previously
+   approved to access the data. Your data should either be in the :code:`restricted` folder
+   (if this is your first time requesting access) or the :code:`immediate` folder
+   (if you were previously granted access permission).
 
    .. image:: resources/navigate-data-request.png
 
