@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Downloading Data from Requests &mdash; St. Jude Cloud Documentation v1.0.0</title>
+  <title>Uploading Data to St. Jude Cloud &mdash; St. Jude Cloud Documentation v1.0.0</title>
   
 
   
@@ -29,8 +29,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="PeCan PIE" href="../tools/pecan-pie/index.html" />
-    <link rel="prev" title="Command Line Interaction" href="command-line.html" /> 
+    <link rel="next" title="Downloading Data from St. Jude Cloud" href="download-data.html" />
+    <link rel="prev" title="Getting Started with the Command Line" href="command-line.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -83,18 +83,20 @@
               
             
             
-              <ul>
+              <p class="caption"><span class="caption-text">General Guides</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Data Guides</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="data-transfer-app.html">Data Transfer Application</a></li>
-<li class="toctree-l1"><a class="reference internal" href="command-line.html">Command Line Interaction</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Downloading Data from Requests</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">Getting Started with the Command Line</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Uploading Data to St. Jude Cloud</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#process">Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uploading-data-to-st-jude-cloud-platform-tools">Uploading data to St. Jude Cloud Platform tools</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="download-data.html">Downloading Data from St. Jude Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transfer-app.html">Data Transfer Application</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tool Guides</span></p>
 <ul>
@@ -157,7 +159,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-      <li>Downloading Data from Requests</li>
+      <li>Uploading Data to St. Jude Cloud</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -174,48 +176,33 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="downloading-data-from-requests">
-<span id="data-download"></span><h1>Downloading Data from Requests<a class="headerlink" href="#downloading-data-from-requests" title="Permalink to this headline">¶</a></h1>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">To download data from St. Jude Cloud, you must have indicated that you
-wished to download the data in your Data Access Agreement (DAA) during your data request.
-Any downloading of St. Jude data without completing this step is PROHIBITED.</p>
-</div>
+  <div class="section" id="uploading-data-to-st-jude-cloud">
+<span id="data-upload"></span><h1>Uploading Data to St. Jude Cloud<a class="headerlink" href="#uploading-data-to-st-jude-cloud" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
-<p>Read the <a class="reference internal" href="command-line.html#commandline"><span class="std std-ref">Command Line Interaction</span></a> guide to install the necessary software and
+<p>Read the <a class="reference internal" href="command-line.html#commandline"><span class="std std-ref">Getting Started with the Command Line</span></a> guide to install the necessary software and
 get an overview of how to interact with the St. Jude Cloud Platform from
 the command line.</p>
 </div>
-<div class="section" id="process">
-<h2>Process<a class="headerlink" href="#process" title="Permalink to this headline">¶</a></h2>
-<p>You can use the following steps to download data from the St. Jude Cloud Platform:</p>
+<div class="section" id="uploading-data-to-st-jude-cloud-platform-tools">
+<h2>Uploading data to St. Jude Cloud Platform tools<a class="headerlink" href="#uploading-data-to-st-jude-cloud-platform-tools" title="Permalink to this headline">¶</a></h2>
+<p>You can use the following process to upload data to be used by St. Jude Cloud Platform
+tools:</p>
 <ol class="arabic">
-<li><p class="first">Complete a data request using the St. Jude Cloud Platform.
-In this example, we’ve created a request with the name “Retinoblastoma Data”.</p>
-<img alt="../../_images/retinoblastoma-request-name.png" src="../../_images/retinoblastoma-request-name.png" />
+<li><p class="first">First, click “View” on the tool you’d like to run from <a class="reference external" href="https://stjude.cloud/tools.html">this page</a>.
+In this example, we will choose the Rapid RNA-Seq tool.</p>
 </li>
-<li><p class="first">Open up your terminal application and select the cloud workspace relevant to
-your data request as specified in <a class="reference internal" href="command-line.html#selecting-a-project"><span class="std std-ref">Selecting a project</span></a>. For instance,
-in this case we would type <code class="code docutils literal notranslate"><span class="pre">dx</span> <span class="pre">select</span> <span class="pre">&quot;Retinoblastoma</span> <span class="pre">Data&quot;</span></code>.</p>
-<img alt="../../_images/select-retinoblastoma.png" src="../../_images/select-retinoblastoma.png" />
+<li><p class="first">If you have not already, click “Start” on the tool you’d like to run.</p>
+<img alt="../../_images/rapid-rnaseq-start.png" src="../../_images/rapid-rnaseq-start.png" />
 </li>
-<li><p class="first">You can use typical commands like <code class="code docutils literal notranslate"><span class="pre">dx</span> <span class="pre">ls</span></code>, <code class="code docutils literal notranslate"><span class="pre">dx</span> <span class="pre">pwd</span></code>, and <code class="code docutils literal notranslate"><span class="pre">dx</span> <span class="pre">cd</span></code>
-to navigate around your cloud folder as you would a local folder. Your project
-may look different based on what data types you requested and if you needed to be
-approved or not.</p>
-<img alt="../../_images/navigate-data-request.png" src="../../_images/navigate-data-request.png" />
+<li><p class="first">Open up your terminal application and select the cloud workspace with the same
+name as the tool you are trying to run (see <a class="reference internal" href="command-line.html#selecting-a-project"><span class="std std-ref">Selecting a project</span></a>).</p>
+<img alt="../../_images/select-rapid-rnaseq.png" src="../../_images/select-rapid-rnaseq.png" />
 </li>
-<li><p class="first">In the root of every data request is a file called <code class="code docutils literal notranslate"><span class="pre">manifest.txt</span></code>. This should
-contain all of the information about the samples you checked out as well as the
-associated metadata we provide.</p>
-</li>
-<li><p class="first">To download data from the cloud to local storage, use the <code class="code docutils literal notranslate"><span class="pre">dx</span> <span class="pre">download</span></code> command
-as specified in <a class="reference internal" href="command-line.html#upload-download-data"><span class="std std-ref">Uploading/downloading data</span></a>. For instance, if I wanted to download
-all of the BAM files to my local computer, I would type
-<code class="code docutils literal notranslate"><span class="pre">dx</span> <span class="pre">download</span> <span class="pre">immediate/bam/*</span></code>.</p>
-<img alt="../../_images/download-bams.png" src="../../_images/download-bams.png" />
+<li><p class="first">Last, navigate to the local files you’d like to upload to the cloud and use
+the <code class="code docutils literal notranslate"><span class="pre">dx</span> <span class="pre">upload</span></code> command as specified in <a class="reference internal" href="command-line.html#upload-download-data"><span class="std std-ref">Useful commands</span></a>
+to upload your data to St. Jude Cloud.</p>
+<img alt="../../_images/rapid-rnaseq-upload-data.png" src="../../_images/rapid-rnaseq-upload-data.png" />
 </li>
 </ol>
 </div>
@@ -229,10 +216,10 @@ all of the BAM files to my local computer, I would type
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../tools/pecan-pie/index.html" class="btn btn-neutral float-right" title="PeCan PIE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="download-data.html" class="btn btn-neutral float-right" title="Downloading Data from St. Jude Cloud" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="command-line.html" class="btn btn-neutral" title="Command Line Interaction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="command-line.html" class="btn btn-neutral" title="Getting Started with the Command Line" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

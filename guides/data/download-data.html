@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Data Transfer Application &mdash; St. Jude Cloud Documentation v1.0.0</title>
+  <title>Downloading Data from St. Jude Cloud &mdash; St. Jude Cloud Documentation v1.0.0</title>
   
 
   
@@ -29,8 +29,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="PeCan PIE" href="../tools/pecan-pie/index.html" />
-    <link rel="prev" title="Downloading Data from St. Jude Cloud" href="download-data.html" /> 
+    <link rel="next" title="Data Transfer Application" href="data-transfer-app.html" />
+    <link rel="prev" title="Uploading Data to St. Jude Cloud" href="upload-data.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -91,8 +91,12 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="command-line.html">Getting Started with the Command Line</a></li>
 <li class="toctree-l1"><a class="reference internal" href="upload-data.html">Uploading Data to St. Jude Cloud</a></li>
-<li class="toctree-l1"><a class="reference internal" href="download-data.html">Downloading Data from St. Jude Cloud</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Transfer Application</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Downloading Data from St. Jude Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#downloading-data-from-a-data-request">Downloading data from a data request</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data-transfer-app.html">Data Transfer Application</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tool Guides</span></p>
 <ul>
@@ -155,7 +159,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-      <li>Data Transfer Application</li>
+      <li>Downloading Data from St. Jude Cloud</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -172,16 +176,53 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="data-transfer-application">
-<span id="desktop-application"></span><h1>Data Transfer Application<a class="headerlink" href="#data-transfer-application" title="Permalink to this headline">¶</a></h1>
-<p>The St. Jude Cloud data transfer application is still in under development.
-Please refer to the <a class="reference internal" href="upload-data.html#data-upload"><span class="std std-ref">Uploading Data to St. Jude Cloud</span></a> and <a class="reference internal" href="download-data.html#data-download"><span class="std std-ref">Downloading Data from St. Jude Cloud</span></a> guides for the official documentation
-on how to upload data to or download download data from St. Jude Cloud Platform.</p>
-<p>If you are adventurous, we welcome you to try out the experience by <a class="reference external" href="https://dta.stjude.cloud">downloading the latest release</a> and letting
-us know how it goes!
-You can find the source code <a class="reference external" href="https://github.com/stjude/sjcloud-data-transfer-app">here</a>.
-If you would like to file an issue you are experiencing with
-the application, you can do so <a class="reference external" href="https://github.com/stjude/sjcloud-data-transfer-app/issues">here</a>.</p>
+  <div class="section" id="downloading-data-from-st-jude-cloud">
+<span id="data-download"></span><h1>Downloading Data from St. Jude Cloud<a class="headerlink" href="#downloading-data-from-st-jude-cloud" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Read the <a class="reference internal" href="command-line.html#commandline"><span class="std std-ref">Getting Started with the Command Line</span></a> guide to install the necessary software and
+get an overview of how to interact with the St. Jude Cloud Platform from
+the command line.</p>
+</div>
+<div class="section" id="downloading-data-from-a-data-request">
+<span id="data-download-request"></span><h2>Downloading data from a data request<a class="headerlink" href="#downloading-data-from-a-data-request" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">To download data from a St. Jude Cloud data request, you must have indicated that you
+wished to download the data in your Data Access Agreement (DAA) during your submission.
+Any downloading of St. Jude data without completing this step is strictly PROHIBITED.</p>
+</div>
+<p>You can use the following steps to download data from a St. Jude Cloud data request:</p>
+<ol class="arabic">
+<li><p class="first">Complete a data request using the St. Jude Cloud Platform.
+In this example, we’ve created a request with the name “Retinoblastoma Data”.</p>
+<img alt="../../_images/retinoblastoma-request-name.png" src="../../_images/retinoblastoma-request-name.png" />
+</li>
+<li><p class="first">Open up your terminal application and select the cloud workspace relevant to
+your data request as specified in <a class="reference internal" href="command-line.html#selecting-a-project"><span class="std std-ref">Selecting a project</span></a>. For instance,
+in this case we would type <code class="code docutils literal notranslate"><span class="pre">dx</span> <span class="pre">select</span> <span class="pre">&quot;Retinoblastoma</span> <span class="pre">Data&quot;</span></code>.</p>
+<img alt="../../_images/select-retinoblastoma.png" src="../../_images/select-retinoblastoma.png" />
+</li>
+<li><p class="first">You can use typical commands like <code class="code docutils literal notranslate"><span class="pre">dx</span> <span class="pre">ls</span></code>, <code class="code docutils literal notranslate"><span class="pre">dx</span> <span class="pre">pwd</span></code>, and <code class="code docutils literal notranslate"><span class="pre">dx</span> <span class="pre">cd</span></code>
+to navigate around your cloud folder as you would a local folder. Your project
+may look different based on what data you requested and whether you were previously
+approved to access the data. Your data should either be in the <code class="code docutils literal notranslate"><span class="pre">restricted</span></code> folder
+(if this is your first time requesting access) or the <code class="code docutils literal notranslate"><span class="pre">immediate</span></code> folder
+(if you were previously granted access permission).</p>
+<img alt="../../_images/navigate-data-request.png" src="../../_images/navigate-data-request.png" />
+</li>
+<li><p class="first">In the root of every data request is a file called <code class="code docutils literal notranslate"><span class="pre">manifest.txt</span></code>. This should
+contain all of the information about the samples you checked out as well as the
+associated metadata we provide.</p>
+</li>
+<li><p class="first">To download data from the cloud to local storage, use the <code class="code docutils literal notranslate"><span class="pre">dx</span> <span class="pre">download</span></code> command
+as specified in <a class="reference internal" href="command-line.html#upload-download-data"><span class="std std-ref">Useful commands</span></a>. For instance, if I wanted to download
+all of the BAM files to my local computer, I would type
+<code class="code docutils literal notranslate"><span class="pre">dx</span> <span class="pre">download</span> <span class="pre">immediate/bam/*</span></code>.</p>
+<img alt="../../_images/download-bams.png" src="../../_images/download-bams.png" />
+</li>
+</ol>
+</div>
 </div>
 
 
@@ -192,10 +233,10 @@ the application, you can do so <a class="reference external" href="https://githu
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../tools/pecan-pie/index.html" class="btn btn-neutral float-right" title="PeCan PIE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="data-transfer-app.html" class="btn btn-neutral float-right" title="Data Transfer Application" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="download-data.html" class="btn btn-neutral" title="Downloading Data from St. Jude Cloud" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="upload-data.html" class="btn btn-neutral" title="Uploading Data to St. Jude Cloud" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
