@@ -3,7 +3,7 @@
 Data Transfer Application
 =========================
 
-The St. Jude Cloud data transfer application is still in under development.
+The St. Jude Cloud data transfer application is still under development.
 Please refer to the :ref:`data-upload` and :ref:`data-download` guides for the official documentation 
 on how to upload data to or download download data from St. Jude Cloud Platform.
 
