@@ -75,7 +75,7 @@ clean:
 .PHONY: html
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
-	cp -R ./source/videos $(BUILDDIR)/html/
+	cp -R ./source/proteinpaint-support $(BUILDDIR)/html/_static
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
