@@ -49,7 +49,7 @@ Q. Why does the ExAC allele frequency shown differ from the ExAC portal?
 
 Q. Is it free?
 ++++++++++++++++++++++++++++++++++++++++++++++++++
-  Pecan PIE is free for non-commercial use; VCF files must be under 20MB. St. Jude covers the cost of running the pipeline and hosting. DNANexus accounts are required to keep track of your jobs in the cloud so that you can retrieve and manage from multiple locations. Accounts also make it possible to alert you of job completion via email.
+  Pecan PIE is free for non-commercial use; VCF files must be under 4GB. St. Jude covers the cost of running the pipeline and hosting. DNANexus accounts are required to keep track of your jobs in the cloud so that you can retrieve and manage from multiple locations. Accounts also make it possible to alert you of job completion via email.
  
 .. TO DO: lift size restrictions?
    
