@@ -1,3 +1,4 @@
 build/
 node_modules/
 SJCloudDeploy
+.DS_store

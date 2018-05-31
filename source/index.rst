@@ -21,6 +21,7 @@ please reach out on `our contact form <https://hospital.stjude.org/apps/forms/fb
 
    guides/data/data-transfer-app
    guides/data/command-line
+   guides/data/dac-protocols
 
 .. toctree::
    :maxdepth: 1
