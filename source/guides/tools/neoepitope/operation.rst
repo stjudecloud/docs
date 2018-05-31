@@ -13,7 +13,7 @@ Uploading Data
 The HLA Typing and Neoepitope Prediction pipeline takes either a Gzipped FastQ 
 file or a BAM file aligned to HG19 or HG38 (WGS, WES or RNAseq). You can upload the files
 you would like to run using the :ref:`desktop-application` or by uploading data
-manually using the :ref:`dx-toolkit`.
+manually using the :ref:`commandline`.
 
 .. note:: You should click "Start" before attempting to upload data
           to the tool (the tool's workspace is only created once you do this). After you

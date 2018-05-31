@@ -1,26 +1,27 @@
 .. role:: underline
     :class: underline
 
-St. Jude Cloud (Beta)
-========================================================
+St. Jude Cloud Documentation
+============================
 
-Welcome to the St. Jude Cloud Platform documentation! We appreciate
-your time to review our pipelines during the St. Jude Cloud beta
-launch. For any questions about how to use the pipelines or any other issues,
-please reach out on `our contact form <https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-contact/>`_.
+Welcome to the St. Jude Cloud documentation! For any questions about how to use 
+St. Jude Cloud, please reach out on `our contact form <https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-contact/>`_.
 
 .. toctree::
    :maxdepth: 1
-   :caption: General
+   :caption: General Guides
 
+   overview
    faq
 
 .. toctree::
    :maxdepth: 1
    :caption: Data Guides
 
-   guides/data/data-transfer-app
    guides/data/command-line
+   guides/data/upload-data
+   guides/data/download-data
+   guides/data/data-transfer-app
    guides/data/dac-protocols
 
 .. toctree::
@@ -44,4 +45,4 @@ please reach out on `our contact form <https://hospital.stjude.org/apps/forms/fb
    :maxdepth: 1
    :caption: Other Guides
 
-   guides/sj-internal/index
+   guides/internal/index

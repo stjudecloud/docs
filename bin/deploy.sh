@@ -42,6 +42,11 @@ export GIT_AUTHOR_EMAIL=""
 export GIT_COMMITTER_NAME="Clay McLeod"
 export GIT_COMMITTER_EMAIL="clay.mcleod@stjude.org"
 
+echo "== Files =="
+ls $BUILD_DIR/
+echo "== Static Files =="
+ls $BUILD_DIR/_static
+
 if git diff --quiet; then
     echo "No changes to deploy."
     exit 0
