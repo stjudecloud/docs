@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Uploading Data to St. Jude Cloud &mdash; St. Jude Cloud Documentation v1.0.0</title>
+  <title>Data Access Committee Policies and Protocols &mdash; St. Jude Cloud Documentation v1.0.0</title>
   
 
   
@@ -29,8 +29,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Downloading Data from St. Jude Cloud" href="download-data.html" />
-    <link rel="prev" title="Getting Started with the Command Line" href="command-line.html" /> 
+    <link rel="next" title="PeCan PIE" href="../tools/pecan-pie/index.html" />
+    <link rel="prev" title="Data Transfer Application" href="data-transfer-app.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -90,14 +90,15 @@
 <p class="caption"><span class="caption-text">Data Guides</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="command-line.html">Getting Started with the Command Line</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Uploading Data to St. Jude Cloud</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#uploading-data-to-st-jude-cloud-platform-tools">Uploading data to St. Jude Cloud Platform tools</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="upload-data.html">Uploading Data to St. Jude Cloud</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download-data.html">Downloading Data from St. Jude Cloud</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-transfer-app.html">Data Transfer Application</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dac-protocols.html">Data Access Committee Policies and Protocols</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Access Committee Policies and Protocols</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pediatric-cancer-genome-project">Pediatric Cancer Genome Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#st-jude-lifetime-study">St. Jude Lifetime Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clinical-genomics">Clinical Genomics</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Tool Guides</span></p>
 <ul>
@@ -160,7 +161,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-      <li>Uploading Data to St. Jude Cloud</li>
+      <li>Data Access Committee Policies and Protocols</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -177,35 +178,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="uploading-data-to-st-jude-cloud">
-<span id="data-upload"></span><h1>Uploading Data to St. Jude Cloud<a class="headerlink" href="#uploading-data-to-st-jude-cloud" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
-<p>Read the <a class="reference internal" href="command-line.html#commandline"><span class="std std-ref">Getting Started with the Command Line</span></a> guide to install the necessary software and
-get an overview of how to interact with the St. Jude Cloud Platform from
-the command line.</p>
+  <div class="section" id="data-access-committee-policies-and-protocols">
+<h1>Data Access Committee Policies and Protocols<a class="headerlink" href="#data-access-committee-policies-and-protocols" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="pediatric-cancer-genome-project">
+<h2>Pediatric Cancer Genome Project<a class="headerlink" href="#pediatric-cancer-genome-project" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference download internal" href="../../_downloads/protocols-pcgp-dac-v1.pdf" download=""><code class="xref download docutils literal notranslate"><span class="pre">PCGP</span> <span class="pre">Data</span> <span class="pre">Access</span> <span class="pre">Committee</span> <span class="pre">Protocols</span> <span class="pre">(v1)</span></code></a>.</li>
+</ul>
 </div>
-<div class="section" id="uploading-data-to-st-jude-cloud-platform-tools">
-<h2>Uploading data to St. Jude Cloud Platform tools<a class="headerlink" href="#uploading-data-to-st-jude-cloud-platform-tools" title="Permalink to this headline">¶</a></h2>
-<p>You can use the following process to upload data to be used by St. Jude Cloud Platform
-tools:</p>
-<ol class="arabic">
-<li><p class="first">First, click “View” on the tool you’d like to run from <a class="reference external" href="https://stjude.cloud/tools.html">this page</a>.
-In this example, we will choose the Rapid RNA-Seq tool.</p>
-</li>
-<li><p class="first">If you have not already, click “Start” on the tool you’d like to run.</p>
-<img alt="../../_images/rapid-rnaseq-start.png" src="../../_images/rapid-rnaseq-start.png" />
-</li>
-<li><p class="first">Open up your terminal application and select the cloud workspace with the same
-name as the tool you are trying to run (see <a class="reference internal" href="command-line.html#selecting-a-project"><span class="std std-ref">Selecting a project</span></a>).</p>
-<img alt="../../_images/select-rapid-rnaseq.png" src="../../_images/select-rapid-rnaseq.png" />
-</li>
-<li><p class="first">Last, navigate to the local files you’d like to upload to the cloud and use
-the <code class="code docutils literal notranslate"><span class="pre">dx</span> <span class="pre">upload</span></code> command as specified in <a class="reference internal" href="command-line.html#upload-download-data"><span class="std std-ref">Useful commands</span></a>
-to upload your data to St. Jude Cloud.</p>
-<img alt="../../_images/rapid-rnaseq-upload-data.png" src="../../_images/rapid-rnaseq-upload-data.png" />
-</li>
-</ol>
+<div class="section" id="st-jude-lifetime-study">
+<h2>St. Jude Lifetime Study<a class="headerlink" href="#st-jude-lifetime-study" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference download internal" href="../../_downloads/protocols-sjlife-dac-v1.pdf" download=""><code class="xref download docutils literal notranslate"><span class="pre">SJLIFE</span> <span class="pre">Data</span> <span class="pre">Access</span> <span class="pre">Committee</span> <span class="pre">Protocols</span> <span class="pre">(v1)</span></code></a>.</li>
+</ul>
+</div>
+<div class="section" id="clinical-genomics">
+<h2>Clinical Genomics<a class="headerlink" href="#clinical-genomics" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference download internal" href="../../_downloads/protocols-clinical-genomics-dac-v1.pdf" download=""><code class="xref download docutils literal notranslate"><span class="pre">Clinical</span> <span class="pre">Genomics</span> <span class="pre">Data</span> <span class="pre">Access</span> <span class="pre">Committee</span> <span class="pre">Protocols</span> <span class="pre">(v1)</span></code></a>.</li>
+</ul>
 </div>
 </div>
 
@@ -217,10 +208,10 @@ to upload your data to St. Jude Cloud.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="download-data.html" class="btn btn-neutral float-right" title="Downloading Data from St. Jude Cloud" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../tools/pecan-pie/index.html" class="btn btn-neutral float-right" title="PeCan PIE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="command-line.html" class="btn btn-neutral" title="Getting Started with the Command Line" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="data-transfer-app.html" class="btn btn-neutral" title="Data Transfer Application" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

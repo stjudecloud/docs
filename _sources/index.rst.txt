@@ -22,6 +22,7 @@ St. Jude Cloud, please reach out on `our contact form <https://hospital.stjude.o
    guides/data/upload-data
    guides/data/download-data
    guides/data/data-transfer-app
+   guides/data/dac-protocols
 
 .. toctree::
    :maxdepth: 1
