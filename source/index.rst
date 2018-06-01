@@ -19,6 +19,7 @@ St. Jude Cloud, please reach out on `our contact form <https://hospital.stjude.o
    :caption: Data Guides
 
    guides/data/data-request
+   guides/data/fill-out-daa
    guides/data/command-line
    guides/data/upload-data
    guides/data/download-data
