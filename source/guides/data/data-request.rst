@@ -33,8 +33,6 @@ Selecting your files
 3. Once you have selected the cohort you would like to study, you can chose what type of files you would 
 like to receive. This step is dynamic, and shows you all of the file types we have available for the 
 dataset you are interested in. 
-If you do not see the Next button, and are asked to log in at this time, you can see how to 
-log in .. _here: *NEEDS LINK*
 
 .. image:: resources/data-request-5.png
 
