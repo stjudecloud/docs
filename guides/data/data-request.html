@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ProteinPaint BigWig Viewer &mdash; St. Jude Cloud Documentation v1.0.0</title>
+  <title>Make a Data Request &mdash; St. Jude Cloud Documentation v1.0.0</title>
   
 
   
@@ -29,8 +29,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ProteinPaint Fusion Viewer" href="fusion-viewer.html" />
-    <link rel="prev" title="Frequently Asked Questions" href="../tools/neoepitope/faq.html" /> 
+    <link rel="next" title="Getting Started with the Command Line" href="command-line.html" />
+    <link rel="prev" title="Frequently Asked Questions" href="../../faq.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -88,13 +88,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Data Guides</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../data/data-request.html">Make a Data Request</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/command-line.html">Getting Started with the Command Line</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/upload-data.html">Uploading Data to St. Jude Cloud</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/download-data.html">Downloading Data from St. Jude Cloud</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/data-transfer-app.html">Data Transfer Application</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/dac-protocols.html">Data Access Committee Policies and Protocols</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Make a Data Request</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#selecting-data">Selecting data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#selecting-your-files">Selecting your files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#finalizing-the-request">Finalizing the request</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">Getting Started with the Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upload-data.html">Uploading Data to St. Jude Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download-data.html">Downloading Data from St. Jude Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transfer-app.html">Data Transfer Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dac-protocols.html">Data Access Committee Policies and Protocols</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tool Guides</span></p>
 <ul>
@@ -105,9 +110,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../tools/neoepitope/index.html">HLA Typing and Neoepitope Prediction</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Visualization Guides</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">ProteinPaint BigWig Viewer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fusion-viewer.html">ProteinPaint Fusion Viewer</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../visualizations/bigwig.html">ProteinPaint BigWig Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../visualizations/fusion-viewer.html">ProteinPaint Fusion Viewer</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Other Guides</span></p>
 <ul>
@@ -157,7 +162,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-      <li>ProteinPaint BigWig Viewer</li>
+      <li>Make a Data Request</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -174,27 +179,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="proteinpaint-bigwig-viewer">
-<span id="pp-coverage-viewer"></span><h1>ProteinPaint BigWig Viewer<a class="headerlink" href="#proteinpaint-bigwig-viewer" title="Permalink to this headline">¶</a></h1>
-<p>The ProteinPaint interactive coverage viewer is used to visualize
-any bigWig files information. You can follow these steps to
-get an understand of how it works.</p>
-<ol class="arabic">
-<li><p class="first">Open up the custom viewer file output by your pipeline. The name
-of this file will vary, so consult the specific pipeline guide to
-know where to find it.</p>
-</li>
-<li><p class="first">Click “Launch” in the bottom right corner to launch the custom
-viewer.</p>
-<img alt="../../_images/bigwig_viewer_startup.png" src="../../_images/bigwig_viewer_startup.png" />
-</li>
-<li><p class="first">Once the page has loaded, you will be able to see the bigWig
-viewer. You can navigate around the genome by gene or genomic
-location. Alongside the coverage track is the GENCODE gene
-reference.</p>
-<img alt="../../_images/bigwig_detail.png" src="../../_images/bigwig_detail.png" />
-</li>
-</ol>
+  <div class="section" id="make-a-data-request">
+<h1>Make a Data Request<a class="headerlink" href="#make-a-data-request" title="Permalink to this headline">¶</a></h1>
+<p>Submitting a data request is necessary when you would like access to a Data Access Unit to
+which you do not already have access.</p>
+<div class="section" id="selecting-data">
+<span id="id1"></span><h2>Selecting data<a class="headerlink" href="#selecting-data" title="Permalink to this headline">¶</a></h2>
+<p>1. Navigate to the data browser by clicking Access Data and Explore Data.
+If you would like to view the requests you have already made, you can do so under Manage Data.</p>
+<img alt="../../_images/data-request-1.png" src="../../_images/data-request-1.png" />
+<img alt="../../_images/data-request-2.png" src="../../_images/data-request-2.png" />
+<p>2. Next, select the cohort you are interested in requesting. You can browse our data by different cohorts: disease, publication, dataset, or you can use
+PeCan, our Pediatric Cancer portal to find samples associated with specific genes, or mutations.</p>
+<p><em>Note: If you are looking for PCGP data, please select by “Datasets”.</em></p>
+<img alt="../../_images/data-request-3.png" src="../../_images/data-request-3.png" />
+<img alt="../../_images/data-request-4.png" src="../../_images/data-request-4.png" />
+</div>
+<div class="section" id="selecting-your-files">
+<span id="selecting-files"></span><h2>Selecting your files<a class="headerlink" href="#selecting-your-files" title="Permalink to this headline">¶</a></h2>
+<p>3. Once you have selected the cohort you would like to study, you can chose what type of files you would
+like to receive. This step is dynamic, and shows you all of the file types we have available for the
+dataset you are interested in.
+If you do not see the Next button, and are asked to log in at this time, you can see how to
+log in .. _here: <em>NEEDS LINK</em></p>
+<img alt="../../_images/data-request-5.png" src="../../_images/data-request-5.png" />
+</div>
+<div class="section" id="finalizing-the-request">
+<span id="id2"></span><h2>Finalizing the request<a class="headerlink" href="#finalizing-the-request" title="Permalink to this headline">¶</a></h2>
+<p>4. Please enter all required information. If you are requesting access to a dataset you have not already
+been approved for, you will see a section called Controlled Data. Under this section, there is a bulletted
+list that indicates the Data Access Units you are requesting access to. Please use this list to fill
+in the Datasets section of the Data Request Form. Click the Download Data Request Form button under
+the list of Data Access Units to download the St. Jude Cloud Data Access Agreement.</p>
+<img alt="../../_images/data-request-6.png" src="../../_images/data-request-6.png" />
+<img alt="../../_images/data-request-7.png" src="../../_images/data-request-7.png" />
+<p>5. Now, you have successfully submitted your data request. Your request will be sent to a committee
+to be evaluated. If you would like to see the protocols for request approval, you can see them in our <a class="reference internal" href="dac-protocols.html#committee-protocols"><span class="std std-ref">Data Access Committee Policies and Protocols</span></a> doucmentation.</p>
+</div>
 </div>
 
 
@@ -205,10 +226,10 @@ reference.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="fusion-viewer.html" class="btn btn-neutral float-right" title="ProteinPaint Fusion Viewer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="command-line.html" class="btn btn-neutral float-right" title="Getting Started with the Command Line" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../tools/neoepitope/faq.html" class="btn btn-neutral" title="Frequently Asked Questions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../../faq.html" class="btn btn-neutral" title="Frequently Asked Questions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
