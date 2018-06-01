@@ -1,4 +1,4 @@
-
+.. _committee-protocols:
 
 Data Access Committee Policies and Protocols
 ========================
