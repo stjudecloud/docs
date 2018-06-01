@@ -1,3 +1,4 @@
+.. _request-data:
 
 Make a Data Request
 ========================
@@ -41,7 +42,7 @@ dataset you are interested in.
 Finalizing the request
 -------------------
 4. Please enter all required information. If you are requesting access to a dataset you have not already 
-been approved for, you will see a section called Controlled Data. Under this section, there is a bulletted 
+been approved for, you will see a section called Controlled Data. Under this section, there is a bulleted 
 list that indicates the Data Access Units you are requesting access to. Please use this list to fill 
 in the Datasets section of the Data Request Form. Click the Download Data Request Form button under 
 the list of Data Access Units to download the St. Jude Cloud Data Access Agreement. 
@@ -51,4 +52,4 @@ the list of Data Access Units to download the St. Jude Cloud Data Access Agreeme
 .. image:: resources/data-request-7.png
 
 5. Now, you have successfully submitted your data request. Your request will be sent to a committee
-to be evaluated. If you would like to see the protocols for request approval, you can see them in our :ref:`committee-protocols` doucmentation.
+to be evaluated. If you would like to see the protocols for request approval, you can see them in our :ref:`committee-protocols` documentation.
