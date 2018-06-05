@@ -11,7 +11,10 @@ residential state law.
 
 Where Can I Find This Document? 
 -------------------------------
-You can find this document on the last step of :ref:`request-data`.
+You can find this document on the last step of :ref:`request-data`, or you can 
+download a copy here.
+
+:download:`St. Jude Cloud Data Access Agreement <../../resources/OfficialDataAccessAgreement_Apr2018.pdf>`
 
 
 Why Do I Need to Sign This Document?
