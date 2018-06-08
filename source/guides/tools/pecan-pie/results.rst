@@ -29,7 +29,7 @@ The "search" box lets you filter the results by gene and/or amino acid change.  
 Gold, Silver, and Bronze medals
 -------------------------------
 
-Medals are only assigned for coding and splice-related variants in disease predisposition genes.  Germline medals are only assigned for novel variants or those present in the NHLBI ESP database with a MAF of less than 0.1%.
+Medals are only assigned for coding and splice-related variants in disease predisposition genes.  Germline medals are only assigned for novel variants or those present in the ExAC (ex-TCGA) database with a MAF no greater than 0.1% (0.001 expressed fractionally).
 
 Gold medals are assigned to truncations in tumor suppressor genes, hotspots derived from the COSMIC database, as well as perfect matches to variants in the IARC TP53, PCGP, ASU TERT, ARUP RET, and BIC databases.
 
@@ -43,7 +43,6 @@ Bronze medals are assigned to variants predicted tolerated by damage-prediction 
 A summary graphic can be found in slide 4 of the :download:`ASHG 2017 presentation <resources/pecanpie_ASHG_2017.pptx>`.  For additional details see `Zhang et al., NEJM 2015 <http://www.nejm.org/doi/full/10.1056/NEJMoa1508054#t=article>`_ (supplementary appendix pp. 7-10).
 
 
-
 Variant page
 ------------
 
@@ -52,6 +51,13 @@ Each variant links to a detailed variant page, which integrates data from a vari
 Summary info
 ^^^^^^^^^^^^^
 The top of the page shows a summary of the variant, including its genomic and HGVS annotations, predicted effect on the protein, and somatic and germline medals.  A description of the gene from Entrez follows, and a custom description or selection rationale may also be entered.
+
+Medal call info
+^^^^^^^^^^^^^^^^^^
+
+Clicking on one of the medal icons (gold, silver, bronze, unknown) also on the top of the page will show a summary of information related to the medal call.
+
+
 
 Protein Paint
 ^^^^^^^^^^^^^
@@ -81,13 +87,7 @@ Allele frequencies for the variant in the PCGP (somatic and germline),NHLBI ESP 
 
 Damage prediction algorithms
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Precomputed damage-prediction algorithm calls for nonsynonymous coding
-SNVs are presented, taken from dbNSFP.  Available algorithms are
-PolyPhen2 (HVAR), SIFT, FATHMM, MutationAssessor, and LRT.  The calls
-are presented in a circular diagram with entries color-coded based on
-the predicted severity of the result.
-
-.. TO DO: dbNSFP update, REVEL scores
+Precomputed damage-prediction algorithm calls for nonsynonymous coding SNVs are presented from the dbNSFP database.  Available algorithms are PolyPhen2 (HVAR), SIFT, CADD, REVEL, FATHMM, MutationAssessor, and LRT.  The calls are presented in a circular diagram with entries color-coded based on the predicted severity of the result.
 
 Medal ceremony and linkouts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
