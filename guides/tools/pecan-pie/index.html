@@ -24,8 +24,7 @@
 
   
 
-  
-    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -105,7 +104,7 @@
 <li class="toctree-l3"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="operation.html">Pipeline Operation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="results.html">Analysis of Results</a></li>
-<li class="toctree-l3"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html">Frequently Asked Questions (FAQ)</a></li>
 </ul>
 </li>
 </ul>
@@ -187,7 +186,7 @@
             
   <div class="section" id="pecan-pie">
 <span id="pecan-pie-index"></span><h1>PeCan PIE<a class="headerlink" href="#pecan-pie" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://genome.ucsc.edu/FAQ/FAQreleases.html#release1"><img alt="HG19" src="https://img.shields.io/badge/Genome-HG19%20(GRCh37)-green.svg" /></a></p>
+<p><a class="reference external" href="https://genome.ucsc.edu/FAQ/FAQreleases.html#release1"><img alt="HG19" src="https://img.shields.io/badge/Genome-HG19%20(GRCh37)-green.svg" /></a> <a class="reference external" href="https://genome.ucsc.edu/FAQ/FAQreleases.html#release1"><img alt="HG38" src="https://img.shields.io/badge/Genome-HG38%20(GRCh38)-green.svg" /></a></p>
 <ul class="simple">
 <li><strong>Authors</strong>: Michael Edmonson, Aman Patel</li>
 <li><strong>Publication</strong>: <a class="reference external" href="http://www.nejm.org/doi/full/10.1056/NEJMoa1508054#t=article">Zhang et al., NEJM 2015</a>, supplementary appendix pp. 7-10</li>
@@ -196,9 +195,9 @@
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>PeCan PIE (the <strong>Pe</strong>diatric <strong>Can</strong>cer Variant <strong>P</strong>athogenicity <strong>I</strong>nformation <strong>E</strong>xchange) is a cloud-based variant classification and interpretation service.  It annotates and ranks variants by putative pathogenicity, then displays them in an interactive web interface for formal review and classification following ACMG guidelines. The portal also contains a repository of expert-reviewed germline mutations that may predispose individuals to cancer.  It is free for non-commercial use.</p>
-<p>Pecan PIE utilizes St. Jude Medal Ceremony, the same pipeline that powers our clinical and research genomics projects.  Medal Ceremony provides a 3-level ranking of putative pathogenity - Gold, Silver or Bronze - for mutations within cancer-related genes. Medal assignment is based on matches to 22 mutation databases, mutation type, population frequency, tumor suppressor status and predicted functional impact. The evidence used for medal assignment is imported into an interactive variant review page where an analyst can enter additional curated information such as primary diagnosis, presence of subsequent neoplasm, family history and related literature. Classification tags can be manually assigned to curated data enabling automated calculation of pathogenicity rating based on ACMG/AMP 2015 guidelines.</p>
-<p>See <a class="reference download internal" href="../../../_downloads/pecanpie_ASHG_2017.pptx" download=""><code class="xref download docutils literal notranslate"><span class="pre">PowerPoint</span> <span class="pre">slides</span></code></a> presented at the ASHG 2017 annual meeting.</p>
-<p>Go to <a class="reference external" href="https://pecan.stjude.org/pie">https://pecan.stjude.org/pie</a> to get started!</p>
+<p>Pecan PIE utilizes St. Jude Medal Ceremony, the same pipeline that powers our clinical and research genomics projects.  Medal Ceremony provides a 3-level ranking of putative pathogenity - Gold, Silver or Bronze - for mutations within disease-related genes. Medal assignment is based on matches to 22 mutation databases, mutation type, population frequency, tumor suppressor status and predicted functional impact. The evidence used for medal assignment is imported into an interactive variant review page where an analyst can enter additional curated information such as primary diagnosis, presence of subsequent neoplasm, family history and related literature. Classification tags can be assigned to curated data enabling automated calculation of pathogenicity rating based on ACMG/AMP 2015 guidelines.</p>
+<p>See <a class="reference download internal" href="../../../_downloads/pecanpie_ASHG_2017.pptx" download=""><code class="xref download docutils literal notranslate"><span class="pre">PowerPoint</span> <span class="pre">slides</span></code></a> presented at the ASHG 2017 annual meeting (note that some of this information is out of date, various improvements have been made since then).</p>
+<p>Go to <a class="reference external" href="https://pecan.stjude.cloud/pie">https://pecan.stjude.cloud/pie</a> to get started!</p>
 </div>
 <div class="section" id="contents">
 <h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
@@ -217,13 +216,17 @@
 <li class="toctree-l2"><a class="reference internal" href="results.html#variant-page">Variant page</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions (FAQ)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#q-which-files-are-supported">Q: Which files are supported?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#q-are-there-limits-on-the-size-of-vcf-files">Q: Are there limits on the size of VCF files?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#q-is-there-an-example-demo-vcf-i-can-try-with-pie">Q: Is there an example/demo VCF I can try with PIE?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#q-what-genome-versions-are-supported">Q. What genome versions are supported?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#q-what-genes-are-on-the-curated-gene-list">Q. What genes are on the curated gene list?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#q-why-is-the-classification-column-blank-in-my-results">Q. Why is the classification column blank in my results?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#q-what-do-the-medals-mean">Q. What do the medals mean?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#q-why-are-some-of-my-variants-missing">Q. Why are some of my variants missing?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#q-why-does-the-exac-allele-frequency-shown-differ-from-the-exac-portal">Q. Why does the ExAC allele frequency shown differ from the ExAC portal?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#q-is-it-free">Q. Is it free?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#q-is-pecan-pie-free">Q. Is PeCan PIE free?</a></li>
 </ul>
 </li>
 </ul>
@@ -288,10 +291,7 @@
 
   
 
-  
-  
-    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
   <script type="text/javascript">
       jQuery(function () {

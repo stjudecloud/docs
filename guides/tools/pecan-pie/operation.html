@@ -24,8 +24,7 @@
 
   
 
-  
-    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -110,7 +109,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="results.html">Analysis of Results</a></li>
-<li class="toctree-l3"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html">Frequently Asked Questions (FAQ)</a></li>
 </ul>
 </li>
 </ul>
@@ -194,20 +193,27 @@
             
   <div class="section" id="pipeline-operation">
 <h1>Pipeline Operation<a class="headerlink" href="#pipeline-operation" title="Permalink to this headline">¶</a></h1>
-<div class="admonition caution">
-<p class="first admonition-title">Caution</p>
-<p class="last">This pipeline assumes GRCh37/HG19 coordinates.</p>
-</div>
 <div class="section" id="logging-in">
 <h2>Logging in<a class="headerlink" href="#logging-in" title="Permalink to this headline">¶</a></h2>
-<p>Start by logging into the portal with a dnanexus account, creating an account if you need one.  PIE uses dnanexus as a secure cloud backend; logging in is required for private storage of your data and so that we can send you e-mail notifications when your analysis jobs are complete.  PIE is free for non-commercial use; St. Jude pays the (small) cloud computing costs, your dnanexus account will not be billed.</p>
+<p>Start by logging into the portal with a DNAnexus account, creating an account if you need one.  PIE uses DNAnexus as a secure cloud backend; logging in is required for private storage of your data and so that we can send you e-mail notifications when your analysis jobs are complete.  PIE is free for non-commercial use; St. Jude pays the (small) cloud computing costs, your DNAnexus account will not be billed.</p>
 </div>
 <div class="section" id="uploading-data">
 <h2>Uploading Data<a class="headerlink" href="#uploading-data" title="Permalink to this headline">¶</a></h2>
-<p>PeCan PIE takes standard VCF files as input.  The files must comply
-with the VCF specification, see the <a class="reference internal" href="faq.html"><span class="doc">FAQ</span></a> for information about how
-to verify your files are compatible.</p>
-<p>Click on the upload button and select a VCF file from your computer, or drag-and-drop your VCF file to upload it.</p>
+<p>PeCan PIE takes standard VCF files as input, which may be either uncompressed or compressed with bgzip.</p>
+<ol class="arabic simple">
+<li>click the “Securely upload a VCF file” button.</li>
+<li>choose the genome your variants were mapped to, which may be either GRCh37-lite or GRCh38.</li>
+</ol>
+<p>See the <a class="reference internal" href="faq.html"><span class="doc">FAQ</span></a> for more details and troubleshooting information.</p>
+<div class="section" id="advanced-options">
+<h3>advanced options<a class="headerlink" href="#advanced-options" title="Permalink to this headline">¶</a></h3>
+<p>The “Advanced option” panel lets you customize the behavior of the pipeline:</p>
+<ul class="simple">
+<li>Curated germline genes only: if checked, this filters your variants to disease-related genes only; this option will be turned on automatically if your uploaded file is 1 megabyte or larger and you are not using a custom gene list.  See the <a class="reference internal" href="faq.html"><span class="doc">FAQ</span></a> for more information.  This option reduces the variant processing burden on PIE by removing variants that will not be assigned a medal in any case because they are not on the reviewable gene list.</li>
+<li>Specify custom gene list: here you can override the disease-related gene list used by PeCanPIE with your own list.</li>
+<li>Max Population frequency: PIE by default will not call medals for variants present in the ExAC (ex-TCGA) database at an allele frequency greater than 0.001.  This option lets you override the filtering threshold to whatever frequency you prefer.  To disable filtering altogether, specify a value of 1.</li>
+</ul>
+</div>
 </div>
 <div class="section" id="progress-page">
 <h2>Progress page<a class="headerlink" href="#progress-page" title="Permalink to this headline">¶</a></h2>
@@ -277,10 +283,7 @@ to your results.  Optional browser notifications are also available.</p>
 
   
 
-  
-  
-    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
   <script type="text/javascript">
       jQuery(function () {

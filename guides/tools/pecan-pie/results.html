@@ -24,12 +24,11 @@
 
   
 
-  
-    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Frequently Asked Questions" href="faq.html" />
+    <link rel="next" title="Frequently Asked Questions (FAQ)" href="faq.html" />
     <link rel="prev" title="Pipeline Operation" href="operation.html" /> 
 
   
@@ -110,7 +109,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#variant-page">Variant page</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html">Frequently Asked Questions (FAQ)</a></li>
 </ul>
 </li>
 </ul>
@@ -225,7 +224,7 @@ page for each variant.</p>
 </div>
 <div class="section" id="gold-silver-and-bronze-medals">
 <h2>Gold, Silver, and Bronze medals<a class="headerlink" href="#gold-silver-and-bronze-medals" title="Permalink to this headline">¶</a></h2>
-<p>Medals are only assigned for coding and splice-related variants in disease predisposition genes.  Germline medals are only assigned for novel variants or those present in the NHLBI ESP database with a MAF of less than 0.1%.</p>
+<p>Medals are only assigned for coding and splice-related variants in disease predisposition genes.  Germline medals are only assigned for novel variants or those present in the ExAC (ex-TCGA) database with a MAF no greater than 0.1% (0.001 expressed fractionally).</p>
 <p>Gold medals are assigned to truncations in tumor suppressor genes, hotspots derived from the COSMIC database, as well as perfect matches to variants in the IARC TP53, PCGP, ASU TERT, ARUP RET, and BIC databases.</p>
 <p>Silver medals are assigned to in-frame indels, truncations in non-tumor suppressor genes, variants predicted deleterious by damage-prediction algorithms, variants receiving a gold medal from the somatic classifier, and perfect matches to variants in the following databases: ClinVar (predicted pathogenic or likely pathogenic), RB1, LOVD, and UMD.</p>
 <p>Bronze medals are assigned to variants predicted tolerated by damage-prediction algorithms.  Variants having an imperfect match to a database (i.e. different variants at the same genomic position or codon) typically receive a lesser medal.</p>
@@ -237,6 +236,10 @@ page for each variant.</p>
 <div class="section" id="summary-info">
 <h3>Summary info<a class="headerlink" href="#summary-info" title="Permalink to this headline">¶</a></h3>
 <p>The top of the page shows a summary of the variant, including its genomic and HGVS annotations, predicted effect on the protein, and somatic and germline medals.  A description of the gene from Entrez follows, and a custom description or selection rationale may also be entered.</p>
+</div>
+<div class="section" id="medal-call-info">
+<h3>Medal call info<a class="headerlink" href="#medal-call-info" title="Permalink to this headline">¶</a></h3>
+<p>Clicking on one of the medal icons (gold, silver, bronze, unknown) also on the top of the page will show a summary of information related to the medal call.</p>
 </div>
 <div class="section" id="protein-paint">
 <h3>Protein Paint<a class="headerlink" href="#protein-paint" title="Permalink to this headline">¶</a></h3>
@@ -254,11 +257,7 @@ implementing ACMG guidelines (<a class="reference external" href="https://www.na
 </div>
 <div class="section" id="damage-prediction-algorithms">
 <h3>Damage prediction algorithms<a class="headerlink" href="#damage-prediction-algorithms" title="Permalink to this headline">¶</a></h3>
-<p>Precomputed damage-prediction algorithm calls for nonsynonymous coding
-SNVs are presented, taken from dbNSFP.  Available algorithms are
-PolyPhen2 (HVAR), SIFT, FATHMM, MutationAssessor, and LRT.  The calls
-are presented in a circular diagram with entries color-coded based on
-the predicted severity of the result.</p>
+<p>Precomputed damage-prediction algorithm calls for nonsynonymous coding SNVs are presented from the dbNSFP database.  Available algorithms are PolyPhen2 (HVAR), SIFT, CADD, REVEL, FATHMM, MutationAssessor, and LRT.  The calls are presented in a circular diagram with entries color-coded based on the predicted severity of the result.</p>
 </div>
 <div class="section" id="medal-ceremony-and-linkouts">
 <h3>Medal ceremony and linkouts<a class="headerlink" href="#medal-ceremony-and-linkouts" title="Permalink to this headline">¶</a></h3>
@@ -284,7 +283,7 @@ indicate this variant is a potential candidate for functional review.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="faq.html" class="btn btn-neutral float-right" title="Frequently Asked Questions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="faq.html" class="btn btn-neutral float-right" title="Frequently Asked Questions (FAQ)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="operation.html" class="btn btn-neutral" title="Pipeline Operation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -333,10 +332,7 @@ indicate this variant is a potential candidate for functional review.</p>
 
   
 
-  
-  
-    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
   <script type="text/javascript">
       jQuery(function () {
