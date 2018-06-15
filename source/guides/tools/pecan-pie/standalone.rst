@@ -24,7 +24,7 @@ Medal Ceremony  app-stjude_medal_ceremony  additional annotation and automated v
 Permissions
 ---------------
 
-In order to run the cloud pipelines independently your DNAnexus account needs to be granted permissions to access them.  These permissions should be granted automatically when you log into PeCanPIE the first time.  A single login is required even if you just want to use the standalone pipelines rather than the PeCanPIE portal.  `Contact us <https://stjude.cloud/contact>`_ if you encounter problems accessing the pipelines.
+In order to run the cloud pipelines independently, your DNAnexus account needs to be granted permissions to access them.  After your initial login to PeCanPIE, these permissions will be granted automatically.  A single login is required even if you just want to use the standalone pipelines rather than the PeCanPIE portal.  `Contact us <https://stjude.cloud/contact>`_ if you encounter problems accessing the pipelines.
 
 
 Access methods
@@ -55,7 +55,7 @@ Notes:
 
   *  "genome_string" must be either GRCh37-lite or GRCh38.  If GRCh38 is specified, variants will be lifted over to GRCh37 in output, i.e. the output will always be GRCh37 (Medal Ceremony is still currently 37 only).
   *  The input VCF specified by "input_file" may be either uncompressed, or compressed with bgzip **only** (htslib/tabix packages).
-  *  The "germline_reviewable_only" parameter is optional, but strongly recommended.  If specified, only variants in disease-gene related intervals will be annotated, which is appropriate for Medal Ceremony.  If this option is not specified all variants will be annotated, which depending on the size of your VCF might take a lot longer, and many of the resulting variants won't be usable by Medal Ceremony.  If you want to do this anyway and have a large number of variants, consider submitting your job to an instance with more CPU cores (e.g. mem1_ssd1_x16 or mem1_ssd1_x32) as the code will take advantage of additional the cores.  If you are using a custom gene list (below) that takes precedence and this parameter is not needed.
+  *  The "germline_reviewable_only" parameter is optional, but strongly recommended.  If specified, only variants in disease-gene related intervals will be annotated, which is appropriate for Medal Ceremony.  If this option is not specified all variants will be annotated, which depending on the size of your VCF might take a lot longer, and many of the resulting variants won't be usable by Medal Ceremony.  If you want to do this anyway and have a large number of variants, consider submitting your job to an instance with more CPU cores (e.g. mem1_ssd1_x16 or mem1_ssd1_x32) as the code will take advantage of the additional cores.  If you are using a custom gene list (below) that takes precedence and this parameter is not needed.
   *  The optional parameter "custom_genes_file" specifies a plain text file of HUGO gene symbols to analyze (whitespace separated, or one per line).  If specified, analysis will be restricted to these genes only.
   *  This pipeline produces two output files, "output_file" contains annotations for all variants, while "medal_prep_output_file" is the specially-filtered and formatted file required as input to Medal Ceremony below.  
 
