@@ -24,7 +24,7 @@ Medal Ceremony  app-stjude_medal_ceremony  additional annotation and automated v
 Permissions
 ---------------
 
-In order to run the cloud pipelines independently your DNAnexus account needs to be granted permissions to access them.  Eventually this will be done automatically when you access PeCanPIE, but at the moment permissions this must be done manually.  If you would like to run the cloud pipelines, please `contact us <https://stjude.cloud/contact>`_ so we can enable access for your account.
+In order to run the cloud pipelines independently your DNAnexus account needs to be granted permissions to access them.  These permissions should be granted automatically when you log into PeCanPIE the first time.  A single login is required even if you just want to use the standalone pipelines rather than the PeCanPIE portal.  `Contact us <https://stjude.cloud/contact>`_ if you encounter problems accessing the pipelines.
 
 
 Access methods
