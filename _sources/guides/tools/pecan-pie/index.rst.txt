@@ -30,6 +30,7 @@ Contents
    overview
    operation
    results
+   standalone
    faq
 
 .. include:: ../../../partials/genome-shields.rst
