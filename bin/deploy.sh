@@ -42,15 +42,17 @@ export GIT_AUTHOR_EMAIL=""
 export GIT_COMMITTER_NAME="Clay McLeod"
 export GIT_COMMITTER_EMAIL="clay.mcleod@stjude.org"
 
-echo "== Files =="
+echo ""
+echo "== Base Directory =="
 ls $BUILD_DIR/
+echo ""
 echo "== Static Files =="
-ls $BUILD_DIR/_static
+find $BUILD_DIR/_static
 
-if git diff --quiet; then
-    echo "No changes to deploy."
-    exit 0
-fi
+# if git diff --quiet; then
+#     echo "No changes to deploy."
+#     exit 0
+# fi
 
 git add -A .
 git commit -m "Automatic deploy to GitHub Pages: ${SHA}."
