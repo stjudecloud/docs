@@ -3,24 +3,22 @@
 Data Access Agreement
 ========================
 
-Please be sure to fill out this Data Access Agreement completely and correctly to 
-gain access to our datasets. This document is a legal document binding the user 
-and their institution to protecting our data and handling it appropriately. This 
-contract is non-negotiable, unless it conflicts with the user institution's 
-residential state law. 
+Broadly speaking, the data access agreement (DAA) is a legal document binding the requestor 
+and the requestor's institution to terms about how our data may be used. We do not negotiate
+the terms of this document unless terms are found to be in conflict with state law. 
+Filling out the Data Access Agreement carefully and completely is crucial to having your
+request filled promptly.
+
+Why Do I Need to Sign This Document?
+-------------------------------
+Although the DAA serves many purposes, the terms included in the data access agreement are ultimately 
+in place to protect our patients. We take patient security very seriously, and we require that 
+requestors are committed to protecting that privacy to the fullest extent.
 
 Where Can I Find This Document? 
 -------------------------------
 You can find this document on the last step of :ref:`request-data`, or you can 
-download a copy here.
-
-:download:`St. Jude Cloud Data Access Agreement <../../resources/OfficialDataAccessAgreement_Apr2018.pdf>`
-
-
-Why Do I Need to Sign This Document?
--------------------------------
-This document legally binds the person requesting the data to protecting patient information
-and protecting the data that St. Jude is providing. 
+download a copy `here <https://platform.stjude.cloud/access_form>`_.
 
 Filling Out A Data Access Agreement
 ------------
