@@ -1,0 +1,45 @@
+site_name: 'St. Jude Cloud Documentation'
+theme:
+  name: 'material'
+  logo: 'images/stjude-logo-child-white.png'
+  custom_dir: 'theme'
+  font:
+      text: 'Ubuntu'
+      code: 'Ubuntu Mono'
+
+extra_css:
+  - css/extra.css
+
+pages:
+  - 'Introduction': 'index.md'
+  - 'Data Guides':
+      - 'Making a Data Request': 'guides/data/data-request.md'
+      - 'Data Access Agreement': 'guides/data/data-access-agreement.md'
+      - 'Data Transfer Application': 'guides/data/data-transfer-app.md'
+      - 'Command Line Interaction': 'guides/data/command-line.md'
+      - 'Embargo Dates': 'guides/data/embargo-dates.md'
+
+# Repository
+# repo_name: 'stjude/sjcloud-docs'
+# repo_url: 'https://github.com/stjude/sjcloud-docs'
+
+# Copyright
+copyright: "Copyright &copy; 2017 - 2018 St. Jude Children's Research Hospital"
+
+# Extra
+extra:
+  social:
+    - type: 'facebook'
+      link: 'https://www.facebook.com/stjuderesearch/'
+    - type: 'twitter'
+      link: 'https://twitter.com/stjuderesearch?lang=en'
+    - type: 'linkedin'
+      link: 'https://www.linkedin.com/company/st-jude-childrens-research-hospital'
+    - type: 'github'
+      link: 'https://github.com/stjude'
+
+# Extensions
+markdown_extensions:
+    - admonition
+    - codehilite
+    - pymdownx.inlinehilite
