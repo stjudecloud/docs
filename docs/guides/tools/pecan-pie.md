@@ -6,6 +6,10 @@
 | **Publication** | [Zhang et al., NEJM 2015](http://www.nejm.org/doi/full/10.1056/NEJMoa1508054#t=article), supplementary appendix pp. 7-10 |
 | **Technical Support** | [Contact Us](https://stjude.cloud/contact) |
 
+
+!!! todo
+    Add GIFs all throughout this page.
+
 Pecan PIE (the **Pe**diatric **Can**cer Variant **P**athogenicity
 **I**nformation **E**xchange) is a cloud-based variant classification
 and interpretation service. It annotates and ranks variants by putative
