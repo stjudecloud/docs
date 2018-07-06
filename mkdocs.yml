@@ -13,11 +13,20 @@ extra_css:
 pages:
   - 'Introduction': 'index.md'
   - 'Data Guides':
+      - 'Data Overview': 'guides/data/data-overview.md'
       - 'Making a Data Request': 'guides/data/data-request.md'
       - 'Data Access Agreement': 'guides/data/data-access-agreement.md'
       - 'Data Transfer Application': 'guides/data/data-transfer-app.md'
       - 'Command Line Interaction': 'guides/data/command-line.md'
-      - 'Embargo Dates': 'guides/data/embargo-dates.md'
+  - 'Tool Guides':
+      - 'Pecan PIE': 'guides/tools/pecan-pie.md'
+      - 'ChIP-Seq Peak Calling': 'guides/tools/chipseq.md'
+      - 'HLA Typing and Neoepitope Prediction': 'guides/tools/neoepitope.md'
+      - 'Rapid RNA-Seq Fusion Detection': 'guides/tools/rapid-rnaseq.md'
+      - 'WARDEN Differential Expression Analysis': 'guides/tools/warden.md'
+  - 'Visualization Guides':
+      - 'BigWig Viewer': 'guides/visualizations/bigwig-viewer.md'
+      - 'Fusion Viewer': 'guides/visualizations/fusion-viewer.md'
 
 # Repository
 # repo_name: 'stjude/sjcloud-docs'
