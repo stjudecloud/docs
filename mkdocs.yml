@@ -11,7 +11,7 @@ extra_css:
   - css/extra.css
 
 pages:
-  - 'Getting Started': 'getting-started.md'
+  - 'Getting Started': 'index.md'
   - 'Data Guides':
       - 'Understanding Our Data': 'guides/data/data-overview.md'
       - 'Making a Data Request': 'guides/data/data-request.md'

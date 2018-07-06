@@ -1,9 +1,1 @@
-{
-  "editor.formatOnSave": true,
-  "rewrap.reformat": true,
-  "rewrap.wrappingColumn": 80,
-  "editor.rulers": [
-    80,
-    100
-  ]
-}
+{}

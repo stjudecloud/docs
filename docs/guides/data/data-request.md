@@ -26,16 +26,15 @@ other legally binding terms). After you've been approved once, you can continue
 checking out files from that DAU until your access expires (generally after 
 1 year) and you need to renew.
 
-### A short example
-
-For example, if you make a request asking for all our St. Jude's Acute 
-Lymphoblastic Leukemia sequencing data, you might be asking for data from 
-multiple different projects here at St. Jude. For the sake of the example,
-let's say the data you want is spread across three different DAUs. Once
-you place a request, your application will be routed to the corresponding
-three data access committees for approval. Since each DAC is made up of
-different individuals using different criteria for evaluation, you may or
-may not be approved for access to all of the files.
+!!! example
+    For instance, if you make a request asking for all our St. Jude's Acute 
+    Lymphoblastic Leukemia sequencing data, you might be asking for data from 
+    multiple different projects here at St. Jude. For the sake of the example,
+    let's say the data you want is spread across three different DAUs. Once
+    you place a request, your application will be routed to the corresponding
+    three data access committees for approval. Since each DAC is made up of
+    different individuals using different criteria for evaluation, you may or
+    may not be approved for access to all of the files.
 
 ## Navigating to the data browser
 
@@ -51,7 +50,7 @@ can do so under Manage Data.
 
 Next, select the cohort you are interested in requesting. You can
 browse our data by different cohorts: disease, publication, dataset, or
-you can use PeCan, our Pediatric Cancer portal to find samples
+you can use Pecan, our Pediatric Cancer portal to find samples
 associated with specific genes, or mutations. 
 
 !!! todo
