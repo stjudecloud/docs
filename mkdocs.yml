@@ -11,11 +11,11 @@ extra_css:
   - css/extra.css
 
 pages:
-  - 'Introduction': 'index.md'
+  - 'Getting Started': 'getting-started.md'
   - 'Data Guides':
-      - 'Data Overview': 'guides/data/data-overview.md'
+      - 'Understanding Our Data': 'guides/data/data-overview.md'
       - 'Making a Data Request': 'guides/data/data-request.md'
-      - 'Data Access Agreement': 'guides/data/data-access-agreement.md'
+      - 'Working with our Data': 'guides/data/run-your-tools.md'
       - 'Data Transfer Application': 'guides/data/data-transfer-app.md'
       - 'Command Line Interaction': 'guides/data/command-line.md'
   - 'Tool Guides':
@@ -27,6 +27,7 @@ pages:
   - 'Visualization Guides':
       - 'BigWig Viewer': 'guides/visualizations/bigwig-viewer.md'
       - 'Fusion Viewer': 'guides/visualizations/fusion-viewer.md'
+  - 'Frequently Asked Questions': 'faq.md'
 
 # Repository
 # repo_name: 'stjude/sjcloud-docs'

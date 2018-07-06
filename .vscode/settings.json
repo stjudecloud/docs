@@ -1,7 +1,9 @@
 {
-  "restructuredtext.confPath": "/home/cmcleod/Desktop/sjcloud-docs",
-  "[restructuredtext]": {
-    "editor.tabSize": 3,
-    "editor.insertSpaces": true
-  }
+  "editor.formatOnSave": true,
+  "rewrap.reformat": true,
+  "rewrap.wrappingColumn": 80,
+  "editor.rulers": [
+    80,
+    100
+  ]
 }

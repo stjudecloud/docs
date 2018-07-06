@@ -1,5 +1,6 @@
 {
 	"recommendations": [
-		"lextudio.restructuredtext"
+		"yzhang.markdown-all-in-one",
+		"stkb.rewrap",
 	]
 }

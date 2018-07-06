@@ -1,7 +1,7 @@
-| | |
-|-------------|---------------------------------------|
-| **Authors** | Scott Newman, Clay McLeod, Yongjin Li |
-| **Publication** | N/A (not published) |
+|                       |                                            |
+| --------------------- | ------------------------------------------ |
+| **Authors**           | Scott Newman, Clay McLeod, Yongjin Li      |
+| **Publication**       | N/A (not published)                        |
 | **Technical Support** | [Contact Us](https://stjude.cloud/contact) |
 
 ## Introduction
