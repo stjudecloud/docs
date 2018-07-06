@@ -1,5 +1,5 @@
 The St. Jude Cloud data transfer application is still under development.
-Please refer to the [command line interaction guide]command-line.md) for the official 
+Please refer to the [command line interaction guide](command-line.md) for the official 
 documentation on how to upload data to or download download data from St. Jude Cloud
 Platform.
 
