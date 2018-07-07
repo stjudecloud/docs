@@ -44,8 +44,8 @@ the quality of experiment.
 
 To get started, you need to navigate to the [ChIP-Seq tool page](https://platform.stjude.cloud/tools/chip-seq). You'll need to click
 the "Start" button in the left hand pane. This creates a cloud workspace
-in DNAnexus with the same name. After this, you will be able to upload 
-your input files to that workspace.
+in DNAnexus with the same name as the tool. After this, you will be able 
+to upload your input files to that workspace.
 
 ![](../../images/guides/tools/chipseq/click-start.gif)
 
