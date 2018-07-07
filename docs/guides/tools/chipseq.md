@@ -4,10 +4,14 @@
 | **Publication** | N/A (not published) |
 | **Technical Support** | [Contact Us](https://stjude.cloud/contact) |
 
+!!! todo
+    Add GIFs all throughout this page.
+
 ## Introduction
-The ChIP-Seq Peak Caller pipeline is designed for ChIP-Seq peak calling
-data analysis. The pipeline accepts one FastQ file from an IP experiment
-and one FastQ file from a control experiment. First, the reads of the
+
+This pipeline is designed to call either broad of narrow peaks on Illumina-genearted
+ChIP-Seq data. The pipeline accepts one FastQ file from an Immunoprecipitation (IP)
+experiment and one FastQ file from a control experiment. First, the reads of the
 FastQ file(s) are aligned to the specified reference genome. The aligned
 reads are then post-processed based on best-practice QC techniques
 (removing multiple mapped reads, removing duplicated reads, etc). Last,
@@ -32,20 +36,28 @@ the quality of experiment.
 
 ### Outputs
 
-!!! todo 
+!!! todo
     Write ChIP-Seq outputs section.
 
-## Uploading Data
+## Getting started
 
-The ChIP-Seq Peak Caller takes Gzipped FastQ files generated from IP
-data as input. You can upload the files you would like to run using the
-<span role="ref">desktop-application</span> or by uploading data
-manually using the <span role="ref">commandline</span>.
+To get started, you need to navigate to the [ChIP-Seq tool page](https://platform.stjude.cloud/tools/chip-seq). Here, you will need to click
+the "Start" button in the left hand pane to create your tools cloud workspace.
 
-!!! note
-    You should click "Start" before attempting to upload data to the tool
-    (the tool's workspace is only created once you do this). After you are
-    redirected, you can safely close the tab that was just opened.
+![](../../images/guides/tools/chipseq/click-start.gif)
+
+## Uploading data
+
+Before uploading
+On the [ChIP-Seq tool page](), you
+should click the "Start" button before attempting to upload data to the tool
+(the tool's workspace is only created once you do this). After you are
+redirected, you can safely close the tab that was just opened.
+
+The ChIP-Seq Peak Caller takes Gzipped FastQ files generated from an
+IP experiment as input. You can upload your input FastQ files by
+using the [data transfer application](../../guides/data/data-transfer-app.md)
+or by uploading them through [the command line](../../guides/data/command-line.md).
 
 Parameter Configuration
 -----------------------
