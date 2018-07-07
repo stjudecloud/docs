@@ -6,25 +6,31 @@
 
 ## Introduction
 
-This pipeline is designed to call either broad of narrow peaks on Illumina-genearted
-ChIP-Seq data. The pipeline accepts one FastQ file from an Immunoprecipitation (IP)
-experiment and one FastQ file from a control experiment. First, the reads of the
-FastQ file(s) are aligned to the specified reference genome. The aligned
-reads are then post-processed based on best-practice QC techniques
-(removing multiple mapped reads, removing duplicated reads, etc). Last,
-peaks are called by SICER (broad peak analysis) or MACS2 (narrow peak
-analysis). Qualified peaks will be output BED (.bed) and big BED (.bb)
-files. The coverage information is also included also a bigWig (.bw)
-file with an accompanying visualization by ProteinPaint. A cross
-correlation plot and general metrics file are generated to help check
-the quality of experiment.
+The ChIP-Seq Peak Calling workflow follows ENCODE best practices to call 
+broad or narrow peaks on Illumina-genearted ChIP-Seq data. 
+Here, a Gzipped FastQ file from an Immunoprecipitation (IP) experiment 
+is considered the "case sample file" and a Gzipped FastQ file from a control 
+experiment is considered the "control sample file". The pipeline can on
+matched case/control samples (recommended for better results) or just a 
+case sample.
+
+
 
 ## Overview
 
 ### Process
 
-!!! todo
-    Write ChIP-Seq process section.
+1. The reads of the FastQ file(s) are aligned to the specified reference genome. 
+2. The aligned reads are then post-processed based on best-practice QC techniques
+(removing multiple mapped reads, removing duplicated reads, etc). 
+3. Peaks are called by SICER (broad peak analysis) or MACS2 (narrow peak
+analysis). 
+    * Qualified peaks will be output BED (.bed) and big BED (.bb)
+files. 
+    * The coverage information will be output as a bigWig (.bw)
+file with an accompanying visualization by ProteinPaint. 
+    * A cross correlation plot and general metrics file are generated to help check
+the quality of experiment.
 
 ### Inputs
 
@@ -38,8 +44,10 @@ the quality of experiment.
 
 ## Getting started
 
-To get started, you need to navigate to the [ChIP-Seq tool page](https://platform.stjude.cloud/tools/chip-seq). Here, you will need to click
-the "Start" button in the left hand pane to create your tools cloud workspace.
+To get started, you need to navigate to the [ChIP-Seq tool page](https://platform.stjude.cloud/tools/chip-seq). You'll need to click
+the "Start" button in the left hand pane. This creates a cloud workspace
+in DNAnexus with the same name. After this, you will be able to upload 
+your input files to that workspace.
 
 ![](../../images/guides/tools/chipseq/click-start.gif)
 
@@ -63,6 +71,8 @@ The ChIP-Seq Peak Caller takes Gzipped FastQ files generated from an
 IP experiment as input. You can upload your input FastQ files by
 using the [data transfer application](../data/data-transfer-app.md)
 or by uploading them through [the command line](../data/command-line.md).
+Both of the guides linked here will contain more details on how to upload
+data using that method, so we defer to those guides here.
 
 !!! tip
     If you plan to upload data through the St. Jude Cloud Data Transfer application
@@ -75,12 +85,14 @@ or by uploading them through [the command line](../data/command-line.md).
 
 ## Running the tool
 
-Click "Launch Tool" on the [tool's landing page](https://platform.stjude.cloud/tools/chip-seq). 
-A dropdown will present the different presets for running the tool.
+Once you've uploaded data to your cloud workspace, 
+click "Launch Tool" on the [tool's landing page](https://platform.stjude.cloud/tools/chip-seq). 
+A dropdown will present the different presets for running the ChIP-Seq workflow.
 You'll need to decide **(1)** whether you'd like to run broad/narrow peak
 calling and **(2)** whether you have a case sample and a control sample (preferred)
-or just a case sample. After you've selected your base pipeline, there are various other 
-parameters that you can set as outlined below.
+or just a case sample. This will determine which preset you should
+click in this dropdown. There are various other parameters that you can 
+set, but they are covered in further sections of this guide.
 
 ![](../../images/guides/tools/chipseq/launch-tool.gif)
 
@@ -89,7 +101,7 @@ parameters that you can set as outlined below.
 Choosing between broad and narrow peak calling depends on the experiment
 design. The following are good rules of thumb for choosing between the
 two configurations. If you are not sure which configuration to use,
-please consult with an expert or [contact us](https://stjude.cloud/contact).
+please consult with an expert at your institution or [contact us](https://stjude.cloud/contact).
 
 **Narrow Peak Calling**
 
@@ -124,8 +136,6 @@ consult experts.
     If your fragment size is less than 50 base pairs, please refer to the
     [frequently asked questions](#frequently-asked-questions).
 
-## Running the tool
-
 ### Selecting parameters
 
 There are a number of other parameters that can be customized. To 
@@ -140,14 +150,14 @@ have question, please [contact us](https://stjude.cloud/contact).
 
 | Parameter Name | Description | Example |
 |--|--|--|
-| Output prefix | A name used a prefix for all outputs in the run | SAMPLE1 |
-| Reference genome | Supported reference genome (HG19, HG38, mm9, mm10, dm3) | HG38 |
+| Output prefix (*required*) | A name used a prefix for all outputs in the run | SAMPLE1 |
+| Reference genome (*required*) | Supported reference genome from one of HG19, HG38, mm9, mm10, dm3 | HG38 |
 | Output bigWig | Whether or not to include a bigwig file in the output | True |
 | Remove blacklist peaks | Whether or not to remove known problem areas | True |
 | Fragment length | Hardcoded fragment length of your reads. 'NA' for auto-detect. | NA |
 
 !!! caution
-    Please be aware of the following restrictions when setting parameters:
+    Please be aware of the following stumbling points when setting parameters:
 
     * Do not use spaces anywhere in your input file names, your output
       prefix, or any of the other parameters. This is generally bad
@@ -159,7 +169,7 @@ have question, please [contact us](https://stjude.cloud/contact).
       only need to specify an output prefix as described aboce. All of
       the results will be put under `/Results/[OUTPUT_PREFIX]`.
 
-### Selecting inputs
+### Hooking up inputs
 
 Next, you'll need to hook up the FastQ files you uploaded in 
 [the upload data section](#uploading-data). You can do this by 
@@ -183,56 +193,62 @@ of the workflow dialog.
     * all of the inputs are correctly hooked up (see [selecting inputs](#selecting-inputs)), and 
     * all of the required parameters are set (see [setting parameters](#setting-parameters)).
 
+    If you're still have trouble, please [contact us](https://stjude.cloud/contact) and include
+    a screenshot of the workflow screen above.
+
 ## Monitoring run progress
 
-Navigate to the [tool's landing page](https://platform.stjude.cloud/tools/chip-seq). 
-To monitor the status of your jobs, click "View Results" then select
-the "View Running Jobs" option. You will be redirected to the job
-monitoring page. Here, you can click the "+" to see the status of each
-step of the ChIP-Seq workflow. 
+Once you have started one or more ChIP-Seq runs, you can safely close your
+browser and come back later to check the status of the jobs. To do this,
+navigate to the [tool's landing page](https://platform.stjude.cloud/tools/chip-seq). 
+Next, click "View Results" then select the "View Running Jobs" option. 
+You will be redirected to the job monitoring page. Each job you kicked off
+gets one row in this table. You can click the "+" on any of the runs to check 
+the status of individual steps of the ChIP-Seq pipeline.
 
 ![](../../images/guides/tools/chipseq/monitoring-jobs.gif) 
 
-Other information, such as time, cost 
-of individual steps in the pipeline, and even the job logs themselves 
-are available by clicking around the sub-items.
+Other information, such as time, cost of individual steps in the pipeline, 
+and even viewing the job logs can accessed by clicking around the sub-items.
 
 ![](../../images/guides/tools/chipseq/job-detailed-view.gif) 
 
-!!! note
+!!! tip 
     Power users can view the [DNAnexus Job Monitoring Tutorial](https://wiki.dnanexus.com/UI/Jobs) and the [DNAnexus Command Line Tutorial for Job Monitoring](https://wiki.dnanexus.com/Command-Line-Client/Monitoring-Executions) for advanced capabilities for monitoring jobs.
-
-## Navigating results
-
-### Viewing result files
-
-Navigate to the [tool's landing page](https://platform.stjude.cloud/tools/chip-seq). 
-In the left hand pane, click "View Results" then "View Results Files". You will
-be taken to the DNAnexus to your cloud workspace. You can then navigate the results 
-files as shown in the image below.
-
-![](../../images/guides/tools/chipseq/view-results-files.gif)
-
-### Visualization results
-
-!!! todo
-    Add section about custom visualization results for ChIP-Seq pipeline.
 
 ## Analysis of results
 
-For the ChIP-Seq pipeline, all results are distributed in the `Results`
-folder. Underneath this folder, you will see all of the runs you've
-completed, sorted by the output prefix you specified in <span
-role="ref">chipseq-parameter-config</span>.
+Each tool in St. Jude Cloud produces a visualization result that makes understanding
+results more accessible than working with excel spreadsheet or tab delimited
+files. This is the primary way we recommend you work with your results. We also
+include the raw files for you to dig into if the visualization is not sufficient to
+answer your research question.
 
-The exact content of the output folder changes as the version of the
-pipeline updates. Please refer to the `README.txt` found in the output
-folder for your run for the most up to date information on raw outputs.
+### Interactive visualizations
 
-### Custom ProteinPaint visualizations
+Today, the ChIP-Seq pipeline does not produce an interactive visualization. We are
+working on adding this! In the meantime, you can view the cross-correlation plot(s)
+as outlined in the sections below.
 
-!!! todo
-    Add section about custom visualization results for ChIP-Seq pipeline.
+### Finding the raw results files
+
+Navigate to the [tool's landing page](https://platform.stjude.cloud/tools/chip-seq). 
+In the left hand pane, click "View Results" then "View Results Files". You will
+be taken to the filesystem view your cloud workspace. This is similar to your the
+filesystem on your computer, and you can do many common operations such as deleting,
+renaming, and moving files. To access ChIP-Seq results, you should click on the 
+`Results` folder, then select the output folder name you gave in the [selecting parameters](#selecting-parameters) part of the guide.
+
+![](../../images/guides/tools/chipseq/view-results-files.gif)
+
+### Interpreting results
+
+For the ChIP-Seq pipeline, every pipeline run outputs a `README.doc` file
+which contains the latest information on which results are included.
+You can refer to that file for the most up to date information on raw outputs.
+
+![](../../images/guides/tools/chipseq/click-readme.gif)
+
 
 ## Frequently asked questions
 
