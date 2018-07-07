@@ -167,285 +167,146 @@ data using that method, so we defer to those guides here.
 
 ## Running the tool
 
-Once you've uploaded data to your cloud workspace, 
-click "Launch Tool" on the [tool's landing page](https://platform.stjude.cloud/tools/rapid_rna-seq). 
-A dropdown will present the different presets for running the workflow.
-Here, you can select whether you wish to start with FastQ files or a BAM file.
+Once you've uploaded data to your cloud workspace, click "Launch Tool" on the [tool's landing page](https://platform.stjude.cloud/tools/rapid_rna-seq). A dropdown will present the different presets for running the workflow. Here, you can select whether you wish to start with FastQ files or a BAM file.
 
 ![](../../images/guides/tools/rapid-rnaseq/launch-tool.gif)
 
+### Hooking up inputs
+
+Next, you'll need to hook up the FastQ files you uploaded in 
+[the upload data section](#uploading-data). In this example,
+we are using the FastQ version of the pipeline, so you can 
+hook up the inputs by clicking on the `Fastq/R1` and `Fastq/R2`
+slots and selecting the respective files. If you are using 
+the BAM-based workflow, the process is similar.
+
+![](../../images/guides/tools/rapid-rnaseq/hookup-inputs.gif)
+
+### Starting the workflow
+
+Once your input files are hooked up, you should be able to start the workflow
+by clicking the "Run as Analysis..." button in the top right hand corner
+of the workflow dialog.
+
+![](../../images/guides/tools/rapid-rnaseq/run-analysis.gif)
+
+!!! tip
+    If you cannot click this button, please ensure that all of the inputs are correctly hooked up (see [hooking up inputs](#hooking-up-inputs)).
+
+    If you're still have trouble, please [contact us](https://stjude.cloud/contact) and include
+    a screenshot of the workflow screen above.
+
+## Monitoring run progress
+
+Once you have started one or more Rapid RNA-Seq runs, you can safely close your
+browser and come back later to check the status of the jobs. To do this,
+navigate to the [tool's landing page](https://platform.stjude.cloud/tools/rapid_rna-seq). 
+Next, click "View Results" then select the "View Running Jobs" option. 
+You will be redirected to the job monitoring page. Each job you kicked off
+gets one row in this table.
+
+![](../../images/guides/tools/rapid-rnaseq/monitoring-jobs.gif) 
+
+You can click the "+" on any of the runs to check 
+the status of individual steps of the ChIP-Seq pipeline.
+Other information, such as time, cost of individual steps in the pipeline, 
+and even viewing the job logs can accessed by clicking around the sub-items.
+
+![](../../images/guides/tools/rapid-rnaseq/job-detailed-view.gif) 
+
+!!! tip 
+    Power users can view the [DNAnexus Job Monitoring Tutorial](https://wiki.dnanexus.com/UI/Jobs) and the [DNAnexus Command Line Tutorial for Job Monitoring](https://wiki.dnanexus.com/Command-Line-Client/Monitoring-Executions) for advanced capabilities for monitoring jobs.
+
+## Analysis of results
+
+Each tool in St. Jude Cloud produces a visualization that makes understanding
+results more accessible than working with excel spreadsheet or tab delimited
+files. This is the primary way we recommend you work with your results. We also
+include the raw output files for you to dig into if the visualization is not 
+sufficient to answer your research question.
+
+### Interactive visualizations
+
 !!! todo
-    Continue converting guide.
+    Write the interactive visualization section for Rapid RNASeq.
 
-1.  Click the `Fastq/R1` input file slot in orange.
+### Finding the raw results files
 
-    ![image](../../images/guides/tools/rapid-rnaseq//rrs-startup.png)
+Navigate to the [tool's landing page](https://platform.stjude.cloud/tools/rapid_rna-seq). 
+In the left hand pane, click "View Results" then "View Results Files". You will
+be taken to the filesystem view your cloud workspace. This is similar to your the
+filesystem on your computer, and you can do many common operations such as deleting,
+renaming, and moving files.
 
-2.  Select the "read 1" Gzipped FastQ file from your workspace.
+!!! todo
+    Make this image.
 
-    ![image](../../images/guides/tools/rapid-rnaseq//rrs-r1-file.png)
+![]()
 
-3.  Click the `Fastq/R2` input file slot in orange.
+### Interpreting results
 
-    ![image](../../images/guides/tools/rapid-rnaseq//rrs-intermediate-input.png)
+The complete output file specification is listed in the [overview section](#overview)
+of this guide. Here, we will discuss each of the different output files in more detail.
 
-4.  Select the "read 2" Gzipped FastQ file from your workspace.
+* **Predicted gene fusions**: The putative gene fusions will be
+  contained in the file `[SAMPLE].final_fusions.txt`. This file is a
+  tab-delimited file containing many fields for each of the predicted
+  SV. The most important columns are the following.
 
-    ![image](../../images/guides/tools/rapid-rnaseq//rrs-r2-file.png)
+| Field Name | Description |
+|--|--|
+| `sample` | Sample name |
+| `gene*` | Gene name |
+| `chr*` | Chromosome name |
+| `pos*` | Genomic Location |
+| `ort*` | Strand |
+| `reads*` | Supporting reads |
+| `medal` | Estimated pathogenicity assessment using St. Jude Medal Ceremony |
 
-### Parameter Configuration
-
-There are no parameters to configure for the Rapid RNA-Seq pipeline.
-
-### Running the Pipeline
-
-You should now see a screen similar to the one below. Note that the
-green "Run as Analysis" button in the top-right is no longer disabled.
-You can click the button to start the analysis.
-
-![image](../../images/guides/tools/rapid-rnaseq//run-as-analysis.png)
-
-You should now see a screen similar to the one below.
-
-![image](../../images/guides/tools/rapid-rnaseq//monitor.png)
-
-You can continue on to the next section to learn about monitoring your
-jobs.
-
-## Monitoring Run Progress
-
-!!! note
-    Monitoring the progress of your runs is the same for all pipelines. This
-    guide will feature the <span role="ref">rapid-rnaseq</span> pipeline,
-    but you can follow along for any tool.
-
-Monitoring the status of your pipelines in the St. Jude Cloud is simple.
-First, navigate to your tool's description page (for instance, Rapid
-RNA-Seq's description page is
-[here](https://platform.stjude.cloud/tools/rapid_rna-seq)). You should
-see a screen similar to the one in the screenshot below. In the left
-hand pane, select "View Running Jobs".
-
-![Click "View Running Jobs"](../../images/guides/tools/common/running-jobs.png)
-
-Here, you will see a list of all of your previous runs for a tool, as
-well as the job status (successful, failed, terminated by user) and
-cost. You can click on the "+" icon to the left of each tool run to see
-all of the different tools that were run.
-
-![Click the "+" beside a run to view more information.](../../images/guides/tools/common/jobs-basic.png)
-
-Other information, such as time, cost of individual job, and even job
-logs are available by clicking on the sub-items.
-
-![Click on individual items in the list to explore detailed information
-on each analysis that was run.](../../images/guides/tools/common/jobs-advanced.png)
-
-!!! note
-    Advanced users can view the [DNAnexus Job Monitoring
-    Tutorial](https://wiki.dnanexus.com/UI/Jobs) and the [DNAnexus Command
-    Line Tutorial for Job
-    Monitoring](https://wiki.dnanexus.com/Command-Line-Client/Monitoring-and-Listing-Jobs)
-    for more information.
-
-## Navigating Results
-
-!!! note
-    Navigating to the raw results of your runs is the same for all
-    pipelines. This guide will feature the <span
-    role="ref">rapid-rnaseq</span> pipeline, but you can follow along for
-    any tool.
-
-### Raw result files
-
-Navigate to your tool's description page (for instance, Rapid RNA-Seq's
-description page is
-[here](https://platform.stjude.cloud/tools/rapid_rna-seq)). You should
-see a screen similar to the one in the screenshot below. In the left
-hand pane, select "View Results Files".
-
-![Click "View Results Files"](../../images/guides/tools/common/raw-results.png)
-
-You should now be in the tool's workspace with access to files that you
-uploaded and results files that are generated. How/where the result
-files are generated are specific to each pipeline. Please refer to your
-individual pipeline's documentation on where the output files are kept.
-
-![image](../../images/guides/tools/common/raw-results-success.png)
-
-### Custom visualization results
-
-Navigate to your tool's description page (for instance, Rapid RNA-Seq's
-description page is
-[here](https://platform.stjude.cloud/tools/rapid_rna-seq)). You should
-see a screen similar to the one in the screenshot below. In the left
-hand pane, select "Visualize Results".
-
-![Click "Visualize Results"](../../images/guides/tools/common/visualize-results.png)
-
-You should now be in the tool's workspace with access to files that you
-uploaded and results files that are generated. How/where the result
-files are generated are specific to each pipeline. Please refer to your
-individual pipeline's documentation on where the output files are kept.
-
-![image](../../images/guides/tools/common/visualize-results-success.png)
-
-## Analysis of Results
-
-The complete output file specification is listed on the Rapid RNA-Seq
-<span role="ref">rapid-rnaseq-overview</span> page. Here, we will
-discuss the different output files and how you can use them.
-
-### Raw Result Files
-
--   **Predicted gene fusions**: The predicted gene fusions will be
-    output with the filename `SAMPLE.final_fusions.txt`. This file is a
-    tab-delimited file containing many fields for each of the predicted
-    SV. The most important columns are the following.
-
-    <table style="width:89%;">
-    <colgroup>
-    <col style="width: 31%" />
-    <col style="width: 56%" />
-    </colgroup>
-    <thead>
-    <tr class="header">
-    <th>Field Name</th>
-    <th>Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td><code class="sourceCode">sample</code></td>
-    <td>Sample name</td>
-    </tr>
-    <tr class="even">
-    <td><code class="sourceCode">gene*</code></td>
-    <td>Gene name</td>
-    </tr>
-    <tr class="odd">
-    <td><code class="sourceCode">chr*</code></td>
-    <td>Chromosome name</td>
-    </tr>
-    <tr class="even">
-    <td><code class="sourceCode">pos*</code></td>
-    <td>Genomic Locaton</td>
-    </tr>
-    <tr class="odd">
-    <td><code class="sourceCode">ort*</code></td>
-    <td>Strand</td>
-    </tr>
-    <tr class="even">
-    <td>:code:reads*</td>
-    <td>Supporting reads</td>
-    </tr>
-    <tr class="odd">
-    <td><code class="sourceCode">medal</code></td>
-    <td>Estimated pathogenicity assessment</td>
-    </tr>
-    </tbody>
-    </table>
-
--   **Coverage file**: A standard
+* **Coverage file**: A standard
     [bigWig](https://genome.ucsc.edu/goldenpath/help/bigWig.html) file
-    used to describe genomic coverage data.
--   **Splice junction read counts**: A custom file format describing the
+    used to describe genomic read coverage.
+* **Splice junction read counts**: A custom file format describing the
     junction read counts. The following fields are included in the
     tab-delimited output file.
 
-    <table>
-    <colgroup>
-    <col style="width: 4%" />
-    <col style="width: 95%" />
-    </colgroup>
-    <thead>
-    <tr class="header">
-    <th>Name</th>
-    <th>Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>junction</td>
-    <td>Splice junction in the TCGA format &quot;chrX:start:+,chrX:end,+&quot;. &quot;start&quot; and &quot;end&quot; are the 1-based position of the last mapped nucleotide before the skip and the first mapped nucleotide after the skip (i.e. the last base of the previous exon and the first base of the next exon). Note that in .bed output these coordinates will be different, see the .bed output section below. The &quot;+&quot; is currently hardcoded, though this may change in the future.</td>
-    </tr>
-    <tr class="even">
-    <td>count</td>
-    <td>Raw count of reads supporting the junction. During correction counts for ambiguous junctions can be combined, though obviously these additional reads will not be visible in the raw BAM file.</td>
-    </tr>
-    <tr class="odd">
-    <td>type</td>
-    <td>either &quot;known&quot; (matching a reference junction) or &quot;novel&quot; (not observed in the reference junction collection).</td>
-    </tr>
-    <tr class="even">
-    <td>genes</td>
-    <td>gene symbols from the junction calling process. These still need work in the raw junction calling process, it's recommended to use the &quot;annotated&quot; output files instead which assign matching HUGO gene symbols based on the UCSC refGene table.</td>
-    </tr>
-    <tr class="odd">
-    <td>transcripts</td>
-    <td>list of known transcript IDs matching the junction.</td>
-    </tr>
-    <tr class="even">
-    <td>qc_flanking</td>
-    <td>Count of supporting reads passing flanking sequence checks (junctions observed adjacent to read ends require 18+ nt of flanking sequence, otherwise 10+ nt).</td>
-    </tr>
-    <tr class="odd">
-    <td>qc_plus</td>
-    <td>Count of supporting reads aligned to the + strand.</td>
-    </tr>
-    <tr class="even">
-    <td>qc_minus</td>
-    <td>Count of supporting reads aligned to the - strand.</td>
-    </tr>
-    <tr class="odd">
-    <td>qc_perfect_reads</td>
-    <td>Count of supporting reads with perfect alignments (no reference mismatches of quality 15+, indels, or soft clips).</td>
-    </tr>
-    <tr class="even">
-    <td>qc_clean_reads</td>
-    <td>Count of supporting reads whose alignments are not perfect but which have a ratio of &lt;= 5% of reference mismatches of quality 15+, indels, or soft clips relative to the count of aligned bases on both the left and right flanking sequence. Note: qc_clean_reads does NOT include qc_perfect_reads: to get a count of &quot;perfect plus pretty good&quot; reads the two values must be added together.</td>
-    </tr>
-    </tbody>
-    </table>
-
-### ProteinPaint Visualizations
-
--   **Interactive fusion visualization**: The interactive fusion viewer
-    is available as a file with the name
-    `Putative Fusions (SAMPLE.final_fusions)`. Click on this file and
-    then follow the <span role="ref">pp-fusion-viewer</span> guide.
--   **Interactive coverage visualization**: The interactive coverage
-    viewer is available as a file with the name `Coverage (SAMPLE)`.
-    Click on this file and then follow the <span
-    role="ref">pp-coverage-viewer</span> guide.
+| Field Name  | Description |
+|--|--|
+| `junction` | Splice junction in the TCGA format "chrX:start:+,chrX:end,+". "start" and "end" are the 1-based position of the last mapped nucleotide before the skip and the first mapped nucleotide after the skip (i.e. the last base of the previous exon and the first base of the next exon). Note that in `.bed` output these coordinates will be different, see the .bed output section below. The "+" is currently hardcoded, though this may change in the future. |
+| `count` | Raw count of reads supporting the junction. During correction counts for ambiguous junctions can be combined, though obviously these additional reads will not be visible in the raw BAM file. |
+| `type` | Either "known" (matching a reference junction) or "novel" (not observed in the reference junction collection). |
+| `genes` | Gene symbols from the junction calling process. These still need work in the raw junction calling process, it's recommended to use the "annotated" output files instead which assign matching HUGO gene symbols based on the UCSC refGene table. |
+| `transcripts` | List of known transcript IDs matching the junction. |
+| `qc_flanking` | Count of supporting reads passing flanking sequence checks (junctions observed adjacent to read ends require 18+ nt of flanking sequence, otherwise 10+ nt). |
+| `qc_plus` | Count of supporting reads aligned to the + strand. |
+| `qc_minus` | Count of supporting reads aligned to the - strand. |
+| `qc_perfect_reads` | Count of supporting reads with perfect alignments (no reference mismatches of quality 15+, indels, or soft clips). |
+| `qc_clean_reads` | Count of supporting reads whose alignments are not perfect but which have a ratio of <= 5% of reference mismatches of quality 15+, indels, or soft clips relative to the count of aligned bases on both the left and right flanking sequence. Note: qc_clean_reads does NOT include qc_perfect_reads: to get a count of "perfect plus pretty good" reads the two values must be added together. |
 
 ## Known Issues
 
-### Adapter contamination
+!!! caution "Adapter contamination"
+    This pipeline does not, at present, remove adapter sequences. If the
+    sequencing library is contaminated with adapters, CICERO runtimes can
+    increase exponentially. We recommend running FastQ files through a QC
+    pipeline such as FastQC and trimming adapters with tools such as
+    Trimmomatic if adapters are found.
 
-This pipeline does not, at present, remove adapter sequences. If the
-sequencing library is contaminated with adapters, CICERO runtimes can
-increase exponentially. We recommend running FastQ files through a QC
-pipeline such as FastQC and trimming adapters with tools such as
-Trimmomatic if adapters are found.
+!!! caution "High coverage regions"
+    Certain cell types show very high transcription of certain loci, for
+    example, the immunoglobulin heavy chain locus in plasma cells. The
+    presence of very highly covered regions (typically 100,000-1,000,000+ X)
+    has an adverse effect on CICERO runtimes. Presently, we have no good
+    solution to this problem as strategies such as down-sampling may reduce
+    sensitivity over important regions of the genome.
 
-### High coverage regions
-
-Certain cell types show very high transcription of certain loci, for
-example, the immunoglobulin heavy chain locus in plasma cells. The
-presence of very highly covered regions (typically 100,000-1,000,000+ X)
-has an adverse effect on CICERO runtimes. Presently, we have no good
-solution to this problem as strategies such as down-sampling may reduce
-sensitivity over important regions of the genome.
-
-### Interactive Visualizations Exon vs Intron Nomenclature
-
-When a codon is split over a fusion gene junction, the annotation
-software marks the event as intronic when really, the event should be
-exonic. We are working to fix this bug. In the mean time, if a fusion is
-predicted to be in frame but the interactive plot shows "intronic", we
-suggest the user blat the contig shown just below to clarify if the true
-junction is either in the intron or exon.
+!!! bug "Interactive Visualizations Exon vs Intron Nomenclature"
+    When a codon is split over a fusion gene junction, the annotation
+    software marks the event as intronic when really, the event should be
+    exonic. We are working to fix this bug. In the mean time, if a fusion is
+    predicted to be in frame but the interactive plot shows "intronic", we
+    suggest the user blat the contig shown just below to clarify if the true
+    junction is either in the intron or exon.
 
 ## Frequently Asked Questions
 

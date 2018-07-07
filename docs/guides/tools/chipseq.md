@@ -185,10 +185,10 @@ of the workflow dialog.
 
 ![](../../images/guides/tools/chipseq/run-analysis.gif)
 
-!!! note
+!!! tip 
     If you cannot click this button, please ensure that:
 
-    * all of the inputs are correctly hooked up (see [selecting inputs](#selecting-inputs)), and 
+    * all of the inputs are correctly hooked up (see [hooking up inputs](#hooking-up-inputs)), and 
     * all of the required parameters are set (see [setting parameters](#setting-parameters)).
 
     If you're still have trouble, please [contact us](https://stjude.cloud/contact) and include
@@ -201,11 +201,12 @@ browser and come back later to check the status of the jobs. To do this,
 navigate to the [tool's landing page](https://platform.stjude.cloud/tools/chip-seq). 
 Next, click "View Results" then select the "View Running Jobs" option. 
 You will be redirected to the job monitoring page. Each job you kicked off
-gets one row in this table. You can click the "+" on any of the runs to check 
-the status of individual steps of the ChIP-Seq pipeline.
+gets one row in this table.
 
 ![](../../images/guides/tools/chipseq/monitoring-jobs.gif) 
 
+You can click the "+" on any of the runs to check 
+the status of individual steps of the ChIP-Seq pipeline.
 Other information, such as time, cost of individual steps in the pipeline, 
 and even viewing the job logs can accessed by clicking around the sub-items.
 
@@ -216,11 +217,11 @@ and even viewing the job logs can accessed by clicking around the sub-items.
 
 ## Analysis of results
 
-Each tool in St. Jude Cloud produces a visualization result that makes understanding
+Each tool in St. Jude Cloud produces a visualization that makes understanding
 results more accessible than working with excel spreadsheet or tab delimited
 files. This is the primary way we recommend you work with your results. We also
-include the raw files for you to dig into if the visualization is not sufficient to
-answer your research question.
+include the raw output files for you to dig into if the visualization is not 
+sufficient to answer your research question.
 
 ### Interactive visualizations
 
