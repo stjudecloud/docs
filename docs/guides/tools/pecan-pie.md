@@ -269,7 +269,7 @@ There are two methods of running pipelines on DNAnexus:
 2.  **Command line.** Jobs may also be invoked via the `dx` command line
     client. Command-line use allows submitting cloud jobs without
     interacting with a GUI, and so supports scripting and easier
-    integration with local workflows. See [this section](../../guides/data/command-line.md#installation)
+    integration with local workflows. See [this section](../data/command-line.md#installation)
     for information on how to get set up with the `dx-toolkit`.
 
 !!! note
