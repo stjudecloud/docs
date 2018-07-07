@@ -14,9 +14,17 @@ experiment is considered the "control sample file". The pipeline can on
 matched case/control samples (recommended for better results) or just a 
 case sample.
 
-
-
 ## Overview
+
+### Inputs
+
+!!! todo
+    Write ChIP-Seq inputs section.
+
+### Outputs
+
+!!! todo
+    Write ChIP-Seq outputs section.
 
 ### Process
 
@@ -31,16 +39,6 @@ files.
 file with an accompanying visualization by ProteinPaint. 
     * A cross correlation plot and general metrics file are generated to help check
 the quality of experiment.
-
-### Inputs
-
-!!! todo
-    Write ChIP-Seq inputs section.
-
-### Outputs
-
-!!! todo
-    Write ChIP-Seq outputs section.
 
 ## Getting started
 
