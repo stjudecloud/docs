@@ -32,7 +32,7 @@ Select a sample and click info to see more.
 !!! todo
     This needs to be an image of a data access request, not the DAU.
 
-![image](../../images/guides/data/embargo-date-1.png)
+![](../../images/guides/data/embargo-date-1.png)
 
-![image](../../images/guides/data/embargo-date-2.png)
+![](../../images/guides/data/embargo-date-2.png)
 

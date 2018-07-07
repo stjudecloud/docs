@@ -11,10 +11,10 @@ understand of how it works.
 2.  Click "Launch" in the bottom right corner to launch the custom
     viewer.
 
-    ![image](../../images/guides/visualizations/bigwig_viewer_startup.png)
+    ![](../../images/guides/visualizations/bigwig_viewer_startup.png)
 
 3.  Once the page has loaded, you will be able to see the bigWig viewer.
     You can navigate around the genome by gene or genomic location.
     Alongside the coverage track is the GENCODE gene reference.
 
-    ![image](../../images/guides/visualizations/bigwig_detail.png)
+    ![](../../images/guides/visualizations/bigwig_detail.png)

@@ -42,9 +42,9 @@ Navigate to the data browser by clicking Access Data and Explore
 Data. If you would like to view the requests you have already made, you
 can do so under Manage Data.
 
-![image](../../images/guides/data/data-request-1.png)
+![](../../images/guides/data/data-request-1.png)
 
-![image](../../images/guides/data/data-request-2.png)
+![](../../images/guides/data/data-request-2.png)
 
 ## Selecting a cohort
 
@@ -56,9 +56,9 @@ associated with specific genes, or mutations.
 !!! todo
     This screenshot needs updating.
 
-![image](../../images/guides/data/data-request-3.png)
+![](../../images/guides/data/data-request-3.png)
 
-![image](../../images/guides/data/data-request-4.png)
+![](../../images/guides/data/data-request-4.png)
 
 ## Select your files
 
@@ -67,7 +67,7 @@ type of files you would like to receive. This step is dynamic, and shows
 you all of the file types we have available for the dataset you are
 interested in.
 
-![image](../../images/guides/data/data-request-5.png)
+![](../../images/guides/data/data-request-5.png)
 
 ## Submit your data request
 
@@ -78,9 +78,9 @@ access agreement. Please use this list to fill in the Datasets section of the Da
 Form as shown in the figure below. For more information on filling out this guide,
 see [Filling out the DAA](data-access-agreement.md#filling-out-the-daa).
 
-![image](../../images/guides/data/data-request-6.png)
+![](../../images/guides/data/data-request-6.png)
 
-![image](../../images/guides/data/data-request-7.png)
+![](../../images/guides/data/data-request-7.png)
 
 Now, you have successfully submitted your data request. Your request
 will be sent to the respective data access committees for evaluation.
@@ -106,24 +106,24 @@ All Data Access Agreements require the following 5 items:
       that allows the user to see exactly which Data Access Units (datasets)
       they are requesting data from.
 
-     ![image](../../images/guides/data/dau-1.png)
+     ![](../../images/guides/data/dau-1.png)
 
 2. Signature and information of the Principal Investigator. This must be
 signed by a Principal Investigator or a faculty-level supervisor on the
 project (on **page 8**).
 
-    ![image](../../images/guides/data/daa-2.png)
+    ![](../../images/guides/data/daa-2.png)
 
 3. Signature and information of all other applicants. This should
 include any person who will have access to this data. They are legally
 bound to protecting and handling the data properly (on **page 9**).
 
-    ![image](../../images/guides/data/daa-1.png)
+    ![](../../images/guides/data/daa-1.png)
 
 4. Signature and information of Institutional or Administrative
 Authority (on **page 10**).
 
-    ![image](../../images/guides/data/daa-4.png)
+    ![](../../images/guides/data/daa-4.png)
 
 5. Description of contemplated use of St. Jude data. Here, describe your
 research question and it's biological significance. The Contemplated
@@ -137,12 +137,12 @@ you will also need to include the following:
 
 * The applicant's initials in Part 2 (on **page 4**).
 
-    ![image](../../images/guides/data/daa-5.png)
+    ![](../../images/guides/data/daa-5.png)
 
 * Signature and information of the Information Technology Director or
 Chief Information Security Officer (on **page 11**).
 
-    ![image](../../images/guides/data/daa-6.png)
+    ![](../../images/guides/data/daa-6.png)
 
 ## Frequently asked questions
 

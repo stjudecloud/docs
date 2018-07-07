@@ -305,7 +305,7 @@ alternatively, allowing users to predict epitopes in multiple samples.
 
 #### Mutation file example
 
-![image](../../images/guides/tools/neoepitope/mutation_file_example.png)
+![](../../images/guides/tools/neoepitope/mutation_file_example.png)
 
 ### Parameter Configuration
 
@@ -319,14 +319,14 @@ automatically pop up.
 The required inputs appear on the left side of the screen. You should
 see an image similar to the picture below.
 
-> ![image](../../images/guides/tools/neoepitope/epitope_input.png)
+> ![](../../images/guides/tools/neoepitope/epitope_input.png)
 >
-> ![image](../../images/guides/tools/neoepitope/epitope_input2.png)
+> ![](../../images/guides/tools/neoepitope/epitope_input2.png)
 
 1.  Option1 : Click on the `BAM alignment file` and `BAM index file`
     field.
 
-    ![image](../../images/guides/tools/neoepitope/Bam_select.png)
+    ![](../../images/guides/tools/neoepitope/Bam_select.png)
 
     Option2 : Click on the `Forward read fastq` and `Reverse read fastq`
     field. A similar window for file selection will show up.
@@ -335,7 +335,7 @@ see an image similar to the picture below.
     will be included in the analysis.
 3.  Click on the `Mutation file` field.
 
-    ![image](../../images/guides/tools/neoepitope/mutation_file_select.png)
+    ![](../../images/guides/tools/neoepitope/mutation_file_select.png)
 
 4.  In the file dialog that pops up, select the mutation files (for
     details of mutation file, see [Input File
@@ -344,7 +344,7 @@ see an image similar to the picture below.
 5.  After all the required input selected, green 'runnable' messages
     will show up.
 
-    ![image](../../images/guides/tools/neoepitope/ready_run.png)
+    ![](../../images/guides/tools/neoepitope/ready_run.png)
 
 6.  Click the green "Run as Analysis" button at the top right to run the
     analysis
@@ -353,7 +353,7 @@ see an image similar to the picture below.
 
 You will see the workflow running, similar to the screenshot below.
 
-> ![image](../../images/guides/tools/neoepitope/running_progress.png)
+> ![](../../images/guides/tools/neoepitope/running_progress.png)
 
 You can continue on to the next section for details on monitoring job
 progress.
@@ -412,7 +412,7 @@ uploaded and results files that are generated. How/where the result
 files are generated are specific to each pipeline. Please refer to your
 individual pipeline's documentation on where the output files are kept.
 
-![image](../../images/guides/tools/common/raw-results-success.png)
+![](../../images/guides/tools/common/raw-results-success.png)
 
 ### Custom visualization results
 
@@ -428,7 +428,7 @@ uploaded and results files that are generated. How/where the result
 files are generated are specific to each pipeline. Please refer to your
 individual pipeline's documentation on where the output files are kept.
 
-![image](../../images/guides/tools/common/visualize-results-success.png)
+![](../../images/guides/tools/common/visualize-results-success.png)
 
 ## Analysis of Results
 
@@ -440,18 +440,18 @@ from OptiType.
 -   A folder stamped with the time will present in the output folder
     (optitype), which contains the raw output.
 
-![image](../../images/guides/tools/neoepitope/hlatype_result.png)
+![](../../images/guides/tools/neoepitope/hlatype_result.png)
 
 -   The file contains the predicted HLA alleles of the sample.
 
-![image](../../images/guides/tools/neoepitope/hlatype_result2.png)
+![](../../images/guides/tools/neoepitope/hlatype_result2.png)
 
 ### Neoepitope prediction
 
 The output contains one summary HTML, one folder with raw output and one
 folder with outputs in Excel formats:
 
-![image](../../images/guides/tools/neoepitope/epitope_result.png)
+![](../../images/guides/tools/neoepitope/epitope_result.png)
 
 Epitope\_affinity\_prediction.html:  
 -   This file provides a summary of the epitope prediction that can be
@@ -459,21 +459,21 @@ Epitope\_affinity\_prediction.html:
 -   The peptides with affinity lower than user-defined cutoff will be
     highlighted in green in the webpage.
 
-![image](../../images/guides/tools/neoepitope/epitope_result2.png)
+![](../../images/guides/tools/neoepitope/epitope_result2.png)
 
 Raw\_output: this folder contains the raw output of the affinity
 prediction.
 
-![image](../../images/guides/tools/neoepitope/epitope_result3.png)
+![](../../images/guides/tools/neoepitope/epitope_result3.png)
 
 There will two major types files present here:
 
-![image](../../images/guides/tools/neoepitope/epitope_result4.png)
+![](../../images/guides/tools/neoepitope/epitope_result4.png)
 
 -   affinity.out: these files are the prediction results from the
     netMHCcons for each peptide.
 
-![image](../../images/guides/tools/neoepitope/epitope_result5.png)
+![](../../images/guides/tools/neoepitope/epitope_result5.png)
 
 The following columns will be shown in the output:
 
@@ -501,13 +501,13 @@ The following columns will be shown in the output:
 -   flanking.seq: these files contain the sequences used for the
     prediction.
 
-![image](../../images/guides/tools/neoepitope/epitope_result6.png)
+![](../../images/guides/tools/neoepitope/epitope_result6.png)
 
 XLSX: this folder contains the raw output of the affinity prediction as
 described above in Excel files. The files can be downloaded and opened
 with Excel for downstram filtering and analyses
 
-![image](../../images/guides/tools/neoepitope/epitope_result7.png)
+![](../../images/guides/tools/neoepitope/epitope_result7.png)
 
 ## Frequently asked questions
 
