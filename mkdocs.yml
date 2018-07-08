@@ -20,8 +20,8 @@ pages:
       - 'Command Line Interaction': 'guides/data/command-line.md'
   - 'Tool Guides':
       - 'Pecan PIE': 'guides/tools/pecan-pie.md'
+      - 'NeoepitopePred': 'guides/tools/neoepitope.md'
       - 'ChIP-Seq Peak Calling': 'guides/tools/chipseq.md'
-      - 'HLA Typing and Neoepitope Prediction': 'guides/tools/neoepitope.md'
       - 'Rapid RNA-Seq Fusion Detection': 'guides/tools/rapid-rnaseq.md'
       - 'WARDEN Differential Expression Analysis': 'guides/tools/warden.md'
   - 'Visualization Guides':
@@ -52,4 +52,5 @@ extra:
 markdown_extensions:
     - admonition
     - codehilite
+    - footnotes
     - pymdownx.inlinehilite

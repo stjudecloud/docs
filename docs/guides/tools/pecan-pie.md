@@ -6,10 +6,6 @@
 | **Publication** | [Zhang et al., NEJM 2015](http://www.nejm.org/doi/full/10.1056/NEJMoa1508054#t=article), supplementary appendix pp. 7-10 |
 | **Technical Support** | [Contact Us](https://stjude.cloud/contact) |
 
-
-!!! todo
-    Add GIFs all throughout this page.
-
 Pecan PIE (the **Pe**diatric **Can**cer Variant **P**athogenicity
 **I**nformation **E**xchange) is a cloud-based variant classification
 and interpretation service. It annotates and ranks variants by putative
@@ -54,9 +50,7 @@ An overview of the Pecan PIE workflow:
     Variants may be formally classified with an interface based on ACMG
     guidelines.
 
-## Pipeline Operation
-
-### Logging in
+## Getting started
 
 Start by logging into the portal with a DNAnexus account, creating an
 account if you need one. PIE uses DNAnexus as a secure cloud backend.
@@ -65,7 +59,7 @@ can send you e-mail notifications when your analysis jobs are complete.
 PIE is free for non-commercial use. St. Jude pays the (small) cloud
 computing costs, your DNAnexus account will not be billed.
 
-### Uploading Data
+## Uploading data
 
 Pecan PIE takes standard VCF files as input, which may be either
 uncompressed or compressed with `bgzip`.
@@ -74,7 +68,7 @@ uncompressed or compressed with `bgzip`.
 2. Choose the genome your variants were mapped to, which may be either
    GRCh37-lite or GRCh38.
 
-### Advanced options
+## Advanced options
 
 The "Advanced option" panel lets you customize the behavior of the
 pipeline:
@@ -94,7 +88,7 @@ pipeline:
   filtering threshold to whatever frequency you prefer. To disable
   filtering altogether, specify a value of 1.
 
-### Progress page
+## Progress page
 
 After uploading is complete you will be taken to a status screen showing
 the progress of your job through the system. Analysis typically takes
@@ -338,7 +332,7 @@ dx run app-stjude_medal_ceremony -iinfile=medal_prep_output_file
     frequency allowed for a variant in the ExAC (ex-TCGA) database to
     receive a medal. The default is 0.001, a.k.a. ".1%".
 
-## Frequently asked questions (FAQ)
+## Frequently asked questions
 
 If you have any questions not covered here, feel free to reach out on
 [our contact form](https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-contact/).

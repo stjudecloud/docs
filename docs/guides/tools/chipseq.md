@@ -4,8 +4,6 @@
 | **Publication** | N/A (not published) |
 | **Technical Support** | [Contact Us](https://stjude.cloud/contact) |
 
-## Introduction
-
 The ChIP-Seq Peak Calling workflow follows ENCODE best practices to call 
 broad or narrow peaks on Illumina-genearted ChIP-Seq data. 
 Here, a Gzipped FastQ file from an Immunoprecipitation (IP) experiment 
@@ -16,17 +14,17 @@ case sample.
 
 ## Overview
 
-### Inputs
+**Inputs**
 
 !!! todo
     Write ChIP-Seq inputs section.
 
-### Outputs
+**Outputs**
 
 !!! todo
     Write ChIP-Seq outputs section.
 
-### Process
+**Process**
 
 1. The reads of the FastQ file(s) are aligned to the specified reference genome. 
 2. The aligned reads are then post-processed based on best-practice QC techniques
@@ -138,7 +136,7 @@ consult experts.
 
 There are a number of other parameters that can be customized. To 
 see the options available, click the gear cog next to the 
-"Parameter Wrapper" applet.
+"Parameter Wrapper" substep.
 
 ![](../../images/guides/tools/chipseq/change-parameters.gif)
 
