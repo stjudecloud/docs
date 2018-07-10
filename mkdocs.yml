@@ -2,10 +2,10 @@ site_name: 'St. Jude Cloud Documentation'
 theme:
   name: 'material'
   logo: 'images/stjude-logo-child-white.png'
-  custom_dir: 'theme'
   font:
       text: 'Ubuntu'
       code: 'Ubuntu Mono'
+theme_dir: 'mkdocs-material/material'
 
 extra_css:
   - css/extra.css
@@ -30,8 +30,9 @@ pages:
   - 'Frequently Asked Questions': 'faq.md'
 
 # Repository
-# repo_name: 'stjude/sjcloud-docs'
-# repo_url: 'https://github.com/stjude/sjcloud-docs'
+repo_name: 'stjude/sjcloud-docs'
+repo_url: 'https://github.com/stjude/sjcloud-docs'
+edit_uri: 'blob/cmcleod/overhaul/docs'
 
 # Copyright
 copyright: "Copyright &copy; 2017 - 2018 St. Jude Children's Research Hospital"

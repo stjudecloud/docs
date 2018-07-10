@@ -1,5 +1,4 @@
-ProteinPaint BigWig Viewer
-==========================
+# ProteinPaint BigWig Viewer
 
 The ProteinPaint interactive coverage viewer is used to visualize any
 bigWig files information. You can follow these steps to get an

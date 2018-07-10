@@ -1,5 +1,4 @@
-ProteinPaint Fusion Viewer
-==========================
+# ProteinPaint Fusion Viewer
 
 The ProteinPaint interactive fusion viewer is used to visualize putative
 fusions called by CICERO. You can follow these steps to get an
