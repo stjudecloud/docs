@@ -1,10 +1,20 @@
 
 ### Types of data
 
+### Data governance
+
+!!! example "Summary: Data Governance"
+
+    1. Data in St. Jude Cloud is grouped into different data access units (DAUs) which roughly correspond to projects. 
+    2. Users are given to DAUs on a case-by-case basis for limited amount of time.
+    3. Access to data in a given DAU is assessed by the corresponding data access committee (DAC) on a case-by-case basis.
+    4. There are a number of terms of use and restrictions outlined in the [data access agreement](https://platform.stjude.cloud/access_form). We ask that everyone
+        who will be analyzing the data has read and understands these terms.
+
 !!! todo
     Information about the types of data offered in St. Jude Cloud.
 
-### Embargo dates
+#### Embargo dates
 
 An embargo date is the time at which access to data is allowed to users
 for publishing purposes. Typically, samples from the same Data Access
