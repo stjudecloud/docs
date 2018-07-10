@@ -14,11 +14,11 @@ before this embargo date is not permitted as outlined in the data access agreeme
 
 **Current Embargo Dates**
 
-| Data Access Unit | Embargo Date | 
-| ---------------- | ------------ |
-| Pediatric Cancer Genome Project | July 23, 2018 | 
-| St. Jude LIFE | January 15, 2019 |
-| Clinical Genomics | January 15, 2019 | 
+| Data Access Unit                 | Embargo Date     |
+| -------------------------------- | ---------------- |
+| Pediatric Cancer Genome Project  | July 23, 2018    |
+| St. Jude LIFE                    | January 15, 2019 |
+| Clinical Genomics                | January 15, 2019 |
 
 ### Frequently asked questions
 
@@ -32,7 +32,6 @@ Select a sample and click info to see more.
 !!! todo
     This needs to be an image of a data access request, not the DAU.
 
+
 ![](../../images/guides/data/embargo-date-1.png)
-
 ![](../../images/guides/data/embargo-date-2.png)
-

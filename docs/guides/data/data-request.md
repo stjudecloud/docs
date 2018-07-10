@@ -76,7 +76,7 @@ you will see a section called Controlled Data. Under this section, there is a bu
 that indicates the Data Access Units you need to request access to through our data
 access agreement. Please use this list to fill in the Datasets section of the Data Request
 Form as shown in the figure below. For more information on filling out this guide,
-see [Filling out the DAA](data-access-agreement.md#filling-out-the-daa).
+see [Filling out the DAA](#filling-out-the-daa).
 
 ![](../../images/guides/data/data-request-6.png)
 

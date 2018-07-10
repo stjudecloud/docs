@@ -1,10 +1,10 @@
 # Pecan PIE
 
-| | |
-|-------------|-------------------------------|
-| **Authors** |  Michael Edmonson, Aman Patel |
-| **Publication** | [Zhang et al., NEJM 2015](http://www.nejm.org/doi/full/10.1056/NEJMoa1508054#t=article), supplementary appendix pp. 7-10 |
-| **Technical Support** | [Contact Us](https://stjude.cloud/contact) |
+|                       |                                                                                                                          |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------|
+| **Authors**           | Michael Edmonson, Aman Patel                                                                                             |
+| **Publication**       | [Zhang et al., NEJM 2015](http://www.nejm.org/doi/full/10.1056/NEJMoa1508054#t=article), supplementary appendix pp. 7-10 |
+| **Technical Support** | [Contact Us](https://stjude.cloud/contact)                                                                               |
 
 Pecan PIE (the **Pe**diatric **Can**cer Variant **P**athogenicity
 **I**nformation **E**xchange) is a cloud-based variant classification
@@ -76,7 +76,7 @@ pipeline:
 * Curated germline genes only: if checked, this filters your variants
   to disease-related genes only; this option will be turned on
   automatically if your uploaded file is 1 megabyte or larger and you
-  are not using a custom gene list. See the [frequently asked questions](guides/tools/pecan-pie.md#frequently-asked-questions) for more information. 
+  are not using a custom gene list. See the [frequently asked questions](#frequently-asked-questions) for more information. 
   This option reduces the variant processing burden on PIE by removing variants
   that will not be assigned a medal in any case because they are not
   on the reviewable gene list.

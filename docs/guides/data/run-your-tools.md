@@ -1,4 +1,4 @@
-You can follow [this guide](guides/data/data-request.md) to request access to
+You can follow [this guide](../../guides/data/data-request.md) to request access to
 St. Jude data in a secure cloud environment. Before you can begin writing your
 own tools to run against our data, you'll need to understand a bit about how
 data vending in St. Jude Cloud works. Behind the scenes, the [DNAnexus](https://www.dnanexus.com/) genomic ecosystem is the backbone for the computation
