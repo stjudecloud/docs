@@ -12,29 +12,9 @@ environment.
     on your data access form. We recommend that you work with the data
     in the cloud if it's feasible! The copy of the data is free, the 
     compute charges are extremely reasonable, and there is no need
-    to bother with the long, error-prone downloading process.
-
-### Data access
-
-Data in St. Jude Cloud is grouped into multiple **data access units** (DAUs),
-which are independent projects/data sources with different governance structures. 
-Each DAU has a separate **data access committee** (DAC) that evaluates incoming 
-data requests based on a variety of factors. Access is granted at the DAU level
-based on the decision of each DAC. The first time you request access to files in 
-a DAU, it is required that you fill out a DAA (which handles contemplated use and
-other legally binding terms). After you've been approved once, you can continue
-checking out files from that DAU until your access expires (generally after 
-1 year) and you need to renew.
-
-!!! example
-    For instance, if you make a request asking for all our St. Jude's Acute 
-    Lymphoblastic Leukemia sequencing data, you might be asking for data from 
-    multiple different projects here at St. Jude. For the sake of the example,
-    let's say the data you want is spread across three different DAUs. Once
-    you place a request, your application will be routed to the corresponding
-    three data access committees for approval. Since each DAC is made up of
-    different individuals using different criteria for evaluation, you may or
-    may not be approved for access to all of the files.
+    to bother with the long, error-prone downloading process. Porting 
+    your tools to be run in the cloud is easy as well! We recommend 
+    you follow [this guide](#run-your-tools) to get started.
 
 ## Navigating to the data browser
 
