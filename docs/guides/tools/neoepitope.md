@@ -233,23 +233,15 @@ files. This is the primary way we recommend you work with your results. We also
 include the raw output files for you to dig into if the visualization is not 
 sufficient to answer your research question.
 
-### Interactive visualizations
-
-!!! todo
-    Write the interactive visualization section for Rapid RNASeq.
-
 ### Finding the raw results files
 
-Navigate to the [tool's landing page](https://platform.stjude.cloud/tools/neoepitope). 
+Navigate to the [tool's landing page](https://platform.stjude.cloud/tools/neoepitopepred). 
 In the left hand pane, click "View Results" then "View Results Files". You will
 be taken to the filesystem view your cloud workspace. This is similar to your the
 filesystem on your computer, and you can do many common operations such as deleting,
 renaming, and moving files.
 
-!!! todo
-    Make this image.
-
-![]()
+![](../../images/guides/tools/neoepitope/neo-pred-results.png) 
 
 ### Interpreting results
 
@@ -301,26 +293,23 @@ affinity.out: these files are the prediction results from the
 
 The following columns will be shown in the output:
 
-1. `Gene name`: the name of the genes
-2. `Sample`: the name of the samples
-3. `Chromosome (chr)`: the chromosome location of the variation
-4. `Position`: the chromosomal position of the variation. Currently,
-   the position will be lifted over to HG19 to ensure correct
-   translation of peptide sequences based on the internal annotation
-   database of the pipeline. Therefore, the position will be labeled
-   as HG19.
-5. `Class`: class of the varitaion
-6. `Reference allele`: reference allele at the position
-7. `Mutant allele`: mutated allele at the position
-8. `mRNA_acc`: NCBI accession number of the mRNA
-9. `Allele`: HLA allele tested
-10. `Peptide`: the neoepitope sequences tested
-11. `Gene_variant`: the gene and variant residues
-12. `1-log50k`: Prediction score from netMHCcons
-13. `nM`: Affinity as IC50 values in nM
-14. `%Rank`: % Rank of prediction score to a set of 200.000 random
-    natural 9mer peptides
-15. `HLAtype`: All of the hla alleles predicted in the specific sample
+| Column | Description |
+|--|--|
+| Gene name | the name of the genes |
+| Sample | the name of the samples |
+| Chromosome (chr) | the chromosome location of the variation |
+| Position | the chromosomal position of the variation. Currently, the position will be lifted over to HG19 to ensure correct translation of peptid sequences based on the internal annotation database of the pipeline. Therefore, the position will be labeled as HG19. |
+| Class | class of the varitaion |
+| Reference allele | reference allele at the position |
+| Mutant allele | mutated allele at the position |
+| mRNA_acc | NCBI accession number of the mRNA |
+| Allele | HLA allele tested |
+| Peptide | the neoepitope sequences tested |
+| Gene_variant | the gene and variant residues |
+| 1-log50k | Prediction score from netMHCcons |
+| nM | Affinity as IC50 values in nM |
+| %Rank | % Rank of prediction score to a set of 200.000 random natural 9mer peptides |
+| HLAtype | All of the hla alleles predicted in the specific sample |
 
 flanking.seq: these files contain the sequences used for the prediction.
 

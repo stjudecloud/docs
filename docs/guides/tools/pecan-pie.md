@@ -36,8 +36,7 @@ Go to <https://pecan.stjude.cloud/pie> to get started!
 
 ## Overview
 
-!!! todo
-    Insert diagram of Pecan PIE overview.
+![](../../images/guides/tools/pecan-pie/Figure1.png)
 
 An overview of the Pecan PIE workflow:
 
@@ -127,6 +126,8 @@ Medals are only assigned for coding and splice-related variants in
 disease predisposition genes. Germline medals are only assigned for
 novel variants or those present in the ExAC (ex-TCGA) database with a
 MAF no greater than 0.1% (0.001 expressed fractionally).
+
+![](../../images/guides/tools/pecan-pie/Figure2.png)
 
 * **Gold medals** are assigned to truncations in tumor suppressor genes,
 hotspots derived from the COSMIC database, as well as perfect matches to

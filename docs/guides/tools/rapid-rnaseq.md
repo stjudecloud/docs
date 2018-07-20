@@ -222,10 +222,6 @@ files. This is the primary way we recommend you work with your results. We also
 include the raw output files for you to dig into if the visualization is not 
 sufficient to answer your research question.
 
-### Interactive visualizations
-
-!!! todo
-    Write the interactive visualization section for Rapid RNASeq.
 
 ### Finding the raw results files
 
@@ -235,10 +231,7 @@ be taken to the filesystem view your cloud workspace. This is similar to your th
 filesystem on your computer, and you can do many common operations such as deleting,
 renaming, and moving files.
 
-!!! todo
-    Make this image.
-
-![]()
+![](../../images/guides/tools/rapid-rnaseq/rapid-rna-results.png) 
 
 ### Interpreting results
 

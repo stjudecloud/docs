@@ -3,7 +3,7 @@
 !!! note "Summary"
 
     1. Data in St. Jude Cloud is grouped into different data access units (DAUs) which roughly correspond to projects. 
-    2. Users are given to DAUs on a case-by-case basis for limited amount of time.
+    2. Users are given access to DAUs on a case-by-case basis for a specific amount of time.
     3. Access to data in a given DAU is assessed by the corresponding data access committee (DAC) on a case-by-case basis.
     4. There are a number of terms of use and restrictions outlined in the [data access agreement](https://platform.stjude.cloud/access_form). We ask that everyone
         who will be analyzing the data has read and understands these terms.
@@ -19,7 +19,7 @@ checking out files from that DAU until your access expires (generally after
 1 year) and you need to renew.
 
 !!! example
-    For instance, if you make a request asking for all our St. Jude's Acute 
+    For example, if you make a request asking for all of St. Jude's Acute 
     Lymphoblastic Leukemia sequencing data, you might be asking for data from 
     multiple different projects here at St. Jude. For the sake of the example,
     let's say the data you want is spread across three different DAUs. Once
@@ -56,12 +56,11 @@ St. Jude Cloud hosts both raw genomic data files and processed results files:
 |-----------|--------------------------------------------------------------------------------|---------------------------|
 | BAM       | HG38 aligned BAM files produced by [Microsoft Genomics Service][msgen]         | [Click here](#bam-files)  |
 | gVCF      | [Genomic VCF][gvcf-spec] files produced by [Microsoft Genomics Service][msgen] | [Click here](#gvcf-files) |
-|           |                                                                                |                           |
+
 
 #### BAM files
 
-!!! todo
-    Information about BAM files.
+ A BAM file (.bam) is the binary version of a SAM file.  A SAM file (.sam) is a tab-delimited text file that contains sequence alignment data.
 
 #### gVCF files
 
@@ -71,14 +70,10 @@ Today, we defer to the [official specification document][gvcf-spec] from the Bro
 
 **Q. Where can I find the embargo dates?**
 
-A. All of our samples are marked with an embargo date. 
+**A.** All of our samples are marked with an embargo date. 
 You can find this by looking at the tags for each file or in the
 `SAMPLE_INFO.txt` file that is included with each data request. 
 Select a sample and click info to see more.
-
-!!! todo
-    This needs to be an image of a data access request, not the DAU.
-
 
 ![](../../images/guides/data/embargo-date-1.png)
 ![](../../images/guides/data/embargo-date-2.png)

@@ -115,10 +115,8 @@ ensure the the columns are **exactly** in this order.
 
 **Sample rows**
 
-Each row in the spreadsheet (except the last row, which will will talk 
-about in the next section) corresponds to a sample with one or more 
-corresponding FastQ files. You should fill in these rows based on your data
-and the guidelines below:
+Each row in the spreadsheet (except for the last row, which we will talk 
+about in the next section) corresponds to a sample with one or more FastQ files. You should fill in these rows based on your data and the guidelines below:
 
 !!! example "Guidelines"
     * The sample name should be unique and should only contain letters,
@@ -176,12 +174,12 @@ with a .txt extension.
     analysis. **Second**, you will need to manually execute the generated
     workflow from the first step. This allows us to take advantage of many
     nice features, like check-pointing and cost reduction. Don't worry, 
-    we'll show you how to do this step by step below!
+    we'll show you how to do this step by step below.
 
 Once you've uploaded data to your cloud workspace, click "Launch Tool" on the [tool's landing page](https://platform.stjude.cloud/tools/warden). You will be redirected to the virtual
 cloud workspace with the workflow screen opened for you.
 
-![](../../images/guides/tools/warden/launch-tool.gif)
+![](../../images/guides/tools/warden/start-warden-1.gif)
 
 ### Hooking up inputs
 
@@ -191,7 +189,7 @@ Click the `FASTQ_FILES` input field and select **all** FastQ files.
 Next, click the `sampleList` input field and select the corresponding
 samplesheet.
 
-![](../../images/guides/tools/warden/hookup-inputs.gif)
+![](../../images/guides/tools/warden/inputs-warden-2.gif)
 
 ### Selecting parameters
 
@@ -201,8 +199,7 @@ by clicking on the `WARDEN WORKFLOW GENERATOR` substep.
 
 !!! example "Parameter setup steps"
     1. In the `Output Folder` field, select a folder to output to. You can
-    structure your experiments however you like (if you're not sure,
-    just use the root of your project, `/`).
+    structure your experiments however you like (e.g. `/My_Outputs`)
     2. In the `analysisName` field, enter a prefix for all of the output files. This
     can be any value you want to use to remember this run. **Be sure to use underscores
     instead of spaces here!**
@@ -215,8 +212,7 @@ by clicking on the `WARDEN WORKFLOW GENERATOR` substep.
     below the required parameters.
     6. When all parameters have been set, press the save button.
 
-![](../../images/guides/tools/warden/selecting-parameters.gif)
-
+![](../../images/guides/tools/warden/parameters-warden-3.gif)
 
 ### Starting the workflow
 
@@ -224,29 +220,23 @@ Once your input files are hooked up and your parameters are set,
 you should be able to start the workflow by clicking the "Run as Analysis..." 
 button in the top right hand corner of the workflow dialog.
 
-![](../../images/guides/tools/warden/run-analysis.gif)
-
 !!! tip
     If you cannot click this button, please ensure that all of the inputs are correctly hooked up (see [hooking up inputs](#hooking-up-inputs)).
 
     If you're still have trouble, please [contact us](https://stjude.cloud/contact) and include
     a screenshot of the workflow screen above.
 
-You will see the workflow generator running, similar to the screenshot
-below.
+The tool will begin running and will automatically take you to the Monitor page, where you should see that your workflow is "In Progress".
 
-![](../../images/guides/tools/warden/warden-generator-in-progress.png)
+![](../../images/guides/tools/warden/in-progress-warden.gif)
 
 When the custom workflow has finished generating, the word 'Done' will
 appear in green in the status column. This indicates that the
 bootstrapping step has completed successfully. 
 
-![](../../images/guides/tools/warden/warden_generator_done.png)
+![](../../images/guides/tools/warden/warden-running-1.png)
 
-!!! todo
-    Continue converting this guide.
-
-Now, you need to run the custom workflow manually.
+## Custom Workflow Process
 
 1.  Wait for the workflow generator to finish.
 2.  Click on the WARDEN name in the name column.
@@ -297,27 +287,21 @@ Now, you need to run the custom workflow manually.
 
     ![](../../images/guides/tools/warden/Workflow_output.png)
 
-For a description of the output, please refer to <span
-role="ref">warden-results</span>.
-
+For a description of the output, please refer to [Navigating Results](#navigating-results).
 
 ## Monitoring run progress
 
-Once you have started one or more Rapid RNA-Seq runs, you can safely close your
+Once you have started one or more WARDEN runs, you can safely close your
 browser and come back later to check the status of the jobs. To do this,
-navigate to the [tool's landing page](https://platform.stjude.cloud/tools/rapid_rna-seq). 
+navigate to the [tool's landing page](https://platform.stjude.cloud/tools/warden). 
 Next, click "View Results" then select the "View Running Jobs" option. 
-You will be redirected to the job monitoring page. Each job you kicked off
-gets one row in this table.
-
-![](../../images/guides/tools/rapid-rnaseq/monitoring-jobs.gif) 
+You will be redirected to the job monitoring page. Each job you kick off
+gets one row in the Monitor section.
 
 You can click the "+" on any of the runs to check 
-the status of individual steps of the ChIP-Seq pipeline.
+the status of individual steps of the pipeline.
 Other information, such as time, cost of individual steps in the pipeline, 
 and even viewing the job logs can accessed by clicking around the sub-items.
-
-![](../../images/guides/tools/rapid-rnaseq/job-detailed-view.gif) 
 
 !!! tip 
     Power users can view the [DNAnexus Job Monitoring Tutorial](https://wiki.dnanexus.com/UI/Jobs) and the [DNAnexus Command Line Tutorial for Job Monitoring](https://wiki.dnanexus.com/Command-Line-Client/Monitoring-Executions) for advanced capabilities for monitoring jobs.
@@ -330,11 +314,6 @@ files. This is the primary way we recommend you work with your results. We also
 include the raw output files for you to dig into if the visualization is not 
 sufficient to answer your research question.
 
-### Interactive visualizations
-
-!!! todo
-    Write the interactive visualization section for Rapid RNASeq.
-
 ### Finding the raw results files
 
 Navigate to the [tool's landing page](https://platform.stjude.cloud/tools/rapid_rna-seq). 
@@ -343,10 +322,49 @@ be taken to the filesystem view your cloud workspace. This is similar to your th
 filesystem on your computer, and you can do many common operations such as deleting,
 renaming, and moving files.
 
-!!! todo
-    Make this image.
+![](../../images/guides/tools/warden/results-warden.gif)
 
-![]()
+### Navigating Results
+
+!!! note
+    Navigating to the raw results of your runs is the same for all
+    pipelines. This guide will feature the <span
+    role="ref">rapid-rnaseq</span> pipeline, but you can follow along for
+    any tool.
+
+#### Raw result files
+
+Navigate to your tool's description page (for instance, Rapid RNA-Seq's
+description page is
+[here](https://platform.stjude.cloud/tools/rapid_rna-seq)). You should
+see a screen similar to the one in the screenshot below. In the left
+hand pane, select "View Results Files".
+
+![Click "View Results Files"](../../images/guides/tools/common/raw-results.png)
+
+You should now be in the tool's workspace with access to files that you
+uploaded and results files that are generated. How/where the result
+files are generated are specific to each pipeline. Please refer to your
+individual pipeline's documentation on where the output files are kept.
+
+![](../../images/guides/tools/common/raw-results-success.png)
+
+#### Custom visualization results
+
+Navigate to your tool's description page (for instance, Rapid RNA-Seq's
+description page is
+[here](https://platform.stjude.cloud/tools/rapid_rna-seq)). You should
+see a screen similar to the one in the screenshot below. In the left
+hand pane, select "Visualize Results".
+
+![Click "Visualize Results"](../../images/guides/tools/common/visualize-results.png)
+
+You should now be in the tool's workspace with access to files that you
+uploaded and results files that are generated. How/where the result
+files are generated are specific to each pipeline. Please refer to your
+individual pipeline's documentation on where the output files are kept.
+
+![](../../images/guides/tools/common/visualize-results-success.png)
 
 ### Interpreting results
 
@@ -388,128 +406,7 @@ of this guide. Here, we will discuss each of the different output files in more 
 | `qc_perfect_reads` | Count of supporting reads with perfect alignments (no reference mismatches of quality 15+, indels, or soft clips). |
 | `qc_clean_reads` | Count of supporting reads whose alignments are not perfect but which have a ratio of <= 5% of reference mismatches of quality 15+, indels, or soft clips relative to the count of aligned bases on both the left and right flanking sequence. Note: qc_clean_reads does NOT include qc_perfect_reads: to get a count of "perfect plus pretty good" reads the two values must be added together. |
 
-## Known Issues
-
-!!! caution "Adapter contamination"
-    This pipeline does not, at present, remove adapter sequences. If the
-    sequencing library is contaminated with adapters, CICERO runtimes can
-    increase exponentially. We recommend running FastQ files through a QC
-    pipeline such as FastQC and trimming adapters with tools such as
-    Trimmomatic if adapters are found.
-
-!!! caution "High coverage regions"
-    Certain cell types show very high transcription of certain loci, for
-    example, the immunoglobulin heavy chain locus in plasma cells. The
-    presence of very highly covered regions (typically 100,000-1,000,000+ X)
-    has an adverse effect on CICERO runtimes. Presently, we have no good
-    solution to this problem as strategies such as down-sampling may reduce
-    sensitivity over important regions of the genome.
-
-!!! bug "Interactive Visualizations Exon vs Intron Nomenclature"
-    When a codon is split over a fusion gene junction, the annotation
-    software marks the event as intronic when really, the event should be
-    exonic. We are working to fix this bug. In the mean time, if a fusion is
-    predicted to be in frame but the interactive plot shows "intronic", we
-    suggest the user blat the contig shown just below to clarify if the true
-    junction is either in the intron or exon.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Monitoring Run Progress
-
-!!! note
-    Monitoring the progress of your runs is the same for all pipelines. This
-    guide will feature the <span role="ref">rapid-rnaseq</span> pipeline,
-    but you can follow along for any tool.
-
-Monitoring the status of your pipelines in the St. Jude Cloud is simple.
-First, navigate to your tool's description page (for instance, Rapid
-RNA-Seq's description page is
-[here](https://platform.stjude.cloud/tools/rapid_rna-seq)). You should
-see a screen similar to the one in the screenshot below. In the left
-hand pane, select "View Running Jobs".
-
-![Click "View Running Jobs"](../../images/guides/tools/common/running-jobs.png)
-
-Here, you will see a list of all of your previous runs for a tool, as
-well as the job status (successful, failed, terminated by user) and
-cost. You can click on the "+" icon to the left of each tool run to see
-all of the different tools that were run.
-
-![Click the "+" beside a run to view more information.](../../images/guides/tools/common/jobs-basic.png)
-
-Other information, such as time, cost of individual job, and even job
-logs are available by clicking on the sub-items.
-
-![Click on individual items in the list to explore detailed information
-on each analysis that was run.](../../images/guides/tools/common/jobs-advanced.png)
-
-!!! note
-    Advanced users can view the [DNAnexus Job Monitoring Tutorial](https://wiki.dnanexus.com/UI/Jobs) and the [DNAnexus Command
-    Line Tutorial for Job Monitoring](https://wiki.dnanexus.com/Command-Line-Client/Monitoring-and-Listing-Jobs)
-    for more information.
-
-## Navigating Results
-
-!!! note
-    Navigating to the raw results of your runs is the same for all
-    pipelines. This guide will feature the <span
-    role="ref">rapid-rnaseq</span> pipeline, but you can follow along for
-    any tool.
-
-### Raw result files
-
-Navigate to your tool's description page (for instance, Rapid RNA-Seq's
-description page is
-[here](https://platform.stjude.cloud/tools/rapid_rna-seq)). You should
-see a screen similar to the one in the screenshot below. In the left
-hand pane, select "View Results Files".
-
-![Click "View Results Files"](../../images/guides/tools/common/raw-results.png)
-
-You should now be in the tool's workspace with access to files that you
-uploaded and results files that are generated. How/where the result
-files are generated are specific to each pipeline. Please refer to your
-individual pipeline's documentation on where the output files are kept.
-
-![](../../images/guides/tools/common/raw-results-success.png)
-
-### Custom visualization results
-
-Navigate to your tool's description page (for instance, Rapid RNA-Seq's
-description page is
-[here](https://platform.stjude.cloud/tools/rapid_rna-seq)). You should
-see a screen similar to the one in the screenshot below. In the left
-hand pane, select "Visualize Results".
-
-![Click "Visualize Results"](../../images/guides/tools/common/visualize-results.png)
-
-You should now be in the tool's workspace with access to files that you
-uploaded and results files that are generated. How/where the result
-files are generated are specific to each pipeline. Please refer to your
-individual pipeline's documentation on where the output files are kept.
-
-![](../../images/guides/tools/common/visualize-results-success.png)
-
-## Analysis of Results
-
-### Initial analysis of results
+### Primary Results
 
 #### Alignment statistics
 
@@ -578,275 +475,31 @@ In the BIGWIG\_VIEWER directory there will be a bigwigViewer file.
 Select this file and then 'Launch viewer'. A graph of coverage for the
 genome should be visible.
 
-### Additional Results
 
-**Interactive MA/Volcano Plots**
-
-In addition to viewing the MA and volcano plots through the
-visualization tool
-
-**Differential expression results**
-
-Other useful differential expression results will be downloaded by the
-desktop app. This included tabular output from the differential
-expression analysis. For each comparison with three or more samples per
-condition, \**results.*.txt\*\* will be produced.
-
-**GSEA.input.*.txt*\* and**GSEA.tStat.*.txt*\* are input files that can
-be used for GSEA analysis. The tStat file is preferred for a more
-accurate analysis, but will not give a heatmap diagram.
-
-(Within the DNAnexus output directory structure, these files will be in
-the LIMMA directory.)
-
-For plain text results from the simple differential expresison analysis,
-the files will be named \**simpleDE.*.txt\*\*.
-
-(Within the DNAnexus output directory structure, these files will be in
-the SIMPLE\_DIFEX directory.)
-
-Prelabelled MA and volcano plots are provided for the analysis. These
-files are labeled **maPlot.*.png*\* amd**volcanoPlot.*.png*\* where '\*'
-is the comparison (e.g. ko\_vs\_wt)
-
-The MA plot shows the average expression of the gene on the X-axis, and
-Log2 fold change between condition/phenotype is on the Y-axis (if the
-name is for example maPlot.condition2-condition1.png then the fold
-change would represent condition1 minus condition2). Each gene is
-represented by a circle. The top 20 genes (by p-value) are identified on
-the plot. The genes are color coded by the chosen multiple testing
-correction method (False Discovery Rate (FDR) by default. An exmaple MA
-plot can be seen below.
-
-(Within the DNAnexus output directory structure, these files will be in
-the LIMMA directory.)
-
-![](../../images/guides/tools/warden/maPlot.png)
-
-The volcano plot shows the Log2Fold change between the conditions on the
-X-axis, and the -Log10 of the multiple testing corrected P-value on the
-Y-axis.
-
-![](../../images/guides/tools/warden/volcanoPlot.png)
-
-An MA plot is generated for all comparisons regardless of number of
-samples. This is the \**simpleDEPlot.*.png\*\* no statistics are shown
-and genes are not labeled.
-
-(Within the DNAnexus output directory structure, these files will be in
-the SIMPLE\_DIFEX directory.)
-
-**Differential analysis input**
-
-Inputs and commands are provided for rerunning differential expression
-analysis on ones own computer. The R commands used for the analysis are
-found in **voomLimma.R**. An experienced R user can rerun the analysis
-with any desired changes. This analysis requires the input
-**countFile.txt** which contains counts per genes, the
-**Rparameters.txt** file containing input parameters, and a processed
-sample list file **sampleList.txt**
-
-(Within the DNAnexus output directory structure, these files will be in
-the LIMMA directory.)
-
-The input for the simple differential analysis expression will be
-**Rparameters\_simple.txt**, **simpleDE.R**, **countFile.txt** and
-**sampleList.txt**. **countFile.txt** and **sampleList.txt** are the
-same files used by the LIMMA analysis.
-
-(Within the DNAnexus output directory structure, these files will be in
-the SIMPLE\_DIFEX directory.)
-
-**Coverage results**
-
-bigWig files will be generated for use in genome browsers (such as IGV
-<http://software.broadinstitute.org/software/igv/>). For each smaple,
-multiple bigWig files will be found. For all types of sequencing
-strandedness, there will be bigWig files labelled,
-**\*.sortedCoverageFile.bed.bw** where '*' is the sample name. For
-stranded data there will also be\*.sortedPosCoverageFile.bed.bw*\* and
-**\*.sortedNegCoverageFile.bed.bw** which contains coverage information
-for the positive and negative strand of the genome.
-
-(Within the DNAnexus output directory structure, these files will be in
-the BIGWIG directory.)
-
-**Quality Control Results (FastQC)**
-
-Within the FastQC directory, foreach sample and read direction there
-will be an html file and a zip file (**\*.FastQc.html**
-**\*.FastQc.zip** where '\*' is the base FastQ name), containing results
-from FastQTC. For the average user the html file is sufficient. This
-file can give some basic statistics on the quality of the data.
-
-(Within the DNAnexus output directory structure, these files will be in
-the FastQC directory.)
-
-**BAM alignment files**
-
-There are two BAM files generated per sample that contain mapping
-information for all reads. The first is labeled
-**\*.Aligned.sortedByCoord.dup.bam** where '*' is the sample name. The
-BAM file is sorted by coordinates and has duplicates marked. The second
-file is\*.Aligned.toTranscriptome.out.bam*\* and contains reads mapped
-to transcripts.
-
-(Within the DNAnexus output directory structure, these files will be in
-the ALIGN directory.)
-
-**Chimeric reads and junction files**
-
-Additional files created by STAR are provided. More information on these
-files can be found at
-<http://labshare.cshl.edu/shares/gingeraslab/www-data/dobin/STAR/STAR.posix/doc/STARmanual.pdf>.
-**\*.SJ.out.tab** contain splice junction information. Fusion detectino
-files are labelled **\*.Chimeric.out.bam** and
-**\*.Chimeric.out.junction**.
-
-(Within the DNAnexus output directory structure, these files will be in
-the ALIGN directory.)
-
-**FPKM and count files (per sample)**
-
-Per sample files containing FPKM and raw count values for each gene can
-be found in **\*.fpkm.txt** and **\*.htseq\_counts.txt** where '\*' is
-the sample name.
-
-(Within the DNAnexus output directory structure, these files will be in
-the **NOTE FIND OUT WHICH DIRECOTRRY** directory.)
-
-#### Methods Files
-
-A more human readable explanation is found in **methods.docx**. Detailed
-documentation can be found in **methods.txt**
-
-(Within the DNAnexus output directory structure, these files will be in
-the METHODS directory.)
-
-#### Auxilary Files
-
-This section describes the files that exist within the DNAnexus output
-folder. Most of these files will not be of interest to the average user.
-However, interactive viewers are describe in [LIMMA differential
-expression viewer](#limma-differential-expression-viewer) and [Simple
-differential expression viewer](#simple-differential-expression-viewer).
-
-The output will be divided into multiple folders. The results being the
-most useful will be the differential expression analysis results in the
-LIMMA and SIMPLE\_DIFEX folders. Bigwig files for viewing read coverage
-will be in the BIGWIG folder. Other folder contain different types of
-data and are explained in further detail below.
-
-> ![](../../images/guides/tools/warden/Workflow_output.png)
-
-The following description of files is sorted by their output directory.
-
-**ALIGN**
-
-This directory contains the BAM files described in [BAM alignment
-files](#bam-alignment-files) and the chimeric and junction files are
-described in [Chimeric reads and junction
-files](#chimeric-reads-and-junction-files). In adition there are 2 log
-files. **\*Log.final.out** has relevant statistics for the alignemnt.
-The **\*.Log.out** file just contains a log of the analysis run,
-including input parameters. Per sample FLAGSTAT results are found in
-**\*.flagStatOut.txt**. These flagstat files are combined into the file
-**alignmentStatistics.txt** described in [Initial analysis of
-results](#initial-analysis-of-results). Finally the ALIGN directory has
-multiple *.starAlign.methods.txt files. These files can be ignored as
-they are summarized in the finalmethods.docx*\* and **methods.txt**
-files described in [Methods Files](#methods-files).
-
-**BIGWIG**
-
-All of the files here are described in section [Coverage
-results](#coverage-results). The **bgToBw.methods.txt** files can be
-ignored as they are summarized in the files described in [Methods
-Files](#methods-files).
-
-**BIGWIG_VIEWER**
-
-See [bigWig viewer](#bigwig-viewer)
-
-**COMBINED_FLAGSTAT**
-
-!!! todo
-    Describe combined flagstat.
-
-**COMBINED_HTSEQ**
-
-Used for input in differential expression analysis. The
-combineCountFile.txt is the same as countFile.txt described in
-[Differential analysis input](#differential-analysis-input)
-
-**COVERAGE**
-
-BED graph files used to generate bigWig files are here.
-
-**FastQC**
-
-See [Quality Control Results (FastQC)](#quality-control-results-FastQc)
-
-**HTSEQ**
-
-Per-sample HTSEQ-count results (**\*.htseq\_counts.txt**) and FPKM
-results (**\*.fpkm.txt**). Temporary methods files are found as
-\*.htseq-count.methods.txt
-
-**LIMMA**
-
-**mdsPlot.png**, **maPlot.*.png,volcanoPlot.*.png** are described in
-[Initial analysis of results](#initial-analysis-of-results)
-
-**results.*.txt,GSEA.input.*.txt** and \**GSEA.tStat.*.txt\*\* are
-describe in [Differential expression
-results](#differential-expression-results)
-
-**voomLimma.R**, **countFile.txt**, **Rparameters.txt**, and
-**sampleList.txt** are described in [Differential analysis
-input](#differential-analysis-input)
-
-See [LIMMA differential expression
-viewer](#limma-differential-expression-viewer) for a description of the
-VIEWERS directory.
-
-Other files in the LIMMA directory include contrastFiles.txt
-contrastsFile.txt, and limmaSampleList.txt which are used internally.
-limmaMethods.txt is an intermediate file describing methods. Out.tar.gz
-is used for testing purposes. The sessionInfo.txt file describe the R
-session working parameters and modules loaded. meanVariance.png is a
-plot for assessing quality of count data
-(<https://genomebiology.biomedcentral.com/articles/10.1186/gb-2014-15-2-r29>)
-
-**METHODS**
-
-The files here are described in [Methods Files](#methods-files).
-
-**SAMPLELIST**
-
-These files are used internally by the pipeline.
-
-**SIMPLE_DIFEX**
-
-**mdsPlot.normCPM.png** and \**simpleDEPlot.*.png\*\* are described in
-[Initial analysis of results](#initial-analysis-of-results)
-
-\**simpleDE.*.txt\*\* are describe in [Differential expression
-results](#differential-expression-results)
-
-**simpleDE.R**, **countFile.txt**, **Rparameters\_simple.txt**, and
-**sampleList.txt** are described in [Differential analysis
-input](#differential-analysis-input)
-
-See [Simple differential expression
-viewer](#simple-differential-expression-viewer) for a description of the
-VIEWERS directory.
-
-Other files in the SIMPLE\_DIFEX directory include contrastFiles.txt
-contrastsFile.txt, and limmaSampleList.txt which are used internally.
-simpleDifEx.methods.txt is an intermediate file describing methods.
-Out.tar.gz is used for testing purposes. The sessionInfo.txt file
-describe the R session working parameters and modules loaded.
+## Known Issues
+
+!!! caution "Adapter contamination"
+    This pipeline does not, at present, remove adapter sequences. If the
+    sequencing library is contaminated with adapters, CICERO runtimes can
+    increase exponentially. We recommend running FastQ files through a QC
+    pipeline such as FastQC and trimming adapters with tools such as
+    Trimmomatic if adapters are found.
+
+!!! caution "High coverage regions"
+    Certain cell types show very high transcription of certain loci, for
+    example, the immunoglobulin heavy chain locus in plasma cells. The
+    presence of very highly covered regions (typically 100,000-1,000,000+ X)
+    has an adverse effect on CICERO runtimes. Presently, we have no good
+    solution to this problem as strategies such as down-sampling may reduce
+    sensitivity over important regions of the genome.
+
+!!! bug "Interactive Visualizations Exon vs Intron Nomenclature"
+    When a codon is split over a fusion gene junction, the annotation
+    software marks the event as intronic when really, the event should be
+    exonic. We are working to fix this bug. In the mean time, if a fusion is
+    predicted to be in frame but the interactive plot shows "intronic", we
+    suggest the user blat the contig shown just below to clarify if the true
+    junction is either in the intron or exon.
 
 ## Frequently Asked Questions
 

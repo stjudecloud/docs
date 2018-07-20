@@ -46,7 +46,7 @@ dx login --noprojects
 ```
 
 !!! note
-    If you are a St. Jude internal user, you'll need to follow [this
+    If you are a St. Jude employee, you'll need to follow [this
     guide](https://wiki.dnanexus.com/Command-Line-Client/Login-and-Logout#Generating-an-authentication-token) to log in instead.
 
 ### Selecting a project
@@ -102,8 +102,7 @@ Cloud Platform tools:
     ![](../../images/guides/data/rapid-rnaseq-start.png)
 
 3.  Open up your terminal application and select the cloud workspace
-    with the same name as the tool you are trying to run (see
-    [selecting-a-project]{role="ref"}).
+    with the same name as the tool you are trying to run.
 
     ![](../../images/guides/data/select-rapid-rnaseq.png)
 
@@ -132,8 +131,7 @@ data request:
     ![](../../images/guides/data/retinoblastoma-request-name.png)
 
 2.  Open up your terminal application and select the cloud workspace
-    relevant to your data request as specified in
-    [selecting-a-project]{role="ref"}. For instance, in this case we
+    relevant to your data request. For instance, in this case we
     would type `#!bash dx select "Retinoblastoma Data"`.
 
     ![](../../images/guides/data/select-retinoblastoma.png)
