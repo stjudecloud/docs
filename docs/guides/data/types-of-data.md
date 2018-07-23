@@ -20,3 +20,7 @@ A BAM file (.bam) is the binary version of a SAM file. A SAM file (.sam) is a ta
 
 Today, we defer to the [official specification document][gvcf-spec] from the Broad Institute, as well as [this discussion][gvcf-diff-from-vcf] on the difference between VCF and gVCF files.
 
+
+[msgen]: https://azure.microsoft.com/en-us/services/genomics/
+[gvcf-spec]:https://software.broadinstitute.org/gatk/documentation/article?id=11004
+[gvcf-diff-from-vcf]: https://software.broadinstitute.org/gatk/documentation/article?id=4017
