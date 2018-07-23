@@ -13,7 +13,8 @@ extra_css:
 pages:
   - 'Getting Started': 'index.md'
   - 'Data Guides':
-      - 'Understanding Our Data': 'guides/data/data-overview.md'
+      - 'Data Access': 'guides/data/data-overview.md'
+      - 'Types of Data': 'guides/data/types-of-data.md'
       - 'Making a Data Request': 'guides/data/data-request.md'
       - 'Working with our Data': 'guides/data/run-your-tools.md'
       - 'Data Transfer Application': 'guides/data/data-transfer-app.md'
