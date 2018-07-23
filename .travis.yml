@@ -1,5 +1,4 @@
 language: python
 script:
-  - make install-deps
   - chmod +x bin/deploy.sh 
   - bin/deploy.sh

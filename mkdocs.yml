@@ -1,0 +1,59 @@
+site_name: 'St. Jude Cloud Documentation'
+theme:
+  name: 'material'
+  logo: 'images/stjude-logo-child-white.png'
+  font:
+      text: 'Ubuntu'
+      code: 'Ubuntu Mono'
+theme_dir: 'mkdocs-material/material'
+
+extra_css:
+  - css/extra.css
+
+pages:
+  - 'Getting Started': 'index.md'
+  - 'Data Guides':
+      - 'Data Access': 'guides/data/data-overview.md'
+      - 'Types of Data': 'guides/data/types-of-data.md'
+      - 'Making a Data Request': 'guides/data/data-request.md'
+      - 'Working with our Data': 'guides/data/run-your-tools.md'
+      - 'Data Transfer Application': 'guides/data/data-transfer-app.md'
+      - 'Command Line Interaction': 'guides/data/command-line.md'
+  - 'Tool Guides':
+      - 'Pecan PIE': 'guides/tools/pecan-pie.md'
+      - 'NeoepitopePred': 'guides/tools/neoepitope.md'
+      - 'ChIP-Seq Peak Calling': 'guides/tools/chipseq.md'
+      - 'Rapid RNA-Seq Fusion Detection': 'guides/tools/rapid-rnaseq.md'
+      - 'WARDEN Differential Expression Analysis': 'guides/tools/warden.md'
+      - 'cis-X': 'guides/tools/cis-x.md'
+  - 'Visualization Guides':
+      - 'BigWig Viewer': 'guides/visualizations/bigwig-viewer.md'
+      - 'Fusion Viewer': 'guides/visualizations/fusion-viewer.md'
+  - 'Frequently Asked Questions': 'faq.md'
+
+# Repository
+repo_name: 'stjude/sjcloud-docs'
+repo_url: 'https://github.com/stjude/sjcloud-docs'
+edit_uri: 'blob/cmcleod/overhaul/docs'
+
+# Copyright
+copyright: "Copyright &copy; 2017 - 2018 St. Jude Children's Research Hospital"
+
+# Extra
+extra:
+  social:
+    - type: 'facebook'
+      link: 'https://www.facebook.com/stjuderesearch/'
+    - type: 'twitter'
+      link: 'https://twitter.com/stjuderesearch?lang=en'
+    - type: 'linkedin'
+      link: 'https://www.linkedin.com/company/st-jude-childrens-research-hospital'
+    - type: 'github'
+      link: 'https://github.com/stjude'
+
+# Extensions
+markdown_extensions:
+    - admonition
+    - codehilite
+    - footnotes
+    - pymdownx.inlinehilite

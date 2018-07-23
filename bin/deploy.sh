@@ -17,13 +17,13 @@ eval `ssh-agent -s`
 ssh-add ~/SJCloudDeploy
 
 # Compile the HTML.
-if ! make html; then
+if ! mkdocs build; then
     echo "Building the HTML failed! This requires investigation."
     exit 1
 fi
 
 OUT_DIR="$HOME/Out"
-BUILD_DIR="`pwd`/build/html"
+BUILD_DIR="`pwd`/site"
 REPO=`git config remote.origin.url`
 SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
 SHA=`git rev-parse --verify HEAD`
