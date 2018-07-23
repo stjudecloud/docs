@@ -42,12 +42,12 @@
         }, 
         {
             "location": "/guides/data/types-of-data/", 
-            "text": "Data types\n\n\n\n\nNote\n\n\nThis section of the documentation is currently under construction. If your question is not answered here,\nplease \ncontact us\n!\n\n\n\n\nSt. Jude Cloud hosts both raw genomic data files and processed results files:\n\n\n\n\n\n\n\n\nFile Type\n\n\nDescription\n\n\nDetails\n\n\n\n\n\n\n\n\n\n\nBAM\n\n\nHG38 aligned BAM files produced by [Microsoft Genomics Service][msgen]\n\n\nClick here\n\n\n\n\n\n\ngVCF\n\n\n[Genomic VCF][gvcf-spec] files produced by [Microsoft Genomics Service][msgen]\n\n\nClick here\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBAM files\n\n\nA BAM file (.bam) is the binary version of a SAM file. A SAM file (.sam) is a tab-delimited text file that contains sequence alignment data.\n\n\ngVCF files\n\n\nToday, we defer to the [official specification document][gvcf-spec] from the Broad Institute, as well as [this discussion][gvcf-diff-from-vcf] on the difference between VCF and gVCF files.", 
+            "text": "Data types\n\n\n\n\nNote\n\n\nThis section of the documentation is currently under construction. If your question is not answered here,\nplease \ncontact us\n!\n\n\n\n\nSt. Jude Cloud hosts both raw genomic data files and processed results files:\n\n\n\n\n\n\n\n\nFile Type\n\n\nDescription\n\n\nDetails\n\n\n\n\n\n\n\n\n\n\nBAM\n\n\nHG38 aligned BAM files produced by \nMicrosoft Genomics Service\n\n\nClick here\n\n\n\n\n\n\ngVCF\n\n\nGenomic VCF\n files produced by \nMicrosoft Genomics Service\n\n\nClick here\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBAM files\n\n\nA BAM file (.bam) is the binary version of a SAM file. A SAM file (.sam) is a tab-delimited text file that contains sequence alignment data.\n\n\ngVCF files\n\n\nToday, we defer to the \nofficial specification document\n from the Broad Institute, as well as \nthis discussion\n on the difference between VCF and gVCF files.", 
             "title": "Types of Data"
         }, 
         {
             "location": "/guides/data/types-of-data/#data-types", 
-            "text": "Note  This section of the documentation is currently under construction. If your question is not answered here,\nplease  contact us !   St. Jude Cloud hosts both raw genomic data files and processed results files:     File Type  Description  Details      BAM  HG38 aligned BAM files produced by [Microsoft Genomics Service][msgen]  Click here    gVCF  [Genomic VCF][gvcf-spec] files produced by [Microsoft Genomics Service][msgen]  Click here", 
+            "text": "Note  This section of the documentation is currently under construction. If your question is not answered here,\nplease  contact us !   St. Jude Cloud hosts both raw genomic data files and processed results files:     File Type  Description  Details      BAM  HG38 aligned BAM files produced by  Microsoft Genomics Service  Click here    gVCF  Genomic VCF  files produced by  Microsoft Genomics Service  Click here", 
             "title": "Data types"
         }, 
         {
@@ -57,7 +57,7 @@
         }, 
         {
             "location": "/guides/data/types-of-data/#gvcf-files", 
-            "text": "Today, we defer to the [official specification document][gvcf-spec] from the Broad Institute, as well as [this discussion][gvcf-diff-from-vcf] on the difference between VCF and gVCF files.", 
+            "text": "Today, we defer to the  official specification document  from the Broad Institute, as well as  this discussion  on the difference between VCF and gVCF files.", 
             "title": "gVCF files"
         }, 
         {
