@@ -1,307 +1,1337 @@
 
 
+
+
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>HLA Typing and Neoepitope Prediction &mdash; St. Jude Cloud Documentation v1.0.0</title>
-  
-
-  
-  
-  
-  
-
-  
-
-  
-  
+<html lang="en" class="no-js">
+  <head>
     
-
-  
-
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Overview" href="overview.html" />
-    <link rel="prev" title="Frequently Asked Questions" href="../warden/faq.html" /> 
-
-  
-  <script src="../../../_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.9.2">
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+    
+      
+        <title>NeoepitopePred - St. Jude Cloud Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.4eccddb4.css">
+      
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#overview" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="St. Jude Cloud Documentation" class="md-header-nav__button md-logo">
           
-
+            <img src="../../../images/stjude-logo-child-white.png" width="40" height="28">
           
-            <a href="../../../index.html" class="icon icon-home"> St. Jude Cloud Documentation
-          
-
-          
-          </a>
-
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
+              <span class="md-header-nav__topic">
+                St. Jude Cloud Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                NeoepitopePred
+              </span>
             
-              <div class="version">
-                latest
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/stjude/sjcloud-docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      stjude/sjcloud-docs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../../images/stjude-logo-child-white.png" width="48" height="48">
+      
+    </span>
+    St. Jude Cloud Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/stjude/sjcloud-docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      stjude/sjcloud-docs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Data Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Data Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/data-overview/" title="Data Access" class="md-nav__link">
+      Data Access
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/types-of-data/" title="Types of Data" class="md-nav__link">
+      Types of Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/data-request/" title="Making a Data Request" class="md-nav__link">
+      Making a Data Request
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/run-your-tools/" title="Working with our Data" class="md-nav__link">
+      Working with our Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/data-transfer-app/" title="Data Transfer Application" class="md-nav__link">
+      Data Transfer Application
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/command-line/" title="Command Line Interaction" class="md-nav__link">
+      Command Line Interaction
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Tool Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Tool Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pecan-pie/" title="Pecan PIE" class="md-nav__link">
+      Pecan PIE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        NeoepitopePred
+      </label>
+    
+    <a href="./" title="NeoepitopePred" class="md-nav__link md-nav__link--active">
+      NeoepitopePred
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" title="Getting started" class="md-nav__link">
+    Getting started
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input-file-configuration" title="Input file configuration" class="md-nav__link">
+    Input file configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uploading-data" title="Uploading data" class="md-nav__link">
+    Uploading data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-tool" title="Running the tool" class="md-nav__link">
+    Running the tool
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selecting-parameters" title="Selecting parameters" class="md-nav__link">
+    Selecting parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hooking-up-inputs" title="Hooking up inputs" class="md-nav__link">
+    Hooking up inputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-the-workflow" title="Starting the workflow" class="md-nav__link">
+    Starting the workflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-run-progress" title="Monitoring run progress" class="md-nav__link">
+    Monitoring run progress
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-of-results" title="Analysis of results" class="md-nav__link">
+    Analysis of results
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-the-raw-results-files" title="Finding the raw results files" class="md-nav__link">
+    Finding the raw results files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpreting-results" title="Interpreting results" class="md-nav__link">
+    Interpreting results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" title="Frequently asked questions" class="md-nav__link">
+    Frequently asked questions
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../chipseq/" title="ChIP-Seq Peak Calling" class="md-nav__link">
+      ChIP-Seq Peak Calling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rapid-rnaseq/" title="Rapid RNA-Seq Fusion Detection" class="md-nav__link">
+      Rapid RNA-Seq Fusion Detection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../warden/" title="WARDEN Differential Expression Analysis" class="md-nav__link">
+      WARDEN Differential Expression Analysis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cis-x/" title="cis-X" class="md-nav__link">
+      cis-X
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Visualization Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Visualization Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../visualizations/bigwig-viewer/" title="BigWig Viewer" class="md-nav__link">
+      BigWig Viewer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../visualizations/fusion-viewer/" title="Fusion Viewer" class="md-nav__link">
+      Fusion Viewer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../faq/" title="Frequently Asked Questions" class="md-nav__link">
+      Frequently Asked Questions
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" title="Getting started" class="md-nav__link">
+    Getting started
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input-file-configuration" title="Input file configuration" class="md-nav__link">
+    Input file configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uploading-data" title="Uploading data" class="md-nav__link">
+    Uploading data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-tool" title="Running the tool" class="md-nav__link">
+    Running the tool
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selecting-parameters" title="Selecting parameters" class="md-nav__link">
+    Selecting parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hooking-up-inputs" title="Hooking up inputs" class="md-nav__link">
+    Hooking up inputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-the-workflow" title="Starting the workflow" class="md-nav__link">
+    Starting the workflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-run-progress" title="Monitoring run progress" class="md-nav__link">
+    Monitoring run progress
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-of-results" title="Analysis of results" class="md-nav__link">
+    Analysis of results
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-the-raw-results-files" title="Finding the raw results files" class="md-nav__link">
+    Finding the raw results files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpreting-results" title="Interpreting results" class="md-nav__link">
+    Interpreting results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" title="Frequently asked questions" class="md-nav__link">
+    Frequently asked questions
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
               </div>
             
           
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
               
-            
-            
-              <p class="caption"><span class="caption-text">General Guides</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">Frequently Asked Questions</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Data Guides</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../data/data-request.html">Make a Data Request</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data/fill-out-daa.html">Data Access Agreement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data/command-line.html">Getting Started with the Command Line</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data/upload-data.html">Uploading Data to St. Jude Cloud</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data/download-data.html">Downloading Data from St. Jude Cloud</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data/data-transfer-app.html">Data Transfer Application</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data/embargo-dates.html">Embargo Dates</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Tool Guides</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../pecan-pie/index.html">PeCan PIE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rapid-rnaseq/index.html">Rapid RNA-Seq Fusion Detection</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chipseq/index.html">ChIP-Seq Peak Calling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../warden/index.html">WARDEN Differential Expression Analysis</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">HLA Typing and Neoepitope Prediction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation.html">Pipeline Operation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="monitoring.html">Monitoring Run Progress</a></li>
-<li class="toctree-l2"><a class="reference internal" href="navigate.html">Navigating Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="results.html">Analysis of Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Visualization Guides</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../visualizations/bigwig.html">ProteinPaint BigWig Viewer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../visualizations/fusion-viewer.html">ProteinPaint Fusion Viewer</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Other Guides</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../internal/index.html">St. Jude Internal Employee Guide</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../index.html">St. Jude Cloud Documentation</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../../index.html">Docs</a> &raquo;</li>
-        
-      <li>HLA Typing and Neoepitope Prediction</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
-  <div class="section" id="hla-typing-and-neoepitope-prediction">
-<span id="neoepitope-index"></span><h1>HLA Typing and Neoepitope Prediction<a class="headerlink" href="#hla-typing-and-neoepitope-prediction" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://genome.ucsc.edu/FAQ/FAQreleases.html#release1"><img alt="HG19" src="https://img.shields.io/badge/Genome-HG19%20(GRCh37)-green.svg" /></a></p>
-<ul class="simple">
-<li><strong>Authors</strong>: Ti-Cheng Chang</li>
-<li><strong>Publication</strong>: <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/28854978">The Neoepitope Landscape in Pediatric Cancers. Genome Medicine. 2017. 9.1: 78</a>.</li>
-<li><strong>Technical Support</strong>: <a class="reference external" href="https://stjude.cloud/contact/">Contact Us</a></li>
-</ul>
-<h2>Introduction</h2><p>Cancers are caused by somatically acquired alterations including
-single nucleotide variations (SNVs), small insertion/deletions (indels),
-translocations, and other types of rearrangements. The genes affected by these
-mutations may produce altered proteins, some of which may lead to the emergence
-of tumor-specific immunogenic epitopes. We developed an analytical workflow for
-identification of putative neoepitopes based on somatic missense mutations and
-gene fusions using whole genome sequencing data. The workflow has been used to
-characterize neoepitope landscape of 23 subtypes of pediatric cancer in the
-Pediatric Cancer Genome Project <a class="footnote-reference" href="#id2" id="id1">[1]</a>.</p>
-<h2>Content</h2><div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="overview.html#inputs">Inputs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="overview.html#outputs">Outputs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="overview.html#theory">Theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="overview.html#process">Process</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="operation.html">Pipeline Operation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="operation.html#uploading-data">Uploading Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation.html#input-file-configuration">Input File Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation.html#parameter-configuration">Parameter Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation.html#running-the-pipeline">Running the Pipeline</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="monitoring.html">Monitoring Run Progress</a></li>
-<li class="toctree-l1"><a class="reference internal" href="navigate.html">Navigating Results</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="navigate.html#raw-result-files">Raw result files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="navigate.html#custom-visualization-results">Custom visualization results</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="results.html">Analysis of Results</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="results.html#hla-typing">HLA typing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="results.html#neoepitope-prediction">Neoepitope prediction</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
-</ul>
-</div>
-<p><strong>References</strong></p>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Downing JR, Wilson RK, Zhang J, et al. The Pediatric Cancer Genome Project. Nature genetics. 2012;44(6):619-622. doi:10.1038/ng.2287.</td></tr>
+                
+                  <a href="https://github.com/stjude/sjcloud-docs/blob/cmcleod/overhaul/docs/guides/tools/neoepitope.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>NeoepitopePred</h1>
+                
+                <table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Authors</strong></td>
+<td>Ti-Cheng Chang</td>
+</tr>
+<tr>
+<td><strong>Publication</strong></td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/28854978">The Neoepitope Landscape in Pediatric Cancers. Genome Medicine. 2017. 9.1: 78</a>.</td>
+</tr>
+<tr>
+<td><strong>Technical Support</strong></td>
+<td><a href="https://stjude.cloud/contact/">Contact Us</a></td>
+</tr>
 </tbody>
 </table>
+<p>Cancers are caused by somatically acquired alterations including single 
+nucleotide variations (SNVs), small insertion/deletions (indels),
+translocations, and other types of rearrangements. The genes affected by
+these mutations may produce altered proteins, some of which may lead to
+the emergence of tumor-specific immunogenic epitopes. We developed an
+analytical workflow for identification of putative neoepitopes based on
+somatic missense mutations and gene fusions using whole genome
+sequencing data. The workflow has been used to characterize neoepitope
+landscape of 23 subtypes of pediatric cancer in the Pediatric Cancer
+Genome Project<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>.</p>
+<h2 id="overview">Overview</h2>
+<p><strong>Inputs</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FastQ files (<em>required</em> if using FastQ inputs)</td>
+<td>Input file</td>
+<td>Gzipped FastQ files generated by experiment.</td>
+<td>Sample_R1.fastq.gz and Sample_R2.fastq.gz</td>
+</tr>
+<tr>
+<td>BAM files (<em>required</em> if using BAM inputs)</td>
+<td>Input file</td>
+<td>BAM files aligned against HG19/Hg38 (WGS, WES or RNA-Seq).</td>
+<td>Sample.bam</td>
+</tr>
+<tr>
+<td>BAM indices (<em>required</em> if using BAM inputs)</td>
+<td>Input file</td>
+<td>Corresponding BAM index of the BAM files above.</td>
+<td>Sample.bam.bai</td>
+</tr>
+<tr>
+<td>Mutation file (<em>required</em>)</td>
+<td>Input file</td>
+<td>File describing the mutations present in the sample (special format, see below).</td>
+<td>*.txt (tab-delimited)</td>
+</tr>
+<tr>
+<td>SNV or fusion</td>
+<td>Parameter</td>
+<td>Specify the mutation file contains SNV or gene fusion.</td>
+<td>SNV</td>
+</tr>
+<tr>
+<td>Peptide size</td>
+<td>Parameter</td>
+<td>Size of the peptide.</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Affinity threshold</td>
+<td>Parameter</td>
+<td>Affinity cutoff for epitope prediction report.</td>
+<td>500</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outputs</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Epitope affinity prediction (html)</td>
+<td>Epitope affinity. The peptide with affinity &lt; cutoff will be highlighted.</td>
+</tr>
+<tr>
+<td>Epitope affinity prediction (xlsx)</td>
+<td>Excel tables for the infomation of all epitopes</td>
+</tr>
+<tr>
+<td>Affinity (raw output)</td>
+<td>Epitope affinity</td>
+</tr>
+<tr>
+<td>Peptide sequence (raw output)</td>
+<td>Peptide sequences in Fasta format</td>
+</tr>
+</tbody>
+</table>
+<p><strong>HLA Typing Algorithm</strong></p>
+<p>The HLA typing algorithm is used to predict the HLA class I alleles.
+Users can either provide FastQ (paired or single end reads) or a BAM
+file as input. When using a BAM file as input, the reads surrounding the
+HLA loci and unmapped reads will be extracted. The reads will be fed
+into Optitype for HLA typing. The default settings for Optitype are
+used. The output of the HLA type can be combined with the our epitope
+detection algorithm to perform affinity prediction of neoepitopes.</p>
+<p>If you use <strong>FastQ</strong> files as input:  </p>
+<ol>
+<li>The input FastQs will be aligned against the Optitype HLA reference
+    sequences using razers3 (see <a href="https://github.com/FRED-2/OptiType">https://github.com/FRED-2/OptiType</a>).</li>
+<li>The fished FastQs will be used for HLA typing using Opitype.</li>
+</ol>
+<p>If you use <strong>BAM</strong> files as input:  </p>
+<ol>
+<li>The reads falling within the HLA loci and their paralogous loci will
+    be extracted.</li>
+<li>The reads unmapped to the human genome will be extracted.</li>
+<li>The reads from step 1 and 2 will be combined and deduplicated (in
+    FastQ format).</li>
+<li>The input FastQs will be aligned against the Optitype HLA reference
+    sequences using razers3 (see <a href="https://github.com/FRED-2/OptiType">https://github.com/FRED-2/OptiType</a>).</li>
+<li>The fished FastQs will be used for HLA typing using Opitype.</li>
+</ol>
+<p><strong>Epitope Prediction Algorithm</strong></p>
+<p>The epitope prediction algorithm first extracts peptides covering an array
+of tiling peptides (size defined by users) overlapping each missense
+mutation or gene fusion. Fusion junctions can be identified using RNA-Seq
+by fusion detection tools (Li et. al, unpublished). NetMHCcons<sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup> is subsequently 
+used to predict affinities of the peptide array for each HLA receptor in 
+each sample. The neoepitope with affinity lower than the threshold will 
+be highlighted in output file (default 500 nM).</p>
+<ol>
+<li>Check the version of the genomic position of the input SNV/fusion
+    file.</li>
+<li>Lift over the genomic coordinations if the reference genomic
+    position is not HG19. Currently, the internal genome annotation was
+    based on HG19 and the genome coordinates of the mutation files will
+    be adjusted to HG19 for peptide extraction.</li>
+<li>Extract the peptide flanking the mutations.</li>
+<li>Run NetMHCcons to obtain the affinity prediction of the peptides.</li>
+<li>Produce the affinity report of each peptide.</li>
+</ol>
+<h2 id="getting-started">Getting started</h2>
+<p>To get started, you need to navigate to the <a href="https://platform.stjude.cloud/tools/neoepitope">NeoepitopePred tool page</a>. You'll need to click
+the "Start" button in the left hand pane. This creates a cloud workspace
+in DNAnexus with the same name as the tool. After this, you will be able 
+to upload your input files to that workspace.</p>
+<p><img alt="" src="../../../images/guides/tools/neoepitope/click-start.gif" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you can't see the "Start" button, one of these two scenarios is likely the case:</p>
+<ul>
+<li>You see three buttons on the left sidebar instead of one. In this case,
+  you've already clicked the "Start" button previously, and a cloud workspace has
+  already been created for you. In this case, you're good! You can move
+  on to the next section.</li>
+<li>If you cannot see <em>any</em> buttons on the left side, you probably have not
+  logged in yet. If you see a sentence that says "Log in to launch this 
+  tool", simply login and try again.</li>
+</ul>
+<p>If neither of these are the case and you still can't click "Start",
+<a href="https://stjude.cloud/contact">contact us</a>.</p>
 </div>
+<h3 id="input-file-configuration">Input file configuration</h3>
+<p>Users need to provide a mutation file for SNV or gene fusion. The format
+of the mutation file is shown in the following example. The file can be
+prepared in Excel and saved as a tab-delimited text file to use as
+input.</p>
+<p>The HLA alleles for testing will be derived from the HLA typing module
+using the workflow. The peptide size and affinity cutoff can be modified
+by users. </p>
+<p><strong>Mutation file format</strong></p>
+<table>
+<thead>
+<tr>
+<th>GeneName</th>
+<th>Sample</th>
+<th>Chr</th>
+<th>Postion_hg19</th>
+<th>Class</th>
+<th>AAChange</th>
+<th>mRNA_acc</th>
+<th>ReferenceAllele</th>
+<th>MutantAllele</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gene1</td>
+<td>SampleA</td>
+<td>chr10</td>
+<td>106150600</td>
+<td>missense</td>
+<td>R663H</td>
+<td>NM_00101</td>
+<td>A</td>
+<td>T</td>
+</tr>
+<tr>
+<td>Gene2</td>
+<td>SampleA</td>
+<td>chr2</td>
+<td>32330151</td>
+<td>missense</td>
+<td>N329N</td>
+<td>NM_00102</td>
+<td>T</td>
+<td>G</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Notes on preparing the above file</p>
+<ul>
+<li>The chromosome requires a 'chr' prefix.</li>
+<li>The position requires a suffix of HG19/HG38 to indicate the human genome assembly version.</li>
+<li>Only the missense mutations/gene fusion is supported currently and
+    the other types of mutations will not be processed.</li>
+</ul>
+</div>
+<p><strong>Mutation file example</strong></p>
+<p><img alt="" src="../../../images/guides/tools/neoepitope/mutation-file-example.png" /></p>
+<h2 id="uploading-data">Uploading data</h2>
+<p>NeoepitopePred takes the following files as input:</p>
+<ul>
+<li>A pair of Gzipped FastQ files or an HG19/HG38 aligned BAM file. These can be
+  generated from whole genome sequencing, whole exome sequencing, or RNA-Seq. </li>
+<li>A file describing the mutations in a sample. </li>
+</ul>
+<p>You can upload these files using the <a href="../../data/data-transfer-app/">data transfer application</a>
+or by uploading them through <a href="../../data/command-line/">the command line</a>.
+Both of the guides linked here will contain more details on how to upload
+data using that method, so we defer to those guides here.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you plan to upload data through the St. Jude Cloud Data Transfer application
+(recommended), you can click the "Upload Data" button in the left panel. If you
+have not already downloaded the app, do so by clicking "Download app". Once you
+have the app, you can click "Open app" to open the app with the tool's cloud 
+workspace already opened and ready to drag-and-drop files into it!</p>
+<p>For more information, check out the <a href="../../data/data-transfer-app/">data transfer application</a> guide.</p>
+</div>
+<h2 id="running-the-tool">Running the tool</h2>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>This pipeline assumes HG19 coordinates in the mutation file. If the
+coordinates are based on HG38, the coordinates will lifted over to HG19
+to perform epitope affinity prediction.</p>
+</div>
+<p>Once you've uploaded data to your cloud workspace, 
+click "Launch Tool" on the <a href="https://platform.stjude.cloud/tools/neoepitope">tool's landing page</a>. 
+A dropdown will present the different presets for running the workflow. Here, you can select whether you wish to start with FastQ files or a BAM file.</p>
+<p><img alt="" src="../../../images/guides/tools/neoepitope/launch-tool.gif" /></p>
+<h3 id="selecting-parameters">Selecting parameters</h3>
+<p>There are a number of other parameters that can be customized. To 
+see the options available, click the gear cog next to the 
+"Neoepitope Prediction" substep. For a full list of the parameters and their
+descriptions, see <a href="#input">the input section</a> (specifically, you are 
+looking at the items in the table labeled "parameters").</p>
+<p><img alt="" src="../../../images/guides/tools/neoepitope/change-parameters.gif" /></p>
+<h3 id="hooking-up-inputs">Hooking up inputs</h3>
+<p>Next, you'll need to hook up the FastQ/BAM and mutation files you uploaded in 
+<a href="#uploading-data">the upload data section</a>. You can do this by 
+clicking on the <code class="codehilite">BAM alignment file</code> and <code class="codehilite">BAM index file</code> and <code class="codehilite">Mutation array</code> slots and
+selecting the respective files.</p>
+<p><img alt="" src="../../../images/guides/tools/neoepitope/hookup-inputs.gif" /></p>
+<h3 id="starting-the-workflow">Starting the workflow</h3>
+<p>Once your input files are hooked up, you should be able to start the workflow
+by clicking the "Run as Analysis..." button in the top right hand corner
+of the workflow dialog.</p>
+<p><img alt="" src="../../../images/guides/tools/neoepitope/run-analysis.gif" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you cannot click this button, please ensure that all of the inputs are correctly hooked up (see <a href="#hooking-up-inputs">hooking up inputs</a>).</p>
+<p>If you're still have trouble, please <a href="https://stjude.cloud/contact">contact us</a> and include
+a screenshot of the workflow screen above.</p>
+</div>
+<h2 id="monitoring-run-progress">Monitoring run progress</h2>
+<p>Once you have started one or more NeoepitopePred runs, you can safely close your
+browser and come back later to check the status of the jobs. To do this,
+navigate to the <a href="https://platform.stjude.cloud/tools/neoepitope">tool's landing page</a>. 
+Next, click "View Results" then select the "View Running Jobs" option. 
+You will be redirected to the job monitoring page. Each job you kicked off
+gets one row in this table.</p>
+<p><img alt="" src="../../../images/guides/tools/neoepitope/monitoring-jobs.gif" /> </p>
+<p>You can click the "+" on any of the runs to check 
+the status of individual steps of the ChIP-Seq pipeline.
+Other information, such as time, cost of individual steps in the pipeline, 
+and even viewing the job logs can accessed by clicking around the sub-items.</p>
+<p><img alt="" src="../../../images/guides/tools/neoepitope/job-detailed-view.gif" /> </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Power users can view the <a href="https://wiki.dnanexus.com/UI/Jobs">DNAnexus Job Monitoring Tutorial</a> and the <a href="https://wiki.dnanexus.com/Command-Line-Client/Monitoring-Executions">DNAnexus Command Line Tutorial for Job Monitoring</a> for advanced capabilities for monitoring jobs.</p>
+</div>
+<h2 id="analysis-of-results">Analysis of results</h2>
+<p>Each tool in St. Jude Cloud produces a visualization that makes understanding
+results more accessible than working with excel spreadsheet or tab delimited
+files. This is the primary way we recommend you work with your results. We also
+include the raw output files for you to dig into if the visualization is not 
+sufficient to answer your research question.</p>
+<h3 id="finding-the-raw-results-files">Finding the raw results files</h3>
+<p>Navigate to the <a href="https://platform.stjude.cloud/tools/neoepitopepred">tool's landing page</a>. 
+In the left hand pane, click "View Results" then "View Results Files". You will
+be taken to the filesystem view your cloud workspace. This is similar to your the
+filesystem on your computer, and you can do many common operations such as deleting,
+renaming, and moving files.</p>
+<p><img alt="" src="../../../images/guides/tools/neoepitope/neo-pred-results.png" /> </p>
+<h3 id="interpreting-results">Interpreting results</h3>
+<p><strong>HLA typing</strong></p>
+<p>The output of this app contain the prediction of the HLA class I alleles
+from OptiType.</p>
+<ul>
+<li>A folder stamped with the time will present in the output folder
+  (optitype), which contains the raw output.</li>
+</ul>
+<p><img alt="" src="../../../images/guides/tools/neoepitope/hlatype-result.png" /></p>
+<ul>
+<li>The file contains the predicted HLA alleles of the sample.</li>
+</ul>
+<p><img alt="" src="../../../images/guides/tools/neoepitope/hlatype-result2.png" /></p>
+<p><strong>Neoepitope prediction</strong></p>
+<div class="admonition todo">
+<p class="admonition-title">Todo</p>
+<p>Cleanup the formatting of this section.</p>
+</div>
+<p>The output contains one summary HTML, one folder with raw output and one
+folder with outputs in Excel formats:</p>
+<p><img alt="" src="../../../images/guides/tools/neoepitope/epitope-result.png" /></p>
+<p>Epitope_affinity_prediction.html:<br />
+<em> This file provides a summary of the epitope prediction that can be
+  visualized directly from web browser.
+</em> The peptides with affinity lower than user-defined cutoff will be
+  highlighted in green in the webpage.</p>
+<p><img alt="" src="../../../images/guides/tools/neoepitope/epitope-result2.png" /></p>
+<p>Raw_output: this folder contains the raw output of the affinity
+prediction.</p>
+<p><img alt="" src="../../../images/guides/tools/neoepitope/epitope-result3.png" /></p>
+<p>There will two major types files present here:</p>
+<p><img alt="" src="../../../images/guides/tools/neoepitope/epitope-result4.png" /></p>
+<p>affinity.out: these files are the prediction results from the
+    netMHCcons for each peptide.</p>
+<p><img alt="" src="../../../images/guides/tools/neoepitope/epitope-result5.png" /></p>
+<p>The following columns will be shown in the output:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gene name</td>
+<td>the name of the genes</td>
+</tr>
+<tr>
+<td>Sample</td>
+<td>the name of the samples</td>
+</tr>
+<tr>
+<td>Chromosome (chr)</td>
+<td>the chromosome location of the variation</td>
+</tr>
+<tr>
+<td>Position</td>
+<td>the chromosomal position of the variation. Currently, the position will be lifted over to HG19 to ensure correct translation of peptid sequences based on the internal annotation database of the pipeline. Therefore, the position will be labeled as HG19.</td>
+</tr>
+<tr>
+<td>Class</td>
+<td>class of the varitaion</td>
+</tr>
+<tr>
+<td>Reference allele</td>
+<td>reference allele at the position</td>
+</tr>
+<tr>
+<td>Mutant allele</td>
+<td>mutated allele at the position</td>
+</tr>
+<tr>
+<td>mRNA_acc</td>
+<td>NCBI accession number of the mRNA</td>
+</tr>
+<tr>
+<td>Allele</td>
+<td>HLA allele tested</td>
+</tr>
+<tr>
+<td>Peptide</td>
+<td>the neoepitope sequences tested</td>
+</tr>
+<tr>
+<td>Gene_variant</td>
+<td>the gene and variant residues</td>
+</tr>
+<tr>
+<td>1-log50k</td>
+<td>Prediction score from netMHCcons</td>
+</tr>
+<tr>
+<td>nM</td>
+<td>Affinity as IC50 values in nM</td>
+</tr>
+<tr>
+<td>%Rank</td>
+<td>% Rank of prediction score to a set of 200.000 random natural 9mer peptides</td>
+</tr>
+<tr>
+<td>HLAtype</td>
+<td>All of the hla alleles predicted in the specific sample</td>
+</tr>
+</tbody>
+</table>
+<p>flanking.seq: these files contain the sequences used for the prediction.</p>
+<p><img alt="" src="../../../images/guides/tools/neoepitope/epitope-result6.png" /></p>
+<p>XLSX: this folder contains the raw output of the affinity prediction as
+described above in Excel files. The files can be downloaded and opened
+with Excel for downstream filtering and analyses</p>
+<p><img alt="" src="../../../images/guides/tools/neoepitope/epitope-result7.png" /></p>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<p>None yet! If you have any questions not covered here, feel free to reach
+out on <a href="https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-contact/">our contact form</a>.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Downing JR, Wilson RK, Zhang J, et al. The Pediatric Cancer Genome
+Project. Nature genetics. 2012;44(6):619-622.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Szolek A, Schubert B, Mohr C, Sturm M, Feldhahn M, Kohlbacher O:
+OptiType: precision HLA typing from next-generation sequencing
+data. Bioinformatics 2014, 30:3310-3316.&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Karosiene E, Lundegaard C, Lund O, Nielsen M: NetMHCcons: a
+consensus method for the major histocompatibility complex class I
+predictions. Immunogenetics 2012, 64:177-186.&#160;<a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                
+                  
+                
+              
+              
+                
 
 
-           </div>
-           
+              
+            </article>
           </div>
-          <footer>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="overview.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="../warden/faq.html" class="btn btn-neutral" title="Frequently Asked Questions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../pecan-pie/" title="Pecan PIE" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Pecan PIE
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../chipseq/" title="ChIP-Seq Peak Calling" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                ChIP-Seq Peak Calling
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
     </div>
   
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2016, 2017, 2018 St. Jude Developers.
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
-        </div>
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 - 2018 St. Jude Children's Research Hospital
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and a modified version of
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
       </div>
-
-    </section>
-
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://www.facebook.com/stjuderesearch/" class="md-footer-social__link fa fa-facebook"></a>
+    
+      <a href="https://twitter.com/stjuderesearch?lang=en" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/st-jude-childrens-research-hospital" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://github.com/stjude" class="md-footer-social__link fa fa-github"></a>
+    
   </div>
-  
 
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../../',
-            VERSION:'latest',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.ec5be3af.js"></script>
+      
+      <script>app.initialize({version:"0.17.4",url:{base:"../../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
 </html>

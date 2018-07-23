@@ -1,0 +1,14 @@
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+img {
+    margin: auto;
+    text-align: center;
+    display: flex; 
+    justify-content: center;
+}
+
+.material-icons.material-icons-sjcloud-custom { 
+    font-size: 1.6em;
+    display: inline-flex;
+    vertical-align: middle; 
+}

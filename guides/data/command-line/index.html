@@ -1,0 +1,941 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.9.2">
+    
+    
+      
+        <title>Command Line Interaction - St. Jude Cloud Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.4eccddb4.css">
+      
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#getting-started" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="St. Jude Cloud Documentation" class="md-header-nav__button md-logo">
+          
+            <img src="../../../images/stjude-logo-child-white.png" width="40" height="28">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                St. Jude Cloud Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Command Line Interaction
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/stjude/sjcloud-docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      stjude/sjcloud-docs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../../images/stjude-logo-child-white.png" width="48" height="48">
+      
+    </span>
+    St. Jude Cloud Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/stjude/sjcloud-docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      stjude/sjcloud-docs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Data Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Data Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data-overview/" title="Data Access" class="md-nav__link">
+      Data Access
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types-of-data/" title="Types of Data" class="md-nav__link">
+      Types of Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data-request/" title="Making a Data Request" class="md-nav__link">
+      Making a Data Request
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../run-your-tools/" title="Working with our Data" class="md-nav__link">
+      Working with our Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data-transfer-app/" title="Data Transfer Application" class="md-nav__link">
+      Data Transfer Application
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Command Line Interaction
+      </label>
+    
+    <a href="./" title="Command Line Interaction" class="md-nav__link md-nav__link--active">
+      Command Line Interaction
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-quick-tour" title="A quick tour" class="md-nav__link">
+    A quick tour
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging-in" title="Logging in" class="md-nav__link">
+    Logging in
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecting-a-project" title="Selecting a project" class="md-nav__link">
+    Selecting a project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-useful-commands" title="Some useful commands" class="md-nav__link">
+    Some useful commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uploading-data" title="Uploading data" class="md-nav__link">
+    Uploading data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-data" title="Downloading data" class="md-nav__link">
+    Downloading data
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Tool Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Tool Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/pecan-pie/" title="Pecan PIE" class="md-nav__link">
+      Pecan PIE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/neoepitope/" title="NeoepitopePred" class="md-nav__link">
+      NeoepitopePred
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/chipseq/" title="ChIP-Seq Peak Calling" class="md-nav__link">
+      ChIP-Seq Peak Calling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/rapid-rnaseq/" title="Rapid RNA-Seq Fusion Detection" class="md-nav__link">
+      Rapid RNA-Seq Fusion Detection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/warden/" title="WARDEN Differential Expression Analysis" class="md-nav__link">
+      WARDEN Differential Expression Analysis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/cis-x/" title="cis-X" class="md-nav__link">
+      cis-X
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Visualization Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Visualization Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../visualizations/bigwig-viewer/" title="BigWig Viewer" class="md-nav__link">
+      BigWig Viewer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../visualizations/fusion-viewer/" title="Fusion Viewer" class="md-nav__link">
+      Fusion Viewer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../faq/" title="Frequently Asked Questions" class="md-nav__link">
+      Frequently Asked Questions
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-quick-tour" title="A quick tour" class="md-nav__link">
+    A quick tour
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging-in" title="Logging in" class="md-nav__link">
+    Logging in
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecting-a-project" title="Selecting a project" class="md-nav__link">
+    Selecting a project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-useful-commands" title="Some useful commands" class="md-nav__link">
+    Some useful commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uploading-data" title="Uploading data" class="md-nav__link">
+    Uploading data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-data" title="Downloading data" class="md-nav__link">
+    Downloading data
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/stjude/sjcloud-docs/blob/cmcleod/overhaul/docs/guides/data/command-line.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="getting-started">Getting started</h1>
+<p>Before you begin interacting with St. Jude Cloud Platform from the
+command line, you'll need to understand some details on the underlying
+architecture of the platform. The St. Jude Cloud Platform is built on
+top of a genomics cloud ecosystem provided by <a href="https://www.dnanexus.com/">DNAnexus</a>. 
+For a comprehensive overview of how DNAnexus works, see 
+<a href="https://www.dnanexus.com/product-overview">this page</a>.</p>
+<h2 id="overview">Overview</h2>
+<p>Workspaces in DNAnexus are organized by projects, which are essentially
+folders in the cloud. Each data request and tool in St. Jude Cloud
+creates its own unique cloud workspace (DNAnexus project). For instance,
+a data request creates a DNAnexus project behind the scenes with the
+same name as the request name you specify when you request data.</p>
+<h2 id="installation">Installation</h2>
+<p>Open-source software provided by DNAnexus called the <a href="https://github.com/dnanexus/dx-toolkit">dx-toolkit</a> is
+used to interact with the St. Jude Cloud Platform from the command line.
+You can use this to create these projects, upload and download data, and
+many other operations. You'll need to install that software on your
+computer by following <a href="https://wiki.dnanexus.com/Downloads#DNAnexus-Platform-SDK">this guide</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>A quickstart to getting up and running with the dx-toolkit:</p>
+<ol>
+<li>Install Python 2.7.13+. Note that using the system-level Python is
+    usually not a good idea (by default, system level Python is
+    typically too old/does not support the latest security protocols
+    required). You can install using <a href="https://conda.io/docs/user-guide/getting-started.html">Anaconda</a> (recommended) or using
+    the default <a href="https://www.python.org/downloads/">Python installer</a>.</li>
+<li>Run <code class="codehilite">pip install dxpy</code>.</li>
+<li>Type <code class="codehilite">dx --help</code> at the command line.</li>
+</ol>
+</div>
+<h2 id="a-quick-tour">A quick tour</h2>
+<h3 id="logging-in">Logging in</h3>
+<p>To log in using the dx-toolkit, run the following command:</p>
+<div class="codehilite"><pre><span></span>dx login --noprojects
+<span class="c1"># enter username and password when prompted</span>
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are a St. Jude employee, you'll need to follow <a href="https://wiki.dnanexus.com/Command-Line-Client/Login-and-Logout#Generating-an-authentication-token">this
+guide</a> to log in instead.</p>
+</div>
+<h3 id="selecting-a-project">Selecting a project</h3>
+<p>First, you'll need to choose which cloud workspace you would like to
+access. This depends on if you are downloading data from a request or
+working with input/output files from a tool. You can see the workspaces
+available to you by running the following command in your terminal:</p>
+<div class="codehilite"><pre><span></span>dx <span class="k">select</span>
+</pre></div>
+
+
+<p>This will present with a prompt similar to the below screenshot. A list
+of your available cloud workspaces will be shown with a number out to
+the left of each. You should enter the number corresponding to the
+workspace you are wanting to interact with. In the example below, the
+user has selected the Rapid RNA-Seq tool.</p>
+<p><img alt="" src="../../../images/guides/data/select-project.png" /></p>
+<h3 id="some-useful-commands">Some useful commands</h3>
+<p>Moving data back and forth between the cloud and your local computer is
+simple once you have selected the correct project for your tool.</p>
+<p>You will find that many common linux commands with <code class="codehilite"><span class="n">dx</span></code> prepended.</p>
+<div class="codehilite"><pre><span></span><span class="c1"># list available files for the tool for the main folder</span>
+dx ls
+
+<span class="c1"># list all available files for the tool</span>
+dx find .
+
+<span class="c1"># list all commands</span>
+dx --help
+</pre></div>
+
+
+<h2 id="uploading-data">Uploading data</h2>
+<p>You can use the following process to upload data to be used by St. Jude
+Cloud Platform tools:</p>
+<ol>
+<li>
+<p>First, click "View" on the tool you'd like to run from <a href="https://stjude.cloud/tools.html">this
+    page</a>. In this example, we will
+    choose the Rapid RNA-Seq tool.</p>
+</li>
+<li>
+<p>If you have not already, click "Start" on the tool you'd like to
+    run. This will create a cloud workspace for you to upload your
+    data to with the same name as the tool.</p>
+<p><img alt="" src="../../../images/guides/data/rapid-rnaseq-start.png" /></p>
+</li>
+<li>
+<p>Open up your terminal application and select the cloud workspace
+    with the same name as the tool you are trying to run.</p>
+<p><img alt="" src="../../../images/guides/data/select-rapid-rnaseq.png" /></p>
+</li>
+<li>
+<p>Last, navigate to the local files you'd like to upload to the cloud
+    and use the <code class="codehilite">dx upload</code> command as specified in
+    [upload-download-data]{role="ref"} to upload your data to St. Jude
+    Cloud.</p>
+<p><img alt="" src="../../../images/guides/data/rapid-rnaseq-upload-data.png" /></p>
+</li>
+</ol>
+<h2 id="downloading-data">Downloading data</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>To download data from a St. Jude Cloud data request, you must have
+indicated that you wished to download the data in your Data Access
+Agreement (DAA) during your submission. Any downloading of St. Jude data
+without completing this step is strictly PROHIBITED.</p>
+</div>
+<p>You can use the following steps to download data from a St. Jude Cloud
+data request:</p>
+<ol>
+<li>
+<p>Complete a data request using the St. Jude Cloud Platform. In this
+    example, we've created a request with the name "Retinoblastoma
+    Data".</p>
+<p><img alt="" src="../../../images/guides/data/retinoblastoma-request-name.png" /></p>
+</li>
+<li>
+<p>Open up your terminal application and select the cloud workspace
+    relevant to your data request. For instance, in this case we
+    would type <code class="codehilite">dx <span class="k">select</span> <span class="s2">&quot;Retinoblastoma Data&quot;</span></code>.</p>
+<p><img alt="" src="../../../images/guides/data/select-retinoblastoma.png" /></p>
+</li>
+<li>
+<p>You can use typical commands like <code class="codehilite">dx ls</code>,
+    <code class="codehilite">dx <span class="nb">pwd</span></code>, and <code class="codehilite">dx <span class="nb">cd</span></code> to navigate around
+    your cloud folder as you would a local folder. Your project may look
+    different based on what data you requested and whether you were
+    previously approved to access the data. Your data should either be
+    in the <strong>restricted</strong> folder (if this is your first time
+    requesting access) or the <strong>immediate</strong> folder (if you
+    were previously granted access permission).</p>
+<p><img alt="" src="../../../images/guides/data/navigate-data-request.png" /></p>
+</li>
+<li>
+<p>In the root of every data request is a file called
+    <code class="codehilite">SAMPLE_INFO.txt</code>. This should contain all of the
+    information about the samples you checked out as well as the
+    associated metadata we provide.</p>
+</li>
+<li>
+<p>To download data from the cloud to local storage, use the
+    <code class="codehilite">dx download</code> command as specified in
+    [upload-download-data]{role="ref"}. For instance, if I wanted to
+    download all of the BAM files to my local computer, I would type
+    <code class="codehilite">dx download immediate/bam/*</code>.</p>
+<p><img alt="" src="../../../images/guides/data/download-bams.png" /></p>
+</li>
+</ol>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../data-transfer-app/" title="Data Transfer Application" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Data Transfer Application
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../tools/pecan-pie/" title="Pecan PIE" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Pecan PIE
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 - 2018 St. Jude Children's Research Hospital
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and a modified version of
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://www.facebook.com/stjuderesearch/" class="md-footer-social__link fa fa-facebook"></a>
+    
+      <a href="https://twitter.com/stjuderesearch?lang=en" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/st-jude-childrens-research-hospital" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://github.com/stjude" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.ec5be3af.js"></script>
+      
+      <script>app.initialize({version:"0.17.4",url:{base:"../../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
