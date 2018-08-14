@@ -54,7 +54,7 @@ Now, you have successfully submitted your data request. Your request
 will be sent to the respective data access committees for evaluation.
 You should expect to hear from us within a week or two on average. 
 
-### Data access agreement
+## Data access agreement
 
 Broadly speaking, the data access agreement (DAA) is a legal document
 binding the requestor and the requestor's institution to terms about
@@ -63,7 +63,7 @@ unless terms are found to be in conflict with the institution's state law.
 Filling out the Data Access Agreement carefully and completely is crucial 
 to having your request filled promptly.
 
-#### Filling out the DAA
+### Filling out the DAA
 
 All Data Access Agreements require the following 5 items:
 
@@ -96,7 +96,7 @@ All Data Access Agreements require the following 5 items:
     * Here, describe your research question and it's biological significance. The Contemplated Use will be evaluated by the Data Access Committees based on their own set of protocols. 
     * Please contact us if you have any questions regarding the protocols of the approval process. 
 
-#### Data download permission
+### Data download permission
 
 Additionally, *if and only if* you would like to *download* the data,
 you will also need to include the following:

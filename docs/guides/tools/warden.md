@@ -595,6 +595,7 @@ the sample name.
 (Within the DNAnexus output directory structure, these files will be in
 the **NOTE FIND OUT WHICH DIRECTORY** directory.)
 
+-----------------
 #### Methods Files
 
 A more human readable explanation is found in **methods.docx**. Detailed
