@@ -302,6 +302,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../data/data-access-units/" title="Data Access Units" class="md-nav__link">
+      Data Access Units
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../data/run-your-tools/" title="Working with our Data" class="md-nav__link">
       Working with our Data
     </a>
@@ -613,6 +625,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#secondary-results" title="Secondary Results" class="md-nav__link">
+    Secondary Results
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods-files" title="Methods Files" class="md-nav__link">
+    Methods Files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auxilary-files" title="Auxilary Files" class="md-nav__link">
+    Auxilary Files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -914,6 +953,33 @@
   <a href="#proteinpaint-visualizations" title="ProteinPaint Visualizations" class="md-nav__link">
     ProteinPaint Visualizations
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secondary-results" title="Secondary Results" class="md-nav__link">
+    Secondary Results
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods-files" title="Methods Files" class="md-nav__link">
+    Methods Files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auxilary-files" title="Auxilary Files" class="md-nav__link">
+    Auxilary Files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1510,6 +1576,211 @@ been set to 1, so the volcano plot will not be relevant.</p>
 <p>In the BIGWIG_VIEWER directory there will be a bigwigViewer file.
 Select this file and then 'Launch viewer'. A graph of coverage for the
 genome should be visible.</p>
+<h3 id="secondary-results">Secondary Results</h3>
+<hr />
+<p><strong>Interactive MA/Volcano Plots</strong></p>
+<p>In addition to viewing the MA and volcano plots through the visualization tool</p>
+<hr />
+<p><strong>Differential expression results</strong> </p>
+<p>Other useful differential expression results will be downloaded by the desktop app. This included tabular output from the differential expression analysis. For each comparison with three or more samples per condition, <code class="codehilite">results.*.txt</code> will be produced.</p>
+<hr />
+<p><strong>GSEA.input.txt</strong> and <strong>GSEA.tStat.txt</strong> </p>
+<p>Input files that can be used for GSEA analysis. The tStat file is preferred for a more accurate analysis, but will not give a heatmap diagram.
+- (Within the DNAnexus output directory structure, these files will be in the LIMMA directory.)</p>
+<ul>
+<li>
+<p>For plain text results from the simple differential expresison analysis, the files will be named <code class="codehilite">simpleDE.*.txt</code>. (Within the DNAnexus output directory structure, these files will be in the SIMPLE_DIFEX directory.)</p>
+</li>
+<li>
+<p>Prelabelled MA and volcano plots are provided for the analysis. These files are labeled <code class="codehilite">maPlot.*.png</code> and <code class="codehilite">volcanoPlot.*.png</code> where <code class="codehilite">*</code> is the comparison (e.g. ko_vs_wt)</p>
+</li>
+<li>
+<p>The MA plot shows the average expression of the gene on the X-axis, and Log2 fold change between condition/phenotype is on the Y-axis (if the name is for example maPlot.condition2-condition1.png then the fold change would represent condition1 minus condition2). Each gene is represented by a circle. The top 20 genes (by p-value) are identified on the plot. The genes are color coded by the chosen multiple testing correction method (False Discovery Rate (FDR) by default. An exmaple MA plot can be seen below. (Within the DNAnexus output directory structure, these files will be in the LIMMA directory.)</p>
+</li>
+</ul>
+<p><img alt="" src="../../../images/guides/tools/warden/maPlot.png" /></p>
+<p>The volcano plot shows the Log2Fold change between the conditions on the
+X-axis, and the -Log10 of the multiple testing corrected P-value on the
+Y-axis.</p>
+<p><img alt="" src="../../../images/guides/tools/warden/volcanoPlot.png" /></p>
+<p>An MA plot is generated for all comparisons regardless of number of
+samples. This is the <code class="codehilite">simpleDEPlot.*.png</code> no statistics are shown
+and genes are not labeled. (Within the DNAnexus output directory structure, these files will be in the SIMPLE_DIFEX directory.)</p>
+<hr />
+<p><strong>Differential analysis input</strong></p>
+<p>Inputs and commands are provided for rerunning differential expression
+analysis on ones own computer. The R commands used for the analysis are
+found in <strong>voomLimma.R</strong>. An experienced R user can rerun the analysis
+with any desired changes. This analysis requires the input
+<strong>countFile.txt</strong> which contains counts per genes, the
+<strong>Rparameters.txt</strong> file containing input parameters, and a processed
+sample list file <strong>sampleList.txt</strong></p>
+<p>(Within the DNAnexus output directory structure, these files will be in
+the LIMMA directory.)</p>
+<p>The input for the simple differential analysis expression will be
+<strong>Rparameters_simple.txt</strong>, <strong>simpleDE.R</strong>, <strong>countFile.txt</strong> and
+<strong>sampleList.txt</strong>. <strong>countFile.txt</strong> and <strong>sampleList.txt</strong> are the
+same files used by the LIMMA analysis.</p>
+<p>(Within the DNAnexus output directory structure, these files will be in
+the SIMPLE_DIFEX directory.)</p>
+<hr />
+<p><strong>Coverage results</strong></p>
+<p>bigWig files will be generated for use in genome browsers (such as IGV
+<a href="http://software.broadinstitute.org/software/igv/">http://software.broadinstitute.org/software/igv/</a>). For each smaple,
+multiple bigWig files will be found. For all types of sequencing
+strandedness, there will be bigWig files labelled,
+<strong>*.sortedCoverageFile.bed.bw</strong> where '<em>' is the sample name. For
+stranded data there will also be*.sortedPosCoverageFile.bed.bw</em>* and
+<strong>*.sortedNegCoverageFile.bed.bw</strong> which contains coverage information
+for the positive and negative strand of the genome.</p>
+<p>(Within the DNAnexus output directory structure, these files will be in
+the BIGWIG directory.)</p>
+<hr />
+<p><strong>Quality Control Results (FastQC)</strong></p>
+<p>Within the FastQC directory, foreach sample and read direction there
+will be an html file and a zip file (<strong>*.FastQc.html</strong>
+<strong>*.FastQc.zip</strong> where '*' is the base FastQ name), containing results
+from FastQTC. For the average user the html file is sufficient. This
+file can give some basic statistics on the quality of the data.</p>
+<p>(Within the DNAnexus output directory structure, these files will be in
+the FastQC directory.)</p>
+<hr />
+<p><strong>BAM alignment files</strong></p>
+<p>There are two BAM files generated per sample that contain mapping
+information for all reads. The first is labeled
+<strong>*.Aligned.sortedByCoord.dup.bam</strong> where '<em>' is the sample name. The
+BAM file is sorted by coordinates and has duplicates marked. The second
+file is*.Aligned.toTranscriptome.out.bam</em>* and contains reads mapped
+to transcripts.</p>
+<p>(Within the DNAnexus output directory structure, these files will be in
+the ALIGN directory.)</p>
+<hr />
+<p><strong>Chimeric reads and junction files</strong></p>
+<p>Additional files created by STAR are provided. More information on these
+files can be found at
+<a href="http://labshare.cshl.edu/shares/gingeraslab/www-data/dobin/STAR/STAR.posix/doc/STARmanual.pdf">http://labshare.cshl.edu/shares/gingeraslab/www-data/dobin/STAR/STAR.posix/doc/STARmanual.pdf</a>.
+<strong>*.SJ.out.tab</strong> contain splice junction information. Fusion detectino
+files are labelled <strong>*.Chimeric.out.bam</strong> and
+<strong>*.Chimeric.out.junction</strong>.</p>
+<p>(Within the DNAnexus output directory structure, these files will be in
+the ALIGN directory.)</p>
+<hr />
+<p><strong>FPKM and count files (per sample)</strong></p>
+<p>Per sample files containing FPKM and raw count values for each gene can
+be found in <strong>*.fpkm.txt</strong> and <strong>*.htseq_counts.txt</strong> where '*' is
+the sample name.</p>
+<p>(Within the DNAnexus output directory structure, these files will be in
+the <strong>NOTE FIND OUT WHICH DIRECTORY</strong> directory.)</p>
+<hr />
+<h4 id="methods-files">Methods Files</h4>
+<p>A more human readable explanation is found in <strong>methods.docx</strong>. Detailed
+documentation can be found in <strong>methods.txt</strong></p>
+<p>(Within the DNAnexus output directory structure, these files will be in
+the METHODS directory.)</p>
+<h4 id="auxilary-files">Auxilary Files</h4>
+<p>This section describes the files that exist within the DNAnexus output
+folder. Most of these files will not be of interest to the average user.
+However, interactive viewers are describe in <a href="#limma-differential-expression-viewer">LIMMA differential
+expression viewer</a> and <a href="#simple-differential-expression-viewer">Simple
+differential expression viewer</a>.</p>
+<p>The output will be divided into multiple folders. The results being the
+most useful will be the differential expression analysis results in the
+LIMMA and SIMPLE_DIFEX folders. Bigwig files for viewing read coverage
+will be in the BIGWIG folder. Other folder contain different types of
+data and are explained in further detail below.</p>
+<blockquote>
+<p><img alt="" src="../../../images/guides/tools/warden/Workflow_output.png" /></p>
+</blockquote>
+<p>The following description of files is sorted by their output directory.</p>
+<hr />
+<p><strong>ALIGN</strong></p>
+<p>This directory contains the BAM files described in <a href="#bam-alignment-files">BAM alignment
+files</a> and the chimeric and junction files are
+described in <a href="#chimeric-reads-and-junction-files">Chimeric reads and junction
+files</a>. In adition there are 2 log
+files. <strong>*Log.final.out</strong> has relevant statistics for the alignemnt.
+The <strong>*.Log.out</strong> file just contains a log of the analysis run,
+including input parameters. Per sample FLAGSTAT results are found in
+<strong>*.flagStatOut.txt</strong>. These flagstat files are combined into the file
+<strong>alignmentStatistics.txt</strong> described in <a href="#initial-analysis-of-results">Initial analysis of
+results</a>. Finally the ALIGN directory has
+multiple <em>.starAlign.methods.txt files. These files can be ignored as
+they are summarized in the finalmethods.docx</em>* and <strong>methods.txt</strong>
+files described in <a href="#methods-files">Methods Files</a>.</p>
+<hr />
+<p><strong>BIGWIG</strong></p>
+<p>All of the files here are described in section <a href="#coverage-results">Coverage
+results</a>. The <strong>bgToBw.methods.txt</strong> files can be
+ignored as they are summarized in the files described in <a href="#methods-files">Methods
+Files</a>.</p>
+<hr />
+<p><strong>BIGWIG_VIEWER</strong></p>
+<p>See <a href="#bigwig-viewer">bigWig viewer</a></p>
+<hr />
+<p><strong>COMBINED_FLAGSTAT</strong></p>
+<div class="admonition todo">
+<p class="admonition-title">Todo</p>
+<p>Describe combined flagstat.</p>
+</div>
+<hr />
+<p><strong>COMBINED_HTSEQ</strong></p>
+<p>Used for input in differential expression analysis. The
+combineCountFile.txt is the same as countFile.txt described in
+<a href="#differential-analysis-input">Differential analysis input</a></p>
+<hr />
+<p><strong>COVERAGE</strong></p>
+<p>BED graph files used to generate bigWig files are here.</p>
+<hr />
+<p><strong>FastQC</strong></p>
+<p>See <a href="#quality-control-results-FastQc">Quality Control Results (FastQC)</a></p>
+<hr />
+<p><strong>HTSEQ</strong></p>
+<p>Per-sample HTSEQ-count results (<strong>*.htseq_counts.txt</strong>) and FPKM
+results (<strong>*.fpkm.txt</strong>). Temporary methods files are found as
+*.htseq-count.methods.txt</p>
+<hr />
+<p><strong>LIMMA</strong></p>
+<p><strong>mdsPlot.png</strong>, <strong>maPlot.<em>.png,volcanoPlot.</em>.png</strong> are described in
+<a href="#initial-analysis-of-results">Initial analysis of results</a></p>
+<p><strong>results.<em>.txt,GSEA.input.</em>.txt</strong> and *<em>GSEA.tStat.</em>.txt** are
+describe in <a href="#differential-expression-results">Differential expression
+results</a></p>
+<p><strong>voomLimma.R</strong>, <strong>countFile.txt</strong>, <strong>Rparameters.txt</strong>, and
+<strong>sampleList.txt</strong> are described in <a href="#differential-analysis-input">Differential analysis
+input</a></p>
+<p>See <a href="#limma-differential-expression-viewer">LIMMA differential expression
+viewer</a> for a description of the
+VIEWERS directory.</p>
+<p>Other files in the LIMMA directory include contrastFiles.txt
+contrastsFile.txt, and limmaSampleList.txt which are used internally.
+limmaMethods.txt is an intermediate file describing methods. Out.tar.gz
+is used for testing purposes. The sessionInfo.txt file describe the R
+session working parameters and modules loaded. meanVariance.png is a
+plot for assessing quality of count data
+(<a href="https://genomebiology.biomedcentral.com/articles/10.1186/gb-2014-15-2-r29">https://genomebiology.biomedcentral.com/articles/10.1186/gb-2014-15-2-r29</a>)</p>
+<hr />
+<p><strong>METHODS</strong></p>
+<p>The files here are described in <a href="#methods-files">Methods Files</a>.</p>
+<hr />
+<p><strong>SAMPLELIST</strong></p>
+<p>These files are used internally by the pipeline.</p>
+<hr />
+<p><strong>SIMPLE_DIFEX</strong></p>
+<p><strong>mdsPlot.normCPM.png</strong> and *<em>simpleDEPlot.</em>.png** are described in
+<a href="#initial-analysis-of-results">Initial analysis of results</a></p>
+<p>*<em>simpleDE.</em>.txt** are describe in <a href="#differential-expression-results">Differential expression
+results</a></p>
+<p><strong>simpleDE.R</strong>, <strong>countFile.txt</strong>, <strong>Rparameters_simple.txt</strong>, and
+<strong>sampleList.txt</strong> are described in <a href="#differential-analysis-input">Differential analysis
+input</a></p>
+<p>See <a href="#simple-differential-expression-viewer">Simple differential expression
+viewer</a> for a description of the
+VIEWERS directory.</p>
+<p>Other files in the SIMPLE_DIFEX directory include contrastFiles.txt
+contrastsFile.txt, and limmaSampleList.txt which are used internally.
+simpleDifEx.methods.txt is an intermediate file describing methods.
+Out.tar.gz is used for testing purposes. The sessionInfo.txt file
+describe the R session working parameters and modules loaded.</p>
 <h2 id="known-issues">Known Issues</h2>
 <div class="admonition caution">
 <p class="admonition-title">Adapter contamination</p>
