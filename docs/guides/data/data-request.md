@@ -12,38 +12,34 @@ environment.
     on your data access agreement. We recommend that you work with the data
     in the cloud if it's feasible; the data provided by St. Jude is free, the compute charges are reasonable, and working in the cloud helps to eliminate the long, error-prone downloading process. Porting your tools to be run in the cloud is easy, as well. We recommend you follow [this guide](#run-your-tools) to get started.
 
-## Navigating to the data browser
+## Requesting Data
+
+### Navigate to the Data Browser
 
 Navigate to the data browser by clicking Access Data and Explore
 Data. If you would like to view the requests you have already made, you
 can do so under Manage Data.
 
-![](../../images/guides/data/data-request-1.png)
+![](../../images/guides/data/request-data-1.gif)
 
-![](../../images/guides/data/data-request-2.png)
-
-## Selecting a cohort
-
+### Select Your Data
 Next, select the cohort you are interested in requesting. You can
 browse our data by disease, publication, dataset, or
 you can use Pecan, our Pediatric Cancer portal, to find samples
 associated with specific genes, or mutations. 
 
 
-![](../../images/guides/data/data-request-3.png)
+![](../../images/guides/data/request-data-2.gif)
 
-![](../../images/guides/data/data-request-4.png)
-
-## Select your files
-
+### Select Your Files
 Once you have selected the cohort you would like to study, you can chose what
 type of files you would like to receive. This step is dynamic, and shows
 you all of the file types we have available for the dataset you are
 interested in.
 
-![](../../images/guides/data/data-request-5.png)
+![](../../images/guides/data/request-data-3.gif)
 
-## Submit your data request
+### Submit Your Request
 
 If you are requesting access to a dataset you have not already been approved for, 
 you will see a section called Controlled Data. Under this section, there is a bulleted list
@@ -52,15 +48,13 @@ access agreement. Please use this list to fill in the Datasets section of the Da
 Form as shown in the figure below. For more information on filling out this guide,
 see [Filling out the DAA](#filling-out-the-daa).
 
-![](../../images/guides/data/data-request-6.png)
-
-![](../../images/guides/data/data-request-7.png)
+![](../../images/guides/data/request-data-6.gif)
 
 Now, you have successfully submitted your data request. Your request
 will be sent to the respective data access committees for evaluation.
 You should expect to hear from us within a week or two on average. 
 
-### Data access agreement
+## Data access agreement
 
 Broadly speaking, the data access agreement (DAA) is a legal document
 binding the requestor and the requestor's institution to terms about
@@ -69,7 +63,7 @@ unless terms are found to be in conflict with the institution's state law.
 Filling out the Data Access Agreement carefully and completely is crucial 
 to having your request filled promptly.
 
-#### Filling out the DAA
+### Filling out the DAA
 
 All Data Access Agreements require the following 5 items:
 
@@ -102,7 +96,7 @@ All Data Access Agreements require the following 5 items:
     * Here, describe your research question and it's biological significance. The Contemplated Use will be evaluated by the Data Access Committees based on their own set of protocols. 
     * Please contact us if you have any questions regarding the protocols of the approval process. 
 
-#### Data download permission
+### Data download permission
 
 Additionally, *if and only if* you would like to *download* the data,
 you will also need to include the following:
