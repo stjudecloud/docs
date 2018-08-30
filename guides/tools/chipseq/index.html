@@ -489,13 +489,6 @@
     Monitoring run progress
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#analysis-of-results" title="Analysis of results" class="md-nav__link">
-    Analysis of results
-  </a>
-  
     <nav class="md-nav">
       <ul class="md-nav__list">
         
@@ -729,13 +722,6 @@
     Monitoring run progress
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#analysis-of-results" title="Analysis of results" class="md-nav__link">
-    Analysis of results
-  </a>
-  
     <nav class="md-nav">
       <ul class="md-nav__list">
         
@@ -816,10 +802,10 @@
 </tbody>
 </table>
 <p>The ChIP-Seq Peak Calling workflow follows ENCODE best practices to call 
-broad or narrow peaks on Illumina-genearted ChIP-Seq data. 
+broad or narrow peaks on Illumina-generated ChIP-Seq data. 
 Here, a Gzipped FastQ file from an Immunoprecipitation (IP) experiment 
 is considered the "case sample file" and a Gzipped FastQ file from a control 
-experiment is considered the "control sample file". The pipeline can on
+experiment is considered the "control sample file". The pipeline can run on
 matched case/control samples (recommended for better results) or just a 
 case sample.</p>
 <h2 id="overview">Overview</h2>
@@ -855,7 +841,7 @@ case sample.</p>
 <tr>
 <td>BED file</td>
 <td>.bed</td>
-<td>peak calls</td>
+<td>Peak calls</td>
 </tr>
 <tr>
 <td>Binary file</td>
@@ -870,17 +856,12 @@ case sample.</p>
 <tr>
 <td>Metrics file</td>
 <td>.txt</td>
-<td></td>
-</tr>
-<tr>
-<td>Visualization files</td>
-<td></td>
-<td>Shortcuts to ProteinPaint</td>
+<td>Shows mapping and duplication rate</td>
 </tr>
 <tr>
 <td>Cross correlation plot</td>
-<td></td>
-<td></td>
+<td>.pdf</td>
+<td>Quality plot showing if the forward and reverse reads tend to be centered around binding sites.</td>
 </tr>
 </tbody>
 </table>
@@ -891,10 +872,10 @@ case sample.</p>
 (removing multiple mapped reads, removing duplicated reads, etc). </li>
 <li>Peaks are called by SICER (broad peak analysis) or MACS2 (narrow peak
 analysis). <ul>
-<li>Qualified peaks will be output BED (.bed) and big BED (.bb)
+<li>Qualified peaks will be output as BED (.bed) and big BED (.bb)
 files. </li>
 <li>The coverage information will be output as a bigWig (.bw)
-file with an accompanying visualization by ProteinPaint. </li>
+file. </li>
 <li>A cross correlation plot and general metrics file are generated to help check
 the quality of experiment.</li>
 </ul>
@@ -989,7 +970,7 @@ see the options available, click the gear cog next to the
 <p><img alt="" src="../../../images/guides/tools/chipseq/change-parameters.gif" /></p>
 <p>The following are the parameters that can be set, a short
 description of each parameter, and an example value. If you
-have question, please <a href="https://stjude.cloud/contact">contact us</a>.</p>
+have questions, please <a href="https://stjude.cloud/contact">contact us</a>.</p>
 <table>
 <thead>
 <tr>
@@ -1006,8 +987,8 @@ have question, please <a href="https://stjude.cloud/contact">contact us</a>.</p>
 </tr>
 <tr>
 <td>Reference genome (<em>required</em>)</td>
-<td>Supported reference genome from one of HG19, HG38, mm9, mm10, dm3</td>
-<td>HG38</td>
+<td>Supported reference genome from one of hg19, GRCh38, mm9, mm10, dm3</td>
+<td>GRCh38</td>
 </tr>
 <tr>
 <td>Output bigWig</td>
@@ -1037,7 +1018,7 @@ have question, please <a href="https://stjude.cloud/contact">contact us</a>.</p>
 <li>Do not change the output directory when you run the pipeline. At
   the top of parameter input page, there is a text box that allows
   you to change the output folder. <strong>Please ignore that setting</strong>. You
-  only need to specify an output prefix as described aboce. All of
+  only need to specify an output prefix as described above. All of
   the results will be put under <code class="codehilite">/Results/[OUTPUT_PREFIX]</code>.</li>
 </ul>
 </div>
@@ -1074,18 +1055,12 @@ gets one row in this table.</p>
 <p>You can click the "+" on any of the runs to check 
 the status of individual steps of the ChIP-Seq pipeline.
 Other information, such as time, cost of individual steps in the pipeline, 
-and even viewing the job logs can accessed by clicking around the sub-items.</p>
+and the job logs can be accessed by clicking around the sub-items.</p>
 <p><img alt="" src="../../../images/guides/tools/chipseq/job-detailed-view.gif" /> </p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Power users can view the <a href="https://wiki.dnanexus.com/UI/Jobs">DNAnexus Job Monitoring Tutorial</a> and the <a href="https://wiki.dnanexus.com/Command-Line-Client/Monitoring-Executions">DNAnexus Command Line Tutorial for Job Monitoring</a> for advanced capabilities for monitoring jobs.</p>
 </div>
-<h2 id="analysis-of-results">Analysis of results</h2>
-<p>Each tool in St. Jude Cloud produces a visualization that makes understanding
-results more accessible than working with excel spreadsheet or tab delimited
-files. This is the primary way we recommend you work with your results. We also
-include the raw output files for you to dig into if the visualization is not 
-sufficient to answer your research question.</p>
 <h3 id="interactive-visualizations">Interactive visualizations</h3>
 <p>Today, the ChIP-Seq pipeline does not produce an interactive visualization. We are
 working on adding this! In the meantime, you can view the cross-correlation plot(s)
@@ -1093,7 +1068,7 @@ as outlined in the sections below.</p>
 <h3 id="finding-the-raw-results-files">Finding the raw results files</h3>
 <p>Navigate to the <a href="https://platform.stjude.cloud/tools/chip-seq">tool's landing page</a>. 
 In the left hand pane, click "View Results" then "View Results Files". You will
-be taken to the filesystem view your cloud workspace. This is similar to your the
+be taken to the filesystem view of your cloud workspace. This is similar to the
 filesystem on your computer, and you can do many common operations such as deleting,
 renaming, and moving files. To access ChIP-Seq results, you should click on the 
 <code class="codehilite">Results</code> folder, then select the output folder name you gave in the <a href="#selecting-parameters">selecting parameters</a> part of the guide.</p>
