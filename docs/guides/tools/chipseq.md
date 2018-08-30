@@ -5,10 +5,10 @@
 | **Technical Support** | [Contact Us](https://stjude.cloud/contact) |
 
 The ChIP-Seq Peak Calling workflow follows ENCODE best practices to call 
-broad or narrow peaks on Illumina-genearted ChIP-Seq data. 
+broad or narrow peaks on Illumina-generated ChIP-Seq data. 
 Here, a Gzipped FastQ file from an Immunoprecipitation (IP) experiment 
 is considered the "case sample file" and a Gzipped FastQ file from a control 
-experiment is considered the "control sample file". The pipeline can on
+experiment is considered the "control sample file". The pipeline can run on
 matched case/control samples (recommended for better results) or just a 
 case sample.
 
@@ -24,12 +24,11 @@ case sample.
 
 | Name | Format | Description  |
 |--|--|--|
-| BED file | .bed | peak calls |
+| BED file | .bed | Peak calls |
 | Binary file | .bb | Binary format for BED file |
 | BigWig file | .bw | Shows read coverage |
-| Metrics file | .txt | |
-| Visualization files | | Shortcuts to ProteinPaint |
-| Cross correlation plot |||
+| Metrics file | .txt | Shows mapping and duplication rate |
+| Cross correlation plot | .pdf | Quality plot showing if the forward and reverse reads tend to be centered around binding sites. |
 
 
 
@@ -40,10 +39,10 @@ case sample.
 (removing multiple mapped reads, removing duplicated reads, etc). 
 3. Peaks are called by SICER (broad peak analysis) or MACS2 (narrow peak
 analysis). 
-    * Qualified peaks will be output BED (.bed) and big BED (.bb)
+    * Qualified peaks will be output as BED (.bed) and big BED (.bb)
 files. 
     * The coverage information will be output as a bigWig (.bw)
-file with an accompanying visualization by ProteinPaint. 
+file. 
     * A cross correlation plot and general metrics file are generated to help check
 the quality of experiment.
 
@@ -151,12 +150,12 @@ see the options available, click the gear cog next to the
 
 The following are the parameters that can be set, a short
 description of each parameter, and an example value. If you
-have question, please [contact us](https://stjude.cloud/contact).
+have questions, please [contact us](https://stjude.cloud/contact).
 
 | Parameter Name | Description | Example |
 |--|--|--|
 | Output prefix (*required*) | A name used a prefix for all outputs in the run | SAMPLE1 |
-| Reference genome (*required*) | Supported reference genome from one of HG19, HG38, mm9, mm10, dm3 | HG38 |
+| Reference genome (*required*) | Supported reference genome from one of hg19, GRCh38, mm9, mm10, dm3 | GRCh38 |
 | Output bigWig | Whether or not to include a bigwig file in the output | True |
 | Remove blacklist peaks | Whether or not to remove known problem areas | True |
 | Fragment length | Hardcoded fragment length of your reads. 'NA' for auto-detect. | NA |
@@ -171,7 +170,7 @@ have question, please [contact us](https://stjude.cloud/contact).
     * Do not change the output directory when you run the pipeline. At
       the top of parameter input page, there is a text box that allows
       you to change the output folder. **Please ignore that setting**. You
-      only need to specify an output prefix as described aboce. All of
+      only need to specify an output prefix as described above. All of
       the results will be put under `/Results/[OUTPUT_PREFIX]`.
 
 ### Hooking up inputs
@@ -215,20 +214,12 @@ gets one row in this table.
 You can click the "+" on any of the runs to check 
 the status of individual steps of the ChIP-Seq pipeline.
 Other information, such as time, cost of individual steps in the pipeline, 
-and even viewing the job logs can accessed by clicking around the sub-items.
+and the job logs can be accessed by clicking around the sub-items.
 
 ![](../../images/guides/tools/chipseq/job-detailed-view.gif) 
 
 !!! tip 
     Power users can view the [DNAnexus Job Monitoring Tutorial](https://wiki.dnanexus.com/UI/Jobs) and the [DNAnexus Command Line Tutorial for Job Monitoring](https://wiki.dnanexus.com/Command-Line-Client/Monitoring-Executions) for advanced capabilities for monitoring jobs.
-
-## Analysis of results
-
-Each tool in St. Jude Cloud produces a visualization that makes understanding
-results more accessible than working with excel spreadsheet or tab delimited
-files. This is the primary way we recommend you work with your results. We also
-include the raw output files for you to dig into if the visualization is not 
-sufficient to answer your research question.
 
 ### Interactive visualizations
 
@@ -240,7 +231,7 @@ as outlined in the sections below.
 
 Navigate to the [tool's landing page](https://platform.stjude.cloud/tools/chip-seq). 
 In the left hand pane, click "View Results" then "View Results Files". You will
-be taken to the filesystem view your cloud workspace. This is similar to your the
+be taken to the filesystem view of your cloud workspace. This is similar to the
 filesystem on your computer, and you can do many common operations such as deleting,
 renaming, and moving files. To access ChIP-Seq results, you should click on the 
 `Results` folder, then select the output folder name you gave in the [selecting parameters](#selecting-parameters) part of the guide.
