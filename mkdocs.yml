@@ -40,7 +40,18 @@ edit_uri: 'blob/cmcleod/overhaul/docs'
 # Copyright
 copyright: "Copyright &copy; 2017 - 2018 St. Jude Children's Research Hospital"
 
+
+# Extensions
+markdown_extensions:
+    - admonition
+    - codehilite
+    - footnotes
+    - pymdownx.inlinehilite
+
+
 # Extra
+# NOTE: The CI server depends on this entry being last, as it writes the commit
+# hash variable to this file by appending it.
 extra:
   social:
     - type: 'facebook'
@@ -51,10 +62,3 @@ extra:
       link: 'https://www.linkedin.com/company/st-jude-childrens-research-hospital'
     - type: 'github'
       link: 'https://github.com/stjude'
-
-# Extensions
-markdown_extensions:
-    - admonition
-    - codehilite
-    - footnotes
-    - pymdownx.inlinehilite

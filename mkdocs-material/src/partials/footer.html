@@ -87,11 +87,17 @@
             {{ config.copyright }}
           </div>
         {% endif %}
+
+        {% if config.extra.commit_hash %}
+        built from <a href="https://github.com/stjude/sjcloud-docs/tree/{{ config.extra.commit_hash }}">{{ config.extra.commit_hash }}</a> using
+        {% else %}
         powered by
+        {% endif %}
+
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
         <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+          Material for MkDocs</a>.
       </div>
 
       <!-- Social links -->
