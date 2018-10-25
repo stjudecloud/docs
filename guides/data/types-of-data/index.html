@@ -639,9 +639,10 @@ please <a href="https://stjude.cloud/contact">contact us</a>!</p>
 </tbody>
 </table>
 <h4 id="bam-files">BAM files</h4>
-<p>A BAM file (.bam) is the binary version of a SAM file. A SAM file (.sam) is a tab-delimited text file that contains sequence alignment data.</p>
+<p>In St. Jude Cloud, we stored aligned sequence reads in the ubiquitous BAM file format. BAM files were produced by the <a href="https://azure.microsoft.com/en-us/services/genomics/">Microsoft Genomics Service</a> aligned to HG38 (GRCh38 no alt analysis set). For more information about how Microsoft Genomics produces BAM files or any other questions regarding data generation, please refer to <a href="https://azure.microsoft.com/en-us/resources/accelerate-precision-medicine-with-microsoft-genomics/">the official Microsoft Genomics whitepaper</a>.</p>
+<p>For more information on SAM/BAM files, please refer to the <a href="https://samtools.github.io/hts-specs/SAMv1.pdf">SAM/BAM specification</a>. </p>
 <h4 id="gvcf-files">gVCF files</h4>
-<p>Today, we defer to the <a href="https://software.broadinstitute.org/gatk/documentation/article?id=11004">official specification document</a> from the Broad Institute, as well as <a href="https://software.broadinstitute.org/gatk/documentation/article?id=4017">this discussion</a> on the difference between VCF and gVCF files.</p>
+<p>We provide gVCF files produced by the <a href="https://azure.microsoft.com/en-us/services/genomics/">Microsoft Genomics Service</a>. gVCF files are derived from the BAM files produced above as called by <a href="https://software.broadinstitute.org/gatk/documentation/tooldocs/3.8-0/org_broadinstitute_gatk_tools_walkers_haplotypecaller_HaplotypeCaller.php">GATK's haplotype caller</a>. Today, we defer to <a href="https://software.broadinstitute.org/gatk/documentation/article?id=11004">the official specification document</a> from the Broad Institute, as well as <a href="https://software.broadinstitute.org/gatk/documentation/article?id=4017">this discussion</a> on the difference between VCF and gVCF files. For more information about how Microsoft Genomics produces gVCF files or any other questions regarding data generation, please refer to <a href="https://azure.microsoft.com/en-us/resources/accelerate-precision-medicine-with-microsoft-genomics/">the official Microsoft Genomics whitepaper</a>.</p>
                 
                   
                 
@@ -703,7 +704,7 @@ please <a href="https://stjude.cloud/contact">contact us</a>!</p>
           </div>
         
         
-        built from <a href="https://github.com/stjude/sjcloud-docs/tree/8ad8e64">8ad8e64</a> using
+        built from <a href="https://github.com/stjude/sjcloud-docs/tree/c95a78f">c95a78f</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of

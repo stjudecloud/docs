@@ -42,7 +42,7 @@
         }, 
         {
             "location": "/guides/data/types-of-data/", 
-            "text": "Data types\n\n\n\n\nNote\n\n\nThis section of the documentation is currently under construction. If your question is not answered here,\nplease \ncontact us\n!\n\n\n\n\nSt. Jude Cloud hosts both raw genomic data files and processed results files:\n\n\n\n\n\n\n\n\nFile Type\n\n\nDescription\n\n\nDetails\n\n\n\n\n\n\n\n\n\n\nBAM\n\n\nHG38 aligned BAM files produced by \nMicrosoft Genomics Service\n\n\nClick here\n\n\n\n\n\n\ngVCF\n\n\nGenomic VCF\n files produced by \nMicrosoft Genomics Service\n\n\nClick here\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBAM files\n\n\nA BAM file (.bam) is the binary version of a SAM file. A SAM file (.sam) is a tab-delimited text file that contains sequence alignment data.\n\n\ngVCF files\n\n\nToday, we defer to the \nofficial specification document\n from the Broad Institute, as well as \nthis discussion\n on the difference between VCF and gVCF files.", 
+            "text": "Data types\n\n\n\n\nNote\n\n\nThis section of the documentation is currently under construction. If your question is not answered here,\nplease \ncontact us\n!\n\n\n\n\nSt. Jude Cloud hosts both raw genomic data files and processed results files:\n\n\n\n\n\n\n\n\nFile Type\n\n\nDescription\n\n\nDetails\n\n\n\n\n\n\n\n\n\n\nBAM\n\n\nHG38 aligned BAM files produced by \nMicrosoft Genomics Service\n\n\nClick here\n\n\n\n\n\n\ngVCF\n\n\nGenomic VCF\n files produced by \nMicrosoft Genomics Service\n\n\nClick here\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBAM files\n\n\nIn St. Jude Cloud, we stored aligned sequence reads in the ubiquitous BAM file format. BAM files were produced by the \nMicrosoft Genomics Service\n aligned to HG38 (GRCh38 no alt analysis set). For more information about how Microsoft Genomics produces BAM files or any other questions regarding data generation, please refer to \nthe official Microsoft Genomics whitepaper\n.\n\n\nFor more information on SAM/BAM files, please refer to the \nSAM/BAM specification\n. \n\n\ngVCF files\n\n\nWe provide gVCF files produced by the \nMicrosoft Genomics Service\n. gVCF files are derived from the BAM files produced above as called by \nGATK's haplotype caller\n. Today, we defer to \nthe official specification document\n from the Broad Institute, as well as \nthis discussion\n on the difference between VCF and gVCF files. For more information about how Microsoft Genomics produces gVCF files or any other questions regarding data generation, please refer to \nthe official Microsoft Genomics whitepaper\n.", 
             "title": "Types of Data"
         }, 
         {
@@ -52,12 +52,12 @@
         }, 
         {
             "location": "/guides/data/types-of-data/#bam-files", 
-            "text": "A BAM file (.bam) is the binary version of a SAM file. A SAM file (.sam) is a tab-delimited text file that contains sequence alignment data.", 
+            "text": "In St. Jude Cloud, we stored aligned sequence reads in the ubiquitous BAM file format. BAM files were produced by the  Microsoft Genomics Service  aligned to HG38 (GRCh38 no alt analysis set). For more information about how Microsoft Genomics produces BAM files or any other questions regarding data generation, please refer to  the official Microsoft Genomics whitepaper .  For more information on SAM/BAM files, please refer to the  SAM/BAM specification .", 
             "title": "BAM files"
         }, 
         {
             "location": "/guides/data/types-of-data/#gvcf-files", 
-            "text": "Today, we defer to the  official specification document  from the Broad Institute, as well as  this discussion  on the difference between VCF and gVCF files.", 
+            "text": "We provide gVCF files produced by the  Microsoft Genomics Service . gVCF files are derived from the BAM files produced above as called by  GATK's haplotype caller . Today, we defer to  the official specification document  from the Broad Institute, as well as  this discussion  on the difference between VCF and gVCF files. For more information about how Microsoft Genomics produces gVCF files or any other questions regarding data generation, please refer to  the official Microsoft Genomics whitepaper .", 
             "title": "gVCF files"
         }, 
         {
