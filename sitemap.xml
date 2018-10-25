@@ -71,6 +71,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>/guides/tools/mutational-spectrum/</loc>
+     <lastmod>2018-10-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>/guides/visualizations/bigwig-viewer/</loc>
      <lastmod>2018-10-25</lastmod>
      <changefreq>daily</changefreq>
