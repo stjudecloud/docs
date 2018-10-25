@@ -27,6 +27,7 @@ pages:
       - 'Rapid RNA-Seq Fusion Detection': 'guides/tools/rapid-rnaseq.md'
       - 'WARDEN Differential Expression Analysis': 'guides/tools/warden.md'
       - 'cis-X': 'guides/tools/cis-x.md'
+      - 'Mutational Spectrum': 'guides/tools/mutational-spectrum.md'
   - 'Visualization Guides':
       - 'BigWig Viewer': 'guides/visualizations/bigwig-viewer.md'
       - 'Fusion Viewer': 'guides/visualizations/fusion-viewer.md'
