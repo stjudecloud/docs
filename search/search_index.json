@@ -172,7 +172,7 @@
         }, 
         {
             "location": "/guides/data/data-transfer-app/", 
-            "text": "The St. Jude Cloud data transfer application is still under development.\nPlease refer to the \ncommand line interaction guide\n for the official \ndocumentation on how to upload data to or download download data from St. Jude Cloud\nPlatform.\n\n\nIf you are adventurous, we welcome you to try out the experience by\n\ndownloading the latest release\n and letting\nus know how it goes! You can find the source code\n\nhere\n. If you\nwould like to file an issue you are experiencing with the application,\nyou can do so\n\nhere\n.", 
+            "text": "Note\n\n\nWe consider the St. Jude Cloud data transfer application to be production ready.\nHowever, we have not yet completed the guide on how to use it. This guide will likely be\ncompleted soon. In the meantime, we hope that you will try to use the app and let us\nknow your feedback at our \ncontact us form\n.\n\n\n\n\nYou can \nclick here\n to download the latest release of the\nSt. Jude Cloud data transfer application. If you are interested in viewing the source code, \nyou can do so \nhere\n. If you\nwould like to file an issue you are experiencing with the application,\nyou can do so \nhere\n.\nFor users looking to upload/download files on the command line, please refer to the \ncommand line interaction guide\n.", 
             "title": "Data Transfer Application"
         }, 
         {
