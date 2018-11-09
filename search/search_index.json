@@ -766,6 +766,11 @@
             "title": "ProteinPaint Fusion Viewer"
         }, 
         {
+            "location": "/guides/portals/sgp/", 
+            "text": "Todo\n\n\nSGP portal documentation in progress...", 
+            "title": "Sickle Cell Genomics Portal"
+        }, 
+        {
             "location": "/faq/", 
             "text": "Q. Will I be charged for using St. Jude Cloud?\n\n\nA. Although you may be prompted to enter billing information, you will not\nbe charged for anything with the exception of the following items:\n\n\n\n\nAny copy of the St. Jude data you receive is considered \"sponsored\",\n  so you do not have to pay a fee to store this data in St. Jude\n  Cloud. You will be charged for any \nderivative\n files obtained\n  through running analyses on St. Jude data and stored on the St. Jude\n  Cloud.\n\n\nIf you elect to \ndownload\n any data from SJCloud, you will be\n  charged an egress fee by DNAnexus. This fee is usually negligible\n  unless you are downloading entire cohorts. We are actively\n  investigating ways to minimize or eliminate these costs.\n\n\nIf you run any of the following tools, you will be charged for the\n  compute resources used in producing the results as well as storage\n  fees associated with storing the results files.\n\n\nChIP-Seq Peak Caller\n\n\nHLA Typing and Neoepitope Prediction\n\n\nRapid RNA-Seq Fusion Detection\n\n\nWARDEN Differential Expression Analysis\n\n\n\n\n\n\n\n\nQ. How can I delete my account?\n\n\nA. If you'd like to delete your account, please email DNAnexus support at\n\n with the following email.\n\n\nHi DNAnexus,\n\n  Would you please assist me in deleting my St. Jude Cloud account? My username is _____.\n\nThank you!\n\n\n\n\n\nQ. Where can I find the Terms of Service or the Privacy Policy?\n\n\nA. You can find the Terms of Service\n\nhere\n and the Privacy Policy\n\nhere\n.", 
             "title": "Frequently Asked Questions"
