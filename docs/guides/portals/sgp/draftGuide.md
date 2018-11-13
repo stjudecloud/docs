@@ -1,5 +1,5 @@
 
-
+#Gloassary
 
 #### HbF (Fetal hemoglobin)
 Fetal hemoglobin contains two subunit of gamma-globin and two units of alpha-globin, while adult hemoglobin contains two subuints of beta-globin and two units of alpha-globin.  
@@ -18,6 +18,9 @@ An individual with [sickle cell disease](https://ghr.nlm.nih.gov/condition/sickl
 The [Sickle Cell Research and Intervention Program](https://www.stjude.org/research/clinical-trials/sccrip-hematological-disorder.html)
   
 </br>
+
+#Visualizations
+##Genome Browser
 
 1. Navigation tools and track selector.  See Figure 2 for larger view.  Figure 2 element are as follows
   a.	Location/Locus entry field.  One can enter genomic coordinates in the form of chromosome:start-end (for example chr1:12345-9876), or a gene name or a SNP rs ID.
