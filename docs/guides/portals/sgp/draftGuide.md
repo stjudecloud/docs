@@ -23,7 +23,9 @@ The [Sickle Cell Research and Intervention Program](https://www.stjude.org/resea
 ## Genome Browser
 
 1. Navigation tools and track selector.  See Figure 2 for larger view.  Figure 2 element are as follows
+  
   a.	Location/Locus entry field.  One can enter genomic coordinates in the form of chromosome:start-end (for example chr1:12345-9876), or a gene name or a SNP rs ID.
+  
   b.	Browser zoom in and out.
   c.	Tracks: Add or hide tracks (See section below on adding/hiding tracks(
   d.	More:  Save svg image of browser, get DNA sequence or highlight regions of the browser.
