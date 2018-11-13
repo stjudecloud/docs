@@ -27,13 +27,13 @@ The [Sickle Cell Research and Intervention Program](https://www.stjude.org/resea
 Upon launching the browser, you will see an image similar to the one shown here.
 
 #### Browser overview
-[](./images/BrowserOverview.png)
+![](./images/BrowserOverview.png)
 
 A description of the elements of the browser are as follows:
 
 |#   |      Description      |  
 |----------|-------------|
-| 1| [Navigation tools and track selector.]  | 
+| 1| [Navigation tools and track selector.](#navigation-buttons)  | 
 |2|    DNase hypersensitivity tracks.  By default, four epigenetic tracks are shown.  These are DNAse hypersensitivity tracks for Hematopoeitic stem cells (HSC), T Cells, Monocytes, and B Cells.  Additional tracks can be viewed by selecting the ‘Tracks’ button (See Adding/Removing Tracks section below)  |  
 |3 | RefSeq genes.  Gene models from the RefSeq database are displayed in this tracks. | 
 |4 |-log10 of the p-value of the association of each variants with pain rate in individuals with Sickle Cell Disease.  The analysis has only been performed around the  KIAA1109/Tenr/IL2/IL21 region.   Each dot on the track represents a genomic variant (Single Nucleotide Variant (SNV) or small insertion/deletion (INDEL)).  The Y-axis for the track represents the -log10 of the p-value.  The higher the value, the more stastically significant the association between the variant and pain rate is.  Clicking on a variant will open op a window that gives further details about the variant.  (See Figure 3). | 
@@ -41,7 +41,7 @@ A description of the elements of the browser are as follows:
 
 
 #### Navigation buttons
-[](./images/NavigationButtons.png)
+![](./images/NavigationButtons.png)
 
 |#   |      Description      |  
 |----------|-------------|
