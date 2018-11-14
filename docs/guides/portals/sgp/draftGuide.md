@@ -5,13 +5,13 @@
 ### [Tutorial](#tutorial)
 
 
-# Glossary
+# Glossary ([Back to Index](#index))
 
-#### HbF (Fetal hemoglobin)
+#### Fetal hemoglobin (HbF)
 Fetal hemoglobin contains two subunit of gamma-globin and two units of alpha-globin, while adult hemoglobin contains two subuints of beta-globin and two units of alpha-globin.  
-#### HPFH (Heriditary persistance of fetal hemoglobin)
+#### Heriditary persistance of fetal hemoglobin (HPFH)
 Inividuals with HPFH have elevated levels of fetal hemoglobin. These elevated levels reduce or eliminate many of the symptoms of Sickle Cell Disease
-#### PCA
+#### Principal Component Analysis (PCA)
 A [method](https://www.jmp.com/support/help/14/principal-components.shtml) for reducing high dimensional data into low-dimensional representations.
 #### SC
 And individual with one copy of the sickle cell allele [rs334](https://www.ncbi.nlm.nih.gov/snp/rs334) and one copy of [hemoglobin C](https://medlineplus.gov/ency/article/000572.htm)
@@ -26,7 +26,7 @@ The [Sickle Cell Research and Intervention Program](https://www.stjude.org/resea
   
 
 
-# Visualizations
+# Visualizations ([Back to Index](#index))
 ## Genome Browser
 
 
@@ -72,7 +72,7 @@ A description of the elements of the browser are as follows:
 
 By default, both track on the default page have been filtered to 
 
-## Tutorial
+## Tutorial ([Back to Index](#index))
 ### Finding a variant of interest
 A user can navigate to a gene or to a variant ID.
 Enter in the variant ID rs13140464 into the search text field at the top of the browser. (See below)
@@ -94,3 +94,5 @@ One can now see three DNase peaks (1) around the rs13140464 variant(2).  In addi
 ### Obtaining additional variant information
 Left clicking a variant (see red circle below), will cause a new window to pop up in the browser that will contain additional information about the variant.
 ![](./images/rs13140464_info.tmp.png)
+
+## Adding and removing tracks
