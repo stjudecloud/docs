@@ -75,8 +75,16 @@ Enter in the variant ID rs13140464 into the search text field at the top of the 
 Pressing enter will center the browser of the selected variant.  (see below)
 ![](./images/rs13140464_zoomed.png)
 
+### Zooming in and out
+One can use the buttons next to the search field to zoom in and out along the genome.  Press the x50 button to zoom out 50 fold
+![](./images/rs13140464_zoomedButton.png)
 
+This will show a larger region of the chromosome.
+![](./images/rs13140464_zoomedx50b.png)
 
+One can now see three DNase peaks (1) around the rs13140464 variant(2).  In addition there is another variant (3) seen near one of the DNase peaks.
+![](./images/rs13140464_zoomedx50Annotated.png)
 
-
-###
+### Obtaining additional variant information
+Left clicking a variant (see red circle below), will cause a new window to pop up in the browser that will contain additional information about the variant.
+![](./images/rs13140464_info.tmp.png)
