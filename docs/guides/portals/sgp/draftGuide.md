@@ -38,6 +38,7 @@ A description of the elements of the browser are as follows:
 |3 | RefSeq genes.  Gene models from the RefSeq database are displayed in this tracks. | 
 |4 |-log10 of the p-value of the association of each variants with pain rate in individuals with Sickle Cell Disease.  The analysis has only been performed around the  KIAA1109/Tenr/IL2/IL21 region.   Each dot on the track represents a genomic variant (Single Nucleotide Variant (SNV) or small insertion/deletion (INDEL)).  The Y-axis for the track represents the -log10 of the p-value.  The higher the value, the more stastically significant the association between the variant and pain rate is.  Clicking on a variant will open op a window that gives further details about the variant.  (See Figure 3). | 
 |5 | -log10 of the p-value of the association of each variants with age of first vaso-occlusive crisis in individuals with Sickle Cell Disease.  See (4) above for more information on this type of trac. | 
+|6| Filters: Filters allow variants within tracks to be filtered by numerous citeria.  [See Filter description](#Filters)|
 
 
 #### Navigation buttons
@@ -52,3 +53,13 @@ A description of the elements of the browser are as follows:
 
 
 
+#### Filters
+
+![](./images/Filters.png)
+
+|#   |      Description      |  
+|----------|-------------|
+| a| Filters for pain rate p-value track | 
+|b|  Filters for age of first vaso-occlusive crisis (VOC) p-value |  
+|c | The highlighted filter shows which value is  used for the Y-axis on the browser track.  The vale can be changed. | 
+|d | A highligthed vale within a filter shows which filter value is set.  The number next to the filter represents the number of individuals that meet the filter criteria.| 
