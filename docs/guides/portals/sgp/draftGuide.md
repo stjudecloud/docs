@@ -1,8 +1,8 @@
-#Index
-## [Glossary](#Glossary)
-## [Visualizations](#Visualizations)
-### [Genome Browser](#genome-browser)
-## [Tutorial(#tutorial)
+# Index
+[Glossary](#Glossary)
+[Visualizations](#Visualizations)
+  [Genome Browser](#genome-browser)
+[Tutorial](#tutorial)
 
 
 # Glossary
