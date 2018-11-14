@@ -29,6 +29,11 @@ The [Sickle Cell Research and Intervention Program](https://www.stjude.org/resea
 # Visualizations ([Back to Index](#index))
 ## Genome Browser
 
+#### [Browser overview](#browser-oveview)
+#### [Navigation buttons](#navigaiton-buttons)
+#### [Filters](#filters)
+#### [Genomme browser tutorial](#genomeBrowserTutorial)
+
 
 Upon launching the browser, you will see an image similar to the one shown here.
 
@@ -72,8 +77,8 @@ A description of the elements of the browser are as follows:
 
 By default, both track on the default page have been filtered to 
 
-## Tutorial ([Back to Index](#index))
-### Finding a variant of interest
+### Tutorial ([Back to Index](#index)) <a name="genomeBrowserTutorial"></a>
+#### Finding a variant of interest
 A user can navigate to a gene or to a variant ID.
 Enter in the variant ID rs13140464 into the search text field at the top of the browser. (See below)
 ![](./images/findRs1314064.png)
@@ -81,7 +86,7 @@ Enter in the variant ID rs13140464 into the search text field at the top of the 
 Pressing enter will center the browser of the selected variant.  (see below)
 ![](./images/rs13140464_zoomed.png)
 
-### Zooming in and out
+#### Zooming in and out
 One can use the buttons next to the search field to zoom in and out along the genome.  Press the x50 button to zoom out 50 fold
 ![](./images/rs13140464_zoomedButton.png)
 
@@ -91,15 +96,15 @@ This will show a larger region of the chromosome.
 One can now see three DNase peaks (1) around the rs13140464 variant(2).  In addition there is another variant (3) seen near one of the DNase peaks.
 ![](./images/rs13140464_zoomedx50Annotated.png)
 
-### Obtaining additional variant information
+#### Obtaining additional variant information
 Left clicking a variant (see red circle below), will cause a new window to pop up in the browser that will contain additional information about the variant.
 ![](./images/rs13140464_info.tmp.png)
 
-## Adding and removing tracks
+#### Adding and removing tracks
 Select the tracks button from the top of the genome browser.
 ![](./images/trackSelected.png)
 A pop-up window displaying selected tracks and tracks available for selection.
 ![](./images/tracks1.png)
 One can scroll down to see additional tracks.  Try selecting and unselecting various tracks and observe the updated tracks on the browser.
 
-## Getting DNA sequence
+#### Getting DNA sequence
