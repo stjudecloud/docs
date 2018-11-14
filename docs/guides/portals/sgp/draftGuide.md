@@ -1,5 +1,11 @@
+#Index
+## [Glossary](#Glossary)
+## [Visualizations](#Visualizations)
+### [Genome Browser](#genome-browser)
+## [Tutorial(#tutorial)
 
-# Gloassary
+
+# Glossary
 
 #### HbF (Fetal hemoglobin)
 Fetal hemoglobin contains two subunit of gamma-globin and two units of alpha-globin, while adult hemoglobin contains two subuints of beta-globin and two units of alpha-globin.  
