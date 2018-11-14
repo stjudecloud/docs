@@ -26,7 +26,7 @@ The [Sickle Cell Research and Intervention Program](https://www.stjude.org/resea
 
 Upon launching the browser, you will see an image similar to the one shown here.
 
-#### Browser overview
+### Browser overview
 ![](./images/BrowserOverview.png)
 
 A description of the elements of the browser are as follows:
@@ -41,7 +41,7 @@ A description of the elements of the browser are as follows:
 |6| Filters: Filters allow variants within tracks to be filtered by numerous citeria.  [See Filter description](#Filters)|
 
 
-#### Navigation buttons
+### Navigation buttons
 ![](./images/NavigationButtons.png)
 
 |#   |      Description      |  
@@ -53,7 +53,7 @@ A description of the elements of the browser are as follows:
 
 
 
-#### Filters
+### Filters
 
 ![](./images/Filters.png)
 
@@ -63,3 +63,20 @@ A description of the elements of the browser are as follows:
 |b|  Filters for age of first vaso-occlusive crisis (VOC) p-value |  
 |c | The highlighted filter shows which value is  used for the Y-axis on the browser track.  The vale can be changed. | 
 |d | A highligthed vale within a filter shows which filter value is set.  The number next to the filter represents the number of individuals that meet the filter criteria.| 
+
+By default, both track on the default page have been filtered to 
+
+## Tutorial
+### Finding a variant of interest
+A user can navigate to a gene or to a variant ID.
+Enter in the variant ID rs13140464 into the search text field at the top of the browser. (See below)
+![](./images/findRs1314064.png)
+
+Pressing enter will center the browser of the selected variant.  (see below)
+![](./images/rs13140464_zoomed.png)
+
+
+
+
+
+###
