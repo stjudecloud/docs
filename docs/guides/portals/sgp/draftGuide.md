@@ -1,7 +1,7 @@
 # Index
 ### [Glossary](#Glossary)
 ### [Visualizations](#Visualizations)
-#### [Genome Browser](#genome-browser)
+####  &nbsp;&nbsp;&nbsp;&nbsp[Genome Browser](#genome-browser)
 ### [Tutorial](#tutorial)
 
 
