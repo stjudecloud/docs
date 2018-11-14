@@ -5,7 +5,8 @@
 #####  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;[Tutorial](#genomeBrowserTutorial)
 
 
-# Glossary ([Back to Index](#index))
+# Glossary 
+([Back to Index](#index))
 
 #### Fetal hemoglobin (HbF)
 Fetal hemoglobin contains two subunit of gamma-globin and two units of alpha-globin, while adult hemoglobin contains two subuints of beta-globin and two units of alpha-globin.  
@@ -26,7 +27,8 @@ The [Sickle Cell Research and Intervention Program](https://www.stjude.org/resea
   
 
 
-# Visualizations ([Back to Index](#index))
+# Visualizations 
+([Back to Index](#index))
 ## Genome Browser
 
 #### [Browser overview](#browser-oveview)
@@ -77,7 +79,8 @@ A description of the elements of the browser are as follows:
 
 By default, both track on the default page have been filtered to 
 <a name="genomeBrowserTutorial"></a>
-### Tutorial ([Back to Index](#index)) 
+### Tutorial 
+([Back to Index](#index)) 
 #### Finding a variant of interest
 A user can navigate to a gene or to a variant ID.
 Enter in the variant ID rs13140464 into the search text field at the top of the browser. (See below)
