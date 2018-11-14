@@ -96,3 +96,10 @@ Left clicking a variant (see red circle below), will cause a new window to pop u
 ![](./images/rs13140464_info.tmp.png)
 
 ## Adding and removing tracks
+Select the tracks button from the top of the genome browser.
+![](./images/trackSelected.png)
+A pop-up window displaying selected tracks and tracks available for selection.
+![](./images/tracks1.png)
+One can scroll down to see additional tracks.  Try selecting and unselecting various tracks and observe the updated tracks on the browser.
+
+## Getting DNA sequence
