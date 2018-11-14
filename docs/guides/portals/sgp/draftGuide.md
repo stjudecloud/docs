@@ -32,7 +32,7 @@ The [Sickle Cell Research and Intervention Program](https://www.stjude.org/resea
 #### [Browser overview](#browser-oveview)
 #### [Navigation buttons](#navigaiton-buttons)
 #### [Filters](#filters)
-#### [Genomme browser tutorial](#genomeBrowserTutorial)
+#### [Genome browser tutorial](#genomeBrowserTutorial)
 
 
 Upon launching the browser, you will see an image similar to the one shown here.
@@ -108,3 +108,11 @@ A pop-up window displaying selected tracks and tracks available for selection.
 One can scroll down to see additional tracks.  Try selecting and unselecting various tracks and observe the updated tracks on the browser.
 
 #### Getting DNA sequence
+Select the 'More' button at the top of the browser.
+![](./images/more.png)
+Several options will be avaialble.  Select the DNA sequence button.
+![](./images/DNASequenceCircled.png)
+You will be shown the DNA sequence for the region.
+![](./images/DNASequenceShown.png)
+
+
