@@ -2,7 +2,7 @@
 ### [Glossary](#Glossary)
 ### [Visualizations](#Visualizations)
 ####  &nbsp;&nbsp;&nbsp;&nbsp; [Genome Browser](#genome-browser)
-### [Tutorial](#tutorial)
+#####  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;[Tutorial](#genomeBrowserTutorial)
 
 
 # Glossary ([Back to Index](#index))
@@ -76,8 +76,8 @@ A description of the elements of the browser are as follows:
 |d | A highligthed vale within a filter shows which filter value is set.  The number next to the filter represents the number of individuals that meet the filter criteria.| 
 
 By default, both track on the default page have been filtered to 
-
-### Tutorial ([Back to Index](#index)) <a name="genomeBrowserTutorial"></a>
+<a name="genomeBrowserTutorial"></a>
+### Tutorial ([Back to Index](#index)) 
 #### Finding a variant of interest
 A user can navigate to a gene or to a variant ID.
 Enter in the variant ID rs13140464 into the search text field at the top of the browser. (See below)
