@@ -767,8 +767,198 @@
         }, 
         {
             "location": "/guides/portals/sgp/", 
-            "text": "Todo\n\n\nSGP portal documentation in progress...", 
+            "text": "Index\n\n\nGlossary\n\n\nVisualizations\n\n\n \nGenome Browser\n\n\n \nTutorial\n\n\n \nVariants and Phenotype Viewer\n\n\n \nTutorial\n\n\nGlossary\n\n\n(\nBack to Index\n)\n\n\n\n\nFetal hemoglobin (HbF)\n\n\nFetal hemoglobin contains two subunit of gamma-globin and two units of alpha-globin, while adult hemoglobin contains two subuints of beta-globin and two units of alpha-globin.  \n\n\nHeriditary persistance of fetal hemoglobin (HPFH)\n\n\nInividuals with HPFH have elevated levels of fetal hemoglobin. These elevated levels reduce or eliminate many of the symptoms of Sickle Cell Disease\n\n\nPrincipal Component Analysis (PCA)\n\n\nA \nmethod\n for reducing high dimensional data into low-dimensional representations.\n\n\nSC\n\n\nAnd individual with one copy of the sickle cell allele \nrs334\n and one copy of \nhemoglobin C\n\n\nS\n+\n\n\nAn individual with \nbeta-thalassemia\n who has one copy of the sickle cell allele \nrs334\n and one copy of a beta-globin gene that has reduced expression.\n\n\nS\n0\n\n\nAn individual with \nbeta-thalassemia\n who has one copy of the sickle cell allele \nrs334\n and one copy of a beta-globin gene that is not expressed or is deleted.\n\n\n\nSS\n\n\nAn individual with \nsickle cell disease\n who is homozygous for the sickle cell allele \nrs334\n.\n\n\nSCCRIP\n\n\nThe \nSickle Cell Research and Intervention Program\n\n\nVisualizations\n\n\n(\nBack to Index\n)\n\n\nGenome Browser\n\n\nBrowser overview\n\n\nNavigation buttons\n\n\nFilters\n\n\nGenome browser tutorial\n\n\nUpon launching the browser, you will see an image similar to the one shown here.\n\n\nBrowser overview\n\n\n\n\nA description of the elements of the browser are as follows:\n\n\n\n\n\n\n\n\n#\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n1\n\n\nNavigation tools and track selector. (\nSee Navigation Buttons section\n)\n\n\n\n\n\n\n2\n\n\nDNase hypersensitivity tracks.  By default, four epigenetic tracks are shown.  These are DNAse hypersensitivity tracks for Hematopoeitic stem cells (HSC), T Cells, Monocytes, and B Cells.  Additional tracks can be viewed by selecting the \u2018Tracks\u2019 button (See Adding/Removing Tracks section below)\n\n\n\n\n\n\n3\n\n\nRefSeq genes.  Gene models from the RefSeq database are displayed in this tracks.\n\n\n\n\n\n\n4\n\n\n-log10 of the p-value of the association of each variants with pain rate in individuals with Sickle Cell Disease.  The analysis has only been performed around the  KIAA1109/Tenr/IL2/IL21 region.   Each dot on the track represents a genomic variant (Single Nucleotide Variant (SNV) or small insertion/deletion (INDEL)).  The Y-axis for the track represents the -log10 of the p-value.  The higher the value, the more stastically significant the association between the variant and pain rate is.  Clicking on a variant will open op a window that gives further details about the variant.  (See Figure 3).\n\n\n\n\n\n\n5\n\n\n-log10 of the p-value of the association of each variants with age of first vaso-occlusive crisis in individuals with Sickle Cell Disease.  See (4) above for more information on this type of trac.\n\n\n\n\n\n\n6\n\n\nFilters: Filters allow variants within tracks to be filtered by numerous citeria.  \nSee Filter description\n\n\n\n\n\n\n\n\nNavigation buttons\n\n\n\n\n\n\n\n\n\n\n#\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\na\n\n\nLocation/Locus entry field.  One can enter genomic coordinates in the form of chromosome:start-end (for example chr1:12345-9876), or a gene name or a SNP rs ID.\n\n\n\n\n\n\nb\n\n\nBrowser zoom in and out\n\n\n\n\n\n\nc\n\n\nTracks: Add or hide tracks (See section below on adding/hiding tracks(\n\n\n\n\n\n\nd\n\n\nMore:  Save svg image of browser, get DNA sequence or highlight regions of the browser.\n\n\n\n\n\n\n\n\nFilters\n\n\n\n\n\n\n\n\n\n\n#\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\na\n\n\nFilters for pain rate p-value track\n\n\n\n\n\n\nb\n\n\nFilters for age of first vaso-occlusive crisis (VOC) p-value\n\n\n\n\n\n\nc\n\n\nThe highlighted filter shows which value is  used for the Y-axis on the browser track.  The vale can be changed.\n\n\n\n\n\n\nd\n\n\nA highligthed vale within a filter shows which filter value is set.  The number next to the filter represents the number of individuals that meet the filter criteria.\n\n\n\n\n\n\n\n\nBy default, both track on the default page have been filtered to \n\n\n\nTutorial\n\n\n(\nBack to Index\n) \n\n\nFinding a variant of interest\n\n\nA user can navigate to a gene or to a variant ID.\nEnter in the variant ID rs13140464 into the search text field at the top of the browser. (See below)\n\n\n\nPressing enter will center the browser of the selected variant.  (see below)\n\n\n\nZooming in and out\n\n\nOne can use the buttons next to the search field to zoom in and out along the genome.  Press the x50 button to zoom out 50 fold\n\n\n\nThis will show a larger region of the chromosome.\n\n\n\nOne can now see three DNase peaks (1) around the rs13140464 variant(2).  In addition there is another variant (3) seen near one of the DNase peaks.\n\n\n\nObtaining additional variant information\n\n\nLeft clicking a variant (see red circle below), will cause a new window to pop up in the browser that will contain additional information about the variant.\n\n\n\nAdding and removing tracks\n\n\nSelect the tracks button from the top of the genome browser.\n\n\nA pop-up window displaying selected tracks and tracks available for selection.\n\n\nOne can scroll down to see additional tracks.  Try selecting and unselecting various tracks and observe the updated tracks on the browser.\n\n\nGetting DNA sequence\n\n\nSelect the 'More' button at the top of the browser.\n\n\nSeveral options will be avaialble.  Select the DNA sequence button.\n\n\nYou will be shown the DNA sequence for the region.\n\n\n\n\n(\nBack to Index\n) \n\n\nVariants and Phenotype Viewer\n\n\n\n\nTutorial\n\n\nLabels\n\n\nSee glossary for further details\n\n\n\n\n\n\n\n\n#\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nHb\n\n\nHemoglobin\n\n\n\n\n\n\nHbF\n\n\nFetal Hemoglobin\n\n\n\n\n\n\nHbA2\n\n\nVariant of hemoglobin that contains two alpha subunits and two delta subunits\n\n\n\n\n\n\nMCV\n\n\nMean corpuscular  volume. This is the average size of red blood cells\n\n\n\n\n\n\nPainRate\n\n\nNumber of hospitalizations per year over a two year period.\n\n\n\n\n\n\nSickle cell genotype\n\n\n(SS_Genotype in legend.  Whether patient is SS or SB0\n\n\n\n\n\n\nAlpha deletion\n\n\nWhether the individual has an alpha globin deletion (het=1 deleted allele, homo=2 deleted alleles)\n\n\n\n\n\n\nrs######\n\n\nSeveral variants that we have found to be associated with pain in Sickle Cell Disease\n\n\n\n\n\n\n\n\nOverview\n\n\nWhen the Variants and Phenotype Viewer is launched, the user will be presented with the following visualization.\n\n\nThe different elements of the view are as follows.\n\n\n\n\n\n\n\n\n#\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n1\n\n\nSettings and sort buttons.  In addition a link to this help document\n\n\n\n\n\n\n2\n\n\nLegend for different tracks in the viewer\n\n\n\n\n\n\n3\n\n\nPhenotypic data displayed with on individual represented in each column\n\n\n\n\n\n\n4\n\n\nGentoypic data displayed with on individual represented in each column\n\n\n\n\n\n\n\n\nSorting\n\n\nHover your mouse over the MCV label in the graph.  A box will popup with several icons.  Select the triangle that is pointed to the left to sort individuals by MCV.\n\n\n\nThe following graph shows individuals sorted by MCV.  Blank columns represent no data available.  Note that PainRate, Sickle cell genotype and alpha deletion status appear to correlate with MCV values.\n\n\n\nView values for all patients\n\n\nHovering over one column will enable the viewing of all  phenotypic values for that patient.\n\n\nUndo\n\n\nWhile exploring the data, one may inadvertently sort or remove data.  One can undo the changes by selecting the undo button at the thop of the viewer.  THe redo button will revert the undo.", 
             "title": "Sickle Cell Genomics Portal"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#index", 
+            "text": "", 
+            "title": "Index"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#glossary", 
+            "text": "", 
+            "title": "Glossary"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#visualizations", 
+            "text": "", 
+            "title": "Visualizations"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#genome-browser", 
+            "text": "", 
+            "title": "&nbsp;&nbsp;&nbsp;&nbsp; Genome Browser"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#tutorial", 
+            "text": "", 
+            "title": "&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Tutorial"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#variants-and-phenotype-viewer", 
+            "text": "", 
+            "title": "&nbsp;&nbsp;&nbsp;&nbsp; Variants and Phenotype Viewer"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#tutorial_1", 
+            "text": "", 
+            "title": "&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Tutorial"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#glossary_1", 
+            "text": "( Back to Index )", 
+            "title": "Glossary"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#fetal-hemoglobin-hbf", 
+            "text": "Fetal hemoglobin contains two subunit of gamma-globin and two units of alpha-globin, while adult hemoglobin contains two subuints of beta-globin and two units of alpha-globin.", 
+            "title": "Fetal hemoglobin (HbF)"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#heriditary-persistance-of-fetal-hemoglobin-hpfh", 
+            "text": "Inividuals with HPFH have elevated levels of fetal hemoglobin. These elevated levels reduce or eliminate many of the symptoms of Sickle Cell Disease", 
+            "title": "Heriditary persistance of fetal hemoglobin (HPFH)"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#principal-component-analysis-pca", 
+            "text": "A  method  for reducing high dimensional data into low-dimensional representations.", 
+            "title": "Principal Component Analysis (PCA)"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#sc", 
+            "text": "And individual with one copy of the sickle cell allele  rs334  and one copy of  hemoglobin C", 
+            "title": "SC"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#s", 
+            "text": "An individual with  beta-thalassemia  who has one copy of the sickle cell allele  rs334  and one copy of a beta-globin gene that has reduced expression.", 
+            "title": "S&beta;+"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#s0", 
+            "text": "An individual with  beta-thalassemia  who has one copy of the sickle cell allele  rs334  and one copy of a beta-globin gene that is not expressed or is deleted.", 
+            "title": "S&beta;0"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#ss", 
+            "text": "An individual with  sickle cell disease  who is homozygous for the sickle cell allele  rs334 .", 
+            "title": "SS"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#sccrip", 
+            "text": "The  Sickle Cell Research and Intervention Program", 
+            "title": "SCCRIP"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#visualizations_1", 
+            "text": "( Back to Index )", 
+            "title": "Visualizations"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#genome-browser_1", 
+            "text": "", 
+            "title": "Genome Browser"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#browser-overview", 
+            "text": "", 
+            "title": "Browser overview"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#navigation-buttons", 
+            "text": "", 
+            "title": "Navigation buttons"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#filters", 
+            "text": "", 
+            "title": "Filters"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#genome-browser-tutorial", 
+            "text": "Upon launching the browser, you will see an image similar to the one shown here.", 
+            "title": "Genome browser tutorial"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#browser-overview_1", 
+            "text": "A description of the elements of the browser are as follows:     #  Description      1  Navigation tools and track selector. ( See Navigation Buttons section )    2  DNase hypersensitivity tracks.  By default, four epigenetic tracks are shown.  These are DNAse hypersensitivity tracks for Hematopoeitic stem cells (HSC), T Cells, Monocytes, and B Cells.  Additional tracks can be viewed by selecting the \u2018Tracks\u2019 button (See Adding/Removing Tracks section below)    3  RefSeq genes.  Gene models from the RefSeq database are displayed in this tracks.    4  -log10 of the p-value of the association of each variants with pain rate in individuals with Sickle Cell Disease.  The analysis has only been performed around the  KIAA1109/Tenr/IL2/IL21 region.   Each dot on the track represents a genomic variant (Single Nucleotide Variant (SNV) or small insertion/deletion (INDEL)).  The Y-axis for the track represents the -log10 of the p-value.  The higher the value, the more stastically significant the association between the variant and pain rate is.  Clicking on a variant will open op a window that gives further details about the variant.  (See Figure 3).    5  -log10 of the p-value of the association of each variants with age of first vaso-occlusive crisis in individuals with Sickle Cell Disease.  See (4) above for more information on this type of trac.    6  Filters: Filters allow variants within tracks to be filtered by numerous citeria.   See Filter description", 
+            "title": "Browser overview"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#navigation-buttons_1", 
+            "text": "#  Description      a  Location/Locus entry field.  One can enter genomic coordinates in the form of chromosome:start-end (for example chr1:12345-9876), or a gene name or a SNP rs ID.    b  Browser zoom in and out    c  Tracks: Add or hide tracks (See section below on adding/hiding tracks(    d  More:  Save svg image of browser, get DNA sequence or highlight regions of the browser.", 
+            "title": "Navigation buttons"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#filters_1", 
+            "text": "#  Description      a  Filters for pain rate p-value track    b  Filters for age of first vaso-occlusive crisis (VOC) p-value    c  The highlighted filter shows which value is  used for the Y-axis on the browser track.  The vale can be changed.    d  A highligthed vale within a filter shows which filter value is set.  The number next to the filter represents the number of individuals that meet the filter criteria.     By default, both track on the default page have been filtered to", 
+            "title": "Filters"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#tutorial_2", 
+            "text": "( Back to Index )", 
+            "title": "Tutorial"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#finding-a-variant-of-interest", 
+            "text": "A user can navigate to a gene or to a variant ID.\nEnter in the variant ID rs13140464 into the search text field at the top of the browser. (See below)  Pressing enter will center the browser of the selected variant.  (see below)", 
+            "title": "Finding a variant of interest"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#zooming-in-and-out", 
+            "text": "One can use the buttons next to the search field to zoom in and out along the genome.  Press the x50 button to zoom out 50 fold  This will show a larger region of the chromosome.  One can now see three DNase peaks (1) around the rs13140464 variant(2).  In addition there is another variant (3) seen near one of the DNase peaks.", 
+            "title": "Zooming in and out"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#obtaining-additional-variant-information", 
+            "text": "Left clicking a variant (see red circle below), will cause a new window to pop up in the browser that will contain additional information about the variant.", 
+            "title": "Obtaining additional variant information"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#adding-and-removing-tracks", 
+            "text": "Select the tracks button from the top of the genome browser. \nA pop-up window displaying selected tracks and tracks available for selection. \nOne can scroll down to see additional tracks.  Try selecting and unselecting various tracks and observe the updated tracks on the browser.", 
+            "title": "Adding and removing tracks"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#getting-dna-sequence", 
+            "text": "Select the 'More' button at the top of the browser. \nSeveral options will be avaialble.  Select the DNA sequence button. \nYou will be shown the DNA sequence for the region.  \n( Back to Index )", 
+            "title": "Getting DNA sequence"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#variants-and-phenotype-viewer_1", 
+            "text": "", 
+            "title": "Variants and Phenotype Viewer"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#tutorial_3", 
+            "text": "", 
+            "title": "Tutorial"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#labels", 
+            "text": "See glossary for further details     #  Description      Hb  Hemoglobin    HbF  Fetal Hemoglobin    HbA2  Variant of hemoglobin that contains two alpha subunits and two delta subunits    MCV  Mean corpuscular  volume. This is the average size of red blood cells    PainRate  Number of hospitalizations per year over a two year period.    Sickle cell genotype  (SS_Genotype in legend.  Whether patient is SS or SB0    Alpha deletion  Whether the individual has an alpha globin deletion (het=1 deleted allele, homo=2 deleted alleles)    rs######  Several variants that we have found to be associated with pain in Sickle Cell Disease", 
+            "title": "Labels"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#overview", 
+            "text": "When the Variants and Phenotype Viewer is launched, the user will be presented with the following visualization. \nThe different elements of the view are as follows.     #  Description      1  Settings and sort buttons.  In addition a link to this help document    2  Legend for different tracks in the viewer    3  Phenotypic data displayed with on individual represented in each column    4  Gentoypic data displayed with on individual represented in each column", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#sorting", 
+            "text": "Hover your mouse over the MCV label in the graph.  A box will popup with several icons.  Select the triangle that is pointed to the left to sort individuals by MCV.  The following graph shows individuals sorted by MCV.  Blank columns represent no data available.  Note that PainRate, Sickle cell genotype and alpha deletion status appear to correlate with MCV values.", 
+            "title": "Sorting"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#view-values-for-all-patients", 
+            "text": "Hovering over one column will enable the viewing of all  phenotypic values for that patient.", 
+            "title": "View values for all patients"
+        }, 
+        {
+            "location": "/guides/portals/sgp/#undo", 
+            "text": "While exploring the data, one may inadvertently sort or remove data.  One can undo the changes by selecting the undo button at the thop of the viewer.  THe redo button will revert the undo.", 
+            "title": "Undo"
         }, 
         {
             "location": "/faq/", 
