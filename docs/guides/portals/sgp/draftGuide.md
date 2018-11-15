@@ -3,11 +3,15 @@
 ### [Visualizations](#Visualizations)
 ####  &nbsp;&nbsp;&nbsp;&nbsp; [Genome Browser](#genome-browser)
 #####  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;[Tutorial](#genomeBrowserTutorial)
+####  &nbsp;&nbsp;&nbsp;&nbsp; [Variants and Phenotype Viewer](#variantsPhenotypeViewer)
+#####  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;[Tutorial](#variantsPhenoyypeViewerTutorial)
+
 
 
 # Glossary 
 ([Back to Index](#index))
 
+<a name="hbf"></a>
 #### Fetal hemoglobin (HbF)
 Fetal hemoglobin contains two subunit of gamma-globin and two units of alpha-globin, while adult hemoglobin contains two subuints of beta-globin and two units of alpha-globin.  
 #### Heriditary persistance of fetal hemoglobin (HPFH)
@@ -20,6 +24,7 @@ And individual with one copy of the sickle cell allele [rs334](https://www.ncbi.
 An individual with [beta-thalassemia](https://ghr.nlm.nih.gov/condition/beta-thalassemia) who has one copy of the sickle cell allele [rs334](https://www.ncbi.nlm.nih.gov/snp/rs334) and one copy of a beta-globin gene that has reduced expression.
 #### S&beta;<sup>0</sup>
 An individual with [beta-thalassemia](https://ghr.nlm.nih.gov/condition/beta-thalassemia) who has one copy of the sickle cell allele [rs334](https://www.ncbi.nlm.nih.gov/snp/rs334) and one copy of a beta-globin gene that is not expressed or is deleted.
+<a name="SS"></a>
 #### SS 
 An individual with [sickle cell disease](https://ghr.nlm.nih.gov/condition/sickle-cell-disease) who is homozygous for the sickle cell allele [rs334](https://www.ncbi.nlm.nih.gov/snp/rs334).
 #### SCCRIP
@@ -119,3 +124,50 @@ You will be shown the DNA sequence for the region.
 ![](./images/DNASequenceShown.png)
 
 
+
+<a name="variantsPhenoyypeViewer"></a>
+([Back to Index](#index)) 
+## Variants and Phenotype Viewer
+<a name="variantsPhenoyypeViewerTutorial"></a>
+### Tutorial 
+#### Labels
+[See glossary for further details](#glossary)
+
+|#   |      Description      |  
+|----------|-------------|
+| Hb | Hemoglobin | 
+|HbF| [Fetal Hemoglobin](#hbf) |  
+|HbA2 | Variant of hemoglobin that contains two alpha subunits and two delta subunits | 
+|MCV | Mean corpuscular  volume. This is the average size of red blood cells | 
+|PainRate |Number of hospitalizations per year over a two year period. | 
+|Sickle cell genotype | (SS_Genotype in legend.  Whether patient is SS or SB0 | 
+|Alpha deletion | Whether the individual has an alpha globin deletion (het=1 deleted allele, homo=2 deleted alleles) |
+|rs###### | Several variants that we have found to be associated with pain in Sickle Cell Disease|
+
+
+#### Overview
+
+When the Variants and Phenotype Viewer is launched, the user will be presented with the following visualization.
+![](./images/PhenoVariantAnnotated.png)
+The different elements of the view are as follows.
+
+|#   |      Description      |  
+|----------|-------------|
+| 1| Settings and sort buttons.  In addition a link to this help document | 
+|2|  Legend for different tracks in the viewer |  
+|3 | Phenotypic data displayed with on individual represented in each column | 
+|4 | Gentoypic data displayed with on individual represented in each column | 
+
+#### Sorting
+Hover your mouse over the MCV label in the graph.  A box will popup with several icons.  Select the triangle that is pointed to the left to sort individuals by MCV.
+![](./images/PhenoVariantSortButton.png)
+
+The following graph shows individuals sorted by MCV.  Blank columns represent no data available.  Note that PainRate, Sickle cell genotype and alpha deletion status appear to correlate with MCV values.
+![](./images/PhenoVariantPainSorted.png)
+
+#### View values for all patients
+Hovering over one column will enable the viewing of all  phenotypic values for that patient.
+
+#### Undo
+While exploring the data, one may inadvertently sort or remove data.  One can undo the changes by selecting the undo button at the thop of the viewer.  THe redo button will revert the undo.
+![](./images/PhenoVariantsUndo.png)
