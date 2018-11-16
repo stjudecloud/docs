@@ -2,6 +2,8 @@
 
 ## Introduction
 
+Hello, world!
+
 Welcome to the St. Jude Cloud documentation! Here, you'll find the 
 authoritative information for accessing data, running analysis tools,
 and exploring results files in St. Jude Cloud. For a brief overview of
