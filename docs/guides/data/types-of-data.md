@@ -12,6 +12,7 @@ St. Jude Cloud hosts both raw genomic data files and processed results files:
 | gVCF        | [Genomic VCF][gvcf-spec] files produced by [Microsoft Genomics Service][msgen]               | [Click here](#gvcf-files)        |
 | Somatic VCF | Curated list of somatic pipelines produced by the St. Jude somatic variant analysis pipeline | [Click here](#somatic-vcf-files) |
 
+
 #### BAM files
 
 In St. Jude Cloud, we stored aligned sequence reads in the ubiquitous BAM file format. BAM files were produced by the [Microsoft Genomics Service][msgen] aligned to HG38 (GRCh38 no alt analysis set). For more information about how Microsoft Genomics produces BAM files or any other questions regarding data generation, please refer to [the official Microsoft Genomics whitepaper][msgen-whitepaper].
@@ -35,6 +36,7 @@ Somatic VCF files contain HG38 based SNV/Indel variant calls from the St. Jude s
 
 For more information on variants for each of the individuals, please refer to the relevant PCGP paper. For more information on the variant calling format (VCF), please see the latest specification for VCF document listed [here][hts-specs].
 
+
 [bwa]: http://bio-bwa.sourceforge.net/
 [picard]: https://broadinstitute.github.io/picard/
 [bambino-paper]: https://academic.oup.com/bioinformatics/article/27/6/865/236751
@@ -47,3 +49,4 @@ For more information on variants for each of the individuals, please refer to th
 [gvcf-spec]:https://software.broadinstitute.org/gatk/documentation/article?id=11004
 [gvcf-diff-from-vcf]: https://software.broadinstitute.org/gatk/documentation/article?id=4017
 [bam-spec]: https://samtools.github.io/hts-specs/SAMv1.pdf
+

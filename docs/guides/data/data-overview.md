@@ -36,11 +36,12 @@ before this embargo date is not permitted as outlined in the data access agreeme
 
 **Current Embargo Dates**
 
-| Data Access Unit                 | Embargo Date     |
-| -------------------------------- | ---------------- |
-| Pediatric Cancer Genome Project  | July 23, 2018    |
-| St. Jude LIFE                    | January 15, 2019 |
-| Clinical Genomics                | January 15, 2019 |
+| Data Access Unit                 | Embargo Date      |
+| -------------------------------- | ----------------- |
+| Pediatric Cancer Genome Project  | July 23, 2018     |
+| St. Jude LIFE                    | January 15, 2019  |
+| Clinical Genomics                | January 15, 2019  |
+| Sickle Cell Genome Project       | September 1, 2019 |
 
 ### Frequently asked questions
 
