@@ -14,3 +14,7 @@ St. Jude Lifetime (SJLIFE) is a longevity study from St. Jude Children's Researc
 ### Clinical Genomics (Clinical Pilot and G4K)
 **Clinical Genomics is a paired tumor-normal dataset focused on identifying variants that influence the development and behavior of childhood tumors.**
 Clinical Genomics is a cohort from St. Jude Children's Research Hospital, comprised of two studies: Clinical Pilot and Genomes4Kids. Clinical Pilot is a smaller, pilot study generated to asses the validity and accuracy of moving forward with the G4K study. These studies aim to identify all inherited and tumor-acquired (somatic) genome sequence and structural variants influencing the development and behavior of childhood tumors. 
+
+### Sickle Cell Genome Project (SGP)
+**SGP is a germline-only dataset of Sickle Cell Disease (SCD) patients from birth to young adulthood.**
+The Sickle Cell Genome Project (SGP) is a collaboration between St. Jude Children’s Research Hospital and Baylor College of Medicine focused on identifying genetic modifiers that contribute to various health complications in SCD patients. Additional objectives include, but are not limited to, developing accurate methods to characterize germline structural variants in highly homologous globin locus and blood typing.

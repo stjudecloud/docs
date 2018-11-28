@@ -32,7 +32,7 @@ pages:
       - 'BigWig Viewer': 'guides/visualizations/bigwig-viewer.md'
       - 'Fusion Viewer': 'guides/visualizations/fusion-viewer.md'
   - 'Portal Guides':
-      - 'Sickle Cell Genomics Portal' : 'guides/portals/sgp/index.md'
+      - 'Sickle Cell Genomics Portal' : 'guides/portals/sickle-cell.md'
   - 'Frequently Asked Questions': 'faq.md'
 
 # Repository
