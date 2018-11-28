@@ -1,4 +1,4 @@
-The Sickle Cell Genomics Portal contains two browsers for the exploration of data from the  [Sickle Cell Genome Project (SGP)](../data/data-access-units.md#sickle-cell-genome-project-(sgp)) dataset.
+The Sickle Cell Genomics Portal contains two viewers for the exploration of data from the  [Sickle Cell Genome Project (SGP)](../data/data-access-units.md#sickle-cell-genome-project-(sgp)) dataset.
 
 ## Genome Browser
 
@@ -98,7 +98,7 @@ The different elements of the view are as follows.
 |3 | Phenotypic data displayed with an individual represented in each column | 
 |4 | Gentoypic data displayed with an individual represented in each column | 
 
-#### Labels
+### Labels
 [See glossary for further details](#glossary)
 
 |#   |      Description      |  
@@ -131,20 +131,28 @@ While exploring the data, one may inadvertently sort or remove data.  One can un
 ## Glossary 
 
 <a name="hbf"></a>
+
 * **Fetal hemoglobin (HbF)**
-Fetal hemoglobin contains two subunit of gamma-globin and two units of alpha-globin, while adult hemoglobin contains two subuints of beta-globin and two units of alpha-globin.  
-#### Heriditary persistance of fetal hemoglobin (HPFH)
-Inividuals with HPFH have eleed levels of fetal hemoglobin. These elevated levels reduce or eliminate many of the symptoms of Sickle Cell Disease
-#### Principal Component Analysis (PCA)
+Fetal hemoglobin contains two subunits of gamma-globin and two units of alpha-globin, while adult hemoglobin contains two subuints of beta-globin and two units of alpha-globin. 
+
+* **Heriditary persistance of fetal hemoglobin (HPFH)**
+Individuals with HPFH have elevated levels of fetal hemoglobin. These elevated levels reduce or eliminate many of the symptoms of Sickle Cell Disease.
+
+* **Principal Component Analysis (PCA)**
 A [method](https://www.jmp.com/support/help/14/principal-components.shtml) for reducing high dimensional data into low-dimensional representations.
-#### SC
-And individual with one copy of the sickle cell allele [rs334](https://www.ncbi.nlm.nih.gov/snp/rs334) and one copy of [hemoglobin C](https://medlineplus.gov/ency/article/000572.htm)
-#### S&beta;<sup>+</sup>
+
+* **SC**
+An individual with one copy of the sickle cell allele [rs334](https://www.ncbi.nlm.nih.gov/snp/rs334) and one copy of [hemoglobin C](https://medlineplus.gov/ency/article/000572.htm).
+
+* **S&beta;<sup>+</sup>**
 An individual with [beta-thalassemia](https://ghr.nlm.nih.gov/condition/beta-thalassemia) who has one copy of the sickle cell allele [rs334](https://www.ncbi.nlm.nih.gov/snp/rs334) and one copy of a beta-globin gene that has reduced expression.
-#### S&beta;<sup>0</sup>
+
+* **S&beta;<sup>0</sup>**
 An individual with [beta-thalassemia](https://ghr.nlm.nih.gov/condition/beta-thalassemia) who has one copy of the sickle cell allele [rs334](https://www.ncbi.nlm.nih.gov/snp/rs334) and one copy of a beta-globin gene that is not expressed or is deleted.
 <a name="SS"></a>
-#### SS 
+
+* **SS** 
 An individual with [sickle cell disease](https://ghr.nlm.nih.gov/condition/sickle-cell-disease) who is homozygous for the sickle cell allele [rs334](https://www.ncbi.nlm.nih.gov/snp/rs334).
-#### SCCRIP
-The [Sickle Cell Research and Intervention Program](https://www.stjude.org/research/clinical-trials/sccrip-hematological-disorder.html)
+
+* **SCCRIP**
+The [Sickle Cell Research and Intervention Program](https://www.stjude.org/research/clinical-trials/sccrip-hematological-disorder.html).
