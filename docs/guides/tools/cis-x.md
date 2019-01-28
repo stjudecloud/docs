@@ -39,6 +39,9 @@ cis-X currently only works with hg19 (GRCh37).
 | [Somatic SNV/indels]         | File      | Tab-delimited file containing somatic SNV/indels in the tumor genome                            | *.txt          |
 | [Somatic SVs]                | File      | Tab-delimited file containing somatic acquired structural variants in the tumor genome          | *.txt          |
 | [Somatic CNVs]               | File      | Tab-delimited file containing copy number aberrations in the tumor genome                       | *.txt          |
+| CNV/LOH action               | String    | The behavior when handling markers in CNV/LOH regions. Can be either `keep` or `drop`.          | drop           |
+| Minimum coverage for WGS     | Integer   | The minimum coverage in WGS to be included in the analysis                                      | 10             |
+| Minimum coverage for RNA-seq | Integer   | The minimum coverage in RNA-seq to be included in the analysis                                  | 10             |
 
 [Single nucleotide variants]: #single-nucleotide-variants
 [CNV/LOH regions]: #cnvloh-regions
