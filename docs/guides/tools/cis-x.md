@@ -42,6 +42,7 @@ cis-X currently only works with hg19 (GRCh37).
 | CNV/LOH action               | String    | The behavior when handling markers in CNV/LOH regions. Can be either `keep` or `drop`.          | drop           |
 | Minimum coverage for WGS     | Integer   | The minimum coverage in WGS to be included in the analysis                                      | 10             |
 | Minimum coverage for RNA-seq | Integer   | The minimum coverage in RNA-seq to be included in the analysis                                  | 10             |
+| Candidate FPKM threshold     | Float     | The FPKM threshold for the nomination of a cis-activated candidate                              | 0.1            |
 
 [Single nucleotide variants]: #single-nucleotide-variants
 [CNV/LOH regions]: #cnvloh-regions
