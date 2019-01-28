@@ -808,13 +808,13 @@ nucleotide variations (SNV) and insertion/deletions (indel).</p>
 <tbody>
 <tr>
 <td>Sample ID</td>
-<td>Parameter</td>
+<td>String</td>
 <td>The ID of the input sample</td>
 <td>SJALL018373_D1</td>
 </tr>
 <tr>
 <td>Disease subtype</td>
-<td>Parameter</td>
+<td>String</td>
 <td>The disease name under analysis. Must be either TALL or AML.</td>
 <td>TALL</td>
 </tr>
@@ -882,7 +882,13 @@ nucleotide variations (SNV) and insertion/deletions (indel).</p>
 <td>Minimum coverage for RNA-seq</td>
 <td>Integer</td>
 <td>The minimum coverage in RNA-seq to be included in the analysis</td>
-<td>10</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Candidate FPKM threshold</td>
+<td>Float</td>
+<td>The FPKM threshold for the nomination of a cis-activated candidate</td>
+<td>0.1</td>
 </tr>
 </tbody>
 </table>
@@ -1787,7 +1793,7 @@ cell lines.</p>
           </div>
         
         
-        built from <a href="https://github.com/stjude/sjcloud-docs/tree/678d792">678d792</a> using
+        built from <a href="https://github.com/stjude/sjcloud-docs/tree/c6315a8">c6315a8</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
