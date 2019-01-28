@@ -866,6 +866,24 @@ nucleotide variations (SNV) and insertion/deletions (indel).</p>
 <td>Tab-delimited file containing copy number aberrations in the tumor genome</td>
 <td>*.txt</td>
 </tr>
+<tr>
+<td>CNV/LOH action</td>
+<td>String</td>
+<td>The behavior when handling markers in CNV/LOH regions. Can be either <code class="codehilite">keep</code> or <code class="codehilite">drop</code>.</td>
+<td>drop</td>
+</tr>
+<tr>
+<td>Minimum coverage for WGS</td>
+<td>Integer</td>
+<td>The minimum coverage in WGS to be included in the analysis</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Minimum coverage for RNA-seq</td>
+<td>Integer</td>
+<td>The minimum coverage in RNA-seq to be included in the analysis</td>
+<td>10</td>
+</tr>
 </tbody>
 </table>
 <h3 id="outputs">Outputs</h3>
@@ -1769,7 +1787,7 @@ cell lines.</p>
           </div>
         
         
-        built from <a href="https://github.com/stjude/sjcloud-docs/tree/87b9daf">87b9daf</a> using
+        built from <a href="https://github.com/stjude/sjcloud-docs/tree/678d792">678d792</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
