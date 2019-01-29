@@ -69,12 +69,12 @@ uncompressed or compressed with `bgzip`.
 
 ## Advanced options
 
-The "Advanced option" panel lets you customize the behavior of th
+The "Advanced option" panel lets you customize the behavior of the
 pipeline:
 
-* Gene list: Pick a gene list from the pulldown, this filters your
+* Gene list: Pick a gene list from the pulldown. This filters your
   variants to genes in the specified list. This option is required and turned
-  on automatically if your uploaded file is 2 megabyte or larger. See the
+  on automatically if your uploaded file is 2 megabytes or larger. See the
   [frequently asked questions](#frequently-asked-questions) for more
   information. This option reduces the variant processing burden on PIE by
   removing variants that will not be assigned a medal in any case because
@@ -83,7 +83,7 @@ pipeline:
   titled "See gene list".
 * Custom gene list: Choosing "custom" as your gene list will open a
   window that will let you paste in a list of genes. Any invalid genes will
-  be dropped from your list automatically. You can separate your genes spaces
+  be dropped from your list automatically. You can separate your genes by spaces
   or new lines.
 * Max Population frequency: PIE by default will not call medals for
   variants present in the ExAC (ex-TCGA) database at an allele
@@ -376,7 +376,7 @@ order to query data for targeted genes.
 **Q: Are there limits on the size of VCF files?**
 
 Uploaded files must not exceed 4 gigabytes. If an uploaded file is larger
-than 2 megabyte, cancer predisoposition gene list filter will be
+than 2 megabytes, the cancer predisposition gene list filter will be
 automatically enabled unless you are using a custom gene list. This reduces
 the processing burden on the system by removing variants outside of targeted
 genes.
