@@ -938,15 +938,19 @@ uncompressed or compressed with <code class="codehilite">bgzip</code>.</p>
 <p>The "Advanced option" panel lets you customize the behavior of the
 pipeline:</p>
 <ul>
-<li>Curated germline genes only: if checked, this filters your variants
-  to disease-related genes only; this option will be turned on
-  automatically if your uploaded file is 1 megabyte or larger and you
-  are not using a custom gene list. See the <a href="#frequently-asked-questions">frequently asked questions</a> for more information. 
-  This option reduces the variant processing burden on PIE by removing variants
-  that will not be assigned a medal in any case because they are not
-  on the reviewable gene list.</li>
-<li>Specify custom gene list: here you can override the disease-related
-  gene list used by Pecan PIE with your own list.</li>
+<li>Gene list: Pick a gene list from the pulldown. This filters your
+  variants to genes in the specified list. This option is required and turned
+  on automatically if your uploaded file is 2 megabytes or larger. See the
+  <a href="#frequently-asked-questions">frequently asked questions</a> for more
+  information. This option reduces the variant processing burden on PIE by
+  removing variants that will not be assigned a medal in any case because
+  they are not on the cancer predisposition gene list. You can review the
+  genes by clicking on the link that will appear just below the pull down
+  titled "See gene list".</li>
+<li>Custom gene list: Choosing "custom" as your gene list will open a
+  window that will let you paste in a list of genes. Any invalid genes will
+  be dropped from your list automatically. You can separate your genes by spaces
+  or new lines.</li>
 <li>Max Population frequency: PIE by default will not call medals for
   variants present in the ExAC (ex-TCGA) database at an allele
   frequency greater than 0.001. This option lets you override the
@@ -1232,11 +1236,11 @@ chromosome name and position, PIE is now often able to automatically
 correct sorting issues in uploaded files. PIE requires sorted data in
 order to query data for targeted genes.</p>
 <p><strong>Q: Are there limits on the size of VCF files?</strong></p>
-<p>Uploaded files must not exceed 4 gigabytes. If an uploaded file is
-larger than 1 megabyte, reviewable-gene filtering will be
-automatically enabled unless you are using a custom gene list. This
-reduces the processing burden on the system by removing variants
-outside of targeted genes.</p>
+<p>Uploaded files must not exceed 4 gigabytes. If an uploaded file is larger
+than 2 megabytes, the cancer predisposition gene list filter will be
+automatically enabled unless you are using a custom gene list. This reduces
+the processing burden on the system by removing variants outside of targeted
+genes.</p>
 <p><strong>Q: Is there an example/demo VCF I can try with PIE?</strong></p>
 <p>A. You can use <a href="ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/NA12878_HG001/NISTv3.3.2/GRCh37/HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.vcf.gz">this VCF</a>
 from the Genome in a Bottle project. This ~133 megabyte
@@ -1356,7 +1360,7 @@ alert you of job completion via email.</p>
           </div>
         
         
-        built from <a href="https://github.com/stjude/sjcloud-docs/tree/c6315a8">c6315a8</a> using
+        built from <a href="https://github.com/stjude/sjcloud-docs/tree/6ee96cb">6ee96cb</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
