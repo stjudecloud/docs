@@ -10,6 +10,7 @@ To run a development copy of the St. Jude Cloud Documentation, run the following
 
 ```bash
 git clone git@github.com:stjude/sjcloud-docs.git
+cd sjcloud-docs/
 pip install -r requirements.txt
 mkdocs serve
 ```
