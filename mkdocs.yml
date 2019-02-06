@@ -17,6 +17,7 @@ pages:
       - 'Types of Data': 'guides/data/types-of-data.md'
       - 'Making a Data Request': 'guides/data/data-request.md'
       - 'Data Access Units': 'guides/data/data-access-units.md'
+      - 'Metadata Provided': 'guides/data/metadata.md'
       - 'Working with our Data': 'guides/data/run-your-tools.md'
       - 'Data Transfer Application': 'guides/data/data-transfer-app.md'
       - 'Command Line Interaction': 'guides/data/command-line.md'
