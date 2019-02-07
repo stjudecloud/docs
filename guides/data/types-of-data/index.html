@@ -327,6 +327,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cnv-files" title="CNV files" class="md-nav__link">
+    CNV files
+  </a>
+  
+</li>
+      
       
       
       
@@ -358,6 +365,18 @@
   <li class="md-nav__item">
     <a href="../data-access-units/" title="Data Access Units" class="md-nav__link">
       Data Access Units
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../metadata/" title="Metadata Provided" class="md-nav__link">
+      Metadata Provided
     </a>
   </li>
 
@@ -648,6 +667,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cnv-files" title="CNV files" class="md-nav__link">
+    CNV files
+  </a>
+  
+</li>
+      
       
       
       
@@ -695,8 +721,13 @@ please <a href="https://stjude.cloud/contact">contact us</a>!</p>
 </tr>
 <tr>
 <td>Somatic VCF</td>
-<td>Curated list of somatic pipelines produced by the St. Jude somatic variant analysis pipeline</td>
+<td>Curated list of somatic variants produced by the St. Jude somatic variant analysis pipeline</td>
 <td><a href="#somatic-vcf-files">Click here</a></td>
+</tr>
+<tr>
+<td>CNV</td>
+<td>list of somatic copy number alterations produced by St. Jude CONSERTING pipeline</td>
+<td><a href="#cnv-files">Click here</a></td>
 </tr>
 </tbody>
 </table>
@@ -711,11 +742,67 @@ please <a href="https://stjude.cloud/contact">contact us</a>!</p>
 <li>Reads were aligned to HG19 using <a href="http://bio-bwa.sourceforge.net/">bwa backtrack</a> (<code class="codehilite">bwa aln</code> + <code class="codehilite">bwa sampe</code>) using default parameters.</li>
 <li>Post processing of aligned reads was performed using <a href="https://broadinstitute.github.io/picard/">Picard</a> <code class="codehilite">CleanSam</code> and <code class="codehilite">MarkDuplicates</code>.</li>
 <li>Variants were called using the <a href="https://academic.oup.com/bioinformatics/article/27/6/865/236751">Bambino</a> variant caller (you can download by navigating <a href="https://www.stjuderesearch.org/site/lab/zhang">here</a> and searching for "Bambino package").</li>
-<li>Variants were post-processed using a in-house post-processing pipeline that cleans and annotates variants. This pipeline is not currently publicly available.</li>
+<li>Variants were post-processed using an in-house post-processing pipeline that cleans and annotates variants. This pipeline is not currently publicly available.</li>
 <li>Variants were manually reviewed by analysts and published with <a href="https://www.stjude.org/research/pediatric-cancer-genome-project.html">the relevant Pediatric Cancer Genome Project (PCGP) paper</a>.</li>
 <li>Post-publication, variants were lifted over to HG38 (the original HG19 coordinates are stored in the <code class="codehilite">HG19</code> INFO field.).</li>
 </ol>
 <p>For more information on variants for each of the individuals, please refer to the relevant PCGP paper. For more information on the variant calling format (VCF), please see the latest specification for VCF document listed <a href="https://samtools.github.io/hts-specs/">here</a>.</p>
+<h4 id="cnv-files">CNV files</h4>
+<p>CNV files contain copy number alteration (CNA) analysis results for paired tumor-normal WGS samples. Files are produced by running paired tumor-normal BAM files through the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4591043/">CONSERTING</a> pipeline which identifies CNA through iterative analysis of (i) local segmentation by read depth within boundaries identified by structural variation (SV) breakpoints followed by (ii) segment merging and local SV analysis. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3527068/">CREST</a> was used to identify local SV breakpoints. CNV files contain the following information:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chrom</td>
+<td>chromosome</td>
+</tr>
+<tr>
+<td>loc.start</td>
+<td>start of segment</td>
+</tr>
+<tr>
+<td>loc.end</td>
+<td>end of segment</td>
+</tr>
+<tr>
+<td>num.mark</td>
+<td>number of windows retained in the segment (gaps and windows with low mappability are excluded)</td>
+</tr>
+<tr>
+<td>length.ratio</td>
+<td>The ratio between the length of the used windows to the genomic length</td>
+</tr>
+<tr>
+<td>seg.mean</td>
+<td>The estimated GC corrected difference signal (2 copy gain will have a seg.mean of 1)</td>
+</tr>
+<tr>
+<td>GMean</td>
+<td>The mean coverage in the germline sample (a value of 1 represents diploid)</td>
+</tr>
+<tr>
+<td>DMean</td>
+<td>The mean coverage in the tumor sample</td>
+</tr>
+<tr>
+<td>LogRatio</td>
+<td>Log2 ratio between tumor and normal coverage</td>
+</tr>
+<tr>
+<td>Quality score</td>
+<td>A empirical score used in merging</td>
+</tr>
+<tr>
+<td>SV_Matching</td>
+<td>whether the boundary of the segments were supported by SVs (3: both ends supported, 2: right end supported, 1: left end supported, 0: neither end supported)</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
@@ -777,7 +864,7 @@ please <a href="https://stjude.cloud/contact">contact us</a>!</p>
           </div>
         
         
-        built from <a href="https://github.com/stjude/sjcloud-docs/tree/af78caf">af78caf</a> using
+        built from <a href="https://github.com/stjude/sjcloud-docs/tree/d499d19">d499d19</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
