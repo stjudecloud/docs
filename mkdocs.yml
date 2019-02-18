@@ -19,6 +19,7 @@ pages:
       - 'Data Access Units': 'guides/data/data-access-units.md'
       - 'Metadata Provided': 'guides/data/metadata.md'
       - 'Working with our Data': 'guides/data/run-your-tools.md'
+      - 'Creating an Application': 'guides/data/creating-an-app.md'
       - 'Data Transfer Application': 'guides/data/data-transfer-app.md'
       - 'Command Line Interaction': 'guides/data/command-line.md'
   - 'Tool Guides':
