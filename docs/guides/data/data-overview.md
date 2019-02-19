@@ -3,7 +3,7 @@
     1. Data in St. Jude Cloud is grouped into different data access units (DAUs) which usually correspond to large-scale sequencing initiatives at St. Jude. 
     2. Individuals can apply for access to DAUs on a case-by-case basis for a specific amount of time (usually 1 year).
     3. Access to data in a given DAU is assessed by the corresponding data access committee (DAC) who assess a variety of factors to grant access.
-    4. There are a number of terms of use and restrictions outlined in the [data access agreement](https://platform.stjude.cloud/access_form). Everyone who will be working with the data must read and understands these terms.
+    4. There are a number of terms of use and restrictions outlined in the [data access agreement](https://platform.stjude.cloud/access_form). Everyone who will be working with the data must read and understand these terms.
 
 Data in St. Jude Cloud is grouped into multiple **data access units** (DAUs),
 which are independent projects/data sources with different governance structures. 
