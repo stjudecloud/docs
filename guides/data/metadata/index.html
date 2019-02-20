@@ -268,8 +268,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../data-overview/" title="Data Access" class="md-nav__link">
-      Data Access
+    <a href="../data-overview/" title="Overview" class="md-nav__link">
+      Overview
     </a>
   </li>
 
@@ -611,86 +611,85 @@
 <table>
 <thead>
 <tr>
-<th>Properties</th>
+<th>Property</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>file_path</td>
-<td>path to the file in your DNANexus project</td>
+<td>The path to the file in your St. Jude Cloud project.</td>
 </tr>
 <tr>
 <td>subject_name</td>
-<td>a unique subject identifier</td>
+<td>A unique subject identifier assigned internally at St. Jude.</td>
 </tr>
 <tr>
 <td>sample_name</td>
-<td>a unique sample identifier</td>
+<td>A unique sample identifier assigned internally at St. Jude.</td>
 </tr>
 <tr>
 <td>sample_type</td>
-<td>Autopsy, Cell line, Diagnosis, Germline, Metastasis, Relapse, or Xenograft</td>
+<td>One of Autopsy, Cell line, Diagnosis, Germline, Metastasis, Relapse, or Xenograft</td>
 </tr>
 <tr>
 <td>sequencing_type</td>
-<td>RNA-seq, WGS, or WES</td>
+<td>Whether the file was generated from Whole Genome (WGS), Whole Exome (WES), or RNA-Seq.</td>
 </tr>
 <tr>
 <td>file_type</td>
-<td><a href="../../../guides/data/types-of-data#bam-files">BAM</a>, <a href="../../../guides/data/types-of-data#cnv-files">CNV</a>, <a href="../../../guides/data/types-of-data#gvcf-files">gVCF</a>, <a href="../../data/types-of-data#somatic-vcf-files">Somatic_VCF</a></td>
+<td>One of <a href="../../../guides/data/types-of-data#bam-files">BAM</a>, <a href="../../../guides/data/types-of-data#cnv-files">CNV</a>, <a href="../../../guides/data/types-of-data#gvcf-files">gVCF</a>, <a href="../../data/types-of-data#somatic-vcf-files">Somatic_VCF</a></td>
 </tr>
 <tr>
 <td>description</td>
-<td>optional field that may contain additional file information</td>
+<td>Optional field that may contain additional file information.</td>
 </tr>
 <tr>
-<td>sj_diseases</td>
-<td>disease identifier</td>
+<td>j_diseases</td>
+<td>Short disease identifier used internally at St. Jude. When determining primary diagnosis, use <code class="codehilite">attr_diagnosis</code> instead!</td>
 </tr>
 <tr>
 <td>sj_datasets</td>
-<td><a href="../../../guides/data/data-access-units#data-access-units">SJ dataset</a></td>
+<td>If present, the datasets in the data browser which this file is associated with.</td>
 </tr>
 <tr>
 <td>sj_pmid_accessions</td>
-<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/">Pubmed</a> accession number</td>
+<td>If the file was associated with a paper, the related <a href="https://www.ncbi.nlm.nih.gov/pubmed/">Pubmed</a> accession number.</td>
 </tr>
 <tr>
 <td>sj_ega_accessions</td>
-<td><a href="https://www.ebi.ac.uk/ega/home">EGA</a> accession number</td>
+<td>If the file was associated with a paper, the related <a href="https://www.ebi.ac.uk/ega/home">EGA</a> accession number.</td>
 </tr>
 <tr>
 <td>attr_age_at_diagnosis</td>
-<td>age at diagnosis (decimal)</td>
+<td>Age at first diagnosis (normalized as a decimal value).</td>
 </tr>
 <tr>
 <td>attr_diagnosis</td>
-<td>diagnosis</td>
+<td>Primary diagnosis.</td>
 </tr>
 <tr>
 <td>attr_ethnicity</td>
-<td>ethnicity* (<a href="https://www.census.gov/mso/www/training/pdf/race-ethnicity-onepager.pdf">Census Bureau standard</a>)</td>
+<td>Self-reported ethnicity according to the <a href="https://www.census.gov/mso/www/training/pdf/race-ethnicity-onepager.pdf">US Census Bureau classifications</a>.</td>
 </tr>
 <tr>
 <td>attr_race</td>
-<td>race* (<a href="https://www.census.gov/mso/www/training/pdf/race-ethnicity-onepager.pdf">Census Bureau standard</a>)</td>
+<td>Self-reported race according to the <a href="https://www.census.gov/mso/www/training/pdf/race-ethnicity-onepager.pdf">US Census Bureau classifications</a>.</td>
 </tr>
 <tr>
 <td>attr_sex</td>
-<td>sex</td>
+<td>Self-reported sex.</td>
 </tr>
 <tr>
 <td>sj_dataset_accession</td>
-<td>SJ dataset accession number</td>
+<td>If present, the permanent accession number assigned in St. Jude Cloud.</td>
 </tr>
 <tr>
 <td>sj_embargo_date</td>
-<td><a href="../../../guides/data/data-overview#embargo-dates">Embargo date</a></td>
+<td>The <a href="../../../guides/data/data-overview#embargo-dates">embargo date</a>, which specifies the first date which the files can be used in a publication.</td>
 </tr>
 </tbody>
 </table>
-<p>*Note that ethnicity and race are self reported attributes. </p>
                 
                   
                 
@@ -752,7 +751,7 @@
           </div>
         
         
-        built from <a href="https://github.com/stjude/sjcloud-docs/tree/d499d19">d499d19</a> using
+        built from <a href="https://github.com/stjude/sjcloud-docs/tree/b985f85">b985f85</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
