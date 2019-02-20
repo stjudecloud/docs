@@ -1,10 +1,9 @@
 !!! note "Summary"
 
-    1. Data in St. Jude Cloud is grouped into different data access units (DAUs) which roughly correspond to projects. 
-    2. Users are given access to DAUs on a case-by-case basis for a specific amount of time.
-    3. Access to data in a given DAU is assessed by the corresponding data access committee (DAC) on a case-by-case basis.
-    4. There are a number of terms of use and restrictions outlined in the [data access agreement](https://platform.stjude.cloud/access_form). We ask that everyone
-        who will be analyzing the data has read and understands these terms.
+    1. Data in St. Jude Cloud is grouped into different data access units (DAUs) which usually correspond to large-scale sequencing initiatives at St. Jude. 
+    2. Individuals can apply for access to DAUs on a case-by-case basis for a specific amount of time (usually 1 year).
+    3. Access to data in a given DAU is assessed by the corresponding data access committee (DAC) who assess a variety of factors to grant access.
+    4. There are a number of terms of use and restrictions outlined in the [data access agreement](https://platform.stjude.cloud/access_form). Everyone who will be working with the data must read and understand these terms.
 
 Data in St. Jude Cloud is grouped into multiple **data access units** (DAUs),
 which are independent projects/data sources with different governance structures. 
@@ -28,11 +27,9 @@ checking out files from that DAU until your access expires (generally after
 
 #### Embargo dates
 
-An embargo date is the time at which access to data is allowed to users
-for publishing purposes. Typically, samples from the same Data Access
-Unit all have the same embargo date, as they are usually released on St.
-Jude Cloud at the same time. Publishing any results derived from this data 
-before this embargo date is not permitted as outlined in the data access agreement.
+The embargo date specifies the date that a publishing embargo on the file in question has been lifted. Publishing using any of the files _before_ the embargo date has passed is strictly prohibited as outlined in the data access agreement. Typically, samples from the same Data Access
+Unit all have the same embargo date, as they would have been released on St.
+Jude Cloud at the same time.
 
 **Current Embargo Dates**
 
