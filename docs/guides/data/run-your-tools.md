@@ -14,7 +14,7 @@ Once your data access request is approved, the data you requested from St. Jude 
 ## Using Our Data
 St. Jude Cloud offers data and tools for you to use. However, many researchers are interested in using our data in combination with their own data or tools. To upload your own data, we recommend using the [Data Transfer App](data-transfer-app.md), or you can use the [command line](command-line.md). Anything you upload to St. Jude Cloud will be uploaded to your private, secure project in DNAnexus. 
 
-To upload your own tools and run them on data in you DNAnexus project you must use the [command line](command-line.md). Detailed tutorial and sample scripts coming March 2019...
+To upload your own tools and run them on data in you DNAnexus project you must use the [command line](command-line.md). Refer to the [Creating an Application tutorial](../../guides/data/creating-an-app.md) for more instructions on how to get started.
 
 ### Frequently asked questions
 **Q. Can I submit my data to St. Jude Cloud?**

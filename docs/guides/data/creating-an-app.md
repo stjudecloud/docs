@@ -1,32 +1,15 @@
 !!! note
-    This section of the documentation is currently under construction. If your question is not answered here,
-    please [contact us](https://stjude.cloud/contact)!
+    This section of the documentation is currently under construction. If your question is not answered here, please [contact us](https://stjude.cloud/contact)!
 
 # Creating an Application
 
-This guide will take you through the process of writing an application for working with and manipulating the St. Jude data you've requested. By creating your own application, you will be able to import packages and tools from various sources such as [CRAN](https://cran.r-project.org/), [pip](https://pypi.org/), [CPAN](https://www.cpan.org/), and [RubyGems](https://rubygems.org/), as well as any tool or application you might have written yourself.
-
-We will be creating creating an application that will wrap up the [FastQC tool](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) from Babraham Bioinformatics.
+This guide will take you through the process of writing an application for working with and manipulating the St. Jude data you've requested. By creating your own application, you will be able to import packages and tools from various sources, as well as any tool or application you might have written yourself.
 
 ## Overview
 
-Writing your own application will allow you to import any custom tools to manipulate any data that you have previously requested. When submitting a job, the request gets sent to a virtualized Linux container where your script and commands will be run. Any tools or packages that you include (either through one of the included package managers or bundled together in your project) will be available locally on the virtual node.
+Writing your own application will allow you to import custom tools to manipulate any data that you have previously requested. When you run your application, the request gets sent to a virtualized Linux container (Ubuntu 14.04 or 16.04) where any dependencies are installed and where your script will be run. Any tools or packages that you include (either through the included package managers, or bundled together in your project) will be available locally on the virtual Linux machine.
 
-The biggest thing to know is how the application is structured. All DNAnexus project applications will have the following structure:
-
-```
-dx-fastqc-example-app/
-├── dxapp.json
-├── resources/
-│   └── usr/
-│       └── bin/
-└── src/
-    └── dx_fastqc_example_app.sh
-```
-
-The `dxapp.json` file is the metadata JSON file that will allow us to build and run the DNAnexus `dx-toolkit` build and run commands. This file also allows us to specify all the various fields that our application will require. To see the full list of fields, refer to the [DNAnexus wiki](https://wiki.dnanexus.com/dxapp.json) guide on the application metadata.
-
-The `dx_fastqc_example_app.sh` file is what will actually be executed when the application is run. Any executable binaries that accompany the application such as other tools or scripts are placed in the `resources` folder. From there, we can call the executable from within the app when it is run.
+In this tutorial, we will be importing [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/), a quality control tool for raw sequence data, into our application. This will allow us to run FastQC on any of the St. Jude next generation sequencing data in the cloud. For more about FastQC, refer to the [FastQC documentation](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/).
 
 ## Requesting Data
 
@@ -46,7 +29,7 @@ project_space/
 
 The `SAMPLE_INFO.txt` file provides all the metadata associated with the request, and the restricted folder contains all the data separated by file type. For more info, refer to the [Metadata Provided](../../guides/data/command-line.md) section.
 
-After your data access request has been approved, we can begin writing our app. For this tutorial, we will be importing [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/), a quality control tool for raw sequence data, into our application. This will allow us to run `FastQC` on any of the St. Jude next generation sequencing data in the cloud. For more about `FastQC`, refer to the [FastQC documentation](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/).
+After your data access request has been approved, we can begin writing our app.
 
 ## Writing the Application
 
@@ -55,7 +38,21 @@ For this application, we will be using the `dx-app-wizard` command that is inclu
 !!! tip
     It is not necessary to use `dx-app-wizard`. All the necessary files and project directory structure can be created manually. However, `dx-app-wizard` provides a quick and easy way to get started. For more information, refer to the [Advanced App Tutorial](https://wiki.dnanexus.com/Developer-Tutorials/Advanced-App-Tutorial).
 
-For this tutorial, you will also need the `FastQC` tool which can be downloaded [here](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/).
+All DNAnexus project applications will have the following structure:
+
+```
+dx-fastqc-example-app/
+├── dxapp.json
+├── resources/
+│   └── usr/
+│       └── bin/
+└── src/
+    └── dx-fastqc-example-app.sh
+```
+
+The `dxapp.json` file is the metadata JSON file that will allow us to build and run the DNAnexus `dx-toolkit` build and run commands. This file also allows us to specify all the various fields that our application will require. To see the full list of fields, refer to the [DNAnexus wiki](https://wiki.dnanexus.com/dxapp.json) guide on the application metadata.
+
+The `dx_fastqc_example_app.sh` script is what will actually be executed when the application is run. Any executable binaries that accompany the application, such as other tools or scripts, are placed in the `resources` folder. From there, we can call the executable from within the app when it is run.
 
 ## Creating the Project
 
@@ -84,7 +81,7 @@ $ This is an optional parameter [y/n]: n
 ...
 $ 1st output name (<ENTER> to finish): fastqc_html
 $ Label (optional human-readable name) []: FastQC HTML Report
-$ Choose a class (<TAB> twice for choices): file$
+$ Choose a class (<TAB> twice for choices): file
 
 $ 2nd output name (<ENTER> to finish): fastqc_zip
 $ Label (optional human-readable name) []: FastQC Zip File
@@ -101,9 +98,9 @@ $ Will this app need access to the parent project? [y/N]: y
 $ Choose an instance type for your app [mem1_ssd1_x4]: azure:mem1_ssd1_x4
 ```
 
-The `FastQC` executable supports a variety of file formats (BAM, SAM, FastQ, etc.), and outputs a HTML report and a zip file that contains all the graphs and data. We will use that knowledge to write the input and output parameters for our application. We can also specify other parameters such as the timeout policy, programming language, and instance type. For more information, refer to the [IO and Run Specification](https://wiki.dnanexus.com/API-Specification-v1.0.0/IO-and-Run-Specifications#Run-Specification) guide.
+The FastQC executable supports a variety of file formats (BAM, SAM, FastQ, etc.), and outputs a HTML report and a zip file that contains all the graphs and data. We will use that knowledge to write the input and output parameters for our application. We can also specify other parameters such as the timeout policy, programming language, and instance type. For more information, refer to the [IO and Run Specification](https://wiki.dnanexus.com/API-Specification-v1.0.0/IO-and-Run-Specifications#Run-Specification) guide.
 
-## Integrating FastQC
+## Integrating Tools and Packages
 
 Once we have finished creating the basic FastQC application using `dx-app-wizard`, the project structure should look like:
 
@@ -133,7 +130,7 @@ $ mkdir -p dx-fastqc-example-app/resources/usr/bin
 
 ## Packaging FastQC
 
-To incorporate `FastQC` into this project, we need to download the executable binary and package it within the `dx-fastqc-example-app`. Download the `FastQC v0.11.8 (Win/Linux zip file)` and unzip it. After unzipping, move the `FastQC` folder into the `resources` folder.
+To incorporate FastQC into this project, we need to download the executable binary and package it within the `dx-fastqc-example-app`. Download the FastQC v0.11.8 (Win/Linux zip file) and unzip it. After unzipping, move the FastQC folder into the `resources` folder.
 
 ```bash
 $ unzip fastqc_v0.11.8.zip
@@ -158,8 +155,6 @@ dx-fastqc-example-app/
 
 ```
 
-It is also acceptable to move all the contents into the `resources/usr/bin/` folder, but by keeping `FastQC` in the `resources` folder, it will allow us to keep different tools separate from each other.
-
 ## Installing Dependencies
 
 !!! tip
@@ -167,11 +162,26 @@ It is also acceptable to move all the contents into the `resources/usr/bin/` fol
 
     For more information on installing dependencies and available software packages, refer to the [Execution Environment Reference](https://wiki.dnanexus.com/Execution-Environment-Reference).
 
-One requirement for `FastQC` is that it must have a suitable [Java Runtime Environment](https://www.java.com/en/). To include this in the app, we have to edit the `dxapp.json` file. Open `dxapp.json` and append the following line to `"runSpec"`:
+Some external package managers that we can leverage when building an app include:
+
+<center>
+
+| Package Manager | Application                        |
+| --------------- | ---------------------------------- |
+| APT             | Advanced Packaging Tool for Ubuntu |
+| CPAN            | Comprehensive Perl Archive Network |
+| CRAN            | Comprehensive R Archive Network    |
+| gem             | Package Manager for Ruby           |
+| pip             | PyPI (Python Package Index)        |
+
+</center>
+
+One requirement for FastQC is that it must have a suitable [Java Runtime Environment](https://www.java.com/en/). To include this in the app, we have to edit the `dxapp.json` file. Open `dxapp.json` and append the following line to `"runSpec"`:
 
 ```JSON
   "execDepends": [
-    {"name": "openjdk-7-jre-headless"}
+    {"name": "openjdk-7-jre-headless",
+     "package_manager": "apt"}
   ]
 ```
 
@@ -190,25 +200,18 @@ Now, the `"runSpec"` object should look like the following:
     "distribution": "Ubuntu",
     "file": "src/dx_fastqc_example_app.sh",
     "execDepends": [
-      {"name": "openjdk-7-jre-headless"}
+      {"name": "openjdk-7-jre-headless",
+       "package_manager": "apt"}
     ]
   },
   ...
 ```
 
-Some external package managers include, but are not limited to:
-
-| Package Manager | Application |
-| --------------- | ----------- |
-| APT             | Ubuntu      |
-| CPAN            | Perl        |
-| CRAN            | R           |
-| gem             | Ruby        |
-| pip             | Python      |
+When you build and run your application, the virtual environment will now download `openjdk-7` from Ubuntu's APT package manager as a prerequisite. For more information on how to specify packages from Git, R, or Python, refer to the [Software Packages](https://wiki.dnanexus.com/Execution-Environment-Reference#Software-Packages) wiki page.
 
 ## Calling FastQC
 
-The last step is to call the `FastQC` executable from within the app. Open up `src/dx_fastqc_example_app.sh` with a text editor. Inside this bash script is where we will be working with `FastQC` and our data. Before we dive in, its a good idea to add a few useful parameters for the script execution.
+The last step is to call the FastQC executable from within the app. Open up `src/dx_fastqc_example_app.sh` with a text editor. Inside this bash script is where we will be working with FastQC and our data. Before we dive in, its a good idea to add a few useful parameters for the script execution.
 
 Right after the Bash shebang (`#!/bin/bash`), add the following line:
 
@@ -218,36 +221,38 @@ set -e -x
 
 Below is a table describing what each flag does:
 
+<center>
+
 | Flag | Description                                                 |
 | ---- | ----------------------------------------------------------- |
 | -e   | Exit immediately if a command exits with a non-zero status. |
 | -x   | Print each command to standard error before execution.      |
 
-After the application downloads the input file (`dx download "$bam_file" -o bam_file`), we need to create the appropriate output directories and run `FastQC` on our BAM file. Add the following lines to the bash script within the `main` function:
+</center>
+
+After the application downloads the input file (`dx download "$bam_file" -o bam_file`), we need to create the appropriate output directories and run FastQC on our BAM file. Add the following lines to the bash script within the `main` function:
 
 ```bash
-mkdir "$HOME"/fastqc-out/                               # FastQC Output Folder
-mkdir -p "$HOME"/out/fastqc_html/"$bam_file_name"/      # FastQC HTML File Upload Directory
-mkdir -p "$HOME"/out/fastqc_zip/"$bam_file_name"/       # FastQC Zip File Upload Directory
-
-fastqc -t "$(nproc)" "$bam_file_name" -o "$HOME"/fastqc-out     # Invoking FastQC on the BAM file
+mkdir ~/fastqc-out/                               # FastQC Output Folder
+fastqc "$bam_file_name" -o ~/fastqc-out           # Runs FastQC on BAM File
 ```
 
 ## Uploading Files
 
-After `FastQC` finishes, the last thing to do is to move the reports generated by `FastQC` to the appropriate output folders. Add the following lines to `dx-fastqc-example-app.sh`.
+After FastQC finishes, the last thing to do is to upload the reports generated by FastQC to our project.
+
+You will see two lines generated for us by `dx-app-wizard` when we specified the outputs for our application. We need to change these to upload the correct files from our output directory that we specified for FastQC. The files that FastQC will output will trim the BAM file extension and append `_fastqc.html` and `_fastqc.zip`. Change the two lines to the following:
 
 ```bash
-mv "$HOME"/fastqc-out/*.html "$HOME"/out/fastqc_html/"$bam_file_prefix"_fastqc.html
-mv "$HOME"/fastqc-out/*.zip "$HOME"/out/fastqc_zip/"$bam_file_prefix"_fastqc.zip
+fastqc_html=$(dx upload ~/fastqc-out/"$bam_file_prefix"_fastqc.html --brief)
+fastqc_zip=$(dx upload ~/fastqc-out/"$bam_file_prefix"_fastqc.zip --brief)
 ```
 
-We are using `"$bam_file_prefix"` to help name the output report file. These helper variables are provided by DNAnexus to help make file naming easy.
+We are using `"$bam_file_prefix"` to help name the output report file. These helper variables are provided to help make file naming easy. For more information on helper variables, refer to the [Advanced App Tutorial](https://wiki.dnanexus.com/Developer-Tutorials/Advanced-App-Tutorial#Set-output-name-using-bash-app-helper-variables).
 
-!!! tip
-    For more information on helper variables, refer to the [Advanced App Tutorial](https://wiki.dnanexus.com/Developer-Tutorials/Advanced-App-Tutorial#Set-output-name-using-bash-app-helper-variables).
+In this step, we are also moving the HTML and Zip file generated by FastQC to the directories which will be uploaded.
 
-In this step, we are also moving the HTML and Zip file generated by `FastQC` to the directories which will be uploaded. After this step, `dx-fastqc-example-app.sh` should look like:
+After this step, `dx-fastqc-example-app.sh` should look like:
 
 ```bash
 #!/bin/bash
@@ -257,20 +262,20 @@ set -e -x
 main() {
     echo "Value of bam_file: '$bam_file'"
 
+    # Downloads file from project to virtual machine workspace
     dx download "$bam_file" -o bam_file
 
-    mkdir "$HOME"/fastqc-out/
-    mkdir -p "$HOME"/out/fastqc_html/"$bam_file_name"/
-    mkdir -p "$HOME"/out/fastqc_zip/"$bam_file_name"/
+    # Creating output directory for FastQC
+    mkdir ~/fastqc-out
 
-    fastqc -t "$(nproc)" "$bam_file_name" -o "$HOME"/fastqc-out
+    # Runs FastQC on BAM file
+    /FastQC/fastqc "$bam_file_name" -o ~/fastqc-out
 
-    mv "$HOME"/fastqc-out/*.html "$HOME"/out/fastqc_html/"$bam_file_prefix"_fastqc.html
-    mv "$HOME"/fastqc-out/*.zip "$HOME"/out/fastqc_zip/"$bam_file_prefix"_fastqc.zip
+    # Uploads the respective HTML and Zip file
+    fastqc_html=$(dx upload ~/fastqc-out/"$bam_file_prefix"_fastqc.html --brief)
+    fastqc_zip=$(dx upload ~/fastqc-out/"$bam_file_prefix"_fastqc.zip --brief)
 
-    fastqc_html_file=$(dx upload fastqc_html --brief)
-    fastqc_zip_file=$(dx upload fastqc_zip --brief)
-
+    # Adds and formats appropriate output variables for your app
     dx-jobutil-add-output fastqc_html_file "$fastqc_html" --class=file
     dx-jobutil-add-output fastqc_zip_file "$fastqc_zip" --class=file
 }
@@ -286,13 +291,17 @@ $ dx build dx-fastqc-example-app
 
 This command will package the tools and files as an application which can then be run on the DNAnexus Platform.
 
+Any time you make any changes to the scripts or the application, you will need to rebuild the application. To overwrite a previous version of the app, specify the `-f` command.
+
 ## Running Your App
 
 To run the `dx-fastqc-example-app`, enter the following into the terminal:
 
 ```bash
-$ dx run dx-fastqc-example-app -i bam_file=/project_space/restricted/bam/<bam-file>.bam
+$ dx run dx-fastqc-example-app -i bam_file=/path/to/<bam-file>.bam
 ```
+
+The input path will vary depending on how the data looks inside your DNAnexus project, but it might look like the following: `/restricted/bam/<bam-file>.bam`
 
 You will be prompted to confirm that you wish to run the application with the following JSON input and whether you would like to monitor the job in your terminal.
 
