@@ -1,15 +1,12 @@
-!!! note
-    This section of the documentation is currently under construction. If your question is not answered here, please [contact us](https://stjude.cloud/contact)!
+# Creating a a Cloud Application
 
-# Creating an Application
-
-This guide will take you through the process of writing an application for working with and manipulating the St. Jude data you've requested. By creating your own application, you will be able to import packages and tools from various sources, as well as any tool or application you might have written yourself.
+This guide will take you through the process of writing an application for working with and manipulating the St. Jude data you've requested. By creating your own application, you will be able to wrap genomic tools and packages from external sources, as well as any tool or application you might have written yourself.
 
 ## Overview
 
-Writing your own application will allow you to import custom tools to manipulate any data that you have previously requested. When you run your application, the request gets sent to a virtualized Linux container (Ubuntu 14.04 or 16.04) where any dependencies are installed and where your script will be run. Any tools or packages that you include (either through the included package managers, or bundled together in your project) will be available locally on the virtual Linux machine.
+Writing your own application will allow you to wrap custom tools to manipulate any data that you have previously requested. When you run your application, the request gets sent to a virtualized Linux container (Ubuntu 14.04 or 16.04) where any dependencies are installed and where your script will be run. Any tools or packages that you include (either through the included package managers, or bundled together in your project) will be available locally on the virtual Linux machine.
 
-In this tutorial, we will be importing [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/), a quality control tool for raw sequence data, into our application. This will allow us to run FastQC on any of the St. Jude next generation sequencing data in the cloud. For more about FastQC, refer to the [FastQC documentation](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/).
+In this tutorial, we will be wrapping the [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/), a quality control tool for raw sequence data, into our application. This will allow us to run FastQC on any of the St. Jude next generation sequencing data in the cloud. For specific information about how FastQC works, please refer to the [FastQC documentation](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/).
 
 ## Requesting Data
 
@@ -27,7 +24,7 @@ project_space/
 └── SAMPLE_INFO.txt
 ```
 
-The `SAMPLE_INFO.txt` file provides all the metadata associated with the request, and the restricted folder contains all the data separated by file type. For more info, refer to the [Metadata Provided](../../guides/data/command-line.md) section.
+The `SAMPLE_INFO.txt` file provides all the metadata associated with the request, and the restricted folder contains all the data separated by file type (for more info, refer to the [Metadata Provided](../../guides/data/command-line.md) section). The other folders will contain the respective file types you included in your request.
 
 After your data access request has been approved, we can begin writing our app.
 
@@ -50,9 +47,9 @@ dx-fastqc-example-app/
     └── dx-fastqc-example-app.sh
 ```
 
-The `dxapp.json` file is the metadata JSON file that will allow us to build and run the DNAnexus `dx-toolkit` build and run commands. This file also allows us to specify all the various fields that our application will require. To see the full list of fields, refer to the [DNAnexus wiki](https://wiki.dnanexus.com/dxapp.json) guide on the application metadata.
+The `dxapp.json` file is a JSON file that contains metadata about the application we are writing that are needed to build and run the app on the DNAnexus Platform. Most notably, you will need to specify all of the inputs your app requires (both input files or any settings you can tune), output files, and other options such as the number of cores and memory required to run the tool. To see the full list of fields, refer to the [DNAnexus wiki](https://wiki.dnanexus.com/dxapp.json) guide on the application metadata.
 
-The `dx_fastqc_example_app.sh` script is what will actually be executed when the application is run. Any executable binaries that accompany the application, such as other tools or scripts, are placed in the `resources` folder. From there, we can call the executable from within the app when it is run.
+The `dx_fastqc_example_app.sh` file is a bash script is what will be executed when the application is run. Any executable binaries that accompany the application, such as other tools or scripts, are placed in the `resources` folder. From there, we can call the executable from within the app when it is run.
 
 ## Creating the Project
 
@@ -327,6 +324,6 @@ Job Log
 Watching job job-FVbY8Z0991ZXx5v1Fk3QgJPV. Press Ctrl+C to stop.
 ```
 
-## Examples
+## Conclusion 
 
-For more examples, refer to the [St. Jude App Tutorial Repository](https://github.com/stjude/sjcloud-app-tutorial).
+If you have made it this far, you have likely wrapped your first genomic analysis tool for use in the cloud. For your reference, we have included the final FastQC application at the [St. Jude App Tutorial Repository](https://github.com/stjude/sjcloud-app-tutorial). If you have any questions or suggestions on how we can improve this tutorial, please [file an issue](https://github.com/stjude/sjcloud-docs/issues) or contact us at [https://stjude.cloud/contact](https://stjude.cloud/contact).
