@@ -36,3 +36,17 @@ A. If you'd like to delete your account, please email DNAnexus support at
 A. You can find the Terms of Service
 [here](https://stjude.cloud/terms-of-use.html) and the Privacy Policy
 [here](https://platform.stjude.cloud/privacy).
+
+**Q. Where can I find the embargo dates?**
+
+**A.** All of our samples are marked with an embargo date. 
+You can find this by looking at the tags for each file or in the
+`SAMPLE_INFO.txt` file that is included with each data request. 
+Select a sample and click info to see more.
+
+![](../../images/guides/data/embargo-date-1.png)
+![](../../images/guides/data/embargo-date-2.png)
+
+[msgen]: https://azure.microsoft.com/en-us/services/genomics/
+[gvcf-spec]: https://gatkforums.broadinstitute.org/gatk/discussion/11004/gvcf-genomic-variant-call-format
+[gvcf-diff-from-vcf]: https://gatkforums.broadinstitute.org/gatk/discussion/4017/what-is-a-gvcf-and-how-is-it-different-from-a-regular-vcf
