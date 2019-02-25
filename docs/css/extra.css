@@ -14,6 +14,13 @@
 
 @font-face {
     font-family: 'StJude Sans';
+    src: url('../_static/fonts/sjs-regular-italic.woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'StJude Sans';
     src: url('../_static/fonts/sjs-bold.woff');
     font-weight: 700;
 }
