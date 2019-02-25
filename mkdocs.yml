@@ -3,9 +3,7 @@ theme:
   name: 'material'
   custom_dir: 'mkdocs-material/material'
   logo: 'images/stjude-logo-child-white.png'
-  font:
-      text: 'Ubuntu'
-      code: 'Ubuntu Mono'
+  font: false
 
 extra_css:
   - css/extra.css
