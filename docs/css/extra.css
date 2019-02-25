@@ -8,12 +8,6 @@
 
 @font-face {
     font-family: 'StJude Sans';
-    src: url('/_static/fonts/sjs-light.woff');
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: 'StJude Sans';
     src: url('/_static/fonts/sjs-regular.woff');
     font-weight: 400;
 }
