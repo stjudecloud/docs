@@ -39,6 +39,7 @@ Jude Cloud at the same time.
 | St. Jude LIFE                    | January 15, 2019  |
 | Clinical Genomics                | January 15, 2019  |
 | Sickle Cell Genome Project       | September 1, 2019 |
+| Childhood Cancer Survivor Study | November 15, 2019 |
 
 ### Frequently asked questions
 

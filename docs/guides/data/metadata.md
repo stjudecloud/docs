@@ -1,4 +1,4 @@
-# Metadata Provided
+# Metadata
 
 Each data request includes a text file called `SAMPLE_INFO.txt` that provides a number of file level properties (sample identifiers, clinical attributes, etc). The following is a list of properties provided.
 

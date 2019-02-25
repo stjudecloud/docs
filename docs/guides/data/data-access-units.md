@@ -18,3 +18,7 @@ Clinical Genomics is a cohort from St. Jude Children's Research Hospital, compri
 ### Sickle Cell Genome Project (SGP)
 **SGP is a germline-only dataset of Sickle Cell Disease (SCD) patients from birth to young adulthood.**
 The Sickle Cell Genome Project (SGP) is a collaboration between St. Jude Children’s Research Hospital and Baylor College of Medicine focused on identifying genetic modifiers that contribute to various health complications in SCD patients. Additional objectives include, but are not limited to, developing accurate methods to characterize germline structural variants in highly homologous globin locus and blood typing.
+
+### Childhood Cancer Survivor Study (CCSS)
+**CCSS is a germline-only dataset consisting of whole genome sequencing of childhood cancer survivors.**
+CCSS is a multi-institutional, multi-disciplinary, NCI-funded collaborative resource established to evaluate long-term outcomes among survivors of childhood cancer. It is a retrospective cohort consisting of >24,000 five-year survivors of childhood cancer who were diagnosed between 1970-1999 at one of 31 participating centers in the U.S. and Canada. The primary purpose of this sequencing of CCSS participants is to identify all inherited genome sequence and structural variants influencing the development of childhood cancer and occurrence of long-term adverse outcomes associated with cancer and cancer-related therapy. 
