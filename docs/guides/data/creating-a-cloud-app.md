@@ -49,7 +49,7 @@ dx-fastqc-example-app/
 
 The `dxapp.json` file is a JSON file that contains metadata about the application we are writing that are needed to build and run the app on the DNAnexus Platform. Most notably, you will need to specify all of the inputs your app requires (both input files or any settings you can tune), output files, and other options such as the number of cores and memory required to run the tool. To see the full list of fields, refer to the [DNAnexus wiki](https://wiki.dnanexus.com/dxapp.json) guide on the application metadata.
 
-The `dx_fastqc_example_app.sh` file is a bash script is what will be executed when the application is run. Any executable binaries that accompany the application, such as other tools or scripts, are placed in the `resources` folder. From there, we can call the executable from within the app when it is run.
+The `dx-fastqc-example-app.sh` file is a bash script is what will be executed when the application is run. Any executable binaries that accompany the application, such as other tools or scripts, are placed in the `resources` folder. From there, we can call the executable from within the app when it is run.
 
 ## Creating the Project
 
@@ -88,7 +88,7 @@ $ Timeout policy [48h]: 48h
 ...
 $ Programming language: bash
 ...
-$ Will this app need access to the Internet? [y/N]: y
+$ Will this app need access to the Internet? [y/N]: N
 ...
 $ Will this app need access to the parent project? [y/N]: y
 ...
@@ -148,7 +148,7 @@ dx-fastqc-example-app/
 │   └── usr/
 │       └── bin/
 └── src/
-    └── dx_fastqc_example_app.sh
+    └── dx-fastqc-example-app.sh
 
 ```
 
@@ -195,7 +195,7 @@ Now, the `"runSpec"` object should look like the following:
     "interpreter": "bash",
     "release": "14.04",
     "distribution": "Ubuntu",
-    "file": "src/dx_fastqc_example_app.sh",
+    "file": "src/dx-fastqc-example-app.sh",
     "execDepends": [
       {"name": "openjdk-7-jre-headless",
        "package_manager": "apt"}
@@ -208,7 +208,7 @@ When you build and run your application, the virtual environment will now downlo
 
 ## Calling FastQC
 
-The last step is to call the FastQC executable from within the app. Open up `src/dx_fastqc_example_app.sh` with a text editor. Inside this bash script is where we will be working with FastQC and our data. Before we dive in, its a good idea to add a few useful parameters for the script execution.
+The last step is to call the FastQC executable from within the app. Open up `src/dx-fastqc-example-app.sh` with a text editor. Inside this Bash script is where we will be working with FastQC and our data. Before we dive in, its a good idea to add a few useful parameters for the script execution.
 
 Right after the Bash shebang (`#!/bin/bash`), add the following line:
 
@@ -324,6 +324,6 @@ Job Log
 Watching job job-FVbY8Z0991ZXx5v1Fk3QgJPV. Press Ctrl+C to stop.
 ```
 
-## Conclusion 
+## Conclusion
 
 If you have made it this far, you have likely wrapped your first genomic analysis tool for use in the cloud. For your reference, we have included the final FastQC application at the [St. Jude App Tutorial Repository](https://github.com/stjude/sjcloud-app-tutorial). If you have any questions or suggestions on how we can improve this tutorial, please [file an issue](https://github.com/stjude/sjcloud-docs/issues) or contact us at [https://stjude.cloud/contact](https://stjude.cloud/contact).
