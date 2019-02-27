@@ -1,8 +1,3 @@
-!!! Warning
-    Mutational Spectrum is an upcoming St. Jude Cloud tool and is not yet
-    publicly available. See [Mutational Spectrum on GitHub][mutspec] for more
-    information.
-
 |                       |                                            |
 |-----------------------|--------------------------------------------|
 | **Authors**           | Scott Newman, Michael Macias               |
