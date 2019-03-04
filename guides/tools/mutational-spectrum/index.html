@@ -766,13 +766,7 @@
                 
                   <h1>Mutational Spectrum</h1>
                 
-                <div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Mutational Spectrum is an upcoming St. Jude Cloud tool and is not yet
-publicly available. See <a href="https://github.com/stjude/mutspec">Mutational Spectrum on GitHub</a> for more
-information.</p>
-</div>
-<table>
+                <table>
 <thead>
 <tr>
 <th></th>
@@ -897,13 +891,16 @@ default, fits it to <a href="https://cancer.sanger.ac.uk/cosmic/signatures">muta
 <li>Create a visualization file using the fitted signatures.</li>
 </ol>
 <h2 id="getting-started">Getting started</h2>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-</div>
+<p>After logging in, click the "Start" button on the <a href="https://platform.stjude.cloud/tools/mutational_spectrum">Mutational Spectrum tool
+page</a>. This creates a new DNAnexus project and imports the tool.</p>
+<p>With subsequent runs, the sidebar shows "Launch Tool", meaning the project with
+the tool already exists. Click "Launch Tool" to start a new analysis.</p>
 <h3 id="input-configuration">Input configuration</h3>
 <p>Mutational Spectrum only requires VCFs as inputs. This can be a single
 multi-sample VCF, multiple single-sample VCFs, or a combination of both. All
 other inputs are optional.</p>
+<p>Input files can be uploaded via the <a href="../../data/data-transfer-app/">data transfer application</a> or <a href="../../data/command-line/">command
+line</a>.</p>
 <h4 id="sample-sheet">Sample sheet</h4>
 
 <p><em>Sample sheet</em> is a tab-delimited file (no headers) with two columns: the
@@ -1147,7 +1144,7 @@ of the input.</p>
           </div>
         
         
-        built from <a href="https://github.com/stjude/sjcloud-docs/tree/760f137">760f137</a> using
+        built from <a href="https://github.com/stjude/sjcloud-docs/tree/76e03fa">76e03fa</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of

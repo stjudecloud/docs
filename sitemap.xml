@@ -2,102 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>/</loc>
-     <lastmod>2019-02-25</lastmod>
+     <lastmod>2019-03-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/guides/data/data-overview/</loc>
-     <lastmod>2019-02-25</lastmod>
+     <lastmod>2019-03-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/guides/data/types-of-data/</loc>
-     <lastmod>2019-02-25</lastmod>
+     <lastmod>2019-03-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/guides/data/data-request/</loc>
-     <lastmod>2019-02-25</lastmod>
+     <lastmod>2019-03-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/guides/data/data-access-units/</loc>
-     <lastmod>2019-02-25</lastmod>
+     <lastmod>2019-03-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/guides/data/metadata/</loc>
-     <lastmod>2019-02-25</lastmod>
+     <lastmod>2019-03-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/guides/data/run-your-tools/</loc>
-     <lastmod>2019-02-25</lastmod>
+     <lastmod>2019-03-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/guides/data/data-transfer-app/</loc>
-     <lastmod>2019-02-25</lastmod>
+     <lastmod>2019-03-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/guides/data/command-line/</loc>
-     <lastmod>2019-02-25</lastmod>
+     <lastmod>2019-03-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/guides/tools/pecan-pie/</loc>
-     <lastmod>2019-02-25</lastmod>
+     <lastmod>2019-03-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/guides/tools/neoepitope/</loc>
-     <lastmod>2019-02-25</lastmod>
+     <lastmod>2019-03-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/guides/tools/chipseq/</loc>
-     <lastmod>2019-02-25</lastmod>
+     <lastmod>2019-03-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/guides/tools/rapid-rnaseq/</loc>
-     <lastmod>2019-02-25</lastmod>
+     <lastmod>2019-03-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/guides/tools/warden/</loc>
-     <lastmod>2019-02-25</lastmod>
+     <lastmod>2019-03-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/guides/tools/cis-x/</loc>
-     <lastmod>2019-02-25</lastmod>
+     <lastmod>2019-03-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/guides/tools/mutational-spectrum/</loc>
-     <lastmod>2019-02-25</lastmod>
+     <lastmod>2019-03-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/guides/visualizations/bigwig-viewer/</loc>
-     <lastmod>2019-02-25</lastmod>
+     <lastmod>2019-03-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/guides/visualizations/fusion-viewer/</loc>
-     <lastmod>2019-02-25</lastmod>
+     <lastmod>2019-03-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/guides/portals/sickle-cell/</loc>
-     <lastmod>2019-02-25</lastmod>
+     <lastmod>2019-03-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/faq/</loc>
-     <lastmod>2019-02-25</lastmod>
+     <lastmod>2019-03-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
