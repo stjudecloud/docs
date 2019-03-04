@@ -1,8 +1,3 @@
-!!! Warning
-    Mutational Spectrum is an upcoming St. Jude Cloud tool and is not yet
-    publicly available. See [Mutational Spectrum on GitHub][mutspec] for more
-    information.
-
 |                       |                                            |
 |-----------------------|--------------------------------------------|
 | **Authors**           | Scott Newman, Michael Macias               |
@@ -62,13 +57,25 @@ Mutational Spectrum runs four steps using subcommands of [mutspec].
 
 ## Getting started
 
-!!! todo
+After logging in, click the "Start" button on the [Mutational Spectrum tool
+page]. This creates a new DNAnexus project and imports the tool.
+
+With subsequent runs, the sidebar shows "Launch Tool", meaning the project with
+the tool already exists. Click "Launch Tool" to start a new analysis.
+
+[Mutational Spectrum tool page]: https://platform.stjude.cloud/tools/mutational_spectrum
 
 ### Input configuration
 
 Mutational Spectrum only requires VCFs as inputs. This can be a single
 multi-sample VCF, multiple single-sample VCFs, or a combination of both. All
 other inputs are optional.
+
+Input files can be uploaded via the [data transfer application] or [command
+line].
+
+[data transfer application]: ../data/data-transfer-app.md
+[command line]: ../data/command-line.md
 
 <h4 id="sample-sheet">Sample sheet</h4>
 
