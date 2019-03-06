@@ -73,11 +73,21 @@ cis-X currently only works with hg19 (GRCh37).
 
 ## Getting started
 
-!!! todo
+After logging in, click the "Start" button on the [cis-X tool page]. This
+creates a new DNAnexus project and imports the tool.
+
+With subsequent runs, the sidebar shows "Launch Tool", meaning the project with
+the tool already exists. Click "Launch Tool" to start a new analysis.
+
+[cis-X tool page]: https://platform.stjude.cloud/tools/cis-x
 
 ### Input file configuration
 
-cis-X requires six tab-delimited input files to be prepared in advance.
+cis-X requires six tab-delimited input files to be prepared in advance. These
+files can be uploaded via the [data transfer application] or [command line].
+
+[data transfer application]: ../data/data-transfer-app.md
+[command line]: ../data/command-line.md
 
 !!! note
     Even though CNV/LOH regions, somatic SNV/indels, somatic SVs, and
