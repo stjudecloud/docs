@@ -16,7 +16,12 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/guides/data/data-request/</loc>
+     <loc>/guides/data/metadata/</loc>
+     <lastmod>2019-03-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/guides/data/run-your-tools/</loc>
      <lastmod>2019-03-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -26,12 +31,12 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/guides/data/metadata/</loc>
+     <loc>/guides/data/data-request/</loc>
      <lastmod>2019-03-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/guides/data/run-your-tools/</loc>
+     <loc>/guides/data/creating-a-cloud-app/</loc>
      <lastmod>2019-03-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
