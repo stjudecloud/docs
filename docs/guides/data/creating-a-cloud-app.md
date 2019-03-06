@@ -259,7 +259,7 @@ Below is a table describing what each flag does:
 
 </center>
 
-Our first change has to do with our BAM file is downloaded. Although `dx-app-wizard` automatically generates a line that will download the input file and rename it, we want to keep the original file name because FastQC uses the input file as part of the report name. Remove the `-o bam_file` portion so the line looks like the following:
+Our first change has to do with how our BAM file is downloaded. Although `dx-app-wizard` automatically generates a line that will download the input file and rename it, we want to keep the original file name because FastQC uses the input file as part of the report name. Remove the `-o bam_file` portion so the line looks like the following:
 
 ```bash
 dx download "$bam_file"       # Downloads our input BAM file without renaming
@@ -425,7 +425,7 @@ You can also monitor active jobs by going to the project space and selecting the
 
 ## Job Completion
 
-Once the job finishes, you will receive an email from DNAnexus (from: [notification@dnanexus.com](notification@dnanexus.com)) about whether the job has completed successfully or failed.
+Once the job finishes, you will receive an email from DNAnexus ([notification@dnanexus.com](mailto:notification@dnanexus.com)) about whether the job has completed successfully or failed.
 
 Make sure to check that these emails don't get sent to your spam folder.
 
@@ -451,4 +451,4 @@ Again, if we run the `dx ls` command, we can verify that two new files titled "f
 
 If you have made it this far, you have likely wrapped your first genomic analysis tool for use in the cloud. For your reference, we have included the final FastQC application at the [St. Jude App Tutorial Repository](https://github.com/stjude/sjcloud-app-tutorial).
 
-If you have any questions or suggestions on how we can improve this tutorial, please [file an issue](https://github.com/stjude/sjcloud-docs/issues) or contact us at [https://stjude.cloud/contact](https://stjude.cloud/contact).
+If you have any questions or suggestions on how we can improve this tutorial, please [file an issue](https://github.com/stjude/sjcloud-docs/issues), contact us at [https://stjude.cloud/contact](https://stjude.cloud/contact), or email us at [support@stjude.cloud](mailto:support@stjude.cloud).
