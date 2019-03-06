@@ -2,6 +2,9 @@
 
 This guide will take you through the process of writing an application for working with and manipulating the St. Jude data you've requested. By creating your own application, you will be able to wrap genomic tools and packages from external sources, as well as any tool or application you might have written yourself.
 
+!!! tip
+    The complete contents of this guide is hosted on the [St. Jude App Tutorial](https://github.com/stjude/sjcloud-app-tutorial) repository on GitHub. Feel free to clone the repository and use it as a reference while following this tutorial or try building the application and running it on your own project.
+
 ## Overview
 
 The biggest difference between running an application in the cloud (as opposed to running it in a local environment) is the way we access that data and manipulate it. Writing and running your own cloud application grants numerous benefits. It allows you to submit numerous jobs in parallel, access your data from anywhere with an Internet connection, and utilize resources and compute power at a fraction of the cost (when compared to building your own infrastructure).
@@ -12,9 +15,11 @@ However, there are differences in how we manage our data. When a job is submitte
 
 In this tutorial, we will be wrapping the [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/), a quality control tool for raw sequence data, into our application. This will allow us to run FastQC on any of the St. Jude next generation sequencing data in the cloud. For specific information about how FastQC works, please refer to the [FastQC documentation](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/).
 
+
+
 ## Requesting Data
 
-After submitting a [data request](https://stjude.github.io/sjcloud-docs/guides/data/data-request/), it will be sent out for evaluation. Once it has been approved, the data will be vended and it will be accessible in a DNAnexus project. You can view all the available projects and data from the [Manage Data](https://platform.stjude.cloud/requests/manage) page where you can view the request name, creation date, total number of files, what files you have immediate access to, and the status of your request. You will also be able to submit required documentation on the Manage Data page.
+After submitting a [data request](../../guides/data/data-request/), it will be sent out for evaluation. Once it has been approved, the data will be vended and it will be accessible in a DNAnexus project. You can view all the available projects and data from the [Manage Data](https://platform.stjude.cloud/requests/manage) page where you can view the request name, creation date, total number of files, what files you have immediate access to, and the status of your request. You will also be able to submit required documentation on the Manage Data page.
 
 If you click on a request, it will take you to the DNAnexus platform, where you can view all the files available to you and your project. When a request is submitted, the project will be created, but the data will not be available until your request has been reviewed and approved. Once approved, you should be able to view all the available data from your request. When the data is vended, it will typically look something like:
 
@@ -31,6 +36,10 @@ project_space/
 The `SAMPLE_INFO.txt` file provides all the metadata associated with the request, and the restricted folder contains all the data separated by file type (for more info, refer to the [Metadata Provided](../../guides/data/command-line.md) section). The other folders will contain the respective file types you included in your request.
 
 After your data access request has been approved, we can begin writing our app.
+
+For this tutorial, I have requested the PCGP dataset and once my access request has been approved, my project directory space will look like the following.
+
+![](../../images/guides/data/creating-a-cloud-app-0.png)
 
 ## Writing the Application
 
@@ -70,6 +79,11 @@ The `dx-fastqc-example-app.sh` file is a bash script is what will be executed wh
 ## Creating the Project
 
 Start by running the `dx-app-wizard` command from your terminal.
+
+!!! info
+    This helper tool will create a **local** directory on your machine. Any code changes we make will be done *inside* this local project directory created by `dx-app-wizard`. This is because we can write our application locally, [build the application](../../guides/data/creating-a-cloud-app/#building-your-app), and then [run the application](../../guides/data/creating-a-cloud-app/#running-your-app) in the cloud.
+
+    Building the application will compile `dx-fastqc-example-app` and then upload it into the project space on the cloud. When we run an application, it will be submitted as a job to be run in the cloud. With this process, we can write the application locally and run it on our data in the cloud, without ever having to utilize personal bandwidth and compute time.
 
 ```bash
 $ dx-app-wizard
@@ -246,23 +260,34 @@ Below is a table describing what each flag does:
 
 </center>
 
-After the application downloads the input file (`dx download "$bam_file" -o bam_file`), we need to create the appropriate output directories and run FastQC on our BAM file. Add the following lines to the bash script within the `main` function:
+Our first change has to do with our BAM file is downloaded. Although `dx-app-wizard` automatically generates a line that will download the input file and rename it, we want to keep the original file name because FastQC uses the input file as part of the report name. Remove the `-o bam_file` portion so the line looks like the following:
 
 ```bash
-mkdir ~/fastqc-out/                                     # FastQC Output Folder
-/FastQC/fastqc -f bam bam_file -o ~/fastqc-out          # Runs FastQC on BAM File
+dx download "$bam_file"       # Downloads our input BAM file without renaming
 ```
+
+After the application downloads the input file, we need to create the appropriate output directories and run FastQC on our BAM file. Add the following lines to the bash script within the `main` function:
+
+```bash
+mkdir ~/fastqc-out/                                    # FastQC Output Folder
+/FastQC/fastqc "$bam_file_name" -o ~/fastqc-out        # Runs FastQC on BAM File
+```
+
+!!! tip
+    Be sure to use `"$bam_file_name"` as our input for FastQC. Using `"$bam_file"` only returns the DNAnexus file-id associated with the input file.
+
+    For more information on helper variables, refer to the [Advanced App Tutorial](https://wiki.dnanexus.com/Developer-Tutorials/Advanced-App-Tutorial#Set-output-name-using-bash-app-helper-variables).
 
 ## Uploading Files
 
 After FastQC finishes, the last thing to do is to upload the reports generated by FastQC to our project. These virtual Linux machines are provisioned at-will, meaning that they are only spun up when a job is submitted. When we create an application and run it in the cloud, we submit it as a job to be executed. When a job gets executed, a virtual machine will download all the necessary requirements (tools, packages, data, etc.) and run the job. Any output files on the machine must be uploaded back to the project space after a job finishes executing. Any information and data not uploaded to the project space will be inaccessible and lost.
 
-You will see two lines generated for us by `dx-app-wizard` when we specified the outputs for our application. We need to change these to upload the correct files from our output directory that we specified for FastQC. Before this, we will also want to rename our output FastQC files. The files that FastQC will output will trim the BAM file extension and append `_fastqc.html` and `_fastqc.zip`. Add the following lines, making sure to replace the two original upload lines:
+You will see two lines generated for us by `dx-app-wizard` when we specified the outputs for our application. We need to change these to upload the correct files from our output directory that we specified for FastQC. Before this, we can also (optionally) rename the files to be uploaded. Add the following lines, making sure to replace the two original upload lines:
 
 ```bash
-# Renames the FastQC reports to include the BAM file prefix
-mv ~/fastqc-out/*.html ~/fastqc-out/"$bam_file_prefix"_fastqc.html
-mv ~/fastqc-out/*.zip ~/fastqc-out/"$bam_file_prefix"_fastqc.zip
+# (Optional) Renames the FastQC reports
+mv ~/fastqc-out/*.html ~/fastqc-out/fastqc-report.html
+mv ~/fastqc-out/*.zip ~/fastqc-out/fastqc-report.zip
 
 # Uploads the respective HTML and Zip file
 fastqc_html=$(dx upload ~/fastqc-out/"$bam_file_prefix"_fastqc.html --brief)
@@ -284,21 +309,21 @@ main() {
     echo "Value of bam_file: '$bam_file'"
 
     # Downloads file from project to virtual machine workspace
-    dx download "$bam_file" -o bam_file
+    dx download "$bam_file"
 
     # Creating output directory for FastQC
     mkdir ~/fastqc-out
 
     # Runs FastQC on BAM file
-    /FastQC/fastqc -f bam bam_file -o ~/fastqc-out
+    /FastQC/fastqc "$bam_file_name" -o ~/fastqc-out
 
     # Renames the FastQC reports to include the BAM file prefix
-    mv ~/fastqc-out/*.html ~/fastqc-out/"$bam_file_prefix"_fastqc.html
-    mv ~/fastqc-out/*.zip ~/fastqc-out/"$bam_file_prefix"_fastqc.zip
+    mv ~/fastqc-out/*.html ~/fastqc-out/fastqc-report.html
+    mv ~/fastqc-out/*.zip ~/fastqc-out/fastqc-report.zip
 
     # Uploads the respective HTML and Zip file
-    fastqc_html=$(dx upload ~/fastqc-out/"$bam_file_prefix"_fastqc.html --brief)
-    fastqc_zip=$(dx upload ~/fastqc-out/"$bam_file_prefix"_fastqc.zip --brief)
+    fastqc_html=$(dx upload ~/fastqc-out/fastqc-report.html --brief)
+    fastqc_zip=$(dx upload ~/fastqc-out/fastqc-report.zip --brief)
 
     # Adds and formats appropriate output variables for your app
     dx-jobutil-add-output fastqc_html "$fastqc_html" --class=file
@@ -314,9 +339,15 @@ To build your application, enter the following into your terminal:
 $ dx build dx-fastqc-example-app
 ```
 
-This command will package the tools and files as an application which can then be run on the DNAnexus Platform.
+This command will package the tools and files as an application which can then be run on the DNAnexus Platform. In the screenshot below, you can see the compiled app in our project workspace selected and highlighted in blue.
+
+![](../../images/guides/data/creating-a-cloud-app-1.png)
 
 Any time you make any changes to the scripts or the application, you will need to rebuild the application. To overwrite a previous version of the app, specify the `-f` command.
+
+You can also inspect and configure the application by clicking on it.
+
+![](../../images/guides/data/creating-a-cloud-app-2.png)
 
 ## Running Your App
 
@@ -324,6 +355,12 @@ To run the `dx-fastqc-example-app`, enter the following into the terminal:
 
 ```bash
 $ dx run dx-fastqc-example-app -i bam_file=/path/to/<bam-file>.bam
+```
+
+For this example, I am using the PCGP dataset and my run command will look like the following:
+
+```bash
+$ dx run dx-fastqc-example-app -i bam_file=/immediate/bam/SJBALL020073_D1.RNA-Seq.bam
 ```
 
 The input path will vary depending on how the data looks inside your DNAnexus project, but it might look like the following: `/restricted/bam/<bam-file>.bam`
@@ -352,6 +389,24 @@ Job Log
 Watching job job-FVbY8Z0991ZXx5v1Fk3QgJPV. Press Ctrl+C to stop.
 ```
 
+You can also monitor active jobs by going to the project space and selecting the "Monitor" tab.
+
+![](../../images/guides/data/creating-a-cloud-app-3.png)
+
+## Job Completion
+
+Once the job finishes, you will receive an email from DNAnexus (from: [notification@dnanexus.com](notification@dnanexus.com)) about whether the job has completed successfully or failed.
+
+Make sure to check that these emails don't go to your spam folder.
+
+![](../../images/guides/data/creating-a-cloud-app-4.png)
+
+Clicking the links in the email should open up a new tab in your browser and take you to the appropriate project. Here, we can see that FastQC has run successfully and that the two files generated by FastQC have been uploaded back into our project space.
+
+![](../../images/guides/data/creating-a-cloud-app-5.png)
+
 ## Conclusion
 
-If you have made it this far, you have likely wrapped your first genomic analysis tool for use in the cloud. For your reference, we have included the final FastQC application at the [St. Jude App Tutorial Repository](https://github.com/stjude/sjcloud-app-tutorial). If you have any questions or suggestions on how we can improve this tutorial, please [file an issue](https://github.com/stjude/sjcloud-docs/issues) or contact us at [https://stjude.cloud/contact](https://stjude.cloud/contact).
+If you have made it this far, you have likely wrapped your first genomic analysis tool for use in the cloud. For your reference, we have included the final FastQC application at the [St. Jude App Tutorial Repository](https://github.com/stjude/sjcloud-app-tutorial).
+
+If you have any questions or suggestions on how we can improve this tutorial, please [file an issue](https://github.com/stjude/sjcloud-docs/issues) or contact us at [https://stjude.cloud/contact](https://stjude.cloud/contact).
