@@ -1,6 +1,3 @@
-!!! Warning
-    This tutorial is IN PROGRESS
-
 You can follow [this guide](../../guides/data/data-request.md) to request access to
 St. Jude data in a secure cloud environment. Before you can begin writing your
 own tools to run on our data, you'll need to understand a bit about how
@@ -16,7 +13,7 @@ St. Jude Cloud offers data and tools for you to use. However, many researchers a
 
 To upload your own tools and run them on data in you DNAnexus project you must use the [command line](command-line.md).
 
-Reference the [Creating A Cloud App Tutorial](../../guides/data/creating-a-cloud-app.md) for more information on how to package your own tools and run them in the cloud environment.
+Refer to the [Creating A Cloud App Tutorial](../../guides/data/creating-a-cloud-app.md) for more information on how to package your own tools and run them in the cloud environment.
 
 ### Frequently asked questions
 **Q. Can I submit my data to St. Jude Cloud?**
