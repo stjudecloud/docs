@@ -1,4 +1,33 @@
-@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+@font-face {
+    font-family: 'StJude Sans';
+    src: url('../_static/fonts/sjs-light.woff');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'StJude Sans';
+    src: url('../_static/fonts/sjs-regular.woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'StJude Sans';
+    src: url('../_static/fonts/sjs-regular-italic.woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'StJude Sans';
+    src: url('../_static/fonts/sjs-bold.woff');
+    font-weight: 700;
+}
+
+body {
+    font-family: "StJude Sans", sans-serif;
+}
 
 img {
     margin: auto;

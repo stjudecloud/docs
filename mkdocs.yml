@@ -3,9 +3,7 @@ theme:
   name: 'material'
   custom_dir: 'mkdocs-material/material'
   logo: 'images/stjude-logo-child-white.png'
-  font:
-      text: 'Ubuntu'
-      code: 'Ubuntu Mono'
+  font: false
 
 extra_css:
   - css/extra.css
@@ -19,6 +17,7 @@ pages:
       - 'Working with our Data': 'guides/data/run-your-tools.md'
       - 'Data Transfer Application': 'guides/data/data-transfer-app.md'
       - 'Command Line Interaction': 'guides/data/command-line.md'
+      - 'Creating a Cloud App': 'guides/data/creating-a-cloud-app.md'
   - 'Tool Guides':
       - 'Pecan PIE': 'guides/tools/pecan-pie.md'
       - 'NeoepitopePred': 'guides/tools/neoepitope.md'
