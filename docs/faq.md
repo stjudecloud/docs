@@ -1,24 +1,20 @@
 **Q. Will I be charged for using St. Jude Cloud?**
 
-A. Although you may be prompted to enter billing information, you will not
-be charged for anything with the exception of the following items:
-
-* Any copy of the St. Jude data you receive is considered "sponsored",
+A. Any copy of the St. Jude data you receive is considered "sponsored",
   so you do not have to pay a fee to store this data in St. Jude
-  Cloud. You will be charged for any *derivative* files obtained
-  through running analyses on St. Jude data and stored on the St. Jude
-  Cloud.
+  Cloud. Although you may be prompted to enter billing information, you will not
+be charged for anything with the exception of the following actions:
+
+*  You will be charged for any *derivative* files stored on the St. Jude Cloud, such as results files obtained through running analyses workflows.
+* There is a small monthly storage fee associated for any of your own data you upload to the cloud.
 * If you elect to *download* any data from SJCloud, you will be
   charged an egress fee by DNAnexus. This fee is usually negligible
   unless you are downloading entire cohorts. We are actively
   investigating ways to minimize or eliminate these costs.
-* If you run any of the following tools, you will be charged for the
+* If you run any of our analysis workflows (such as Rapid RNA-Seq, WARDEN, etc) or you own workflows that you have uploaded and packaged into the cloud, you will be charged for the
   compute resources used in producing the results as well as storage
   fees associated with storing the results files.
-    * [ChIP-Seq Peak Caller](guides/tools/chipseq.md)
-    * [HLA Typing and Neoepitope Prediction](guides/tools/neoepitope.md)
-    * [Rapid RNA-Seq Fusion Detection](guides/tools/rapid-rnaseq.md)
-    * [WARDEN Differential Expression Analysis](guides/tools/warden.md)
+
 
 **Q. How can I delete my account?**
 

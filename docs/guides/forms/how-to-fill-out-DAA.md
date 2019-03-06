@@ -48,7 +48,7 @@ you will also need to include the following:
 
 ### Uploading A Revised DAA
 
-If your DAA is incomplete (for example you missed a required signature or neglected to check the box next to a DAU for which you requested data), you will be contacted by a member of the St. Jude Cloud team. Once you have made the required edits, you can reupload a revised DAA through the [Manage Data page](https://platform.stjude.cloud/requests/manage) by clicking on the *Add a Form* button.
+If your DAA is incomplete (for example you missed a required signature or neglected to check the box next to a dataset for which you requested data), you will be contacted by a member of the St. Jude Cloud team. Once you have made the required edits, you can reupload a revised DAA through the [Manage Data page](https://platform.stjude.cloud/requests/manage) by clicking on the *Add a Form* button.
 
 ![](../../images/guides/forms/daa-7.png)
 
