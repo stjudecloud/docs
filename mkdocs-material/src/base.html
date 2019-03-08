@@ -34,6 +34,16 @@
     <!-- Adobe Analytics -->
     <script src="//assets.adobedtm.com/launch-EN942f79c83ff84c10a45b4856a85eaccb.min.js" async></script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107924368-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-107924368-1');
+    </script>
+
     <!-- Metatags -->
     {% block site_meta %}
       <meta charset="utf-8" />
