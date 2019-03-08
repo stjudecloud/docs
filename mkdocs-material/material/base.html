@@ -5,6 +5,9 @@
 <!DOCTYPE html>
 <html lang="{{ lang.t('language') }}" class="no-js">
   <head>
+    <script src="//assets.adobedtm.com/launch-EN942f79c83ff84c10a45b4856a85eaccb.min.js" async></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107924368-1"></script>
+    <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-107924368-1")</script>
     {% block site_meta %}
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -48,9 +51,9 @@
       {% endif %}
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application.css">
+      <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application.4eccddb4.css">
       {% if palette.primary or palette.accent %}
-        <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-palette.css">
+        <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-palette.6079476c.css">
       {% endif %}
       {% if palette.primary %}
         {% import "partials/palette.html" as map %}
@@ -61,7 +64,7 @@
       {% endif %}
     {% endblock %}
     {% block libs %}
-      <script src="{{ base_url }}/assets/javascripts/modernizr.js"></script>
+      <script src="{{ base_url }}/assets/javascripts/modernizr.20ef595d.js"></script>
     {% endblock %}
     {% block fonts %}
       <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -90,11 +93,11 @@
       <defs>
         {% set platform = config.extra.repo_icon or config.repo_url %}
         {% if "github" in platform %}
-          {% include "assets/images/icons/github.svg" %}
+          {% include "assets/images/icons/github.f0b8504a.svg" %}
         {% elif "gitlab" in platform %}
-          {% include "assets/images/icons/gitlab.svg" %}
+          {% include "assets/images/icons/gitlab.6dd19c00.svg" %}
         {% elif "bitbucket" in platform %}
-          {% include "assets/images/icons/bitbucket.svg" %}
+          {% include "assets/images/icons/bitbucket.1b09e088.svg" %}
         {% endif %}
       </defs>
     </svg>
@@ -177,7 +180,7 @@
       {% endblock %}
     </div>
     {% block scripts %}
-      <script src="{{ base_url }}/assets/javascripts/application.js"></script>
+      <script src="{{ base_url }}/assets/javascripts/application.ec5be3af.js"></script>
       {% if lang.t("search.language") != "en" %}
         {% set languages = lang.t("search.language").split(",") %}
         {% if languages | length and languages[0] != "" %}
