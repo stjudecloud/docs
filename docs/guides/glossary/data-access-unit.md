@@ -1,7 +1,7 @@
-#Data Access Units
+ 
+A St. Jude Cloud **Data Access Unit (DAU)** is a grouping of data that typically corresponds to a project, study, or dataset generated at the same time at the same institution. Each DAU has its own governing body of researchers, the [Data Access Committee](../../guides/glossary/data-access-committee), who preside over the data and who may grant or deny access.
 
-## What is a Data Access Unit (DAU)?
-A Data Access Unit is a grouping of data that typically corresponds to a dataset generated at the same time at the same institution, and can also correspond to a specific study. Each DAU has its own Data Access Committee, which contains the researchers who reside over the data. Each Data Access Committee has its own protocols for approving access to their DAU. If you have questions about committee approval protocols, please Contact Us. Basic clinical data is available for relevant subjects in each DAU. We currently have 3 DAUs. 
+We currently have the 5 DAUs detailed below.
 
 ### Pediatric Cancer Genome Project (PCGP)
 **PCGP is a paired-tumor normal dataset focused on discovering the genetic origins of pediatric cancer.**

@@ -1,4 +1,4 @@
-# Metadata Provided
+# Metadata
 
 Each data request includes a text file called `SAMPLE_INFO.txt` that provides a number of file level properties (sample identifiers, clinical attributes, etc). The following is a list of properties provided.
 
@@ -21,7 +21,7 @@ Each data request includes a text file called `SAMPLE_INFO.txt` that provides a 
 | attr_race             | Self-reported race according to the [US Census Bureau classifications][censusburea].                                                                                                                                  |
 | attr_sex              | Self-reported sex.                                                                                                                                                                                                    |
 | sj_dataset_accession  | If present, the permanent accession number assigned in St. Jude Cloud.                                                                                                                                                |
-| sj_embargo_date       | The [embargo date](../../guides/data/data-overview#embargo-dates), which specifies the first date which the files can be used in a publication.                                                                       |
+| sj_embargo_date       | The [embargo date](../../guides/glossary/embargo-date), which specifies the first date which the files can be used in a publication.                                                                       |
 
 [pubmed]: https://www.ncbi.nlm.nih.gov/pubmed/
 [ega]: https://www.ebi.ac.uk/ega/home

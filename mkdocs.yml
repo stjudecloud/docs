@@ -11,15 +11,13 @@ extra_css:
 pages:
   - 'Getting Started': 'index.md'
   - 'Data Guides': 
-      - 'Overview': 'guides/data/data-overview.md'
-      - 'Types of Data': 'guides/data/types-of-data.md'
-      - 'Metadata Provided': 'guides/data/metadata.md'
-      - 'Working with our Data': 'guides/data/run-your-tools.md'
-      - 'Data Access Units': 'guides/data/data-access-units.md'
       - 'Making a Data Request': 'guides/data/data-request.md'
-      - 'Creating a Cloud App': 'guides/data/creating-a-cloud-app.md'
+      - 'Types of Data': 'guides/data/types-of-data.md'
+      - 'Metadata': 'guides/data/metadata.md'
+      - 'Working with our Data': 'guides/data/run-your-tools.md'
       - 'Data Transfer Application': 'guides/data/data-transfer-app.md'
       - 'Command Line Interaction': 'guides/data/command-line.md'
+      - 'Creating a Cloud App': 'guides/data/creating-a-cloud-app.md'
   - 'Tool Guides':
       - 'Pecan PIE': 'guides/tools/pecan-pie.md'
       - 'NeoepitopePred': 'guides/tools/neoepitope.md'
@@ -33,6 +31,14 @@ pages:
       - 'Fusion Viewer': 'guides/visualizations/fusion-viewer.md'
   - 'Portal Guides':
       - 'Sickle Cell Genomics Portal' : 'guides/portals/sickle-cell.md'
+  - 'Forms':
+      - 'Filling out a Data Access Agreement': 'guides/forms/how-to-fill-out-DAA.md' 
+      - 'Filling out an Extension Addendum': 'guides/forms/how-to-fill-out-Extension.md'
+  - 'Glossary': 
+      - 'Data Access Unit': 'guides/glossary/data-access-unit.md'
+      - 'Data Access Agreement': 'guides/glossary/data-access-agreement.md'
+      - 'Data Access Committee': 'guides/glossary/data-access-committee.md'
+      - 'Embargo Date': 'guides/glossary/embargo-date.md'
   - 'Frequently Asked Questions': 'faq.md'
 
 # Repository
