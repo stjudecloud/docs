@@ -38,7 +38,7 @@ pages:
 # Repository
 repo_name: 'stjude/sjcloud-docs'
 repo_url: 'https://github.com/stjude/sjcloud-docs'
-edit_uri: 'blob/cmcleod/overhaul/docs'
+edit_uri: 'edit/master/docs'
 
 # Copyright
 copyright: "Copyright &copy; 2017 - 2018 St. Jude Children's Research Hospital"
