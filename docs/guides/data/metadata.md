@@ -33,15 +33,15 @@ Below are the set of tags which *may* exist for any given file in St. Jude Cloud
 
 ### Clinical and Phenotypic Information
 
-Also included is a set of phenotypic information queried from the physician or research team's records. These are all considered to be *optional*, as the level of information gathered for each sample varies. All basic clinical or phenotypic information will have `attr_` prepended to their tag name.
+Also included is a set of phenotypic information queried from the physician or research team's records at the time of sample submission to St. Jude Cloud. These are all considered to be *optional*, as the level of information gathered for each sample varies. If empty, the physician or research team did not indicate a value for the field. All basic clinical or phenotypic information will have `attr_` prepended to their tag name.
 
 | Property              | Description                                                                                                                                                                                                                                                                |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| attr_age_at_diagnosis | Age at first diagnosis contained in the phyisician's records at the time of sample submission to St. Jude Cloud. This field is normalized as a decimal value. If empty, the physician or research team did not indicate a value for this field.                                             |
-| attr_diagnosis        | Primary diagnosis contained in the phyisician's records at the time of sample submission to St. Jude Cloud. If empty, the physician or research team did not indicate a value for this field.                                                                                               |
-| attr_ethnicity        | Self-reported ethnicity contained in the phyisician's records at the time of sample submission to St. Jude Cloud. Values are normalized according to the [US Census Bureau classifications][censusburea]. If empty, the physician or research team did not indicate a value for this field. |
-| attr_race             | Self-reported race contained in the phyisician's records at the time of sample submission to St. Jude Cloud. Values are normalized according to the [US Census Bureau classifications][censusburea]. If empty, the physician or research team did not indicate a value for this field.      |
-| attr_sex              | Self-reported sex contained in the phyisician's records at the time of sample submission to St. Jude Cloud. If empty, the physician or research team did not indicate a value for this field.                                                                                               |
+| attr_age_at_diagnosis | Age at first diagnosis. This field is normalized as a decimal value. If empty, the physician or research team did not indicate a value for this field.                                             |
+| attr_diagnosis        | Primary diagnosis.                                                                                               |
+| attr_ethnicity        | Self-reported ethnicity. Values are normalized according to the [US Census Bureau classifications][censusburea]. |
+| attr_race             | Self-reported race. Values are normalized according to the [US Census Bureau classifications][censusburea].      |
+| attr_sex              | Self-reported sex.                                                                                               |
 
 ### Short Disease Code Mapping
 
