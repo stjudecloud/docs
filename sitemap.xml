@@ -6,7 +6,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/guides/data/data-overview/</loc>
+     <loc>/guides/data/data-request/</loc>
      <lastmod>2019-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -26,27 +26,17 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/guides/data/data-access-units/</loc>
-     <lastmod>2019-03-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>/guides/data/data-request/</loc>
-     <lastmod>2019-03-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>/guides/data/creating-a-cloud-app/</loc>
-     <lastmod>2019-03-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>/guides/data/data-transfer-app/</loc>
      <lastmod>2019-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/guides/data/command-line/</loc>
+     <lastmod>2019-03-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/guides/data/creating-a-cloud-app/</loc>
      <lastmod>2019-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -97,6 +87,36 @@
     </url>
     <url>
      <loc>/guides/portals/sickle-cell/</loc>
+     <lastmod>2019-03-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/guides/forms/how-to-fill-out-DAA/</loc>
+     <lastmod>2019-03-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/guides/forms/how-to-fill-out-Extension/</loc>
+     <lastmod>2019-03-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/guides/glossary/data-access-unit/</loc>
+     <lastmod>2019-03-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/guides/glossary/data-access-agreement/</loc>
+     <lastmod>2019-03-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/guides/glossary/data-access-committee/</loc>
+     <lastmod>2019-03-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/guides/glossary/embargo-date/</loc>
      <lastmod>2019-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
