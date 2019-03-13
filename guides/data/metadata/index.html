@@ -303,9 +303,38 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Metadata
+      </label>
+    
     <a href="./" title="Metadata" class="md-nav__link md-nav__link--active">
       Metadata
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#short-disease-code-mapping" title="Short Disease Code Mapping" class="md-nav__link">
+    Short Disease Code Mapping
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -704,6 +733,22 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#short-disease-code-mapping" title="Short Disease Code Mapping" class="md-nav__link">
+    Short Disease Code Mapping
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -756,8 +801,8 @@
 <td>Optional field that may contain additional file information.</td>
 </tr>
 <tr>
-<td>j_diseases</td>
-<td>Short disease identifier used internally at St. Jude. When determining primary diagnosis, use <code class="codehilite">attr_diagnosis</code> instead!</td>
+<td>sj_diseases</td>
+<td>Short disease identifier assigned at the time of genomic sequencing. Note that this diagnosis may be refined after undergoing genomic testing. When including diagnosis in your analysis, we recommend you use <code class="codehilite">attr_diagnosis</code>, which is the most up to date value for diagnosis.</td>
 </tr>
 <tr>
 <td>sj_datasets</td>
@@ -777,7 +822,7 @@
 </tr>
 <tr>
 <td>attr_diagnosis</td>
-<td>Primary diagnosis.</td>
+<td>Primary diagnosis at the time of sample submission to St. Jude Cloud as reported by the physician.</td>
 </tr>
 <tr>
 <td>attr_ethnicity</td>
@@ -798,6 +843,394 @@
 <tr>
 <td>sj_embargo_date</td>
 <td>The <a href="../../../guides/glossary/embargo-date">embargo date</a>, which specifies the first date which the files can be used in a publication.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="short-disease-code-mapping">Short Disease Code Mapping</h3>
+<p>Embedded in both the filename and the <code class="codehilite">SAMPLE_INFO.txt</code> file that comes with your data request will be a list of short diagnosis codes (<code class="codehilite">sj_diseases</code>). These short codes were assigned at the time that the sample was sent for sequencing, and they are not necessarily the final diagnosis (for instance, the diagnosis is often refined as the sample undergoes genomic testing). Below, we include a table of short disease code to long disease name mappings so you can interpret what these abbreviations mean.</p>
+<table>
+<thead>
+<tr>
+<th>Short Disease Code</th>
+<th>Long Diagnosis Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ACT</td>
+<td>Adrenocortical Carcinoma</td>
+</tr>
+<tr>
+<td>AEL</td>
+<td>Acute erythroid leukemia (AML M6)</td>
+</tr>
+<tr>
+<td>ALCL</td>
+<td>Anaplastic Large Cell Lymphoma</td>
+</tr>
+<tr>
+<td>ALL</td>
+<td>Acute Lymphoblastic Leukemia</td>
+</tr>
+<tr>
+<td>ALS</td>
+<td>Amyotrophic Lateral Sclerosis ("Lou Gehrig\'s Disease"")"</td>
+</tr>
+<tr>
+<td>ALZ</td>
+<td>Alzheimer's Disease</td>
+</tr>
+<tr>
+<td>AML</td>
+<td>Acute Myeloid Leukemia</td>
+</tr>
+<tr>
+<td>AMLM</td>
+<td>Acute Megakaryoblastic Leukemia</td>
+</tr>
+<tr>
+<td>ANEM</td>
+<td>Anemia</td>
+</tr>
+<tr>
+<td>ASPS</td>
+<td>Alveolar Soft Part Sarcoma</td>
+</tr>
+<tr>
+<td>AUL</td>
+<td>Acute Undifferentiated Leukemia</td>
+</tr>
+<tr>
+<td>BALL</td>
+<td>B-cell Acute Lymphoblastic Leukemia</td>
+</tr>
+<tr>
+<td>BCC</td>
+<td>Basal Cell Carcinoma</td>
+</tr>
+<tr>
+<td>BLACA</td>
+<td>Bladder Cancer</td>
+</tr>
+<tr>
+<td>BT</td>
+<td>Brain Tumor</td>
+</tr>
+<tr>
+<td>CA</td>
+<td>Carcinoma</td>
+</tr>
+<tr>
+<td>CBF</td>
+<td>Acute Myeloid Leukemia - Core Binding Factor subtype</td>
+</tr>
+<tr>
+<td>CLL</td>
+<td>Chronic Lymphocytic Leukemia</td>
+</tr>
+<tr>
+<td>CML</td>
+<td>Chronic Myelogenous Leukemia</td>
+</tr>
+<tr>
+<td>CMML</td>
+<td>Chronic Myelomonocytic Leukemia</td>
+</tr>
+<tr>
+<td>CMV</td>
+<td>Cytomegalovirus</td>
+</tr>
+<tr>
+<td>CNS</td>
+<td>Central Nervous System</td>
+</tr>
+<tr>
+<td>CPC</td>
+<td>Choroid Plexus Carcinoma</td>
+</tr>
+<tr>
+<td>CRC</td>
+<td>Colorectal Cancer</td>
+</tr>
+<tr>
+<td>CS</td>
+<td>Chondrosarcoma</td>
+</tr>
+<tr>
+<td>CTP</td>
+<td>Congenital Thrombocytopenia</td>
+</tr>
+<tr>
+<td>DIPG</td>
+<td>Diffuse Intrinsic Pontine Glioma</td>
+</tr>
+<tr>
+<td>DLBCL</td>
+<td>Diffuse Large B-cell Lymphoma</td>
+</tr>
+<tr>
+<td>DOWN</td>
+<td>Down Syndrome</td>
+</tr>
+<tr>
+<td>DSRCT</td>
+<td>Desmoplastic Small Round Cell Tumor</td>
+</tr>
+<tr>
+<td>E2A</td>
+<td>B-Lineage Acute Lymphoblastic Leukemia - E2A-PBX1 subtype</td>
+</tr>
+<tr>
+<td>ECD</td>
+<td>Erdheim-Chester Disease</td>
+</tr>
+<tr>
+<td>EPD</td>
+<td>Ependymoma</td>
+</tr>
+<tr>
+<td>ERG</td>
+<td>Acute Lymphoblastic Leukemia - ERG alteration subtype</td>
+</tr>
+<tr>
+<td>ETV</td>
+<td>Acute Lymphoblastic Leukemia - ETV6-RUNX1 fusion subtype</td>
+</tr>
+<tr>
+<td>EWS</td>
+<td>Ewing's Sarcoma</td>
+</tr>
+<tr>
+<td>GCT</td>
+<td>Germ Cell Tumor</td>
+</tr>
+<tr>
+<td>GICT</td>
+<td>Giant Cell Tumor</td>
+</tr>
+<tr>
+<td>GIST</td>
+<td>Gastrointestinal Stromal Tumor</td>
+</tr>
+<tr>
+<td>HB</td>
+<td>Hepatoblastoma</td>
+</tr>
+<tr>
+<td>HGG</td>
+<td>High Grade Glioma</td>
+</tr>
+<tr>
+<td>HGS</td>
+<td>High Grade Sarcoma</td>
+</tr>
+<tr>
+<td>HIST</td>
+<td>Histiocytosis</td>
+</tr>
+<tr>
+<td>HL</td>
+<td>Hodgkin's Lymphoma</td>
+</tr>
+<tr>
+<td>HM</td>
+<td>Hematopoietic Malignancies</td>
+</tr>
+<tr>
+<td>HS</td>
+<td>Hidradenitis Suppurativa</td>
+</tr>
+<tr>
+<td>HYPER</td>
+<td>Acute Lymphoblastic Leukemia - Hyperdiploid subtype</td>
+</tr>
+<tr>
+<td>HYPO</td>
+<td>Acute Lymphoblastic Leukemia - Hypodiploid subtype</td>
+</tr>
+<tr>
+<td>IFS</td>
+<td>Infantile Fibromyosarcoma</td>
+</tr>
+<tr>
+<td>INF</td>
+<td>Acute Lymphoblastic Leukemia (Infant)</td>
+</tr>
+<tr>
+<td>ITP</td>
+<td>Idiopathic Thrombocytopenia</td>
+</tr>
+<tr>
+<td>JMML</td>
+<td>Juvenile Myelomonocytic Leukemia</td>
+</tr>
+<tr>
+<td>LCH</td>
+<td>Langerhans Cell Histiocytocis</td>
+</tr>
+<tr>
+<td>LGG</td>
+<td>Low Grade Glioma</td>
+</tr>
+<tr>
+<td>LM</td>
+<td>Liver Malignancies</td>
+</tr>
+<tr>
+<td>MB</td>
+<td>Medulloblastoma</td>
+</tr>
+<tr>
+<td>MDS</td>
+<td>Myelodysplastic Syndrome</td>
+</tr>
+<tr>
+<td>MEL</td>
+<td>Melanoma</td>
+</tr>
+<tr>
+<td>MLL</td>
+<td>Mixed Lineage Leukemia</td>
+</tr>
+<tr>
+<td>MM</td>
+<td>Multiple Myeloma</td>
+</tr>
+<tr>
+<td>MPAL</td>
+<td>Acute Lymphoblastic Leukemia - Multi-phenotypic</td>
+</tr>
+<tr>
+<td>MPNST</td>
+<td>Malignant Peripheral Nerve Sheath Tumor</td>
+</tr>
+<tr>
+<td>MRT</td>
+<td>Malignant Rhabdoid Tumour</td>
+</tr>
+<tr>
+<td>MYF</td>
+<td>Myelofibrosis</td>
+</tr>
+<tr>
+<td>NBL</td>
+<td>Neuroblastoma</td>
+</tr>
+<tr>
+<td>NEUTP</td>
+<td>Neutropenia</td>
+</tr>
+<tr>
+<td>NHL</td>
+<td>Non-Hodgkin's Lymphoma</td>
+</tr>
+<tr>
+<td>NM</td>
+<td>Non-malignancy</td>
+</tr>
+<tr>
+<td>NORM</td>
+<td>Control Sample</td>
+</tr>
+<tr>
+<td>NPC</td>
+<td>Nasopharyngeal Carcinoma</td>
+</tr>
+<tr>
+<td>NPCA</td>
+<td>Nasopharyngeal Carcinoma</td>
+</tr>
+<tr>
+<td>OS</td>
+<td>Osteosarcoma</td>
+</tr>
+<tr>
+<td>PF</td>
+<td>Posterior Fossa</td>
+</tr>
+<tr>
+<td>PGL</td>
+<td>Paraganglioma</td>
+</tr>
+<tr>
+<td>PHALL</td>
+<td>Acute Lymphoblastic Leukemia - BCR-ABL1 fusion subtype</td>
+</tr>
+<tr>
+<td>PHCML</td>
+<td>Ph+ Chronic Myeloid Leukemia</td>
+</tr>
+<tr>
+<td>PML</td>
+<td>Promyelocitic Leukemia</td>
+</tr>
+<tr>
+<td>PRAD</td>
+<td>Prostate Adenocarcoma</td>
+</tr>
+<tr>
+<td>PSO</td>
+<td>Psoriasis</td>
+</tr>
+<tr>
+<td>RB</td>
+<td>Retinoblastoma</td>
+</tr>
+<tr>
+<td>RCC</td>
+<td>Renal cell carcinoma</td>
+</tr>
+<tr>
+<td>RECA</td>
+<td>Renal Cancer</td>
+</tr>
+<tr>
+<td>RHB</td>
+<td>Rhabdomyosarcoma</td>
+</tr>
+<tr>
+<td>SBO</td>
+<td>Spina Bifida Occulta</td>
+</tr>
+<tr>
+<td>SCD</td>
+<td>Sickle Cell Disease</td>
+</tr>
+<tr>
+<td>SCZ</td>
+<td>Schizophrenia</td>
+</tr>
+<tr>
+<td>SS</td>
+<td>Synovial Sarcoma</td>
+</tr>
+<tr>
+<td>ST</td>
+<td>Solid Tumor</td>
+</tr>
+<tr>
+<td>STS</td>
+<td>Soft Tissue Sarcoma</td>
+</tr>
+<tr>
+<td>TALL</td>
+<td>T-cell Acute Lymphoblastic Leukemia</td>
+</tr>
+<tr>
+<td>TCP</td>
+<td>Thrombocytopenia</td>
+</tr>
+<tr>
+<td>TESCA</td>
+<td>Testicular Cancer</td>
+</tr>
+<tr>
+<td>THCA</td>
+<td>Thyroid Carcinoma</td>
+</tr>
+<tr>
+<td>WLM</td>
+<td>Wilms' tumor</td>
 </tr>
 </tbody>
 </table>
@@ -862,7 +1295,7 @@
           </div>
         
         
-        built from <a href="https://github.com/stjude/sjcloud-docs/tree/1ee25e6">1ee25e6</a> using
+        built from <a href="https://github.com/stjude/sjcloud-docs/tree/a90d79e">a90d79e</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
