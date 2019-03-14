@@ -4,9 +4,9 @@
 
 Each data request includes a text file called `SAMPLE_INFO.txt` that provides a number of file level properties (sample identifiers, clinical attributes, etc).
 
-### Required Tags
+### Standard Metadata
 
-Below are the set of tags which are required for every file in St. Jude Cloud.
+Below are the set of tags which are required for every file in St. Jude Cloud. Below are the set of tags which *may* exist for any given file in St. Jude Cloud. All optional metadata will have `sj_` prepended to their tag name.
 
 | Property        | Description                                                                            |
 | --------------- | -------------------------------------------------------------------------------------- |
@@ -17,13 +17,6 @@ Below are the set of tags which are required for every file in St. Jude Cloud.
 | sequencing_type | Whether the file was generated from Whole Genome (WGS), Whole Exome (WES), or RNA-Seq. |
 | file_type       | One of the [file types](../../guides/data/types-of-data) available in St. Jude Cloud   |
 | description     | Optional field that may contain additional file information.                           |
-
-### Optional Tags
-
-Below are the set of tags which *may* exist for any given file in St. Jude Cloud. All optional metadata will have `sj_` prepended to their tag name.
-
-| Property             | Description                                                                                                                                                                                                                                                                        |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | sj_diseases          | Short disease identifier assigned at the time of genomic sequencing. Note that this diagnosis may be refined after undergoing genomic testing. When including diagnosis in your analysis, we recommend you use `attr_diagnosis`, which is the most up to date value for diagnosis. |
 | sj_datasets          | If present, the datasets in the data browser which this file is associated with.                                                                                                                                                                                                   |
 | sj_pmid_accessions   | If the file was associated with a paper, the related [Pubmed][pubmed] accession number.                                                                                                                                                                                            |
