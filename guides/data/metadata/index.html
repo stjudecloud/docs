@@ -322,9 +322,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#metadata-specification" title="Metadata Specification" class="md-nav__link">
+    Metadata Specification
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-metadata" title="Standard Metadata" class="md-nav__link">
+    Standard Metadata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clinical-and-phenotypic-information" title="Clinical and Phenotypic Information" class="md-nav__link">
+    Clinical and Phenotypic Information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#short-disease-code-mapping" title="Short Disease Code Mapping" class="md-nav__link">
     Short Disease Code Mapping
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -737,9 +764,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#metadata-specification" title="Metadata Specification" class="md-nav__link">
+    Metadata Specification
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-metadata" title="Standard Metadata" class="md-nav__link">
+    Standard Metadata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clinical-and-phenotypic-information" title="Clinical and Phenotypic Information" class="md-nav__link">
+    Clinical and Phenotypic Information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#short-disease-code-mapping" title="Short Disease Code Mapping" class="md-nav__link">
     Short Disease Code Mapping
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -763,7 +817,10 @@
                 
                 
                 <h1 id="metadata">Metadata</h1>
-<p>Each data request includes a text file called <code class="codehilite">SAMPLE_INFO.txt</code> that provides a number of file level properties (sample identifiers, clinical attributes, etc). The following is a list of properties provided.</p>
+<h2 id="metadata-specification">Metadata Specification</h2>
+<p>Each data request includes a text file called <code class="codehilite">SAMPLE_INFO.txt</code> that provides a number of file level properties (sample identifiers, clinical attributes, etc).</p>
+<h3 id="standard-metadata">Standard Metadata</h3>
+<p>Below are the set of tags which <em>may</em> exist for any given file in St. Jude Cloud. All optional metadata will have <code class="codehilite">sj_</code> prepended to their tag name.</p>
 <table>
 <thead>
 <tr>
@@ -794,7 +851,7 @@
 </tr>
 <tr>
 <td>file_type</td>
-<td>One of <a href="../../../guides/data/types-of-data#bam-files">BAM</a>, <a href="../../../guides/data/types-of-data#cnv-files">CNV</a>, <a href="../../../guides/data/types-of-data#gvcf-files">gVCF</a>, <a href="../../data/types-of-data#somatic-vcf-files">Somatic_VCF</a></td>
+<td>One of the <a href="../../../guides/data/types-of-data">file types</a> available in St. Jude Cloud</td>
 </tr>
 <tr>
 <td>description</td>
@@ -817,26 +874,6 @@
 <td>If the file was associated with a paper, the related <a href="https://www.ebi.ac.uk/ega/home">EGA</a> accession number.</td>
 </tr>
 <tr>
-<td>attr_age_at_diagnosis</td>
-<td>Age at first diagnosis (normalized as a decimal value).</td>
-</tr>
-<tr>
-<td>attr_diagnosis</td>
-<td>Primary diagnosis at the time of sample submission to St. Jude Cloud as reported by the physician.</td>
-</tr>
-<tr>
-<td>attr_ethnicity</td>
-<td>Self-reported ethnicity according to the <a href="https://www.census.gov/mso/www/training/pdf/race-ethnicity-onepager.pdf">US Census Bureau classifications</a>.</td>
-</tr>
-<tr>
-<td>attr_race</td>
-<td>Self-reported race according to the <a href="https://www.census.gov/mso/www/training/pdf/race-ethnicity-onepager.pdf">US Census Bureau classifications</a>.</td>
-</tr>
-<tr>
-<td>attr_sex</td>
-<td>Self-reported sex.</td>
-</tr>
-<tr>
 <td>sj_dataset_accession</td>
 <td>If present, the permanent accession number assigned in St. Jude Cloud.</td>
 </tr>
@@ -846,8 +883,40 @@
 </tr>
 </tbody>
 </table>
+<h3 id="clinical-and-phenotypic-information">Clinical and Phenotypic Information</h3>
+<p>Also included is a set of phenotypic information queried from the physician or research team's records at the time of sample submission to St. Jude Cloud. These are all considered to be <em>optional</em>, as the level of information gathered for each sample varies. If empty, the physician or research team did not indicate a value for the field. All basic clinical or phenotypic information will have <code class="codehilite">attr_</code> prepended to their tag name.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>attr_age_at_diagnosis</td>
+<td>Age at first diagnosis. This field is normalized as a decimal value. If empty, the physician or research team did not indicate a value for this field.</td>
+</tr>
+<tr>
+<td>attr_diagnosis</td>
+<td>Primary diagnosis.</td>
+</tr>
+<tr>
+<td>attr_ethnicity</td>
+<td>Self-reported ethnicity. Values are normalized according to the <a href="https://www.census.gov/mso/www/training/pdf/race-ethnicity-onepager.pdf">US Census Bureau classifications</a>.</td>
+</tr>
+<tr>
+<td>attr_race</td>
+<td>Self-reported race. Values are normalized according to the <a href="https://www.census.gov/mso/www/training/pdf/race-ethnicity-onepager.pdf">US Census Bureau classifications</a>.</td>
+</tr>
+<tr>
+<td>attr_sex</td>
+<td>Self-reported sex.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="short-disease-code-mapping">Short Disease Code Mapping</h3>
-<p>Embedded in both the filename and the <code class="codehilite">SAMPLE_INFO.txt</code> file that comes with your data request will be a list of short diagnosis codes (<code class="codehilite">sj_diseases</code>). These short codes were assigned at the time that the sample was sent for sequencing, and they are not necessarily the final diagnosis (for instance, the diagnosis is often refined as the sample undergoes genomic testing). Below, we include a table of short disease code to long disease name mappings so you can interpret what these abbreviations mean.</p>
+<p>Embedded in both the filename and the <code class="codehilite">SAMPLE_INFO.txt</code> file that comes with your data request will be a list of short diagnosis codes (<code class="codehilite">sj_diseases</code>). These short codes were assigned at the time that the sample was sent for sequencing, and they are not necessarily the final diagnosis (<code class="codehilite">attr_diagnosis</code>). For instance, the diagnosis is often refined as the sample undergoes genomic testing. Below, we include a table of short disease code to long disease name mappings so you can interpret what these abbreviations mean.</p>
 <table>
 <thead>
 <tr>
@@ -1295,7 +1364,7 @@
           </div>
         
         
-        built from <a href="https://github.com/stjude/sjcloud-docs/tree/a90d79e">a90d79e</a> using
+        built from <a href="https://github.com/stjude/sjcloud-docs/tree/051623e">051623e</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
