@@ -6,7 +6,7 @@ Each data request includes a text file called `SAMPLE_INFO.txt` that provides a 
 
 ### Standard Metadata
 
-Below are the set of tags which are required for every file in St. Jude Cloud. Below are the set of tags which *may* exist for any given file in St. Jude Cloud. All optional metadata will have `sj_` prepended to their tag name.
+ Below are the set of tags which *may* exist for any given file in St. Jude Cloud. All optional metadata will have `sj_` prepended to their tag name.
 
 | Property        | Description                                                                            |
 | --------------- | -------------------------------------------------------------------------------------- |
