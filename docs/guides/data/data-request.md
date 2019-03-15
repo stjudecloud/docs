@@ -2,15 +2,15 @@
 
 !!! note "Summary"
 
-    1. Data in St. Jude Cloud is grouped into different data access units (DAUs) which usually correspond to large-scale sequencing initiatives at St. Jude. 
-    2. Individuals can apply for access to DAUs on a case-by-case basis for a specific amount of time (usually 1 year).
-    3. Access to data in a given DAU is assessed by the corresponding data access committee (DAC) who assess a variety of factors to grant access.
-    4. There are a number of terms of use and restrictions outlined in the [data access agreement](https://platform.stjude.cloud/access_form). Everyone who will be working with the data must read and understand these terms.
+    1. Data in St. Jude Cloud is grouped into different [Data Access Units (DAUs)](../../guides/glossary/data-access-unit) which usually correspond to large-scale sequencing initiatives at St. Jude. 
+    2. Individuals can [apply for access](../../guides/glossary/data-access-agreement) to DAUs on a case-by-case basis for a specific amount of time (usually 1 year).
+    3. Access to data in a given DAU is assessed by the corresponding [Data Access Committee](../../guides/glossary/data-access-committee) who reviews a variety of factors to grant access.
+    4. There are a number of terms of use and restrictions outlined in the [data access agreement](https://platform.stjude.cloud/access_form). Everyone who will be working with the data must understand and agree to these terms.
 
 Creating a data request is the premier way to access raw St. Jude next 
 generation sequencing data in the cloud. You can get a **free** copy of 
-the data in a secure cloud environment powered by Microsoft Azure and 
-DNAnexus, or you can elect to download the data to your local computing 
+the data in a secure cloud environment powered by [Microsoft Azure](https://azure.microsoft.com/en-us/) and 
+[DNAnexus](https://www.dnanexus.com/), or you can elect to download the data to your local computing 
 environment.
 
 !!! note
@@ -19,44 +19,81 @@ environment.
     on your data access agreement. We recommend that you work with the data
     in the cloud if it's feasible; the data provided by St. Jude is free, the compute charges are reasonable, and working in the cloud helps to eliminate the long, error-prone downloading process. Porting your tools to be run in the cloud is easy, as well. We recommend you follow [this guide](../../guides/data/run-your-tools) to get started.
 
+## Selecting Data
+
+There are two ways to make your data selection. You can peruse our raw genomic data by diagnosis, publication, or dataset using our [Data Browser](https://platform.stjude.cloud/requests/diseases), a tabular view with a number of filtering options. Or you can select samples associated with specific diagnoses, gene expression, or gene mutations while exploring curated data from the donut and bubble charts on the [Pediatric Cancer portal (PeCan)](https://pecan.stjude.cloud/) homepage.
+
+
+### Selecting Data in the Data Browser
+
+Go to the Data Browser [here](https://platform.stjude.cloud/requests/diseases), or navigate there from the St. Jude Cloud home page by clicking Access Data and then Explore Data.
+
+From the Data Browser, you can view samples grouped by diagnosis, publication, or [dataset](../../guides/glossary/data-access-unit) by toggling the tabs above the table. 
+
+You can further refine your data selection by using the search bar above the table or the filers for sequencing type, sample type, file type, and tissue type on the left side bar. Note that fitlering is dynamic, so as you make selections the table will update to show all of the files we have that match your selections.
+
+Watch the video below for a tour of our Data Browser. 
+
+    ![](../../images/guides/data/data-browser-tour.gif)
+
+
+
+### Selecting Data via PeCan
+
+From the PeCan homepage, click on the Help link (an icon in the tool bar if you are logged out or a link in the drop down menu under your user name if you are logged in) for a guide to interpreting the donut and bubble chart visualizations.
+
+Using these visualizations along with ProteinPaint, you can:
+
+-Add samples to your cart by diagnosis.
+
+<video controls="controls" width="640" height="400">
+    <source src="https://pecan.stjude.cloud/assets/video/pecan-cart-by-disease.mp4" type="video/mp4">
+</video>
+
+-Add samples to your cart by gene mutation.
+
+<video controls="controls" width="640" height="400">
+    <source src="https://pecan.stjude.cloud/assets/video/pecan-cart-by-gene-mutation.mp4" type="video/mp4">
+</video>
+
+-Add samples to your cart by gene expression.
+
+<video controls="controls" width="640" height="400" class="anything">
+    <source src="https://pecan.stjude.cloud/assets/video/pecan-cart-by-gene-expression.mp4" type="video/mp4">
+</video>
+
+Clicking *Submit to SJCloud* from the PeCan checkout window will land you back in the Data Browser with your checked out data selected.
+
 ## Requesting Data
 
-### Navigate to the Data Browser
+Once you have made your selections, click the red *Request Data* button at the bottom of the table. 
 
-Navigate to the data browser by clicking Access Data and Explore
-Data. If you would like to view the requests you have already made, you
-can do so under Manage Data.
+!!! warning
+    You must have created an account and be logged in to make a data request. If you have not yet created an account or you are not logged in, the red *Request Data* button will say *Log In*.
 
-![](../../images/guides/data/request-data-1.gif)
+On the Request Data page fill out your name, institution, and project name. Give your data request a project name that makes sense to you as this will be the name of the DNAnexus project to which the data will be vended. Click the green *Get Data Now* button.
 
-### Select Your Data
-Next, select the cohort you are interested in requesting. You can
-browse our data by disease, publication, dataset, or
-you can use Pecan, our Pediatric Cancer portal, to find samples
-associated with specific genes, or mutations. 
+    ![](../../images/guides/data/request-data-new-1.gif)
 
+This will direct you to the [Manage Data](https://platform.stjude.cloud/requests/manage) page where you can see the status of the data request you just made as well as that of any previous data requests.
 
-![](../../images/guides/data/request-data-2.gif)
-
-### Select Your Files
-Once you have selected the cohort you would like to study, you can chose what
-type of files you would like to receive. This step is dynamic, and shows
-you all of the file types we have available for the dataset you are
-interested in.
-
-![](../../images/guides/data/request-data-3.gif)
-
-### Submit Your Request
+### Data Access Approval
 
 If you are requesting access to a dataset you have not already been approved for, 
 you will see a section called Controlled Data. Under this section, there is a bulleted list
 that indicates the Data Access Units you need to request access to through our data
 access agreement. Please use this list to fill in the Datasets section of the Data Request
 Form as shown in the figure below. For more information on filling out this guide,
-see [Filling out the DAA](#filling-out-the-daa).
+see [Filling out the DAA](../../guides/forms/how-to-fill-out-DAA).
 
-![](../../images/guides/data/request-data-6.gif)
+    ![](../../images/guides/data/request-data-new-2.gif)
 
 Now, you have successfully submitted your data request. Your request
-will be sent to the respective data access committees for evaluation.
-You should expect to hear from us within a week or two on average. 
+will be sent to the respective [Data Access Committee(s)](../../guides/glossary/data-access-committee) for evaluation.
+You should expect to hear from us within a week or two on average.
+
+### Viewing your Data
+
+Once your request to access data is approved, the data will be vended to your DNAnexus account in a project with the project name that you entered on the Request Data page.
+
+ 
