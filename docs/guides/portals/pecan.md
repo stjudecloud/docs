@@ -2,7 +2,7 @@
 PeCan provides interactive visualizations of pediatric cancer mutations across various projects at St. Jude Children's Research Hospital and its collaborating institutions.
 
 ## Homepage 
-The [PeCan homepage](https://pecan.stjude.cloud/home) contains two main visualizations that work with each other to give a high level overview of the data being presented (SJ Cloud's [PCGP](../../guides/glossary/data-access-unit#pediatric-cancer-genome-project (pcgp)) dataset along with curated datasets from other instiutions such as [TARGET](https://ocg.cancer.gov/programs/target), [dkfz](https://www.dkfz.de/en/index.html), and others).
+The [PeCan homepage](https://pecan.stjude.cloud/home) contains two main visualizations that work with each other to give a high level overview of the data being presented (SJ Cloud's [PCGP](/docs/guides/glossary/data-access-unit#pediatric-cancer-genome-project (pcgp)) dataset along with curated datasets from other instiutions such as [TARGET](https://ocg.cancer.gov/programs/target), [dkfz](https://www.dkfz.de/en/index.html), and others).
 
 
 ### Donut Chart
@@ -12,7 +12,7 @@ The donut chart (shown below) gives an at-a-glance disease distribution and dise
 
 You can hover over the various donut slices to glance at the number (and %) of samples being represented by that disease. The diseases are categorized in two three main root categories: 1) HM -Hematopoietic Malignancies, 2) BT -Brain Tumor, 3) ST -Solid Tumor.
 
-[Click here](../../guides/data/metadata#short-disease-code-mapping) for a full mapping of disease codes.
+[Click here](/docs/guides/data/metadata#short-disease-code-mapping) for a full mapping of disease codes.
 
 ### Bubble Chart
 Any slice (at any level) of the donut chart can be clicked on to select it, and reveal a bubble chart of related genes. 
@@ -77,4 +77,4 @@ The list below summarizes all origins of mutations used by ProteinPaint.
 [Here](https://pecan.stjude.cloud/studies) you can explore recently published, interactive visualizations that have been created in ProteinPaint.
 
 ## PeCan Pie
-PeCan Pie documentation can be found [here](../../guides/tools/pecan-pie).
+PeCan Pie documentation can be found [here](/docs/guides/tools/pecan-pie).
