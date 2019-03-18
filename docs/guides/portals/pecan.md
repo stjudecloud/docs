@@ -12,7 +12,7 @@ The donut chart (shown below) gives an at-a-glance disease distribution and dise
 
 You can hover over the various donut slices to glance at the number (and %) of samples being represented by that disease. The diseases are categorized in two three main root categories: 1) HM -Hematopoietic Malignancies, 2) BT -Brain Tumor, 3) ST -Solid Tumor.
 
-[Click here](/docs/guides/data/metadata#short-disease-code-mapping) for a full mapping of disease codes.
+[Click here](../data/metadata#short-disease-code-mapping) for a full mapping of disease codes.
 
 ### Bubble Chart
 Any slice (at any level) of the donut chart can be clicked on to select it, and reveal a bubble chart of related genes. 
