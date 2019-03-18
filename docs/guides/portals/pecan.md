@@ -2,7 +2,7 @@
 PeCan provides interactive visualizations of pediatric cancer mutations across various projects at St. Jude Children's Research Hospital and its collaborating institutions.
 
 ## Homepage 
-The [PeCan homepage](https://pecan.stjude.cloud/home) contains two main visualizations that work with each other to give a high level overview of the data being presented (SJ Cloud's [PCGP](/docs/guides/glossary/data-access-unit#pediatric-cancer-genome-project-(pcgp)) dataset along with curated datasets from other instiutions such as [TARGET](https://ocg.cancer.gov/programs/target), [dkfz](https://www.dkfz.de/en/index.html), and others).
+The [PeCan homepage](https://pecan.stjude.cloud/home) contains two main visualizations that work with each other to give a high level overview of the data being presented (SJ Cloud's [PCGP](../glossary/data-access-unit#pediatric-cancer-genome-project-(pcgp)) dataset along with curated datasets from other instiutions such as [TARGET](https://ocg.cancer.gov/programs/target), [dkfz](https://www.dkfz.de/en/index.html), and others).
 
 
 ### Donut Chart
