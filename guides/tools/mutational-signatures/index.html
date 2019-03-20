@@ -39,7 +39,7 @@
     
     
       
-        <title>Mutational Spectrum - St. Jude Cloud Documentation</title>
+        <title>Mutational Signatures - St. Jude Cloud Documentation</title>
       
     
     
@@ -121,7 +121,7 @@
                 St. Jude Cloud Documentation
               </span>
               <span class="md-header-nav__topic">
-                Mutational Spectrum
+                Mutational Signatures
               </span>
             
           
@@ -458,11 +458,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Mutational Spectrum
+        Mutational Signatures
       </label>
     
-    <a href="./" title="Mutational Spectrum" class="md-nav__link md-nav__link--active">
-      Mutational Spectrum
+    <a href="./" title="Mutational Signatures" class="md-nav__link md-nav__link--active">
+      Mutational Signatures
     </a>
     
       
@@ -875,10 +875,10 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/stjude/sjcloud-docs/edit/master/docs/guides/tools/mutational-spectrum.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/stjude/sjcloud-docs/edit/master/docs/guides/tools/mutational-signatures.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Mutational Spectrum</h1>
+                  <h1>Mutational Signatures</h1>
                 
                 <table>
 <thead>
@@ -902,12 +902,12 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Mutational Spectrum</strong> finds and quantifies COSMIC mutational signatures
+<p><strong>Mutational Signatures</strong> finds and quantifies COSMIC mutational signatures
 across samples. This is done by finding the optimal non-negative linear
 combination of mutation signatures to reconstruct a mutation matrix. It
 builds the initial mutation matrix from multiple single-sample VCFs and, by
 default, fits it to <a href="https://cancer.sanger.ac.uk/cosmic/signatures">mutational signatures from COSMIC</a>.</p>
-<p>Mutational Spectrum supports both hg19 (GRCh37) and hg38 (GRCh38).</p>
+<p>Mutational Signatures supports both hg19 (GRCh37) and hg38 (GRCh38).</p>
 <h2 id="overview">Overview</h2>
 <h3 id="inputs">Inputs</h3>
 
@@ -955,7 +955,7 @@ default, fits it to <a href="https://cancer.sanger.ac.uk/cosmic/signatures">muta
 <td><a href="#output-prefix">Output prefix</a></td>
 <td>String</td>
 <td>Prefix to append to output filenames [optional]</td>
-<td>mutspec</td>
+<td>mtsg</td>
 </tr>
 <tr>
 <td><a href="#disabled-vcf-column">Disabled VCF column</a></td>
@@ -995,7 +995,7 @@ default, fits it to <a href="https://cancer.sanger.ac.uk/cosmic/signatures">muta
 </table>
 <h3 id="process">Process</h3>
 
-<p>Mutational Spectrum runs four steps using subcommands of <a href="https://github.com/stjude/mutspec">mutspec</a>.</p>
+<p>Mutational Signatures runs four steps using subcommands of <a href="https://github.com/stjude/mtsg">mtsg</a>.</p>
 <ol>
 <li>Split VCFs (single or multi-sample) to multiple single-sample VCFs.</li>
 <li>If not given, generate a sample sheet from the directory of single-sample
@@ -1005,12 +1005,12 @@ default, fits it to <a href="https://cancer.sanger.ac.uk/cosmic/signatures">muta
 <li>Create a visualization file using the fitted signatures.</li>
 </ol>
 <h2 id="getting-started">Getting started</h2>
-<p>After logging in, click the "Start" button on the <a href="https://platform.stjude.cloud/tools/mutational_spectrum">Mutational Spectrum tool
+<p>After logging in, click the "Start" button on the <a href="https://platform.stjude.cloud/tools/mutational_signatures">Mutational Signatures tool
 page</a>. This creates a new DNAnexus project and imports the tool.</p>
 <p>With subsequent runs, the sidebar shows "Launch Tool", meaning the project with
 the tool already exists. Click "Launch Tool" to start a new analysis.</p>
 <h3 id="input-configuration">Input configuration</h3>
-<p>Mutational Spectrum only requires VCFs as inputs. This can be a single
+<p>Mutational Signatures only requires VCFs as inputs. This can be a single
 multi-sample VCF, multiple single-sample VCFs, or a combination of both. All
 other inputs are optional.</p>
 <p>Input files can be uploaded via the <a href="../../data/data-transfer-app/">data transfer application</a> or <a href="../../data/command-line/">command
@@ -1053,8 +1053,8 @@ samples, typically a disease abbreviation or tissue of origin.</p>
 
 <p><em>Output prefix</em> is the prefix to append to the output filenames. By default,
 if a single input VCF is given, its basename is used as the output prefix. If
-multiple input VCFs are given, a default "mutspec" prefix is used. This
-behavior can be overridden by a user-defined prefix.</p>
+multiple input VCFs are given, a default "mtsg" prefix is used. This behavior
+can be overridden by a user-defined prefix.</p>
 <h5>Example</h5>
 
 <table>
@@ -1073,8 +1073,8 @@ behavior can be overridden by a user-defined prefix.</p>
 </tr>
 <tr>
 <td>[<code class="codehilite">SJOS013_D.vcf</code>, <code class="codehilite">SJRHB007_D.vcf</code>]</td>
-<td>mutspec</td>
-<td><code class="codehilite">mutspec.signatures.txt</code></td>
+<td>mtsg</td>
+<td><code class="codehilite">mtsg.signatures.txt</code></td>
 </tr>
 </tbody>
 </table>
@@ -1122,9 +1122,9 @@ VCF column</em> to <code class="codehilite">1</code>.</p>
 </tbody>
 </table>
 <h2 id="uploading-data">Uploading data</h2>
-<p>Mutational Spectrum requires at least one VCF and an optional sample sheet to
-be uploaded. These files can be uploaded via the <a href="../../data/data-transfer-app/">data transfer application</a>
-or <a href="../../data/command-line/">command line</a>.</p>
+<p>Mutational Signatures requires at least one VCF and an optional sample sheet
+to be uploaded. These files can be uploaded via the <a href="../../data/data-transfer-app/">data transfer
+application</a> or <a href="../../data/command-line/">command line</a>.</p>
 <h2 id="running-the-tool">Running the tool</h2>
 <div class="admonition todo">
 <p class="admonition-title">Todo</p>
@@ -1134,7 +1134,7 @@ or <a href="../../data/command-line/">command line</a>.</p>
 <p class="admonition-title">Todo</p>
 </div>
 <h2 id="analysis-of-results">Analysis of results</h2>
-<p>Upon a successful run of Mutational Spectrum, three files are saved to the
+<p>Upon a successful run of Mutational Signatures, three files are saved to the
 results directory: raw signature contributions, a visualization file, and a
 sample sheet.</p>
 <h3 id="interpreting-results">Interpreting results</h3>
@@ -1258,7 +1258,7 @@ of the input.</p>
           </div>
         
         
-        built from <a href="https://github.com/stjude/sjcloud-docs/tree/051623e">051623e</a> using
+        built from <a href="https://github.com/stjude/sjcloud-docs/tree/f4e1b34">f4e1b34</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
