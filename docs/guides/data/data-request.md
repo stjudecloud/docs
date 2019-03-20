@@ -15,7 +15,7 @@ environment.
 
 !!! note
     If you would like to download the data to local storage, there are
-    extra steps you'll need to follow such as getting additional signatures
+    extra steps you'll need to follow such as [getting additional signatures](../../guides/forms/how-to-fill-out-daa#data-download-permission)
     on your data access agreement. We recommend that you work with the data
     in the cloud if it's feasible; the data provided by St. Jude is free, the compute charges are reasonable, and working in the cloud helps to eliminate the long, error-prone downloading process. Porting your tools to be run in the cloud is easy, as well. We recommend you follow [this guide](../../guides/data/run-your-tools) to get started.
 
@@ -30,9 +30,11 @@ Go to the Data Browser [here](https://platform.stjude.cloud/requests/diseases), 
 
 From the Data Browser, you can view samples grouped by diagnosis, publication, or [dataset](../../guides/glossary/data-access-unit) by toggling the tabs above the table. 
 
-You can further refine your data selection by using the search bar above the table or the filers for sequencing type, sample type, file type, and tissue type on the left side bar. Note that fitlering is dynamic, so as you make selections the table will update to show all of the files we have that match your selections.
+You can further refine your data selection by using the search bar under the tabs or the filers for sequencing type, sample type, file type, and tissue type on the left side bar. Note that fitlering is dynamic, so as you make selections the table will update to show all of the files we have that match your search or filters. Filters reset when you move from tab to tab.
 
-Watch the video below for a tour of our Data Browser. 
+The summary panel above the filters in the left side bar shows statics about the data currently displayed in the table. This panel updates as you change what data is displayed by switching tabs, searching, filtering, or making selections.
+
+Watch the video below for a tour of our Data Browser.
 
     ![](../../images/guides/data/data-browser-tour.gif)
 
@@ -40,23 +42,23 @@ Watch the video below for a tour of our Data Browser.
 
 ### Selecting Data via PeCan
 
-From the PeCan homepage, click on the Help link (an icon in the tool bar if you are logged out or a link in the drop down menu under your user name if you are logged in) for a guide to interpreting the donut and bubble chart visualizations.
+Go to the [PeCan homepage](https://pecan.stjude.cloud/). A guide to interpreting the donut and bubble chart visualizations on the homepage can be found [here](../../guides/portals/pecan).
 
 Using these visualizations along with ProteinPaint, you can:
 
--Add samples to your cart by diagnosis.
+1. Add samples to your cart by diagnosis.
 
 <video controls="controls" width="640" height="400">
     <source src="https://pecan.stjude.cloud/assets/video/pecan-cart-by-disease.mp4" type="video/mp4">
 </video>
 
--Add samples to your cart by gene mutation.
+2. Add samples to your cart by gene mutation.
 
 <video controls="controls" width="640" height="400">
     <source src="https://pecan.stjude.cloud/assets/video/pecan-cart-by-gene-mutation.mp4" type="video/mp4">
 </video>
 
--Add samples to your cart by gene expression.
+3. Add samples to your cart by gene expression.
 
 <video controls="controls" width="640" height="400" class="anything">
     <source src="https://pecan.stjude.cloud/assets/video/pecan-cart-by-gene-expression.mp4" type="video/mp4">
@@ -71,25 +73,22 @@ Once you have made your selections, click the red *Request Data* button at the b
 !!! warning
     You must have created an account and be logged in to make a data request. If you have not yet created an account or you are not logged in, the red *Request Data* button will say *Log In*.
 
-On the Request Data page fill out your name, institution, and project name. Give your data request a project name that makes sense to you as this will be the name of the DNAnexus project to which the data will be vended. Click the green *Get Data Now* button.
+On the Request Data page fill out your name, institution, and project name. Give your data request a project name that makes sense to you as this will be the name of the DNAnexus project to which the data will be vended. 
 
-    ![](../../images/guides/data/request-data-new-1.gif)
+    ![](../../images/guides/data/request-data-new-1.png)
 
-This will direct you to the [Manage Data](https://platform.stjude.cloud/requests/manage) page where you can see the status of the data request you just made as well as that of any previous data requests.
 
-### Data Access Approval
+!!! note "Data Access Approval"
+    If you are requesting access to a dataset you have not yet been approved for, 
+    you will see a section called Controlled Data. Under this section, there is a bulleted list indicating the dataset(s) or [Data Access Unit(s)](../../guides/glossary/data-access-unit) you must request access to by submitting a form called the [Data Access Agreememnt (DAA)](../../guides/glossary/data-access-agreement). Please use this list to fill in the Datasets section of the DAA. For more information on filling out this form, see [Filling out the DAA](../../guides/forms/how-to-fill-out-DAA).
 
-If you are requesting access to a dataset you have not already been approved for, 
-you will see a section called Controlled Data. Under this section, there is a bulleted list
-that indicates the Data Access Units you need to request access to through our data
-access agreement. Please use this list to fill in the Datasets section of the Data Request
-Form as shown in the figure below. For more information on filling out this guide,
-see [Filling out the DAA](../../guides/forms/how-to-fill-out-DAA).
+Finally, click the green *Get Data Now* button.
 
-    ![](../../images/guides/data/request-data-new-2.gif)
+This will direct you to the [Manage Data](https://platform.stjude.cloud/requests/manage) page where you can see the status of the data request you just made as well the history of any of your previous data requests. 
 
-Now, you have successfully submitted your data request. Your request
-will be sent to the respective [Data Access Committee(s)](../../guides/glossary/data-access-committee) for evaluation.
+    ![](../../images/guides/data/request-data-new-2.png)
+
+If you already have access to the data that you requested, your data will be vended to you immediately. Otherwise, once your completed data access agreement has been submitted, your request will be sent to the respective [Data Access Committee(s)](../../guides/glossary/data-access-committee) for evaluation.
 You should expect to hear from us within a week or two on average.
 
 ### Viewing your Data
