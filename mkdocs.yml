@@ -4,6 +4,7 @@ theme:
   custom_dir: 'mkdocs-material/material'
   logo: 'images/stjude-logo-child-white.png'
   font: false
+  favicon: 'assets/images/favicon.ico'
 
 extra_css:
   - css/extra.css
