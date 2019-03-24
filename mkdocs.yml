@@ -25,8 +25,8 @@ pages:
       - 'ChIP-Seq Peak Calling': 'guides/tools/chipseq.md'
       - 'Rapid RNA-Seq Fusion Detection': 'guides/tools/rapid-rnaseq.md'
       - 'WARDEN Differential Expression Analysis': 'guides/tools/warden.md'
-      - 'cis-X': 'guides/tools/cis-x.md'
       - 'Mutational Signatures': 'guides/tools/mutational-signatures.md'
+      - '': 'guides/tools/cis-x.md'
   - 'Visualization Guides':
       - 'BigWig Viewer': 'guides/visualizations/bigwig-viewer.md'
       - 'Fusion Viewer': 'guides/visualizations/fusion-viewer.md'
