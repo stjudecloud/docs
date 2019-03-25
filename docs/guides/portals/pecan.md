@@ -78,3 +78,4 @@ The list below summarizes all origins of mutations used by ProteinPaint.
 
 ## PeCan Pie
 PeCan Pie documentation can be found [here](../tools/pecan-pie).
+

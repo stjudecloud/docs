@@ -4,13 +4,13 @@
 | **Publication**       | N/A                                        |
 | **Technical Support** | [Contact Us](https://stjude.cloud/contact) |
 
-**Mutational Spectrum** finds and quantifies COSMIC mutational signatures
+**Mutational Signatures** finds and quantifies COSMIC mutational signatures
 across samples. This is done by finding the optimal non-negative linear
 combination of mutation signatures to reconstruct a mutation matrix. It
 builds the initial mutation matrix from multiple single-sample VCFs and, by
 default, fits it to [mutational signatures from COSMIC].
 
-Mutational Spectrum supports both hg19 (GRCh37) and hg38 (GRCh38).
+Mutational Signatures supports both hg19 (GRCh37) and hg38 (GRCh38).
 
 [mutational signatures from COSMIC]: https://cancer.sanger.ac.uk/cosmic/signatures
 
@@ -25,7 +25,7 @@ Mutational Spectrum supports both hg19 (GRCh37) and hg38 (GRCh38).
 | Genome build                   | String         | Genome build used as reference. Can be either "GRCh37" or "GRCh38". [default: "GRCh38"]      | GRCh38                |
 | Minimum mutation burden        | Integer        | Minimum number of somatic SNVs a sample must have to be considered for analysis [default: 9] | 15                    |
 | Minimum signature contribution | Integer        | Minimum number of mutations attributable to a single signature [default: 9]                  | 100                   |
-| [Output prefix]                | String         | Prefix to append to output filenames [optional]                                              | mutspec               |
+| [Output prefix]                | String         | Prefix to append to output filenames [optional]                                              | mtsg                  |
 | [Disabled VCF column]          | Integer        | VCF column (starting from sample names, zero-based) to ignore when reading VCFS [optional]   | 1                     |
 
 [Sample sheet]: #sample-sheet
@@ -46,7 +46,7 @@ Mutational Spectrum supports both hg19 (GRCh37) and hg38 (GRCh38).
 
 <h3 id="process">Process</h3>
 
-Mutational Spectrum runs four steps using subcommands of [mutspec].
+Mutational Signatures runs four steps using subcommands of [mtsg].
 
   1. Split VCFs (single or multi-sample) to multiple single-sample VCFs.
   2. If not given, generate a sample sheet from the directory of single-sample
@@ -57,17 +57,17 @@ Mutational Spectrum runs four steps using subcommands of [mutspec].
 
 ## Getting started
 
-After logging in, click the "Start" button on the [Mutational Spectrum tool
+After logging in, click the "Start" button on the [Mutational Signatures tool
 page]. This creates a new DNAnexus project and imports the tool.
 
 With subsequent runs, the sidebar shows "Launch Tool", meaning the project with
 the tool already exists. Click "Launch Tool" to start a new analysis.
 
-[Mutational Spectrum tool page]: https://platform.stjude.cloud/tools/mutational_spectrum
+[Mutational Signatures tool page]: https://platform.stjude.cloud/tools/mutational_signatures
 
 ### Input configuration
 
-Mutational Spectrum only requires VCFs as inputs. This can be a single
+Mutational Signatures only requires VCFs as inputs. This can be a single
 multi-sample VCF, multiple single-sample VCFs, or a combination of both. All
 other inputs are optional.
 
@@ -98,15 +98,15 @@ If not given, a sample sheet will be generated automatically.
 
 _Output prefix_ is the prefix to append to the output filenames. By default,
 if a single input VCF is given, its basename is used as the output prefix. If
-multiple input VCFs are given, a default "mutspec" prefix is used. This
-behavior can be overridden by a user-defined prefix.
+multiple input VCFs are given, a default "mtsg" prefix is used. This behavior
+can be overridden by a user-defined prefix.
 
 <h5>Example</h5>
 
 | VCF(s)                              | Prefix                  | Output filename for raw signatures       |
 |-------------------------------------|-------------------------|------------------------------------------|
 | [`pcgp.b38.refseq.goodbad.vcf`]     | pcgp.b38.refseq.goodbad | `pcgp.b38.refseq.goodbad.signatures.txt` |
-| [`SJOS013_D.vcf`, `SJRHB007_D.vcf`] | mutspec                 | `mutspec.signatures.txt`                 |
+| [`SJOS013_D.vcf`, `SJRHB007_D.vcf`] | mtsg                    | `mtsg.signatures.txt`                    |
 
 
 <h4 id="disabled-vcf-column">Disabled VCF column</h4>
@@ -128,9 +128,9 @@ VCF column_ to `1`.
 
 ## Uploading data
 
-Mutational Spectrum requires at least one VCF and an optional sample sheet to
-be uploaded. These files can be uploaded via the [data transfer application]
-or [command line].
+Mutational Signatures requires at least one VCF and an optional sample sheet
+to be uploaded. These files can be uploaded via the [data transfer
+application] or [command line].
 
 [data transfer application]: ../data/data-transfer-app.md
 [command line]: ../data/command-line.md
@@ -145,7 +145,7 @@ or [command line].
 
 ## Analysis of results
 
-Upon a successful run of Mutational Spectrum, three files are saved to the
+Upon a successful run of Mutational Signatures, three files are saved to the
 results directory: raw signature contributions, a visualization file, and a
 sample sheet.
 
@@ -192,4 +192,4 @@ of the input.
 
 See also the description for the input [sample sheet](#sample-sheet).
 
-[mutspec]: https://github.com/stjude/mutspec
+[mtsg]: https://github.com/stjude/mtsg
