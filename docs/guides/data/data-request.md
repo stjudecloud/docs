@@ -28,16 +28,15 @@ There are two ways to make your data selection. You can peruse our raw genomic d
 
 Go to the Data Browser [here](https://platform.stjude.cloud/requests/diseases), or navigate there from the St. Jude Cloud home page by clicking Access Data and then Explore Data.
 
-From the Data Browser, you can view samples grouped by diagnosis, publication, or [dataset](../../guides/glossary/data-access-unit) by toggling the tabs above the table. 
+From the Data Browser, you can view samples grouped by Diagnosis, Publication, or [Dataset](../../guides/glossary/data-access-unit) by toggling the tabs above the table. Use the search bar to look for something specific. Search the publication tab by title or pubmed ID.
 
-You can further refine your data selection by using the search bar under the tabs or the filers for sequencing type, sample type, file type, and tissue type on the left side bar. Note that fitlering is dynamic, so as you make selections the table will update to show all of the files we have that match your search or filters. Filters reset when you move from tab to tab.
+![](../../images/guides/data/data-browser-tour-1.gif)
 
-The summary panel above the filters in the left side bar shows statics about the data currently displayed in the table. This panel updates as you change what data is displayed by switching tabs, searching, filtering, or making selections.
+You can further refine your data selection by using the filers for sequencing type, sample type, file type, and tissue type on the left side bar. Filers of the same type apply using “OR” logic. Filters of different types apply using “AND” logic. Note that filtering is dynamic, so as you make selections the table will update to show all of the files we have that match your filters. Filters reset when you move from tab to tab.
 
-Watch the video below for a tour of our Data Browser.
+![](../../images/guides/data/data-browser-tour-2.gif)
 
-    ![](../../images/guides/data/data-browser-tour.gif)
-
+The summary panel above the filters in the left side bar shows statistcs about the data currently displayed in the table. As you can see in gifs above, this panel updates as you change what data is displayed by switching tabs, searching, filtering, or making selections.
 
 
 ### Selecting Data via PeCan
@@ -70,29 +69,33 @@ Clicking *Submit to SJCloud* from the PeCan checkout window will land you back i
 
 Once you have made your selections, click the red *Request Data* button at the bottom of the table. 
 
+![](../../images/guides/data/data-browser-tour-3.gif)
+
 !!! warning
     You must have created an account and be logged in to make a data request. If you have not yet created an account or you are not logged in, the red *Request Data* button will say *Log In*.
 
-On the Request Data page fill out your name, institution, and project name. Give your data request a project name that makes sense to you as this will be the name of the DNAnexus project to which the data will be vended. 
+On the Request Data page fill out your name, institution, and project name. Give your data request a project name that makes sense to you as this will be the name of the DNAnexus project to which the data will be vended.
 
-    ![](../../images/guides/data/request-data-new-1.png)
+![](../../images/guides/data/request-data-new-1.png)
 
 
 !!! note "Data Access Approval"
     If you are requesting access to a dataset you have not yet been approved for, 
-    you will see a section called Controlled Data. Under this section, there is a bulleted list indicating the dataset(s) or [Data Access Unit(s)](../../guides/glossary/data-access-unit) you must request access to by submitting a form called the [Data Access Agreememnt (DAA)](../../guides/glossary/data-access-agreement). Please use this list to fill in the Datasets section of the DAA. For more information on filling out this form, see [Filling out the DAA](../../guides/forms/how-to-fill-out-DAA).
+    you will see a section called **Controlled Access Data**. Under this section, there is a bulleted list indicating the dataset(s) or [Data Access Unit(s)](../../guides/glossary/data-access-unit) you must request access to by submitting a form called the [Data Access Agreememnt (DAA)](../../guides/glossary/data-access-agreement). Please use this list to fill in the Datasets section of the DAA. For more information on filling out this form, see [Filling out the DAA](../../guides/forms/how-to-fill-out-DAA). **You must upload a DAA to continue.**
 
-Finally, click the green *Get Data Now* button.
+Finally, click the green button. If you already have access to the data you selected in the browser, the button will read *Get Data Now*. If you are submitting a DAA and requesting data access, the button will read *Submit Request*.
 
 This will direct you to the [Manage Data](https://platform.stjude.cloud/requests/manage) page where you can see the status of the data request you just made as well the history of any of your previous data requests. 
 
-    ![](../../images/guides/data/request-data-new-2.png)
+![](../../images/guides/data/request-data-new-2.png)
 
-If you already have access to the data that you requested, your data will be vended to you immediately. Otherwise, once your completed data access agreement has been submitted, your request will be sent to the respective [Data Access Committee(s)](../../guides/glossary/data-access-committee) for evaluation.
-You should expect to hear from us within a week or two on average.
+If you already have access to the data that you requested, your data will be vended to you immediately. Otherwise, the status of your request will say *Pending* while your request is routed to the respective [Data Access Committee(s)](../../guides/glossary/data-access-committee) for evaluation. Request approval typically takes a week or two if your data access agreement is correctly and completely filled out. You will receive automated emails from notifications@stjude.cloud at the time that your request is recieved and once your request is approved.
+
+!!! note 
+    If you receive an email from us that your DAA is incomplete, you may edit your DAA and upload the revised copy using the 'Add a Form' button the on Manage Data page. 
 
 ### Viewing your Data
 
-Once your request to access data is approved, the data will be vended to your DNAnexus account in a project with the project name that you entered on the Request Data page.
+Once your request to access data is approved, the data will be vended to your DNAnexus account in a project with the project name that you entered on the Request Data page. You can follow the link in the email from notifications@stjude.cloud to view your DNAnexus project page.
 
  
