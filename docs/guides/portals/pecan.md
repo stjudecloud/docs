@@ -77,4 +77,5 @@ The list below summarizes all origins of mutations used by ProteinPaint.
 [Here](https://pecan.stjude.cloud/studies) you can explore recently published, interactive visualizations that have been created in ProteinPaint.
 
 ## PeCan Pie
-PeCan Pie documentation can be found [here](/docs/guides/tools/pecan-pie).
+PeCan Pie documentation can be found [here](../tools/pecan-pie).
+
