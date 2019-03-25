@@ -69,7 +69,7 @@ Clicking *Submit to SJCloud* from the PeCan checkout window will land you back i
 
 Once you have made your selections, click the red *Request Data* button at the bottom of the table. 
 
-![](../../images/guides/data/data-browser-tour-3.gif)
+![](../../images/guides/data/request-data-new-4.gif)
 
 !!! warning
     You must have created an account and be logged in to make a data request. If you have not yet created an account or you are not logged in, the red *Request Data* button will say *Log In*.

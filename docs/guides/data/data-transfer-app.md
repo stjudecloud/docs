@@ -35,7 +35,7 @@ As you will see in the tour, you have the option to *Show All Files* in your DNA
 
 
 ## Uploading Files
-Select the DNAnexus project on the left that you would like to uplaod files to. Select **Upload** in the app's Upload/Download panel. To select files you may either (1) Click in the upload space to select files in your Finder window or (2) highlight all the files you want to upload, then drag and drop them into the app's upload space. Review the list of files to upload, and click **Upload**.
+Select the DNAnexus project on the left that you would like to upload files to. Select **Upload** in the app's Upload/Download panel. To select files you may either (1) Click in the upload space to select files in your Finder window or (2) highlight all the files you want to upload, then drag and drop them into the app's upload space. Review the list of files to upload, and click **Upload**.
 
 (insert gif)
 
@@ -45,6 +45,6 @@ Select the DNAnexus project on the left that you would like to download files fr
 
 (insert gif)
 
-Note that the Data Transfer App does not recognize any directory structure you may have within your DNAnexus projects. It is simply of dump of all the files in each project. In Download mode, switching between projects with large numbers of files may be slow.
+Note that the Data Transfer App does not recognize any directory structure you may have within your DNAnexus projects. It is simply a dump of all the files in each project. In Download mode, switching between projects with large numbers of files may be slow.
 
 
