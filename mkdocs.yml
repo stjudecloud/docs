@@ -31,6 +31,7 @@ pages:
       - 'Fusion Viewer': 'guides/visualizations/fusion-viewer.md'
   - 'Portal Guides':
       - 'Sickle Cell Genomics Portal' : 'guides/portals/sickle-cell.md'
+      - 'PeCan Data Portal' : 'guides/portals/pecan.md'
   - 'Forms':
       - 'Filling out a Data Access Agreement': 'guides/forms/how-to-fill-out-DAA.md' 
       - 'Filling out an Extension Addendum': 'guides/forms/how-to-fill-out-Extension.md'
