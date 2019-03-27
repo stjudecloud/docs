@@ -31,7 +31,7 @@ Before moving on, we encourage you to take the **TOUR** by clicking on the green
 As you will see in the tour, you have the option to *Show All Files* in your DNAnexus projects. It is a good idea to always have this option enabled.
 
 !!! Warning
-    You can increase the conurrency (# of files that will upload or download at the same time) but this will affect the performance of the app. For example changing the concurrecny from 1 to 100 will move files at roughly 100th of the speed.
+    You can increase the concurrency (# of files that will upload or download at the same time) but this will affect the performance of the app. For example changing the concurrency from 1 to 100 will move files at roughly 100th of the speed.
 
 
 ## Uploading Files

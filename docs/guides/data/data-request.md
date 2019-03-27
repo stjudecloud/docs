@@ -32,11 +32,11 @@ From the Data Browser, you can view samples grouped by Diagnosis, Publication, o
 
 ![](../../images/guides/data/data-browser-tour-1.gif)
 
-You can further refine your data selection by using the filers for sequencing type, sample type, file type, and tissue type on the left side bar. Filers of the same type apply using “OR” logic. Filters of different types apply using “AND” logic. Note that filtering is dynamic, so as you make selections the table will update to show all of the files we have that match your filters. Filters reset when you move from tab to tab.
+You can further refine your data selection by using the filters for sequencing type, sample type, file type, and tissue type on the left side bar. Filters of the same type apply using “OR” logic. Filters of different types apply using “AND” logic. Note that filtering is dynamic, so as you make selections the table will update to show all of the files we have that match your filters. Filters reset when you move from tab to tab.
 
 ![](../../images/guides/data/data-browser-tour-2.gif)
 
-The summary panel above the filters in the left side bar shows statistcs about the data currently displayed in the table. As you can see in gifs above, this panel updates as you change what data is displayed by switching tabs, searching, filtering, or making selections.
+The summary panel above the filters in the left side bar shows statistics about the data currently displayed in the table. As you can see in gifs above, this panel updates as you change what data is displayed by switching tabs, searching, filtering, or making selections.
 
 
 ### Selecting Data via PeCan
