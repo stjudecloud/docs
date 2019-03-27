@@ -1,7 +1,7 @@
 |                       |                                            |
 |-----------------------|--------------------------------------------|
-| **Authors**           | Scott Newman, Michael Macias               |
-| **Publication**       | N/A                                        |
+| **Authors**           | [Original algorithm](http://bioconductor.org/packages/release/bioc/html/MutationalPatterns.html) by Blokzijl et al.(2019); tools ported and additional code by Scott Newman and Michael Macias               |
+| **Publication**       | [Blokzijl et al.(2019)](https://www.ncbi.nlm.nih.gov/pubmed/29695279)                                       |
 | **Technical Support** | [Contact Us](https://stjude.cloud/contact) |
 
 **Mutational Signatures** finds and quantifies COSMIC mutational signatures
