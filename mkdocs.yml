@@ -4,6 +4,7 @@ theme:
   custom_dir: 'mkdocs-material/material'
   logo: 'images/stjude-logo-child-white.png'
   font: false
+  favicon: 'assets/images/favicon.ico'
 
 extra_css:
   - css/extra.css
@@ -24,8 +25,8 @@ pages:
       - 'ChIP-Seq Peak Calling': 'guides/tools/chipseq.md'
       - 'Rapid RNA-Seq Fusion Detection': 'guides/tools/rapid-rnaseq.md'
       - 'WARDEN Differential Expression Analysis': 'guides/tools/warden.md'
-      - 'cis-X': 'guides/tools/cis-x.md'
       - 'Mutational Signatures': 'guides/tools/mutational-signatures.md'
+      - '': 'guides/tools/cis-x.md'
   - 'Visualization Guides':
       - 'BigWig Viewer': 'guides/visualizations/bigwig-viewer.md'
       - 'Fusion Viewer': 'guides/visualizations/fusion-viewer.md'
@@ -48,7 +49,7 @@ repo_url: 'https://github.com/stjude/sjcloud-docs'
 edit_uri: 'edit/master/docs'
 
 # Copyright
-copyright: "Copyright &copy; 2017 - 2018 St. Jude Children's Research Hospital"
+copyright: "Copyright &copy; 2017 - 2019 St. Jude Children's Research Hospital"
 
 
 # Extensions
