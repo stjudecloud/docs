@@ -1,18 +1,22 @@
-|                       |                                            |
-|-----------------------|--------------------------------------------|
-| **Authors**           | Scott Newman, Michael Macias               |
-| **Publication**       | N/A                                        |
-| **Technical Support** | [Contact Us](https://stjude.cloud/contact) |
+|                         |                                            |
+|-------------------------|--------------------------------------------|
+| **Authors**             | Scott Newman, Michael Macias               |
+| **Publication**         | Mutational Signatures employs MutationalPatterns: "[MutationalPatterns: comprehensive genome-wide analysis of mutational processes.][10.1186/s13073-018-0539-0]" |
+| **Technical Support**   | [Contact Us](https://stjude.cloud/contact) |
 
 **Mutational Signatures** finds and quantifies COSMIC mutational signatures
 across samples. This is done by finding the optimal non-negative linear
 combination of mutation signatures to reconstruct a mutation matrix. It
 builds the initial mutation matrix from multiple single-sample VCFs and, by
-default, fits it to [mutational signatures from COSMIC].
+default, fits it to [mutational signatures from COSMIC]. Mutational
+Signatures employs [MutationalPatterns] ([Blokzijl, et al. (2018)]) to
+achieve this.
 
 Mutational Signatures supports both hg19 (GRCh37) and hg38 (GRCh38).
 
 [mutational signatures from COSMIC]: https://cancer.sanger.ac.uk/cosmic/signatures
+[MutationalPatterns]: https://bioconductor.org/packages/release/bioc/html/MutationalPatterns.html
+[Blokzijl, et al. (2018)]: #references
 
 ## Overview
 
@@ -215,5 +219,14 @@ R: Error in mut_matrix(vcf_list = filtered_vcfs, ref_genome = ref_genome) :
 R:   Error in .Call2("solve_user_SEW", refwidths, start, end, width, translate.negative.coord,  :
 R:   solving row 526: 'allow.nonnarrowing' is FALSE and the supplied start (79440206) is > refwidth + 1
 ```
+
+## References
+
+  * Blokzijl F, Janssen R, van Boxtel R, Cuppen E (2018). "MutationalPatterns:
+    comprehensive genome-wide analysis of mutational processes." _Genome
+    Medicine_. doi: [10.1186/s13073-018-0539-0]. PMID: [29695279].
+
+[10.1186/s13073-018-0539-0]: https://doi.org/10.1186/s13073-018-0539-0
+[29695279]: https://www.ncbi.nlm.nih.gov/pubmed/29695279
 
 [mtsg]: https://github.com/stjude/mtsg
