@@ -20,7 +20,7 @@ Mutational Signatures supports both hg19 (GRCh37) and hg38 (GRCh38).
 
 | Name                           | Type           | Description                                                                                  | Example               |
 |--------------------------------|----------------|----------------------------------------------------------------------------------------------|-----------------------|
-| VCF(s)                         | Array of files | List of VCF inputs. Can be single-sample or multi-sample and uncompressed or gzipped.        | [`*.vcf`, `*.vcf.gz`] |
+| [VCF(s)]                       | Array of files | List of VCF inputs. Can be single-sample or multi-sample and uncompressed or gzipped.        | [`*.vcf`, `*.vcf.gz`] |
 | [Sample sheet]                 | File           | Tab-delimited file (no headers) with sample ID and tag pairs [optional]                      | `*.txt`               |
 | Genome build                   | String         | Genome build used as reference. Can be either "GRCh37" or "GRCh38". [default: "GRCh38"]      | GRCh38                |
 | Minimum mutation burden        | Integer        | Minimum number of somatic SNVs a sample must have to be considered for analysis [default: 9] | 15                    |
@@ -28,6 +28,7 @@ Mutational Signatures supports both hg19 (GRCh37) and hg38 (GRCh38).
 | [Output prefix]                | String         | Prefix to append to output filenames [optional]                                              | mtsg                  |
 | [Disabled VCF column]          | Integer        | VCF column (starting from sample names, zero-based) to ignore when reading VCFS [optional]   | 1                     |
 
+[VCF(s)]: #vcfs
 [Sample sheet]: #sample-sheet
 [Output prefix]: #output-prefix
 [Disabled VCF column]: #disabled-vcf-column
@@ -76,6 +77,17 @@ line].
 
 [data transfer application]: ../data/data-transfer-app.md
 [command line]: ../data/command-line.md
+
+<h4 id="vcfs">VCF(s)</h4>
+
+_VCF(s)_ is a list of VCF inputs. The inputs can be single-sample or
+multi-sample and uncompressed or gzipped. Sample names are taken from the VCF
+header.
+
+When using multi-sample VCFs, empty cells/absent variant calls must be
+denoted with `.:.`.
+
+gVCFs are not supported.
 
 <h4 id="sample-sheet">Sample sheet</h4>
 
