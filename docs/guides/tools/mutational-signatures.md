@@ -147,14 +147,6 @@ application] or [command line].
 [data transfer application]: ../data/data-transfer-app.md
 [command line]: ../data/command-line.md
 
-## Running the tool
-
-!!! todo
-
-## Monitoring run progress
-
-!!! todo
-
 ## Analysis of results
 
 Upon a successful run of Mutational Signatures, three files are saved to the
