@@ -496,20 +496,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-the-tool" title="Running the tool" class="md-nav__link">
-    Running the tool
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#monitoring-run-progress" title="Monitoring run progress" class="md-nav__link">
-    Monitoring run progress
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#analysis-of-results" title="Analysis of results" class="md-nav__link">
     Analysis of results
   </a>
@@ -526,6 +512,20 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" title="Troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
   
 </li>
       
@@ -838,20 +838,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-the-tool" title="Running the tool" class="md-nav__link">
-    Running the tool
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#monitoring-run-progress" title="Monitoring run progress" class="md-nav__link">
-    Monitoring run progress
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#analysis-of-results" title="Analysis of results" class="md-nav__link">
     Analysis of results
   </a>
@@ -868,6 +854,20 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" title="Troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
   
 </li>
       
@@ -906,7 +906,7 @@
 </tr>
 <tr>
 <td><strong>Publication</strong></td>
-<td>N/A</td>
+<td>Mutational Signatures employs MutationalPatterns: "<a href="https://doi.org/10.1186/s13073-018-0539-0">MutationalPatterns: comprehensive genome-wide analysis of mutational processes.</a>"</td>
 </tr>
 <tr>
 <td><strong>Technical Support</strong></td>
@@ -918,7 +918,9 @@
 across samples. This is done by finding the optimal non-negative linear
 combination of mutation signatures to reconstruct a mutation matrix. It
 builds the initial mutation matrix from multiple single-sample VCFs and, by
-default, fits it to <a href="https://cancer.sanger.ac.uk/cosmic/signatures">mutational signatures from COSMIC</a>.</p>
+default, fits it to <a href="https://cancer.sanger.ac.uk/cosmic/signatures">mutational signatures from COSMIC</a>. Mutational
+Signatures employs <a href="https://bioconductor.org/packages/release/bioc/html/MutationalPatterns.html">MutationalPatterns</a> (<a href="#references">Blokzijl, et al. (2018)</a>) to
+achieve this.</p>
 <p>Mutational Signatures supports both hg19 (GRCh37) and hg38 (GRCh38).</p>
 <h2 id="overview">Overview</h2>
 <h3 id="inputs">Inputs</h3>
@@ -934,7 +936,7 @@ default, fits it to <a href="https://cancer.sanger.ac.uk/cosmic/signatures">muta
 </thead>
 <tbody>
 <tr>
-<td>VCF(s)</td>
+<td><a href="#vcfs">VCF(s)</a></td>
 <td>Array of files</td>
 <td>List of VCF inputs. Can be single-sample or multi-sample and uncompressed or gzipped.</td>
 <td>[<code class="codehilite">*.vcf</code>, <code class="codehilite">*.vcf.gz</code>]</td>
@@ -1027,6 +1029,14 @@ multi-sample VCF, multiple single-sample VCFs, or a combination of both. All
 other inputs are optional.</p>
 <p>Input files can be uploaded via the <a href="../../data/data-transfer-app/">data transfer application</a> or <a href="../../data/command-line/">command
 line</a>.</p>
+<h4 id="vcfs">VCF(s)</h4>
+
+<p><em>VCF(s)</em> is a list of VCF inputs. The inputs can be single-sample or
+multi-sample and uncompressed or gzipped. Sample names are taken from the VCF
+header.</p>
+<p>When using multi-sample VCFs, empty cells/absent variant calls must be
+denoted with <code class="codehilite">.:.</code>.</p>
+<p>gVCFs are not supported.</p>
 <h4 id="sample-sheet">Sample sheet</h4>
 
 <p><em>Sample sheet</em> is a tab-delimited file (no headers) with two columns: the
@@ -1137,14 +1147,6 @@ VCF column</em> to <code class="codehilite">1</code>.</p>
 <p>Mutational Signatures requires at least one VCF and an optional sample sheet
 to be uploaded. These files can be uploaded via the <a href="../../data/data-transfer-app/">data transfer
 application</a> or <a href="../../data/command-line/">command line</a>.</p>
-<h2 id="running-the-tool">Running the tool</h2>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-</div>
-<h2 id="monitoring-run-progress">Monitoring run progress</h2>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-</div>
 <h2 id="analysis-of-results">Analysis of results</h2>
 <p>Upon a successful run of Mutational Signatures, three files are saved to the
 results directory: raw signature contributions, a visualization file, and a
@@ -1209,6 +1211,29 @@ edited, and the job is resubmitted with it as an input.</p>
 <p>When a sample sheet is given as an input, the sample sheet output is a copy
 of the input.</p>
 <p>See also the description for the input <a href="#sample-sheet">sample sheet</a>.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>To troubleshoot a failed run of Mutational Signatures, check the job log for
+details.</p>
+<h3 id="wrong-genome-build">Wrong genome build</h3>
+
+<p>If the "Building mutation matrix" step during <code class="codehilite">run</code> fails, it is likely that
+the selected genome build does not match the input VCF(s). Rerun the job with
+a matching genome build.</p>
+<h4>Example</h4>
+
+<div class="codehilite"><pre><span></span><span class="n">R</span><span class="o">:</span> <span class="n">Building</span> <span class="n">mutation</span> <span class="n">matrix</span> <span class="n">from</span> <span class="mi">6</span> <span class="n">VCFs</span>
+<span class="n">R</span><span class="o">:</span> <span class="n">Error</span> <span class="k">in</span> <span class="n">mut_matrix</span><span class="o">(</span><span class="n">vcf_list</span> <span class="o">=</span> <span class="n">filtered_vcfs</span><span class="o">,</span> <span class="n">ref_genome</span> <span class="o">=</span> <span class="n">ref_genome</span><span class="o">)</span> <span class="o">:</span>
+<span class="n">R</span><span class="o">:</span>   <span class="n">Error</span> <span class="k">in</span> <span class="o">.</span><span class="na">Call2</span><span class="o">(</span><span class="s2">&quot;solve_user_SEW&quot;</span><span class="o">,</span> <span class="n">refwidths</span><span class="o">,</span> <span class="n">start</span><span class="o">,</span> <span class="n">end</span><span class="o">,</span> <span class="n">width</span><span class="o">,</span> <span class="n">translate</span><span class="o">.</span><span class="na">negative</span><span class="o">.</span><span class="na">coord</span><span class="o">,</span>  <span class="o">:</span>
+<span class="n">R</span><span class="o">:</span>   <span class="n">solving</span> <span class="n">row</span> <span class="mi">526</span><span class="o">:</span> <span class="s1">&#39;allow.nonnarrowing&#39;</span> <span class="k">is</span> <span class="n">FALSE</span> <span class="n">and</span> <span class="n">the</span> <span class="n">supplied</span> <span class="n">start</span> <span class="o">(</span><span class="mi">79440206</span><span class="o">)</span> <span class="k">is</span> <span class="o">&gt;</span> <span class="n">refwidth</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+
+
+<h2 id="references">References</h2>
+<ul>
+<li>Blokzijl F, Janssen R, van Boxtel R, Cuppen E (2018). "MutationalPatterns:
+    comprehensive genome-wide analysis of mutational processes." <em>Genome
+    Medicine</em>. doi: <a href="https://doi.org/10.1186/s13073-018-0539-0">10.1186/s13073-018-0539-0</a>. PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29695279">29695279</a>.</li>
+</ul>
                 
                   
                 
@@ -1270,7 +1295,7 @@ of the input.</p>
           </div>
         
         
-        built from <a href="https://github.com/stjude/sjcloud-docs/tree/8df72b2">8df72b2</a> using
+        built from <a href="https://github.com/stjude/sjcloud-docs/tree/b1ae374">b1ae374</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
