@@ -1,18 +1,22 @@
-|                       |                                            |
-|-----------------------|--------------------------------------------|
-| **Authors**           | Scott Newman, Michael Macias               |
-| **Publication**       | N/A                                        |
-| **Technical Support** | [Contact Us](https://stjude.cloud/contact) |
+|                         |                                            |
+|-------------------------|--------------------------------------------|
+| **Authors**             | Scott Newman, Michael Macias               |
+| **Publication**         | Mutational Signatures employs MutationalPatterns: "[MutationalPatterns: comprehensive genome-wide analysis of mutational processes.][10.1186/s13073-018-0539-0]" |
+| **Technical Support**   | [Contact Us](https://stjude.cloud/contact) |
 
 **Mutational Signatures** finds and quantifies COSMIC mutational signatures
 across samples. This is done by finding the optimal non-negative linear
 combination of mutation signatures to reconstruct a mutation matrix. It
 builds the initial mutation matrix from multiple single-sample VCFs and, by
-default, fits it to [mutational signatures from COSMIC].
+default, fits it to [mutational signatures from COSMIC]. Mutational
+Signatures employs [MutationalPatterns] ([Blokzijl, et al. (2018)]) to
+achieve this.
 
 Mutational Signatures supports both hg19 (GRCh37) and hg38 (GRCh38).
 
 [mutational signatures from COSMIC]: https://cancer.sanger.ac.uk/cosmic/signatures
+[MutationalPatterns]: https://bioconductor.org/packages/release/bioc/html/MutationalPatterns.html
+[Blokzijl, et al. (2018)]: #references
 
 ## Overview
 
@@ -20,7 +24,7 @@ Mutational Signatures supports both hg19 (GRCh37) and hg38 (GRCh38).
 
 | Name                           | Type           | Description                                                                                  | Example               |
 |--------------------------------|----------------|----------------------------------------------------------------------------------------------|-----------------------|
-| VCF(s)                         | Array of files | List of VCF inputs. Can be single-sample or multi-sample and uncompressed or gzipped.        | [`*.vcf`, `*.vcf.gz`] |
+| [VCF(s)]                       | Array of files | List of VCF inputs. Can be single-sample or multi-sample and uncompressed or gzipped.        | [`*.vcf`, `*.vcf.gz`] |
 | [Sample sheet]                 | File           | Tab-delimited file (no headers) with sample ID and tag pairs [optional]                      | `*.txt`               |
 | Genome build                   | String         | Genome build used as reference. Can be either "GRCh37" or "GRCh38". [default: "GRCh38"]      | GRCh38                |
 | Minimum mutation burden        | Integer        | Minimum number of somatic SNVs a sample must have to be considered for analysis [default: 9] | 15                    |
@@ -28,6 +32,7 @@ Mutational Signatures supports both hg19 (GRCh37) and hg38 (GRCh38).
 | [Output prefix]                | String         | Prefix to append to output filenames [optional]                                              | mtsg                  |
 | [Disabled VCF column]          | Integer        | VCF column (starting from sample names, zero-based) to ignore when reading VCFS [optional]   | 1                     |
 
+[VCF(s)]: #vcfs
 [Sample sheet]: #sample-sheet
 [Output prefix]: #output-prefix
 [Disabled VCF column]: #disabled-vcf-column
@@ -76,6 +81,17 @@ line].
 
 [data transfer application]: ../data/data-transfer-app.md
 [command line]: ../data/command-line.md
+
+<h4 id="vcfs">VCF(s)</h4>
+
+_VCF(s)_ is a list of VCF inputs. The inputs can be single-sample or
+multi-sample and uncompressed or gzipped. Sample names are taken from the VCF
+header.
+
+When using multi-sample VCFs, empty cells/absent variant calls must be
+denoted with `.:.`.
+
+gVCFs are not supported.
 
 <h4 id="sample-sheet">Sample sheet</h4>
 
@@ -135,14 +151,6 @@ application] or [command line].
 [data transfer application]: ../data/data-transfer-app.md
 [command line]: ../data/command-line.md
 
-## Running the tool
-
-!!! todo
-
-## Monitoring run progress
-
-!!! todo
-
 ## Analysis of results
 
 Upon a successful run of Mutational Signatures, three files are saved to the
@@ -191,5 +199,34 @@ When a sample sheet is given as an input, the sample sheet output is a copy
 of the input.
 
 See also the description for the input [sample sheet](#sample-sheet).
+
+## Troubleshooting
+
+To troubleshoot a failed run of Mutational Signatures, check the job log for
+details.
+
+<h3 id="wrong-genome-build">Wrong genome build</h3>
+
+If the "Building mutation matrix" step during `run` fails, it is likely that
+the selected genome build does not match the input VCF(s). Rerun the job with
+a matching genome build.
+
+<h4>Example</h4>
+
+```
+R: Building mutation matrix from 6 VCFs
+R: Error in mut_matrix(vcf_list = filtered_vcfs, ref_genome = ref_genome) :
+R:   Error in .Call2("solve_user_SEW", refwidths, start, end, width, translate.negative.coord,  :
+R:   solving row 526: 'allow.nonnarrowing' is FALSE and the supplied start (79440206) is > refwidth + 1
+```
+
+## References
+
+  * Blokzijl F, Janssen R, van Boxtel R, Cuppen E (2018). "MutationalPatterns:
+    comprehensive genome-wide analysis of mutational processes." _Genome
+    Medicine_. doi: [10.1186/s13073-018-0539-0]. PMID: [29695279].
+
+[10.1186/s13073-018-0539-0]: https://doi.org/10.1186/s13073-018-0539-0
+[29695279]: https://www.ncbi.nlm.nih.gov/pubmed/29695279
 
 [mtsg]: https://github.com/stjude/mtsg
