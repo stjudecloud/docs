@@ -196,4 +196,24 @@ of the input.
 
 See also the description for the input [sample sheet](#sample-sheet).
 
+## Troubleshooting
+
+To troubleshoot a failed run of Mutational Signatures, check the job log for
+details.
+
+<h3 id="wrong-genome-build">Wrong genome build</h3>
+
+If the "Building mutation matrix" step during `run` fails, it is likely that
+the selected genome build does not match the input VCF(s). Rerun the job with
+a matching genome build.
+
+<h4>Example</h4>
+
+```
+R: Building mutation matrix from 6 VCFs
+R: Error in mut_matrix(vcf_list = filtered_vcfs, ref_genome = ref_genome) :
+R:   Error in .Call2("solve_user_SEW", refwidths, start, end, width, translate.negative.coord,  :
+R:   solving row 526: 'allow.nonnarrowing' is FALSE and the supplied start (79440206) is > refwidth + 1
+```
+
 [mtsg]: https://github.com/stjude/mtsg
