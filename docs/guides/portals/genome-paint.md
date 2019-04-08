@@ -30,19 +30,19 @@ The cohort view shows mutations from all samples over a genomic region, along wi
 
 ![](../../images/guides/portals/genome-paint/dense_expand_toggle.gif)
 
-In Expanded mode (see below) all types of mutations are aligned by samples, one row per sample. Circles represent SV/fusion breakpoints, and x marks represent SNV/indels, all overlaying with CNV/LOH. SNV/indels and breakpoints are always shown on top of CNV and LOH. Text labels can be shown for SV/fusion/SNV/indel, if available.
+In Expanded mode (see below) all types of mutations are shown for each samples, one row per sample. Circles represent SV/fusion breakpoints, and x marks represent SNV/indels, each of which are displayed together with CNV/LOH. SNV/indels and breakpoints are always shown on top of CNV and LOH. Text labels can be shown for SV/fusion/SNV/indel, if available.
 
 ![](../../images/guides/portals/genome-paint/expanded_view.png)
 
 ## Sample View
-The sample view shows mutations for one sample alone, along with any available genomic assay tracks. You can open a sample view from the expanded cohort view by clicking on any type of single mutation and then selecting *Focus*. This brings up a new browser view showing data tracks from this sample in a region surrounding the mutation.
+The sample view shows mutations for one sample alone, along with any available genomic assay tracks. You can open a sample view from the expanded cohort view by clicking on any type of single mutation within the sample, and then selecting *Focus*. This brings up a new browser view showing data tracks from this sample in the region surrounding the mutation.
 
 ![](../../images/guides/portals/genome-paint/sample_view.gif)
 
 On the sample view you can explore expression rank, tumor mutations, structural variants, splice junctions, WES coverage, and RNA-Seq coverage. Customize the display by zooming in/out, hiding and/or rearraging tracks, or editing **CONFIG** options.
 
 ## Matrix View
-The matrix view combines the mutation profiles of multiple genomic regions in one view, in the form of a sample-by-region matrix. Such a matrix can be generated for samples from one cancer type. To open a matrix view, select a disease cohort from the cohort view and then select Matrix view. This organizes the selected cohort tumors with mutations in whatever gene you are viewing into a single-column matrix.
+The matrix view combines the mutation profiles of multiple genomic regions in one view, in the form of a sample-by-region matrix. Such a matrix can be generated for samples from one cancer type. To open a matrix view, select a disease cohort from the cohort view and then select Matrix view. This organizes the selected cohort tumors with mutations in the genomic region you are viewing into a single-column matrix.
 
 ![](../../images/guides/portals/genome-paint/matrix_view-1.gif)
 
@@ -50,7 +50,7 @@ Next, go back to the cohort view and type another gene or region of interest int
 
 ![](../../images/guides/portals/genome-paint/matrix_view-2.gif)
 
-This will add the new gene as a second column in the matrix. You can continue adding columns to this matrix in the same manner.
+This will add the new genomic variant as a second column in the matrix. You can continue adding columns to this matrix in the same manner.
 
 
 !!! note
