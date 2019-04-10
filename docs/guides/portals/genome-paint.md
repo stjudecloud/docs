@@ -30,7 +30,7 @@ The cohort view shows mutations from all samples over a genomic region, along wi
 
 ![](../../images/guides/portals/genome-paint/dense_expand_toggle.gif)
 
-In Expanded mode (see below) all types of mutations are shown for each samples, one row per sample. Circles represent SV/fusion breakpoints, and x marks represent SNV/indels, each of which are displayed together with CNV/LOH. SNV/indels and breakpoints are always shown on top of CNV and LOH. Text labels can be shown for SV/fusion/SNV/indel, if available.
+In Expanded mode (see below) all types of mutations are shown for each sample, one row per sample. Circles represent SV/fusion breakpoints, and x marks represent SNV/indels, each of which are displayed together with CNV/LOH. SNV/indels and breakpoints are always shown on top of CNV and LOH. Text labels can be shown for SV/fusion/SNV/indel, if available.
 
 ![](../../images/guides/portals/genome-paint/expanded_view.png)
 
