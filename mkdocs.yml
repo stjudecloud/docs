@@ -33,6 +33,7 @@ pages:
   - 'Portal Guides':
       - 'Sickle Cell Genomics Portal' : 'guides/portals/sickle-cell.md'
       - 'PeCan Data Portal' : 'guides/portals/pecan.md'
+      - 'Genome Paint' : 'guides/portals/genome-paint.md'
   - 'Forms':
       - 'Filling out a Data Access Agreement': 'guides/forms/how-to-fill-out-DAA.md' 
       - 'Filling out an Extension Addendum': 'guides/forms/how-to-fill-out-Extension.md'
