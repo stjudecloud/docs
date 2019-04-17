@@ -24,7 +24,7 @@ Next, ensure that you have correctly filled out the 5 required sections of the D
     ![](../../images/guides/forms/daa-3.png)
 
 4. **Page 8** Signature and information of Institutional or Administrative Authority.
-    * This individual cannot be the same Principal Investigator that signed above, as this section is to provide a second-party authority of the instituion to ensure that the institution will uphold the terms of this agreement.
+    * This individual cannot be the same Principal Investigator that signed above, as this section is to provide a second-party authority of the institution to ensure that the institution will uphold the terms of this agreement.
 
 
     ![](../../images/guides/forms/daa-4.png)
