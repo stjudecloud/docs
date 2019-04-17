@@ -35,13 +35,13 @@ A. You can find the Terms of Service
 
 **Q. Where can I find the embargo dates?**
 
-**A.** All of our samples are marked with an embargo date. 
+**A.** All of our samples are marked with an embargo date.
 You can find this by looking at the tags for each file or in the
-`SAMPLE_INFO.txt` file that is included with each data request. 
+`SAMPLE_INFO.txt` file that is included with each data request.
 Select a sample and click info to see more.
 
-![](../../images/guides/data/embargo-date-1.png)
-![](../../images/guides/data/embargo-date-2.png)
+![](../images/guides/data/embargo-date-1.png)
+![](../images/guides/data/embargo-date-2.png)
 
 [msgen]: https://azure.microsoft.com/en-us/services/genomics/
 [gvcf-spec]: https://gatkforums.broadinstitute.org/gatk/discussion/11004/gvcf-genomic-variant-call-format
