@@ -60,7 +60,7 @@ If your DAA is incomplete (for example you missed a required signature or neglec
 
 **A.** Although the DAA serves many purposes, the terms included in the data access
 agreement are ultimately in place to protect our patients. We take
-patient security very seriously, and we require that requestors are
+patient security very seriously, and we require that requesters are
 committed to protecting that privacy to the fullest extent.
 
 **Q. Where can I find the latest version of the DAA?**
