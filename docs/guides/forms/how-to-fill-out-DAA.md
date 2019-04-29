@@ -13,25 +13,25 @@ Next, ensure that you have correctly filled out the 5 required sections of the D
 
      ![](../../images/guides/forms/daa-1.png)
 
-2. **Page 6** Signature and information of the Principal Investigator. 
+2. **Page 6** Signature and information of the Principal Investigator.
     * This must be signed by a Principal Investigator or a faculty-level supervisor on the project.
 
     ![](../../images/guides/forms/daa-2.png)
 
-3. **Page 7** Signature and information of all other applicants. 
+3. **Page 7** Signature and information of all other applicants.
     * This should include any person(s) who will have access to this data. They are legally bound to protecting and handling the data properly.
 
     ![](../../images/guides/forms/daa-3.png)
 
-4. **Page 8** Signature and information of Institutional or Administrative Authority. 
-    * This individual cannot be the same Principal Investigator that signed above, as this section is to provide a second-party authority of the instituion to ensure that the institution will uphold the terms of this agreement.
+4. **Page 8** Signature and information of Institutional or Administrative Authority.
+    * This individual cannot be the same Principal Investigator that signed above, as this section is to provide a second-party authority of the institution to ensure that the institution will uphold the terms of this agreement.
 
 
     ![](../../images/guides/forms/daa-4.png)
 
-5. **Page 10** Description of contemplated use of St. Jude data. 
-    * Here, describe your research question and it's biological significance. The Contemplated Use will be evaluated by the [Data Access Committee(s)](../../guides/glossary/data-access-committee) based on their own set of protocols. 
-    * Please [contact us](https://stjude.cloud/contact) if you have any questions regarding the protocols of the approval process. 
+5. **Page 10** Description of contemplated use of St. Jude data.
+    * Here, describe your research question and it's biological significance. The Contemplated Use will be evaluated by the [Data Access Committee(s)](../../guides/glossary/data-access-committee) based on their own set of protocols.
+    * Please [contact us](https://stjude.cloud/contact) if you have any questions regarding the protocols of the approval process.
 
 ### Data Download Permission
 
@@ -60,14 +60,14 @@ If your DAA is incomplete (for example you missed a required signature or neglec
 
 **A.** Although the DAA serves many purposes, the terms included in the data access
 agreement are ultimately in place to protect our patients. We take
-patient security very seriously, and we require that requestors are
+patient security very seriously, and we require that requesters are
 committed to protecting that privacy to the fullest extent.
 
 **Q. Where can I find the latest version of the DAA?**
 
-**A.** We keep [our site](data-request/#submit-your-data-request) up to date with the latest version on the Data Access Agreement for you to download, or you can download a copy
-[here](https://platform.stjude.cloud/access_form). 
+**A.** We keep [our site](../data/data-request/#submit-your-data-request) up to date with the latest version on the Data Access Agreement for you to download, or you can download a copy
+[here](https://platform.stjude.cloud/access_form).
 
 **Q. Where do I submit the DAA??**
 
-**A.** You can submit your Data Access Agreement in the drag and drop box on the last step of submitting your data request. 
+**A.** You can submit your Data Access Agreement in the drag and drop box on the last step of submitting your data request.
