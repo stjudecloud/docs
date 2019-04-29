@@ -40,7 +40,8 @@ XenoCP supports hg19 (GRCh37) and mm9 (MGSCv37).
 
 
 <h3 id="process">Process</h3>
-<img src="../../images/guides/tools/xenocp/xenocp_workflow2.png" width="500">
+
+![](../../images/guides/tools/xenocp/xenocp_workflow2.png)
 
 XenoCP workflow contains the following five steps:
 
