@@ -45,7 +45,7 @@ XenoCP supports hg19 (GRCh37) and mm9 (MGSCv37).
 
 XenoCP workflow contains the following five steps:
 
-  1. Split input human BAM file into given number of small pisces.
+  1. Split input human BAM file into given number of small pieces.
   2. Align mapped reads to mouse reference genome.
   3. Compare human and mouse alignments and identify read identity.
   4. Create lists of contamination reads and set them to unmapped in human BAMs.
@@ -91,15 +91,15 @@ _Output prefix_ is the prefix to append to the output contamination and tie file
 
 <h5>Example</h5>
 
-| Prefix                  | Output filename for raw signatures       |
+| Output Prefix                  | Output filename for raw signatures       |
 |-------------------------|------------------------------------------|
 | xenocp-                 | `xenocp-000.contam.txt`                  |
 | xenocp-                 | `xenocp-000.tie.bam`                     |
 
-<h4 id="disabled-vcf-column">Backet Number</h4>
+<h4 id="disabled-vcf-column">Bucket Number</h4>
 
 Number of small bam pieces that an input bam is split to. This should be less than the number of cores of the instance type. As 
-the default instance type is azure:mem2_ssd1_x16, default backet number is 15.
+the default instance type is azure:mem2_ssd1_x16, default bucket number is 15.
 
 ## Uploading data
 XenoCP requires at least one BAM along with its BAI files
@@ -123,7 +123,7 @@ reference genome with the contamination reads set to unmapped.
 
 <h4 id="contam-list">Contamination list</h4>
 
-Each contamination file is plain txt file with a list of read names cleansed from a BAM piece.
+Each contamination file is a plain txt file with a list of read names cleansed from a BAM piece.
 
 <h4 id="tie-bam">Tie BAM</h4>
 
