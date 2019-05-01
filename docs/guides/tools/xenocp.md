@@ -28,7 +28,7 @@ XenoCP supports hg19 (GRCh37) and mm9 (MGSCv37).
 | Output Extension               | String         | Output file extension [default: bam]                                                         | bam                   |
 | Sort Order                     | String         | Read sort order [default: queryname]                                                         | queryname             |
 
-[Reference DB Prefix]: #Reference-DB-Prefix
+[Reference DB Prefix]: #db-prefix
 
 <h3 id="outputs">Outputs</h3>
 
