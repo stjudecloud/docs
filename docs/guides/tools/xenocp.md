@@ -22,7 +22,7 @@ XenoCP supports hg19 (GRCh37) and mm9 (MGSCv37).
 | [Reference DB Prefix]          | String         | Basename of the input human reference assembly. [required]                                   | MGSCv37.fa            |
 | Suffix Length                  | Integer        | Mate suffix length. [default: 4]                                                             | 4                     |
 | Keep Mates Together            | Boolean        | Whether to keep mates together [default: True]                                               | True                  |
-| Backet Number                  | Integer        | Number of backets [default: 31]                                                              | 15                    |
+| Bucket Number                  | Integer        | Number of buckets [default: 31]                                                              | 15                    |
 | Validation Stringency          | String         | Validation stringency: STRICT, LENIENT, SILENT [default: SILENT]                             | SILENT                |
 | Output Prefix                  | String         | Prefix to append to output filenames [default: xenocp-]                                      | xenocp-               |
 | Output Extension               | String         | Output file extension [default: bam]                                                         | bam                   |
