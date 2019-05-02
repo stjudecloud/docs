@@ -6,19 +6,48 @@
 
 St. Jude Cloud hosts both raw genomic data files and processed results files:
 
-| File Type   | Short Description                                                                            | Details                          |
-| ----------- | -------------------------------------------------------------------------------------------- | -------------------------------- |
-| BAM         | HG38 aligned BAM files produced by [Microsoft Genomics Service][msgen]                       | [Click here](#bam-files)         |
-| gVCF        | [Genomic VCF][gvcf-spec] files produced by [Microsoft Genomics Service][msgen]               | [Click here](#gvcf-files)        |
-| Somatic VCF | Curated list of somatic variants produced by the St. Jude somatic variant analysis pipeline | [Click here](#somatic-vcf-files) |
-| CNV | list of somatic copy number alterations produced by St. Jude CONSERTING pipeline | [Click here](#cnv-files) |
+| File Type   | Short Description                                                                                                 | Details                          |
+| ----------- | ----------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| BAM         | HG38 aligned BAM files produced by [Microsoft Genomics Service][msgen] (DNA-Seq) or STAR 2-pass mapping (RNA-Seq). | [Click here](#bam-files)         |
+| gVCF        | [Genomic VCF][gvcf-spec] files produced by [Microsoft Genomics Service][msgen].                                    | [Click here](#gvcf-files)        |
+| Somatic VCF | Curated list of somatic variants produced by the St. Jude somatic variant analysis pipeline.                       | [Click here](#somatic-vcf-files) |
+| CNV         | list of somatic copy number alterations produced by St. Jude CONSERTING pipeline.                                  | [Click here](#cnv-files)         |
 
 
 #### BAM files
 
-In St. Jude Cloud, we stored aligned sequence reads in the ubiquitous BAM file format. BAM files were produced by the [Microsoft Genomics Service][msgen] aligned to HG38 (GRCh38 no alt analysis set). For more information about how Microsoft Genomics produces BAM files or any other questions regarding data generation, please refer to [the official Microsoft Genomics whitepaper][msgen-whitepaper].
+In St. Jude Cloud, we stored aligned sequence reads in the ubiquitous BAM file format. For more information on SAM/BAM files, please refer to the [SAM/BAM specification][bam-spec]. 
 
-For more information on SAM/BAM files, please refer to the [SAM/BAM specification][bam-spec]. 
+##### Whole Genome and Whole Exome
+Whole Genome Sequence (WGS) and Whole Exome Sequence (WXS) BAM files were produced by the [Microsoft Genomics Service][msgen] aligned to HG38 (GRCh38 no alt analysis set). For more information about how Microsoft Genomics produces BAM files or any other questions regarding data generation, please refer to [the official Microsoft Genomics whitepaper][msgen-whitepaper].
+
+##### RNA-Seq
+
+RNA-Seq BAM files were produced by aligning the sequences to HG38 using `STAR` (v2.5.3a) 2-pass mapping followed by `Picard MarkDuplicates`. Below is the `STAR` command used during alignment. For more information about any of the parameters used, please refer to the [STAR manual][star-manual] for v2.5.3a.
+
+```bash
+    STAR \
+        --runThreadN $NUM_THREADS \
+        --genomeDir $GENOME_DIR \
+        --readFilesIn $READ_FILES \
+        --limitBAMsortRAM $MEMORY_LIMIT \
+        --outFileNamePrefix $OUT_FILE_PREFIX \
+        --outSAMtype BAM SortedByCoordinate \
+        --outSAMstrandField intronMotif \
+        --outSAMattributes NH   HI   AS   nM   NM   MD   XS \
+        --outSAMunmapped Within \
+        --outSAMattrRGline $RGs \
+        --outFilterMultimapNmax 20 \
+        --outFilterMultimapScoreRange 1 \
+        --outFilterScoreMinOverLread 0.66 \
+        --outFilterMatchNminOverLread 0.66 \
+        --outFilterMismatchNmax 10 \
+        --alignIntronMax 500000 \
+        --alignMatesGapMax 1000000 \
+        --alignSJDBoverhangMin 1 \
+        --sjdbScore 2 \
+        --twopassMode Basic
+```
 
 #### gVCF files
 
@@ -42,19 +71,19 @@ For more information on variants for each of the individuals, please refer to th
 
 CNV files contain copy number alteration (CNA) analysis results for paired tumor-normal WGS samples. Files are produced by running paired tumor-normal BAM files through the [CONSERTING][conserting] pipeline which identifies CNA through iterative analysis of (i) local segmentation by read depth within boundaries identified by structural variation (SV) breakpoints followed by (ii) segment merging and local SV analysis. [CREST][crest] was used to identify local SV breakpoints. CNV files contain the following information:
 
-| Field | Description |
-|--------| ------------|
-|chrom | chromosome |
-|loc.start| start of segment|
-|loc.end| end of segment |
-|num.mark| number of windows retained in the segment (gaps and windows with low mappability are excluded)|
-|length.ratio| The ratio between the length of the used windows to the genomic length|
-|seg.mean| The estimated GC corrected difference signal (2 copy gain will have a seg.mean of 1)|
-|GMean| The mean coverage in the germline sample (a value of 1 represents diploid)|
-|DMean| The mean coverage in the tumor sample|
-|LogRatio| Log2 ratio between tumor and normal coverage|
-|Quality score| A empirical score used in merging |
-|SV_Matching| whether the boundary of the segments were supported by SVs (3: both ends supported, 2: right end supported, 1: left end supported, 0: neither end supported)|
+| Field         | Description                                                                                                                                                  |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| chrom         | chromosome                                                                                                                                                   |
+| loc.start     | start of segment                                                                                                                                             |
+| loc.end       | end of segment                                                                                                                                               |
+| num.mark      | number of windows retained in the segment (gaps and windows with low mappability are excluded)                                                               |
+| length.ratio  | The ratio between the length of the used windows to the genomic length                                                                                       |
+| seg.mean      | The estimated GC corrected difference signal (2 copy gain will have a seg.mean of 1)                                                                         |
+| GMean         | The mean coverage in the germline sample (a value of 1 represents diploid)                                                                                   |
+| DMean         | The mean coverage in the tumor sample                                                                                                                        |
+| LogRatio      | Log2 ratio between tumor and normal coverage                                                                                                                 |
+| Quality score | A empirical score used in merging                                                                                                                            |
+| SV_Matching   | whether the boundary of the segments were supported by SVs (3: both ends supported, 2: right end supported, 1: left end supported, 0: neither end supported) |
 
 
 [crest]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3527068/
@@ -71,4 +100,5 @@ CNV files contain copy number alteration (CNA) analysis results for paired tumor
 [gvcf-spec]:https://software.broadinstitute.org/gatk/documentation/article?id=11004
 [gvcf-diff-from-vcf]: https://software.broadinstitute.org/gatk/documentation/article?id=4017
 [bam-spec]: https://samtools.github.io/hts-specs/SAMv1.pdf
+[star-manual]: https://github.com/alexdobin/STAR/blob/7283af27e84839e93ecf7ed6a14c8ff675fdf79c/doc/STARmanual.pdf
 
