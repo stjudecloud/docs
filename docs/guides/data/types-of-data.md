@@ -23,20 +23,20 @@ Whole Genome Sequence (WGS) and Whole Exome Sequence (WXS) BAM files were produc
 
 ##### RNA-Seq
 
-RNA-Seq BAM files were produced by aligning the sequences to HG38 using `STAR` (v2.5.3a) 2-pass mapping followed by `Picard MarkDuplicates`. Below is the `STAR` command used during alignment. For more information about any of the parameters used, please refer to the [STAR manual][star-manual] for v2.5.3a.
+RNA-Seq BAM files are mapped to HG38 + [ERCC Spike In Sequences][ercc] (commonly used for normalization of expression analyses). For alignment, `STAR` v2.5.3a 2-pass mapping followed by `Picard MarkDuplicates`. Below is the `STAR` command used during alignment. For more information about any of the parameters used, please refer to the [STAR manual][star-manual] for v2.5.3a.
 
 ```bash
     STAR \
-        --runThreadN $NUM_THREADS \
-        --genomeDir $GENOME_DIR \
-        --readFilesIn $READ_FILES \
-        --limitBAMsortRAM $MEMORY_LIMIT \
+        --runThreadN $NUM_THREADS \                           # $NUM_THREADS is the number of threads to parallelize the alignment across (generally we use 4).
+        --genomeDir $GENOME_DIR \                             # $GENOME_DIR is a STAR reference directory containing HG38 and ERCC Spike In sequences.
+        --readFilesIn $READ_FILES \                           # $READ_FILES are the input FastQ files to align.
+        --limitBAMsortRAM $MEMORY_LIMIT \                     # $MEMORY_LIMIT is a upper limit on the amount of RAM to use in the alignment.
         --outFileNamePrefix $OUT_FILE_PREFIX \
         --outSAMtype BAM SortedByCoordinate \
         --outSAMstrandField intronMotif \
         --outSAMattributes NH   HI   AS   nM   NM   MD   XS \
         --outSAMunmapped Within \
-        --outSAMattrRGline $RGs \
+        --outSAMattrRGline $RGs \                             # $RGs is the read group information for each FastQ passed in $READ_FILES.
         --outFilterMultimapNmax 20 \
         --outFilterMultimapScoreRange 1 \
         --outFilterScoreMinOverLread 0.66 \
@@ -101,4 +101,4 @@ CNV files contain copy number alteration (CNA) analysis results for paired tumor
 [gvcf-diff-from-vcf]: https://software.broadinstitute.org/gatk/documentation/article?id=4017
 [bam-spec]: https://samtools.github.io/hts-specs/SAMv1.pdf
 [star-manual]: https://github.com/alexdobin/STAR/blob/7283af27e84839e93ecf7ed6a14c8ff675fdf79c/doc/STARmanual.pdf
-
+[ercc]: https://www.thermofisher.com/order/catalog/product/4456740
