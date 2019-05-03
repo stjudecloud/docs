@@ -314,6 +314,26 @@
     BAM files
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whole-genome-and-whole-exome" title="Whole Genome and Whole Exome" class="md-nav__link">
+    Whole Genome and Whole Exome
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rna-seq" title="RNA-Seq" class="md-nav__link">
+    RNA-Seq
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -786,6 +806,26 @@
     BAM files
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whole-genome-and-whole-exome" title="Whole Genome and Whole Exome" class="md-nav__link">
+    Whole Genome and Whole Exome
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rna-seq" title="RNA-Seq" class="md-nav__link">
+    RNA-Seq
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -846,29 +886,56 @@ please <a href="https://stjude.cloud/contact">contact us</a>!</p>
 <tbody>
 <tr>
 <td>BAM</td>
-<td>HG38 aligned BAM files produced by <a href="https://azure.microsoft.com/en-us/services/genomics/">Microsoft Genomics Service</a></td>
+<td>HG38 aligned BAM files produced by <a href="https://azure.microsoft.com/en-us/services/genomics/">Microsoft Genomics Service</a> (DNA-Seq) or STAR 2-pass mapping (RNA-Seq).</td>
 <td><a href="#bam-files">Click here</a></td>
 </tr>
 <tr>
 <td>gVCF</td>
-<td><a href="https://software.broadinstitute.org/gatk/documentation/article?id=11004">Genomic VCF</a> files produced by <a href="https://azure.microsoft.com/en-us/services/genomics/">Microsoft Genomics Service</a></td>
+<td><a href="https://software.broadinstitute.org/gatk/documentation/article?id=11004">Genomic VCF</a> files produced by <a href="https://azure.microsoft.com/en-us/services/genomics/">Microsoft Genomics Service</a>.</td>
 <td><a href="#gvcf-files">Click here</a></td>
 </tr>
 <tr>
 <td>Somatic VCF</td>
-<td>Curated list of somatic variants produced by the St. Jude somatic variant analysis pipeline</td>
+<td>Curated list of somatic variants produced by the St. Jude somatic variant analysis pipeline.</td>
 <td><a href="#somatic-vcf-files">Click here</a></td>
 </tr>
 <tr>
 <td>CNV</td>
-<td>list of somatic copy number alterations produced by St. Jude CONSERTING pipeline</td>
+<td>list of somatic copy number alterations produced by St. Jude CONSERTING pipeline.</td>
 <td><a href="#cnv-files">Click here</a></td>
 </tr>
 </tbody>
 </table>
 <h4 id="bam-files">BAM files</h4>
-<p>In St. Jude Cloud, we stored aligned sequence reads in the ubiquitous BAM file format. BAM files were produced by the <a href="https://azure.microsoft.com/en-us/services/genomics/">Microsoft Genomics Service</a> aligned to HG38 (GRCh38 no alt analysis set). For more information about how Microsoft Genomics produces BAM files or any other questions regarding data generation, please refer to <a href="https://azure.microsoft.com/en-us/resources/accelerate-precision-medicine-with-microsoft-genomics/">the official Microsoft Genomics whitepaper</a>.</p>
-<p>For more information on SAM/BAM files, please refer to the <a href="https://samtools.github.io/hts-specs/SAMv1.pdf">SAM/BAM specification</a>. </p>
+<p>In St. Jude Cloud, we stored aligned sequence reads in the ubiquitous BAM file format. For more information on SAM/BAM files, please refer to the <a href="https://samtools.github.io/hts-specs/SAMv1.pdf">SAM/BAM specification</a>. </p>
+<h5 id="whole-genome-and-whole-exome">Whole Genome and Whole Exome</h5>
+<p>Whole Genome Sequence (WGS) and Whole Exome Sequence (WXS) BAM files were produced by the <a href="https://azure.microsoft.com/en-us/services/genomics/">Microsoft Genomics Service</a> aligned to HG38 (GRCh38 no alt analysis set). For more information about how Microsoft Genomics produces BAM files or any other questions regarding data generation, please refer to <a href="https://azure.microsoft.com/en-us/resources/accelerate-precision-medicine-with-microsoft-genomics/">the official Microsoft Genomics whitepaper</a>.</p>
+<h5 id="rna-seq">RNA-Seq</h5>
+<p>RNA-Seq BAM files are mapped to HG38 + <a href="https://www.thermofisher.com/order/catalog/product/4456740">ERCC Spike In Sequences</a> (commonly used for normalization of expression analyses). For alignment, <code class="codehilite">STAR</code> v2.5.3a 2-pass mapping followed by <code class="codehilite">Picard MarkDuplicates</code>. Below is the <code class="codehilite">STAR</code> command used during alignment. For more information about any of the parameters used, please refer to the <a href="https://github.com/alexdobin/STAR/blob/7283af27e84839e93ecf7ed6a14c8ff675fdf79c/doc/STARmanual.pdf">STAR manual</a> for v2.5.3a.</p>
+<div class="codehilite"><pre><span></span>    STAR <span class="se">\</span>
+        --runThreadN <span class="nv">$NUM_THREADS</span> <span class="se">\ </span>                          <span class="c1"># $NUM_THREADS is the number of threads to parallelize the alignment across (generally we use 4).</span>
+        --genomeDir <span class="nv">$GENOME_DIR</span> <span class="se">\ </span>                            <span class="c1"># $GENOME_DIR is a STAR reference directory containing HG38 and ERCC Spike In sequences.</span>
+        --readFilesIn <span class="nv">$READ_FILES</span> <span class="se">\ </span>                          <span class="c1"># $READ_FILES are the input FastQ files to align.</span>
+        --limitBAMsortRAM <span class="nv">$MEMORY_LIMIT</span> <span class="se">\ </span>                    <span class="c1"># $MEMORY_LIMIT is a upper limit on the amount of RAM to use in the alignment.</span>
+        --outFileNamePrefix <span class="nv">$OUT_FILE_PREFIX</span> <span class="se">\</span>
+        --outSAMtype BAM SortedByCoordinate <span class="se">\</span>
+        --outSAMstrandField intronMotif <span class="se">\</span>
+        --outSAMattributes NH   HI   AS   nM   NM   MD   XS <span class="se">\</span>
+        --outSAMunmapped Within <span class="se">\</span>
+        --outSAMattrRGline <span class="nv">$RGs</span> <span class="se">\ </span>                            <span class="c1"># $RGs is the read group information for each FastQ passed in $READ_FILES.</span>
+        --outFilterMultimapNmax <span class="m">20</span> <span class="se">\</span>
+        --outFilterMultimapScoreRange <span class="m">1</span> <span class="se">\</span>
+        --outFilterScoreMinOverLread <span class="m">0</span>.66 <span class="se">\</span>
+        --outFilterMatchNminOverLread <span class="m">0</span>.66 <span class="se">\</span>
+        --outFilterMismatchNmax <span class="m">10</span> <span class="se">\</span>
+        --alignIntronMax <span class="m">500000</span> <span class="se">\</span>
+        --alignMatesGapMax <span class="m">1000000</span> <span class="se">\</span>
+        --alignSJDBoverhangMin <span class="m">1</span> <span class="se">\</span>
+        --sjdbScore <span class="m">2</span> <span class="se">\</span>
+        --twopassMode Basic
+</pre></div>
+
+
 <h4 id="gvcf-files">gVCF files</h4>
 <p>We provide gVCF files produced by the <a href="https://azure.microsoft.com/en-us/services/genomics/">Microsoft Genomics Service</a>. gVCF files are derived from the BAM files produced above as called by <a href="https://software.broadinstitute.org/gatk/documentation/tooldocs/3.8-0/org_broadinstitute_gatk_tools_walkers_haplotypecaller_HaplotypeCaller.php">GATK's haplotype caller</a>. Today, we defer to <a href="https://software.broadinstitute.org/gatk/documentation/article?id=11004">the official specification document</a> from the Broad Institute, as well as <a href="https://software.broadinstitute.org/gatk/documentation/article?id=4017">this discussion</a> on the difference between VCF and gVCF files. For more information about how Microsoft Genomics produces gVCF files or any other questions regarding data generation, please refer to <a href="https://azure.microsoft.com/en-us/resources/accelerate-precision-medicine-with-microsoft-genomics/">the official Microsoft Genomics whitepaper</a>.</p>
 <h4 id="somatic-vcf-files">Somatic VCF files</h4>
@@ -999,7 +1066,7 @@ please <a href="https://stjude.cloud/contact">contact us</a>!</p>
           </div>
         
         
-        built from <a href="https://github.com/stjude/sjcloud-docs/tree/8988d91">8988d91</a> using
+        built from <a href="https://github.com/stjude/sjcloud-docs/tree/1d56df7">1d56df7</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
