@@ -10,7 +10,8 @@ extra_css:
   - css/extra.css
 
 pages:
-  - 'Getting Started': 'index.md'
+  - 'Overview': 'index.md'
+  - 'Create An Account': 'create-an-account.md'
   - 'Data Guides': 
       - 'Making a Data Request': 'guides/data/data-request.md'
       - 'Types of Data': 'guides/data/types-of-data.md'
