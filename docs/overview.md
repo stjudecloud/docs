@@ -22,13 +22,13 @@ You can leverage many different capabilities of St. Jude Cloud in your research,
 
 ## Datasets
 
-The following projects currently distribute their data through St. Jude Cloud. Click on the links below to learn more about the dataset.
+The following projects currently distribute their data through St. Jude Cloud. Click [here](./faq.md#what-is-a-data-access-unit) for more information about the projects listed below.
 
-* [Pediatric Cancer Genome Project (PCGP)](./guides/glossary/data-access-unit.md#pediatric-cancer-genome-project-(pcgp))
-* [St. Jude Lifetime (SJLIFE)](./guides/glossary/data-access-unit.md#st.-jude-lifetime-(sjlife))
-* [Clinical Genomics (Clinical Pilot and G4K)](./guides/glossary/data-access-unit.md#clinical-genomics(clinical-pilot-and-g4k))
-* [Sickle Cell Genome Project (SGP)](https://sickle-cell.stjude.cloud/)
-* [Childhood Cancer Survivor Study (CCSS)](./guides/glossary/data-access-unit.md#childhood-cancer-survivor-study(ccss))
+* Pediatric Cancer Genome Project (PCGP)
+* St. Jude Lifetime (SJLIFE)
+* Clinical Genomics (Clinical Pilot and G4K)
+* Sickle Cell Genome Project (SGP)
+* Childhood Cancer Survivor Study (CCSS)
 
 ## Analysis Workflows
 
@@ -78,6 +78,9 @@ Until further notice, please cite the relevant paper for each of the datasets an
 
 !!! note
     If you are unsure what datasets the data that you have been vended belongs to, you can find this information in the sj_datasets column of the [SAMPLE_INFO.txt](./guides/data/metadata.md) file.
+
+!!! warning
+    Publishing using any of the data files _before_ the [embargo date](./faq.md#what-is-an-embargo-date) has passed is strictly prohibited as outlined in the [Data Access Agreement (DAA)](./faq.md#what-is-a-data-access-agreement).
 
 ## Contact Us
 
