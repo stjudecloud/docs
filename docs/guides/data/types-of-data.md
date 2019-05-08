@@ -19,7 +19,7 @@ St. Jude Cloud hosts both raw genomic data files and processed results files:
 In St. Jude Cloud, we stored aligned sequence reads in the ubiquitous BAM file format. For more information on SAM/BAM files, please refer to the [SAM/BAM specification][bam-spec]. 
 
 ##### Whole Genome and Whole Exome
-Whole Genome Sequence (WGS) and Whole Exome Sequence (WXS) BAM files were produced by the [Microsoft Genomics Service][msgen] aligned to HG38 (GRCh38 no alt analysis set). For more information about how Microsoft Genomics produces BAM files or any other questions regarding data generation, please refer to [the official Microsoft Genomics whitepaper][msgen-whitepaper].
+Whole Genome Sequence (WGS) and Whole Exome Sequence (WES) BAM files were produced by the [Microsoft Genomics Service][msgen] aligned to HG38 (GRCh38 no alt analysis set). For more information about how Microsoft Genomics produces BAM files or any other questions regarding data generation, please refer to [the official Microsoft Genomics whitepaper][msgen-whitepaper].
 
 ##### RNA-Seq
 

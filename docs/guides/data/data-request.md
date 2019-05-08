@@ -72,7 +72,7 @@ Once you have made your selections, click the red *Request Data* button at the b
 ![](../../images/guides/data/request-data-new-4.gif)
 
 !!! warning
-    You must have [created an account](../../index.md#creating-a-dnanexus-account) and be logged in to make a data request. If you have not yet created an account or you are not logged in, the red *Request Data* button will say *Log In*. 
+    You must have [created an account](../../create-an-account.md) and be logged in to make a data request. If you have not yet created an account or you are not logged in, the red *Request Data* button will say *Log In*. 
 
 On the Request Data page fill out your name, institution, and project name. Give your data request a project name that makes sense to you as this will be the name of the DNAnexus project to which the data will be vended.
 
