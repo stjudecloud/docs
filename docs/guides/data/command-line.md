@@ -1,4 +1,4 @@
-# Getting started
+# Command Line Interaction
 
 Before you begin interacting with St. Jude Cloud Platform from the
 command line, you'll need to understand some details on the underlying
