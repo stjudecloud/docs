@@ -10,15 +10,16 @@ extra_css:
   - css/extra.css
 
 pages:
-  - 'Getting Started': 'index.md'
+  - 'Overview': 'overview.md'
+  - 'Create An Account': 'create-an-account.md'
   - 'Data Guides': 
-      - 'Making a Data Request': 'guides/data/data-request.md'
       - 'Types of Data': 'guides/data/types-of-data.md'
-      - 'Metadata': 'guides/data/metadata.md'
-      - 'Working with our Data': 'guides/data/run-your-tools.md'
+      - 'Metadata Provided': 'guides/data/metadata.md'
+      - 'Making a Data Request': 'guides/data/data-request.md'
+      - 'Working with Our Data': 'guides/data/working-with-our-data.md'
+      - 'Creating a Cloud App': 'guides/data/creating-a-cloud-app.md'
       - 'Data Transfer Application': 'guides/data/data-transfer-app.md'
       - 'Command Line Interaction': 'guides/data/command-line.md'
-      - 'Creating a Cloud App': 'guides/data/creating-a-cloud-app.md'
   - 'Tool Guides':
       - 'Pecan PIE': 'guides/tools/pecan-pie.md'
       - 'NeoepitopePred': 'guides/tools/neoepitope.md'
@@ -28,12 +29,9 @@ pages:
       - 'Mutational Signatures': 'guides/tools/mutational-signatures.md'
       - '': 'guides/tools/cis-x.md'
   - 'Visualization Guides':
-      - 'BigWig Viewer': 'guides/visualizations/bigwig-viewer.md'
-      - 'Fusion Viewer': 'guides/visualizations/fusion-viewer.md'
-  - 'Portal Guides':
-      - 'Sickle Cell Genomics Portal' : 'guides/portals/sickle-cell.md'
       - 'PeCan Data Portal' : 'guides/portals/pecan.md'
       - 'Genome Paint' : 'guides/portals/genome-paint.md'
+      - 'Sickle Cell Genomics Portal' : 'guides/portals/sickle-cell.md'
   - 'Forms':
       - 'Filling out a Data Access Agreement': 'guides/forms/how-to-fill-out-DAA.md' 
       - 'Filling out an Extension Addendum': 'guides/forms/how-to-fill-out-Extension.md'
