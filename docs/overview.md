@@ -1,8 +1,8 @@
-# Overview
+# Welcome to St. Jude Cloud Documentation!
 
-## Introduction
+## Overview
 
-Welcome to the St. Jude Cloud documentation! Here, you'll find the
+Here, you'll find the
 authoritative guides for accessing St. Jude Cloud data, running analysis workflows (ours or your own) on the cloud,
 and exploring curated data from numerous published studies by St. Jude and our collaborating institutions. For a brief overview of
 everything St. Jude Cloud provides, we recommend that you watch the video
@@ -80,7 +80,7 @@ Until further notice, please cite the relevant paper for each of the datasets an
     If you are unsure what datasets the data that you have been vended belongs to, you can find this information in the sj_datasets column of the [SAMPLE_INFO.txt](./guides/data/metadata.md) file.
 
 !!! warning
-    Publishing using any of the data files _before_ the [embargo date](./faq.md#what-is-an-embargo-date) has passed is strictly prohibited as outlined in the [Data Access Agreement (DAA)](./faq.md#what-is-a-data-access-agreement).
+    Publishing using any of the data files _before_ the [embargo date](./glossary.md#embargo-date) has passed is strictly prohibited as outlined in the [Data Access Agreement (DAA)](./faq.md#what-is-a-data-access-agreement).
 
 ## Contact Us
 

@@ -10,7 +10,7 @@ extra_css:
   - css/extra.css
 
 pages:
-  - 'Overview': 'overview.md'
+  - 'Welcome to St. Jude Cloud': 'overview.md'
   - 'Create An Account': 'create-an-account.md'
   - 'Data Guides': 
       - 'Types of Data': 'guides/data/types-of-data.md'
@@ -36,6 +36,7 @@ pages:
       - 'Filling out a Data Access Agreement': 'guides/forms/how-to-fill-out-DAA.md' 
       - 'Filling out an Extension Addendum': 'guides/forms/how-to-fill-out-Extension.md'
   - 'Frequently Asked Questions': 'faq.md'
+  - 'Glossary': 'glossary.md'
 
 # Repository
 repo_name: 'stjude/sjcloud-docs'

@@ -1,10 +1,10 @@
 #Filling Out The DAA
 
-Please read carefully through the first 5 pages of the [Data Access Agreement (DAA)](../../guides/glossary/data-access-agreement) which consist of Terms and Conditions that you and your institution must agree to in order to access any data on St. Jude Cloud.
+Please read carefully through the first 5 pages of the [Data Access Agreement (DAA)](../../glossary.md#data-access-agreement) which consist of Terms and Conditions that you and your institution must agree to in order to access any data on St. Jude Cloud.
 
 Next, ensure that you have correctly filled out the 5 required sections of the DAA (Note that there are [2 additional required sections](#data-download-permission) if you intend to download data):
 
-1. **Page 5** [The Data Access Unit(s)](../../guides/glossary/data-access-unit) you are applying for must be marked.
+1. **Page 5** [The Data Access Unit(s)](../../glossary.md#data-access-unit) you are applying for must be marked.
     * Tip: The DAU(s) associated to the data you requested are listed in the section Controlled Access Data, above the Download Data Request
       Form button. This can be found on the third step of the data request
       process. This is a dynamic feature
@@ -30,7 +30,7 @@ Next, ensure that you have correctly filled out the 5 required sections of the D
     ![](../../images/guides/forms/daa-4.png)
 
 5. **Page 10** Description of contemplated use of St. Jude data.
-    * Here, describe your research question and it's biological significance. The Contemplated Use will be evaluated by the [Data Access Committee(s)](../../guides/glossary/data-access-committee) based on their own set of protocols.
+    * Here, describe your research question and it's biological significance. The Contemplated Use will be evaluated by the [Data Access Committee(s)](../../glossary.md#data-access-committee) based on their own set of protocols.
     * Please [contact us](https://stjude.cloud/contact) if you have any questions regarding the protocols of the approval process.
 
 ### Data Download Permission

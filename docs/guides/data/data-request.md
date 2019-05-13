@@ -2,9 +2,9 @@
 
 !!! note "Summary"
 
-    1. Data in St. Jude Cloud is grouped into different [Data Access Units (DAUs)](../../faq.md#what-is-a-data-access-unit) which usually correspond to large-scale sequencing initiatives at St. Jude. 
-    2. Individuals can [apply for access](../../faq.md#what-is-a-data-access-agreement) to DAUs on a case-by-case basis for a specific amount of time (usually 1 year).
-    3. Access to data in a given DAU is assessed by the corresponding [Data Access Committee](../../faq.md#what-is-a-data-access-committee) who reviews a variety of factors to grant access.
+    1. Data in St. Jude Cloud is grouped into different [Data Access Units (DAUs)](../../glossary.md#data-access-unit) which usually correspond to large-scale sequencing initiatives at St. Jude. 
+    2. Individuals can [apply for access](../../glossary.md#data-access-agreement) to DAUs on a case-by-case basis for a specific amount of time (usually 1 year).
+    3. Access to data in a given DAU is assessed by the corresponding [Data Access Committee](../../glossary.md#data-access-committee) who reviews a variety of factors to grant access.
     4. There are a number of terms of use and restrictions outlined in the [data access agreement](https://platform.stjude.cloud/access_form). Everyone who will be working with the data must understand and agree to these terms.
 
 Creating a data request is the premier way to access raw St. Jude next 
@@ -28,7 +28,7 @@ There are two ways to make your data selection. You can peruse our raw genomic d
 
 Go to the Data Browser [here](https://platform.stjude.cloud/requests/diseases), or navigate there from the St. Jude Cloud home page by clicking Access Data and then Explore Data.
 
-From the Data Browser, you can view samples grouped by Diagnosis, Publication, or [Dataset](../../faq.md#what-is-a-data-access-unit) by toggling the tabs above the table. Use the search bar to look for something specific. Search the publication tab by title or pubmed ID.
+From the Data Browser, you can view samples grouped by Diagnosis, Publication, or [Dataset](../../glossary.md#data-access-unit) by toggling the tabs above the table. Use the search bar to look for something specific. Search the publication tab by title or pubmed ID.
 
 ![](../../images/guides/data/data-browser-tour-1.gif)
 
@@ -76,7 +76,7 @@ On the Request Data page fill out your name, institution, and project name. Give
 
 !!! note "Data Access Approval"
     If you are requesting access to a dataset you have not yet been approved for, 
-    you will see a section called **Controlled Access Data**. Under this section, there is a bulleted list indicating the dataset(s) or [Data Access Unit(s)](../../faq.md#what-is-a-data-access-unit) you must request access to by submitting a form called the [Data Access Agreememnt (DAA)](../../faq.md#what-is-a-data-access-agreement). Please use this list to fill in the Datasets section of the DAA. For more information on filling out this form, see [Filling out the DAA](../../guides/forms/how-to-fill-out-DAA). **You must upload a DAA to continue.**
+    you will see a section called **Controlled Access Data**. Under this section, there is a bulleted list indicating the dataset(s) or [Data Access Unit(s)](../../glossary.md#data-access-unit) you must request access to by submitting a form called the [Data Access Agreememnt (DAA)](../../glossary.md#data-access-agreement). Please use this list to fill in the Datasets section of the DAA. For more information on filling out this form, see [Filling out the DAA](../../guides/forms/how-to-fill-out-DAA). **You must upload a DAA to continue.**
 
 Finally, click the green button. If you already have access to the data you selected in the browser, the button will read *Get Data Now*. If you are submitting a DAA and requesting data access, the button will read *Submit Request*.
 
@@ -84,7 +84,7 @@ This will direct you to the [Manage Data](https://platform.stjude.cloud/requests
 
 ![](../../images/guides/data/request-data-new-2.png)
 
-If you already have access to the data that you requested, your data will be vended to you immediately. Otherwise, the status of your request will say *Pending* while your request is routed to the respective [Data Access Committee(s)](../../faq.md#what-is-a-data-access-committee) for evaluation. Request approval typically takes a week or two if your data access agreement is correctly and completely filled out. You will receive automated emails from notifications@stjude.cloud at the time that your request is recieved and once your request is approved.
+If you already have access to the data that you requested, your data will be vended to you immediately. Otherwise, the status of your request will say *Pending* while your request is routed to the respective [Data Access Committee(s)](../../glossary.md#data-access-committee) for evaluation. Request approval typically takes a week or two if your data access agreement is correctly and completely filled out. You will receive automated emails from notifications@stjude.cloud at the time that your request is recieved and once your request is approved.
 
 !!! note 
     If you receive an email from us that your DAA is incomplete, you may edit your DAA and upload the revised copy using the 'Add a Form' button the on Manage Data page. 
