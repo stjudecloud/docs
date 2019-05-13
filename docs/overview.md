@@ -22,7 +22,7 @@ You can leverage many different capabilities of St. Jude Cloud in your research,
 
 ## Datasets
 
-The following projects currently distribute their data through St. Jude Cloud. Click [here](./faq.md#what-is-a-data-access-unit) for more information about the projects listed below.
+The following projects currently distribute their data through St. Jude Cloud. Click [here](./glossary.md#data-access-unit) for more information about the projects listed below.
 
 * Pediatric Cancer Genome Project (PCGP)
 * St. Jude Lifetime (SJLIFE)
