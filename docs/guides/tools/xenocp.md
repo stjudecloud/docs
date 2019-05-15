@@ -1,18 +1,31 @@
 |                         |                                            |
 |-------------------------|--------------------------------------------|
 | **Authors**             | Michael Rusch, Liang Ding, Michael Macias  |
-| **Publication**         | bioRxiv                                    |
+| **Publication**         | N/A                                   |
 | **Technical Support**   | [Contact Us](https://stjude.cloud/contact) |
 
-XenoCP finds and cleans mouse reads in xenograft BAMs. This is done by comparing
-read alignments to human and mouse genomes and identifying the correct read identities. 
+XenoCP is a tool that can be used to find and remove contaminating mouse read sequences within a xenograft BAM alignment file aligned to a human genome reference. This is achieved by identifying the source of reads via alignment to human and mouse genomes. 
 XenoCP can be easily incorporated into any workflow as it takes a BAM file 
-as input and efficiently cleans up the mouse contamination and gives a clean 
-human BAM output that could be used for downstream genomic analysis.
+as input, removes mouse sequence contamination, and outputs a "cleansed" 
+ BAM file only containing human mapped read sequences. This cleansed output BAM file can be used for downstream genomic analysis.
 
 XenoCP supports hg19 (GRCh37) and mm9 (MGSCv37).
 
 ## Overview
+
+<h3 id="process">Process</h3>
+
+XenoCP workflow contains the following five steps (see diagram below):
+
+  1. Split input human BAM file into given number of small pieces.
+  2. Align mapped reads to mouse reference genome.
+  3. Compare human and mouse alignments and identify read identity.
+  4. Create lists of contamination reads and set them to unmapped in human BAMs.
+  5. Merge the BAM pieces to a cleansed BAM.
+
+Note that steps 2-4 run in parallel.
+
+![](../../images/guides/tools/xenocp/xenocp_workflow2.png)
 
 <h3 id="inputs">Inputs</h3>
 
@@ -21,7 +34,7 @@ XenoCP supports hg19 (GRCh37) and mm9 (MGSCv37).
 | BAM                            | File           | Input bam aligned to human reference genome. [required]                                      |`test.bam`, `test.bam.bai`|
 | [Reference DB Prefix]          | String         | Basename of the input human reference assembly. [required]                                   | MGSCv37.fa            |
 | Suffix Length                  | Integer        | Mate suffix length. [default: 4]                                                             | 4                     |
-| Keep Mates Together            | Boolean        | Whether to keep mates together [default: True]                                               | True                  |
+| Keep Mates Together            | Boolean        | Whether to keep mates (read pairs) together [default: True]                                               | True                  |
 | Bucket Number                  | Integer        | Number of buckets [default: 31]                                                              | 15                    |
 | Validation Stringency          | String         | Validation stringency: STRICT, LENIENT, SILENT [default: SILENT]                             | SILENT                |
 | Output Prefix                  | String         | Prefix to append to output filenames [default: xenocp-]                                      | xenocp-               |
@@ -37,21 +50,6 @@ XenoCP supports hg19 (GRCh37) and mm9 (MGSCv37).
 | [Cleansed BAM]             | File | Cleansed BAM                                                                       |
 | [Tie BAMs]                 | Files| BAMs with reads being classified as either human or mouse                          |
 | [Contamination lists]      | Files| Tab-delimited file (no headers) with sample ID and tag pairs                       |
-
-
-<h3 id="process">Process</h3>
-
-![](../../images/guides/tools/xenocp/xenocp_workflow2.png)
-
-XenoCP workflow contains the following five steps:
-
-  1. Split input human BAM file into given number of small pieces.
-  2. Align mapped reads to mouse reference genome.
-  3. Compare human and mouse alignments and identify read identity.
-  4. Create lists of contamination reads and set them to unmapped in human BAMs.
-  5. Merge the BAM pieces to a cleansed BAM.
-
-Note that steps 2-4 run in parallel.
 
 ## Getting started
 
@@ -101,7 +99,7 @@ _Output prefix_ is the prefix to append to the output contamination and tie file
 Number of small bam pieces that an input bam is split to. This should be less than the number of cores of the instance type. As 
 the default instance type is azure:mem2_ssd1_x16, default bucket number is 15.
 
-## Uploading data
+## Uploading input data files
 XenoCP requires at least one BAM along with its BAI files
 to be uploaded. These files can be uploaded via the [data transfer
 application] or [command line].
@@ -118,20 +116,19 @@ Upon a successful run of XenoCP, a cleansed BAM file, a list of contamination re
 
 <h4 id="cleansed-bam">Cleansed BAM</h4>
 
-Cleansed BAM is the major output of XenoCP workflow. The reads (including reads in tie BAM) are aligned to the human 
-reference genome with the contamination reads set to unmapped.
+Cleansed BAM is the major output of XenoCP workflow. The mapped reads in this BAM file are of human origin (including reads in tie BAM) and are mapped to the human genome reference sequence. Any reads deemed to originate from mouse by XenoCP are set to 'unmapped'.
 
-<h4 id="contam-list">Contamination list</h4>
+<h4 id="contam-list">Contamination files</h4>
 
-Each contamination file is a plain txt file with a list of read names cleansed from a BAM piece.
+Each contamination file is a plain txt file containing a list of read names cleansed from a "BAM piece" (see process diagram above).
 
 <h4 id="tie-bam">Tie BAM</h4>
 
-Each tie BAM contains a list of reads that do not have clear read identity. These reads are kept as mapped in the cleansed BAM.
+Each "tie BAM" contains a list of reads that do not have clear read identity. These reads are kept as mapped in the cleansed BAM file.
 Reads in a tie BAM are aligned to the human reference genome.
 
 ## References
 
-  * To be added once submitted to bioXriv
+  * The manuscript associated with XenoCP will be submitted to bioXriv shortly.
    
 [xenocp]: https://github.com/stjude/xenocp
