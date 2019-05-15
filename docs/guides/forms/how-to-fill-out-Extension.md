@@ -1,6 +1,6 @@
 #Filling Out The Extension Addendum
 
-The St. Jude Cloud [Data Access Agreement (DAA)](../../guides/glossary/data-access-agreement) is only valid for one year after the date it was approved. When your DAA is about to expire, you will get an automated email from notifications@stjude.cloud with the name of the DAA that is expiring and a link to the St. Jude Cloud Extension Addendum.
+The St. Jude Cloud [Data Access Agreement (DAA)](../../glossary.md#data-access-agreement) is only valid for one year after the date it was approved. When your DAA is about to expire, you will get an automated email from notifications@stjude.cloud with the name of the DAA that is expiring and a link to the St. Jude Cloud Extension Addendum.
 
 In order to extend your DAA, you must fill out an Extension Addendum. The Extension Addendum will extend the previous agreement for an additional year. Please note that if you do not fill out an Extension Addendum, you will be expected to delete all copies of the data subject to the expiring agreement.
 

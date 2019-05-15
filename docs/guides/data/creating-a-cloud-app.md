@@ -33,7 +33,7 @@ project_space/
 └── SAMPLE_INFO.txt
 ```
 
-The `SAMPLE_INFO.txt` file provides all the metadata associated with the request, and the restricted folder contains all the data separated by file type (for more info, refer to the [Metadata Provided](../../guides/data/command-line.md) section). The other folders will contain the respective file types you included in your request.
+The `SAMPLE_INFO.txt` file provides all the metadata associated with the request, and the restricted folder contains all the data separated by file type (for more info, refer to the [Metadata Provided](../../guides/data/metadata.md) section). The other folders will contain the respective file types you included in your request.
 
 After your data access request has been approved, we can begin writing our app.
 
