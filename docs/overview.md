@@ -20,6 +20,9 @@ You can leverage many different capabilities of St. Jude Cloud in your research,
 * Explore St. Jude datasets through interactive visualizations that we have packaged for the community. For example, visit [PeCan](https://pecan.stjude.cloud) to visually investigate pediatric cancer mutation data.
 * Create manuscript quaility figures with *your* data for use in publications or to host on your website with [ProteinPaint](https://pecan.stjude.cloud/proteinpaint/TP53) or [GenomePaint](https://genomepaint.stjude.cloud/). See the [ProteinPaint](./guides/portals/pecan.md#proteinpaint) and [GenomePaint](./guides/portals/genome-paint.md) doc pages for help.
 
+!!! note
+    Please note that while it is free to recieve and store our data in St. Jude Cloud, there are [compute and storage fees associated with working in the cloud as well as egress fees for downloading our data](faq.md#will-i-be-charged-for-using-st-jude-cloud). 
+
 ## Datasets
 
 The following projects currently distribute their data through St. Jude Cloud. Click [here](./glossary.md#data-access-unit) for more information about the projects listed below.
@@ -39,7 +42,7 @@ St. Jude shares a number of end-to-end analysis workflows on the cloud. Click on
 * [ChIP-Seq Peak Calling](https://platform.stjude.cloud/tools/chip-seq)
 * [Rapid RNA-Seq Fusion Detection](https://platform.stjude.cloud/tools/rapid_rna-seq)
 * [WARDEN Differential Expression Analysis](https://platform.stjude.cloud/tools/warden)
-* [Mutational Signatures](https://platform.stjude.cloud/tools/mutational_spectrum)
+* [Mutational Signatures](https://platform.stjude.cloud/tools/mutational_signatures)
 * cis-x (coming soon)
 * XenoCP (coming soon)
 
@@ -80,7 +83,7 @@ Until further notice, please cite the relevant paper for each of the datasets an
     If you are unsure what datasets the data that you have been vended belongs to, you can find this information in the sj_datasets column of the [SAMPLE_INFO.txt](./guides/data/metadata.md) file.
 
 !!! warning
-    Publishing using any of the data files _before_ the [embargo date](./glossary.md#embargo-date) has passed is strictly prohibited as outlined in the [Data Access Agreement (DAA)](./faq.md#what-is-a-data-access-agreement).
+    Publishing using any of the data files _before_ the [embargo date](./glossary.md#embargo-date) has passed is strictly prohibited as outlined in the [Data Access Agreement (DAA)](./glossary.md#data-access-agreement).
 
 ## Contact Us
 
