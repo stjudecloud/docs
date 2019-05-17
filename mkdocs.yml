@@ -10,7 +10,7 @@ extra_css:
   - css/extra.css
 
 pages:
-  - 'Welcome to St. Jude Cloud': 'overview.md'
+  - 'Welcome to St. Jude Cloud': 'index.md'
   - 'Create An Account': 'create-an-account.md'
   - 'Data Guides': 
       - 'Types of Data': 'guides/data/types-of-data.md'
