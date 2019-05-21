@@ -13,7 +13,7 @@
 **Data Request Questions**  
 [Why do I need to sign the Data Access Agreement (DAA)?](#why-do-i-need-to-sign-the-data-access-agreement-daa)  
 [Can I make edits/revisions to the DAA?](#can-i-make-editsrevisions-to-the-daa)  
-[Can I get access to a word version of the DAA?](#can-i-get-access-to-a-word-version-of-the-daa)  
+[Can I get a Microsoft Word version of the DAA](#can-i-get-a-microsoft-word-version-of-the-daa)  
 [Where can I find the latest version of the Data Access Agreement (DAA)?](#where-can-i-find-the-latest-version-of-the-data-access-agreement-daa)  
 [Where do I submit the Data Access Agreement (DAA)?](#where-do-i-submit-the-data-access-agreement-daa)  
 [What if I did not fill out the Data Download Permission section of the original DAA, but now I want to download data?](#what-if-i-did-not-fill-out-the-data-download-permission-section-of-the-original-daa-but-now-i-want-to-download-data)  
@@ -42,13 +42,8 @@ You can find the Terms of Service
 [here](https://platform.stjude.cloud/privacy).
 
 
-[msgen]: https://azure.microsoft.com/en-us/services/genomics/
-[gvcf-spec]: https://gatkforums.broadinstitute.org/gatk/discussion/11004/gvcf-genomic-variant-call-format
-[gvcf-diff-from-vcf]: https://gatkforums.broadinstitute.org/gatk/discussion/4017/what-is-a-gvcf-and-how-is-it-different-from-a-regular-vcf
-
 ### How can I sign up for updates when new data or features are added to the cloud?
-We are always adding data to St. Jude Cloud, and if you would like to sign up for updates [subscribe here](https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-subscribe/).
-
+We are always adding data to St. Jude Cloud, and if you would like to sign up for updates, [subscribe here](https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-subscribe/).
 
 
 ### How can I delete my account?
@@ -76,13 +71,13 @@ be charged for anything with the exception of the following actions:
   charged an egress fee by DNAnexus. This fee is usually negligible
   unless you are downloading entire cohorts. We are actively
   investigating ways to minimize or eliminate these costs.
-* If you run any of our analysis workflows (such as Rapid RNA-Seq, WARDEN, etc) or your own workflows that you have uploaded and packaged into the cloud, you will be charged for the
+* If you run any of our analysis workflows (such as Rapid RNA-Seq, WARDEN, etc.) or your own workflows that you have uploaded and packaged into the cloud, you will be charged for the
   compute resources used in producing the results. Soon we hope to be able to sponsor all compute costs associated with running our St. Jude Cloud workflows.
 
 You can find DNAnexus's specific resource-based pricing table by navigating to the Billing Account tab of your profile page on DNAnexus and then clicking the green 'Add Billing Info' button next to your name.
 
 ### How can I set up billing for my lab?
-Billing setup is different based on whether you are an interval user (you work at St. Jude) or an external user. External users refer to the [Create an Account page](create-an-account.md) for instructions. Internal users search 'Bioinformatics self-service on St. Jude Cloud' from the [intranet home page](https://home.stjude.org/Pages/default.aspx) for instructions. 
+Billing setup is different based on whether you are an internal user (you work at St. Jude) or an external user. External users refer to the [Create an Account page](create-an-account.md) for instructions. Internal users search 'Bioinformatics self-service on St. Jude Cloud' from the [intranet home page](https://home.stjude.org/Pages/default.aspx) for instructions. 
 
 
 ### Why do I need to sign the Data Access Agreement (DAA)?
@@ -94,7 +89,7 @@ committed to protecting that privacy to the fullest extent.
 ### Can I make edits/revisions to the DAA?
 As a rule, we do not negotiate the terms of the data access agreement unless terms are found to be in conflict with the institution's state law. The terms included in the data access agreement are ultimately in place to protect our patients, a matter which we take very seriously.
 
-### Can I get access to a word version of the DAA?
+### Can I get a Microsoft Word version of the DAA?
 No. If we provide an editable format, we cannot ensure that the legal document has not been changed. Since we do not accept different versions of this agreement, we unfortunately cannot provide the document in Word format.
 
 ### Where can I find the latest version of the Data Access Agreement (DAA)?
@@ -112,10 +107,10 @@ Since this would be a change in terms from the original agreement, you would nee
 Currently the only [clinical information](./guides/data/metadata.md#clinical-and-phenotypic-information) we provide is age at diagnosis, diagnosis, ethnicity, and sex. Unfortunately, even if we do collect other information, such as other supportive oncology data, it is not available on the cloud at this time. We are working towards being able to provide additional clinical annotations in the future.
 
 ### Can I get a copy of IRB consent forms?
-Unfortunately, we will not be able to share blank consent forms at the current time. We have chosen to remain consistent with the requirements of the other major genomic data repositories in that (1) there is an internal vetting process by the St. Jude IRB to ensure samples may be shared with the research community, but (2) we do not share the informed consents with data requestors. It is important to remember that St. Jude Cloud is the platform upon which all St. Jude data is shared. This means that there are more than 100 consent forms + revisions fro the various studies across St. Jude. Thus, there is an additional logistical barrier in that we simply don't have the bandwidth to pull together a packet containing all of this information for each requestor.
+Unfortunately, we will not be able to share blank consent forms at the current time. We have chosen to remain consistent with the requirements of the other major genomic data repositories in that (1) there is an internal vetting process by the St. Jude IRB to ensure samples may be shared with the research community, but (2) we do not share the informed consents with data requestors. It is important to remember that St. Jude Cloud is the platform upon which all St. Jude data is shared. This means that there are more than 100 consent forms + revisions for the various studies across St. Jude. Thus, there is an additional logistical barrier in that we simply don't have the bandwidth to pull together a packet containing all of this information for each requestor.
 
 ### Can I request FASTQ files on St. Jude Cloud?
-We do not share FASTQ formats, but several tools exists that you can leverage to revert BAM to FASTQ files. (We recommend using Picard SamToFastq to revert BAM files.) You can efficiently revert BAMS to FASTQ in the cloud by wrapping the conversion tool of your choice into a [Cloud App](./guides/data/creatings-a-cloud-app.md).
+We do not share FASTQ formats, but several tools exists that you can leverage to revert BAM to FASTQ files. (We recommend using Picard SamToFastq to revert BAM files.) You can efficiently revert BAMs to FASTQs in the cloud by wrapping the conversion tool of your choice into a [Cloud App](./guides/data/creating-a-cloud-app.md).
 
 
 ### How can I explore and manipulate data files stored on the cloud without downloading the files to my local machine?
@@ -142,11 +137,11 @@ You may also find [these instructions](https://wiki.dnanexus.com/Developer-Tutor
 
 ### Why am I getting a connectivity error when connecting to DNAnexus API via SSH?
 If you are trying to run something like    
-  `$ dx run \<executable\> --ssh`   
+  `$ dx run --ssh <executable> `   
 and are getting a connectivity error, it may be that your firewall is too restrictive. Are you able to perform the command from an unrestricted network (like a home network)? If yes, you can resolve this issue by asking your network administrator to whitelist connections to Azure US West. All subnets (Region Name="uswest") are provided [here](https://www.microsoft.com/en-us/download/details.aspx?id=41653).
 
 ### How do I cite St. Jude Cloud?
-We are currently in progress of preparing a paper for St. Jude Cloud. In the meantime, please refer to the [citation table](overview.md#citing-st-jude-cloud) on the Welcome page.
+We are currently in progress of preparing a paper for St. Jude Cloud. In the meantime, please refer to the [citation table](index.md#citing-st-jude-cloud) on the Welcome page.
 
 ### When can I publish my findings using St. Jude Cloud data?
 Once the [embargo date](glossary.md#embargo-date) for the St. Jude datasets that you've used in your reserach has passed, you are legally permitted to publish results based on that data.
