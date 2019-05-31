@@ -35,7 +35,7 @@ Also included is a set of phenotypic information queried from the physician or r
 | attr_ethnicity        | Self-reported ethnicity. Values are normalized according to the [US Census Bureau classifications][censusburea]. |
 | attr_race             | Self-reported race. Values are normalized according to the [US Census Bureau classifications][censusburea].      |
 | attr_sex              | Self-reported sex.                                                                                               |
-
+| attr_oncotree_disease_code | I think a simple "The disease code mapping as specified by Oncotree Version http://oncotree.mskcc.org/#/home?version=oncotree_2019_05_01
 ### Short Disease Code Mapping
 
 Embedded in both the filename and the `SAMPLE_INFO.txt` file that comes with your data request will be a list of short diagnosis codes (`sj_diseases`). These short codes were assigned at the time that the sample was sent for sequencing, and they are not necessarily the final diagnosis (`attr_diagnosis`). For instance, the diagnosis is often refined as the sample undergoes genomic testing. Below, we include a table of short disease code to long disease name mappings so you can interpret what these abbreviations mean.
