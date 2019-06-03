@@ -117,7 +117,7 @@ We do not share FASTQ formats, but several tools exist that you can leverage to 
 You can quickly and easily interact with data files using the DNAnexus cloud workstation app. See [this guide](https://wiki.dnanexus.com/Developer-Tutorials/Cloud-Workstations) to help you setup and run the app. Note that if you are doing any type of large-scale, multi-sample analysis, espescially if you plan to repeat the analysis or want to run in parallel, you will want to [write your own cloud app](./guides/data/creating-a-cloud-app.md) rather than use the cloud workstation app.
 
 ### How can I connect to DNAnexus API via SSH on a Windows machine?
-To connect via SSH on a Windows machine we reccomend using Windows Subsystem for Linux (WSL) or a Linux virtual machine.  
+To connect via SSH on a Windows machine we recommend using Windows Subsystem for Linux (WSL) or a Linux virtual machine.  
 The WSL method:  
 1. Open PowerShell as an administrator and run   
 [Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10#install-the-windows-subsystem-for-linux)  
