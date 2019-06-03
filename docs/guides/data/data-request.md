@@ -17,7 +17,7 @@ environment.
     If you would like to download the data to local storage, there are
     extra steps you'll need to follow such as [getting additional signatures](../../guides/forms/how-to-fill-out-DAA#data-download-permission)
     on your data access agreement. We recommend that you work with the data
-    in the cloud if it's feasible; the data provided by St. Jude is free, the compute charges are reasonable, and working in the cloud helps to eliminate the long, error-prone downloading process. Porting your tools to be run in the cloud is easy, as well. We recommend you follow [this guide](../../guides/data/run-your-tools) to get started.
+    in the cloud if it's feasible; the data provided by St. Jude is free, the compute charges are reasonable, and working in the cloud helps to eliminate the long, error-prone downloading process. Porting your tools to be run in the cloud is easy, as well. We recommend you follow [this guide](../../guides/data/creating-a-cloud-app) to get started.
 
 ## Selecting Data
 
