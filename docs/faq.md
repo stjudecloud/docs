@@ -30,7 +30,7 @@
 **Publication Questions**  
 [How do I cite St. Jude Cloud?](#how-do-i-cite-st-jude-cloud)  
 [When can I publish my findings using St. Jude Cloud data?](#when-can-i-publish-my-findings-using-st-jude-cloud-data)  
-[Where can I find the Embargo Date?](#where-can-i-find-the-embargo-date)
+[Where can I find the embargo date?](#where-can-i-find-the-embargo-date)
 
 **Miscellaneous**   
 [Will St. Jude Cloud host my institution's data in the data browser or on PeCan?](#will-st-jude-cloud-host-my-institutions-data-in-the-data-browser-or-on-pecan)  
