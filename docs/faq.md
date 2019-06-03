@@ -129,7 +129,7 @@ The WSL method:
   `$ sudo apt install python-minimal python-pip`    
   `$ pip install dxpy`    
 6. Close Ubuntu window. Open Ubuntu again.  
-7. Log in to dnanexus, where $TOKEN is an [API Token](https://wiki.dnanexus.com/Command-Line-Client/Login-and-Logout#Authentication-Tokens).  
+7. Log in to DNAnexus, where `$TOKEN` is an [API Token](https://wiki.dnanexus.com/Command-Line-Client/Login-and-Logout#Authentication-Tokens).  
   `$ dx login --token $TOKEN` 
 
 You may also find [these instructions](https://wiki.dnanexus.com/Developer-Tutorials/Connecting-to-Jobs#Setting-up-SSH-on-Windows) on the DNAnexus wiki helpful.
