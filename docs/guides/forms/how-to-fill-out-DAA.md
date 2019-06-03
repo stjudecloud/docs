@@ -1,7 +1,7 @@
 #Filling Out The DAA
 
 For the latest version of the [Data Access Agreement (DAA)](../../glossary.md#data-access-agreement) click
-[here](https://platform.stjude.cloud/access_form). Please read carefully through the first 5 pages of the which consist of Terms and Conditions that you and your institution must agree to in order to access any data on St. Jude Cloud.
+[here](https://platform.stjude.cloud/access_form). Please read the first 5 pages carefully, which consist of terms and conditions that you and your institution must agree to in order to access any data on St. Jude Cloud.
 
 Next, ensure that you have correctly filled out the 5 required sections of the DAA (Note that there are [2 additional required sections](#data-download-permission) if you intend to download data):
 
