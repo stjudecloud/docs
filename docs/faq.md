@@ -146,7 +146,7 @@ We are currently in progress of preparing a paper for St. Jude Cloud. In the mea
 ### When can I publish my findings using St. Jude Cloud data?
 Once the [embargo date](glossary.md#embargo-date) for the St. Jude datasets that you've used in your reserach has passed, you are legally permitted to publish results based on that data.
 
-### Where can I find the Embargo Date?
+### Where can I find the embargo date?
 
 All of our samples are marked with an [embargo date](glossary.md#embargo-date).
 You can find this by looking at the tags for each file or in the
