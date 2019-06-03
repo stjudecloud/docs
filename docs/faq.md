@@ -110,7 +110,7 @@ Currently the only [clinical information](./guides/data/metadata.md#clinical-and
 Unfortunately, we will not be able to share blank consent forms at the current time. We have chosen to remain consistent with the requirements of the other major genomic data repositories in that (1) there is an internal vetting process by the St. Jude IRB to ensure samples may be shared with the research community, but (2) we do not share the informed consents with data requestors. It is important to remember that St. Jude Cloud is the platform upon which all St. Jude data is shared. This means that there are more than 100 consent forms + revisions for the various studies across St. Jude. Thus, there is an additional logistical barrier in that we simply don't have the bandwidth to pull together a packet containing all of this information for each requestor.
 
 ### Can I request FASTQ files on St. Jude Cloud?
-We do not share FASTQ formats, but several tools exists that you can leverage to revert BAM to FASTQ files. (We recommend using Picard SamToFastq to revert BAM files.) You can efficiently revert BAMs to FASTQs in the cloud by wrapping the conversion tool of your choice into a [Cloud App](./guides/data/creating-a-cloud-app.md).
+We do not share FASTQ formats, but several tools exist that you can leverage to revert BAM to FASTQ files. (We recommend using Picard SamToFastq to revert BAM files.) You can efficiently revert BAMs to FASTQs in the cloud by wrapping the conversion tool of your choice into a [Cloud App](./guides/data/creating-a-cloud-app.md).
 
 
 ### How can I explore and manipulate data files stored on the cloud without downloading the files to my local machine?
