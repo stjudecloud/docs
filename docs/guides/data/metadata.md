@@ -28,13 +28,14 @@ Each data request includes a text file called `SAMPLE_INFO.txt` that provides a 
 
 Also included is a set of phenotypic information queried from the physician or research team's records at the time of sample submission to St. Jude Cloud. These are all considered to be *optional*, as the level of information gathered for each sample varies. If empty, the physician or research team did not indicate a value for the field. All basic clinical or phenotypic information will have `attr_` prepended to their tag name.
 
-| Property              | Description                                                                                                                                                                                                                                                                |
-| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| attr_age_at_diagnosis | Age at first diagnosis. This field is normalized as a decimal value. If empty, the physician or research team did not indicate a value for this field.                                             |
-| attr_diagnosis        | Primary diagnosis.                                                                                               |
-| attr_ethnicity        | Self-reported ethnicity. Values are normalized according to the [US Census Bureau classifications][censusburea]. |
-| attr_race             | Self-reported race. Values are normalized according to the [US Census Bureau classifications][censusburea].      |
-| attr_sex              | Self-reported sex.                                                                                               |
+| Property                   | Description                                                                                                                                                                                                                                                                |
+| ---------------------      | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| attr_age_at_diagnosis      | Age at first diagnosis. This field is normalized as a decimal value. If empty, the physician or research team did not indicate a value for this field.                                             |
+| attr_diagnosis             | Primary diagnosis.                                                                                               |
+| attr_ethnicity             | Self-reported ethnicity. Values are normalized according to the [US Census Bureau classifications][censusburea]. |
+| attr_race                  | Self-reported race. Values are normalized according to the [US Census Bureau classifications][censusburea].      |
+| attr_sex                   | Self-reported sex.                                                                                               |
+| attr_oncotree_disease_code | The disease code mapping as specified by Oncotree Version [2019-03-01][oncotree_2019_03_01]
 
 ### Short Disease Code Mapping
 
@@ -79,6 +80,9 @@ Embedded in both the filename and the `SAMPLE_INFO.txt` file that comes with you
 | ETV                | Acute Lymphoblastic Leukemia - ETV6-RUNX1 fusion subtype  |
 | EWS                | Ewing's Sarcoma                                           |
 | GCT                | Germ Cell Tumor                                           |
+| GENBN              | General Bone                                              |
+| GENKY              | General Kidney                                            |
+| GENLK              | General Leukemia                                          |
 | GICT               | Giant Cell Tumor                                          |
 | GIST               | Gastrointestinal Stromal Tumor                            |
 | HB                 | Hepatoblastoma                                            |
@@ -141,3 +145,4 @@ Embedded in both the filename and the `SAMPLE_INFO.txt` file that comes with you
 [pubmed]: https://www.ncbi.nlm.nih.gov/pubmed/
 [ega]: https://www.ebi.ac.uk/ega/home
 [censusburea]: https://www.census.gov/mso/www/training/pdf/race-ethnicity-onepager.pdf
+[oncotree_2019_03_01]: http://oncotree.mskcc.org/#/home?version=oncotree_2019_03_01
