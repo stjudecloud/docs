@@ -11,7 +11,7 @@ The GenomePaint browser homepage lands on a dense cohort view of the TAL1 gene r
 To navigate tracks,
 
 * Pan left or right by clicking on the middle part of the track and dragging
-* Zoom in by draging on the genomic coordinate ruler on top or zoom in 1 fold by clicking on the **IN** button
+* Zoom in by dragging the genomic coordinate ruler on top or zoom in 1 fold by clicking on the **IN** button
 * Zoom out by *x* fold by clicking on an **OUT** button.
 
 ![](../../images/guides/portals/genome-paint/navigation.gif)
@@ -39,7 +39,7 @@ The sample view shows mutations for one sample alone, along with any available g
 
 ![](../../images/guides/portals/genome-paint/sample_view.gif)
 
-On the sample view you can explore expression rank, tumor mutations, structural variants, splice junctions, WES coverage, and RNA-Seq coverage. Customize the display by zooming in/out, hiding and/or rearraging tracks, or editing **CONFIG** options.
+On the sample view you can explore expression rank, tumor mutations, structural variants, splice junctions, WES coverage, and RNA-Seq coverage. Customize the display by zooming in/out, hiding and/or rearranging tracks, or editing **CONFIG** options.
 
 ## Matrix View
 The matrix view combines the mutation profiles of multiple genomic regions in one view, in the form of a sample-by-region matrix. Such a matrix can be generated for samples from one cancer type. To open a matrix view, select a disease cohort from the cohort view and then select Matrix view. This organizes the selected cohort tumors with mutations in the genomic region you are viewing into a single-column matrix.

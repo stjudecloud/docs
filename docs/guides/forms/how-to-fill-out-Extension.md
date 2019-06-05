@@ -4,7 +4,7 @@ The St. Jude Cloud [Data Access Agreement (DAA)](../../glossary.md#data-access-a
 
 In order to extend your DAA, you must fill out an Extension Addendum. The Extension Addendum will extend the previous agreement for an additional year. Please note that if you do not fill out an Extension Addendum, you will be expected to delete all copies of the data subject to the expiring agreement.
 
-Follow the steps below to ensure that you have acurately filled out all sections of the Extension Addendum.
+Follow the steps below to ensure that you have accurately filled out all sections of the Extension Addendum.
 
 1. **Page 1**
     * In the top section, enter the current date on which that the agreement is being filled out, your current institution, and the date on which you signed the expiring DAA or extension.
@@ -41,6 +41,6 @@ Once you have finished filling out the Extension Addendum, you may upload the co
 
 ### Frequently Asked Questions
 
-**Q. What if I did not fill out the Data Download Permission section of the origianl DAA, but now I want to download data?**
+**Q. What if I did not fill out the Data Download Permission section of the original DAA, but now I want to download data?**
 
 **A.** Since this would be a change in terms from the original agreement, you would need to fill out a new DAA (including the Data Download Permission section) for any datasets you want to download.

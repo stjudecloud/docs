@@ -54,7 +54,7 @@ The list below summarizes all classes of mutations used by ProteinPaint.
 | NONSENSE	| a variant altering protein coding to produce a premature stopgain or stoploss.|
 | PROTEINDEL	| a deletion resulting in a loss of one or more codons from the product, but not altering the protein coding frame |
 |PROTEININS	| an insertion introducing one or more codons into the product, but not altering the protein coding frame|
- | SPLICE	| a variant near an exon edge that may affect splicing functionality |
+| SPLICE	| a variant near an exon edge that may affect splicing functionality |
 | SILENT	| a substitution variant in the coding region that does not alter protein coding |
 | SPLICE_REGION	| a variant in an intron within 10 nt of an exon boundary |
 | UTR_5	| a variant in the 5' untranslated region |

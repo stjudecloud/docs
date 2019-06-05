@@ -34,7 +34,7 @@ Genome Project[^1].
 | Name | Description |
 |--|--|
 | Epitope affinity prediction (html) | Epitope affinity. The peptide with affinity &lt; cutoff will be highlighted. |
-| Epitope affinity prediction (xlsx) | Excel tables for the infomation of all epitopes |
+| Epitope affinity prediction (xlsx) | Excel tables for the information of all epitopes |
 | Affinity (raw output) | Epitope affinity |
 | Peptide sequence (raw output) | Peptide sequences in Fasta format |
 
@@ -299,7 +299,7 @@ The following columns will be shown in the output:
 | Sample | the name of the samples |
 | Chromosome (chr) | the chromosome location of the variation |
 | Position | the chromosomal position of the variation. Currently, the position will be lifted over to HG19 to ensure correct translation of peptid sequences based on the internal annotation database of the pipeline. Therefore, the position will be labeled as HG19. |
-| Class | class of the varitaion |
+| Class | class of the variation |
 | Reference allele | reference allele at the position |
 | Mutant allele | mutated allele at the position |
 | mRNA_acc | NCBI accession number of the mRNA |
