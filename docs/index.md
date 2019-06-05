@@ -39,7 +39,7 @@ St. Jude shares a number of end-to-end analysis workflows on the cloud. Click on
 * [ChIP-Seq Peak Calling](https://platform.stjude.cloud/tools/chip-seq)
 * [Rapid RNA-Seq Fusion Detection](https://platform.stjude.cloud/tools/rapid_rna-seq)
 * [WARDEN Differential Expression Analysis](https://platform.stjude.cloud/tools/warden)
-* [Mutational Signatures](https://platform.stjude.cloud/tools/mutational_spectrum)
+* [Mutational Signatures](https://platform.stjude.cloud/tools/mutational_signatures)
 * cis-x (coming soon)
 * XenoCP (coming soon)
 
