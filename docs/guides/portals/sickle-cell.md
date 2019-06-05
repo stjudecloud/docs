@@ -1,4 +1,4 @@
-The Sickle Cell Genomics Portal contains two viewers for the exploration of data from the  [Sickle Cell Genome Project (SGP)](../glossary/data-access-unit#sickle-cell-genome-project-(sgp)) dataset.
+The Sickle Cell Genomics Portal contains two viewers for the exploration of data from the  [Sickle Cell Genome Project (SGP)](../glossary/data-access-unit#sickle-cell-genome-project-sgp) dataset.
 
 ## Genome Browser
 
