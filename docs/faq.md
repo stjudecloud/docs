@@ -1,4 +1,3 @@
-
 #### Will I be charged for using St. Jude Cloud?
 
 Any copy of the St. Jude data you receive is considered "sponsored",
