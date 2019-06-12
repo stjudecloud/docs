@@ -17,13 +17,13 @@ XenoCP supports hg19 (GRCh37) and mm9 (MGSCv37).
 
 XenoCP workflow contains the following five steps (see diagram below):
 
-  1. Split input human BAM file into given number of small pieces.
+  1. Split input human BAM file into pieces by chromosome.
   2. Align mapped reads to mouse reference genome.
   3. Compare human and mouse alignments and identify read identity.
   4. Create lists of contamination reads and set them to unmapped in human BAMs.
   5. Merge the BAM pieces to a cleansed BAM.
 
-Note that steps 2-4 run in parallel.
+Note that steps 1-4 run in parallel.
 
 ![](../../images/guides/tools/xenocp/xenocp_workflow2.png)
 
@@ -31,15 +31,14 @@ Note that steps 2-4 run in parallel.
 
 | Name                           | Type           | Description                                                                                  | Example               |
 |--------------------------------|----------------|----------------------------------------------------------------------------------------------|-----------------------|
-| BAM                            | File           | Input bam aligned to human reference genome. [required]                                      |`test.bam`, `test.bam.bai`|
+| BAM                            | File           | Input bam aligned to human reference genome. [required]                                      |`test.bam`             |
+| BAI                            | File           | Bam index for input bam. [required]                                                          |`test.bai`             |
 | [Reference DB Prefix]          | String         | Basename of the input human reference assembly. [required]                                   | MGSCv37.fa            |
 | Suffix Length                  | Integer        | Length of read name suffixes to be trimmed. [default: 3]                                     | 3                     |
 | Keep Mates Together            | Boolean        | Whether to keep mates together [default: True]                                               | True                  |
-| Bucket Number                  | Integer        | Number of buckets to split original bam to for parallelism [default: 31]                     | 15                    |
 | Validation Stringency          | String         | Validation stringency: STRICT, LENIENT, SILENT [default: SILENT]                             | SILENT                |
 | Output Prefix                  | String         | Prefix to append to output filenames [default: xenocp-]                                      | xenocp-               |
 | Output Extension               | String         | Output file extension [default: bam]                                                         | bam                   |
-| Sort Order                     | String         | Read sort order [default: queryname]                                                         | queryname             |
 
 [Reference DB Prefix]: #db-prefix
 
@@ -63,8 +62,8 @@ the tool already exists. Click "Launch Tool" to start a new analysis.
 
 ### Input configuration
 
-XenoCP requires two inputs: a BAM file aligned to human reference genome and 
-the basename of the input human reference assembly. All other inputs are optional.
+XenoCP requires three inputs: a BAM file aligned to human reference genome, a bam index file (BAI)
+corresponding to the input BAM file and the basename of the contaminant organism reference assembly. All other inputs are optional.
 
 Input files can be uploaded via the [data transfer application] or [command
 line].
@@ -79,8 +78,8 @@ Input BAM aligned to a human reference genome.
 <h4 id="db-prefix">Reference DB prefix</h4>
 
 Basename of the input human reference assembly. For example, a prefix of
-MGSCv37.fa would assume the following files in the same directory exist: MGSCv37.fa, 
-MGSCv37.fa.amb, MGSCv37.fa.ann, MGSCv37.fa.bwt, MGSCv37.fa.dict, MGSCv37.fa.fai, 
+MGSCv37.fa would assume the following files in the same directory exist: 
+MGSCv37.fa.amb, MGSCv37.fa.ann, MGSCv37.fa.bwt, 
 MGSCv37.fa.pac, and MGSCv37.fa.sa.
 
 <h4 id="output-prefix">Output prefix</h4>
@@ -93,11 +92,6 @@ _Output prefix_ is the prefix to append to the output contamination and tie file
 |-------------------------|------------------------------------------|
 | xenocp-                 | `xenocp-000.contam.txt`                  |
 | xenocp-                 | `xenocp-000.tie.bam`                     |
-
-<h4 id="disabled-vcf-column">Bucket Number</h4>
-
-Number of small bam pieces that an input bam is split to. This should be less than the number of cores of the instance type. As 
-the default instance type is azure:mem2_ssd1_x16, default bucket number is 15.
 
 ## Uploading input data files
 XenoCP requires at least one BAM along with its BAI files
@@ -116,7 +110,7 @@ Upon a successful run of XenoCP, a cleansed BAM file, a list of contamination re
 
 <h4 id="cleansed-bam">Cleansed BAM</h4>
 
-Cleansed BAM is the major output of XenoCP workflow. The mapped reads in this BAM file are of human origin (including reads in tie BAM) and are mapped to the human genome reference sequence. Any reads deemed to originate from mouse by XenoCP are set to 'unmapped'.
+Cleansed BAM is the major output of XenoCP workflow. The mapped reads in this BAM file are of human origin (including reads in tie BAM) and are mapped to the human genome reference sequence. Any reads deemed to originate from the contaminant organism by XenoCP are set to 'unmapped'.
 
 <h4 id="contam-list">Contamination files</h4>
 
