@@ -656,8 +656,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#auxilary-files" title="Auxilary Files" class="md-nav__link">
-    Auxilary Files
+  <a href="#auxiliary-files" title="Auxiliary Files" class="md-nav__link">
+    Auxiliary Files
   </a>
   
 </li>
@@ -1071,8 +1071,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#auxilary-files" title="Auxilary Files" class="md-nav__link">
-    Auxilary Files
+  <a href="#auxiliary-files" title="Auxiliary Files" class="md-nav__link">
+    Auxiliary Files
   </a>
   
 </li>
@@ -1628,7 +1628,7 @@ of this guide. Here, we will discuss each of the different output files in more 
 the results. <strong>alignmentStatistics.txt</strong> shows alignment statistics for
 all samples. This file is a plain text tab-delimited file that can be
 opened in Excel or a text editor such as Notepad++. This file contains
-information on the total reads per sample, the percantage of duplicate
+information on the total reads per sample, the percentage of duplicate
 reads and the percentage of mapped reads. An example of this file is
 below. (Within the DNAnexus output directory structure, these files will
 be in the COMBINED_FLAGSTAT directory.)</p>
@@ -1656,19 +1656,19 @@ the LIMMA directory.)</p>
 Paint viewer. (Note: We plan to have links downloaded in the future to
 allow the viewing of these files off of DNAnexus.)</p>
 <p><strong>LIMMA differential expression viewer</strong></p>
-<p>Within LIMMA/VIEWERS direcory (note if no comparisons meet the 3 sample
+<p>Within LIMMA/VIEWERS directory (note if no comparisons meet the 3 sample
 condition, the LIMMA folder will not exist), there will be a viewer file
 for each valid comparison ( *<em>results.</em>.txt.viewer**). Simply select
 the file and press 'Launch viewer' in the lower right. A viewer will pop
 up showing both the MA Plot and Volcano plot. By moving the mouse over a
-circle, the circle will hilight and the corresponding gene on the other
-graph will also hilight. Additional information about the gene and its
+circle, the circle will highlight and the corresponding gene on the other
+graph will also highlight. Additional information about the gene and its
 expression values will also be shown. One can also type in multiple gene
 symbols in the provided text box. By pressing 'Show gene labels' all
 these genes will show up on the plots.</p>
 <p><img alt="" src="../../../images/guides/tools/warden/ma_volcano.png" /></p>
 <p><strong>Simple differential expression viewer</strong></p>
-<p>There will also be a viewer for the simple differential expresssion
+<p>There will also be a viewer for the simple differential expression
 analysis in SIMPLE_DIFEX/VIEWERS. The P-value for the results have all
 been set to 1, so the volcano plot will not be relevant.</p>
 <p><strong>bigWig viewer</strong></p>
@@ -1688,13 +1688,13 @@ genome should be visible.</p>
 - (Within the DNAnexus output directory structure, these files will be in the LIMMA directory.)</p>
 <ul>
 <li>
-<p>For plain text results from the simple differential expresison analysis, the files will be named <code class="codehilite"><span class="n">simpleDE</span><span class="p">.</span><span class="o">*</span><span class="p">.</span><span class="n">txt</span></code>. (Within the DNAnexus output directory structure, these files will be in the SIMPLE_DIFEX directory.)</p>
+<p>For plain text results from the simple differential expression analysis, the files will be named <code class="codehilite"><span class="n">simpleDE</span><span class="p">.</span><span class="o">*</span><span class="p">.</span><span class="n">txt</span></code>. (Within the DNAnexus output directory structure, these files will be in the SIMPLE_DIFEX directory.)</p>
 </li>
 <li>
 <p>Prelabelled MA and volcano plots are provided for the analysis. These files are labeled <code class="codehilite"><span class="n">maPlot</span><span class="p">.</span><span class="o">*</span><span class="p">.</span><span class="n">png</span></code> and <code class="codehilite"><span class="n">volcanoPlot</span><span class="p">.</span><span class="o">*</span><span class="p">.</span><span class="n">png</span></code> where <code class="codehilite"><span class="o">*</span></code> is the comparison (e.g. ko_vs_wt)</p>
 </li>
 <li>
-<p>The MA plot shows the average expression of the gene on the X-axis, and Log2 fold change between condition/phenotype is on the Y-axis (if the name is for example maPlot.condition2-condition1.png then the fold change would represent condition1 minus condition2). Each gene is represented by a circle. The top 20 genes (by p-value) are identified on the plot. The genes are color coded by the chosen multiple testing correction method (False Discovery Rate (FDR) by default. An exmaple MA plot can be seen below. (Within the DNAnexus output directory structure, these files will be in the LIMMA directory.)</p>
+<p>The MA plot shows the average expression of the gene on the X-axis, and Log2 fold change between condition/phenotype is on the Y-axis (if the name is for example maPlot.condition2-condition1.png then the fold change would represent condition1 minus condition2). Each gene is represented by a circle. The top 20 genes (by p-value) are identified on the plot. The genes are color coded by the chosen multiple testing correction method (False Discovery Rate (FDR) by default. An example MA plot can be seen below. (Within the DNAnexus output directory structure, these files will be in the LIMMA directory.)</p>
 </li>
 </ul>
 <p><img alt="" src="../../../images/guides/tools/warden/maPlot.png" /></p>
@@ -1725,9 +1725,9 @@ the SIMPLE_DIFEX directory.)</p>
 <hr />
 <p><strong>Coverage results</strong></p>
 <p>bigWig files will be generated for use in genome browsers (such as IGV
-<a href="http://software.broadinstitute.org/software/igv/">http://software.broadinstitute.org/software/igv/</a>). For each smaple,
+<a href="http://software.broadinstitute.org/software/igv/">http://software.broadinstitute.org/software/igv/</a>). For each sample,
 multiple bigWig files will be found. For all types of sequencing
-strandedness, there will be bigWig files labelled,
+strandedness, there will be bigWig files labeled,
 <strong>*.sortedCoverageFile.bed.bw</strong> where '<em>' is the sample name. For
 stranded data there will also be*.sortedPosCoverageFile.bed.bw</em>* and
 <strong>*.sortedNegCoverageFile.bed.bw</strong> which contains coverage information
@@ -1736,7 +1736,7 @@ for the positive and negative strand of the genome.</p>
 the BIGWIG directory.)</p>
 <hr />
 <p><strong>Quality Control Results (FastQC)</strong></p>
-<p>Within the FastQC directory, foreach sample and read direction there
+<p>Within the FastQC directory, for each sample and read direction there
 will be an html file and a zip file (<strong>*.FastQc.html</strong>
 <strong>*.FastQc.zip</strong> where '*' is the base FastQ name), containing results
 from FastQTC. For the average user the html file is sufficient. This
@@ -1758,8 +1758,8 @@ the ALIGN directory.)</p>
 <p>Additional files created by STAR are provided. More information on these
 files can be found at
 <a href="http://labshare.cshl.edu/shares/gingeraslab/www-data/dobin/STAR/STAR.posix/doc/STARmanual.pdf">http://labshare.cshl.edu/shares/gingeraslab/www-data/dobin/STAR/STAR.posix/doc/STARmanual.pdf</a>.
-<strong>*.SJ.out.tab</strong> contain splice junction information. Fusion detectino
-files are labelled <strong>*.Chimeric.out.bam</strong> and
+<strong>*.SJ.out.tab</strong> contain splice junction information. Fusion detection
+files are labeled <strong>*.Chimeric.out.bam</strong> and
 <strong>*.Chimeric.out.junction</strong>.</p>
 <p>(Within the DNAnexus output directory structure, these files will be in
 the ALIGN directory.)</p>
@@ -1776,7 +1776,7 @@ the <strong>NOTE FIND OUT WHICH DIRECTORY</strong> directory.)</p>
 documentation can be found in <strong>methods.txt</strong></p>
 <p>(Within the DNAnexus output directory structure, these files will be in
 the METHODS directory.)</p>
-<h4 id="auxilary-files">Auxilary Files</h4>
+<h4 id="auxiliary-files">Auxiliary Files</h4>
 <p>This section describes the files that exist within the DNAnexus output
 folder. Most of these files will not be of interest to the average user.
 However, interactive viewers are describe in <a href="#limma-differential-expression-viewer">LIMMA differential
@@ -1796,8 +1796,8 @@ data and are explained in further detail below.</p>
 <p>This directory contains the BAM files described in <a href="#bam-alignment-files">BAM alignment
 files</a> and the chimeric and junction files are
 described in <a href="#chimeric-reads-and-junction-files">Chimeric reads and junction
-files</a>. In adition there are 2 log
-files. <strong>*Log.final.out</strong> has relevant statistics for the alignemnt.
+files</a>. In addition there are 2 log
+files. <strong>*Log.final.out</strong> has relevant statistics for the alignment.
 The <strong>*.Log.out</strong> file just contains a log of the analysis run,
 including input parameters. Per sample FLAGSTAT results are found in
 <strong>*.flagStatOut.txt</strong>. These flagstat files are combined into the file
@@ -1972,7 +1972,7 @@ form</a>.</p>
           </div>
         
         
-        built from <a href="https://github.com/stjude/sjcloud-docs/tree/78c9463">78c9463</a> using
+        built from <a href="https://github.com/stjude/sjcloud-docs/tree/abc87a0">abc87a0</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
