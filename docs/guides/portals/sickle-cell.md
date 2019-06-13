@@ -1,4 +1,4 @@
-The Sickle Cell Genomics Portal contains two viewers for the exploration of data from the  [Sickle Cell Genome Project (SGP)](../glossary/data-access-unit#sickle-cell-genome-project-(sgp)) dataset.
+The Sickle Cell Genomics Portal contains two viewers for the exploration of data from the  [Sickle Cell Genome Project (SGP)](../glossary/data-access-unit#sickle-cell-genome-project-sgp) dataset.
 
 ## Genome Browser
 
@@ -13,7 +13,7 @@ A description of the elements of the browser are as follows:
 | 1| Navigation tools and track selector. ([See Navigation Buttons section](#navigation-buttons))  | 
 |2|    DNase hypersensitivity tracks.  By default, four epigenetic tracks are shown.  These are DNAse hypersensitivity tracks for Hematopoeitic stem cells (HSC), T Cells, Monocytes, and B Cells.  Additional tracks can be viewed by selecting the ‘Tracks’ button (See Adding/Removing Tracks section below)  |  
 |3 | RefSeq genes.  Gene models from the RefSeq database are displayed in this tracks. | 
-|4 |-log10 of the p-value of the association of each variants with pain rate in individuals with Sickle Cell Disease.  The analysis has only been performed around the  KIAA1109/Tenr/IL2/IL21 region.   Each dot on the track represents a genomic variant (Single Nucleotide Variant (SNV) or small insertion/deletion (INDEL)).  The Y-axis for the track represents the -log10 of the p-value.  The higher the value, the more stastically significant the association between the variant and pain rate is.  Clicking on a variant will open op a window that gives further details about the variant.  (See Figure 3). | 
+|4 |-log10 of the p-value of the association of each variants with pain rate in individuals with Sickle Cell Disease.  The analysis has only been performed around the  KIAA1109/Tenr/IL2/IL21 region.   Each dot on the track represents a genomic variant (Single Nucleotide Variant (SNV) or small insertion/deletion (INDEL)).  The Y-axis for the track represents the -log10 of the p-value.  The higher the value, the more statistically significant the association between the variant and pain rate is.  Clicking on a variant will open op a window that gives further details about the variant.  (See Figure 3). | 
 |5 | -log10 of the p-value of the association of each variants with age of first vaso-occlusive crisis in individuals with Sickle Cell Disease.  See (4) above for more information on this type of track. | 
 |6| Filters: Filters allow variants within tracks to be filtered by numerous citeria.  [See Filter description](#filters)|
 
@@ -39,7 +39,7 @@ A description of the elements of the browser are as follows:
 | a| Filters for pain rate p-value track | 
 |b|  Filters for age of first vaso-occlusive crisis (VOC) p-value |  
 |c | The highlighted filter shows which value is  used for the Y-axis on the browser track.  The value can be changed. | 
-|d | A highligthed value within a filter shows which filter value is set.  The number next to the filter represents the number of individuals that meet the filter criteria.| 
+|d | A highlighted value within a filter shows which filter value is set.  The number next to the filter represents the number of individuals that meet the filter criteria.| 
 
 
 ### Getting Started
@@ -76,7 +76,7 @@ One can scroll down to see additional tracks.  Try selecting and unselecting var
 #### Getting DNA sequence
 Select the 'More' button at the top of the browser.
 ![](../../images/guides/portals/sickle-cell/more.png)
-Several options will be avaialble.  Select the DNA sequence button.
+Several options will be available.  Select the DNA sequence button.
 ![](../../images/guides/portals/sickle-cell/DNASequenceCircled.png)
 You will be shown the DNA sequence for the region.
 ![](../../images/guides/portals/sickle-cell/DNASequenceShown.png)
@@ -96,7 +96,7 @@ The different elements of the view are as follows.
 | 1| Settings and sort buttons.  In addition a link to this help document. | 
 |2|  Legend for different tracks in the viewer |  
 |3 | Phenotypic data displayed with an individual represented in each column | 
-|4 | Gentoypic data displayed with an individual represented in each column | 
+|4 | Genotypic data displayed with an individual represented in each column | 
 
 ### Labels
 [See glossary for further details](#glossary)
@@ -122,7 +122,7 @@ The following graph shows individuals sorted by MCV.  Blank columns represent no
 ![](../../images/guides/portals/sickle-cell/PhenoVariantPainSorted.png)
 
 #### View values for all patients
-Hovering over one column will enable the viewing of all  phenotypic values for that patient.
+Hovering over one column will enable the viewing of all phenotypic values for that patient.
 
 #### Undo
 While exploring the data, one may inadvertently sort or remove data.  One can undo the changes by selecting the undo button at the top of the viewer.  The redo button will revert the undo.
@@ -133,9 +133,9 @@ While exploring the data, one may inadvertently sort or remove data.  One can un
 <a name="hbf"></a>
 
 * **Fetal hemoglobin (HbF)**
-Fetal hemoglobin contains two subunits of gamma-globin and two units of alpha-globin, while adult hemoglobin contains two subuints of beta-globin and two units of alpha-globin. 
+Fetal hemoglobin contains two subunits of gamma-globin and two units of alpha-globin, while adult hemoglobin contains two subunits of beta-globin and two units of alpha-globin. 
 
-* **Heriditary persistance of fetal hemoglobin (HPFH)**
+* **Heriditary persistence of fetal hemoglobin (HPFH)**
 Individuals with HPFH have elevated levels of fetal hemoglobin. These elevated levels reduce or eliminate many of the symptoms of Sickle Cell Disease.
 
 * **Principal Component Analysis (PCA)**

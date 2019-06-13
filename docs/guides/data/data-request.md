@@ -17,7 +17,7 @@ environment.
     If you would like to download the data to local storage, there are
     extra steps you'll need to follow such as [getting additional signatures](../../guides/forms/how-to-fill-out-DAA#data-download-permission)
     on your data access agreement. We recommend that you work with the data
-    in the cloud if it's feasible; the data provided by St. Jude is free, the compute charges are reasonable, and working in the cloud helps to eliminate the long, error-prone downloading process. Porting your tools to be run in the cloud is easy, as well. We recommend you follow [this guide](../../guides/data/run-your-tools) to get started.
+    in the cloud if it's feasible; the data provided by St. Jude is free, the compute charges are reasonable, and working in the cloud helps to eliminate the long, error-prone downloading process. Porting your tools to be run in the cloud is easy, as well. We recommend you follow [this guide](../../guides/data/creating-a-cloud-app) to get started.
 
 ## Selecting Data
 
@@ -84,7 +84,7 @@ This will direct you to the [Manage Data](https://platform.stjude.cloud/requests
 
 ![](../../images/guides/data/request-data-new-2.png)
 
-If you already have access to the data that you requested, your data will be vended to you immediately. Otherwise, the status of your request will say *Pending* while your request is routed to the respective [Data Access Committee(s)](../../glossary.md#data-access-committee) for evaluation. Request approval typically takes a week or two if your data access agreement is correctly and completely filled out. You will receive automated emails from notifications@stjude.cloud at the time that your request is recieved and once your request is approved.
+If you already have access to the data that you requested, your data will be vended to you immediately. Otherwise, the status of your request will say *Pending* while your request is routed to the respective [Data Access Committee(s)](../../glossary.md#data-access-committee) for evaluation. Request approval typically takes a week or two if your data access agreement is correctly and completely filled out. You will receive automated emails from notifications@stjude.cloud at the time that your request is received and once your request is approved.
 
 !!! note 
     If you receive an email from us that your DAA is incomplete, you may edit your DAA and upload the revised copy using the 'Add a Form' button the on Manage Data page. 

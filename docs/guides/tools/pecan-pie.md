@@ -16,7 +16,7 @@ may predispose individuals to cancer. It is free for non-commercial use.
 
 Pecan PIE utilizes St. Jude Medal Ceremony, the same pipeline that
 powers our clinical and research genomics projects. Medal Ceremony
-provides a 3-level ranking of putative pathogenity - Gold, Silver or
+provides a 3-level ranking of putative pathogenicity - Gold, Silver or
 Bronze - for mutations within disease-related genes. Medal assignment is
 based on matches to 22 mutation databases, mutation type, population
 frequency, tumor suppressor status and predicted functional impact. The
