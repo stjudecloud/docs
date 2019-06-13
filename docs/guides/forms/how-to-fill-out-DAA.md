@@ -1,6 +1,7 @@
 #Filling Out The DAA
 
-Please read carefully through the first 5 pages of the [Data Access Agreement (DAA)](../../glossary.md#data-access-agreement) which consist of Terms and Conditions that you and your institution must agree to in order to access any data on St. Jude Cloud.
+For the latest version of the [Data Access Agreement (DAA)](../../glossary.md#data-access-agreement) click
+[here](https://platform.stjude.cloud/access_form). Please read the first 5 pages carefully, which consist of terms and conditions that you and your institution must agree to in order to access any data on St. Jude Cloud.
 
 Next, ensure that you have correctly filled out the 5 required sections of the DAA (Note that there are [2 additional required sections](#data-download-permission) if you intend to download data):
 
@@ -51,23 +52,3 @@ you will also need to include the following:
 If your DAA is incomplete (for example you missed a required signature or neglected to check the box next to a dataset for which you requested data), you will be contacted by a member of the St. Jude Cloud team. Once you have made the required edits, you can reupload a revised DAA through the [Manage Data page](https://platform.stjude.cloud/requests/manage) by clicking on the *Add a Form* button.
 
 ![](../../images/guides/forms/daa-7.png)
-
-
-
-### Frequently Asked Questions
-
-**Q. Why do I need to sign the DAA?**
-
-**A.** Although the DAA serves many purposes, the terms included in the data access
-agreement are ultimately in place to protect our patients. We take
-patient security very seriously, and we require that requesters are
-committed to protecting that privacy to the fullest extent.
-
-**Q. Where can I find the latest version of the DAA?**
-
-**A.** We keep [our site](../data/data-request/#submit-your-data-request) up to date with the latest version on the Data Access Agreement for you to download, or you can download a copy
-[here](https://platform.stjude.cloud/access_form).
-
-**Q. Where do I submit the DAA??**
-
-**A.** You can submit your Data Access Agreement in the drag and drop box on the last step of submitting your data request.
