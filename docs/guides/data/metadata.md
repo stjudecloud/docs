@@ -31,11 +31,11 @@ Also included is a set of phenotypic information queried from the physician or r
 | Property                   | Description                                                                                                                                                                                                                                                                |
 | ---------------------      | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | attr_age_at_diagnosis      | Age at first diagnosis. This field is normalized as a decimal value. If empty, the physician or research team did not indicate a value for this field.                                             |
-| attr_diagnosis             | Primary diagnosis.                                                                                               |
+| attr_diagnosis             | Primary diagnosis reported by the clinic.                                                                                               |
 | attr_ethnicity             | Self-reported ethnicity. Values are normalized according to the [US Census Bureau classifications][censusburea]. |
 | attr_race                  | Self-reported race. Values are normalized according to the [US Census Bureau classifications][censusburea].      |
 | attr_sex                   | Self-reported sex.                                                                                               |
-| attr_oncotree_disease_code | The disease code mapping as specified by Oncotree Version [2019-03-01][oncotree_2019_03_01]
+| attr_oncotree_disease_code | The disease code (assigned at the time of genomic sequencing) as specified by Oncotree Version [2019-03-01][oncotree_2019_03_01]
 
 ### Short Disease Code Mapping
 
