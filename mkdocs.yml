@@ -1,4 +1,5 @@
 site_name: 'St. Jude Cloud Documentation'
+site_url: 'https://www.stjude.cloud/docs/'
 theme:
   name: 'material'
   custom_dir: 'mkdocs-material/material'
