@@ -720,6 +720,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-can-i-run-an-analysis-workflow-on-multiple-sample-files-at-the-same-time" title="How can I run an analysis workflow on multiple sample files at the same time?" class="md-nav__link">
+    How can I run an analysis workflow on multiple sample files at the same time?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-can-i-connect-to-dnanexus-api-via-ssh-on-a-windows-machine" title="How can I connect to DNAnexus API via SSH on a Windows machine?" class="md-nav__link">
     How can I connect to DNAnexus API via SSH on a Windows machine?
   </a>
@@ -910,6 +917,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-can-i-run-an-analysis-workflow-on-multiple-sample-files-at-the-same-time" title="How can I run an analysis workflow on multiple sample files at the same time?" class="md-nav__link">
+    How can I run an analysis workflow on multiple sample files at the same time?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-can-i-connect-to-dnanexus-api-via-ssh-on-a-windows-machine" title="How can I connect to DNAnexus API via SSH on a Windows machine?" class="md-nav__link">
     How can I connect to DNAnexus API via SSH on a Windows machine?
   </a>
@@ -989,7 +1003,8 @@
 <a href="#can-i-get-a-copy-of-irb-consent-forms">Can I get a copy of IRB consent forms?</a><br />
 <a href="#can-i-request-fastq-files-on-st-jude-cloud">Can I request FASTQ files on St. Jude Cloud?</a>  </p>
 <p><strong>Technical Questions</strong><br />
-<a href="#how-can-i-explore-and-manipulate-data-files-stored-on-the-cloud-without-downloading-the-files-to-my-local-machine">How can I explore and manipulate data files stored on the cloud without downloading the files to my local machine?</a>  <br />
+<a href="#how-can-i-explore-and-manipulate-data-files-stored-on-the-cloud-without-downloading-the-files-to-my-local-machine">How can I explore and manipulate data files stored on the cloud without downloading the files to my local machine?</a><br />
+<a href="#how-can-i-run-an-analysis-workflow-on-multiple-sample-files-at-the-same-time">How can I run an analysis workflow on multiple sample files at the same time?</a><br />
 <a href="#how-can-i-connect-to-dnanexus-api-via-ssh-on-a-windows-machine">How can I connect to DNAnexus API via SSH on a Windows machine?</a><br />
 <a href="#why-am-i-getting-a-connectivity-error-when-connecting-to-dnanexus-api-via-ssh">Why am having trouble connecting to DNAnexus API via SSH?</a>  </p>
 <p><strong>Publication Questions</strong><br />
@@ -1057,6 +1072,19 @@ committed to protecting that privacy to the fullest extent.</p>
 <p>We do not share FASTQ formats, but several tools exist that you can leverage to revert BAM to FASTQ files. (We recommend using Picard SamToFastq to revert BAM files.) You can efficiently revert BAMs to FASTQs in the cloud by wrapping the conversion tool of your choice into a <a href="../guides/data/creating-a-cloud-app/">Cloud App</a>.</p>
 <h3 id="how-can-i-explore-and-manipulate-data-files-stored-on-the-cloud-without-downloading-the-files-to-my-local-machine">How can I explore and manipulate data files stored on the cloud without downloading the files to my local machine?</h3>
 <p>You can quickly and easily interact with data files using the DNAnexus cloud workstation app. See <a href="https://wiki.dnanexus.com/Developer-Tutorials/Cloud-Workstations">this guide</a> to help you setup and run the app. Note that if you are doing any type of large-scale, multi-sample analysis, espescially if you plan to repeat the analysis or want to run in parallel, you will want to <a href="../guides/data/creating-a-cloud-app/">write your own cloud app</a> rather than use the cloud workstation app.</p>
+<h3 id="how-can-i-run-an-analysis-workflow-on-multiple-sample-files-at-the-same-time">How can I run an analysis workflow on multiple sample files at the same time?</h3>
+<p>The DNAnexus interface does have a batch tool available; however, it is in early testing, so we recommend using dx-toolkit on the command line as the most reliable and user friendly approach to batch and submit jobs. You can find our documentation on how to install and get started with dx-toolkit <a href="../guides/data/command-line/">here</a>. You may also refer to the sample script below that loops through all the BAM files in the <code class="codehilite"><span class="k">data</span></code> folder and submits a job using the BAM and matching index file.   </p>
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="nv">bam</span> <span class="nv">in</span> $<span class="ss">(</span><span class="nv">dx</span> <span class="nv">ls</span> <span class="s1">&#39;</span><span class="s">/data/*.bam</span><span class="s1">&#39;</span><span class="ss">)</span><span class="c1">; do  </span>
+  <span class="nv">dx</span> <span class="nv">run</span> \  
+    <span class="o">--</span><span class="nv">yes</span> \  
+    <span class="o">--</span><span class="nv">input</span> <span class="s2">&quot;</span><span class="s">0.BAM=/data/$bam</span><span class="s2">&quot;</span> \
+    <span class="o">--</span><span class="nv">input</span> <span class="s2">&quot;</span><span class="s">0.BAM_INDEX=/data/$bam.bai</span><span class="s2">&quot;</span> \
+    <span class="s2">&quot;</span><span class="s">$PROJECT_ID:/Rapid RNA-Seq (BAM)</span><span class="s2">&quot;</span>
+<span class="nv">done</span>
+</pre></div>
+
+
+<p>Note that this sample script assumes that the BAM and index files are in the <code class="codehilite"><span class="k">data</span></code> folder and the Rapid RNA-Seq analysis workflow is in the project. <code class="codehilite"><span class="err">$</span><span class="n">PROJECT_ID</span></code> can be set to your project dxid, and <code class="codehilite"><span class="n">Rapid</span> <span class="n">RNA</span><span class="o">-</span><span class="n">Seq</span> <span class="p">(</span><span class="n">BAM</span><span class="p">)</span></code> can be changed to the workflow you want to run.</p>
 <h3 id="how-can-i-connect-to-dnanexus-api-via-ssh-on-a-windows-machine">How can I connect to DNAnexus API via SSH on a Windows machine?</h3>
 <p>To connect via SSH on a Windows machine we recommend using Windows Subsystem for Linux (WSL) or a Linux virtual machine.<br />
 The WSL method:<br />
@@ -1151,7 +1179,7 @@ Select a sample and click info to see more.</p>
           </div>
         
         
-        built from <a href="https://github.com/stjude/sjcloud-docs/tree/78c9da9">78c9da9</a> using
+        built from <a href="https://github.com/stjude/sjcloud-docs/tree/fc0f84e">fc0f84e</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
