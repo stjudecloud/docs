@@ -23,7 +23,8 @@
 
 
 **Technical Questions**  
-[How can I explore and manipulate data files stored on the cloud without downloading the files to my local machine?](#how-can-i-explore-and-manipulate-data-files-stored-on-the-cloud-without-downloading-the-files-to-my-local-machine)    
+[How can I explore and manipulate data files stored on the cloud without downloading the files to my local machine?](#how-can-i-explore-and-manipulate-data-files-stored-on-the-cloud-without-downloading-the-files-to-my-local-machine)  
+[How can I run an analysis workflow on multiple sample files at the same time?](#how-can-i-run-an-analysis-workflow-on-multiple-sample-files-at-the-same-time)  
 [How can I connect to DNAnexus API via SSH on a Windows machine?](#how-can-i-connect-to-dnanexus-api-via-ssh-on-a-windows-machine)  
 [Why am having trouble connecting to DNAnexus API via SSH?](#why-am-i-getting-a-connectivity-error-when-connecting-to-dnanexus-api-via-ssh)  
 
@@ -115,6 +116,19 @@ We do not share FASTQ formats, but several tools exist that you can leverage to 
 
 ### How can I explore and manipulate data files stored on the cloud without downloading the files to my local machine?
 You can quickly and easily interact with data files using the DNAnexus cloud workstation app. See [this guide](https://wiki.dnanexus.com/Developer-Tutorials/Cloud-Workstations) to help you setup and run the app. Note that if you are doing any type of large-scale, multi-sample analysis, espescially if you plan to repeat the analysis or want to run in parallel, you will want to [write your own cloud app](./guides/data/creating-a-cloud-app.md) rather than use the cloud workstation app.
+
+### How can I run an analysis workflow on multiple sample files at the same time?  
+The DNAnexus interface does have a batch tool available; however, it is in early testing, so we recommend using dx-toolkit on the command line as the most reliable and user friendly approach to batch and submit jobs. You can find our documentation on how to install and get started with dx-toolkit [here](./guides/data/command-line.md). You may also refer to the sample script below that loops through all the BAM files in the `data` folder and submits a job using the BAM and matching index file.   
+~~~~
+for bam in $(dx ls '/data/*.bam'); do  
+  dx run \  
+    --yes \  
+    --input "0.BAM=/data/$bam" \
+    --input "0.BAM_INDEX=/data/$bam.bai" \
+    "$PROJECT_ID:/Rapid RNA-Seq (BAM)"
+done
+~~~~  
+Note that this sample script assumes that the BAM and index files are in the `data` folder and the Rapid RNA-Seq analysis workflow is in the project. `$PROJECT_ID` can be set to your project dxid, and `Rapid RNA-Seq (BAM)` can be changed to the workflow you want to run.
 
 ### How can I connect to DNAnexus API via SSH on a Windows machine?
 To connect via SSH on a Windows machine we recommend using Windows Subsystem for Linux (WSL) or a Linux virtual machine.  
