@@ -128,7 +128,7 @@ for bam in $(dx ls '/data/*.bam'); do
     "$PROJECT_ID:/Rapid RNA-Seq (BAM)"
 done
 ~~~~  
-Note that this sample script assumes that the BAM and index files are in the `data` folder and the Rapid RNA-Seq analysis workflow is in the project. `$PROJECT_ID` can be set to your project dxid, and `Rapid RNA-Seq` can be changed to whichever workflow you are running.  
+Note that this sample script assumes that the BAM and index files are in the `data` folder and the Rapid RNA-Seq analysis workflow is in the project. `$PROJECT_ID` can be set to your project dxid, and `Rapid RNA-Seq (BAM)` can be changed to the workflow you want to run.
 
 ### How can I connect to DNAnexus API via SSH on a Windows machine?
 To connect via SSH on a Windows machine we recommend using Windows Subsystem for Linux (WSL) or a Linux virtual machine.  
