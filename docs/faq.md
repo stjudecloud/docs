@@ -144,7 +144,7 @@ and are getting a connectivity error, it may be that your firewall is too restri
 We are currently in progress of preparing a paper for St. Jude Cloud. In the meantime, please refer to the [citation table](index.md#citing-st-jude-cloud) on the Welcome page.
 
 ### When can I publish my findings using St. Jude Cloud data?
-Once the [embargo date](glossary.md#embargo-date) for the St. Jude datasets that you've used in your reserach has passed, you are legally permitted to publish results based on that data.
+Once the [embargo date](glossary.md#embargo-date) for the St. Jude datasets that you've used in your research has passed, you are legally permitted to publish results based on that data.
 
 ### Where can I find the embargo date?
 

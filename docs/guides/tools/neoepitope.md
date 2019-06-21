@@ -73,7 +73,7 @@ mutation or gene fusion. Fusion junctions can be identified using RNA-Seq
 by fusion detection tools (Li et. al, unpublished). NetMHCcons[^3] is subsequently 
 used to predict affinities of the peptide array for each HLA receptor in 
 each sample. The neoepitope with affinity lower than the threshold will 
-be highlighted in output file (default 500 nM).
+be highlighted in output file (default 500 nM). Below is an outline of internal steps the algorithm performs in order to generate the final report.
 
 1.  Check the version of the genomic position of the input SNV/fusion
     file.

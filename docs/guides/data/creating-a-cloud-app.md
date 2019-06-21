@@ -19,7 +19,7 @@ In this tutorial, we will be wrapping the [FastQC](https://www.bioinformatics.ba
 
 ## Data
 
-For this tutorial, I have requested the PCGP dataset and once my access request has been approved, my project directory space will look like the following.
+For this tutorial I have requested the PCGP dataset, and once my access request has been approved, my project directory space will look like the following.
 
 ![](../../images/guides/data/creating-a-cloud-app-0.png)
 

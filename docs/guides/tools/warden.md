@@ -12,8 +12,7 @@ analysis, gene counts and differential expression analysis.
 
 **Inputs**
 
-The WARDEN workflow requires 2 types of input files and along with two
-required parameters to be set. All other parameters are preset with sane defaults.
+The WARDEN workflow requires two types of input files and that two parameters be set manually. All other parameters are preset with reasonable defaults.
 
 | Name | Type | Description | Example |
 |---|---|---|---|
@@ -78,15 +77,6 @@ file(s) using the [data transfer application](../data/data-transfer-app.md)
 or by uploading them through [the command line](../data/command-line.md).
 Both of the guides linked here will contain more details on how to upload
 data using that method, so we defer to those guides here.
-
-!!! tip
-    If you plan to upload data through the St. Jude Cloud Data Transfer application
-    (recommended), you can click the "Upload Data" button in the left panel. If you
-    have not already downloaded the app, do so by clicking "Download app". Once you
-    have the app, you can click "Open app" to open the app with the tool's cloud 
-    workspace already opened and ready to drag-and-drop files into it!
-
-    For more information, check out the [data transfer application](../data/data-transfer-app.md) guide.
 
 ## Sample sheet
 
@@ -310,13 +300,13 @@ and even viewing the job logs can accessed by clicking around the sub-items.
 
 Each tool in St. Jude Cloud produces a visualization that makes understanding
 results more accessible than working with excel spreadsheet or tab delimited
-files. This is the primary way we recommend you work with your results. We also
+files. This is the primary way we recommend you work with your WARDEN results. We also
 include the raw output files for you to dig into if the visualization is not 
 sufficient to answer your research question.
 
 ### Finding the raw results files
 
-Navigate to the [tool's landing page](https://platform.stjude.cloud/tools/rapid_rna-seq). 
+Navigate to the [tool's landing page](https://platform.stjude.cloud/tools/warden). 
 In the left hand pane, click "View Results" then "View Results Files". You will
 be taken to the filesystem view your cloud workspace. This is similar to your the
 filesystem on your computer, and you can do many common operations such as deleting,
@@ -326,85 +316,7 @@ renaming, and moving files.
 
 ### Navigating Results
 
-!!! note
-    Navigating to the raw results of your runs is the same for all
-    pipelines. This guide will feature the <span
-    role="ref">rapid-rnaseq</span> pipeline, but you can follow along for
-    any tool.
-
-#### Raw result files
-
-Navigate to your tool's description page (for instance, Rapid RNA-Seq's
-description page is
-[here](https://platform.stjude.cloud/tools/rapid_rna-seq)). You should
-see a screen similar to the one in the screenshot below. In the left
-hand pane, select "View Results Files".
-
-![Click "View Results Files"](../../images/guides/tools/common/raw-results.png)
-
-You should now be in the tool's workspace with access to files that you
-uploaded and results files that are generated. How/where the result
-files are generated are specific to each pipeline. Please refer to your
-individual pipeline's documentation on where the output files are kept.
-
-![](../../images/guides/tools/common/raw-results-success.png)
-
-#### Custom visualization results
-
-Navigate to your tool's description page (for instance, Rapid RNA-Seq's
-description page is
-[here](https://platform.stjude.cloud/tools/rapid_rna-seq)). You should
-see a screen similar to the one in the screenshot below. In the left
-hand pane, select "Visualize Results".
-
-![Click "Visualize Results"](../../images/guides/tools/common/visualize-results.png)
-
-You should now be in the tool's workspace with access to files that you
-uploaded and results files that are generated. How/where the result
-files are generated are specific to each pipeline. Please refer to your
-individual pipeline's documentation on where the output files are kept.
-
-![](../../images/guides/tools/common/visualize-results-success.png)
-
-### Interpreting results
-
-The complete output file specification is listed in the [overview section](#overview)
-of this guide. Here, we will discuss each of the different output files in more detail.
-
-* **Predicted gene fusions**: The putative gene fusions will be
-  contained in the file `[SAMPLE].final_fusions.txt`. This file is a
-  tab-delimited file containing many fields for each of the predicted
-  SV. The most important columns are the following.
-
-| Field Name | Description |
-|--|--|
-| `sample` | Sample name |
-| `gene*` | Gene name |
-| `chr*` | Chromosome name |
-| `pos*` | Genomic Location |
-| `ort*` | Strand |
-| `reads*` | Supporting reads |
-| `medal` | Estimated pathogenicity assessment using St. Jude Medal Ceremony |
-
-* **Coverage file**: A standard
-    [bigWig](https://genome.ucsc.edu/goldenpath/help/bigWig.html) file
-    used to describe genomic read coverage.
-* **Splice junction read counts**: A custom file format describing the
-    junction read counts. The following fields are included in the
-    tab-delimited output file.
-
-| Field Name  | Description |
-|--|--|
-| `junction` | Splice junction in the TCGA format "chrX:start:+,chrX:end,+". "start" and "end" are the 1-based position of the last mapped nucleotide before the skip and the first mapped nucleotide after the skip (i.e. the last base of the previous exon and the first base of the next exon). Note that in `.bed` output these coordinates will be different, see the .bed output section below. The "+" is currently hardcoded, though this may change in the future. |
-| `count` | Raw count of reads supporting the junction. During correction counts for ambiguous junctions can be combined, though obviously these additional reads will not be visible in the raw BAM file. |
-| `type` | Either "known" (matching a reference junction) or "novel" (not observed in the reference junction collection). |
-| `genes` | Gene symbols from the junction calling process. These still need work in the raw junction calling process, it's recommended to use the "annotated" output files instead which assign matching HUGO gene symbols based on the UCSC refGene table. |
-| `transcripts` | List of known transcript IDs matching the junction. |
-| `qc_flanking` | Count of supporting reads passing flanking sequence checks (junctions observed adjacent to read ends require 18+ nt of flanking sequence, otherwise 10+ nt). |
-| `qc_plus` | Count of supporting reads aligned to the + strand. |
-| `qc_minus` | Count of supporting reads aligned to the - strand. |
-| `qc_perfect_reads` | Count of supporting reads with perfect alignments (no reference mismatches of quality 15+, indels, or soft clips). |
-| `qc_clean_reads` | Count of supporting reads whose alignments are not perfect but which have a ratio of <= 5% of reference mismatches of quality 15+, indels, or soft clips relative to the count of aligned bases on both the left and right flanking sequence. Note: qc_clean_reads does NOT include qc_perfect_reads: to get a count of "perfect plus pretty good" reads the two values must be added together. |
+Navigating to the raw results of your runs is the same for all pipelines. Hence, we refer you to the [Navigating Results](../tools/rapid-rnaseq.md#navigating-results) section of the Rapid RNA-Seq pipeline documentation. You can follow along for WARDEN, and then return to this page for interpreting results.
 
 ### Primary Results
 
@@ -740,31 +652,6 @@ contrastsFile.txt, and limmaSampleList.txt which are used internally.
 simpleDifEx.methods.txt is an intermediate file describing methods.
 Out.tar.gz is used for testing purposes. The sessionInfo.txt file
 describe the R session working parameters and modules loaded.
-
-## Known Issues
-
-!!! caution "Adapter contamination"
-    This pipeline does not, at present, remove adapter sequences. If the
-    sequencing library is contaminated with adapters, CICERO runtimes can
-    increase exponentially. We recommend running FastQ files through a QC
-    pipeline such as FastQC and trimming adapters with tools such as
-    Trimmomatic if adapters are found.
-
-!!! caution "High coverage regions"
-    Certain cell types show very high transcription of certain loci, for
-    example, the immunoglobulin heavy chain locus in plasma cells. The
-    presence of very highly covered regions (typically 100,000-1,000,000+ X)
-    has an adverse effect on CICERO runtimes. Presently, we have no good
-    solution to this problem as strategies such as down-sampling may reduce
-    sensitivity over important regions of the genome.
-
-!!! bug "Interactive Visualizations Exon vs Intron Nomenclature"
-    When a codon is split over a fusion gene junction, the annotation
-    software marks the event as intronic when really, the event should be
-    exonic. We are working to fix this bug. In the mean time, if a fusion is
-    predicted to be in frame but the interactive plot shows "intronic", we
-    suggest the user blat the contig shown just below to clarify if the true
-    junction is either in the intron or exon.
 
 ## Frequently Asked Questions
 

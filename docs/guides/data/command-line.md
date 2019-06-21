@@ -73,7 +73,7 @@ user has selected the Rapid RNA-Seq tool.
 Moving data back and forth between the cloud and your local computer is
 simple once you have selected the correct project for your tool.
 
-You will find that many common Linux commands with `#!python dx` prepended.
+You will find that many common Linux commands with `#!python dx` prepended work as expected.
 
 ```bash
 # list available files for the tool for the main folder
