@@ -557,7 +557,7 @@ See [bigWig viewer](#bigwig-viewer)
 -----------------
 **COMBINED_FLAGSTAT**
 
-This directory contains the **alignmentStatistics.txt** file which contains the combined alignment statistics from all samples.  It is generated from the flagstat files describe in the ALIGN directory.
+This directory contains the **alignmentStatistics.txt** file, which contains the combined alignment statistics from all samples.  It is generated from the flagstat files describe in the ALIGN directory.
 
 -----------------
 **COMBINED_HTSEQ**
