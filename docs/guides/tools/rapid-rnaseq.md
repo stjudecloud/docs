@@ -7,7 +7,7 @@
 Fusion genes are important for cancer diagnosis, subtype definition and
 targeted therapy. RNASeq is useful for detecting fusion transcripts; however, computational methods face challenges to identify fusion transcripts
 due to events such as internal tandem duplication (ITD), multiple genes, low
-expression or non-templated insertions. To address some of these challenges, St. Jude Cloud offers "Rapid RNA-Seq", an end-to-end
+expression, or non-templated insertions. To address some of these challenges, St. Jude Cloud offers "Rapid RNA-Seq", an end-to-end
 clinically validated pipeline that detects gene fusions and ITDs from human RNA-Seq.
 
 
