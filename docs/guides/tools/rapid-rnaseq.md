@@ -253,7 +253,7 @@ hand pane, select "Visualize Results".
 
 ![Click "Visualize Results"](../../images/guides/tools/common/visualize-results.png)
 
-You should now see a list of visualization files that the ones shown below.
+You should now see a list of visualization files like the ones shown below.
 
 ![](../../images/guides/tools/common/visualize-results-success.png)
 
