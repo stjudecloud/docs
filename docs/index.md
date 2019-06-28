@@ -20,7 +20,7 @@ You can apply many different capabilities of St. Jude Cloud to your research, su
 * Explore St. Jude datasets through interactive visualizations that we have packaged for the community. For example, visit [PeCan](https://pecan.stjude.cloud) to visually investigate pediatric cancer mutation data.
 * Create manuscript quality figures with *your* data to use in publications or to host on your website with [ProteinPaint](https://pecan.stjude.cloud/proteinpaint/TP53) or [GenomePaint](https://genomepaint.stjude.cloud/). See the [ProteinPaint](./guides/portals/pecan.md#proteinpaint) and [GenomePaint](./guides/portals/genome-paint.md) doc pages for help.
 
-!!!note
+!!! note
     Please note that while it is free to receive and store our data in St. Jude Cloud, there are [compute and storage fees associated with working in the cloud, as well as egress fees for downloading our data](faq.md#will-i-be-charged-for-using-st-jude-cloud). 
 
 ## Datasets
