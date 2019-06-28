@@ -10,7 +10,7 @@ Pecan PIE (the **Pe**diatric **Can**cer Variant **P**athogenicity
 **I**nformation **E**xchange) is a cloud-based variant classification
 and interpretation service. It annotates and ranks variants by putative
 pathogenicity, then displays them in an interactive web interface for
-formal review and classification following ACMG guidelines. The portal
+formal review and classification following [ACMG guidelines](https://www.ncbi.nlm.nih.gov/pubmed/25741868). The portal
 also contains a repository of expert-reviewed germline mutations that
 may predispose individuals to cancer. It is free for non-commercial use.
 
@@ -168,7 +168,7 @@ entered.
 
 **Medal call information**
 
-Clicking on one of the medal icons (gold, silver, bronze, unknown) also
+Clicking on one of the medal icons (gold, silver, bronze, unknown) or
 on the top of the page will show a summary of information related to the
 medal call.
 
@@ -202,7 +202,7 @@ Matches of the variant in ClinVar are also provided, along with
 predicted clinical significance and review status.
 
 Allele frequencies for the variant in the PCGP (somatic and
-germline),NHLBI ESP 6500, and ExAC databases are presented both as
+germline), NHLBI ESP 6500, and ExAC databases are presented both as
 fractional values and on a log10 plot. Detailed allele population
 breakdowns are provided for ExAC.
 
@@ -354,7 +354,7 @@ problems include:
 
 * Missing header line
 * Missing required columns
-* Files compressed by any method other than `bgzip` (`gzip`, `zip`, or any other program)
+* Files were compressed by gzip, zip, or any method other than the required bgzip
 
 To verify compatibility of your VCF you can try one of these methods:
 
@@ -392,7 +392,7 @@ to work. These variants are mapped to GRCh37.
 
 A. Pecan PIE will accept variants mapped to either GRCh37-lite/hg19 or GRCh38.
 GRCh38 variants are automatically lifted over to 37, as the system
-uses 37 internally; the liftover process is able to compensate for
+uses 37 internally. The liftover process is able to compensate for
 strand and reference/variant allele swaps which can occur. A native
 hg38 version is in development, but is not yet available.
 

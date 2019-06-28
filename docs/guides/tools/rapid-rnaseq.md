@@ -5,18 +5,17 @@
 | **Technical Support** | [Contact Us](https://stjude.cloud/contact) |
 
 Fusion genes are important for cancer diagnosis, subtype definition and
-targeted therapy. RNASeq is useful for detecting fusion transcripts.
-Computational methods face challenges to identify fusion transcripts
-arising from internal tandem duplication (ITD), multiple genes, low
-expression or non-templated insertions. Here we present an end-to-end
-clinically validated pipeline "Rapid RNA-Seq" that detects gene fusions
-and ITDs from human RNA-Seq.
+targeted therapy. RNASeq is useful for detecting fusion transcripts; however, computational methods face challenges to identify fusion transcripts
+due to events such as internal tandem duplication (ITD), multiple genes, low
+expression, or non-templated insertions. To address some of these challenges, St. Jude Cloud offers "Rapid RNA-Seq", an end-to-end
+clinically validated pipeline that detects gene fusions and ITDs from human RNA-Seq.
+
 
 ## Overview
 
 **Inputs**
 
-The input can be either of the two entries below based on whether you want to start
+The input can be either of the two entries below, based on whether you want to start
 with FastQ files or a BAM file.
 
 | Name | Description | Example |
@@ -153,14 +152,6 @@ or by uploading them through [the command line](../data/command-line.md).
 Both of the guides linked here will contain more details on how to upload
 data using that method, so we defer to those guides here.
 
-!!! tip
-    If you plan to upload data through the St. Jude Cloud Data Transfer application
-    (recommended), you can click the "Upload Data" button in the left panel. If you
-    have not already downloaded the app, do so by clicking "Download app". Once you
-    have the app, you can click "Open app" to open the app with the tool's cloud 
-    workspace already opened and ready to drag-and-drop files into it!
-
-    For more information, check out the [data transfer application](../data/data-transfer-app.md) guide.
 
 ## Running the tool
 
@@ -205,7 +196,7 @@ gets one row in this table.
 ![](../../images/guides/tools/rapid-rnaseq/monitoring-jobs.gif) 
 
 You can click the "+" on any of the runs to check 
-the status of individual steps of the ChIP-Seq pipeline.
+the status of individual steps of the Rapid RNA-Seq pipeline.
 Other information, such as time, cost of individual steps in the pipeline, 
 and even viewing the job logs can accessed by clicking around the sub-items.
 
@@ -217,8 +208,8 @@ and even viewing the job logs can accessed by clicking around the sub-items.
 ## Analysis of results
 
 Each tool in St. Jude Cloud produces a visualization that makes understanding
-results more accessible than working with excel spreadsheet or tab delimited
-files. This is the primary way we recommend you work with your results. We also
+results more accessible than working with Excel spreadsheets or tab delimited
+files. This is the primary way we recommend you work with your Rapid RNA-Seq results. We also
 include the raw output files for you to dig into if the visualization is not 
 sufficient to answer your research question.
 
@@ -232,6 +223,40 @@ filesystem on your computer, and you can do many common operations such as delet
 renaming, and moving files.
 
 ![](../../images/guides/tools/rapid-rnaseq/rapid-rna-results.png) 
+
+### Navigating Results
+
+#### Raw result files
+
+Navigate to your tool's description page (for instance, Rapid RNA-Seq's
+description page is
+[here](https://platform.stjude.cloud/tools/rapid_rna-seq)). You should
+see a screen similar to the one in the screenshot below. In the left
+hand pane, select "View Results Files".
+
+![Click "View Results Files"](../../images/guides/tools/common/raw-results.png)
+
+You should now be in the tool's workspace with access to files that you
+uploaded and results files that are generated. How/where the result
+files are generated are specific to each pipeline. Please refer to your
+individual pipeline's documentation on where the output files are kept.
+
+![](../../images/guides/tools/common/raw-results-success.png)
+
+#### Custom visualization results
+
+Navigate to your tool's description page (for instance, Rapid RNA-Seq's
+description page is
+[here](https://platform.stjude.cloud/tools/rapid_rna-seq)). You should
+see a screen similar to the one in the screenshot below. In the left
+hand pane, select "Visualize Results".
+
+![Click "Visualize Results"](../../images/guides/tools/common/visualize-results.png)
+
+You should now see a list of visualization files like the ones shown below.
+
+![](../../images/guides/tools/common/visualize-results-success.png)
+
 
 ### Interpreting results
 

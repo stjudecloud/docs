@@ -17,29 +17,15 @@ In this tutorial, we will be wrapping the [FastQC](https://www.bioinformatics.ba
 
 
 
-## Requesting Data
+## Data
 
-After submitting a [data request](../../guides/data/data-request/), it will be sent out for evaluation. Once it has been approved, the data will be vended and it will be accessible in a DNAnexus project. You can view all the available projects and data from the [Manage Data](https://platform.stjude.cloud/requests/manage) page where you can view the request name, creation date, total number of files, what files you have immediate access to, and the status of your request. You will also be able to submit required documentation on the Manage Data page.
-
-If you click on a request, it will take you to the DNAnexus platform, where you can view all the files available to you and your project. When a request is submitted, the project will be created, but the data will not be available until your request has been reviewed and approved. Once approved, you should be able to view all the available data from your request. When the data is vended, it will typically look something like:
-
-```
-project_space/
-├── restricted/
-│   ├── bam/
-│   ├── gVCF/
-│   ├── Somatic_VCF/
-│   └── CNV/
-└── SAMPLE_INFO.txt
-```
-
-The `SAMPLE_INFO.txt` file provides all the metadata associated with the request, and the restricted folder contains all the data separated by file type (for more info, refer to the [Metadata Provided](../../guides/data/metadata.md) section). The other folders will contain the respective file types you included in your request.
-
-After your data access request has been approved, we can begin writing our app.
-
-For this tutorial, I have requested the PCGP dataset and once my access request has been approved, my project directory space will look like the following.
+For this tutorial I have requested the PCGP dataset, and once my access request has been approved, my project directory space will look like the following.
 
 ![](../../images/guides/data/creating-a-cloud-app-0.png)
+
+!!!note
+    If you do not yet have data in a DNAnexus project, you may request data from St. Jude Cloud by following the directions [here](../../guides/data/data-request.md) or you may upload your own data using the [data transfer app](../../guides/data/data-transfer-app.md). In order to make a data request or upload your own data using the data transfer app, you must first [create a St. Jude Cloud account](../../create-an-account.md).
+
 
 ## Writing the Application
 

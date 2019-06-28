@@ -80,7 +80,7 @@ On the Request Data page fill out your name, institution, and project name. Give
 
 Finally, click the green button. If you already have access to the data you selected in the browser, the button will read *Get Data Now*. If you are submitting a DAA and requesting data access, the button will read *Submit Request*.
 
-This will direct you to the [Manage Data](https://platform.stjude.cloud/requests/manage) page where you can see the status of the data request you just made as well the history of any of your previous data requests. 
+This will direct you to the [Manage Data](https://platform.stjude.cloud/requests/manage) page where you can see the status of the data request you just made, as well the history of any of your previous data requests.
 
 ![](../../images/guides/data/request-data-new-2.png)
 
@@ -91,6 +91,17 @@ If you already have access to the data that you requested, your data will be ven
 
 ### Viewing your Data
 
-Once your request to access data is approved, the data will be vended to your DNAnexus account in a project with the project name that you entered on the Request Data page. You can follow the link in the email from notifications@stjude.cloud to view your DNAnexus project page.
+From the Manage Data page, you can click on a request to navigate to the DNAnexus platform where a project will have been created with the project name that you entered on the Request Data page. Once your request is approved, the data will be vended to your DNAnexus account and will be accessible in this project. You can also follow the link in the email from notifications@stjude.cloud to view your DNAnexus project page. When the data is vended, the directory structure will typically look something like:
 
+```
+project_space/
+├── restricted/
+│   ├── bam/
+│   ├── gVCF/
+│   ├── Somatic_VCF/
+│   └── CNV/
+└── SAMPLE_INFO.txt
+```
+
+The `SAMPLE_INFO.txt` file provides all the [metadata](../../guides/data/metadata.md) associated with the request, and the restricted folder contains all the data for which you were approved separated by file type. 
  
