@@ -208,7 +208,7 @@ and even viewing the job logs can accessed by clicking around the sub-items.
 ## Analysis of results
 
 Each tool in St. Jude Cloud produces a visualization that makes understanding
-results more accessible than working with excel spreadsheets or tab delimited
+results more accessible than working with Excel spreadsheets or tab delimited
 files. This is the primary way we recommend you work with your Rapid RNA-Seq results. We also
 include the raw output files for you to dig into if the visualization is not 
 sufficient to answer your research question.
