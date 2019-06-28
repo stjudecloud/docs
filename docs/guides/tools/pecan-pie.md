@@ -354,7 +354,7 @@ problems include:
 
 * Missing header line
 * Missing required columns
-* Files were compressed by gzip, zip or any method other than the required bgzip
+* Files were compressed by gzip, zip, or any method other than the required bgzip
 
 To verify compatibility of your VCF you can try one of these methods:
 
