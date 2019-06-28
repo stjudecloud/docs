@@ -80,7 +80,7 @@ On the Request Data page fill out your name, institution, and project name. Give
 
 Finally, click the green button. If you already have access to the data you selected in the browser, the button will read *Get Data Now*. If you are submitting a DAA and requesting data access, the button will read *Submit Request*.
 
-This will direct you to the [Manage Data](https://platform.stjude.cloud/requests/manage) page where you can see the status of the data request you just made as well the history of any of your previous data requests.
+This will direct you to the [Manage Data](https://platform.stjude.cloud/requests/manage) page where you can see the status of the data request you just made, as well the history of any of your previous data requests.
 
 ![](../../images/guides/data/request-data-new-2.png)
 
