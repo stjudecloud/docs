@@ -579,33 +579,6 @@
     Navigating Results
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#raw-result-files" title="Raw result files" class="md-nav__link">
-    Raw result files
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#custom-visualization-results" title="Custom visualization results" class="md-nav__link">
-    Custom visualization results
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#interpreting-results" title="Interpreting results" class="md-nav__link">
-    Interpreting results
-  </a>
-  
 </li>
         
           <li class="md-nav__item">
@@ -671,13 +644,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#known-issues" title="Known Issues" class="md-nav__link">
-    Known Issues
-  </a>
   
 </li>
       
@@ -994,33 +960,6 @@
     Navigating Results
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#raw-result-files" title="Raw result files" class="md-nav__link">
-    Raw result files
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#custom-visualization-results" title="Custom visualization results" class="md-nav__link">
-    Custom visualization results
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#interpreting-results" title="Interpreting results" class="md-nav__link">
-    Interpreting results
-  </a>
-  
 </li>
         
           <li class="md-nav__item">
@@ -1090,13 +1029,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#known-issues" title="Known Issues" class="md-nav__link">
-    Known Issues
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#frequently-asked-questions" title="Frequently Asked Questions" class="md-nav__link">
     Frequently Asked Questions
   </a>
@@ -1151,8 +1083,7 @@ software uses RNA-Seq sequence files to perform alignment, coverage
 analysis, gene counts and differential expression analysis.</p>
 <h2 id="overview">Overview</h2>
 <p><strong>Inputs</strong></p>
-<p>The WARDEN workflow requires 2 types of input files and along with two
-required parameters to be set. All other parameters are preset with sane defaults.</p>
+<p>The WARDEN workflow requires two types of input files and that two parameters be set manually. All other parameters are preset with reasonable defaults.</p>
 <table>
 <thead>
 <tr>
@@ -1177,12 +1108,6 @@ required parameters to be set. All other parameters are preset with sane default
 </tr>
 </tbody>
 </table>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-<p>Delete these if they are in the parameters below.</p>
-</div>
-<p>| Reference genome | Parameter | Supported reference genome (HG19, HG38, mm9, mm10, dm3, dm6) | HG38 |
-| Sequencing method | Parameter | Sequencing method of experiment (forward, reverse, unstranded) | forward |</p>
 <p><strong>Outputs</strong></p>
 <table>
 <thead>
@@ -1262,15 +1187,6 @@ file(s) using the <a href="../../data/data-transfer-app/">data transfer applicat
 or by uploading them through <a href="../../data/command-line/">the command line</a>.
 Both of the guides linked here will contain more details on how to upload
 data using that method, so we defer to those guides here.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>If you plan to upload data through the St. Jude Cloud Data Transfer application
-(recommended), you can click the "Upload Data" button in the left panel. If you
-have not already downloaded the app, do so by clicking "Download app". Once you
-have the app, you can click "Open app" to open the app with the tool's cloud 
-workspace already opened and ready to drag-and-drop files into it!</p>
-<p>For more information, check out the <a href="../../data/data-transfer-app/">data transfer application</a> guide.</p>
-</div>
 <h2 id="sample-sheet">Sample sheet</h2>
 <p>Once your data is uploaded, you'll need to create a sample sheet which
 describes the relationship between case and control samples,
@@ -1477,153 +1393,18 @@ and even viewing the job logs can accessed by clicking around the sub-items.</p>
 <h2 id="analysis-of-results">Analysis of results</h2>
 <p>Each tool in St. Jude Cloud produces a visualization that makes understanding
 results more accessible than working with excel spreadsheet or tab delimited
-files. This is the primary way we recommend you work with your results. We also
+files. This is the primary way we recommend you work with your WARDEN results. We also
 include the raw output files for you to dig into if the visualization is not 
 sufficient to answer your research question.</p>
 <h3 id="finding-the-raw-results-files">Finding the raw results files</h3>
-<p>Navigate to the <a href="https://platform.stjude.cloud/tools/rapid_rna-seq">tool's landing page</a>. 
+<p>Navigate to the <a href="https://platform.stjude.cloud/tools/warden">tool's landing page</a>. 
 In the left hand pane, click "View Results" then "View Results Files". You will
 be taken to the filesystem view your cloud workspace. This is similar to your the
 filesystem on your computer, and you can do many common operations such as deleting,
 renaming, and moving files.</p>
 <p><img alt="" src="../../../images/guides/tools/warden/results-warden.gif" /></p>
 <h3 id="navigating-results">Navigating Results</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Navigating to the raw results of your runs is the same for all
-pipelines. This guide will feature the <span
-role="ref">rapid-rnaseq</span> pipeline, but you can follow along for
-any tool.</p>
-</div>
-<h4 id="raw-result-files">Raw result files</h4>
-<p>Navigate to your tool's description page (for instance, Rapid RNA-Seq's
-description page is
-<a href="https://platform.stjude.cloud/tools/rapid_rna-seq">here</a>). You should
-see a screen similar to the one in the screenshot below. In the left
-hand pane, select "View Results Files".</p>
-<p><img alt="Click &quot;View Results Files&quot;" src="../../../images/guides/tools/common/raw-results.png" /></p>
-<p>You should now be in the tool's workspace with access to files that you
-uploaded and results files that are generated. How/where the result
-files are generated are specific to each pipeline. Please refer to your
-individual pipeline's documentation on where the output files are kept.</p>
-<p><img alt="" src="../../../images/guides/tools/common/raw-results-success.png" /></p>
-<h4 id="custom-visualization-results">Custom visualization results</h4>
-<p>Navigate to your tool's description page (for instance, Rapid RNA-Seq's
-description page is
-<a href="https://platform.stjude.cloud/tools/rapid_rna-seq">here</a>). You should
-see a screen similar to the one in the screenshot below. In the left
-hand pane, select "Visualize Results".</p>
-<p><img alt="Click &quot;Visualize Results&quot;" src="../../../images/guides/tools/common/visualize-results.png" /></p>
-<p>You should now be in the tool's workspace with access to files that you
-uploaded and results files that are generated. How/where the result
-files are generated are specific to each pipeline. Please refer to your
-individual pipeline's documentation on where the output files are kept.</p>
-<p><img alt="" src="../../../images/guides/tools/common/visualize-results-success.png" /></p>
-<h3 id="interpreting-results">Interpreting results</h3>
-<p>The complete output file specification is listed in the <a href="#overview">overview section</a>
-of this guide. Here, we will discuss each of the different output files in more detail.</p>
-<ul>
-<li><strong>Predicted gene fusions</strong>: The putative gene fusions will be
-  contained in the file <code class="codehilite"><span class="o">[</span><span class="n">SAMPLE</span><span class="o">]</span><span class="p">.</span><span class="n">final_fusions</span><span class="p">.</span><span class="n">txt</span><span class="w"></span></code>. This file is a
-  tab-delimited file containing many fields for each of the predicted
-  SV. The most important columns are the following.</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Field Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code class="codehilite"><span class="n">sample</span></code></td>
-<td>Sample name</td>
-</tr>
-<tr>
-<td><code class="codehilite"><span class="n">gene</span><span class="o">*</span></code></td>
-<td>Gene name</td>
-</tr>
-<tr>
-<td><code class="codehilite"><span class="n">chr</span><span class="o">*</span></code></td>
-<td>Chromosome name</td>
-</tr>
-<tr>
-<td><code class="codehilite"><span class="n">pos</span><span class="o">*</span></code></td>
-<td>Genomic Location</td>
-</tr>
-<tr>
-<td><code class="codehilite"><span class="n">ort</span><span class="o">*</span></code></td>
-<td>Strand</td>
-</tr>
-<tr>
-<td><code class="codehilite"><span class="k">reads</span><span class="o">*</span></code></td>
-<td>Supporting reads</td>
-</tr>
-<tr>
-<td><code class="codehilite"><span class="n">medal</span></code></td>
-<td>Estimated pathogenicity assessment using St. Jude Medal Ceremony</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><strong>Coverage file</strong>: A standard
-    <a href="https://genome.ucsc.edu/goldenpath/help/bigWig.html">bigWig</a> file
-    used to describe genomic read coverage.</li>
-<li><strong>Splice junction read counts</strong>: A custom file format describing the
-    junction read counts. The following fields are included in the
-    tab-delimited output file.</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Field Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code class="codehilite"><span class="n">junction</span></code></td>
-<td>Splice junction in the TCGA format "chrX:start:+,chrX:end,+". "start" and "end" are the 1-based position of the last mapped nucleotide before the skip and the first mapped nucleotide after the skip (i.e. the last base of the previous exon and the first base of the next exon). Note that in <code class="codehilite"><span class="na">.bed</span></code> output these coordinates will be different, see the .bed output section below. The "+" is currently hardcoded, though this may change in the future.</td>
-</tr>
-<tr>
-<td><code class="codehilite"><span class="k">count</span></code></td>
-<td>Raw count of reads supporting the junction. During correction counts for ambiguous junctions can be combined, though obviously these additional reads will not be visible in the raw BAM file.</td>
-</tr>
-<tr>
-<td><code class="codehilite"><span class="k">type</span></code></td>
-<td>Either "known" (matching a reference junction) or "novel" (not observed in the reference junction collection).</td>
-</tr>
-<tr>
-<td><code class="codehilite"><span class="n">genes</span></code></td>
-<td>Gene symbols from the junction calling process. These still need work in the raw junction calling process, it's recommended to use the "annotated" output files instead which assign matching HUGO gene symbols based on the UCSC refGene table.</td>
-</tr>
-<tr>
-<td><code class="codehilite"><span class="n">transcripts</span></code></td>
-<td>List of known transcript IDs matching the junction.</td>
-</tr>
-<tr>
-<td><code class="codehilite"><span class="n">qc_flanking</span></code></td>
-<td>Count of supporting reads passing flanking sequence checks (junctions observed adjacent to read ends require 18+ nt of flanking sequence, otherwise 10+ nt).</td>
-</tr>
-<tr>
-<td><code class="codehilite"><span class="n">qc_plus</span></code></td>
-<td>Count of supporting reads aligned to the + strand.</td>
-</tr>
-<tr>
-<td><code class="codehilite"><span class="n">qc_minus</span></code></td>
-<td>Count of supporting reads aligned to the - strand.</td>
-</tr>
-<tr>
-<td><code class="codehilite"><span class="n">qc_perfect_reads</span></code></td>
-<td>Count of supporting reads with perfect alignments (no reference mismatches of quality 15+, indels, or soft clips).</td>
-</tr>
-<tr>
-<td><code class="codehilite"><span class="n">qc_clean_reads</span></code></td>
-<td>Count of supporting reads whose alignments are not perfect but which have a ratio of &lt;= 5% of reference mismatches of quality 15+, indels, or soft clips relative to the count of aligned bases on both the left and right flanking sequence. Note: qc_clean_reads does NOT include qc_perfect_reads: to get a count of "perfect plus pretty good" reads the two values must be added together.</td>
-</tr>
-</tbody>
-</table>
+<p>Navigating to the raw results of your runs is the same for all pipelines. Hence, we refer you to the <a href="../rapid-rnaseq/#navigating-results">Navigating Results</a> section of the Rapid RNA-Seq pipeline documentation. You can follow along for WARDEN, and then return to this page for interpreting results.</p>
 <h3 id="primary-results">Primary Results</h3>
 <h4 id="alignment-statistics">Alignment statistics</h4>
 <p>Several files should be examined initially to determine the quality of
@@ -1769,9 +1550,8 @@ the ALIGN directory.)</p>
 <p><strong>FPKM and count files (per sample)</strong></p>
 <p>Per sample files containing FPKM and raw count values for each gene can
 be found in <strong>*.fpkm.txt</strong> and <strong>*.htseq_counts.txt</strong> where '*' is
-the sample name.</p>
-<p>(Within the DNAnexus output directory structure, these files will be in
-the <strong>NOTE FIND OUT WHICH DIRECTORY</strong> directory.)</p>
+the sample name. Within the DNAnexus output directory structure, these files will be in
+the HTSEQ directory.</p>
 <hr />
 <h4 id="methods-files">Methods Files</h4>
 <p>A more human readable explanation is found in <strong>methods.docx</strong>. Detailed
@@ -1802,9 +1582,7 @@ files</a>. In addition there are 2 log
 files. <strong>*Log.final.out</strong> has relevant statistics for the alignment.
 The <strong>*.Log.out</strong> file just contains a log of the analysis run,
 including input parameters. Per sample FLAGSTAT results are found in
-<strong>*.flagStatOut.txt</strong>. These flagstat files are combined into the file
-<strong>alignmentStatistics.txt</strong> described in <a href="#initial-analysis-of-results">Initial analysis of
-results</a>. Finally the ALIGN directory has
+<strong>*.flagStatOut.txt</strong>. Finally the ALIGN directory has
 multiple <em>.starAlign.methods.txt files. These files can be ignored as
 they are summarized in the finalmethods.docx</em>* and <strong>methods.txt</strong>
 files described in <a href="#methods-files">Methods Files</a>.</p>
@@ -1819,10 +1597,7 @@ Files</a>.</p>
 <p>See <a href="#bigwig-viewer">bigWig viewer</a></p>
 <hr />
 <p><strong>COMBINED_FLAGSTAT</strong></p>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-<p>Describe combined flagstat.</p>
-</div>
+<p>This directory contains the <strong>alignmentStatistics.txt</strong> file, which contains the combined alignment statistics from all samples.  It is generated from the flagstat files describe in the ALIGN directory.</p>
 <hr />
 <p><strong>COMBINED_HTSEQ</strong></p>
 <p>Used for input in differential expression analysis. The
@@ -1882,33 +1657,6 @@ contrastsFile.txt, and limmaSampleList.txt which are used internally.
 simpleDifEx.methods.txt is an intermediate file describing methods.
 Out.tar.gz is used for testing purposes. The sessionInfo.txt file
 describe the R session working parameters and modules loaded.</p>
-<h2 id="known-issues">Known Issues</h2>
-<div class="admonition caution">
-<p class="admonition-title">Adapter contamination</p>
-<p>This pipeline does not, at present, remove adapter sequences. If the
-sequencing library is contaminated with adapters, CICERO runtimes can
-increase exponentially. We recommend running FastQ files through a QC
-pipeline such as FastQC and trimming adapters with tools such as
-Trimmomatic if adapters are found.</p>
-</div>
-<div class="admonition caution">
-<p class="admonition-title">High coverage regions</p>
-<p>Certain cell types show very high transcription of certain loci, for
-example, the immunoglobulin heavy chain locus in plasma cells. The
-presence of very highly covered regions (typically 100,000-1,000,000+ X)
-has an adverse effect on CICERO runtimes. Presently, we have no good
-solution to this problem as strategies such as down-sampling may reduce
-sensitivity over important regions of the genome.</p>
-</div>
-<div class="admonition bug">
-<p class="admonition-title">Interactive Visualizations Exon vs Intron Nomenclature</p>
-<p>When a codon is split over a fusion gene junction, the annotation
-software marks the event as intronic when really, the event should be
-exonic. We are working to fix this bug. In the mean time, if a fusion is
-predicted to be in frame but the interactive plot shows "intronic", we
-suggest the user blat the contig shown just below to clarify if the true
-junction is either in the intron or exon.</p>
-</div>
 <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
 <p>None yet! If you have any questions not covered here, feel free to reach
 out on <a href="https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-contact/">our contact
@@ -1974,7 +1722,7 @@ form</a>.</p>
           </div>
         
         
-        built from <a href="https://github.com/stjude/sjcloud-docs/tree/fc0f84e">fc0f84e</a> using
+        built from <a href="https://github.com/stjude/sjcloud-docs/tree/a1c52f7">a1c52f7</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of

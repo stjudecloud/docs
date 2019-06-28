@@ -522,6 +522,33 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#navigating-results" title="Navigating Results" class="md-nav__link">
+    Navigating Results
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raw-result-files" title="Raw result files" class="md-nav__link">
+    Raw result files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-visualization-results" title="Custom visualization results" class="md-nav__link">
+    Custom visualization results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#interpreting-results" title="Interpreting results" class="md-nav__link">
     Interpreting results
   </a>
@@ -820,6 +847,33 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#navigating-results" title="Navigating Results" class="md-nav__link">
+    Navigating Results
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raw-result-files" title="Raw result files" class="md-nav__link">
+    Raw result files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-visualization-results" title="Custom visualization results" class="md-nav__link">
+    Custom visualization results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#interpreting-results" title="Interpreting results" class="md-nav__link">
     Interpreting results
   </a>
@@ -889,15 +943,13 @@
 </tbody>
 </table>
 <p>Fusion genes are important for cancer diagnosis, subtype definition and
-targeted therapy. RNASeq is useful for detecting fusion transcripts.
-Computational methods face challenges to identify fusion transcripts
-arising from internal tandem duplication (ITD), multiple genes, low
-expression or non-templated insertions. Here we present an end-to-end
-clinically validated pipeline "Rapid RNA-Seq" that detects gene fusions
-and ITDs from human RNA-Seq.</p>
+targeted therapy. RNASeq is useful for detecting fusion transcripts; however, computational methods face challenges to identify fusion transcripts
+due to events such as internal tandem duplication (ITD), multiple genes, low
+expression, or non-templated insertions. To address some of these challenges, St. Jude Cloud offers "Rapid RNA-Seq", an end-to-end
+clinically validated pipeline that detects gene fusions and ITDs from human RNA-Seq.</p>
 <h2 id="overview">Overview</h2>
 <p><strong>Inputs</strong></p>
-<p>The input can be either of the two entries below based on whether you want to start
+<p>The input can be either of the two entries below, based on whether you want to start
 with FastQ files or a BAM file.</p>
 <table>
 <thead>
@@ -1057,15 +1109,6 @@ using the <a href="../../data/data-transfer-app/">data transfer application</a>
 or by uploading them through <a href="../../data/command-line/">the command line</a>.
 Both of the guides linked here will contain more details on how to upload
 data using that method, so we defer to those guides here.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>If you plan to upload data through the St. Jude Cloud Data Transfer application
-(recommended), you can click the "Upload Data" button in the left panel. If you
-have not already downloaded the app, do so by clicking "Download app". Once you
-have the app, you can click "Open app" to open the app with the tool's cloud 
-workspace already opened and ready to drag-and-drop files into it!</p>
-<p>For more information, check out the <a href="../../data/data-transfer-app/">data transfer application</a> guide.</p>
-</div>
 <h2 id="running-the-tool">Running the tool</h2>
 <p>Once you've uploaded data to your cloud workspace, click "Launch Tool" on the <a href="https://platform.stjude.cloud/tools/rapid_rna-seq">tool's landing page</a>. A dropdown will present the different presets for running the workflow. Here, you can select whether you wish to start with FastQ files or a BAM file.</p>
 <p><img alt="" src="../../../images/guides/tools/rapid-rnaseq/launch-tool.gif" /></p>
@@ -1097,7 +1140,7 @@ You will be redirected to the job monitoring page. Each job you kicked off
 gets one row in this table.</p>
 <p><img alt="" src="../../../images/guides/tools/rapid-rnaseq/monitoring-jobs.gif" /> </p>
 <p>You can click the "+" on any of the runs to check 
-the status of individual steps of the ChIP-Seq pipeline.
+the status of individual steps of the Rapid RNA-Seq pipeline.
 Other information, such as time, cost of individual steps in the pipeline, 
 and even viewing the job logs can accessed by clicking around the sub-items.</p>
 <p><img alt="" src="../../../images/guides/tools/rapid-rnaseq/job-detailed-view.gif" /> </p>
@@ -1107,8 +1150,8 @@ and even viewing the job logs can accessed by clicking around the sub-items.</p>
 </div>
 <h2 id="analysis-of-results">Analysis of results</h2>
 <p>Each tool in St. Jude Cloud produces a visualization that makes understanding
-results more accessible than working with excel spreadsheet or tab delimited
-files. This is the primary way we recommend you work with your results. We also
+results more accessible than working with Excel spreadsheets or tab delimited
+files. This is the primary way we recommend you work with your Rapid RNA-Seq results. We also
 include the raw output files for you to dig into if the visualization is not 
 sufficient to answer your research question.</p>
 <h3 id="finding-the-raw-results-files">Finding the raw results files</h3>
@@ -1118,6 +1161,28 @@ be taken to the filesystem view your cloud workspace. This is similar to your th
 filesystem on your computer, and you can do many common operations such as deleting,
 renaming, and moving files.</p>
 <p><img alt="" src="../../../images/guides/tools/rapid-rnaseq/rapid-rna-results.png" /> </p>
+<h3 id="navigating-results">Navigating Results</h3>
+<h4 id="raw-result-files">Raw result files</h4>
+<p>Navigate to your tool's description page (for instance, Rapid RNA-Seq's
+description page is
+<a href="https://platform.stjude.cloud/tools/rapid_rna-seq">here</a>). You should
+see a screen similar to the one in the screenshot below. In the left
+hand pane, select "View Results Files".</p>
+<p><img alt="Click &quot;View Results Files&quot;" src="../../../images/guides/tools/common/raw-results.png" /></p>
+<p>You should now be in the tool's workspace with access to files that you
+uploaded and results files that are generated. How/where the result
+files are generated are specific to each pipeline. Please refer to your
+individual pipeline's documentation on where the output files are kept.</p>
+<p><img alt="" src="../../../images/guides/tools/common/raw-results-success.png" /></p>
+<h4 id="custom-visualization-results">Custom visualization results</h4>
+<p>Navigate to your tool's description page (for instance, Rapid RNA-Seq's
+description page is
+<a href="https://platform.stjude.cloud/tools/rapid_rna-seq">here</a>). You should
+see a screen similar to the one in the screenshot below. In the left
+hand pane, select "Visualize Results".</p>
+<p><img alt="Click &quot;Visualize Results&quot;" src="../../../images/guides/tools/common/visualize-results.png" /></p>
+<p>You should now see a list of visualization files like the ones shown below.</p>
+<p><img alt="" src="../../../images/guides/tools/common/visualize-results-success.png" /></p>
 <h3 id="interpreting-results">Interpreting results</h3>
 <p>The complete output file specification is listed in the <a href="#overview">overview section</a>
 of this guide. Here, we will discuss each of the different output files in more detail.</p>
@@ -1314,7 +1379,7 @@ out on <a href="https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-contact/
           </div>
         
         
-        built from <a href="https://github.com/stjude/sjcloud-docs/tree/fc0f84e">fc0f84e</a> using
+        built from <a href="https://github.com/stjude/sjcloud-docs/tree/a1c52f7">a1c52f7</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of

@@ -367,8 +367,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requesting-data" title="Requesting Data" class="md-nav__link">
-    Requesting Data
+  <a href="#data" title="Data" class="md-nav__link">
+    Data
   </a>
   
 </li>
@@ -771,8 +771,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requesting-data" title="Requesting Data" class="md-nav__link">
-    Requesting Data
+  <a href="#data" title="Data" class="md-nav__link">
+    Data
   </a>
   
 </li>
@@ -897,23 +897,13 @@
 <p>Writing your own application will allow you to wrap custom tools to manipulate any data that you have previously requested. When you run your application, the request gets sent to a virtualized Linux container (Ubuntu 14.04 or 16.04) where any dependencies are installed and where your script will be run. Any tools or packages that you include (either through the included package managers, or bundled together in your project) will be available locally on the virtual Linux machine.</p>
 <p>However, there are differences in how we manage our data. When a job is submitted, a virtual machine is provisioned specifically for that job request, meaning that it is spun up at-will or when needed. It also implies that once the job has completed, the virtual machine will be reprovisioned or deleted. Any job output or data must be uploaded back to the project space.</p>
 <p>In this tutorial, we will be wrapping the <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a>, a quality control tool for raw sequence data, into our application. This will allow us to run FastQC on any of the St. Jude next generation sequencing data in the cloud. For specific information about how FastQC works, please refer to the <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/">FastQC documentation</a>.</p>
-<h2 id="requesting-data">Requesting Data</h2>
-<p>After submitting a <a href="../../../guides/data/data-request/">data request</a>, it will be sent out for evaluation. Once it has been approved, the data will be vended and it will be accessible in a DNAnexus project. You can view all the available projects and data from the <a href="https://platform.stjude.cloud/requests/manage">Manage Data</a> page where you can view the request name, creation date, total number of files, what files you have immediate access to, and the status of your request. You will also be able to submit required documentation on the Manage Data page.</p>
-<p>If you click on a request, it will take you to the DNAnexus platform, where you can view all the files available to you and your project. When a request is submitted, the project will be created, but the data will not be available until your request has been reviewed and approved. Once approved, you should be able to view all the available data from your request. When the data is vended, it will typically look something like:</p>
-<div class="codehilite"><pre><span></span><span class="n">project_space</span><span class="o">/</span>
-<span class="err">├──</span> <span class="n">restricted</span><span class="o">/</span>
-<span class="err">│</span>   <span class="err">├──</span> <span class="n">bam</span><span class="o">/</span>
-<span class="err">│</span>   <span class="err">├──</span> <span class="n">gVCF</span><span class="o">/</span>
-<span class="err">│</span>   <span class="err">├──</span> <span class="n">Somatic_VCF</span><span class="o">/</span>
-<span class="err">│</span>   <span class="err">└──</span> <span class="n">CNV</span><span class="o">/</span>
-<span class="err">└──</span> <span class="n">SAMPLE_INFO</span><span class="p">.</span><span class="n">txt</span>
-</pre></div>
-
-
-<p>The <code class="codehilite"><span class="n">SAMPLE_INFO</span><span class="p">.</span><span class="n">txt</span></code> file provides all the metadata associated with the request, and the restricted folder contains all the data separated by file type (for more info, refer to the <a href="../metadata/">Metadata Provided</a> section). The other folders will contain the respective file types you included in your request.</p>
-<p>After your data access request has been approved, we can begin writing our app.</p>
-<p>For this tutorial, I have requested the PCGP dataset and once my access request has been approved, my project directory space will look like the following.</p>
+<h2 id="data">Data</h2>
+<p>For this tutorial I have requested the PCGP dataset, and once my access request has been approved, my project directory space will look like the following.</p>
 <p><img alt="" src="../../../images/guides/data/creating-a-cloud-app-0.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you do not yet have data in a DNAnexus project, you may request data from St. Jude Cloud by following the directions <a href="../data-request/">here</a> or you may upload your own data using the <a href="../data-transfer-app/">data transfer app</a>. In order to make a data request or upload your own data using the data transfer app, you must first <a href="../../../create-an-account/">create a St. Jude Cloud account</a>.</p>
+</div>
 <h2 id="writing-the-application">Writing the Application</h2>
 <h3 id="requirements">Requirements</h3>
 <p><center></p>
@@ -1373,7 +1363,7 @@ Watching job job-FVbY8Z0991ZXx5v1Fk3QgJPV. Press Ctrl+C to stop.
           </div>
         
         
-        built from <a href="https://github.com/stjude/sjcloud-docs/tree/fc0f84e">fc0f84e</a> using
+        built from <a href="https://github.com/stjude/sjcloud-docs/tree/a1c52f7">a1c52f7</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
