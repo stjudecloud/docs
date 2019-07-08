@@ -78,6 +78,7 @@ Until further notice, please cite the relevant paper for each of the datasets an
 | WARDEN  | unpublished | 
 | Mutational Signatures | [Mutational Patterns paper](https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-018-0539-0) | 
 | cis-x  | paper in progress | 
+| XenoCP  | paper in progress | 
 
 !!! note
     If you are unsure what datasets the data that you have been vended belongs to, you can find this information in the sj_datasets column of the [SAMPLE_INFO.txt](./guides/data/metadata.md) file.

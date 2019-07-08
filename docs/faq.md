@@ -105,7 +105,7 @@ Since this would be a change in terms from the original agreement, you would nee
 
 
 ### What clinical information is available about samples in St. Jude Cloud?
-Currently the only [clinical information](./guides/data/metadata.md#clinical-and-phenotypic-information) we provide is age at diagnosis, diagnosis, ethnicity, sex, and oncotree disease code. Unfortunately, even if we do collect other information, such as other supportive oncology data, it is not available on the cloud at this time. We are working towards being able to provide additional clinical annotations in the future.
+Currently the only [clinical information](./guides/data/metadata.md#clinical-and-phenotypic-information) we provide is age at diagnosis, diagnosis, ethnicity, sex, race, and oncotree disease code. Unfortunately, even if we do collect other information, such as other supportive oncology data, it is not available on the cloud at this time. We are working towards being able to provide additional clinical annotations in the future.
 
 ### Can I get a copy of IRB consent forms?
 Unfortunately, we will not be able to share blank consent forms at the current time. We have chosen to remain consistent with the requirements of the other major genomic data repositories in that (1) there is an internal vetting process by the St. Jude IRB to ensure samples may be shared with the research community, but (2) we do not share the informed consents with data requesters. It is important to remember that St. Jude Cloud is the platform upon which all St. Jude data is shared. This means that there are more than 100 consent forms + revisions for the various studies across St. Jude. Thus, there is an additional logistical barrier in that we simply don't have the bandwidth to pull together a packet containing all of this information for each requestor.
@@ -115,7 +115,7 @@ We do not share FASTQ formats, but several tools exist that you can leverage to 
 
 
 ### How can I explore and manipulate data files stored on the cloud without downloading the files to my local machine?
-You can quickly and easily interact with data files using the DNAnexus cloud workstation app. See [this guide](https://wiki.dnanexus.com/Developer-Tutorials/Cloud-Workstations) to help you setup and run the app. Note that if you are doing any type of large-scale, multi-sample analysis, espescially if you plan to repeat the analysis or want to run in parallel, you will want to [write your own cloud app](./guides/data/creating-a-cloud-app.md) rather than use the cloud workstation app.
+You can quickly and easily interact with data files using the DNAnexus cloud workstation app. See [this guide](https://documentation.dnanexus.com/getting-started/tutorials/cloud-workstations#run-the-workstation-app) to help you setup and run the app. Note that if you are doing any type of large-scale, multi-sample analysis, espescially if you plan to repeat the analysis or want to run in parallel, you will want to [write your own cloud app](./guides/data/creating-a-cloud-app.md) rather than use the cloud workstation app.
 
 ### How can I run an analysis workflow on multiple sample files at the same time?  
 The DNAnexus interface does have a batch tool available; however, it is in early testing, so we recommend using dx-toolkit on the command line as the most reliable and user friendly approach to batch and submit jobs. You can find our documentation on how to install and get started with dx-toolkit [here](./guides/data/command-line.md). You may also refer to the sample script below that loops through all the BAM files in the `data` folder and submits a job using the BAM and matching index file.   
@@ -143,10 +143,10 @@ The WSL method:
   `$ sudo apt install python-minimal python-pip`    
   `$ pip install dxpy`    
 6. Close Ubuntu window. Open Ubuntu again.  
-7. Log in to DNAnexus, where `$TOKEN` is an [API Token](https://wiki.dnanexus.com/Command-Line-Client/Login-and-Logout#Authentication-Tokens).  
+7. Log in to DNAnexus, where `$TOKEN` is an [API Token](https://documentation.dnanexus.com/user/login-and-logout#authentication-tokens).  
   `$ dx login --token $TOKEN` 
 
-You may also find [these instructions](https://wiki.dnanexus.com/Developer-Tutorials/Connecting-to-Jobs#Setting-up-SSH-on-Windows) on the DNAnexus wiki helpful.
+You may also find [these instructions](https://documentation.dnanexus.com/developer/apps/execution-environment/connecting-to-jobs#setting-up-ssh-on-windows) on the DNAnexus documentation helpful.
 
 
 ### Why am I getting a connectivity error when connecting to DNAnexus API via SSH?

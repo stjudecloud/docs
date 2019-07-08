@@ -1,9 +1,5 @@
 # Data types
 
-!!! note
-    This section of the documentation is currently under construction. If your question is not answered here,
-    please [contact us](https://stjude.cloud/contact)!
-
 St. Jude Cloud hosts both raw genomic data files and processed results files:
 
 | File Type   | Short Description                                                                                                 | Details                          |
