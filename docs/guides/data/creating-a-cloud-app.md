@@ -41,10 +41,10 @@ For this tutorial I have requested the PCGP dataset, and once my access request 
 </center>
 
 
-For this application, we will be using the `dx-app-wizard` command that is included in the `dx-toolkit`. `dx-app-wizard` is an interactive prompt that creates a boilerplate project that will allow you to quickly create an application. For more on `dx-app-wizard`, refer to the DNAnexus wiki article on [Intro to Building Apps](https://wiki.dnanexus.com/Developer-Tutorials/Intro-to-Building-Apps). Before continuing, be sure to refer to the [command line interaction page](../../guides/data/command-line.md) for a walkthrough on how to install [dx-toolkit](https://wiki.dnanexus.com/Downloads) and how to select your project workspace.
+For this application, we will be using the `dx-app-wizard` command that is included in the `dx-toolkit`. `dx-app-wizard` is an interactive prompt that creates a boilerplate project that will allow you to quickly create an application. For more on `dx-app-wizard`, refer to the DNAnexus wiki article on [Intro to Building Apps](https://documentation.dnanexus.com/developer/apps/intro-to-building-apps). Before continuing, be sure to refer to the [command line interaction page](../../guides/data/command-line.md) for a walkthrough on how to install [dx-toolkit](https://documentation.dnanexus.com/downloads#DNAnexus-Platform-SDK) and how to select your project workspace.
 
 !!! tip
-    It is not necessary to use `dx-app-wizard`. All the necessary files and project directory structure can be created manually. However, `dx-app-wizard` provides a quick and easy way to get started. For more information, refer to the [Advanced App Tutorial](https://wiki.dnanexus.com/Developer-Tutorials/Advanced-App-Tutorial).
+    It is not necessary to use `dx-app-wizard`. All the necessary files and project directory structure can be created manually. However, `dx-app-wizard` provides a quick and easy way to get started. For more information, refer to the [Advanced App Tutorial](https://documentation.dnanexus.com/developer/apps/advanced-app-tutorial).
 
 All DNAnexus project applications will have the following structure:
 
@@ -58,7 +58,7 @@ dx-fastqc-example-app/
     └── dx-fastqc-example-app.sh
 ```
 
-The `dxapp.json` file is a JSON file that contains metadata about the application we are writing that are needed to build and run the app on the DNAnexus Platform. Most notably, you will need to specify all of the inputs your app requires (both input files or any settings you can tune), output files, and other options such as the number of cores and memory required to run the tool. To see the full list of fields, refer to the [DNAnexus wiki](https://wiki.dnanexus.com/dxapp.json) guide on the application metadata.
+The `dxapp.json` file is a JSON file that contains metadata about the application we are writing that are needed to build and run the app on the DNAnexus Platform. Most notably, you will need to specify all of the inputs your app requires (both input files or any settings you can tune), output files, and other options such as the number of cores and memory required to run the tool. To see the full list of fields, refer to the [DNAnexus wiki](https://documentation.dnanexus.com/developer/apps/app-metadata) guide on the application metadata.
 
 The `dx-fastqc-example-app.sh` file is a bash script is what will be executed when the application is run. Any executable binaries that accompany the application, such as other tools or scripts, are placed in the `resources` folder. From there, we can call the executable from within the app when it is run.
 
@@ -114,7 +114,7 @@ $ Choose an instance type for your app [mem1_ssd1_x4]: azure:mem1_ssd1_x4
 !!! Tip
     Although our app doesn't need any Internet access in this example, it may be required for your project. Also be sure to check what instance type you will need in the [API Specifications](https://wiki.dnanexus.com/api-specification-v1.0.0/instance-types).
 
-The FastQC executable supports a variety of file formats (BAM, SAM, FastQ, etc.), and outputs a HTML report and a zip file that contains all the graphs and data. We will use that knowledge to write the input and output parameters for our application. We can also specify other parameters such as the timeout policy, programming language, and instance type. For more information, refer to the [IO and Run Specification](https://wiki.dnanexus.com/API-Specification-v1.0.0/IO-and-Run-Specifications#Run-Specification) guide.
+The FastQC executable supports a variety of file formats (BAM, SAM, FastQ, etc.), and outputs a HTML report and a zip file that contains all the graphs and data. We will use that knowledge to write the input and output parameters for our application. We can also specify other parameters such as the timeout policy, programming language, and instance type. For more information, refer to the [IO and Run Specification](https://documentation.dnanexus.com/developer/api/running-analyses/io-and-run-specifications) guide.
 
 ## Integrating Tools and Packages
 
@@ -175,7 +175,7 @@ dx-fastqc-example-app/
 !!! tip
     If you are importing custom tools, or are using tools that rely on various packages and requirements, they can be specified in the "runSpec".
 
-    For more information on installing dependencies and available software packages, refer to the [Execution Environment Reference](https://wiki.dnanexus.com/Execution-Environment-Reference).
+    For more information on installing dependencies and available software packages, refer to the [Execution Environment Reference](https://documentation.dnanexus.com/developer/apps/execution-environment).
 
 Some external package managers that we can leverage when building an app include:
 
@@ -222,7 +222,7 @@ Be sure to add a comma at the very end of the "file" object line to accommodate 
   ...
 ```
 
-When you build and run your application, the virtual environment will now download `openjdk-7` from Ubuntu's APT package manager as a prerequisite. For more information on how to specify packages from Git, R, or Python, refer to the [Software Packages](https://wiki.dnanexus.com/Execution-Environment-Reference#Software-Packages) wiki page.
+When you build and run your application, the virtual environment will now download `openjdk-7` from Ubuntu's APT package manager as a prerequisite. For more information on how to specify packages from Git, R, or Python, refer to the [Software Packages](https://documentation.dnanexus.com/developer/apps/execution-environment#software-packages) wiki page.
 
 ## Calling FastQC
 
@@ -261,7 +261,7 @@ mkdir ~/fastqc-out/                                    # FastQC Output Folder
 !!! tip
     Be sure to use `"$bam_file_name"` as our input for FastQC. Using `"$bam_file"` only returns the DNAnexus file-id associated with the input file.
 
-    For more information on helper variables, refer to the [Advanced App Tutorial](https://wiki.dnanexus.com/Developer-Tutorials/Advanced-App-Tutorial#Set-output-name-using-bash-app-helper-variables).
+    For more information on helper variables, refer to the [Advanced App Tutorial](https://documentation.dnanexus.com/developer/apps/advanced-app-tutorial#set-output-name-using-bash-app-helper-variables).
 
 ## Uploading Files
 
@@ -289,7 +289,7 @@ fastqc_html=$(dx upload ~/fastqc-out/fastqc-report.html --brief)
 fastqc_zip=$(dx upload ~/fastqc-out/fastqc-report.zip --brief)
 ```
 
-We are using `"$bam_file_prefix"` to help name the output report file. These helper variables are provided to help make file naming easy. For more information on helper variables, refer to the [Advanced App Tutorial](https://wiki.dnanexus.com/Developer-Tutorials/Advanced-App-Tutorial#Set-output-name-using-bash-app-helper-variables).
+We are using `"$bam_file_prefix"` to help name the output report file. These helper variables are provided to help make file naming easy. For more information on helper variables, refer to the [Advanced App Tutorial](https://documentation.dnanexus.com/developer/apps/advanced-app-tutorial#set-output-name-using-bash-app-helper-variables).
 
 In this step, we are also moving the HTML and Zip file generated by FastQC to the directories which will be uploaded.
 

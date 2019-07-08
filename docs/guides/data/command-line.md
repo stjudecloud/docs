@@ -4,8 +4,6 @@ Before you begin interacting with St. Jude Cloud Platform from the
 command line, you'll need to understand some details on the underlying
 architecture of the platform. The St. Jude Cloud Platform is built on
 top of a genomics cloud ecosystem provided by [DNAnexus](https://www.dnanexus.com/). 
-For a comprehensive overview of how DNAnexus works, see 
-[this page](https://www.dnanexus.com/product-overview).
 
 ## Overview
 
@@ -21,7 +19,7 @@ Open-source software provided by DNAnexus called the [dx-toolkit](https://github
 used to interact with the St. Jude Cloud Platform from the command line.
 You can use this to create these projects, upload and download data, and
 many other operations. You'll need to install that software on your
-computer by following [this guide](https://wiki.dnanexus.com/Downloads#DNAnexus-Platform-SDK).
+computer by following [this guide](https://documentation.dnanexus.com/downloads#DNAnexus-Platform-SDK).
 
 !!! tip
     A quickstart to getting up and running with the dx-toolkit:
@@ -47,7 +45,7 @@ dx login --noprojects
 
 !!! note
     If you are a St. Jude employee, you'll need to follow [this
-    guide](https://wiki.dnanexus.com/Command-Line-Client/Login-and-Logout#Generating-an-authentication-token) to log in instead.
+    guide](https://documentation.dnanexus.com/user/login-and-logout#generating-an-authentication-token) to log in instead.
 
 ### Selecting a project
 
