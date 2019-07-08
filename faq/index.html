@@ -1065,13 +1065,13 @@ committed to protecting that privacy to the fullest extent.</p>
 <h3 id="what-if-i-did-not-fill-out-the-data-download-permission-section-of-the-original-daa-but-now-i-want-to-download-data">What if I did not fill out the Data Download Permission section of the original DAA, but now I want to download data?</h3>
 <p>Since this would be a change in terms from the original agreement, you would need to fill out a new DAA (including the <a href="../guides/forms/how-to-fill-out-DAA/#data-download-permission">Data Download Permission section</a> for any datasets you want to download.</p>
 <h3 id="what-clinical-information-is-available-about-samples-in-st-jude-cloud">What clinical information is available about samples in St. Jude Cloud?</h3>
-<p>Currently the only <a href="../guides/data/metadata/#clinical-and-phenotypic-information">clinical information</a> we provide is age at diagnosis, diagnosis, ethnicity, sex, and oncotree disease code. Unfortunately, even if we do collect other information, such as other supportive oncology data, it is not available on the cloud at this time. We are working towards being able to provide additional clinical annotations in the future.</p>
+<p>Currently the only <a href="../guides/data/metadata/#clinical-and-phenotypic-information">clinical information</a> we provide is age at diagnosis, diagnosis, ethnicity, sex, race, and oncotree disease code. Unfortunately, even if we do collect other information, such as other supportive oncology data, it is not available on the cloud at this time. We are working towards being able to provide additional clinical annotations in the future.</p>
 <h3 id="can-i-get-a-copy-of-irb-consent-forms">Can I get a copy of IRB consent forms?</h3>
 <p>Unfortunately, we will not be able to share blank consent forms at the current time. We have chosen to remain consistent with the requirements of the other major genomic data repositories in that (1) there is an internal vetting process by the St. Jude IRB to ensure samples may be shared with the research community, but (2) we do not share the informed consents with data requesters. It is important to remember that St. Jude Cloud is the platform upon which all St. Jude data is shared. This means that there are more than 100 consent forms + revisions for the various studies across St. Jude. Thus, there is an additional logistical barrier in that we simply don't have the bandwidth to pull together a packet containing all of this information for each requestor.</p>
 <h3 id="can-i-request-fastq-files-on-st-jude-cloud">Can I request FASTQ files on St. Jude Cloud?</h3>
 <p>We do not share FASTQ formats, but several tools exist that you can leverage to revert BAM to FASTQ files. (We recommend using Picard SamToFastq to revert BAM files.) You can efficiently revert BAMs to FASTQs in the cloud by wrapping the conversion tool of your choice into a <a href="../guides/data/creating-a-cloud-app/">Cloud App</a>.</p>
 <h3 id="how-can-i-explore-and-manipulate-data-files-stored-on-the-cloud-without-downloading-the-files-to-my-local-machine">How can I explore and manipulate data files stored on the cloud without downloading the files to my local machine?</h3>
-<p>You can quickly and easily interact with data files using the DNAnexus cloud workstation app. See <a href="https://wiki.dnanexus.com/Developer-Tutorials/Cloud-Workstations">this guide</a> to help you setup and run the app. Note that if you are doing any type of large-scale, multi-sample analysis, espescially if you plan to repeat the analysis or want to run in parallel, you will want to <a href="../guides/data/creating-a-cloud-app/">write your own cloud app</a> rather than use the cloud workstation app.</p>
+<p>You can quickly and easily interact with data files using the DNAnexus cloud workstation app. See <a href="https://documentation.dnanexus.com/getting-started/tutorials/cloud-workstations#run-the-workstation-app">this guide</a> to help you setup and run the app. Note that if you are doing any type of large-scale, multi-sample analysis, espescially if you plan to repeat the analysis or want to run in parallel, you will want to <a href="../guides/data/creating-a-cloud-app/">write your own cloud app</a> rather than use the cloud workstation app.</p>
 <h3 id="how-can-i-run-an-analysis-workflow-on-multiple-sample-files-at-the-same-time">How can I run an analysis workflow on multiple sample files at the same time?</h3>
 <p>The DNAnexus interface does have a batch tool available; however, it is in early testing, so we recommend using dx-toolkit on the command line as the most reliable and user friendly approach to batch and submit jobs. You can find our documentation on how to install and get started with dx-toolkit <a href="../guides/data/command-line/">here</a>. You may also refer to the sample script below that loops through all the BAM files in the <code class="codehilite"><span class="k">data</span></code> folder and submits a job using the BAM and matching index file.   </p>
 <div class="codehilite"><pre><span></span><span class="k">for</span> <span class="nv">bam</span> <span class="nv">in</span> $<span class="ss">(</span><span class="nv">dx</span> <span class="nv">ls</span> <span class="s1">&#39;</span><span class="s">/data/*.bam</span><span class="s1">&#39;</span><span class="ss">)</span><span class="c1">; do  </span>
@@ -1098,9 +1098,9 @@ The WSL method:<br />
 <code class="codehilite">$ sudo apt install python-minimal python-pip</code>  <br />
 <code class="codehilite">$ pip install dxpy</code>  <br />
 6. Close Ubuntu window. Open Ubuntu again.<br />
-7. Log in to DNAnexus, where <code class="codehilite"><span class="err">$</span><span class="n">TOKEN</span></code> is an <a href="https://wiki.dnanexus.com/Command-Line-Client/Login-and-Logout#Authentication-Tokens">API Token</a>.<br />
+7. Log in to DNAnexus, where <code class="codehilite"><span class="err">$</span><span class="n">TOKEN</span></code> is an <a href="https://documentation.dnanexus.com/user/login-and-logout#authentication-tokens">API Token</a>.<br />
 <code class="codehilite">$ dx login --token <span class="nv">$TOKEN</span></code> </p>
-<p>You may also find <a href="https://wiki.dnanexus.com/Developer-Tutorials/Connecting-to-Jobs#Setting-up-SSH-on-Windows">these instructions</a> on the DNAnexus wiki helpful.</p>
+<p>You may also find <a href="https://documentation.dnanexus.com/developer/apps/execution-environment/connecting-to-jobs#setting-up-ssh-on-windows">these instructions</a> on the DNAnexus documentation helpful.</p>
 <h3 id="why-am-i-getting-a-connectivity-error-when-connecting-to-dnanexus-api-via-ssh">Why am I getting a connectivity error when connecting to DNAnexus API via SSH?</h3>
 <p>If you are trying to run something like  <br />
 <code class="codehilite">$ dx run --ssh &lt;executable&gt;</code> <br />
@@ -1179,7 +1179,7 @@ Select a sample and click info to see more.</p>
           </div>
         
         
-        built from <a href="https://github.com/stjude/sjcloud-docs/tree/a1c52f7">a1c52f7</a> using
+        built from <a href="https://github.com/stjude/sjcloud-docs/tree/659eda7">659eda7</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
