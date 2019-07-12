@@ -61,10 +61,10 @@ We are currently in progress of preparing the St. Jude Cloud manuscript. Until f
 
 1. Cite the relevant paper for each of the datasets and/or resources (see table below) that you used in your study.
  
-2. State in the **Results** and/or **Methods** section that the relevant data was obtained from ”St. Jude Cloud”. Example statement:
+2. State in the **Results** and/or **Methods** section that the relevant data was obtained from St. Jude Cloud. Example statement:
 >"Whole genome sequencing data for relapse tumor samples from 345 pediatric patients were obtained from St. Jude Cloud."
            
-1. State in the **Data availability** section of the manuscript that data can be accessed via St. Jude Cloud. Example statement:
+3. State in the **Data availability** section of the manuscript that data can be accessed via St. Jude Cloud. Example statement:
 >"Whole genome sequencing data for pediatric relapse tumor samples used for analysis in this study were obtained from St. Jude Cloud (https://www.stjude.cloud) – a publically accessible pediatric genomic data resource requiring approval for controlled data access."
 
 | St. Jude Cloud Resource             |  Citation     |
