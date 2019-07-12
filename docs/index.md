@@ -57,13 +57,19 @@ visit each of the corresponding portals.
 
 ## Citing St. Jude Cloud
 
-We are currently in progress of preparing a paper for St. Jude Cloud.
+We are currently in progress of preparing the St. Jude Cloud manuscript. Until further notice, please ensure that when St. Jude Cloud or data accessed therein is used in your work, please:
 
-Until further notice, please cite the relevant paper for each of the datasets and/or resources below that you used in your study.
+1. Cite the relevant paper for each of the datasets and/or resources (see table below) that you used in your study.
+ 
+2. State in the **Results** and/or **Methods** section that the relevant data was obtained from St. Jude Cloud. Example statement:
+>"Whole genome sequencing data for relapse tumor samples from 345 pediatric patients were obtained from St. Jude Cloud."
+           
+3. State in the **Data availability** section of the manuscript that data can be accessed via St. Jude Cloud. Example statement:
+>"Whole genome sequencing data for pediatric relapse tumor samples used for analysis in this study were obtained from St. Jude Cloud (https://www.stjude.cloud) – a publically accessible pediatric genomic data resource requiring approval for controlled data access."
 
 | St. Jude Cloud Resource             |  Citation     |
 | -------------------------------- | ----------------- |
-| Pediatric Cancer Genome Project (PCGP) dataset  | [PCGP perspectives paper](https://www.ncbi.nlm.nih.gov/pubmed/22641210) and the [relevant tumor type paper(s)](https://www.stjude.org/research/pediatric-cancer-genome-project.html#62f233040719a932f3e77b398218e84a0ed50730c89dbc0890c7a753bb159201=0)    |
+| Pediatric Cancer Genome Project (PCGP) dataset  | [PCGP perspectives paper](https://www.ncbi.nlm.nih.gov/pubmed/22641210) and the [relevant tumor type paper(s)](http://pecan.stjude.cloud/pcgp-explore)    |
 | St. Jude Lifetime (SJLIFE) dataset                   | [SJLIFE paper](https://www.ncbi.nlm.nih.gov/pubmed/?term=29847298)  |
 | Clinical Pilot (non-G4K clinical genomics) dataset | [Clinical Pilot paper](https://www.ncbi.nlm.nih.gov/pubmed/30262806) |
 | Genomes for Kids (G4K) dataset | paper in progress |
