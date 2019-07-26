@@ -73,14 +73,15 @@ On the Request Data page fill out your name, institution, and project name. Give
 
 ![](../../images/guides/data/request-data-new-1.png)
 
-
-!!! note "Data Access Approval"
-    If you are requesting access to a dataset you have not yet been approved for, 
-    you will see a section called **Controlled Access Data**. Under this section, there is a bulleted list indicating the dataset(s) or [Data Access Unit(s)](../../glossary.md#data-access-unit) you must request access to by submitting a form called the [Data Access Agreememnt (DAA)](../../glossary.md#data-access-agreement). Please use this list to fill in the Datasets section of the DAA. For more information on filling out this form, see [Filling out the DAA](../../guides/forms/how-to-fill-out-DAA). **You must upload a DAA to continue.**
-
 Finally, click the green button. If you already have access to the data you selected in the browser, the button will read *Get Data Now*. If you are submitting a DAA and requesting data access, the button will read *Submit Request*.
 
-This will direct you to the [Manage Data](https://platform.stjude.cloud/requests/manage) page where you can see the status of the data request you just made, as well the history of any of your previous data requests.
+### Applying for Data Access
+
+If you are requesting access to a dataset you have not yet been approved for, you will see a section called **Controlled Access Data** on the Request Data page (see image above). Under this section, there is a bulleted list indicating the dataset(s) or [Data Access Unit(s)](../../glossary.md#data-access-unit) you must request access to by submitting a form called the [Data Access Agreememnt (DAA)](../../glossary.md#data-access-agreement). Please use this list to fill in the Datasets section of the DAA. For more information on filling out the DAA, see [Filling out the DAA](../../guides/forms/how-to-fill-out-DAA). **You must upload a DAA to proceed.**
+
+### Managing Your Access
+
+Clicking the *Submit Request* from the Request Data page will direct you to the [Manage Data](https://platform.stjude.cloud/requests/manage) page where you can see the status of the data request you just made, as well the history of any of your previous data requests.
 
 ![](../../images/guides/data/request-data-new-2.png)
 
@@ -89,7 +90,7 @@ If you already have access to the data that you requested, your data will be ven
 !!! note 
     If you receive an email from us that your DAA is incomplete, you may edit your DAA and upload the revised copy using the 'Add a Form' button the on Manage Data page. 
 
-### Viewing your Data
+### Viewing Your Data
 
 From the Manage Data page, you can click on a request to navigate to the DNAnexus platform where a project will have been created with the project name that you entered on the Request Data page. Once your request is approved, the data will be vended to your DNAnexus account and will be accessible in this project. You can also follow the link in the email from notifications@stjude.cloud to view your DNAnexus project page. When the data is vended, the directory structure will typically look something like:
 
