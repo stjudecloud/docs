@@ -33,10 +33,8 @@ Note that steps 1-4 run in parallel.
 |--------------------------------|----------------|----------------------------------------------------------------------------------------------|-----------------------|
 | BAM                            | File           | Input bam aligned to human reference genome. [required]                                      |`test.bam`             |
 | BAI                            | File           | Bam index for input bam. [required]                                                          |`test.bai`             |
-| [Reference DB Prefix]          | String         | Basename of the input human reference assembly. [required]                                   | MGSCv37.fa            |
-| Suffix Length                  | Integer        | Length of read name suffixes to be trimmed. [default: 3]                                     | 3                     |
-| Keep Mates Together            | Boolean        | Whether to keep mates together [default: True]                                               | True                  |
-| Validation Stringency          | String         | Validation stringency: STRICT, LENIENT, SILENT [default: SILENT]                             | SILENT                |
+| [Reference DB Prefix]          | String         | Basename of the input human reference assembly. [default: GRCm38]                            | MGSCv37.fa            |
+| Custom Host Genome             | File           | Allows a custom host genome other than GRCm38 or MGSCv37                                     |`bwa_genome.tgz`       |
 | Output Prefix                  | String         | Prefix to append to output filenames [default: xenocp-]                                      | xenocp-               |
 | Output Extension               | String         | Output file extension [default: bam]                                                         | bam                   |
 
@@ -49,6 +47,7 @@ Note that steps 1-4 run in parallel.
 | [Cleansed BAM]             | File | Cleansed BAM                                                                       |
 | [Tie BAMs]                 | Files| BAMs with reads being classified as either human or mouse                          |
 | [Contamination lists]      | Files| Tab-delimited file (no headers) with sample ID and tag pairs                       |
+| flagstat                   | File | Samtools flagstat output for cleansed BAM                                          |
 
 ## Getting started
 
