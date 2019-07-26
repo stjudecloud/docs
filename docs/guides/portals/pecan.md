@@ -40,8 +40,6 @@ The image below shows an example ProteinPaint of the gene [TP53](https://pecan.s
 
 ![](../../images/guides/portals/pecan/protein_paint_overview.png)
 
-!!! note
-    A detailed tutorial for ProteinPaint can be found [here](https://docs.google.com/document/d/1JWKq3ScW62GISFGuJvAajXchcRenZ3HAvpaxILeGaw0/edit). Please excuse the different location and formatting as we work to incorporate this into our main documentation pages. 
 
 ### Glossary of Classes 
 
@@ -71,6 +69,10 @@ The list below summarizes all origins of mutations used by ProteinPaint.
 | Germline	|a variant found in a normal sample of a cancer patient. |
 | Somatic	| a variant found only in a tumor sample. |
 | Relapse	| a variant that arose in recurrence tumor. |
+
+### Advanced Customizations
+
+There are several more advanced customizations you can leverage with ProteinPaint such as creating custom tracks, importing your own data, and embedding interactive visualizations on your web page. For instructions on these topics, please see our [detailed tutorial](https://docs.google.com/document/d/1JWKq3ScW62GISFGuJvAajXchcRenZ3HAvpaxILeGaw0/edit). Please excuse the different location and formatting as we work to incorporate this into our main documentation pages.
 
 
 ## Studies
