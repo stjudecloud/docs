@@ -51,13 +51,10 @@ Note that steps 1-4 run in parallel.
 
 ## Getting started
 
-After logging in, click the "Start" button on the [XenoCP tool
-page]. This creates a new DNAnexus project and imports the tool.
+After logging in, click the "Run" button on the [XenoCP app
+page]. This will prompt to select a DNAnexus project.
 
-With subsequent runs, the sidebar shows "Launch Tool", meaning the project with
-the tool already exists. Click "Launch Tool" to start a new analysis.
-
-[XenoCP tool page]: https://platform.stjude.cloud/tools/xenocp
+[XenoCP app page]: https://platform.dnanexus.com/app/stjude_xenocp 
 
 ### Input configuration
 
@@ -83,7 +80,7 @@ MGSCv37.fa.pac, and MGSCv37.fa.sa.
 
 <h4 id="output-prefix">Output prefix</h4>
 
-_Output prefix_ is the prefix to append to the output contamination and tie filenames. "xenocp-" is the default prefix. 
+_Output prefix_ is the prefix to prepend to the output contamination and tie filenames. "xenocp-" is the default prefix. 
 
 <h5>Example</h5>
 
