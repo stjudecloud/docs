@@ -808,7 +808,7 @@
 </tbody>
 </table>
 <h4 id="bam-files">BAM files</h4>
-<p>In St. Jude Cloud, we stored aligned sequence reads in the ubiquitous BAM file format. For more information on SAM/BAM files, please refer to the <a href="https://samtools.github.io/hts-specs/SAMv1.pdf">SAM/BAM specification</a>. </p>
+<p>In St. Jude Cloud, we store aligned sequence reads in BAM file format for whole genome sequencing, whole exome sequencing, and RNA-seq. (For more information on SAM/BAM files, please refer to the <a href="https://samtools.github.io/hts-specs/SAMv1.pdf">SAM/BAM specification</a>.) For research samples, we require the standard 30X coverage for whole genome and 100X for whole exome sequencing. For clinical samples, we require higher coverage, 45X, for whole genome sequencing due to tumor purity issues found in clinical tumor specimens. For RNA-Seq, since only a subset of genes are expressed in a specific tissue, we require 30% of the exons to have 20X coverage in order to ensure that at least 30% of the expressed genes have sufficient coverage.</p>
 <h5 id="whole-genome-and-whole-exome">Whole Genome and Whole Exome</h5>
 <p>Whole Genome Sequence (WGS) and Whole Exome Sequence (WES) BAM files were produced by the <a href="https://azure.microsoft.com/en-us/services/genomics/">Microsoft Genomics Service</a> aligned to HG38 (GRCh38 no alt analysis set). For more information about how Microsoft Genomics produces BAM files or any other questions regarding data generation, please refer to <a href="https://azure.microsoft.com/en-us/resources/accelerate-precision-medicine-with-microsoft-genomics/">the official Microsoft Genomics whitepaper</a>.</p>
 <h5 id="rna-seq">RNA-Seq</h5>
@@ -967,7 +967,7 @@
           </div>
         
         
-        built from <a href="https://github.com/stjude/sjcloud-docs/tree/6171b68">6171b68</a> using
+        built from <a href="https://github.com/stjude/sjcloud-docs/tree/32d3263">32d3263</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
