@@ -15,7 +15,7 @@ Next, ensure that you have correctly filled out the 5 required sections of the D
      ![](../../images/guides/forms/daa-1.png)
 
 2. **Page 6** Signature and information of the Principal Investigator.
-    * A Principal Investigator (PI) is designated by the grantee organization to direct the project or activity being supported by the grant. The PI is responsible and accountable to the grantee for the proper conduct of the project or activity. The role of the PI within the eRA Commons is to complete the grant process, either by completing the required forms via the eRA Commons or by delegating this responsibility to another individual. A PI can access information for any grant for which they are designated the PI. See eRA Commons Roles & Privileges Matrix. Typically the PI signee is the faculty-level supervisor on the project.
+    * A Principal Investigator (PI) is designated by the grantee organization to direct the project or activity being supported by the grant. The PI is responsible and accountable to the grantee for the proper conduct of the project or activity. The role of the PI within the eRA Commons is to complete the grant process, either by completing the required forms via the eRA Commons or by delegating this responsibility to another individual. A PI can access information for any grant for which they are designated the PI. See eRA Commons Roles & Privileges Matrix. Typically the PI signee is the faculty-level supervisor on the project, but it is not a requirement.
 
     ![](../../images/guides/forms/daa-2.png)
 
