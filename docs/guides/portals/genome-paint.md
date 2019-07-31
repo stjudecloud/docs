@@ -52,6 +52,6 @@ Next, go back to the cohort view and type another gene or region of interest int
 
 This will add the new genomic variant as a second column in the matrix. You can continue adding columns to this matrix in the same manner.
 
+## Advanced Customizations
 
-!!! note
-    A detailed tutorial for GenomePaint can be found [here](https://docs.google.com/document/d/1owXUQuqw5hBHFERm0Ria7anKtpyoPBaZY_MCiXXf5wE/edit). You'll also find instructions to create custom tracks, visualize your own data, and embed images on your web page. Please excuse the different location and formatting as we work to incorporate this into our main documentation pages. 
+There are several more advanced customizations you can leverage with GenomePaint such as creating custom tracks, importing your own data, and embedding interactive visualizations on your web page. For instructions on these topics, please see our [detailed tutorial](https://docs.google.com/document/d/1owXUQuqw5hBHFERm0Ria7anKtpyoPBaZY_MCiXXf5wE/edit). Please excuse the different location and formatting as we work to incorporate this into our main documentation pages.
