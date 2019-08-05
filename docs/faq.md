@@ -155,7 +155,7 @@ If you are trying to run something like
 and are getting a connectivity error, it may be that your firewall is too restrictive. Are you able to perform the command from an unrestricted network (like a home network)? If yes, you can resolve this issue by asking your network administrator to whitelist connections to Azure US West. All subnets (Region Name="uswest") are provided [here](https://www.microsoft.com/en-us/download/details.aspx?id=41653).
 
 ### How do I cite St. Jude Cloud?
-We are currently in progress of preparing a paper for St. Jude Cloud. In the meantime, please refer to the [citation table](index.md#citing-st-jude-cloud) on the Welcome page.
+We are currently in progress of preparing a paper for St. Jude Cloud. In the meantime, please refer to the [citation table](citation-reference.md#citation-reference-table) on the Welcome page.
 
 ### When can I publish my findings using St. Jude Cloud data?
 Once the [embargo date](glossary.md#embargo-date) for the St. Jude datasets that you've used in your research has passed, you are legally permitted to publish results based on that data.

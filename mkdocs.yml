@@ -36,6 +36,7 @@ pages:
   - 'Forms':
       - 'Filling out a Data Access Agreement': 'guides/forms/how-to-fill-out-DAA.md' 
       - 'Filling out an Extension Addendum': 'guides/forms/how-to-fill-out-Extension.md'
+  - 'Citing St. Jude Cloud': 'citation-reference.md'
   - 'Frequently Asked Questions': 'faq.md'
   - 'Glossary': 'glossary.md'
 
