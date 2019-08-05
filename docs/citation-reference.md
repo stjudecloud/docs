@@ -8,6 +8,7 @@ We are currently in progress of preparing the St. Jude Cloud manuscript. Until f
 >"Whole genome sequencing data for relapse tumor samples from 345 pediatric patients were obtained from St. Jude Cloud."
            
 3. State in the **Data availability** section of the manuscript that data can be accessed via St. Jude Cloud. Example statement:
+>"Whole genome sequencing data for pediatric relapse tumor samples used for analysis in this study were obtained from St. Jude Cloud (https://www.stjude.cloud) – a publically accessible pediatric genomic data resource requiring approval for controlled data access."
 
 ## Citation Reference Table
 
