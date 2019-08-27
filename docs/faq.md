@@ -68,10 +68,6 @@ be charged for anything with the exception of the following actions:
 
 *  You will be charged for any *derivative* files stored on the St. Jude Cloud, such as results files obtained through running analyses workflows.
 * There is a small monthly storage fee associated for any of your own data you upload to the cloud.
-* If you elect to *download* any data from St. Jude Cloud, you will be
-  charged an egress fee by DNAnexus. This fee is usually negligible
-  unless you are downloading entire cohorts. We are actively
-  investigating ways to minimize or eliminate these costs.
 * If you run any of our analysis workflows (such as Rapid RNA-Seq, WARDEN, etc.) or your own workflows that you have uploaded and packaged into the cloud, you will be charged for the
   compute resources used in producing the results. Soon we hope to be able to sponsor all compute costs associated with running our St. Jude Cloud workflows.
 
