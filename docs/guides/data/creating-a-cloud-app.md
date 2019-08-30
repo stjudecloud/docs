@@ -3,7 +3,7 @@
 This guide will take you through the process of writing an application for working with and manipulating the St. Jude data you've requested. By creating your own application, you will be able to wrap genomic tools and packages from external sources, as well as any tool or application you might have written yourself.
 
 !!! tip
-    The complete contents of this guide is hosted on the [St. Jude App Tutorial](https://github.com/stjude/sjcloud-app-tutorial) repository on GitHub. Feel free to clone the repository and use it as a reference while following this tutorial or try building the application and running it on your own project.
+    The complete contents of this guide is hosted on the [St. Jude App Tutorial](https://github.com/stjudecloud/cloud-app-tutorial) repository on GitHub. Feel free to clone the repository and use it as a reference while following this tutorial or try building the application and running it on your own project.
 
 ## Overview
 
@@ -435,6 +435,6 @@ Again, if we run the `dx ls` command, we can verify that two new files titled "f
 
 ## Conclusion
 
-If you have made it this far, you have likely wrapped your first genomic analysis tool for use in the cloud. For your reference, we have included the final FastQC application at the [St. Jude App Tutorial Repository](https://github.com/stjude/sjcloud-app-tutorial).
+If you have made it this far, you have likely wrapped your first genomic analysis tool for use in the cloud. For your reference, we have included the final FastQC application at the [St. Jude App Tutorial Repository](https://github.com/stjudecloud/cloud-app-tutorial).
 
 If you have any questions or suggestions on how we can improve this tutorial, please [file an issue](https://github.com/stjude/sjcloud-docs/issues), contact us at [https://stjude.cloud/contact](https://stjude.cloud/contact), or email us at [support@stjude.cloud](mailto:support@stjude.cloud).
