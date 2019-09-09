@@ -41,8 +41,8 @@ pages:
   - 'Glossary': 'glossary.md'
 
 # Repository
-repo_name: 'stjude/sjcloud-docs'
-repo_url: 'https://github.com/stjude/sjcloud-docs'
+repo_name: 'stjudecloud/docs'
+repo_url: 'https://github.com/stjudecloud/docs'
 edit_uri: 'edit/master/docs'
 
 # Copyright
