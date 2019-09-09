@@ -60,6 +60,7 @@ Somatic VCF files contain HG38 based SNV/Indel variant calls from the St. Jude s
 5. Variants were manually reviewed by analysts and published with [the relevant Pediatric Cancer Genome Project (PCGP) paper][pcgp-landing-page].
 6. Post-publication, variants were lifted over to HG38 (the original HG19 coordinates are stored in the `HG19` INFO field.).
 
+**Please note that variants in our Somatic VCF files were manually curated from analyses across multiple sequencing types including WGS and WES.**  
 For more information on variants for each of the individuals, please refer to the relevant PCGP paper. For more information on the variant calling format (VCF), please see the latest specification for VCF document listed [here][hts-specs].
 
 
