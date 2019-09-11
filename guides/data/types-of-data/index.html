@@ -861,7 +861,8 @@
 <li>Variants were manually reviewed by analysts and published with <a href="https://www.stjude.org/research/pediatric-cancer-genome-project.html">the relevant Pediatric Cancer Genome Project (PCGP) paper</a>.</li>
 <li>Post-publication, variants were lifted over to HG38 (the original HG19 coordinates are stored in the <code class="codehilite"><span class="n">HG19</span></code> INFO field.).</li>
 </ol>
-<p>For more information on variants for each of the individuals, please refer to the relevant PCGP paper. For more information on the variant calling format (VCF), please see the latest specification for VCF document listed <a href="https://samtools.github.io/hts-specs/">here</a>.</p>
+<p><strong>Please note that our Somatic VCF files were designed specifically for St. Jude Cloud visualization purposes. Variants in these files were manually curated from analyses across multiple sequencing types including WGS and WES.</strong><br />
+For more information on variants for each of the individuals, please refer to the relevant PCGP paper. For more information on the variant calling format (VCF), please see the latest specification for VCF document listed <a href="https://samtools.github.io/hts-specs/">here</a>.</p>
 <h4 id="cnv-files">CNV files</h4>
 <p>CNV files contain copy number alteration (CNA) analysis results for paired tumor-normal WGS samples. Files are produced by running paired tumor-normal BAM files through the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4591043/">CONSERTING</a> pipeline which identifies CNA through iterative analysis of (i) local segmentation by read depth within boundaries identified by structural variation (SV) breakpoints followed by (ii) segment merging and local SV analysis. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3527068/">CREST</a> was used to identify local SV breakpoints. CNV files contain the following information:</p>
 <table>
@@ -979,7 +980,7 @@
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/75771f7">75771f7</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/4036b26">4036b26</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
