@@ -10,18 +10,18 @@ We are currently in progress of preparing the St. Jude Cloud manuscript. Until f
 3. State in the **Data availability** section of the manuscript that data and/or resource can be accessed via St. Jude Cloud. Example statement:
 >"Whole genome sequencing data for pediatric relapse tumor samples used for analysis in this study were obtained from St. Jude Cloud (https://www.stjude.cloud) – a publically accessible pediatric genomic data resource requiring approval for controlled data access."
 
-## Datset Reference Table
+## Dataset Reference Table
 
 Please download the Schedule 1(s) (linked in table below) to find dataset specific wording of acknowledgement(s).
 
 | St. Jude Cloud Dataset             |  Reference     |
 | -------------------------------- | ----------------- |
-| Pediatric Cancer Genome Project (PCGP) dataset  | [PCGP perspectives paper](https://www.ncbi.nlm.nih.gov/pubmed/22641210) and the [relevant tumor type paper(s)](http://pecan.stjude.cloud/pcgp-explore); [<i class="material-icons material-icons-sjcloud-custom">file_download</i> PCGP Sechedule 1](./files/PCGP-Schedule1.docx)   |
-| St. Jude Lifetime (SJLIFE) dataset                   | [SJLIFE paper](https://www.ncbi.nlm.nih.gov/pubmed/?term=29847298); [<i class="material-icons material-icons-sjcloud-custom">file_download</i> SJLIFE Sechedule 1](./files/SJLIFE-Schedule1.docx)  |
-| Clinical Pilot (non-G4K clinical genomics) dataset | [Clinical Pilot paper](https://www.ncbi.nlm.nih.gov/pubmed/30262806); [<i class="material-icons material-icons-sjcloud-custom">file_download</i> G4K Sechedule 1](./files/G4K-Schedule1.docx) |
-| Genomes for Kids (G4K) dataset | paper in progress; [<i class="material-icons material-icons-sjcloud-custom">file_download</i> G4K Sechedule 1](./files/G4K-Schedule1.docx) |
-| Sickle Cell Genome Project (SGP) dataset | paper in progress; [<i class="material-icons material-icons-sjcloud-custom">file_download</i> SGP Sechedule 1](./files/SGP-Schedule1.docx) |
-| Childhood Cancer Survivor Study (CCSS) dataset | [CCSS study design paper](https://www.ncbi.nlm.nih.gov/pubmed/11920786); [<i class="material-icons material-icons-sjcloud-custom">file_download</i> CCSS Sechedule 1](./files/CCSS-Schedule1.docx) |
+| Pediatric Cancer Genome Project (PCGP) dataset  | [PCGP perspectives paper](https://www.ncbi.nlm.nih.gov/pubmed/22641210) and the [relevant tumor type paper(s)](http://pecan.stjude.cloud/pcgp-explore); [<i class="material-icons material-icons-sjcloud-custom">file_download</i> PCGP Sechedule 1](./files/PCGP-Schedule1.pdf)   |
+| St. Jude Lifetime (SJLIFE) dataset                   | [SJLIFE paper](https://www.ncbi.nlm.nih.gov/pubmed/?term=29847298); [<i class="material-icons material-icons-sjcloud-custom">file_download</i> SJLIFE Sechedule 1](./files/SJLIFE-Schedule1.pdf)  |
+| Clinical Pilot (non-G4K clinical genomics) dataset | [Clinical Pilot paper](https://www.ncbi.nlm.nih.gov/pubmed/30262806); [<i class="material-icons material-icons-sjcloud-custom">file_download</i> G4K Sechedule 1](./files/G4K-Schedule1.pdf) |
+| Genomes for Kids (G4K) dataset | paper in progress; [<i class="material-icons material-icons-sjcloud-custom">file_download</i> G4K Sechedule 1](./files/G4K-Schedule1.pdf) |
+| Sickle Cell Genome Project (SGP) dataset | paper in progress; [<i class="material-icons material-icons-sjcloud-custom">file_download</i> SGP Sechedule 1](./files/SGP-Schedule1.pdf) |
+| Childhood Cancer Survivor Study (CCSS) dataset | [CCSS study design paper](https://www.ncbi.nlm.nih.gov/pubmed/11920786); [<i class="material-icons material-icons-sjcloud-custom">file_download</i> CCSS Sechedule 1](./files/CCSS-Schedule1.pdf) |
 
 !!! note
     If you are unsure what dataset(s) the data that you have been vended belongs to, you can find this information in the sj_datasets column of the [SAMPLE_INFO.txt](./guides/data/metadata.md) file.
