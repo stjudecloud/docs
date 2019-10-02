@@ -55,7 +55,7 @@ Somatic VCF files contain HG38 based SNV/Indel variant calls from the St. Jude s
 
 1. Reads were aligned to HG19 using [bwa backtrack][bwa] (`bwa aln` + `bwa sampe`) using default parameters.
 2. Post processing of aligned reads was performed using [Picard][picard] `CleanSam` and `MarkDuplicates`.
-3. Variants were called using the [Bambino][bambino-paper] variant caller (you can download by navigating [here][bambino-program] and searching for "Bambino package").
+3. Variants were called using the [Bambino][bambino-paper] variant caller (you can download Bambino [here][bambino-download] or by navigating to the [Zhang Lab page][bambino-program] where the  "Bambino package" is listed as a dependancy under the CONSERTING section).
 4. Variants were post-processed using an in-house post-processing pipeline that cleans and annotates variants. This pipeline is not currently publicly available.
 5. Variants were manually reviewed by analysts and published with [the relevant Pediatric Cancer Genome Project (PCGP) paper][pcgp-landing-page].
 6. Post-publication, variants were lifted over to HG38 (the original HG19 coordinates are stored in the `HG19` INFO field.).
@@ -89,6 +89,7 @@ CNV files contain copy number alteration (CNA) analysis results for paired tumor
 [picard]: https://broadinstitute.github.io/picard/
 [bambino-paper]: https://academic.oup.com/bioinformatics/article/27/6/865/236751
 [bambino-program]: https://www.stjuderesearch.org/site/lab/zhang
+[bambino-download]: http://ftp.stjude.org/pub/software/conserting/bambino-1.0.jar
 [pcgp-landing-page]: https://www.stjude.org/research/pediatric-cancer-genome-project.html
 [hts-specs]: https://samtools.github.io/hts-specs/
 [msgen]: https://azure.microsoft.com/en-us/services/genomics/
