@@ -856,7 +856,7 @@
 <ol>
 <li>Reads were aligned to HG19 using <a href="http://bio-bwa.sourceforge.net/">bwa backtrack</a> (<code class="codehilite"><span class="n">bwa</span> <span class="n">aln</span></code> + <code class="codehilite"><span class="n">bwa</span> <span class="n">sampe</span></code>) using default parameters.</li>
 <li>Post processing of aligned reads was performed using <a href="https://broadinstitute.github.io/picard/">Picard</a> <code class="codehilite"><span class="n">CleanSam</span></code> and <code class="codehilite"><span class="n">MarkDuplicates</span></code>.</li>
-<li>Variants were called using the <a href="https://academic.oup.com/bioinformatics/article/27/6/865/236751">Bambino</a> variant caller (you can download by navigating <a href="https://www.stjuderesearch.org/site/lab/zhang">here</a> and searching for "Bambino package").</li>
+<li>Variants were called using the <a href="https://academic.oup.com/bioinformatics/article/27/6/865/236751">Bambino</a> variant caller (you can download Bambino <a href="http://ftp.stjude.org/pub/software/conserting/bambino-1.0.jar">here</a> or by navigating to the <a href="https://www.stjuderesearch.org/site/lab/zhang">Zhang Lab page</a> where the  "Bambino package" is listed as a dependancy under the CONSERTING section).</li>
 <li>Variants were post-processed using an in-house post-processing pipeline that cleans and annotates variants. This pipeline is not currently publicly available.</li>
 <li>Variants were manually reviewed by analysts and published with <a href="https://www.stjude.org/research/pediatric-cancer-genome-project.html">the relevant Pediatric Cancer Genome Project (PCGP) paper</a>.</li>
 <li>Post-publication, variants were lifted over to HG38 (the original HG19 coordinates are stored in the <code class="codehilite"><span class="n">HG19</span></code> INFO field.).</li>
@@ -980,7 +980,7 @@ For more information on variants for each of the individuals, please refer to th
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/40d998b">40d998b</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/878e787">878e787</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
