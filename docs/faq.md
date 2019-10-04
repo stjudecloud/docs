@@ -91,7 +91,7 @@ No. If we provide an editable format, we cannot ensure that the legal document h
 
 ### Where can I find the latest version of the Data Access Agreement (DAA)?
 We keep [our site](./guides/data/data-request.md) up to date with the latest version on the Data Access Agreement for you to download, or you can download a copy
-[here](https://platform.stjude.cloud/access_form).
+[here](./files/DAA_v4_10-1-2019.pdf).
 
 ### Where do I submit the Data Access Agreement (DAA)?
 You can submit your Data Access Agreement in the drag and drop box on the [last step of the data request process](./guides/data/data-request.md#requesting-data).
