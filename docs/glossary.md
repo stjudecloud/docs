@@ -26,7 +26,22 @@ a DAU, it is required that you fill out a [Data Access Agreement (DAA)](#data-ac
 
 ### Data Access Unit
 
-A St. Jude Cloud **Data Access Unit (DAU)** is a grouping of data that typically corresponds to a project, study, or dataset generated at the same time at the same institution. Each DAU has its own governing body of researchers, the [Data Access Committee](#data-access-committee), who preside over the data and who may grant or deny access. We currently have 5 DAUs: Pediatric Cancer Genome Project (PCGP), St. Jude Lifetime Cohort Study (SJLIFE), Genomes for Kids (G4K) and Clinical Genomics, Sickle Cell Genome Project (SGP), and Childhood Cancer Survivor Study (CCSS). For a brief description of each DAU please see the respective [Schedule 1](./citing-stjude-cloud.md#dataset-reference-table).
+A St. Jude Cloud **Data Access Unit (DAU)** is a grouping of data that typically corresponds to a project, study, or dataset generated at the same time at the same institution. Each DAU has its own governing body of researchers, the [Data Access Committee](#data-access-committee), who preside over the data and who may grant or deny access. We currently have 5 DAUs: Pediatric Cancer Genome Project (PCGP), St. Jude Lifetime Cohort Study (SJLIFE), Genomes for Kids (G4K) and Clinical Genomics, Sickle Cell Genome Project (SGP), and Childhood Cancer Survivor Study (CCSS). See below for a brief description of each DAU. For a more detailed description please see the respective [Schedule 1(s)](./citing-stjude-cloud.md#dataset-reference-table).
+
+#### Pediatric Cancer Genome Project (PCGP)
+The Pediatric Cancer Genome Project is a collaboration between St. Jude Children's Research Hospital and the McDonnell Genome Institute at Washington University School of Medicine focused on discovering the genetic origins of pediatric cancer. This is a paired-tumor normal dataset of over 600 pediatric cancer patients. 
+
+#### St. Jude Lifetime (SJLIFE)
+St. Jude Lifetime (SJLIFE) is a longevity study from St. Jude Children's Research Hospital that aims to identify all inherited genome sequence and structural variants influencing the development of childhood cancer and occurrence of long-term adverse outcomes associated with cancer and cancer-related therapy. This dataset contains unpaired germline samples and does not contain tumor samples. 
+
+#### Clinical Genomics (Clinical Pilot and G4K)
+Clinical Genomics is a cohort from St. Jude Children's Research Hospital, comprised of two studies: Clinical Pilot and Genomes4Kids. Clinical Pilot is a smaller, pilot study generated to asses the validity and accuracy of moving forward with the G4K study. These studies aim to identify all inherited and tumor-acquired (somatic) genome sequence and structural variants influencing the development and behavior of childhood tumors. These are both paired tumor-normal datasets.
+
+#### Sickle Cell Genome Project (SGP)
+The Sickle Cell Genome Project (SGP) is a collaboration between St. Jude Children’s Research Hospital and Baylor College of Medicine focused on identifying genetic modifiers that contribute to various health complications in SCD patients. Additional objectives include, but are not limited to, developing accurate methods to characterize germline structural variants in highly homologous globin locus and blood typing. SGP is a germline-only dataset of SCD patients from birth to young adulthood.
+
+#### Childhood Cancer Survivor Study (CCSS)
+CCSS is a multi-institutional, multi-disciplinary, NCI-funded collaborative resource established to evaluate long-term outcomes among survivors of childhood cancer. It is a retrospective cohort consisting of >24,000 five-year survivors of childhood cancer who were diagnosed between 1970-1999 at one of 31 participating centers in the U.S. and Canada. The primary purpose of this sequencing of CCSS participants is to identify all inherited genome sequence and structural variants influencing the development of childhood cancer and occurrence of long-term adverse outcomes associated with cancer and cancer-related therapy. This dataset contains unpaired germline samples and does not contain tumor samples. 
 
 !!! warning "Potential Bacterial Contamination"
 
