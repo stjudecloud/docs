@@ -1,8 +1,7 @@
 ### Data Access Agreement
 
 A St. Jude Cloud **Data Access Agreement (DAA)** is a legally binding document outlining a number of terms and conditions to which anyone working with St. Jude Cloud data must agree.
-We do not negotiate the terms of this document unless terms are found to be in conflict with the institution's state law. Filling out the Data Access Agreement carefully and completely is crucial to having your request approved promptly.
-[Click Here](./guides/forms/how-to-fill-out-DAA) for a step by step guide on how to fill out the DAA.
+We do not negotiate the terms of this document unless terms are found to be in conflict with the institution's state law. Filling out the Data Access Agreement carefully and completely is crucial to having your request approved promptly. [Click Here](./files/DAA_v4_10-1-2019.pdf) to download a copy of the DAA. [Click Here](./guides/forms/how-to-fill-out-DAA) for a step by step guide on how to fill out the DAA.
 
 If you have incompletely or incorrectly filled out your DAA and would like to upload a revised form, [Click Here](./guides/forms/how-to-fill-out-DAA#uploading-a-revised-daa) for instructions.
 
@@ -27,18 +26,9 @@ a DAU, it is required that you fill out a [Data Access Agreement (DAA)](#data-ac
 
 ### Data Access Unit
 
-A St. Jude Cloud **Data Access Unit (DAU)** is a grouping of data that typically corresponds to a project, study, or dataset generated at the same time at the same institution. Each DAU has its own governing body of researchers, the [Data Access Committee](#data-access-committee), who preside over the data and who may grant or deny access. We currently have 5 DAUs: Pediatric Cancer Genome Project (PCGP), St. Jude Lifetime Cohort Study (SJLIFE), Genomes for Kids (G4K) and Clinical Genomics, Sickle Cell Genome Project (SGP), and Childhood Cancer Survivor Study (CCSS).
+A St. Jude Cloud **Data Access Unit (DAU)** is a grouping of data that typically corresponds to a project, study, or dataset generated at the same time at the same institution. Each DAU has its own governing body of researchers, the [Data Access Committee](#data-access-committee), who preside over the data and who may grant or deny access. We currently have 5 DAUs: Pediatric Cancer Genome Project (PCGP), St. Jude Lifetime Cohort Study (SJLIFE), Genomes for Kids (G4K) and Clinical Genomics, Sickle Cell Genome Project (SGP), and Childhood Cancer Survivor Study (CCSS). For a brief description of each DAU see the [Studies page](./guides/data/studies.md). For a more detailed description please see the respective [Schedule 1(s)](./citing-stjude-cloud.md#dataset-reference-table).
 
-!!! warning "Potential Bacterial Contamination"
 
-    Samples for the Childhood Cancer Survivorship Study were collected by sending out Buccal swab kits to enrolled participants and having them complete the kits at home. This mechanism of collecting saliva and buccal cells for sequencing is highly desirable because of its non-invasive nature and ease of execution. However, collection of samples in this manner also has higher probability of contamination from external sources (as compared to, say, samples collected using blood). We have observed some samples in this cohort which suffer from bacterial contamination. To address this issue, we have taken the following steps:
-
-    1. We have estimated the bacterial contamination rate and annotated each of the samples in the CCSS cohort. For each sample, you will find the estimated contamination rate in the `Description` field of the `SAMPLE_INFO.txt` file that is vended with your data (and as a property on the DNAnexus file). For information on this field, see the [Metadata specification](./guides/data/metadata.md).
-    2. Using this estimated contamination rate, we have removed 82 samples which exhibited large rates of bacterial contamination.
-    3. For the remaining samples, we have provided the `BAM` file as aligned with `bwa mem` with default parameters. We have observed that there are instances of reads originating from bacterial contamination that are erroneously mapped to the human genome and display a *very* low mapping quality. Please be advised that we have kept these reads as they were aligned and have not yet made any attempt to unmap these reads. Any analysis you perform on these samples will need to take this into account!
-    4. Last, we will be working over the coming months to unmap the reads originating from bacterial contamination and release updated `BAM` files along with the associated `gVCF` files from Microsoft Genomics Service.
-
-    With any questions on the nature or implications of this warning, please contact us at [support@stjude.cloud](mailto:support@stjude.cloud).
 
 ### Embargo Date
 
