@@ -25,7 +25,7 @@ You can apply many different capabilities of St. Jude Cloud to your research, su
 
 ## Datasets
 
-The following projects currently distribute their data through St. Jude Cloud. Click [here](./citing-stjude-cloud.md#dataset-reference-table) for more information about the projects listed below.
+The following projects currently distribute their data through St. Jude Cloud. Click [here](./guides/data/studies.md) for more information about the projects listed below.
 
 * Pediatric Cancer Genome Project (PCGP)
 * St. Jude Lifetime (SJLIFE)
