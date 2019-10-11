@@ -18,8 +18,7 @@ Please download the Schedule 1(s) (linked in table below) to find dataset specif
 | -------------------------------- | ----------------- |
 | Pediatric Cancer Genome Project (PCGP) dataset  | [PCGP perspectives paper](https://www.ncbi.nlm.nih.gov/pubmed/22641210) and the [relevant tumor type paper(s)](http://pecan.stjude.cloud/pcgp-explore); [<i class="material-icons material-icons-sjcloud-custom">file_download</i> PCGP Sechedule 1](./files/PCGP-Schedule1.pdf)   |
 | St. Jude Lifetime (SJLIFE) dataset                   | [SJLIFE paper](https://www.ncbi.nlm.nih.gov/pubmed/?term=29847298); [<i class="material-icons material-icons-sjcloud-custom">file_download</i> SJLIFE Sechedule 1](./files/SJLIFE-Schedule1.pdf)  |
-| Clinical Pilot (non-G4K clinical genomics) dataset | [Clinical Pilot paper](https://www.ncbi.nlm.nih.gov/pubmed/30262806); [<i class="material-icons material-icons-sjcloud-custom">file_download</i> G4K Sechedule 1](./files/G4K-Schedule1.pdf) |
-| Genomes for Kids (G4K) dataset | paper in progress; [<i class="material-icons material-icons-sjcloud-custom">file_download</i> G4K Sechedule 1](./files/G4K-Schedule1.pdf) |
+| Clinical Genomics (Clinical Pilot, Genomes for Kids, Real-Time Clinical Genomics) dataset | [Clinical Pilot paper](https://www.ncbi.nlm.nih.gov/pubmed/30262806); [<i class="material-icons material-icons-sjcloud-custom">file_download</i> Clinical Genomics Sechedule 1](./files/ClinGen-Schedule1.pdf) |
 | Sickle Cell Genome Project (SGP) dataset | paper in progress; [<i class="material-icons material-icons-sjcloud-custom">file_download</i> SGP Sechedule 1](./files/SGP-Schedule1.pdf) |
 | Childhood Cancer Survivor Study (CCSS) dataset | [CCSS study design paper](https://www.ncbi.nlm.nih.gov/pubmed/11920786); [<i class="material-icons material-icons-sjcloud-custom">file_download</i> CCSS Sechedule 1](./files/CCSS-Schedule1.pdf) |
 
