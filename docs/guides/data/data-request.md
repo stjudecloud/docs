@@ -28,7 +28,7 @@ There are two ways to make your data selection. You can peruse our raw genomic d
 
 Go to the Data Browser [here](https://platform.stjude.cloud/requests/diseases), or navigate there from the St. Jude Cloud home page by clicking Access Data and then Explore Data.
 
-From the Data Browser, you can view samples grouped by Diagnosis, Publication, or [Dataset](../../glossary.md#data-access-unit) by toggling the tabs above the table. Use the search bar to look for something specific. Search the publication tab by title or pubmed ID.
+From the Data Browser, you can view samples grouped by Diagnosis, Publication, or [Dataset](../../glossary.md#data-access-unit) by toggling the tabs above the table. Use the search bar to look for something specific. Search the publication tab by title or PubMed ID.
 
 ![](../../images/guides/data/data-browser-tour-1.gif)
 

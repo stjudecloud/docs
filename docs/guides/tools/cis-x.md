@@ -104,7 +104,7 @@ following columns:
   * `Chr_Allele`: reference allele
   * `Alternative_Allele`: alternative allele
   * `reference_tumor_count`: reference allele count in the tumor genome
-  * `alternative_tumor_count`: alterative allele count in the tumor genome
+  * `alternative_tumor_count`: alternative allele count in the tumor genome
   * `reference_normal_count`: reference allele count in the matched normal genome
   * `alternative_normal_count`: alternative count in the matched normal genome
 
