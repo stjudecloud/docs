@@ -1091,7 +1091,7 @@ committed to protecting that privacy to the fullest extent.</p>
 <h3 id="can-i-request-fastq-files-on-st-jude-cloud">Can I request FASTQ files on St. Jude Cloud?</h3>
 <p>We do not share FASTQ formats, but several tools exist that you can leverage to revert BAM to FASTQ files. (We recommend using Picard SamToFastq to revert BAM files.) You can efficiently revert BAMs to FASTQs in the cloud by wrapping the conversion tool of your choice into a <a href="../guides/data/creating-a-cloud-app/">Cloud App</a>.</p>
 <h3 id="how-can-i-explore-and-manipulate-data-files-stored-on-the-cloud-without-downloading-the-files-to-my-local-machine">How can I explore and manipulate data files stored on the cloud without downloading the files to my local machine?</h3>
-<p>You can quickly and easily interact with data files using the DNAnexus cloud workstation app. See <a href="https://documentation.dnanexus.com/getting-started/tutorials/cloud-workstations#run-the-workstation-app">this guide</a> to help you setup and run the app. Note that if you are doing any type of large-scale, multi-sample analysis, espescially if you plan to repeat the analysis or want to run in parallel, you will want to <a href="../guides/data/creating-a-cloud-app/">write your own cloud app</a> rather than use the cloud workstation app.</p>
+<p>You can quickly and easily interact with data files using the DNAnexus cloud workstation app. See <a href="https://documentation.dnanexus.com/getting-started/tutorials/cloud-workstations#run-the-workstation-app">this guide</a> to help you setup and run the app. Note that if you are doing any type of large-scale, multi-sample analysis, especially if you plan to repeat the analysis or want to run in parallel, you will want to <a href="../guides/data/creating-a-cloud-app/">write your own cloud app</a> rather than use the cloud workstation app.</p>
 <h3 id="how-can-i-run-an-analysis-workflow-on-multiple-sample-files-at-the-same-time">How can I run an analysis workflow on multiple sample files at the same time?</h3>
 <p>The DNAnexus interface does have a batch tool available; however, it is in early testing, so we recommend using dx-toolkit on the command line as the most reliable and user friendly approach to batch and submit jobs. You can find our documentation on how to install and get started with dx-toolkit <a href="../guides/data/command-line/">here</a>. You may also refer to the sample script below that loops through all the BAM files in the <code class="codehilite"><span class="k">data</span></code> folder and submits a job using the BAM and matching index file.   </p>
 <div class="codehilite"><pre><span></span><span class="k">for</span> <span class="nv">bam</span> <span class="nv">in</span> $<span class="ss">(</span><span class="nv">dx</span> <span class="nv">ls</span> <span class="s1">&#39;</span><span class="s">/data/*.bam</span><span class="s1">&#39;</span><span class="ss">)</span><span class="c1">; do  </span>
@@ -1199,7 +1199,7 @@ Select a sample and click info to see more.</p>
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/4c4ece5">4c4ece5</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/ea10a53">ea10a53</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
