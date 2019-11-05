@@ -236,7 +236,7 @@ underlying analysis pipelines independently on the
 [DNAnexus](https://www.dnanexus.com) platform. If you just want to use
 the Pecan PIE website you can safely ignore this section of the
 documentation. We assume familiarity with the DNAnexus platform. If you aren't
-familiar with this, DNAnexus' [quickstart guide](https://wiki.dnanexus.com/Command-Line-Client/Quickstart) is a
+familiar with this, DNAnexus' [quickstart guide](https://documentation.dnanexus.com/getting-started/tutorials/cli-quickstart) is a
 great place to start.
 
 !!! warning
@@ -279,7 +279,7 @@ There are two methods of running pipelines on DNAnexus:
 All input files must be uploaded onto the DNAnexus platform. When
 specifying files for input you can use either the DNAnexus fie IDs (e.g.
 `file-FBgvp680gz1bGQ5p8yZKz69g`), or the filenames if they are unique. For
-an idea of how to upload files to DNAnexus, see [this guide](https://wiki.dnanexus.com/Command-Line-Client/Upload%20and%20Download%20Files#Uploading).
+an idea of how to upload files to DNAnexus, see [this guide](https://documentation.dnanexus.com/user/objects/uploading-and-downloading-files/small-sets-of-files/uploading-using-dx#uploading-files).
 
 ### Step 1: Running VEP+
 

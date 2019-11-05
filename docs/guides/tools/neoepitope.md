@@ -223,7 +223,7 @@ and even viewing the job logs can accessed by clicking around the sub-items.
 ![](../../images/guides/tools/neoepitope/job-detailed-view.gif) 
 
 !!! tip 
-    Power users can view the [DNAnexus Job Monitoring Tutorial](https://wiki.dnanexus.com/UI/Jobs) and the [DNAnexus Command Line Tutorial for Job Monitoring](https://wiki.dnanexus.com/Command-Line-Client/Monitoring-Executions) for advanced capabilities for monitoring jobs.
+    Power users can refer to the [DNAnexus Monitoring Executions Documentation](https://documentation.dnanexus.com/user/running-apps-and-workflows/monitoring-executions) for advanced capabilities for monitoring jobs.
 
 ## Analysis of results
 
