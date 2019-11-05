@@ -3,7 +3,7 @@
 |                       |                                                                                                                          |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------|
 | **Authors**           | Michael Edmonson, Aman Patel                                                                                             |
-| **Publication**       | [Zhang et al., NEJM 2015](http://www.nejm.org/doi/full/10.1056/NEJMoa1508054#t=article), supplementary appendix pp. 7-10 |
+| **Publication**       | [Edmonson et al., Genome Research 2019](https://genome.cshlp.org/content/29/9/1555.full) |
 | **Technical Support** | [Contact Us](https://stjude.cloud/contact)                                                                               |
 
 Pecan PIE (the **Pe**diatric **Can**cer Variant **P**athogenicity
