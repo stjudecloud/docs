@@ -4,12 +4,12 @@ The [Data Access Agreement (DAA)](../../glossary.md#data-access-agreement) is a 
 
 Upon selection of your desired data through the data browser or through the PeCan app and if you have not already been approved for access to the selected datasets, you will be prompted to complete a Data Access Agreement. In order to simplify the data access request process, an [electronic data access agreement](#the-electronic-data-access-agreement) is available for US residents only.
 
-If you reside outside of the US, you must fill out the Data Access Agreement manually. You may click [here](../../files/DAA_v4_10-1-2019.pdf) to download the latest version of the DAA. Please read the first 6 pages carefully, which consist of terms and conditions that you and your institution must agree to in order to access any data on St. Jude Cloud. Then follow the directions starting at [Data Access Units](#data-access-units) to ensure that you have correctly filled out the DAA. Please note that there are [2 additional required sections](#downloading-data) if you intend to download data.
+If you reside outside of the US, you must fill out the Data Access Agreement manually. You may click [here](../../files/DAA_v4_10-1-2019.pdf) to download the latest version of the DAA. Please read the first 6 pages carefully, which consist of terms and conditions that you and your institution must agree to in order to access any data on St. Jude Cloud. Then, follow the directions starting at [Data Access Units](#data-access-units) to ensure that you have correctly filled out the DAA. Please note that there are [2 additional required sections](#downloading-data) if you intend to download data.
 
 ### The Electronic Data Access Agreement
-Users who live in the United States will be given the option to complete the DAA electronically or manually. If you elect to complete it electronically, the interface will request information about you, your institution and your associates. You will also be asked to provide a detailed description of the research project with which the data you have requested will be used. 
+Users who live in the United States will be given the option to complete the DAA electronically or manually. If you elect to complete it electronically, the setup wizard will request information about you, your institution and your associates. You will also be asked to provide a detailed description of the research project with which the data you have requested will be used. 
 
-After submitting the required information, the Data Access Agreement will be sent via email to each individual entered through the wizard. Each individual must follow the link in their email to sign the appropriate page of the agreement via DocuSign. If any individual rejects or declines to sign the agreement, you will need to start a new data request from the data browser. 
+After submitting the required information, the Data Access Agreement will be sent via email to each individual entered through the setup wizard. Each individual must follow the link in their email to sign the appropriate page of the agreement via DocuSign. If any individual rejects or declines to sign the agreement, you will need to start a new data request from the data browser. 
 
 Once all signatures have been collected, your data access request will be submitted to St. Jude Cloud. A St. Jude Cloud administrator will forward your intended use to the appropriate [Data Access Committee(s)](../../glossary.md#data-access-committee) for approval. Upon approval from the DAC(s), you will be granted access to the datasets you selected. 
 
@@ -19,7 +19,7 @@ On page 7 of the DAA, you must mark all Data Access Units for which you are appl
 
 ![](../../images/guides/forms/daa-1.png)
 
-If you mark the incorrect datasets, you will be required to resubmit your agreement with the correct datasets marked. When completing the DAA electronically using the electronic wizard, the DAU options will be automatically preselected for you. 
+If you mark the incorrect datasets, you will be required to resubmit your agreement with the correct datasets marked. When completing the DAA electronically using the setup wizard, the DAU options will be automatically preselected for you. 
 
 #### Downloading Data
 
@@ -28,7 +28,7 @@ If you mark the incorrect datasets, you will be required to resubmit your agreem
 and  (2) have your institution’s Information Security Officer sign the agreement on page 13.
    ![](../../images/guides/forms/daa-6.png)
 
-If filling out the DAA electronically, you must select the option to download within the wizard and input the contact information of your institution’s Information Security Officer. 
+If filling out the DAA electronically, you must select the option to download within the setup wizard and input the contact information of your institution’s Information Security Officer. 
 
 ### Contemplated Use
 
