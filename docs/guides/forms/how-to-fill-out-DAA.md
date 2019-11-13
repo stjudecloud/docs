@@ -60,7 +60,7 @@ Page 12 of the agreement must be filled out and signed by your Institutional or 
 
 ### Information Security Officer
 
-On page 13 of the DAA, your institution’s Information Security Officer's signature is required *if and only if* you intend to [download](#downloading-data) a local copy of the data (note: you must also initial in the line below the DAU selection). This individual may go by varying job titles, such as Information Director or Chief Security Officer, but is the individual responsible for information security at your institution. This signature verifies that the data, once downloaded, will remain protected by your institution's data security protocols.
+On page 13 of the DAA, your institution’s Information Security Officer's signature is required *if and only if* you intend to [download](#downloading-data) a local copy of the data (note: you must also initial in the line below the DAU selection). This individual may go by varying job titles, such as Information Director or Chief Information Security Officer, but is the individual responsible for information security at your institution. This signature verifies that the data, once downloaded, will remain protected by your institution's data security protocols.
     ![](../../images/guides/forms/daa-6.png)
 
 ### Uploading A Revised DAA
