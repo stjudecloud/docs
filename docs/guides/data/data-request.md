@@ -104,5 +104,5 @@ project_space/
 └── SAMPLE_INFO.txt
 ```
 
-The `SAMPLE_INFO.txt` file provides all the [metadata](../../guides/data/metadata.md) associated with the request, and the restricted folder contains all the data for which you were approved separated by file type. 
+The `SAMPLE_INFO.txt` file provides all the [metadata](../../guides/data/about-our-data.md#metadata) associated with the request, and the restricted folder contains all the data for which you were approved separated by file type. 
  

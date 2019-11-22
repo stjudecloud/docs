@@ -2,7 +2,7 @@
 
 The [Data Access Agreement (DAA)](../../glossary.md#data-access-agreement) is a legal document used by St. Jude Cloud to verify the identity and intent of those requesting to access St. Jude Children’s Research Hospital’s genomics data. The document binds you and your institution in agreement to protect, use and share the data appropriately. 
 
-Upon selection of your desired data through the data browser or through the PeCan app, you will be prompted to complete a Data Access Agreement if you have not already been approved for access to the selected datasets. In order to simplify the data access request process, an [electronic data access agreement](#the-electronic-data-access-agreement) is available for US residents only.
+Upon selection of your desired data through the data browser or through the PeCan app, you will be prompted to complete a Data Access Agreement if you have not already been approved for access to the selected datasets. In order to simplify the data access request process, an [electronic data access agreement](#the-electronic-data-access-agreement-process) is available for US residents only.
 
 If you reside outside of the US, you must fill out the Data Access Agreement manually. You may click [here](../../files/DAA_v4_10-1-2019.pdf) to download the latest version of the DAA. Please read the first 6 pages carefully, which consist of terms and conditions that you and your institution must agree to in order to access any data on St. Jude Cloud. Then, follow the directions starting at [Data Access Units](#data-access-units) to ensure that you have correctly filled out the DAA. Please note that there are [two additional required sections](#downloading-data) if you intend to download data to your local infrastructure.
 
@@ -19,6 +19,7 @@ A St. Jude Cloud **Data Access Unit (DAU)** is a grouping of data that typically
 On page 7 of the DAA, you must mark all Data Access Units for which you are applying. The DAU(s) associated to the data you requested are listed in the Controlled Access Data section, directly above the Download Data Access Agreement button. This can be found on the Request Data webpage which immediately follows your selection of data from the data browser. 
 
 ![](../../images/guides/forms/docs-DAU-short.pdf)
+
 
 If you mark the incorrect datasets, you will be required to resubmit your agreement with the correct datasets marked. When completing the DAA electronically using the setup wizard, the DAU options will be automatically preselected for you. 
 
@@ -79,7 +80,7 @@ Request 3 is pending approval from the Data Access Committee(s), and the status 
 
 ### Similar Topics
 
-[Studies](../data/studies.md)  
+[Studies](../data/about-our-data.md#data-access-units)  
 [Making a Data Request](../data/data-request.md)  
 [Renewing Your Data Access](../forms/how-to-fill-out-Extension.md)  
 [Downloading Data](../data/working-with-our-data.md#using-our-data)
