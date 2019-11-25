@@ -207,7 +207,7 @@ Embedded in both the filename and the `SAMPLE_INFO.txt` file that comes with you
 | AEL                | Acute erythroid leukemia (AML M6)                         |
 | ALCL               | Anaplastic Large Cell Lymphoma                            |
 | ALL                | Acute Lymphoblastic Leukemia                              |
-| ALS                | Amyotrophic Lateral Sclerosis ("Lou Gehrig\'s Disease"")" |
+| ALS                | Amyotrophic Lateral Sclerosis ("Lou Gehrig's Disease"")" |
 | ALZ                | Alzheimer's Disease                                       |
 | AML                | Acute Myeloid Leukemia                                    |
 | AMLM               | Acute Megakaryoblastic Leukemia                           |
