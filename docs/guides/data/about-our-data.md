@@ -175,7 +175,7 @@ Each data request includes a text file called `SAMPLE_INFO.txt` that provides a 
 | sample_name     | A unique sample identifier assigned internally at St. Jude.                            |
 | sample_type     | One of Autopsy, Cell line, Diagnosis, Germline, Metastasis, Relapse, or Xenograft.      |
 | sequencing_type | Whether the file was generated from Whole Genome (WGS), Whole Exome (WES), or RNA-Seq. |
-| file_type       | One of the [file types](../../guides/data/types-of-data) available in St. Jude Cloud   |
+| file_type       | One of the [file types](../../guides/data/types-of-data) available in St. Jude Cloud.   |
 | description     | Optional field that may contain additional file information.                           |
 | sj_diseases          | Short disease identifier assigned at the time of genomic sequencing. Note that this diagnosis may be refined after undergoing genomic testing. When including diagnosis in your analysis, we recommend you use `attr_diagnosis`, which is the most up to date value for diagnosis. |
 | sj_datasets          | If present, the datasets in the data browser which this file is associated with.                                                                                                                                                                                                   |
