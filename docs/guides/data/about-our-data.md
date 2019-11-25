@@ -173,7 +173,7 @@ Each data request includes a text file called `SAMPLE_INFO.txt` that provides a 
 | file_path       | The path to the file in your St. Jude Cloud project.                                   |
 | subject_name    | A unique subject identifier assigned internally at St. Jude.                           |
 | sample_name     | A unique sample identifier assigned internally at St. Jude.                            |
-| sample_type     | One of Autopsy, Cell line, Diagnosis, Germline, Metastasis, Relapse, or Xenograft      |
+| sample_type     | One of Autopsy, Cell line, Diagnosis, Germline, Metastasis, Relapse, or Xenograft.      |
 | sequencing_type | Whether the file was generated from Whole Genome (WGS), Whole Exome (WES), or RNA-Seq. |
 | file_type       | One of the [file types](../../guides/data/types-of-data) available in St. Jude Cloud   |
 | description     | Optional field that may contain additional file information.                           |
