@@ -116,7 +116,7 @@ RNA-Seq BAM files are mapped to HG38 + [ERCC Spike In Sequences][ercc] (commonly
 ```
 
 ##Data Access Units
-A Data Access Unit is a grouping of data that typically corresponds to a dataset generated at the same time at the same institution, and can also correspond to a specific study. Each DAU has its own Data Access Committee, which contains the researchers who reside over the data. Each Data Access Committee has its own protocols for approving access to their DAU. Please [Contact Us](mailto:support@stjude.cloud) if you have questions about committee approval protocols. [Basic clinical data](#clinical-and-phenotypic-information) is available for relevant subjects in each DAU. We currently have 5 DAUs. 
+A Data Access Unit is a grouping of data that typically corresponds to a dataset generated at the same time at the same institution, and can also correspond to a specific study. Each DAU has its own Data Access Committee, which contains the researchers who reside over the data. Each Data Access Committee has its own protocols for approving access to their DAU. Please [contact us](mailto:support@stjude.cloud) if you have questions about committee approval protocols. [Basic clinical data](#clinical-and-phenotypic-information) is available for relevant subjects in each DAU. 
 
 ### Pediatric Cancer Genome Project (PCGP)
 **PCGP is a paired-tumor normal dataset focused on discovering the genetic origins of pediatric cancer.**
