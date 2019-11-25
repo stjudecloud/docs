@@ -52,7 +52,7 @@ CNV files contain copy number alteration (CNA) analysis results for paired tumor
 | DMean         | The mean coverage in the tumor sample                                                                                                                        |
 | LogRatio      | Log2 ratio between tumor and normal coverage                                                                                                                 |
 | Quality score | A empirical score used in merging                                                                                                                            |
-| SV_Matching   | whether the boundary of the segments were supported by SVs (3: both ends supported, 2: right end supported, 1: left end supported, 0: neither end supported) |
+| SV_Matching   | Whether the boundary of the segments were supported by SVs (3: both ends supported, 2: right end supported, 1: left end supported, 0: neither end supported) |
 
 
 [crest]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3527068/
