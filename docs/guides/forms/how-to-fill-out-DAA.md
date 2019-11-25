@@ -34,10 +34,12 @@ If filling out the DAA electronically, you must select the option to download wi
 
 On page 8 of the DAA, you must submit a description of your research project. Please specifically describe the intended role of St. Jude’s data in your research project. Your contemplated use can be anywhere from a paragraph to a few pages long, although a typical contemplated use is 1-2 paragraphs. Each [Data Access Committee](../../glossary.md#data-access-committee) will evaluate your contemplated use case and decide whether to approve or deny your application for data access based on their own set of protocols. Please [contact us](https://stjude.cloud/contact) if you have any questions regarding the protocols of the approval process.
 
-#### Contemplated Use Example for SJLIFE and PCGP Access
+#### Contemplated Use Example
 
-Rare hereditary syndromes are associated with pediatric cancer predisposition.  The genes responsible, however, have not yet been fully defined.   The goal of our research is discover these genes and to apply this knowledge to develop guidelines for the clinic.   Candidate predisposition genes will be identified based on statistical modeling of rare variants from the SJLIFE data sets when contrasted against normal controls from public resources.
-Further the discovery of cancer predisposition genes will be informed by identifying secondary somatic mutations in tumors and peripheral blood.  Whole genome sequences and whole exome sequences from PCGP samples from a spectrum of pediatric cancers will be surveyed for rare deleterious germline mutations that may support the development of cancer.
+The below example is adapted from a successful request to access SJLIFE and PCGP datasets.
+
+>"Rare hereditary syndromes are associated with pediatric cancer predisposition.  The genes responsible, however, have not yet been fully defined.   The goal of our research is to discover these genes and to apply this knowledge to develop guidelines for the clinic.   Candidate predisposition genes will be identified based on statistical modeling of rare variants from the SJLIFE data sets when contrasted against normal controls from public resources.
+Further, the discovery of cancer predisposition genes will be informed by identifying secondary somatic mutations in tumors and peripheral blood.  Whole genome sequences and whole exome sequences from PCGP samples from a spectrum of pediatric cancers will be surveyed for rare deleterious germline mutations that may support the development of cancer."
 
 ### Principal Investigator
 
