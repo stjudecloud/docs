@@ -32,7 +32,7 @@ Somatic VCF files contain HG38 based SNV/Indel variant calls from the St. Jude s
 6. Post-publication, variants were lifted over to HG38 (the original HG19 coordinates are stored in the `HG19` INFO field.).
 
 !!! note
-    Please note that our Somatic VCF files were designed specifically for St. Jude Cloud visualization purposes. Variants in these files were manually curated from analyses across multiple sequencing types including WGS and WES.**  
+    **Our Somatic VCF files were designed specifically for St. Jude Cloud visualization purposes. Variants in these files were manually curated from analyses across multiple sequencing types including WGS and WES.**  
     For more information on variants for each of the individuals, please refer to the relevant PCGP paper. For more information on the variant calling format (VCF), please see the latest specification for VCF document listed [here][hts-specs].
 
 
