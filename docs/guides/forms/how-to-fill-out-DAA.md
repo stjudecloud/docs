@@ -36,10 +36,9 @@ On page 8 of the DAA, you must submit a description of your research project. Pl
 
 #### Contemplated Use Example
 
-The below example is adapted from a successful request to access SJLIFE and PCGP datasets.
+The below is a simulated example of a contemplated use.
 
->"Rare hereditary syndromes are associated with pediatric cancer predisposition.  The genes responsible, however, have not yet been fully defined.   The goal of our research is to discover these genes and to apply this knowledge to develop guidelines for the clinic.   Candidate predisposition genes will be identified based on statistical modeling of rare variants from the SJLIFE data sets when contrasted against normal controls from public resources.
-Further, the discovery of cancer predisposition genes will be informed by identifying secondary somatic mutations in tumors and peripheral blood.  Whole genome sequences and whole exome sequences from PCGP samples from a spectrum of pediatric cancers will be surveyed for rare deleterious germline mutations that may support the development of cancer."
+>"We propose to apply our own variant calling method to detect structural variants in both pediatric tumor and germline samples.  The detected variants will be then be compared to our own genomic data and to publically available data sources of normal and disease samples to assess the novelty those variants and their association with disease.  Variants will be categorized by their expected effect on genes known to be relevant to cancer, DNA repair or epigenetics.   One goal of the research is to compare our mutation detection software to existing methods on samples with known mutations and structural variants such as those in the PCGP data set.   Another goal is the identification of novel variants with potential clinical relevance.  Promising tractable variants will be introduced into cell lines to observe their effect on cell growth and tumor progression.   Lastly, we propose to use the results of our analysis to further develop and refine our variant detection methods."
 
 ### Principal Investigator
 
