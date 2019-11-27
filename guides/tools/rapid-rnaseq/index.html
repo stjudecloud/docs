@@ -283,32 +283,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/types-of-data/" title="Types of Data" class="md-nav__link">
-      Types of Data
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../data/studies/" title="Studies" class="md-nav__link">
-      Studies
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../data/metadata/" title="Metadata Provided" class="md-nav__link">
-      Metadata Provided
+    <a href="../../data/about-our-data/" title="About Our Data" class="md-nav__link">
+      About Our Data
     </a>
   </li>
 
@@ -1082,7 +1058,7 @@ reads and junction spanning reads, assembles them into a contig and maps
 the contig back to the reference genome. Mapped contigs are then
 annotated and filtered. Those with potential genic effects including
 gene fusion, ITD, readthrough or circular RNA are reported in the
-<code class="codehilite"><span class="n">final_fusions</span><span class="p">.</span><span class="n">txt</span></code> file. An interactive version of this file with
+<code class="codehilite"><span class="err">final_fusions.txt</span></code> file. An interactive version of this file with
 predictions sorted by quality can be inspected with the ProteinPaint
 interactive fusion viewer.</p>
 <p>An abstract describing CICERO was presented at ASHG, 2014:
@@ -1097,7 +1073,7 @@ unmapped). FUZZION can recover even a single low quality read
 potentially supporting a known fusion gene junction. The FUZZION output
 is a simple text file with read IDs and sequences supporting a
 particular gene fusion. The fusion point is indicated with square
-brackets <code class="codehilite"><span class="p">[]</span></code>.</p>
+brackets <code class="codehilite"><span class="err">[]</span></code>.</p>
 <h2 id="getting-started">Getting started</h2>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
@@ -1140,7 +1116,7 @@ data using that method, so we defer to those guides here.</p>
 <p>Next, you'll need to hook up the FastQ files you uploaded in 
 <a href="#uploading-data">the upload data section</a>. In this example,
 we are using the FastQ version of the pipeline, so you can 
-hook up the inputs by clicking on the <code class="codehilite"><span class="n">Fastq</span><span class="o">/</span><span class="n">R1</span></code> and <code class="codehilite"><span class="n">Fastq</span><span class="o">/</span><span class="n">R2</span></code>
+hook up the inputs by clicking on the <code class="codehilite"><span class="err">Fastq/R1</span></code> and <code class="codehilite"><span class="err">Fastq/R2</span></code>
 slots and selecting the respective files. If you are using 
 the BAM-based workflow, the process is similar.</p>
 <p><img alt="" src="../../../images/guides/tools/rapid-rnaseq/hookup-inputs.gif" /></p>
@@ -1225,31 +1201,31 @@ of this guide. Here, we will discuss each of the different output files in more 
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">sample</span></code></td>
+<td><code class="codehilite"><span class="err">sample</span></code></td>
 <td>Sample name</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">gene</span><span class="o">*</span></code></td>
+<td><code class="codehilite"><span class="err">gene*</span></code></td>
 <td>Gene name</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">chr</span><span class="o">*</span></code></td>
+<td><code class="codehilite"><span class="err">chr*</span></code></td>
 <td>Chromosome name</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">pos</span><span class="o">*</span></code></td>
+<td><code class="codehilite"><span class="err">pos*</span></code></td>
 <td>Genomic Location</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">ort</span><span class="o">*</span></code></td>
+<td><code class="codehilite"><span class="err">ort*</span></code></td>
 <td>Strand</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="k">reads</span><span class="o">*</span></code></td>
+<td><code class="codehilite"><span class="err">reads*</span></code></td>
 <td>Supporting reads</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">medal</span></code></td>
+<td><code class="codehilite"><span class="err">medal</span></code></td>
 <td>Estimated pathogenicity assessment using St. Jude Medal Ceremony</td>
 </tr>
 </tbody>
@@ -1271,43 +1247,43 @@ of this guide. Here, we will discuss each of the different output files in more 
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">junction</span></code></td>
+<td><code class="codehilite"><span class="err">junction</span></code></td>
 <td>Splice junction in the TCGA format "chrX:start:+,chrX:end,+". "start" and "end" are the 1-based position of the last mapped nucleotide before the skip and the first mapped nucleotide after the skip (i.e. the last base of the previous exon and the first base of the next exon). Note that in <code class="codehilite"><span class="na">.bed</span></code> output these coordinates will be different, see the .bed output section below. The "+" is currently hardcoded, though this may change in the future.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="k">count</span></code></td>
+<td><code class="codehilite"><span class="err">count</span></code></td>
 <td>Raw count of reads supporting the junction. During correction counts for ambiguous junctions can be combined, though obviously these additional reads will not be visible in the raw BAM file.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="k">type</span></code></td>
+<td><code class="codehilite"><span class="err">type</span></code></td>
 <td>Either "known" (matching a reference junction) or "novel" (not observed in the reference junction collection).</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">genes</span></code></td>
+<td><code class="codehilite"><span class="err">genes</span></code></td>
 <td>Gene symbols from the junction calling process. These still need work in the raw junction calling process, it's recommended to use the "annotated" output files instead which assign matching HUGO gene symbols based on the UCSC refGene table.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">transcripts</span></code></td>
+<td><code class="codehilite"><span class="err">transcripts</span></code></td>
 <td>List of known transcript IDs matching the junction.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">qc_flanking</span></code></td>
+<td><code class="codehilite"><span class="err">qc_flanking</span></code></td>
 <td>Count of supporting reads passing flanking sequence checks (junctions observed adjacent to read ends require 18+ nt of flanking sequence, otherwise 10+ nt).</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">qc_plus</span></code></td>
+<td><code class="codehilite"><span class="err">qc_plus</span></code></td>
 <td>Count of supporting reads aligned to the + strand.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">qc_minus</span></code></td>
+<td><code class="codehilite"><span class="err">qc_minus</span></code></td>
 <td>Count of supporting reads aligned to the - strand.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">qc_perfect_reads</span></code></td>
+<td><code class="codehilite"><span class="err">qc_perfect_reads</span></code></td>
 <td>Count of supporting reads with perfect alignments (no reference mismatches of quality 15+, indels, or soft clips).</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">qc_clean_reads</span></code></td>
+<td><code class="codehilite"><span class="err">qc_clean_reads</span></code></td>
 <td>Count of supporting reads whose alignments are not perfect but which have a ratio of &lt;= 5% of reference mismatches of quality 15+, indels, or soft clips relative to the count of aligned bases on both the left and right flanking sequence. Note: qc_clean_reads does NOT include qc_perfect_reads: to get a count of "perfect plus pretty good" reads the two values must be added together.</td>
 </tr>
 </tbody>
@@ -1403,7 +1379,7 @@ out on <a href="https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-contact/
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/9c1cede">9c1cede</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/38ae319">38ae319</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of

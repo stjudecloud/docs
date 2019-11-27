@@ -283,32 +283,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/types-of-data/" title="Types of Data" class="md-nav__link">
-      Types of Data
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../data/studies/" title="Studies" class="md-nav__link">
-      Studies
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../data/metadata/" title="Metadata Provided" class="md-nav__link">
-      Metadata Provided
+    <a href="../../data/about-our-data/" title="About Our Data" class="md-nav__link">
+      About Our Data
     </a>
   </li>
 
@@ -1245,9 +1221,9 @@ about in the next section) corresponds to a sample with one or more FastQ files.
 numbers and underscores.</li>
 <li>The condition/phenotype column associates similar samples together.
 The values should contain only letters, numbers and underscores.</li>
-<li>ReadFile1 should contain forward reads (e.g. <code class="codehilite"><span class="o">*</span><span class="p">.</span><span class="n">R1</span><span class="p">.</span><span class="n">fastq</span><span class="p">.</span><span class="n">gz</span></code> or <code class="codehilite"><span class="o">*</span><span class="n">_1</span><span class="p">.</span><span class="n">fastq</span><span class="p">.</span><span class="n">gz</span></code>).</li>
+<li>ReadFile1 should contain forward reads (e.g. <code class="codehilite"><span class="err">*.R1.fastq.gz</span></code> or <code class="codehilite"><span class="err">*_1.fastq.gz</span></code>).</li>
 <li>ReadFile2 will contain reads in reverse orientation to ReadFile2
-(e.g. <code class="codehilite"><span class="o">*</span><span class="p">.</span><span class="n">R2</span><span class="p">.</span><span class="n">fastq</span><span class="p">.</span><span class="n">gz</span></code> or <code class="codehilite"><span class="o">*</span><span class="n">_2</span><span class="p">.</span><span class="n">fastq</span><span class="p">.</span><span class="n">gz</span></code>).</li>
+(e.g. <code class="codehilite"><span class="err">*.R2.fastq.gz</span></code> or <code class="codehilite"><span class="err">*_2.fastq.gz</span></code>).</li>
 <li>For single end reads a single dash ('-') should be entered in the ReadFile2 column.</li>
 </ul>
 </div>
@@ -1255,14 +1231,14 @@ The values should contain only letters, numbers and underscores.</li>
 <p>The last line in the sample sheet is called the "comparison row". This
 line specifies the comparisons to be done between conditions/phenotypes.
 All pairwise combinations of the values in the "Phenotype" column can be 
-analyzed. To specify the comparisons, on a separate line, include <code class="codehilite"><span class="o">#</span><span class="n">comparisons</span><span class="o">=</span></code> followed be a comma delimited list of two conditions separated by a dash. </p>
+analyzed. To specify the comparisons, on a separate line, include <code class="codehilite"><span class="err">#comparisons=</span></code> followed be a comma delimited list of two conditions separated by a dash. </p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>The following lines are all valid examples.</p>
 <ol>
-<li><code class="codehilite"><span class="o">#</span><span class="n">comparisons</span><span class="o">=</span><span class="n">KO</span><span class="o">-</span><span class="n">WT</span></code></li>
-<li><code class="codehilite"><span class="o">#</span><span class="n">comparisons</span><span class="o">=</span><span class="n">Condition1</span><span class="o">-</span><span class="n">Control</span><span class="p">,</span><span class="n">Condition2</span><span class="o">-</span><span class="n">Control</span></code></li>
-<li><code class="codehilite"><span class="o">#</span><span class="n">comparisons</span><span class="o">=</span><span class="n">Phenotype2</span><span class="o">-</span><span class="n">Phenotype1</span><span class="p">,</span><span class="n">Phenotype3</span><span class="o">-</span><span class="n">Phenotype2</span><span class="p">,</span><span class="n">Phenotype3</span><span class="o">-</span><span class="n">Phenotype1</span></code></li>
+<li><code class="codehilite"><span class="err">#comparisons=KO-WT</span></code></li>
+<li><code class="codehilite"><span class="err">#comparisons=Condition1-Control,Condition2-Control</span></code></li>
+<li><code class="codehilite"><span class="err">#comparisons=Phenotype2-Phenotype1,Phenotype3-Phenotype2,Phenotype3-Phenotype1</span></code></li>
 </ol>
 </div>
 <div class="admonition note">
@@ -1303,26 +1279,26 @@ cloud workspace with the workflow screen opened for you.</p>
 <h3 id="hooking-up-inputs">Hooking up inputs</h3>
 <p>Next, you'll need to hook up the FastQ files and sample sheet
  you uploaded in <a href="#uploading-data">the upload data section</a>. 
-Click the <code class="codehilite"><span class="n">FASTQ_FILES</span></code> input field and select <strong>all</strong> FastQ files.
-Next, click the <code class="codehilite"><span class="n">sampleList</span></code> input field and select the corresponding
+Click the <code class="codehilite"><span class="err">FASTQ_FILES</span></code> input field and select <strong>all</strong> FastQ files.
+Next, click the <code class="codehilite"><span class="err">sampleList</span></code> input field and select the corresponding
 samplesheet.</p>
 <p><img alt="" src="../../../images/guides/tools/warden/inputs-warden-2.gif" /></p>
 <h3 id="selecting-parameters">Selecting parameters</h3>
 <p>We now need to configure the parameters for the pipeline, such as reference
 genome and sequencing method. You can access all of the available parameters 
-by clicking on the <code class="codehilite"><span class="n">WARDEN</span> <span class="n">WORKFLOW</span> <span class="n">GENERATOR</span></code> substep.</p>
+by clicking on the <code class="codehilite"><span class="err">WARDEN WORKFLOW GENERATOR</span></code> substep.</p>
 <div class="admonition example">
 <p class="admonition-title">Parameter setup steps</p>
 <ol>
-<li>In the <code class="codehilite"><span class="k">Output</span> <span class="n">Folder</span></code> field, select a folder to output to. You can
-structure your experiments however you like (e.g. <code class="codehilite"><span class="o">/</span><span class="n">My_Outputs</span></code>)</li>
-<li>In the <code class="codehilite"><span class="n">analysisName</span></code> field, enter a prefix for all of the output files. This
+<li>In the <code class="codehilite"><span class="err">Output Folder</span></code> field, select a folder to output to. You can
+structure your experiments however you like (e.g. <code class="codehilite"><span class="err">/My_Outputs</span></code>)</li>
+<li>In the <code class="codehilite"><span class="err">analysisName</span></code> field, enter a prefix for all of the output files. This
 can be any value you want to use to remember this run. <strong>Be sure to use underscores
 instead of spaces here!</strong></li>
-<li>Select the <code class="codehilite"><span class="n">sequenceStandedness</span></code> from the drop down menu. 
+<li>Select the <code class="codehilite"><span class="err">sequenceStandedness</span></code> from the drop down menu. 
 This information can be determined from the sequencing or source 
 of the data. If you don't know what to put here, select "no".</li>
-<li>Select the <code class="codehilite"><span class="n">Genome</span></code> pulldown menu. Choose the appropriate box.</li>
+<li>Select the <code class="codehilite"><span class="err">Genome</span></code> pulldown menu. Choose the appropriate box.</li>
 <li>The LIMMA parameters can be left alone for most analyses. If you are
 an advanced LIMMA user, you can change the various settings exposed
 below the required parameters.</li>
@@ -1488,17 +1464,17 @@ genome should be visible.</p>
 <p>In addition to viewing the MA and volcano plots through the visualization tool</p>
 <hr />
 <p><strong>Differential expression results</strong> </p>
-<p>Other useful differential expression results will be downloaded by the desktop app. This included tabular output from the differential expression analysis. For each comparison with three or more samples per condition, <code class="codehilite"><span class="n">results</span><span class="p">.</span><span class="o">*</span><span class="p">.</span><span class="n">txt</span></code> will be produced.</p>
+<p>Other useful differential expression results will be downloaded by the desktop app. This included tabular output from the differential expression analysis. For each comparison with three or more samples per condition, <code class="codehilite"><span class="err">results.*.txt</span></code> will be produced.</p>
 <hr />
 <p><strong>GSEA.input.txt</strong> and <strong>GSEA.tStat.txt</strong> </p>
 <p>Input files that can be used for GSEA analysis. The tStat file is preferred for a more accurate analysis, but will not give a heatmap diagram.
 - (Within the DNAnexus output directory structure, these files will be in the LIMMA directory.)</p>
 <ul>
 <li>
-<p>For plain text results from the simple differential expression analysis, the files will be named <code class="codehilite"><span class="n">simpleDE</span><span class="p">.</span><span class="o">*</span><span class="p">.</span><span class="n">txt</span></code>. (Within the DNAnexus output directory structure, these files will be in the SIMPLE_DIFEX directory.)</p>
+<p>For plain text results from the simple differential expression analysis, the files will be named <code class="codehilite"><span class="err">simpleDE.*.txt</span></code>. (Within the DNAnexus output directory structure, these files will be in the SIMPLE_DIFEX directory.)</p>
 </li>
 <li>
-<p>Prelabelled MA and volcano plots are provided for the analysis. These files are labeled <code class="codehilite"><span class="n">maPlot</span><span class="p">.</span><span class="o">*</span><span class="p">.</span><span class="n">png</span></code> and <code class="codehilite"><span class="n">volcanoPlot</span><span class="p">.</span><span class="o">*</span><span class="p">.</span><span class="n">png</span></code> where <code class="codehilite"><span class="o">*</span></code> is the comparison (e.g. ko_vs_wt)</p>
+<p>Prelabelled MA and volcano plots are provided for the analysis. These files are labeled <code class="codehilite"><span class="err">maPlot.*.png</span></code> and <code class="codehilite"><span class="err">volcanoPlot.*.png</span></code> where <code class="codehilite"><span class="err">*</span></code> is the comparison (e.g. ko_vs_wt)</p>
 </li>
 <li>
 <p>The MA plot shows the average expression of the gene on the X-axis, and Log2 fold change between condition/phenotype is on the Y-axis (if the name is for example maPlot.condition2-condition1.png then the fold change would represent condition1 minus condition2). Each gene is represented by a circle. The top 20 genes (by p-value) are identified on the plot. The genes are color coded by the chosen multiple testing correction method (False Discovery Rate (FDR) by default. An example MA plot can be seen below. (Within the DNAnexus output directory structure, these files will be in the LIMMA directory.)</p>
@@ -1510,7 +1486,7 @@ X-axis, and the -Log10 of the multiple testing corrected P-value on the
 Y-axis.</p>
 <p><img alt="" src="../../../images/guides/tools/warden/volcanoPlot.png" /></p>
 <p>An MA plot is generated for all comparisons regardless of number of
-samples. This is the <code class="codehilite"><span class="n">simpleDEPlot</span><span class="p">.</span><span class="o">*</span><span class="p">.</span><span class="n">png</span></code> no statistics are shown
+samples. This is the <code class="codehilite"><span class="err">simpleDEPlot.*.png</span></code> no statistics are shown
 and genes are not labeled. (Within the DNAnexus output directory structure, these files will be in the SIMPLE_DIFEX directory.)</p>
 <hr />
 <p><strong>Differential analysis input</strong></p>
@@ -1746,7 +1722,7 @@ form</a>.</p>
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/9c1cede">9c1cede</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/38ae319">38ae319</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of

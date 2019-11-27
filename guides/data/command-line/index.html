@@ -285,32 +285,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../types-of-data/" title="Types of Data" class="md-nav__link">
-      Types of Data
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../studies/" title="Studies" class="md-nav__link">
-      Studies
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../metadata/" title="Metadata Provided" class="md-nav__link">
-      Metadata Provided
+    <a href="../about-our-data/" title="About Our Data" class="md-nav__link">
+      About Our Data
     </a>
   </li>
 
@@ -852,8 +828,8 @@ computer by following <a href="https://documentation.dnanexus.com/downloads#DNAn
     typically too old/does not support the latest security protocols
     required). You can install using <a href="https://conda.io/docs/user-guide/getting-started.html">Anaconda</a> (recommended) or using
     the default <a href="https://www.python.org/downloads/">Python installer</a>.</li>
-<li>Run <code class="codehilite"><span class="n">pip</span> <span class="n">install</span> <span class="n">dxpy</span></code>.</li>
-<li>Type <code class="codehilite"><span class="n">dx</span> <span class="c1">--help</span></code> at the command line.</li>
+<li>Run <code class="codehilite"><span class="err">pip install dxpy</span></code>.</li>
+<li>Type <code class="codehilite"><span class="err">dx --help</span></code> at the command line.</li>
 </ol>
 </div>
 <h2 id="a-quick-tour">A quick tour</h2>
@@ -887,7 +863,7 @@ user has selected the Rapid RNA-Seq tool.</p>
 <h3 id="some-useful-commands">Some useful commands</h3>
 <p>Moving data back and forth between the cloud and your local computer is
 simple once you have selected the correct project for your tool.</p>
-<p>You will find that many common Linux commands with <code class="codehilite"><span class="n">dx</span></code> prepended work as expected.</p>
+<p>You will find that many common Linux commands with <code class="codehilite"><span class="err">dx</span></code> prepended work as expected.</p>
 <div class="codehilite"><pre><span></span><span class="c1"># list available files for the tool for the main folder</span>
 dx ls
 
@@ -921,7 +897,7 @@ Cloud Platform tools:</p>
 </li>
 <li>
 <p>Last, navigate to the local files you'd like to upload to the cloud
-    and use the <code class="codehilite"><span class="n">dx</span> <span class="n">upload</span></code> command as specified in
+    and use the <code class="codehilite"><span class="err">dx upload</span></code> command as specified in
     [upload-download-data]{role="ref"} to upload your data to St. Jude
     Cloud.</p>
 <p><img alt="" src="../../../images/guides/data/rapid-rnaseq-upload-data.png" /></p>
@@ -963,7 +939,7 @@ data request:</p>
 </li>
 <li>
 <p>In the root of every data request is a file called
-    <code class="codehilite"><span class="n">SAMPLE_INFO</span><span class="p">.</span><span class="n">txt</span></code>. This should contain all of the
+    <code class="codehilite"><span class="err">SAMPLE_INFO.txt</span></code>. This should contain all of the
     information about the samples you checked out as well as the
     associated metadata we provide.</p>
 </li>
@@ -1037,7 +1013,7 @@ data request:</p>
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/9c1cede">9c1cede</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/38ae319">38ae319</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of

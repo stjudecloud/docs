@@ -285,32 +285,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../types-of-data/" title="Types of Data" class="md-nav__link">
-      Types of Data
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../studies/" title="Studies" class="md-nav__link">
-      Studies
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../metadata/" title="Metadata Provided" class="md-nav__link">
-      Metadata Provided
+    <a href="../about-our-data/" title="About Our Data" class="md-nav__link">
+      About Our Data
     </a>
   </li>
 
@@ -905,17 +881,17 @@ in the cloud if it's feasible; the data provided by St. Jude is free, the comput
 </div>
 <h3 id="viewing-your-data">Viewing Your Data</h3>
 <p>From the Manage Data page, you can click on a request to navigate to the DNAnexus platform where a project will have been created with the project name that you entered on the Request Data page. Once your request is approved, the data will be vended to your DNAnexus account and will be accessible in this project. You can also follow the link in the email from notifications@stjude.cloud to view your DNAnexus project page. When the data is vended, the directory structure will typically look something like:</p>
-<div class="codehilite"><pre><span></span><span class="n">project_space</span><span class="o">/</span>
-<span class="err">├──</span> <span class="n">restricted</span><span class="o">/</span>
-<span class="err">│</span>   <span class="err">├──</span> <span class="n">bam</span><span class="o">/</span>
-<span class="err">│</span>   <span class="err">├──</span> <span class="n">gVCF</span><span class="o">/</span>
-<span class="err">│</span>   <span class="err">├──</span> <span class="n">Somatic_VCF</span><span class="o">/</span>
-<span class="err">│</span>   <span class="err">└──</span> <span class="n">CNV</span><span class="o">/</span>
-<span class="err">└──</span> <span class="n">SAMPLE_INFO</span><span class="p">.</span><span class="n">txt</span>
+<div class="codehilite"><pre><span></span><span class="err">project_space/</span>
+<span class="err">├── restricted/</span>
+<span class="err">│   ├── bam/</span>
+<span class="err">│   ├── gVCF/</span>
+<span class="err">│   ├── Somatic_VCF/</span>
+<span class="err">│   └── CNV/</span>
+<span class="err">└── SAMPLE_INFO.txt</span>
 </pre></div>
 
 
-<p>The <code class="codehilite"><span class="n">SAMPLE_INFO</span><span class="p">.</span><span class="n">txt</span></code> file provides all the <a href="../metadata/">metadata</a> associated with the request, and the restricted folder contains all the data for which you were approved separated by file type. </p>
+<p>The <code class="codehilite"><span class="err">SAMPLE_INFO.txt</span></code> file provides all the <a href="../about-our-data/#metadata">metadata</a> associated with the request, and the restricted folder contains all the data for which you were approved separated by file type. </p>
                 
                   
                 
@@ -936,7 +912,7 @@ in the cloud if it's feasible; the data provided by St. Jude is free, the comput
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../metadata/" title="Metadata Provided" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../about-our-data/" title="About Our Data" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -945,7 +921,7 @@ in the cloud if it's feasible; the data provided by St. Jude is free, the comput
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Metadata Provided
+                About Our Data
               </span>
             </div>
           </a>
@@ -977,7 +953,7 @@ in the cloud if it's feasible; the data provided by St. Jude is free, the comput
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/9c1cede">9c1cede</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/38ae319">38ae319</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of

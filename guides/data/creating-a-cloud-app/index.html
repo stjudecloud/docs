@@ -285,32 +285,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../types-of-data/" title="Types of Data" class="md-nav__link">
-      Types of Data
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../studies/" title="Studies" class="md-nav__link">
-      Studies
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../metadata/" title="Metadata Provided" class="md-nav__link">
-      Metadata Provided
+    <a href="../about-our-data/" title="About Our Data" class="md-nav__link">
+      About Our Data
     </a>
   </li>
 
@@ -956,30 +932,30 @@
 </tbody>
 </table>
 <p></center></p>
-<p>For this application, we will be using the <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">app</span><span class="o">-</span><span class="n">wizard</span></code> command that is included in the <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">toolkit</span></code>. <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">app</span><span class="o">-</span><span class="n">wizard</span></code> is an interactive prompt that creates a boilerplate project that will allow you to quickly create an application. For more on <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">app</span><span class="o">-</span><span class="n">wizard</span></code>, refer to the DNAnexus wiki article on <a href="https://documentation.dnanexus.com/developer/apps/intro-to-building-apps">Intro to Building Apps</a>. Before continuing, be sure to refer to the <a href="../command-line/">command line interaction page</a> for a walkthrough on how to install <a href="https://documentation.dnanexus.com/downloads#DNAnexus-Platform-SDK">dx-toolkit</a> and how to select your project workspace.</p>
+<p>For this application, we will be using the <code class="codehilite"><span class="err">dx-app-wizard</span></code> command that is included in the <code class="codehilite"><span class="err">dx-toolkit</span></code>. <code class="codehilite"><span class="err">dx-app-wizard</span></code> is an interactive prompt that creates a boilerplate project that will allow you to quickly create an application. For more on <code class="codehilite"><span class="err">dx-app-wizard</span></code>, refer to the DNAnexus wiki article on <a href="https://documentation.dnanexus.com/developer/apps/intro-to-building-apps">Intro to Building Apps</a>. Before continuing, be sure to refer to the <a href="../command-line/">command line interaction page</a> for a walkthrough on how to install <a href="https://documentation.dnanexus.com/downloads#DNAnexus-Platform-SDK">dx-toolkit</a> and how to select your project workspace.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>It is not necessary to use <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">app</span><span class="o">-</span><span class="n">wizard</span></code>. All the necessary files and project directory structure can be created manually. However, <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">app</span><span class="o">-</span><span class="n">wizard</span></code> provides a quick and easy way to get started. For more information, refer to the <a href="https://documentation.dnanexus.com/developer/apps/advanced-app-tutorial">Advanced App Tutorial</a>.</p>
+<p>It is not necessary to use <code class="codehilite"><span class="err">dx-app-wizard</span></code>. All the necessary files and project directory structure can be created manually. However, <code class="codehilite"><span class="err">dx-app-wizard</span></code> provides a quick and easy way to get started. For more information, refer to the <a href="https://documentation.dnanexus.com/developer/apps/advanced-app-tutorial">Advanced App Tutorial</a>.</p>
 </div>
 <p>All DNAnexus project applications will have the following structure:</p>
-<div class="codehilite"><pre><span></span><span class="n">dx</span><span class="o">-</span><span class="n">fastqc</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">app</span><span class="o">/</span>
-<span class="err">├──</span> <span class="n">dxapp</span><span class="p">.</span><span class="n">json</span>
-<span class="err">├──</span> <span class="n">resources</span><span class="o">/</span>
-<span class="err">│</span>   <span class="err">└──</span> <span class="n">usr</span><span class="o">/</span>
-<span class="err">│</span>       <span class="err">└──</span> <span class="n">bin</span><span class="o">/</span>
-<span class="err">└──</span> <span class="n">src</span><span class="o">/</span>
-    <span class="err">└──</span> <span class="n">dx</span><span class="o">-</span><span class="n">fastqc</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">app</span><span class="p">.</span><span class="n">sh</span>
+<div class="codehilite"><pre><span></span><span class="err">dx-fastqc-example-app/</span>
+<span class="err">├── dxapp.json</span>
+<span class="err">├── resources/</span>
+<span class="err">│   └── usr/</span>
+<span class="err">│       └── bin/</span>
+<span class="err">└── src/</span>
+<span class="err">    └── dx-fastqc-example-app.sh</span>
 </pre></div>
 
 
-<p>The <code class="codehilite"><span class="n">dxapp</span><span class="p">.</span><span class="n">json</span></code> file is a JSON file that contains metadata about the application we are writing that are needed to build and run the app on the DNAnexus Platform. Most notably, you will need to specify all of the inputs your app requires (both input files or any settings you can tune), output files, and other options such as the number of cores and memory required to run the tool. To see the full list of fields, refer to the <a href="https://documentation.dnanexus.com/developer/apps/app-metadata">DNAnexus wiki</a> guide on the application metadata.</p>
-<p>The <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">fastqc</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">app</span><span class="p">.</span><span class="n">sh</span></code> file is a bash script is what will be executed when the application is run. Any executable binaries that accompany the application, such as other tools or scripts, are placed in the <code class="codehilite"><span class="n">resources</span></code> folder. From there, we can call the executable from within the app when it is run.</p>
+<p>The <code class="codehilite"><span class="err">dxapp.json</span></code> file is a JSON file that contains metadata about the application we are writing that are needed to build and run the app on the DNAnexus Platform. Most notably, you will need to specify all of the inputs your app requires (both input files or any settings you can tune), output files, and other options such as the number of cores and memory required to run the tool. To see the full list of fields, refer to the <a href="https://documentation.dnanexus.com/developer/apps/app-metadata">DNAnexus wiki</a> guide on the application metadata.</p>
+<p>The <code class="codehilite"><span class="err">dx-fastqc-example-app.sh</span></code> file is a bash script is what will be executed when the application is run. Any executable binaries that accompany the application, such as other tools or scripts, are placed in the <code class="codehilite"><span class="err">resources</span></code> folder. From there, we can call the executable from within the app when it is run.</p>
 <h2 id="creating-the-project">Creating the Project</h2>
-<p>Start by running the <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">app</span><span class="o">-</span><span class="n">wizard</span></code> command from your terminal.</p>
+<p>Start by running the <code class="codehilite"><span class="err">dx-app-wizard</span></code> command from your terminal.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>This helper tool will create a <strong>local</strong> directory on your machine. Any code changes we make will be done <em>inside</em> this local project directory created by <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">app</span><span class="o">-</span><span class="n">wizard</span></code>. This is because we can write our application locally, <a href="../../../guides/data/creating-a-cloud-app/#building-your-app">build the application</a>, and then <a href="../../../guides/data/creating-a-cloud-app/#running-your-app">run the application</a> in the cloud.</p>
-<p>Building the application will compile <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">fastqc</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">app</span></code> and then upload it into the project space on the cloud. When we run an application, it will be submitted as a job to be run in the cloud. With this process, we can write the application locally and run it on our data in the cloud, without ever having to utilize personal bandwidth and compute time.</p>
+<p>This helper tool will create a <strong>local</strong> directory on your machine. Any code changes we make will be done <em>inside</em> this local project directory created by <code class="codehilite"><span class="err">dx-app-wizard</span></code>. This is because we can write our application locally, <a href="../../../guides/data/creating-a-cloud-app/#building-your-app">build the application</a>, and then <a href="../../../guides/data/creating-a-cloud-app/#running-your-app">run the application</a> in the cloud.</p>
+<p>Building the application will compile <code class="codehilite"><span class="err">dx-fastqc-example-app</span></code> and then upload it into the project space on the cloud. When we run an application, it will be submitted as a job to be run in the cloud. With this process, we can write the application locally and run it on our data in the cloud, without ever having to utilize personal bandwidth and compute time.</p>
 </div>
 <div class="codehilite"><pre><span></span>$ dx-app-wizard
 </pre></div>
@@ -1026,50 +1002,50 @@ $ Choose an instance <span class="nb">type</span> <span class="k">for</span> you
 </div>
 <p>The FastQC executable supports a variety of file formats (BAM, SAM, FastQ, etc.), and outputs a HTML report and a zip file that contains all the graphs and data. We will use that knowledge to write the input and output parameters for our application. We can also specify other parameters such as the timeout policy, programming language, and instance type. For more information, refer to the <a href="https://documentation.dnanexus.com/developer/api/running-analyses/io-and-run-specifications">IO and Run Specification</a> guide.</p>
 <h2 id="integrating-tools-and-packages">Integrating Tools and Packages</h2>
-<p>Once we have finished creating the basic FastQC application using <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">app</span><span class="o">-</span><span class="n">wizard</span></code>, the project structure should look like:</p>
-<div class="codehilite"><pre><span></span><span class="n">dx</span><span class="o">-</span><span class="n">fastqc</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">app</span><span class="o">/</span>
-<span class="err">├──</span> <span class="n">Readme</span><span class="p">.</span><span class="n">developer</span><span class="p">.</span><span class="n">md</span>
-<span class="err">├──</span> <span class="n">Readme</span><span class="p">.</span><span class="n">md</span>
-<span class="err">├──</span> <span class="n">dxapp</span><span class="p">.</span><span class="n">json</span>
-<span class="err">├──</span> <span class="n">resources</span><span class="o">/</span>
-<span class="err">├──</span> <span class="n">src</span><span class="o">/</span>
-<span class="err">│</span>   <span class="err">└──</span> <span class="n">dx</span><span class="o">-</span><span class="n">fastqc</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">app</span><span class="p">.</span><span class="n">sh</span>
-<span class="err">└──</span> <span class="n">test</span><span class="o">/</span>
+<p>Once we have finished creating the basic FastQC application using <code class="codehilite"><span class="err">dx-app-wizard</span></code>, the project structure should look like:</p>
+<div class="codehilite"><pre><span></span><span class="err">dx-fastqc-example-app/</span>
+<span class="err">├── Readme.developer.md</span>
+<span class="err">├── Readme.md</span>
+<span class="err">├── dxapp.json</span>
+<span class="err">├── resources/</span>
+<span class="err">├── src/</span>
+<span class="err">│   └── dx-fastqc-example-app.sh</span>
+<span class="err">└── test/</span>
 </pre></div>
 
 
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Anything in the resources folder is unpacked into the root directory (<code class="codehilite"><span class="o">/</span></code>) of the virtual Linux machine that your application will run on. If we create the directory path <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">fastqc</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">app</span><span class="o">/</span><span class="n">resources</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span></code>, anything in the bin folder would be unpacked into <code class="codehilite"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span></code> on the Linux machine. This is handy because that path is included in the default <code class="codehilite"><span class="err">$</span><span class="n">PATH</span></code> environment variable.</p>
-<p>Your application's executable will use <code class="codehilite"><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">dnanexus</span><span class="o">/</span></code> as its current working directory.</p>
+<p>Anything in the resources folder is unpacked into the root directory (<code class="codehilite"><span class="err">/</span></code>) of the virtual Linux machine that your application will run on. If we create the directory path <code class="codehilite"><span class="err">dx-fastqc-example-app/resources/usr/bin/</span></code>, anything in the bin folder would be unpacked into <code class="codehilite"><span class="err">/usr/bin/</span></code> on the Linux machine. This is handy because that path is included in the default <code class="codehilite"><span class="err">$PATH</span></code> environment variable.</p>
+<p>Your application's executable will use <code class="codehilite"><span class="err">/home/dnanexus/</span></code> as its current working directory.</p>
 </div>
-<p>Though <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">app</span><span class="o">-</span><span class="n">wizard</span></code> does not create this, we can create it ourselves.  Paste the following lines into your terminal.</p>
+<p>Though <code class="codehilite"><span class="err">dx-app-wizard</span></code> does not create this, we can create it ourselves.  Paste the following lines into your terminal.</p>
 <div class="codehilite"><pre><span></span>$ mkdir -p dx-fastqc-example-app/resources/usr/bin
 </pre></div>
 
 
 <h2 id="packaging-fastqc">Packaging FastQC</h2>
-<p>To incorporate FastQC into this project, we need to download the executable binary and package it within the <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">fastqc</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">app</span></code>. Download the FastQC v0.11.8 (Win/Linux zip file) and unzip it. After unzipping, move the FastQC folder into the <code class="codehilite"><span class="n">resources</span></code> folder.</p>
+<p>To incorporate FastQC into this project, we need to download the executable binary and package it within the <code class="codehilite"><span class="err">dx-fastqc-example-app</span></code>. Download the FastQC v0.11.8 (Win/Linux zip file) and unzip it. After unzipping, move the FastQC folder into the <code class="codehilite"><span class="err">resources</span></code> folder.</p>
 <div class="codehilite"><pre><span></span>$ unzip fastqc_v0.11.8.zip
 $ mv FastQC /path/to/project/dx-fastqc-example-app/resources/
 </pre></div>
 
 
 <p>Now, our project will look like this:</p>
-<div class="codehilite"><pre><span></span><span class="n">dx</span><span class="o">-</span><span class="n">fastqc</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">app</span><span class="o">/</span>
-<span class="err">├──</span> <span class="n">LICENSE</span>
-<span class="err">├──</span> <span class="n">README</span><span class="p">.</span><span class="n">md</span>
-<span class="err">├──</span> <span class="n">Readme</span><span class="p">.</span><span class="n">developer</span><span class="p">.</span><span class="n">md</span>
-<span class="err">├──</span> <span class="n">dxapp</span><span class="p">.</span><span class="n">json</span>
-<span class="err">├──</span> <span class="n">test</span><span class="o">/</span>
-<span class="err">├──</span> <span class="n">resources</span><span class="o">/</span>
-<span class="err">│</span>   <span class="err">├──</span> <span class="n">FastQC</span><span class="o">/</span>
-<span class="err">│</span>   <span class="err">│</span>   <span class="err">├──</span> <span class="n">fastqc</span>
-<span class="err">│</span>   <span class="err">│</span>   <span class="err">└──</span> <span class="p">...</span>
-<span class="err">│</span>   <span class="err">└──</span> <span class="n">usr</span><span class="o">/</span>
-<span class="err">│</span>       <span class="err">└──</span> <span class="n">bin</span><span class="o">/</span>
-<span class="err">└──</span> <span class="n">src</span><span class="o">/</span>
-    <span class="err">└──</span> <span class="n">dx</span><span class="o">-</span><span class="n">fastqc</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">app</span><span class="p">.</span><span class="n">sh</span>
+<div class="codehilite"><pre><span></span><span class="err">dx-fastqc-example-app/</span>
+<span class="err">├── LICENSE</span>
+<span class="err">├── README.md</span>
+<span class="err">├── Readme.developer.md</span>
+<span class="err">├── dxapp.json</span>
+<span class="err">├── test/</span>
+<span class="err">├── resources/</span>
+<span class="err">│   ├── FastQC/</span>
+<span class="err">│   │   ├── fastqc</span>
+<span class="err">│   │   └── ...</span>
+<span class="err">│   └── usr/</span>
+<span class="err">│       └── bin/</span>
+<span class="err">└── src/</span>
+<span class="err">    └── dx-fastqc-example-app.sh</span>
 </pre></div>
 
 
@@ -1112,7 +1088,7 @@ $ mv FastQC /path/to/project/dx-fastqc-example-app/resources/
 </tbody>
 </table>
 <p></center></p>
-<p>One requirement for FastQC is that it must have a suitable <a href="https://www.java.com/en/">Java Runtime Environment</a>. To include this in the app, we have to edit the <code class="codehilite"><span class="n">dxapp</span><span class="p">.</span><span class="n">json</span></code> file. Open <code class="codehilite"><span class="n">dxapp</span><span class="p">.</span><span class="n">json</span></code> and append the following line to <code class="codehilite"><span class="ss">&quot;runSpec&quot;</span></code>:</p>
+<p>One requirement for FastQC is that it must have a suitable <a href="https://www.java.com/en/">Java Runtime Environment</a>. To include this in the app, we have to edit the <code class="codehilite"><span class="err">dxapp.json</span></code> file. Open <code class="codehilite"><span class="err">dxapp.json</span></code> and append the following line to <code class="codehilite"><span class="err">&quot;runSpec&quot;</span></code>:</p>
 <div class="codehilite"><pre><span></span>  <span class="s2">&quot;execDepends&quot;</span><span class="err">:</span> <span class="p">[</span>
     <span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;openjdk-7-jre-headless&quot;</span><span class="p">,</span>
      <span class="nt">&quot;package_manager&quot;</span><span class="p">:</span> <span class="s2">&quot;apt&quot;</span><span class="p">}</span>
@@ -1120,7 +1096,7 @@ $ mv FastQC /path/to/project/dx-fastqc-example-app/resources/
 </pre></div>
 
 
-<p>Be sure to add a comma at the very end of the "file" object line to accommodate the new "execDepends" lines. Now, the <code class="codehilite"><span class="ss">&quot;runSpec&quot;</span></code> object should look like the following:</p>
+<p>Be sure to add a comma at the very end of the "file" object line to accommodate the new "execDepends" lines. Now, the <code class="codehilite"><span class="err">&quot;runSpec&quot;</span></code> object should look like the following:</p>
 <div class="codehilite"><pre><span></span>  <span class="err">...</span>
   <span class="s2">&quot;runSpec&quot;</span><span class="err">:</span> <span class="p">{</span>
     <span class="nt">&quot;timeoutPolicy&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -1141,9 +1117,9 @@ $ mv FastQC /path/to/project/dx-fastqc-example-app/resources/
 </pre></div>
 
 
-<p>When you build and run your application, the virtual environment will now download <code class="codehilite"><span class="n">openjdk</span><span class="o">-</span><span class="mi">7</span></code> from Ubuntu's APT package manager as a prerequisite. For more information on how to specify packages from Git, R, or Python, refer to the <a href="https://documentation.dnanexus.com/developer/apps/execution-environment#software-packages">Software Packages</a> wiki page.</p>
+<p>When you build and run your application, the virtual environment will now download <code class="codehilite"><span class="err">openjdk-7</span></code> from Ubuntu's APT package manager as a prerequisite. For more information on how to specify packages from Git, R, or Python, refer to the <a href="https://documentation.dnanexus.com/developer/apps/execution-environment#software-packages">Software Packages</a> wiki page.</p>
 <h2 id="calling-fastqc">Calling FastQC</h2>
-<p>The last step is to call the FastQC executable from within the app. Open up <code class="codehilite"><span class="n">src</span><span class="o">/</span><span class="n">dx</span><span class="o">-</span><span class="n">fastqc</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">app</span><span class="p">.</span><span class="n">sh</span></code> with a text editor. Inside this Bash script is where we will be working with FastQC and our data. Before we dive in, its a good idea to add a few useful parameters for the script execution.</p>
+<p>The last step is to call the FastQC executable from within the app. Open up <code class="codehilite"><span class="err">src/dx-fastqc-example-app.sh</span></code> with a text editor. Inside this Bash script is where we will be working with FastQC and our data. Before we dive in, its a good idea to add a few useful parameters for the script execution.</p>
 <p>Right after the Bash shebang (<code class="codehilite"><span class="ch">#!/bin/bash</span></code>), add the following line:</p>
 <div class="codehilite"><pre><span></span><span class="nb">set</span> -e -x
 </pre></div>
@@ -1170,12 +1146,12 @@ $ mv FastQC /path/to/project/dx-fastqc-example-app/resources/
 </tbody>
 </table>
 <p></center></p>
-<p>Our first change has to do with how our BAM file is downloaded. Although <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">app</span><span class="o">-</span><span class="n">wizard</span></code> automatically generates a line that will download the input file and rename it, we want to keep the original file name because FastQC uses the input file as part of the report name. Remove the <code class="codehilite"><span class="o">-</span><span class="n">o</span> <span class="n">bam_file</span></code> portion so the line looks like the following:</p>
+<p>Our first change has to do with how our BAM file is downloaded. Although <code class="codehilite"><span class="err">dx-app-wizard</span></code> automatically generates a line that will download the input file and rename it, we want to keep the original file name because FastQC uses the input file as part of the report name. Remove the <code class="codehilite"><span class="err">-o bam_file</span></code> portion so the line looks like the following:</p>
 <div class="codehilite"><pre><span></span>dx download <span class="s2">&quot;</span><span class="nv">$bam_file</span><span class="s2">&quot;</span>       <span class="c1"># Downloads our input BAM file without renaming</span>
 </pre></div>
 
 
-<p>After the application downloads the input file, we need to create the appropriate output directories and run FastQC on our BAM file. Add the following lines to the bash script within the <code class="codehilite"><span class="n">main</span></code> function:</p>
+<p>After the application downloads the input file, we need to create the appropriate output directories and run FastQC on our BAM file. Add the following lines to the bash script within the <code class="codehilite"><span class="err">main</span></code> function:</p>
 <div class="codehilite"><pre><span></span>mkdir ~/fastqc-out/                                    <span class="c1"># FastQC Output Folder</span>
 /FastQC/fastqc <span class="s2">&quot;</span><span class="nv">$bam_file_name</span><span class="s2">&quot;</span> -o ~/fastqc-out        <span class="c1"># Runs FastQC on BAM File</span>
 </pre></div>
@@ -1183,12 +1159,12 @@ $ mv FastQC /path/to/project/dx-fastqc-example-app/resources/
 
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Be sure to use <code class="codehilite"><span class="ss">&quot;$bam_file_name&quot;</span></code> as our input for FastQC. Using <code class="codehilite"><span class="ss">&quot;$bam_file&quot;</span></code> only returns the DNAnexus file-id associated with the input file.</p>
+<p>Be sure to use <code class="codehilite"><span class="err">&quot;$bam_file_name&quot;</span></code> as our input for FastQC. Using <code class="codehilite"><span class="err">&quot;$bam_file&quot;</span></code> only returns the DNAnexus file-id associated with the input file.</p>
 <p>For more information on helper variables, refer to the <a href="https://documentation.dnanexus.com/developer/apps/advanced-app-tutorial#set-output-name-using-bash-app-helper-variables">Advanced App Tutorial</a>.</p>
 </div>
 <h2 id="uploading-files">Uploading Files</h2>
 <p>After FastQC finishes, the last thing to do is to upload the reports generated by FastQC to our project. These virtual Linux machines are provisioned at-will, meaning that they are only spun up when a job is submitted. When we create an application and run it in the cloud, we submit it as a job to be executed. When a job gets executed, a virtual machine will download all the necessary requirements (tools, packages, data, etc.) and run the job. Any output files on the machine must be uploaded back to the project space after a job finishes executing. Any information and data not uploaded to the project space will be inaccessible and lost.</p>
-<p>You will see two lines generated for us by <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">app</span><span class="o">-</span><span class="n">wizard</span></code> when we specified the outputs for our application. We need to change these to upload the correct files from our output directory that we specified for FastQC. Otherwise, it assumes they are in the home directory. Before this, we can also (optionally) rename the files to be uploaded. Add the following lines, making sure to replace the two original upload lines.</p>
+<p>You will see two lines generated for us by <code class="codehilite"><span class="err">dx-app-wizard</span></code> when we specified the outputs for our application. We need to change these to upload the correct files from our output directory that we specified for FastQC. Otherwise, it assumes they are in the home directory. Before this, we can also (optionally) rename the files to be uploaded. Add the following lines, making sure to replace the two original upload lines.</p>
 <p>Lines to remove/overwrite:</p>
 <div class="codehilite"><pre><span></span><span class="c1"># Generated by dx-app-wizard</span>
 <span class="nv">fastqc_html</span><span class="o">=</span><span class="k">$(</span>dx upload fastqc_html --brief<span class="k">)</span>
@@ -1207,9 +1183,9 @@ mv ~/fastqc-out/*.zip ~/fastqc-out/fastqc-report.zip
 </pre></div>
 
 
-<p>We are using <code class="codehilite"><span class="ss">&quot;$bam_file_prefix&quot;</span></code> to help name the output report file. These helper variables are provided to help make file naming easy. For more information on helper variables, refer to the <a href="https://documentation.dnanexus.com/developer/apps/advanced-app-tutorial#set-output-name-using-bash-app-helper-variables">Advanced App Tutorial</a>.</p>
+<p>We are using <code class="codehilite"><span class="err">&quot;$bam_file_prefix&quot;</span></code> to help name the output report file. These helper variables are provided to help make file naming easy. For more information on helper variables, refer to the <a href="https://documentation.dnanexus.com/developer/apps/advanced-app-tutorial#set-output-name-using-bash-app-helper-variables">Advanced App Tutorial</a>.</p>
 <p>In this step, we are also moving the HTML and Zip file generated by FastQC to the directories which will be uploaded.</p>
-<p>After this step, <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">fastqc</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">app</span><span class="p">.</span><span class="n">sh</span></code> should look like:</p>
+<p>After this step, <code class="codehilite"><span class="err">dx-fastqc-example-app.sh</span></code> should look like:</p>
 <div class="codehilite"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="nb">set</span> -e -x
@@ -1242,35 +1218,35 @@ main<span class="o">()</span> <span class="o">{</span>
 
 
 <h2 id="building-your-app">Building Your App</h2>
-<p>Before building, ensure that you are in the parent directory of the <strong>local</strong> project folder generated by <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">app</span><span class="o">-</span><span class="n">wizard</span></code>. To check, if you enter the command <code class="codehilite"><span class="n">ls</span></code>, you should see the project folder <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">fastqc</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">app</span><span class="o">/</span></code> appear in the output.</p>
+<p>Before building, ensure that you are in the parent directory of the <strong>local</strong> project folder generated by <code class="codehilite"><span class="err">dx-app-wizard</span></code>. To check, if you enter the command <code class="codehilite"><span class="err">ls</span></code>, you should see the project folder <code class="codehilite"><span class="err">dx-fastqc-example-app/</span></code> appear in the output.</p>
 <p>To build your application, enter the following into your terminal:</p>
 <div class="codehilite"><pre><span></span>$ dx build dx-fastqc-example-app
 </pre></div>
 
 
 <p>This command will package the tools and files as an application which can then be run on the DNAnexus Platform. In the screenshot below, you can see the compiled app in our project workspace selected and highlighted in blue.</p>
-<p>To verify that the build was completed successfully, you can enter <code class="codehilite"><span class="n">dx</span> <span class="n">ls</span></code>. This should show you all the files in your project space in the cloud.</p>
+<p>To verify that the build was completed successfully, you can enter <code class="codehilite"><span class="err">dx ls</span></code>. This should show you all the files in your project space in the cloud.</p>
 <div class="codehilite"><pre><span></span><span class="c1"># This will show what files are in your root directory for your project space in the cloud</span>
 $ dx ls
 </pre></div>
 
 
-<p>You should see something along the lines of this printed out in your terminal. Note that a compiled copy of our <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">fastqc</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">app</span></code> now lives in the project.</p>
-<div class="codehilite"><pre><span></span><span class="p">.</span>
-<span class="err">├──</span> <span class="k">immediate</span><span class="o">/</span>
-<span class="err">│</span>   <span class="err">└──</span> <span class="p">...</span>
-<span class="err">├──</span> <span class="n">dx</span><span class="o">-</span><span class="n">fastqc</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">app</span>
-<span class="err">└──</span> <span class="n">SAMPLE_INFO</span><span class="p">.</span><span class="n">txt</span>
+<p>You should see something along the lines of this printed out in your terminal. Note that a compiled copy of our <code class="codehilite"><span class="err">dx-fastqc-example-app</span></code> now lives in the project.</p>
+<div class="codehilite"><pre><span></span><span class="err">.</span>
+<span class="err">├── immediate/</span>
+<span class="err">│   └── ...</span>
+<span class="err">├── dx-fastqc-example-app</span>
+<span class="err">└── SAMPLE_INFO.txt</span>
 </pre></div>
 
 
 <p>You can also <a href="https://platform.dnanexus.com/projects">view the project</a> directly from your browser. You will see a similar result.</p>
 <p><img alt="" src="../../../images/guides/data/creating-a-cloud-app-1.png" /></p>
-<p>Any time you make any changes to the scripts or the application, you will need to rebuild the application. To overwrite a previous version of the app, specify the <code class="codehilite"><span class="o">-</span><span class="n">f</span></code> command.</p>
+<p>Any time you make any changes to the scripts or the application, you will need to rebuild the application. To overwrite a previous version of the app, specify the <code class="codehilite"><span class="err">-f</span></code> command.</p>
 <p>You can also inspect and configure the application by clicking on it.</p>
 <p><img alt="" src="../../../images/guides/data/creating-a-cloud-app-2.png" /></p>
 <h2 id="running-your-app">Running Your App</h2>
-<p>To run the <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">fastqc</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">app</span></code>, enter the following into the terminal:</p>
+<p>To run the <code class="codehilite"><span class="err">dx-fastqc-example-app</span></code>, enter the following into the terminal:</p>
 <div class="codehilite"><pre><span></span>$ dx run dx-fastqc-example-app -i <span class="nv">bam_file</span><span class="o">=</span>/path/to/&lt;bam-file&gt;.bam
 </pre></div>
 
@@ -1280,7 +1256,7 @@ $ dx ls
 </pre></div>
 
 
-<p>The input path will vary depending on how the data looks inside your DNAnexus project, but it might look like the following: <code class="codehilite"><span class="o">/</span><span class="n">restricted</span><span class="o">/</span><span class="n">bam</span><span class="o">/&lt;</span><span class="n">bam</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span><span class="p">.</span><span class="n">bam</span></code></p>
+<p>The input path will vary depending on how the data looks inside your DNAnexus project, but it might look like the following: <code class="codehilite"><span class="err">/restricted/bam/&lt;bam-file&gt;.bam</span></code></p>
 <p>You will be prompted to confirm that you wish to run the application with the following JSON input and whether you would like to monitor the job in your terminal.</p>
 <div class="codehilite"><pre><span></span>Using input JSON:
 <span class="o">{</span>
@@ -1312,14 +1288,14 @@ Watching job job-FVbY8Z0991ZXx5v1Fk3QgJPV. Press Ctrl+C to stop.
 <p><img alt="" src="../../../images/guides/data/creating-a-cloud-app-4.png" /></p>
 <p>Clicking the links in the email should open up a new tab in your browser and take you to the appropriate project. Here, we can see that FastQC has run successfully and that the two files generated by FastQC have been uploaded back into our project space.</p>
 <p><img alt="" src="../../../images/guides/data/creating-a-cloud-app-5.png" /></p>
-<p>Again, if we run the <code class="codehilite"><span class="n">dx</span> <span class="n">ls</span></code> command, we can verify that two new files titled "fastqc-report.html" and "fastqc-report.zip" are in the root directory of our project.</p>
-<div class="codehilite"><pre><span></span><span class="p">.</span>
-<span class="err">├──</span> <span class="k">immediate</span><span class="o">/</span>
-<span class="err">│</span>   <span class="err">└──</span> <span class="p">...</span>
-<span class="err">├──</span> <span class="n">dx</span><span class="o">-</span><span class="n">fastqc</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">app</span>
-<span class="err">├──</span> <span class="n">fastqc</span><span class="o">-</span><span class="n">report</span><span class="p">.</span><span class="n">html</span>
-<span class="err">├──</span> <span class="n">fastqc</span><span class="o">-</span><span class="n">report</span><span class="p">.</span><span class="n">zip</span>
-<span class="err">└──</span> <span class="n">SAMPLE_INFO</span><span class="p">.</span><span class="n">txt</span>
+<p>Again, if we run the <code class="codehilite"><span class="err">dx ls</span></code> command, we can verify that two new files titled "fastqc-report.html" and "fastqc-report.zip" are in the root directory of our project.</p>
+<div class="codehilite"><pre><span></span><span class="err">.</span>
+<span class="err">├── immediate/</span>
+<span class="err">│   └── ...</span>
+<span class="err">├── dx-fastqc-example-app</span>
+<span class="err">├── fastqc-report.html</span>
+<span class="err">├── fastqc-report.zip</span>
+<span class="err">└── SAMPLE_INFO.txt</span>
 </pre></div>
 
 
@@ -1387,7 +1363,7 @@ Watching job job-FVbY8Z0991ZXx5v1Fk3QgJPV. Press Ctrl+C to stop.
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/9c1cede">9c1cede</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/38ae319">38ae319</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of

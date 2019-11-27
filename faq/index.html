@@ -283,32 +283,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../guides/data/types-of-data/" title="Types of Data" class="md-nav__link">
-      Types of Data
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../guides/data/studies/" title="Studies" class="md-nav__link">
-      Studies
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../guides/data/metadata/" title="Metadata Provided" class="md-nav__link">
-      Metadata Provided
+    <a href="../guides/data/about-our-data/" title="About Our Data" class="md-nav__link">
+      About Our Data
     </a>
   </li>
 
@@ -1085,7 +1061,7 @@ committed to protecting that privacy to the fullest extent.</p>
 <h3 id="what-if-i-did-not-fill-out-the-data-download-permission-section-of-the-original-daa-but-now-i-want-to-download-data">What if I did not fill out the Data Download Permission section of the original DAA, but now I want to download data?</h3>
 <p>Since this would be a change in terms from the original agreement, you would need to fill out a new DAA (including the <a href="../guides/forms/how-to-fill-out-DAA/#data-download-permission">Data Download Permission section</a> for any datasets you want to download.</p>
 <h3 id="what-clinical-information-is-available-about-samples-in-st-jude-cloud">What clinical information is available about samples in St. Jude Cloud?</h3>
-<p>Currently the only <a href="../guides/data/metadata/#clinical-and-phenotypic-information">clinical information</a> we provide is age at diagnosis, diagnosis, ethnicity, sex, race, and oncotree disease code. Unfortunately, even if we do collect other information, such as other supportive oncology data, it is not available on the cloud at this time. We are working towards being able to provide additional clinical annotations in the future.</p>
+<p>Currently the only <a href="../guides/data/about-our-data/#metadata">clinical information</a> we provide is age at diagnosis, diagnosis, ethnicity, sex, race, and oncotree disease code. Unfortunately, even if we do collect other information, such as other supportive oncology data, it is not available on the cloud at this time. We are working towards being able to provide additional clinical annotations in the future.</p>
 <h3 id="can-i-get-a-copy-of-irb-consent-forms">Can I get a copy of IRB consent forms?</h3>
 <p>Unfortunately, we will not be able to share blank consent forms at the current time. We have chosen to remain consistent with the requirements of the other major genomic data repositories in that (1) there is an internal vetting process by the St. Jude IRB to ensure samples may be shared with the research community, but (2) we do not share the informed consents with data requesters. It is important to remember that St. Jude Cloud is the platform upon which all St. Jude data is shared. This means that there are more than 100 consent forms + revisions for the various studies across St. Jude. Thus, there is an additional logistical barrier in that we simply don't have the bandwidth to pull together a packet containing all of this information for each requestor.</p>
 <h3 id="can-i-request-fastq-files-on-st-jude-cloud">Can I request FASTQ files on St. Jude Cloud?</h3>
@@ -1093,18 +1069,18 @@ committed to protecting that privacy to the fullest extent.</p>
 <h3 id="how-can-i-explore-and-manipulate-data-files-stored-on-the-cloud-without-downloading-the-files-to-my-local-machine">How can I explore and manipulate data files stored on the cloud without downloading the files to my local machine?</h3>
 <p>You can quickly and easily interact with data files using the DNAnexus cloud workstation app. See <a href="https://documentation.dnanexus.com/getting-started/tutorials/cloud-workstations#run-the-workstation-app">this guide</a> to help you setup and run the app. Note that if you are doing any type of large-scale, multi-sample analysis, especially if you plan to repeat the analysis or want to run in parallel, you will want to <a href="../guides/data/creating-a-cloud-app/">write your own cloud app</a> rather than use the cloud workstation app.</p>
 <h3 id="how-can-i-run-an-analysis-workflow-on-multiple-sample-files-at-the-same-time">How can I run an analysis workflow on multiple sample files at the same time?</h3>
-<p>The DNAnexus interface does have a batch tool available; however, it is in early testing, so we recommend using dx-toolkit on the command line as the most reliable and user friendly approach to batch and submit jobs. You can find our documentation on how to install and get started with dx-toolkit <a href="../guides/data/command-line/">here</a>. You may also refer to the sample script below that loops through all the BAM files in the <code class="codehilite"><span class="k">data</span></code> folder and submits a job using the BAM and matching index file.   </p>
-<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="nv">bam</span> <span class="nv">in</span> $<span class="ss">(</span><span class="nv">dx</span> <span class="nv">ls</span> <span class="s1">&#39;</span><span class="s">/data/*.bam</span><span class="s1">&#39;</span><span class="ss">)</span><span class="c1">; do  </span>
-  <span class="nv">dx</span> <span class="nv">run</span> \  
-    <span class="o">--</span><span class="nv">yes</span> \  
-    <span class="o">--</span><span class="nv">input</span> <span class="s2">&quot;</span><span class="s">0.BAM=/data/$bam</span><span class="s2">&quot;</span> \
-    <span class="o">--</span><span class="nv">input</span> <span class="s2">&quot;</span><span class="s">0.BAM_INDEX=/data/$bam.bai</span><span class="s2">&quot;</span> \
-    <span class="s2">&quot;</span><span class="s">$PROJECT_ID:/Rapid RNA-Seq (BAM)</span><span class="s2">&quot;</span>
-<span class="nv">done</span>
+<p>The DNAnexus interface does have a batch tool available; however, it is in early testing, so we recommend using dx-toolkit on the command line as the most reliable and user friendly approach to batch and submit jobs. You can find our documentation on how to install and get started with dx-toolkit <a href="../guides/data/command-line/">here</a>. You may also refer to the sample script below that loops through all the BAM files in the <code class="codehilite"><span class="err">data</span></code> folder and submits a job using the BAM and matching index file.   </p>
+<div class="codehilite"><pre><span></span><span class="err">for bam in $(dx ls &#39;/data/*.bam&#39;); do  </span>
+<span class="err">  dx run \  </span>
+<span class="err">    --yes \  </span>
+<span class="err">    --input &quot;0.BAM=/data/$bam&quot; \</span>
+<span class="err">    --input &quot;0.BAM_INDEX=/data/$bam.bai&quot; \</span>
+<span class="err">    &quot;$PROJECT_ID:/Rapid RNA-Seq (BAM)&quot;</span>
+<span class="err">done</span>
 </pre></div>
 
 
-<p>Note that this sample script assumes that the BAM and index files are in the <code class="codehilite"><span class="k">data</span></code> folder and the Rapid RNA-Seq analysis workflow is in the project. <code class="codehilite"><span class="err">$</span><span class="n">PROJECT_ID</span></code> can be set to your project dxid, and <code class="codehilite"><span class="n">Rapid</span> <span class="n">RNA</span><span class="o">-</span><span class="n">Seq</span> <span class="p">(</span><span class="n">BAM</span><span class="p">)</span></code> can be changed to the workflow you want to run.</p>
+<p>Note that this sample script assumes that the BAM and index files are in the <code class="codehilite"><span class="err">data</span></code> folder and the Rapid RNA-Seq analysis workflow is in the project. <code class="codehilite"><span class="err">$PROJECT_ID</span></code> can be set to your project dxid, and <code class="codehilite"><span class="err">Rapid RNA-Seq (BAM)</span></code> can be changed to the workflow you want to run.</p>
 <h3 id="how-can-i-connect-to-dnanexus-api-via-ssh-on-a-windows-machine">How can I connect to DNAnexus API via SSH on a Windows machine?</h3>
 <p>To connect via SSH on a Windows machine we recommend using Windows Subsystem for Linux (WSL) or a Linux virtual machine.<br />
 The WSL method:<br />
@@ -1118,7 +1094,7 @@ The WSL method:<br />
 <code class="codehilite">$ sudo apt install python-minimal python-pip</code>  <br />
 <code class="codehilite">$ pip install dxpy</code>  <br />
 6. Close Ubuntu window. Open Ubuntu again.<br />
-7. Log in to DNAnexus, where <code class="codehilite"><span class="err">$</span><span class="n">TOKEN</span></code> is an <a href="https://documentation.dnanexus.com/user/login-and-logout#authentication-tokens">API Token</a>.<br />
+7. Log in to DNAnexus, where <code class="codehilite"><span class="err">$TOKEN</span></code> is an <a href="https://documentation.dnanexus.com/user/login-and-logout#authentication-tokens">API Token</a>.<br />
 <code class="codehilite">$ dx login --token <span class="nv">$TOKEN</span></code> </p>
 <p>You may also find <a href="https://documentation.dnanexus.com/developer/apps/execution-environment/connecting-to-jobs#setting-up-ssh-on-windows">these instructions</a> on the DNAnexus documentation helpful.</p>
 <h3 id="why-am-i-getting-a-connectivity-error-when-connecting-to-dnanexus-api-via-ssh">Why am I getting a connectivity error when connecting to DNAnexus API via SSH?</h3>
@@ -1132,7 +1108,7 @@ and are getting a connectivity error, it may be that your firewall is too restri
 <h3 id="where-can-i-find-the-embargo-date">Where can I find the embargo date?</h3>
 <p>All of our samples are marked with an <a href="../glossary/#embargo-date">embargo date</a>.
 You can find this by looking at the tags for each file or in the
-<code class="codehilite"><span class="n">SAMPLE_INFO</span><span class="p">.</span><span class="n">txt</span></code> file that is included with each data request.
+<code class="codehilite"><span class="err">SAMPLE_INFO.txt</span></code> file that is included with each data request.
 Select a sample and click info to see more.</p>
 <p><img alt="" src="../../images/guides/data/embargo-date-1.png" />
 <img alt="" src="../../images/guides/data/embargo-date-2.png" /></p>
@@ -1199,7 +1175,7 @@ Select a sample and click info to see more.</p>
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/9c1cede">9c1cede</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/38ae319">38ae319</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of

@@ -283,32 +283,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/types-of-data/" title="Types of Data" class="md-nav__link">
-      Types of Data
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../data/studies/" title="Studies" class="md-nav__link">
-      Studies
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../data/metadata/" title="Metadata Provided" class="md-nav__link">
-      Metadata Provided
+    <a href="../../data/about-our-data/" title="About Our Data" class="md-nav__link">
+      About Our Data
     </a>
   </li>
 
@@ -946,7 +922,7 @@ nucleotide variations (SNV) and insertion/deletions (indel).</p>
 <tr>
 <td>CNV/LOH action</td>
 <td>String</td>
-<td>The behavior when handling markers in CNV/LOH regions. Can be either <code class="codehilite"><span class="n">keep</span></code> or <code class="codehilite"><span class="k">drop</span></code>.</td>
+<td>The behavior when handling markers in CNV/LOH regions. Can be either <code class="codehilite"><span class="err">keep</span></code> or <code class="codehilite"><span class="err">drop</span></code>.</td>
 <td>drop</td>
 </tr>
 <tr>
@@ -1028,14 +1004,14 @@ much higher false positive rate.</p>
 <p>A list of single nucleotide markers is a tab-delimited file with the
 following columns:</p>
 <ul>
-<li><code class="codehilite"><span class="n">Chr</span></code>: chromosome name for the marker</li>
-<li><code class="codehilite"><span class="n">Pos</span></code>: genomic start location for the marker</li>
-<li><code class="codehilite"><span class="n">Chr_Allele</span></code>: reference allele</li>
-<li><code class="codehilite"><span class="n">Alternative_Allele</span></code>: alternative allele</li>
-<li><code class="codehilite"><span class="n">reference_tumor_count</span></code>: reference allele count in the tumor genome</li>
-<li><code class="codehilite"><span class="n">alternative_tumor_count</span></code>: alternative allele count in the tumor genome</li>
-<li><code class="codehilite"><span class="n">reference_normal_count</span></code>: reference allele count in the matched normal genome</li>
-<li><code class="codehilite"><span class="n">alternative_normal_count</span></code>: alternative count in the matched normal genome</li>
+<li><code class="codehilite"><span class="err">Chr</span></code>: chromosome name for the marker</li>
+<li><code class="codehilite"><span class="err">Pos</span></code>: genomic start location for the marker</li>
+<li><code class="codehilite"><span class="err">Chr_Allele</span></code>: reference allele</li>
+<li><code class="codehilite"><span class="err">Alternative_Allele</span></code>: alternative allele</li>
+<li><code class="codehilite"><span class="err">reference_tumor_count</span></code>: reference allele count in the tumor genome</li>
+<li><code class="codehilite"><span class="err">alternative_tumor_count</span></code>: alternative allele count in the tumor genome</li>
+<li><code class="codehilite"><span class="err">reference_normal_count</span></code>: reference allele count in the matched normal genome</li>
+<li><code class="codehilite"><span class="err">alternative_normal_count</span></code>: alternative count in the matched normal genome</li>
 </ul>
 <p>This file can be generated with Bambino.</p>
 <h5>Example</h5>
@@ -1084,9 +1060,9 @@ during analysis.</p>
 <p>This is a tab-delimited file in the bed format. It must have at least the
 following three columns:</p>
 <ul>
-<li><code class="codehilite"><span class="n">chrom</span></code>: chromosome name</li>
-<li><code class="codehilite"><span class="n">loc</span><span class="p">.</span><span class="k">start</span></code>: genomic start location</li>
-<li><code class="codehilite"><span class="nv">loc</span>.<span class="k">end</span></code>: genomic end location</li>
+<li><code class="codehilite"><span class="err">chrom</span></code>: chromosome name</li>
+<li><code class="codehilite"><span class="err">loc.start</span></code>: genomic start location</li>
+<li><code class="codehilite"><span class="err">loc.end</span></code>: genomic end location</li>
 </ul>
 <p>If no CNV/LOH are in the genome under analysis, a file with no rows (but
 including headers) can be provided.</p>
@@ -1132,17 +1108,17 @@ including headers) can be provided.</p>
 expressions for the tumor under analysis. The expressions are in FPKM
 (fragments per kilobase of transcript per million mapped reads).</p>
 <ul>
-<li><code class="codehilite"><span class="n">GeneID</span></code>: gene <a href="http://www.ensembl.org/">Ensembl</a> ID</li>
-<li><code class="codehilite"><span class="n">GeneName</span></code>: gene symbol</li>
-<li><code class="codehilite"><span class="k">Type</span></code>: <a href="https://www.gencodegenes.org/gencode_biotypes.html">transcript type</a></li>
-<li><code class="codehilite"><span class="n">Status</span></code>: transcript status (must be <code class="codehilite"><span class="n">KNOWN</span></code>, <code class="codehilite"><span class="n">NOVEL</span></code>, or <code class="codehilite"><span class="n">PUTATIVE</span></code>)</li>
-<li><code class="codehilite"><span class="n">Chr</span></code>: chromosome name</li>
-<li><code class="codehilite"><span class="k">Start</span></code> genomic start location</li>
-<li><code class="codehilite"><span class="k">End</span></code>: genomic end location</li>
+<li><code class="codehilite"><span class="err">GeneID</span></code>: gene <a href="http://www.ensembl.org/">Ensembl</a> ID</li>
+<li><code class="codehilite"><span class="err">GeneName</span></code>: gene symbol</li>
+<li><code class="codehilite"><span class="err">Type</span></code>: <a href="https://www.gencodegenes.org/gencode_biotypes.html">transcript type</a></li>
+<li><code class="codehilite"><span class="err">Status</span></code>: transcript status (must be <code class="codehilite"><span class="err">KNOWN</span></code>, <code class="codehilite"><span class="err">NOVEL</span></code>, or <code class="codehilite"><span class="err">PUTATIVE</span></code>)</li>
+<li><code class="codehilite"><span class="err">Chr</span></code>: chromosome name</li>
+<li><code class="codehilite"><span class="err">Start</span></code> genomic start location</li>
+<li><code class="codehilite"><span class="err">End</span></code>: genomic end location</li>
 <li>[SampleID...]: FPKM for the given sample</li>
 </ul>
 <p>This file can be generated with the output of HTseq-count preprocessed
-through <code class="codehilite"><span class="n">mergeData_geneName</span><span class="p">.</span><span class="n">pl</span></code> (available with the distribution of cis-X).
+through <code class="codehilite"><span class="err">mergeData_geneName.pl</span></code> (available with the distribution of cis-X).
 The data must be able to match values in the given gene specific reference
 expression matrices generated from a larger cohort.</p>
 <h5>Example</h5>
@@ -1190,11 +1166,11 @@ the genome under analysis. It includes both single nucleotide variants (SNV)
 and small insertion/deletions (indel). The file must have the following
 columns:</p>
 <ul>
-<li><code class="codehilite"><span class="n">chr</span></code>: chromosome name</li>
-<li><code class="codehilite"><span class="n">pos</span></code>: genomic start location</li>
-<li><code class="codehilite"><span class="k">ref</span></code>: reference nucleotide</li>
-<li><code class="codehilite"><span class="n">mutant</span></code>: mutant nucleotide</li>
-<li><code class="codehilite"><span class="k">type</span></code>: mutation type (must be either <code class="codehilite"><span class="n">snv</span></code> or <code class="codehilite"><span class="n">indel</span></code>)</li>
+<li><code class="codehilite"><span class="err">chr</span></code>: chromosome name</li>
+<li><code class="codehilite"><span class="err">pos</span></code>: genomic start location</li>
+<li><code class="codehilite"><span class="err">ref</span></code>: reference nucleotide</li>
+<li><code class="codehilite"><span class="err">mutant</span></code>: mutant nucleotide</li>
+<li><code class="codehilite"><span class="err">type</span></code>: mutation type (must be either <code class="codehilite"><span class="err">snv</span></code> or <code class="codehilite"><span class="err">indel</span></code>)</li>
 </ul>
 <p>Note that the coordinate used for an indel is after the inserted sequence.</p>
 <p>If no SNV/indels are in the sample under analysis, a file with no rows
@@ -1235,15 +1211,15 @@ steps taken in "<a href="https://www.ncbi.nlm.nih.gov/pubmed/22237106">The genet
 <p>This is a tab-delimited file containing somatic-acquired structural variants
 (SV) in the cancer genome. The file must have the following columns:</p>
 <ul>
-<li><code class="codehilite"><span class="n">chrA</span></code>: chromosome name of the left breakpoint</li>
-<li><code class="codehilite"><span class="n">posA</span></code>: genomic location of the left breakpoint</li>
-<li><code class="codehilite"><span class="n">ortA</span></code>: strand orientation of the left breakpoint</li>
-<li><code class="codehilite"><span class="n">chrB</span></code>: chromosome name of the right breakpoint</li>
-<li><code class="codehilite"><span class="n">posB</span></code>: genomic location of the right breakpoint</li>
-<li><code class="codehilite"><span class="n">ortB</span></code>: strand orientation of the right breakpoint</li>
+<li><code class="codehilite"><span class="err">chrA</span></code>: chromosome name of the left breakpoint</li>
+<li><code class="codehilite"><span class="err">posA</span></code>: genomic location of the left breakpoint</li>
+<li><code class="codehilite"><span class="err">ortA</span></code>: strand orientation of the left breakpoint</li>
+<li><code class="codehilite"><span class="err">chrB</span></code>: chromosome name of the right breakpoint</li>
+<li><code class="codehilite"><span class="err">posB</span></code>: genomic location of the right breakpoint</li>
+<li><code class="codehilite"><span class="err">ortB</span></code>: strand orientation of the right breakpoint</li>
 </ul>
-<p>Strand orientations are denoted with a <code class="codehilite"><span class="o">+</span></code> for a sense or coding strand and
-<code class="codehilite"><span class="o">-</span></code> for a antisense or non-coding strand.</p>
+<p>Strand orientations are denoted with a <code class="codehilite"><span class="err">+</span></code> for a sense or coding strand and
+<code class="codehilite"><span class="err">-</span></code> for a antisense or non-coding strand.</p>
 <p>If no somatic SVs are in the sample under analysis, a file with no rows (but
 including headers) can be provided.</p>
 <p>This file can be generated by CREST.</p>
@@ -1288,10 +1264,10 @@ including headers) can be provided.</p>
 regions with somatic-acquired copy number aberrations (CNA) in the cancer
 genome.</p>
 <ul>
-<li><code class="codehilite"><span class="n">chr</span></code>: chromosome name</li>
-<li><code class="codehilite"><span class="k">start</span></code>: genomic start location</li>
-<li><code class="codehilite"><span class="k">end</span></code>: genomic end location</li>
-<li><code class="codehilite"><span class="n">logR</span></code>: log2 ratio</li>
+<li><code class="codehilite"><span class="err">chr</span></code>: chromosome name</li>
+<li><code class="codehilite"><span class="err">start</span></code>: genomic start location</li>
+<li><code class="codehilite"><span class="err">end</span></code>: genomic end location</li>
+<li><code class="codehilite"><span class="err">logR</span></code>: log2 ratio</li>
 </ul>
 <p>If no somatic CNVs are in the sample under analysis, a file with no rows
 (but including headers) can be provided.</p>
@@ -1338,37 +1314,37 @@ for further analysis.</p>
 <p>The main result file contains the cis-activated candidates in the tumor genome
 under analysis.</p>
 <ul>
-<li><code class="codehilite"><span class="n">gene</span></code>: gene accession number (<a href="https://www.ncbi.nlm.nih.gov/refseq/">RefSeq</a> ID)</li>
-<li><code class="codehilite"><span class="n">gsym</span></code>: gene symbol</li>
-<li><code class="codehilite"><span class="n">chrom</span></code>: chromosome name</li>
-<li><code class="codehilite"><span class="n">strand</span></code>: strand orientation</li>
-<li><code class="codehilite"><span class="k">start</span></code>: genomic start location</li>
-<li><code class="codehilite"><span class="k">end</span></code>: genomic end location</li>
-<li><code class="codehilite"><span class="n">cdsStartStat</span></code>: coding sequence (CDS) start status</li>
-<li><code class="codehilite"><span class="n">cdsEndStat</span></code>: coding sequence (CDS) end status</li>
-<li><code class="codehilite"><span class="n">markers</span></code>: number of heterozygous markers in this gene</li>
-<li><code class="codehilite"><span class="n">ase_markers</span></code>: number of heterozygous markers showing allelic specific expressions (ASE)</li>
-<li><code class="codehilite"><span class="n">average_ai_all</span></code>: average B-allele frequency (BAF) difference between RNA and DNA for all heterozygous markers</li>
-<li><code class="codehilite"><span class="n">average_ai_ase</span></code>: average BAF difference between RNA and DNA for ASE markers</li>
-<li><code class="codehilite"><span class="n">pval_all_markers</span></code>: p-value for each marker in the ASE test</li>
-<li><code class="codehilite"><span class="n">pval_ase_markers</span></code>: p-value for ASE markers in the ASE test</li>
-<li><code class="codehilite"><span class="n">ai_all_markers</span></code>: BAF difference between RNA and DNA for all heterozygrous markers</li>
-<li><code class="codehilite"><span class="n">ai_ase_markers</span></code>: BAF difference between RNA and DNA for ASE markers</li>
-<li><code class="codehilite"><span class="n">comb</span><span class="p">.</span><span class="n">pval</span></code>: combined p-value for the ASE test</li>
-<li><code class="codehilite"><span class="n">mean</span><span class="p">.</span><span class="n">delta</span></code>: average BAF difference between RNA and DNA for all markers</li>
-<li><code class="codehilite"><span class="n">rawp</span></code>: raw p-value for the ASE test</li>
-<li><code class="codehilite"><span class="n">Bonferroni</span></code>: adjusted p-value for the ASE test (single-step Bonferroni)</li>
-<li><code class="codehilite"><span class="n">ABH</span></code>: adjusted p-value for the ASE test (Benjamini-Hochberg)</li>
-<li><code class="codehilite"><span class="n">FPKM</span></code>: FPKM value</li>
-<li><code class="codehilite"><span class="n">loo</span><span class="p">.</span><span class="k">source</span></code>: which reference expression matrix was used in the outlier high expression (OHE) test</li>
-<li><code class="codehilite"><span class="n">loo</span><span class="p">.</span><span class="n">cohort</span><span class="p">.</span><span class="k">size</span></code>: number of cases in the reference expression matrix for this gene</li>
-<li><code class="codehilite"><span class="n">loo</span><span class="p">.</span><span class="n">pval</span></code>: p-value of the OHE test</li>
-<li><code class="codehilite"><span class="n">loo</span><span class="p">.</span><span class="n">rank</span></code>: rank of the case under analysis among the reference cases</li>
-<li><code class="codehilite"><span class="n">imprinting</span><span class="p">.</span><span class="n">status</span></code>: imprinting status of the gene</li>
-<li><code class="codehilite"><span class="n">candidate</span><span class="p">.</span><span class="k">group</span></code>: status of the gene, combining both ASE and outlier tests</li>
+<li><code class="codehilite"><span class="err">gene</span></code>: gene accession number (<a href="https://www.ncbi.nlm.nih.gov/refseq/">RefSeq</a> ID)</li>
+<li><code class="codehilite"><span class="err">gsym</span></code>: gene symbol</li>
+<li><code class="codehilite"><span class="err">chrom</span></code>: chromosome name</li>
+<li><code class="codehilite"><span class="err">strand</span></code>: strand orientation</li>
+<li><code class="codehilite"><span class="err">start</span></code>: genomic start location</li>
+<li><code class="codehilite"><span class="err">end</span></code>: genomic end location</li>
+<li><code class="codehilite"><span class="err">cdsStartStat</span></code>: coding sequence (CDS) start status</li>
+<li><code class="codehilite"><span class="err">cdsEndStat</span></code>: coding sequence (CDS) end status</li>
+<li><code class="codehilite"><span class="err">markers</span></code>: number of heterozygous markers in this gene</li>
+<li><code class="codehilite"><span class="err">ase_markers</span></code>: number of heterozygous markers showing allelic specific expressions (ASE)</li>
+<li><code class="codehilite"><span class="err">average_ai_all</span></code>: average B-allele frequency (BAF) difference between RNA and DNA for all heterozygous markers</li>
+<li><code class="codehilite"><span class="err">average_ai_ase</span></code>: average BAF difference between RNA and DNA for ASE markers</li>
+<li><code class="codehilite"><span class="err">pval_all_markers</span></code>: p-value for each marker in the ASE test</li>
+<li><code class="codehilite"><span class="err">pval_ase_markers</span></code>: p-value for ASE markers in the ASE test</li>
+<li><code class="codehilite"><span class="err">ai_all_markers</span></code>: BAF difference between RNA and DNA for all heterozygrous markers</li>
+<li><code class="codehilite"><span class="err">ai_ase_markers</span></code>: BAF difference between RNA and DNA for ASE markers</li>
+<li><code class="codehilite"><span class="err">comb.pval</span></code>: combined p-value for the ASE test</li>
+<li><code class="codehilite"><span class="err">mean.delta</span></code>: average BAF difference between RNA and DNA for all markers</li>
+<li><code class="codehilite"><span class="err">rawp</span></code>: raw p-value for the ASE test</li>
+<li><code class="codehilite"><span class="err">Bonferroni</span></code>: adjusted p-value for the ASE test (single-step Bonferroni)</li>
+<li><code class="codehilite"><span class="err">ABH</span></code>: adjusted p-value for the ASE test (Benjamini-Hochberg)</li>
+<li><code class="codehilite"><span class="err">FPKM</span></code>: FPKM value</li>
+<li><code class="codehilite"><span class="err">loo.source</span></code>: which reference expression matrix was used in the outlier high expression (OHE) test</li>
+<li><code class="codehilite"><span class="err">loo.cohort.size</span></code>: number of cases in the reference expression matrix for this gene</li>
+<li><code class="codehilite"><span class="err">loo.pval</span></code>: p-value of the OHE test</li>
+<li><code class="codehilite"><span class="err">loo.rank</span></code>: rank of the case under analysis among the reference cases</li>
+<li><code class="codehilite"><span class="err">imprinting.status</span></code>: imprinting status of the gene</li>
+<li><code class="codehilite"><span class="err">candidate.group</span></code>: status of the gene, combining both ASE and outlier tests</li>
 </ul>
-<p>Strand orientations are denoted with a <code class="codehilite"><span class="o">+</span></code> for a sense or coding strand and
-<code class="codehilite"><span class="o">-</span></code> for a antisense or non-coding strand.</p>
+<p>Strand orientations are denoted with a <code class="codehilite"><span class="err">+</span></code> for a sense or coding strand and
+<code class="codehilite"><span class="err">-</span></code> for a antisense or non-coding strand.</p>
 <p>Coding sequence status is typically one of "none" (not specified), "unk"
 (unknown), "incmpl" (incomplete), or "cmpl" (complete).</p>
 <h5>Example</h5>
@@ -1474,15 +1450,15 @@ under analysis.</p>
 <p>Structural variant (SV) candidates include candidates predicted as the causal
 for the cis-activated genes in the regulatory territory.</p>
 <ul>
-<li><code class="codehilite"><span class="k">left</span><span class="p">.</span><span class="n">candidate</span><span class="p">.</span><span class="n">inTAD</span></code>: cis-activated candidate near the left breakpoint</li>
-<li><code class="codehilite"><span class="k">right</span><span class="p">.</span><span class="n">candidate</span><span class="p">.</span><span class="n">inTAD</span></code>: cis-activated candidate near the right breakpoint</li>
-<li><code class="codehilite"><span class="n">chrA</span></code>: chromosome name of the left breakpoint</li>
-<li><code class="codehilite"><span class="n">posA</span></code>: genomic location of the left breakpoint</li>
-<li><code class="codehilite"><span class="n">ortA</span></code>: strand orientation of the left breakpoint</li>
-<li><code class="codehilite"><span class="n">chrB</span></code>: chromosome name of the right breakpoint</li>
-<li><code class="codehilite"><span class="n">posB</span></code>: genomic location of the right breakpoint</li>
-<li><code class="codehilite"><span class="n">ortB</span></code>: strand orientation of the right breakpoint</li>
-<li><code class="codehilite"><span class="k">type</span></code>: type of translocation</li>
+<li><code class="codehilite"><span class="err">left.candidate.inTAD</span></code>: cis-activated candidate near the left breakpoint</li>
+<li><code class="codehilite"><span class="err">right.candidate.inTAD</span></code>: cis-activated candidate near the right breakpoint</li>
+<li><code class="codehilite"><span class="err">chrA</span></code>: chromosome name of the left breakpoint</li>
+<li><code class="codehilite"><span class="err">posA</span></code>: genomic location of the left breakpoint</li>
+<li><code class="codehilite"><span class="err">ortA</span></code>: strand orientation of the left breakpoint</li>
+<li><code class="codehilite"><span class="err">chrB</span></code>: chromosome name of the right breakpoint</li>
+<li><code class="codehilite"><span class="err">posB</span></code>: genomic location of the right breakpoint</li>
+<li><code class="codehilite"><span class="err">ortB</span></code>: strand orientation of the right breakpoint</li>
+<li><code class="codehilite"><span class="err">type</span></code>: type of translocation</li>
 </ul>
 <h5>Example</h5>
 
@@ -1519,11 +1495,11 @@ for the cis-activated genes in the regulatory territory.</p>
 <p>Copy number aberration (CNA) candidates include candidates predicted as the
 causal for the cis-activated genes in the regulatory territory.</p>
 <ul>
-<li><code class="codehilite"><span class="n">candidate</span><span class="p">.</span><span class="n">inTAD</span></code>: cis-activated candidate by the CNA</li>
-<li><code class="codehilite"><span class="n">chr</span></code>: chromosome name</li>
-<li><code class="codehilite"><span class="k">start</span></code>: genomic start position</li>
-<li><code class="codehilite"><span class="k">end</span></code>: genomic end location</li>
-<li><code class="codehilite"><span class="n">logR</span></code>: log ratio of the CNA</li>
+<li><code class="codehilite"><span class="err">candidate.inTAD</span></code>: cis-activated candidate by the CNA</li>
+<li><code class="codehilite"><span class="err">chr</span></code>: chromosome name</li>
+<li><code class="codehilite"><span class="err">start</span></code>: genomic start position</li>
+<li><code class="codehilite"><span class="err">end</span></code>: genomic end location</li>
+<li><code class="codehilite"><span class="err">logR</span></code>: log ratio of the CNA</li>
 </ul>
 <h4 id="snvindel-candidates">SNV/indel candidates</h4>
 
@@ -1532,17 +1508,17 @@ transcription factors. The mutations are also annotated for known regulatory
 elements reported by the <a href="https://egg2.wustl.edu/roadmap/web_portal/index.html">NIH Roadmap Epigenomics Project</a> by collecting 111
 cell lines.</p>
 <ul>
-<li><code class="codehilite"><span class="n">chrom</span></code>: chromosome name</li>
-<li><code class="codehilite"><span class="n">pos</span></code>: genomic start position</li>
-<li><code class="codehilite"><span class="k">ref</span></code>: reference allele genotype</li>
-<li><code class="codehilite"><span class="n">mut</span></code>: mutant allele genotype</li>
-<li><code class="codehilite"><span class="k">type</span></code>: mutation type (either <code class="codehilite"><span class="n">snv</span></code> or <code class="codehilite"><span class="n">indel</span></code>)</li>
-<li><code class="codehilite"><span class="n">target</span></code>: cis-activated candidate</li>
-<li><code class="codehilite"><span class="n">dist</span></code>: distance between the mutation and transcription start sites of the target gene</li>
-<li><code class="codehilite"><span class="n">tf</span></code>: transcription factors predicted to have the binding motif introduced by the mutation</li>
-<li><code class="codehilite"><span class="n">EpiRoadmap_enhancer</span></code>: enhancer regions that overlap with the mutation (from the <a href="https://egg2.wustl.edu/roadmap/web_portal/index.html">NIH Roadmap Epigenomics Project</a>)</li>
-<li><code class="codehilite"><span class="n">EpiRoadmap_promoter</span></code>: promoter regions that overlap with the mutation (from the <a href="https://egg2.wustl.edu/roadmap/web_portal/index.html">NIH Roadmap Epigenomics Project</a>)</li>
-<li><code class="codehilite"><span class="n">EpiRoadmap_dyadic</span></code>: dyadic regions that overlap with the mutation (from the <a href="https://egg2.wustl.edu/roadmap/web_portal/index.html">NIH Roadmap Epigenomics Project</a>)</li>
+<li><code class="codehilite"><span class="err">chrom</span></code>: chromosome name</li>
+<li><code class="codehilite"><span class="err">pos</span></code>: genomic start position</li>
+<li><code class="codehilite"><span class="err">ref</span></code>: reference allele genotype</li>
+<li><code class="codehilite"><span class="err">mut</span></code>: mutant allele genotype</li>
+<li><code class="codehilite"><span class="err">type</span></code>: mutation type (either <code class="codehilite"><span class="err">snv</span></code> or <code class="codehilite"><span class="err">indel</span></code>)</li>
+<li><code class="codehilite"><span class="err">target</span></code>: cis-activated candidate</li>
+<li><code class="codehilite"><span class="err">dist</span></code>: distance between the mutation and transcription start sites of the target gene</li>
+<li><code class="codehilite"><span class="err">tf</span></code>: transcription factors predicted to have the binding motif introduced by the mutation</li>
+<li><code class="codehilite"><span class="err">EpiRoadmap_enhancer</span></code>: enhancer regions that overlap with the mutation (from the <a href="https://egg2.wustl.edu/roadmap/web_portal/index.html">NIH Roadmap Epigenomics Project</a>)</li>
+<li><code class="codehilite"><span class="err">EpiRoadmap_promoter</span></code>: promoter regions that overlap with the mutation (from the <a href="https://egg2.wustl.edu/roadmap/web_portal/index.html">NIH Roadmap Epigenomics Project</a>)</li>
+<li><code class="codehilite"><span class="err">EpiRoadmap_dyadic</span></code>: dyadic regions that overlap with the mutation (from the <a href="https://egg2.wustl.edu/roadmap/web_portal/index.html">NIH Roadmap Epigenomics Project</a>)</li>
 </ul>
 <h5>Example</h5>
 
@@ -1582,17 +1558,17 @@ cell lines.</p>
 
 <p>OHE results are the raw results for the outlier expression test.</p>
 <ul>
-<li><code class="codehilite"><span class="n">Gene</span></code>: gene symbol</li>
-<li><code class="codehilite"><span class="n">fpkm</span><span class="p">.</span><span class="n">raw</span></code>: FPKM value</li>
-<li><code class="codehilite"><span class="k">size</span><span class="p">.</span><span class="n">bi</span></code>: number of cases in the bi-allelic reference cohort</li>
-<li><code class="codehilite"><span class="n">p</span><span class="p">.</span><span class="n">bi</span></code>: p-value in the outlier test using the bi-allelic reference cohort</li>
-<li><code class="codehilite"><span class="n">rank</span><span class="p">.</span><span class="n">bi</span></code>: rank of the expression level in the case under analysis compared to the bi-allelic reference cohort</li>
-<li><code class="codehilite"><span class="k">size</span><span class="p">.</span><span class="n">cohort</span></code>: number of cases in the entire reference cohort</li>
-<li><code class="codehilite"><span class="n">p</span><span class="p">.</span><span class="n">cohort</span></code>: p-value in the outlier test using the entire reference cohort</li>
-<li><code class="codehilite"><span class="n">rank</span><span class="p">.</span><span class="n">cohort</span></code>: rank of the expression level in the case under analysis compared to the entire reference cohort</li>
-<li><code class="codehilite"><span class="k">size</span><span class="p">.</span><span class="n">white</span></code>: number of cases in the whitelist reference cohort</li>
-<li><code class="codehilite"><span class="n">p</span><span class="p">.</span><span class="n">white</span></code>: p-value in the outlier test using the whitelist reference cohort</li>
-<li><code class="codehilite"><span class="n">rank</span><span class="p">.</span><span class="n">white</span></code>: rank of the expression level in the case under analysis compared to the whitelist reference cohort</li>
+<li><code class="codehilite"><span class="err">Gene</span></code>: gene symbol</li>
+<li><code class="codehilite"><span class="err">fpkm.raw</span></code>: FPKM value</li>
+<li><code class="codehilite"><span class="err">size.bi</span></code>: number of cases in the bi-allelic reference cohort</li>
+<li><code class="codehilite"><span class="err">p.bi</span></code>: p-value in the outlier test using the bi-allelic reference cohort</li>
+<li><code class="codehilite"><span class="err">rank.bi</span></code>: rank of the expression level in the case under analysis compared to the bi-allelic reference cohort</li>
+<li><code class="codehilite"><span class="err">size.cohort</span></code>: number of cases in the entire reference cohort</li>
+<li><code class="codehilite"><span class="err">p.cohort</span></code>: p-value in the outlier test using the entire reference cohort</li>
+<li><code class="codehilite"><span class="err">rank.cohort</span></code>: rank of the expression level in the case under analysis compared to the entire reference cohort</li>
+<li><code class="codehilite"><span class="err">size.white</span></code>: number of cases in the whitelist reference cohort</li>
+<li><code class="codehilite"><span class="err">p.white</span></code>: p-value in the outlier test using the whitelist reference cohort</li>
+<li><code class="codehilite"><span class="err">rank.white</span></code>: rank of the expression level in the case under analysis compared to the whitelist reference cohort</li>
 </ul>
 <h5>Example</h5>
 
@@ -1645,27 +1621,27 @@ cell lines.</p>
 
 <p>Gene level ASE results are the raw results from the gene level ASE test.</p>
 <ul>
-<li><code class="codehilite"><span class="n">gene</span></code>: gene accession number (<a href="https://www.ncbi.nlm.nih.gov/refseq/">RefSeq</a> ID)</li>
-<li><code class="codehilite"><span class="n">gsym</span></code>: gene symbol</li>
-<li><code class="codehilite"><span class="n">chrom</span></code>: chromosome name</li>
-<li><code class="codehilite"><span class="n">strand</span></code>: strand orientation</li>
-<li><code class="codehilite"><span class="k">start</span></code>: genomic start location</li>
-<li><code class="codehilite"><span class="k">end</span></code>: genomic end location</li>
-<li><code class="codehilite"><span class="n">cdsStartStat</span></code>: coding sequence (CDS) start status</li>
-<li><code class="codehilite"><span class="n">cdsEndStat</span></code>: coding sequence (CDS) end status</li>
-<li><code class="codehilite"><span class="n">markers</span></code>: number of heterozygous markers in this gene</li>
-<li><code class="codehilite"><span class="n">ase_markers</span></code>: number of heterozygous markers showing allelic specific expressions (ASE)</li>
-<li><code class="codehilite"><span class="n">average_ai_all</span></code>: average B-allele frequency (BAF) difference between RNA and DNA for all heterozygous markers</li>
-<li><code class="codehilite"><span class="n">average_ai_ase</span></code>: average BAF difference between RNA and DNA for ASE markers</li>
-<li><code class="codehilite"><span class="n">pval_all_markers</span></code>: p-value for each marker in the ASE test</li>
-<li><code class="codehilite"><span class="n">pval_ase_markers</span></code>: p-value for ASE markers in the ASE test</li>
-<li><code class="codehilite"><span class="n">ai_all_markers</span></code>: BAF difference between RNA and DNA for all heterozygrous markers</li>
-<li><code class="codehilite"><span class="n">ai_ase_markers</span></code>: BAF difference between RNA and DNA for ASE markers</li>
-<li><code class="codehilite"><span class="n">comb</span><span class="p">.</span><span class="n">pval</span></code>: combined p-value for the ASE test</li>
-<li><code class="codehilite"><span class="n">mean</span><span class="p">.</span><span class="n">delta</span></code>: average BAF difference between RNA and DNA for all markers</li>
-<li><code class="codehilite"><span class="n">rawp</span></code>: raw p-value for the ASE test</li>
-<li><code class="codehilite"><span class="n">Bonferroni</span></code>: adjusted p-value for the ASE test (single-step Bonferroni)</li>
-<li><code class="codehilite"><span class="n">ABH</span></code>: adjusted p-value for the ASE test (Benjamini-Hochberg)</li>
+<li><code class="codehilite"><span class="err">gene</span></code>: gene accession number (<a href="https://www.ncbi.nlm.nih.gov/refseq/">RefSeq</a> ID)</li>
+<li><code class="codehilite"><span class="err">gsym</span></code>: gene symbol</li>
+<li><code class="codehilite"><span class="err">chrom</span></code>: chromosome name</li>
+<li><code class="codehilite"><span class="err">strand</span></code>: strand orientation</li>
+<li><code class="codehilite"><span class="err">start</span></code>: genomic start location</li>
+<li><code class="codehilite"><span class="err">end</span></code>: genomic end location</li>
+<li><code class="codehilite"><span class="err">cdsStartStat</span></code>: coding sequence (CDS) start status</li>
+<li><code class="codehilite"><span class="err">cdsEndStat</span></code>: coding sequence (CDS) end status</li>
+<li><code class="codehilite"><span class="err">markers</span></code>: number of heterozygous markers in this gene</li>
+<li><code class="codehilite"><span class="err">ase_markers</span></code>: number of heterozygous markers showing allelic specific expressions (ASE)</li>
+<li><code class="codehilite"><span class="err">average_ai_all</span></code>: average B-allele frequency (BAF) difference between RNA and DNA for all heterozygous markers</li>
+<li><code class="codehilite"><span class="err">average_ai_ase</span></code>: average BAF difference between RNA and DNA for ASE markers</li>
+<li><code class="codehilite"><span class="err">pval_all_markers</span></code>: p-value for each marker in the ASE test</li>
+<li><code class="codehilite"><span class="err">pval_ase_markers</span></code>: p-value for ASE markers in the ASE test</li>
+<li><code class="codehilite"><span class="err">ai_all_markers</span></code>: BAF difference between RNA and DNA for all heterozygrous markers</li>
+<li><code class="codehilite"><span class="err">ai_ase_markers</span></code>: BAF difference between RNA and DNA for ASE markers</li>
+<li><code class="codehilite"><span class="err">comb.pval</span></code>: combined p-value for the ASE test</li>
+<li><code class="codehilite"><span class="err">mean.delta</span></code>: average BAF difference between RNA and DNA for all markers</li>
+<li><code class="codehilite"><span class="err">rawp</span></code>: raw p-value for the ASE test</li>
+<li><code class="codehilite"><span class="err">Bonferroni</span></code>: adjusted p-value for the ASE test (single-step Bonferroni)</li>
+<li><code class="codehilite"><span class="err">ABH</span></code>: adjusted p-value for the ASE test (Benjamini-Hochberg)</li>
 </ul>
 <h5>Example</h5>
 
@@ -1748,18 +1724,18 @@ cell lines.</p>
 
 <p>Single marker ASE results are the raw results from the single marker ASE test.</p>
 <ul>
-<li><code class="codehilite"><span class="n">chrom</span></code>: chromosome name</li>
-<li><code class="codehilite"><span class="n">pos</span></code>: genomic start position</li>
-<li><code class="codehilite"><span class="k">ref</span></code>: reference allele genotype</li>
-<li><code class="codehilite"><span class="n">mut</span></code>: non-reference allele genotype</li>
-<li><code class="codehilite"><span class="n">cvg_wgs</span></code>: coverage of the marker from the whole genome sequence (WGS)</li>
-<li><code class="codehilite"><span class="n">mut_freq_wgs</span></code>: non-reference allele fraction in the WGS</li>
-<li><code class="codehilite"><span class="n">cvg_rna</span></code>: coverage of the marker from the RNA-seq</li>
-<li><code class="codehilite"><span class="n">mut_freq_rna</span></code>: non-reference allele fraction in the RNA-seq</li>
-<li><code class="codehilite"><span class="k">ref</span><span class="p">.</span><span class="mi">1</span></code>: read count of the reference allele in the RNA-seq</li>
-<li><code class="codehilite"><span class="n">var</span></code>: read count of the non-reference allele in the RNA-seq</li>
-<li><code class="codehilite"><span class="n">pvalue</span></code>: p-value from the binomial test</li>
-<li><code class="codehilite"><span class="n">delta</span><span class="p">.</span><span class="k">abs</span></code>: absolute difference of the non-reference allele fraction between the WGS and RNA-seq</li>
+<li><code class="codehilite"><span class="err">chrom</span></code>: chromosome name</li>
+<li><code class="codehilite"><span class="err">pos</span></code>: genomic start position</li>
+<li><code class="codehilite"><span class="err">ref</span></code>: reference allele genotype</li>
+<li><code class="codehilite"><span class="err">mut</span></code>: non-reference allele genotype</li>
+<li><code class="codehilite"><span class="err">cvg_wgs</span></code>: coverage of the marker from the whole genome sequence (WGS)</li>
+<li><code class="codehilite"><span class="err">mut_freq_wgs</span></code>: non-reference allele fraction in the WGS</li>
+<li><code class="codehilite"><span class="err">cvg_rna</span></code>: coverage of the marker from the RNA-seq</li>
+<li><code class="codehilite"><span class="err">mut_freq_rna</span></code>: non-reference allele fraction in the RNA-seq</li>
+<li><code class="codehilite"><span class="err">ref.1</span></code>: read count of the reference allele in the RNA-seq</li>
+<li><code class="codehilite"><span class="err">var</span></code>: read count of the non-reference allele in the RNA-seq</li>
+<li><code class="codehilite"><span class="err">pvalue</span></code>: p-value from the binomial test</li>
+<li><code class="codehilite"><span class="err">delta.abs</span></code>: absolute difference of the non-reference allele fraction between the WGS and RNA-seq</li>
 </ul>
 <h5>Example</h5>
 
@@ -1872,7 +1848,7 @@ cell lines.</p>
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/9c1cede">9c1cede</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/38ae319">38ae319</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of

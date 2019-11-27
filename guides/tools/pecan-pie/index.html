@@ -283,32 +283,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/types-of-data/" title="Types of Data" class="md-nav__link">
-      Types of Data
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../data/studies/" title="Studies" class="md-nav__link">
-      Studies
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../data/metadata/" title="Metadata Provided" class="md-nav__link">
-      Metadata Provided
+    <a href="../../data/about-our-data/" title="About Our Data" class="md-nav__link">
+      About Our Data
     </a>
   </li>
 
@@ -1005,7 +981,7 @@ PIE is free for non-commercial use. St. Jude pays the (small) cloud
 computing costs, your DNAnexus account will not be billed.</p>
 <h2 id="uploading-data">Uploading data</h2>
 <p>Pecan PIE takes standard VCF files as input, which may be either
-uncompressed or compressed with <code class="codehilite"><span class="n">bgzip</span></code>.</p>
+uncompressed or compressed with <code class="codehilite"><span class="err">bgzip</span></code>.</p>
 <ol>
 <li>Click the "Securely upload a VCF file" button.</li>
 <li>Choose the genome your variants were mapped to, which may be either
@@ -1207,11 +1183,11 @@ the pipelines).</p>
 <li><strong>DNAnexus GUI.</strong> DNAnexus provides a standardized graphical user interface for
     configurating, launching, and monitoring jobs on the cloud. Our
     pipelines can be run like any other DNAnexus pipeline.</li>
-<li><strong>Command line.</strong> Jobs may also be invoked via the <code class="codehilite"><span class="n">dx</span></code> command line
+<li><strong>Command line.</strong> Jobs may also be invoked via the <code class="codehilite"><span class="err">dx</span></code> command line
     client. Command-line use allows submitting cloud jobs without
     interacting with a GUI, and so supports scripting and easier
     integration with local workflows. See <a href="../../data/command-line/#installation">this section</a>
-    for information on how to get set up with the <code class="codehilite"><span class="n">dx</span><span class="o">-</span><span class="n">toolkit</span></code>.</li>
+    for information on how to get set up with the <code class="codehilite"><span class="err">dx-toolkit</span></code>.</li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1220,10 +1196,10 @@ the pipelines).</p>
 <h3 id="uploading-files">Uploading files</h3>
 <p>All input files must be uploaded onto the DNAnexus platform. When
 specifying files for input you can use either the DNAnexus fie IDs (e.g.
-<code class="codehilite"><span class="n">file</span><span class="o">-</span><span class="n">FBgvp680gz1bGQ5p8yZKz69g</span></code>), or the filenames if they are unique. For
+<code class="codehilite"><span class="err">file-FBgvp680gz1bGQ5p8yZKz69g</span></code>), or the filenames if they are unique. For
 an idea of how to upload files to DNAnexus, see <a href="https://documentation.dnanexus.com/user/objects/uploading-and-downloading-files/small-sets-of-files/uploading-using-dx#uploading-files">this guide</a>.</p>
 <h3 id="step-1-running-vep">Step 1: Running VEP+</h3>
-<p>To run the VEP+ DNAnexus app, you can use the following <code class="codehilite"><span class="n">dx</span></code>
+<p>To run the VEP+ DNAnexus app, you can use the following <code class="codehilite"><span class="err">dx</span></code>
 command with your own inputs in place of the example's:</p>
 <div class="codehilite"><pre><span></span>dx run app-stjude_vep_plus -iinput_file<span class="o">=</span>my_vcf.vcf -igenome_string<span class="o">=</span>GRCh37-lite -igermline_reviewable_only<span class="o">=</span><span class="nb">true</span>
 </pre></div>
@@ -1232,13 +1208,13 @@ command with your own inputs in place of the example's:</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <ul>
-<li><code class="codehilite"><span class="n">genome_string</span></code> must be either <code class="codehilite"><span class="n">GRCh37</span><span class="o">-</span><span class="n">lite</span></code> or <code class="codehilite"><span class="n">GRCh38</span></code>. If <code class="codehilite"><span class="n">GRCh38</span></code>
-is specified, variants will be lifted over to <code class="codehilite"><span class="n">GRCh37</span><span class="o">-</span><span class="n">lite</span></code> in output,
-i.e. the output will always be <code class="codehilite"><span class="n">GRCh37</span><span class="o">-</span><span class="n">lite</span></code> (Medal Ceremony currently only supports <code class="codehilite"><span class="n">GRCh37</span><span class="o">-</span><span class="n">lite</span></code>).</li>
-<li>The input VCF specified by <code class="codehilite"><span class="n">input_file</span></code> may be either
-uncompressed, or compressed with <code class="codehilite"><span class="n">bgzip</span></code> <strong>only</strong> (htslib/tabix
+<li><code class="codehilite"><span class="err">genome_string</span></code> must be either <code class="codehilite"><span class="err">GRCh37-lite</span></code> or <code class="codehilite"><span class="err">GRCh38</span></code>. If <code class="codehilite"><span class="err">GRCh38</span></code>
+is specified, variants will be lifted over to <code class="codehilite"><span class="err">GRCh37-lite</span></code> in output,
+i.e. the output will always be <code class="codehilite"><span class="err">GRCh37-lite</span></code> (Medal Ceremony currently only supports <code class="codehilite"><span class="err">GRCh37-lite</span></code>).</li>
+<li>The input VCF specified by <code class="codehilite"><span class="err">input_file</span></code> may be either
+uncompressed, or compressed with <code class="codehilite"><span class="err">bgzip</span></code> <strong>only</strong> (htslib/tabix
 packages).</li>
-<li>The <code class="codehilite"><span class="n">germline_reviewable_only</span></code> parameter is optional, but
+<li>The <code class="codehilite"><span class="err">germline_reviewable_only</span></code> parameter is optional, but
 strongly recommended. If specified, only variants in disease-gene
 related intervals will be annotated, which is appropriate for
 Medal Ceremony. If this option is not specified all variants will
@@ -1246,22 +1222,22 @@ be annotated, which depending on the size of your VCF might take a
 lot longer, and many of the resulting variants won't be usable by
 Medal Ceremony. If you want to do this anyway and have a large
 number of variants, consider submitting your job to an instance
-with more CPU cores (e.g. <code class="codehilite"><span class="n">mem1_ssd1_x16</span></code> or <code class="codehilite"><span class="n">mem1_ssd1_x32</span></code>) as
+with more CPU cores (e.g. <code class="codehilite"><span class="err">mem1_ssd1_x16</span></code> or <code class="codehilite"><span class="err">mem1_ssd1_x32</span></code>) as
 the code will take advantage of the additional cores. If you are
 using a custom gene list (below) that takes precedence and this
 parameter is not needed.</li>
-<li>The optional parameter <code class="codehilite"><span class="n">custom_genes_file</span></code> specifies a plain
+<li>The optional parameter <code class="codehilite"><span class="err">custom_genes_file</span></code> specifies a plain
 text file of HUGO gene symbols to analyze (whitespace separated,
 or one per line). If specified, analysis will be restricted to
 these genes only.</li>
-<li>This pipeline produces two output files, <code class="codehilite"><span class="n">output_file</span></code> contains
-annotations for all variants, while <code class="codehilite"><span class="n">medal_prep_output_file</span></code> is
+<li>This pipeline produces two output files, <code class="codehilite"><span class="err">output_file</span></code> contains
+annotations for all variants, while <code class="codehilite"><span class="err">medal_prep_output_file</span></code> is
 the specially-filtered and formatted file required as input to
 Medal Ceremony below.</li>
 </ul>
 </div>
 <h3 id="step-2-running-medal-ceremony">Step 2: Running Medal Ceremony</h3>
-<p>To run the medal ceremony DNAnexus app, you can use the following <code class="codehilite"><span class="n">dx</span></code>
+<p>To run the medal ceremony DNAnexus app, you can use the following <code class="codehilite"><span class="err">dx</span></code>
 command with your own inputs in place of the example's:</p>
 <div class="codehilite"><pre><span></span>dx run app-stjude_medal_ceremony -iinfile<span class="o">=</span>medal_prep_output_file
 </pre></div>
@@ -1270,11 +1246,11 @@ command with your own inputs in place of the example's:</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <ul>
-<li>The optional parameter <code class="codehilite"><span class="n">custom_genes_file</span></code> operates in the same
+<li>The optional parameter <code class="codehilite"><span class="err">custom_genes_file</span></code> operates in the same
 way as in the VEP+ pipeline above. For custom gene lists to work
 properly this parameter must be specified when running both the
 VEP+ and Medal Ceremony pipelines.</li>
-<li>The optional parameter <code class="codehilite"><span class="n">max_population_frequency</span></code> may be
+<li>The optional parameter <code class="codehilite"><span class="err">max_population_frequency</span></code> may be
 specified, a fractional value representing the maximum population
 frequency allowed for a variant in the ExAC (ex-TCGA) database to
 receive a medal. The default is 0.001, a.k.a. ".1%".</li>
@@ -1287,7 +1263,7 @@ receive a medal. The default is 0.001, a.k.a. ".1%".</li>
 <p>PIE works with variants in VCF format:</p>
 <ul>
 <li>Uploaded files must be compliant with the <a href="https://samtools.github.io/hts-specs/">VCF specification</a>.</li>
-<li>VCF files may be either uncompressed, or compressed with <code class="codehilite"><span class="n">bgzip</span></code> <strong>only</strong>. <code class="codehilite"><span class="n">bgzip</span></code> is part of the htslib/tabix packages (see below).</li>
+<li>VCF files may be either uncompressed, or compressed with <code class="codehilite"><span class="err">bgzip</span></code> <strong>only</strong>. <code class="codehilite"><span class="err">bgzip</span></code> is part of the htslib/tabix packages (see below).</li>
 </ul>
 <p>Improperly formatted VCF files will not work with PIE. Some common
 problems include:</p>
@@ -1437,7 +1413,7 @@ alert you of job completion via email.</p>
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/9c1cede">9c1cede</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/38ae319">38ae319</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
