@@ -14,9 +14,7 @@ pages:
   - 'Welcome to St. Jude Cloud': 'index.md'
   - 'Create An Account': 'create-an-account.md'
   - 'Data Guides': 
-      - 'Types of Data': 'guides/data/types-of-data.md'
-      - 'Studies': 'guides/data/studies.md'
-      - 'Metadata Provided': 'guides/data/metadata.md'
+      - 'About Our Data': 'guides/data/about-our-data.md'
       - 'Making a Data Request': 'guides/data/data-request.md'
       - 'Working with Our Data': 'guides/data/working-with-our-data.md'
       - 'Creating a Cloud App': 'guides/data/creating-a-cloud-app.md'

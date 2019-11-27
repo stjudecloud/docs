@@ -23,7 +23,7 @@ Please download the Schedule 1(s) (linked in table below) to find dataset specif
 | Childhood Cancer Survivor Study (CCSS) dataset | [CCSS study design paper](https://www.ncbi.nlm.nih.gov/pubmed/11920786); [<i class="material-icons material-icons-sjcloud-custom">file_download</i> CCSS Schedule 1](./files/CCSS-Schedule1.pdf) |
 
 !!! note
-    If you are unsure what dataset(s) the data that you have been vended belongs to, you can find this information in the sj_datasets column of the [SAMPLE_INFO.txt](./guides/data/metadata.md) file.
+    If you are unsure what dataset(s) the data that you have been vended belongs to, you can find this information in the sj_datasets column of the [SAMPLE_INFO.txt](./guides/data/about-our-data.md#metadata) file.
 
 !!! warning
     Publishing using any of the data files _before_ the [embargo date](./glossary.md#embargo-date) has passed is strictly prohibited as outlined in the [Data Access Agreement (DAA)](./glossary.md#data-access-agreement).
