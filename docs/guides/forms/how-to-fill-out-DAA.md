@@ -4,6 +4,7 @@ The [Data Access Agreement (DAA)](../../glossary.md#data-access-agreement) is a 
 
 Upon selection of your desired data, you will be prompted to complete a Data Access Agreement if you have not already been approved for access to the selected datasets. In order to simplify the data access request process, an [electronic data access agreement](#the-electronic-data-access-agreement-process) is available for US residents only.
 
+
 If you reside outside of the US, you must fill out the Data Access Agreement manually. You may click [here](../../files/DAA_v4_10-1-2019.pdf) to download the latest version of the DAA. Please read the first 6 pages carefully, which consist of terms and conditions that you and your institution must agree to in order to access any data on St. Jude Cloud. Then, follow the directions starting at [Data Access Units](#data-access-units) to ensure that you have correctly filled out the DAA. Please note that there are [two additional required sections](#downloading-data) if you intend to download data to your local infrastructure.
 
 ## The Data Access Agreement
@@ -20,7 +21,6 @@ On page 7 of the DAA, you must mark all Data Access Units for which you are appl
 
 ![](../../images/guides/forms/docs-DAU-short.png)
 
-
 If you mark the incorrect datasets, you will be required to resubmit your agreement with the correct datasets marked. When completing the DAA electronically using the setup wizard, the DAU options will be automatically preselected for you. 
 
 ### Contemplated Use
@@ -31,10 +31,9 @@ On page 8 of the DAA, you must submit a description of your research project. Pl
 
 #### Contemplated Use Example
 
-The below example is adapted from a successful request to access SJLIFE and PCGP datasets.
+The below is a simulated example of a contemplated use.
 
->"Rare hereditary syndromes are associated with pediatric cancer predisposition.  The genes responsible, however, have not yet been fully defined.   The goal of our research is to discover these genes and to apply this knowledge to develop guidelines for the clinic.   Candidate predisposition genes will be identified based on statistical modeling of rare variants from the SJLIFE data sets when contrasted against normal controls from public resources.
-Further, the discovery of cancer predisposition genes will be informed by identifying secondary somatic mutations in tumors and peripheral blood.  Whole genome sequences and whole exome sequences from PCGP samples from a spectrum of pediatric cancers will be surveyed for rare deleterious germline mutations that may support the development of cancer."
+>"We propose to apply our own variant calling method to detect structural variants in both pediatric tumor and germline samples.  The detected variants will then be compared to our own genomic data and to publicly available data sources of normal and disease samples to assess the novelty of those variants and their association with disease.  Variants will be categorized by their expected effect on genes known to be relevant to cancer, DNA repair, or epigenetics.   One goal of the research is to compare our mutation detection software to existing methods on samples with known mutations and structural variants such as those in the PCGP data set.   Another goal is the identification of novel variants with potential clinical relevance.  Promising tractable variants will be introduced into cell lines to observe their effect on cell growth and tumor progression.   Lastly, we propose to use the results of our analyses to further develop and refine our variant detection methods."
 
 ### Principal Investigator
 
@@ -60,8 +59,6 @@ Page 12 of the agreement must be filled out and signed by your Institutional or 
 On page 13 of the DAA, your institution’s Information Security Officer's signature is required *if and only if* you intend to [download](#downloading-data) a local copy of the data (note: you must also initial in the line below the DAU selection). This individual may go by varying job titles, such as Information Director or Chief Information Security Officer, but is the individual responsible for information security at your institution. This signature verifies that the data, once downloaded, will remain protected by your institution's data security protocols.
     ![](../../images/guides/forms/docs-ISO.png)
 
-
-
 ### Uploading A Revised DAA
 If your DAA is incomplete (for example you missed a required signature or neglected to check the box next to a dataset for which you requested data), you will be contacted by a member of the St. Jude Cloud team. Once you have made the required edits, you can reupload a revised DAA through the [Manage Data page](https://platform.stjude.cloud/requests/manage) by clicking on the *Add a Form* button.
 
@@ -74,9 +71,7 @@ After submitting the required information, the Data Access Agreement will be sen
 
 Once all signatures have been collected, your data access request will be submitted to St. Jude Cloud. A St. Jude Cloud administrator will forward your Data Access Agreement and intended use to the appropriate [Data Access Committee(s)](../../glossary.md#data-access-committee) for approval. Upon approval from the DAC(s), you will receive an email with a link to the approved data, which will be hosted through DNAnexus.  
 
-
 Learn how to [check your Request Status](../data/data-request.md#checking-your-request-status)  
-
 
 
 ### Similar Topics
