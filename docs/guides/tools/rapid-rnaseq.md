@@ -340,7 +340,7 @@ selection interface to specify input files. A BAM and BAI will be required.
     Calling workflow-<workflow_id> with output destination project-<project_id>:/
     Analysis ID: analysis-<analysis_id>
 
-Alternatively, input files can be specified with the command arguments ` -istage-F5g30jQ9Pgq21jYXBQ47x1p1.BAM=<file>` and ` -istage-F5g30jQ9Pgq21jYXBQ47x1p1.BAM_INDEX=<file>` for BAM input. For FastQ input, the command arguments are `-istage-F5g30g09PgqP90BP9ZbpkpxV.fastq_r1=<file>` and `-istage-F5g30g09PgqP90BP9ZbpkpxV.fastq_r2=<file>`. The additional argument `-y` will suppress confirmation and facilitate batch submission. 
+Alternatively, input files can be specified with the command arguments ` -i0.BAM=<file>` and ` -i0.BAM_INDEX=<file>` for BAM input. For FastQ input, the command arguments are `-i0.fastq_r1=<file>` and `-i0.fastq_r2=<file>`. The additional argument `-y` will suppress confirmation and facilitate batch submission. 
  
 ## Known issues
 
