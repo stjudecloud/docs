@@ -298,6 +298,50 @@ of this guide. Here, we will discuss each of the different output files in more 
 | `qc_perfect_reads` | Count of supporting reads with perfect alignments (no reference mismatches of quality 15+, indels, or soft clips). |
 | `qc_clean_reads` | Count of supporting reads whose alignments are not perfect but which have a ratio of <= 5% of reference mismatches of quality 15+, indels, or soft clips relative to the count of aligned bases on both the left and right flanking sequence. Note: qc_clean_reads does NOT include qc_perfect_reads: to get a count of "perfect plus pretty good" reads the two values must be added together. |
 
+## Starting the workflow from the command line 
+   
+Select the project where the workflow was vended using `dx select`. 
+
+### Uploading files
+All input files must be uploaded to the DNAnexus platform. When specifying files for input you can use either the DNAnexus fie IDs (e.g. `file-<file_id>`), or the filenames if they are unique. For an idea of how to upload files to DNAnexus, see [this guide](https://wiki.dnanexus.com/Command-Line-Client/Upload%20and%20Download%20Files#Uploading).
+
+### Running Rapid RNA-Seq
+If the input files are in BAM format, run `dx run Rapid\ RNA-Seq\ \(BAM\)`. For FastQ input, run `dx run Rapid\ RNA-Seq\ \(FastQ\)`. This will launch the interactive
+selection interface to specify input files. A BAM and BAI will be required. 
+
+    $ dx run Rapid\ RNA-Seq\ \(BAM\)
+    Entering interactive mode for input selection.
+    Input:    (stage-<stage_id>.BAM)
+    Class:   file
+    Enter file ID or path (<TAB> twice for compatible files in current directory, '?' for more options)
+    Input:    (stage-<stage_id>.BAM_INDEX)
+    Class:   file
+    Enter file ID or path (<TAB> twice for compatible files in current directory, '?' for more options)
+    Select an optional parameter to set by its # (^D or <ENTER> to finish):
+    [0] Name of the output bookmark (stage-<stage_id>.output_name) [default="Coverage"]
+    [1] Name of the output bookmark (stage-<stage_id>.output_name) [default="Putative Fusions"]
+    Optional param #: 
+    Using input JSON:
+    {
+    "stage-<stage_id>.BAM": {
+        "$dnanexus_link": {
+            "project": "project-<project_id>", 
+            "id": "file-<file_id>"
+        }
+    }, 
+    "stage-<stage_id>.BAM_INDEX": {
+        "$dnanexus_link": {
+            "project": "project-<project_id>", 
+            "id": "file-<file_id>"
+        }
+    }
+    }
+    Confirm running the executable with this input [Y/n]: Y
+    Calling workflow-<workflow_id> with output destination project-<project_id>:/
+    Analysis ID: analysis-<analysis_id>
+
+Alternatively, input files can be specified with the command arguments ` -istage-F5g30jQ9Pgq21jYXBQ47x1p1.BAM=<file>` and ` -istage-F5g30jQ9Pgq21jYXBQ47x1p1.BAM_INDEX=<file>` for BAM input. For FastQ input, the command arguments are `-istage-F5g30g09PgqP90BP9ZbpkpxV.fastq_r1=<file>` and `-istage-F5g30g09PgqP90BP9ZbpkpxV.fastq_r2=<file>`. The additional argument `-y` will suppress confirmation and facilitate batch submission. 
+ 
 ## Known issues
 
 !!! caution "Adapter contamination"
