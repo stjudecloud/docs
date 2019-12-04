@@ -1,11 +1,4 @@
-## Introduction
-
-!!! note "Summary"
-
-    1. Data in St. Jude Cloud is grouped into different [Data Access Units (DAUs)](../../glossary.md#data-access-unit) which usually correspond to large-scale sequencing initiatives at St. Jude. 
-    2. Individuals can [apply for access](../../glossary.md#data-access-agreement) to DAUs on a case-by-case basis for a specific amount of time (usually 1 year).
-    3. Access to data in a given DAU is assessed by the corresponding [Data Access Committee](../../glossary.md#data-access-committee) who reviews a variety of factors to grant access.
-    4. There are a number of terms of use and restrictions outlined in the [data access agreement](https://platform.stjude.cloud/access_form). Everyone who will be working with the data must understand and agree to these terms.
+## Request Process Overview
 
 Creating a data request is the premier way to access raw St. Jude next 
 generation sequencing data in the cloud. You can get a **free** copy of 
@@ -13,86 +6,67 @@ the data in a secure cloud environment powered by [Microsoft Azure](https://azur
 [DNAnexus](https://www.dnanexus.com/), or you can elect to download the data to your local computing 
 environment.
 
-!!! note
-    If you would like to download the data to local storage, there are
-    extra steps you'll need to follow such as [getting additional signatures](../../guides/forms/how-to-fill-out-DAA#data-download-permission)
-    on your data access agreement. We recommend that you work with the data
-    in the cloud if it's feasible; the data provided by St. Jude is free, the compute charges are reasonable, and working in the cloud helps to eliminate the long, error-prone downloading process. Porting your tools to be run in the cloud is easy, as well. We recommend you follow [this guide](../../guides/data/creating-a-cloud-app) to get started.
+!!! tip "Things to Remember"
 
-## Selecting Data
-
-There are two ways to make your data selection. You can peruse our raw genomic data by diagnosis, publication, or dataset using our [Data Browser](https://platform.stjude.cloud/requests/diseases), a tabular view with a number of filtering options. Or you can select samples associated with specific diagnoses, gene expression, or gene mutations while exploring curated data from the donut and bubble charts on the [Pediatric Cancer portal (PeCan)](https://pecan.stjude.cloud/) homepage.
+    1. Data in St. Jude Cloud is grouped into [Data Access Units (DAUs)](../../glossary.md#data-access-unit), which usually correspond to large-scale sequencing initiatives at St. Jude. 
+    2. Individuals can [apply for access](../../glossary.md#data-access-agreement) to DAUs on a case-by-case basis for a specific amount of time (usually 1 year).
+    3. Access to data in a given DAU is assessed by the corresponding [Data Access Committee](../../glossary.md#data-access-committee) who reviews a variety of factors to grant access.
+    4. There are a number of terms of use and restrictions outlined in the [Data Access Agreement](https://platform.stjude.cloud/access_form). Everyone who will be working with the data must understand and agree to these terms.
 
 
-### Selecting Data in the Data Browser
 
-Go to the Data Browser [here](https://platform.stjude.cloud/requests/diseases), or navigate there from the St. Jude Cloud home page by clicking Access Data and then Explore Data.
+### Selecting Data
 
-From the Data Browser, you can view samples grouped by Diagnosis, Publication, or [Dataset](../../glossary.md#data-access-unit) by toggling the tabs above the table. Use the search bar to look for something specific. Search the publication tab by title or PubMed ID.
+There are three main ways to make your data selection through our [Data Browser](https://platform.stjude.cloud/requests/diseases). You can peruse our raw genomic data by diagnosis, publication, or study and use a number of filtering options to narrow down your search. You may also be directed to the Genomics Platform through another App to request specific samples. 
 
-![](../../images/guides/data/data-browser-tour-1.gif)
+You must have [created an account](../../create-an-account.md) and be logged in to make a data request. If you have not yet created an account or you are not logged in, the red *Request Data* button will say *Log In*.
 
-You can further refine your data selection by using the filters for sequencing type, sample type, file type, and tissue type on the left side bar. Filters of the same type apply using “OR” logic. Filters of different types apply using “AND” logic. Note that filtering is dynamic, so as you make selections the table will update to show all of the files we have that match your filters. Filters reset when you move from tab to tab.
+![](../../images/guides/data/request-data-select-data.gif)
 
-![](../../images/guides/data/data-browser-tour-2.gif)
+We ask that you review your selection and make sure that these are the [DAUs](../../glossary.md#data-access-unit) you would like to request. 
 
-The summary panel above the filters in the left side bar shows statistics about the data currently displayed in the table. As you can see in gifs above, this panel updates as you change what data is displayed by switching tabs, searching, filtering, or making selections.
+![](../../images/guides/data/request-data-select-DAUs.png)
 
 
-### Selecting Data via PeCan
 
-Go to the [PeCan homepage](https://pecan.stjude.cloud/). A guide to interpreting the donut and bubble chart visualizations on the homepage can be found [here](../../guides/portals/pecan).
+### Making the Request
 
-Using these visualizations along with ProteinPaint, you can:
+Now that you have selected your data, you will need to fill in some information to complete the request. From here, necessary information will be collected through a setup wizard. All of your progress will be automatically saved, and you can follow along with your progress on the left sidebar. 
 
-1. Add samples to your cart by diagnosis.
-<video controls="controls" width="640" height="400">
-    <source src="https://pecan.stjude.cloud/assets/video/pecan-cart-by-disease.mp4" type="video/mp4">
-</video>
-2. Add samples to your cart by gene mutation.
-<video controls="controls" width="640" height="400">
-    <source src="https://pecan.stjude.cloud/assets/video/pecan-cart-by-gene-mutation.mp4" type="video/mp4">
-</video>
-3. Add samples to your cart by gene expression.
-<video controls="controls" width="640" height="400" class="anything">
-    <source src="https://pecan.stjude.cloud/assets/video/pecan-cart-by-gene-expression.mp4" type="video/mp4">
-</video>
+This information will be collected whether you are requesting open-access or controlled-access data. It helps us structure your project folder correctly when we vend the data to you. 
 
-Clicking *Submit to SJCloud* from the PeCan checkout window will land you back in the Data Browser with your checked out data selected.
+![](../../images/guides/data/request-data-setup-wizard1.gif)
 
-## Requesting Data
-
-Once you have made your selections, click the red *Request Data* button at the bottom of the table. 
-
-![](../../images/guides/data/request-data-new-4.gif)
-
-!!! warning
-    You must have [created an account](../../create-an-account.md) and be logged in to make a data request. If you have not yet created an account or you are not logged in, the red *Request Data* button will say *Log In*. 
-
-On the Request Data page fill out your name, institution, and project name. Give your data request a project name that makes sense to you as this will be the name of the DNAnexus project to which the data will be vended.
-
-![](../../images/guides/data/request-data-new-1.png)
-
-Finally, click the green button. If you already have access to the data you selected in the browser, the button will read *Get Data Now*. If you are submitting a DAA and requesting data access, the button will read *Submit Request*.
 
 ### Applying for Data Access
+If you already have access to the data or are requesting open-access data, you will not be prompted to go through this section.
 
-If you are requesting access to a dataset you have not yet been approved for, you will see a section called **Controlled Access Data** on the Request Data page (see image above). Under this section, there is a bulleted list indicating the dataset(s) or [Data Access Unit(s)](../../glossary.md#data-access-unit) you must request access to by submitting a form called the [Data Access Agreememnt (DAA)](../../glossary.md#data-access-agreement). Please use this list to fill in the Datasets section of the DAA. For more information on filling out the DAA, see [Filling out the DAA](../../guides/forms/how-to-fill-out-DAA). **You must upload a DAA to proceed.**
+#### Signing the Data Access Agreement
 
-### Managing Your Access
+Every person who requests access to our controlled-access data must sign the [Data Access Agreememnt (DAA)](../../glossary.md#data-access-agreement). If you are located in the United States of America, you can opt in to completing the DAA through an electronic setup wizard. If you are not located in the USA, or would like to complete the form manually, you can follow our instructions on [Filling Out The Data Access Agreement](../../guides/forms/how-to-fill-out-DAA).
 
-Clicking the *Submit Request* from the Request Data page will direct you to the [Manage Data](https://platform.stjude.cloud/requests/manage) page where you can see the status of the data request you just made, as well the history of any of your previous data requests.
 
-![](../../images/guides/data/request-data-new-2.png)
+If you opt to do the process through the setup wizard, the necessary information will be collected and added automatically to your agreement. Once you have completed the setup wizard, the form will be sent to you and necessary signatories through email via [DocuSign](https://www.docusign.com). You can learn more about our electronic data access agreement process [here](../../guides/forms/how-to-fill-out-DAA.md#the-electronic-data-access-agreement-process). 
 
-If you already have access to the data that you requested, your data will be vended to you immediately. Otherwise, the status of your request will say *Pending* while your request is routed to the respective [Data Access Committee(s)](../../glossary.md#data-access-committee) for evaluation. Request approval typically takes a week or two if your data access agreement is correctly and completely filled out. You will receive automated emails from notifications@stjude.cloud at the time that your request is received and once your request is approved.
-
-!!! note 
+!!! tip 
     If you receive an email from us that your DAA is incomplete, you may edit your DAA and upload the revised copy using the 'Add a Form' button the on Manage Data page. 
 
-### Viewing Your Data
+#### Checking your Request Status 
+Once you start the Electronic Data Access Agreement process, you will have a draft autosaved for you on your [Manage Data](https://platform.stjude.cloud/requests/manage) page, accessible at any time.
+    ![](../../images/guides/forms/docs-manage-data-page-labelled.png)
 
-From the Manage Data page, you can click on a request to navigate to the DNAnexus platform where a project will have been created with the project name that you entered on the Request Data page. Once your request is approved, the data will be vended to your DNAnexus account and will be accessible in this project. You can also follow the link in the email from notifications@stjude.cloud to view your DNAnexus project page. When the data is vended, the directory structure will typically look something like:
+!!! example "Pending Request Types"
+    1. Request 1 is an Open Draft, meaning the requestor has not finished the setup wizard, and that the DocuSign envelope has not been sent to any of the signatories. 
+
+    2. Request 2, listed in the Projects section, has been sent to the signatories, but has not been completed by all of them. This status will look like the Request 3 when all of the signatories sign the document and it is ready to be sent to the Data Access Committee(s). 
+
+    3. Request 3 is pending approval from the Data Access Committee(s), and the status will change from Pending to either Approved or Rejected, based on their decision. All submitted manual-process Data Access Agreements will show up in your Manage Data page like Request 3. 
+
+Request approval typically takes a week or two if your data access agreement is correctly and completely filled out. You will receive automated emails from notifications@stjude.cloud at the time that your request is approved.
+
+### Accessing Your Data
+
+From the Manage Data page, you can click on a request to navigate to the DNAnexus platform where a project will have been created with the project name that you entered through the setup wizard. Once your request is approved, the data will be vended to your DNAnexus project folder and will be accessible to you. You can also follow the link in the approval email from notifications@stjude.cloud to view your DNAnexus project folder. When the data is vended, the directory structure will typically look something like the following:
 
 ```
 project_space/
@@ -106,3 +80,8 @@ project_space/
 
 The `SAMPLE_INFO.txt` file provides all the [metadata](../../guides/data/about-our-data.md#metadata) associated with the request, and the restricted folder contains all the data for which you were approved separated by file type. 
  
+!!! info
+    If you would like to download the data to local storage, there are
+    extra steps you'll need to follow such as [getting additional signatures](../../guides/forms/how-to-fill-out-DAA#data-download-permission)
+    on your data access agreement. We recommend that you work with the data
+    in the cloud if it's feasible; the data provided by St. Jude is free, the compute charges are reasonable, and working in the cloud helps to eliminate the long, error-prone downloading process. Porting your tools to be run in the cloud is easy, as well. We recommend you follow [this guide](../../guides/data/creating-a-cloud-app) to get started.

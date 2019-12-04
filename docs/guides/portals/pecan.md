@@ -81,3 +81,20 @@ There are several more advanced customizations you can leverage with ProteinPain
 ## PeCan Pie
 PeCan Pie documentation can be found [here](../tools/pecan-pie).
 
+
+## Requesting Raw Genomics through PeCan
+
+1. Add samples to your cart by diagnosis.
+<video controls="controls" width="640" height="400">
+    <source src="https://pecan.stjude.cloud/assets/video/pecan-cart-by-disease.mp4" type="video/mp4">
+</video>
+2. Add samples to your cart by gene mutation.
+<video controls="controls" width="640" height="400">
+    <source src="https://pecan.stjude.cloud/assets/video/pecan-cart-by-gene-mutation.mp4" type="video/mp4">
+</video>
+3. Add samples to your cart by gene expression.
+<video controls="controls" width="640" height="400" class="anything">
+    <source src="https://pecan.stjude.cloud/assets/video/pecan-cart-by-gene-expression.mp4" type="video/mp4">
+</video>
+
+Clicking *Submit to SJCloud* from the PeCan checkout window will land you back in the Data Browser with your checked out data selected.

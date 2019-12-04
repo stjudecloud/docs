@@ -2,7 +2,8 @@
 
 The [Data Access Agreement (DAA)](../../glossary.md#data-access-agreement) is a legal document used by St. Jude Cloud to verify the identity and intent of those requesting to access St. Jude Children’s Research Hospital’s genomics data. The document binds you and your institution in agreement to protect, use and share the data appropriately. 
 
-Upon selection of your desired data through the data browser or through the PeCan app, you will be prompted to complete a Data Access Agreement if you have not already been approved for access to the selected datasets. In order to simplify the data access request process, an [electronic data access agreement](#the-electronic-data-access-agreement-process) is available for US residents only.
+Upon selection of your desired data, you will be prompted to complete a Data Access Agreement if you have not already been approved for access to the selected datasets. In order to simplify the data access request process, an [electronic data access agreement](#the-electronic-data-access-agreement-process) is available for US residents only.
+
 
 If you reside outside of the US, you must fill out the Data Access Agreement manually. You may click [here](../../files/DAA_v4_10-1-2019.pdf) to download the latest version of the DAA. Please read the first 6 pages carefully, which consist of terms and conditions that you and your institution must agree to in order to access any data on St. Jude Cloud. Then, follow the directions starting at [Data Access Units](#data-access-units) to ensure that you have correctly filled out the DAA. Please note that there are [two additional required sections](#downloading-data) if you intend to download data to your local infrastructure.
 
@@ -19,7 +20,6 @@ A St. Jude Cloud **Data Access Unit (DAU)** is a grouping of data that typically
 On page 7 of the DAA, you must mark all Data Access Units for which you are applying. The DAU(s) associated to the data you requested are listed in the Controlled Access Data section, directly above the Download Data Access Agreement button. This can be found on the Request Data webpage which immediately follows your selection of data from the data browser. 
 
 ![](../../images/guides/forms/docs-DAU-short.png)
-
 
 If you mark the incorrect datasets, you will be required to resubmit your agreement with the correct datasets marked. When completing the DAA electronically using the setup wizard, the DAU options will be automatically preselected for you. 
 
@@ -59,8 +59,6 @@ Page 12 of the agreement must be filled out and signed by your Institutional or 
 On page 13 of the DAA, your institution’s Information Security Officer's signature is required *if and only if* you intend to [download](#downloading-data) a local copy of the data (note: you must also initial in the line below the DAU selection). This individual may go by varying job titles, such as Information Director or Chief Information Security Officer, but is the individual responsible for information security at your institution. This signature verifies that the data, once downloaded, will remain protected by your institution's data security protocols.
     ![](../../images/guides/forms/docs-ISO.png)
 
-
-
 ### Uploading A Revised DAA
 If your DAA is incomplete (for example you missed a required signature or neglected to check the box next to a dataset for which you requested data), you will be contacted by a member of the St. Jude Cloud team. Once you have made the required edits, you can reupload a revised DAA through the [Manage Data page](https://platform.stjude.cloud/requests/manage) by clicking on the *Add a Form* button.
 
@@ -73,16 +71,7 @@ After submitting the required information, the Data Access Agreement will be sen
 
 Once all signatures have been collected, your data access request will be submitted to St. Jude Cloud. A St. Jude Cloud administrator will forward your Data Access Agreement and intended use to the appropriate [Data Access Committee(s)](../../glossary.md#data-access-committee) for approval. Upon approval from the DAC(s), you will receive an email with a link to the approved data, which will be hosted through DNAnexus.  
 
-### Checking your Request Status 
-Once you start the Electronic Data Access Agreement process, you will have a draft autosaved for you on your [Manage Data](https://platform.stjude.cloud/requests/manage) page, accessible at any time.
-    ![](../../images/guides/forms/docs-manage-data-page-labelled.png)
-
-Request 1 is an Open Draft, meaning the requestor has not finished the setup wizard, and that the DocuSign envelope has not been sent to any of the signatories. 
-
-Request 2, listed in the Projects section, has been sent to the signatories, but has not been completed by all of them. This status will look like the Request 3 when all of the signatories sign the document and it is ready to be sent to the Data Access Committee(s). 
-
-Request 3 is pending approval from the Data Access Committee(s), and the status will change from Pending to either Approved or Rejected, based on their decision. You will also receive an email with their decision. All submitted manual-process Data Access Agreements will show up in your Manage Data page like Request 3. 
-
+Learn how to [check your Request Status](../data/data-request.md#checking-your-request-status)  
 
 
 ### Similar Topics
