@@ -14,18 +14,18 @@ Sign up [here](https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-subscribe
 
 You can apply many different capabilities of St. Jude Cloud to your research, such as:
 
-* Explore the [raw genomics data](https://platform.stjude.cloud/requests/diseases) we currently offer. You can browse by diagnosis, publication, or curated dataset while applying a number of different filters. For more information, see our [data request guide](./guides/data/data-request.md).
-* Run your tools on *our* data by [requesting data](./guides/data/data-request.md) and packaging your tools in a secure cloud environment. See this [guide](./guides/data/creating-a-cloud-app.md) for an example.
-* Run our in house analysis workflows on *your* data by [moving your data](./guides/data/data-transfer-app.md) to the cloud and selecting a [workflow](#analysis-workflows) to run. See this [guide](./guides/tools/rapid-rnaseq.md) for an example. 
+* Explore the [raw genomics data](https://platform.stjude.cloud/requests/diseases) we currently offer. You can browse by diagnosis, publication, or curated dataset while applying a number of different filters. For more information, see our [data request guide](./guides/genomics-platform/requesting-data/data-request.md).
+* Run your tools on *our* data by [requesting data](./guides/genomics-platform/requesting-data/data-request.md) and packaging your tools in a secure cloud environment. See this [guide](./guides/genomics-platform/analyzing-data/creating-a-cloud-app.md) for an example.
+* Run our in house analysis workflows on *your* data by [moving your data](./guides/genomics-platform/managing-data/data-transfer-app.md) to the cloud and selecting a [workflow](#analysis-workflows) to run. See this [guide](./guides/genomics-platform/analyzing-data/rapid-rnaseq.md) for an example. 
 * Explore St. Jude datasets through interactive visualizations that we have packaged for the community. For example, visit [PeCan](https://pecan.stjude.cloud) to visually investigate pediatric cancer mutation data.
-* Create manuscript quality figures with *your* data to use in publications or to host on your website with [ProteinPaint](https://pecan.stjude.cloud/proteinpaint/TP53) or [GenomePaint](https://genomepaint.stjude.cloud/). See the [ProteinPaint](./guides/portals/pecan.md#proteinpaint) and [GenomePaint](./guides/portals/genome-paint.md) doc pages for help.
+* Create manuscript quality figures with *your* data to use in publications or to host on your website with [ProteinPaint](https://pecan.stjude.cloud/proteinpaint/TP53) or [GenomePaint](https://genomepaint.stjude.cloud/). See the [ProteinPaint](./guides/visualization-community/protein-paint.md) and [GenomePaint](./guides/visualization-community/genome-paint.md) doc pages for help.
 
 !!! note
     Please note that while it is free to receive and store our data in St. Jude Cloud, there are [compute and storage fees associated with working in the cloud, as well as egress fees for downloading our data](faq.md#will-i-be-charged-for-using-st-jude-cloud). 
 
 ## Datasets
 
-The following projects currently distribute their data through St. Jude Cloud. Click [here](./guides/data/about-our-data.md#data-access-units) for more information about the projects listed below.
+The following projects currently distribute their data through St. Jude Cloud. Click [here](./guides/genomics-platform/requesting-data/about-our-data.md#data-access-units) for more information about the projects listed below.
 
 * Pediatric Cancer Genome Project (PCGP)
 * St. Jude Lifetime (SJLIFE)

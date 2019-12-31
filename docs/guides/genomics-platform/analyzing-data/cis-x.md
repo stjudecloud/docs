@@ -84,10 +84,8 @@ the tool already exists. Click "Launch Tool" to start a new analysis.
 ### Input file configuration
 
 cis-X requires six tab-delimited input files to be prepared in advance. These
-files can be uploaded via the [data transfer application] or [command line].
+files can be uploaded via the [data transfer application](../managing-data/data-transfer-app.md) or [command line](../managing-data/command-line.md).
 
-[data transfer application]: ../data/data-transfer-app.md
-[command line]: ../data/command-line.md
 
 !!! note
     Even though CNV/LOH regions, somatic SNV/indels, somatic SVs, and
@@ -252,11 +250,8 @@ This file can be generating by CONSERTING.
 
 cis-X requires a total of eight files to be uploaded, as described in "[Input
 file configuration]". These files can be uploaded via the [data transfer
-application] or [command line].
+application](../managing-data/data-transfer-app.md) or [command line](../managing-data/command-line.md).
 
-[Input file configuration]: #input-file-configuration
-[data transfer application]: ../data/data-transfer-app.md
-[command line]: ../data/command-line.md
 
 ## Running the tool
 

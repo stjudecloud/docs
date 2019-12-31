@@ -53,7 +53,7 @@ the "Start" button in the left hand pane. This creates a cloud workspace
 in DNAnexus with the same name as the tool. After this, you will be able 
 to upload your input files to that workspace.
 
-![](../../images/guides/tools/chipseq/click-start.gif)
+![](../../../images/guides/tools/chipseq/click-start.gif)
 
 !!! note
     If you can't see the "Start" button, one of these two scenarios is likely the case:
@@ -73,8 +73,8 @@ to upload your input files to that workspace.
 
 The ChIP-Seq Peak Caller takes Gzipped FastQ files generated from an
 IP experiment as input. You can upload your input FastQ files by
-using the [data transfer application](../data/data-transfer-app.md)
-or by uploading them through [the command line](../data/command-line.md).
+using the [data transfer application](../managing-data/data-transfer-app.md)
+or by uploading them through [the command line](../managing-data/command-line.md).
 Both of the guides linked here will contain more details on how to upload
 data using that method, so we defer to those guides here.
 
@@ -85,7 +85,7 @@ data using that method, so we defer to those guides here.
     have the app, you can click "Open app" to open the app with the tool's cloud 
     workspace already opened and ready to drag-and-drop files into it!
 
-    For more information, check out the [data transfer application](../data/data-transfer-app.md) guide.
+    For more information, check out the [data transfer application](../managing-data/data-transfer-app.md) guide.
 
 ## Running the tool
 
@@ -98,7 +98,7 @@ or just a case sample. This will determine which preset you should
 click in this dropdown. There are various other parameters that you can 
 set, but they are covered in further sections of this guide.
 
-![](../../images/guides/tools/chipseq/launch-tool.gif)
+![](../../../images/guides/tools/chipseq/launch-tool.gif)
 
 ### Broad vs. narrow peak calling
 
@@ -146,7 +146,7 @@ There are a number of other parameters that can be customized. To
 see the options available, click the gear cog next to the 
 "Parameter Wrapper" substep.
 
-![](../../images/guides/tools/chipseq/change-parameters.gif)
+![](../../../images/guides/tools/chipseq/change-parameters.gif)
 
 The following are the parameters that can be set, a short
 description of each parameter, and an example value. If you
@@ -181,7 +181,7 @@ clicking on the `ChIP Reads` and `Control Reads` slots and
 selecting the respective files. If you are not doing a case/control
 run, you only need to hook up the case sample.
 
-![](../../images/guides/tools/chipseq/hookup-inputs.gif)
+![](../../../images/guides/tools/chipseq/hookup-inputs.gif)
 
 ### Starting the workflow
 
@@ -189,7 +189,7 @@ Once your input files are hooked up, you should be able to start the workflow
 by clicking the "Run as Analysis..." button in the top right hand corner
 of the workflow dialog.
 
-![](../../images/guides/tools/chipseq/run-analysis.gif)
+![](../../../images/guides/tools/chipseq/run-analysis.gif)
 
 !!! tip 
     If you cannot click this button, please ensure that:
@@ -209,14 +209,14 @@ Next, click "View Results" then select the "View Running Jobs" option.
 You will be redirected to the job monitoring page. Each job you kicked off
 gets one row in this table.
 
-![](../../images/guides/tools/chipseq/monitoring-jobs.gif) 
+![](../../../images/guides/tools/chipseq/monitoring-jobs.gif) 
 
 You can click the "+" on any of the runs to check 
 the status of individual steps of the ChIP-Seq pipeline.
 Other information, such as time, cost of individual steps in the pipeline, 
 and the job logs can be accessed by clicking around the sub-items.
 
-![](../../images/guides/tools/chipseq/job-detailed-view.gif) 
+![](../../../images/guides/tools/chipseq/job-detailed-view.gif) 
 
 !!! tip 
     Power users can refer to the [DNAnexus Monitoring Executions Documentation](https://documentation.dnanexus.com/user/running-apps-and-workflows/monitoring-executions) for advanced capabilities for monitoring jobs.
@@ -236,7 +236,7 @@ filesystem on your computer, and you can do many common operations such as delet
 renaming, and moving files. To access ChIP-Seq results, you should click on the 
 `Results` folder, then select the output folder name you gave in the [selecting parameters](#selecting-parameters) part of the guide.
 
-![](../../images/guides/tools/chipseq/view-results-files.gif)
+![](../../../images/guides/tools/chipseq/view-results-files.gif)
 
 ### Interpreting results
 
@@ -244,7 +244,7 @@ For the ChIP-Seq pipeline, every pipeline run outputs a `README.doc` file
 which contains the latest information on which results are included.
 You can refer to that file for the most up to date information on raw outputs.
 
-![](../../images/guides/tools/chipseq/click-readme.gif)
+![](../../../images/guides/tools/chipseq/click-readme.gif)
 
 
 ## Frequently asked questions

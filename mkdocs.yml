@@ -15,31 +15,45 @@ pages:
   - 'Genomics Platform': 
       - 'Requesting Data':
           - 'About Our Data': 'guides/genomics-platform/requesting-data/about-our-data.md'
-          - 'Create An Account': 'guides/genomics-platform/requesting-data/create-an-account.md'
+          - 'Creating An Account': 'guides/genomics-platform/requesting-data/create-an-account.md'
           - 'Making a Data Request': 'guides/genomics-platform/requesting-data/data-request.md'
-          - 'Glossary': 'guides/genomics-platform/requesting-data/glossary.md'
           - 'Filling out a Data Access Agreement': 'guides/genomics-platform/requesting-data/how-to-fill-out-DAA.md' 
+          - 'About our Decision Process & Terminology': 'guides/genomics-platform/requesting-data/glossary.md'
       - 'Managing Data':
           - 'Working with Our Data': 'guides/genomics-platform/managing-data/working-with-our-data.md'
           - 'Data Transfer Application': 'guides/genomics-platform/managing-data/data-transfer-app.md'
-          - 'Filling out an Extension Addendum': 'guides/genomics-platform/managing-data/how-to-fill-out-Extension.md'
+          - 'Uploading/Downloading Data': 'guides/genomics-platform/managing-data/command-line.md'
+          - 'Renewing your Data Access': 'guides/genomics-platform/managing-data/how-to-fill-out-Extension.md'
       - 'Analyzing Data':
-          - 'Creating a Cloud App': 'guides/genomics-platform/analyzing-data/creating-a-cloud-app.md'
-          - 'Command Line Interaction': 'guides/genomics-platform/analyzing-data/command-line.md'
-  - 'Tool Guides':
-      - 'Pecan PIE': 'guides/tools/pecan-pie.md'
-      - 'NeoepitopePred': 'guides/tools/neoepitope.md'
-      - 'ChIP-Seq Peak Calling': 'guides/tools/chipseq.md'
-      - 'Rapid RNA-Seq Fusion Detection': 'guides/tools/rapid-rnaseq.md'
-      - 'WARDEN Differential Expression Analysis': 'guides/tools/warden.md'
-      - 'Mutational Signatures': 'guides/tools/mutational-signatures.md'
-      - '': 'guides/tools/cis-x.md'
-  - 'Visualization Guides':
-      - 'PeCan Data Portal' : 'guides/portals/pecan.md'
-      - 'Genome Paint' : 'guides/portals/genome-paint.md'
-      - 'Sickle Cell Genomics Portal' : 'guides/portals/sickle-cell.md'
-  - 'Citing St. Jude Cloud': 'citing-stjude-cloud.md'
+          - 'SJ Cloud Workflows':
+              - 'NeoepitopePred': 'guides/genomics-platform/analyzing-data/neoepitope.md'
+              - 'ChIP-Seq Peak Calling': 'guides/genomics-platform/analyzing-data/chipseq.md'
+              - 'Rapid RNA-Seq Fusion Detection': 'guides/genomics-platform/analyzing-data/rapid-rnaseq.md'
+              - 'WARDEN Differential Expression Analysis': 'guides/genomics-platform/analyzing-data/warden.md'
+              - 'Mutational Signatures': 'guides/genomics-platform/analyzing-data/mutational-signatures.md'
+              - 'Cis-X': 'guides/genomics-platform/analyzing-data/cis-x.md'
+              - 'M2A': 'guides/genomics-platform/analyzing-data/m2a.md'
+              - 'XenoCP': 'guides/genomics-platform/analyzing-data/xeno-cp.md'
+              - 'RNA Indel': 'guides/genomics-platform/analyzing-data/rna-indel.md'
+              - 'FKPM': 'guides/genomics-platform/analyzing-data/fkpm.md'
+          - 'Creating your own Workflow': 'guides/genomics-platform/analyzing-data/creating-a-cloud-app.md'
+  - 'PeCan':
+      - 'PeCan homepage': 'guides/applications/PeCan/pecan.md'
+      - 'Pecan PIE': 'guides/applications/PeCan/pecan-pie.md'
+  - 'Model Systems':
+      - 'CSTN': 'guides/applications/model-systems/cstn.md'
+      - 'PBTP': 'guides/applications/model-systems/pbtp.md'
+  - 'Visualization Community':
+      - 'About': 'guides/visualization-community/viz-com-about.md'
+      - 'ProteinPaint' : 'guides/visualization-community/protein-paint.md'
+      - 'Genome Paint' : 'guides/visualization-community/genome-paint.md'
+      - 'SJ Charts': 'guides/visualization-community/sj-charts.md'
+      - 't-SNE Charts': 'guides/visualization-community/t-sne-charts.md'
+  - 'Studies':
+      - 'About/Common Features': 'guides/studies-about.md'
+      - '' : 'guides/portals/sickle-cell.md'
   - 'Frequently Asked Questions': 'faq.md'
+  - 'Citing St. Jude Cloud': 'citing-stjude-cloud.md'
 
 # Repository
 repo_name: 'stjudecloud/docs'

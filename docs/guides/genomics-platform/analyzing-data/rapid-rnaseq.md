@@ -127,7 +127,7 @@ the "Start" button in the left hand pane. This creates a cloud workspace
 in DNAnexus with the same name as the tool. After this, you will be able 
 to upload your input files to that workspace.
 
-![](../../images/guides/tools/rapid-rnaseq/click-start.gif)
+![](../../../images/guides/tools/rapid-rnaseq/click-start.gif)
 
 !!! note
     If you can't see the "Start" button, one of these two scenarios is likely the case:
@@ -147,8 +147,8 @@ to upload your input files to that workspace.
 
 The Rapid RNA-Seq pipeline takes either a paired set of Gzipped FastQ files or 
 a GRCh37-lite aligned BAM from human RNA-Seq. You can upload your input file(s)
-using the [data transfer application](../data/data-transfer-app.md)
-or by uploading them through [the command line](../data/command-line.md).
+using the [data transfer application](../managing-data/data-transfer-app.md)
+or by uploading them through [the command line](../managing-data/command-line.md).
 Both of the guides linked here will contain more details on how to upload
 data using that method, so we defer to those guides here.
 
@@ -157,7 +157,7 @@ data using that method, so we defer to those guides here.
 
 Once you've uploaded data to your cloud workspace, click "Launch Tool" on the [tool's landing page](https://platform.stjude.cloud/tools/rapid_rna-seq). A dropdown will present the different presets for running the workflow. Here, you can select whether you wish to start with FastQ files or a BAM file.
 
-![](../../images/guides/tools/rapid-rnaseq/launch-tool.gif)
+![](../../../images/guides/tools/rapid-rnaseq/launch-tool.gif)
 
 ### Hooking up inputs
 
@@ -168,7 +168,7 @@ hook up the inputs by clicking on the `Fastq/R1` and `Fastq/R2`
 slots and selecting the respective files. If you are using 
 the BAM-based workflow, the process is similar.
 
-![](../../images/guides/tools/rapid-rnaseq/hookup-inputs.gif)
+![](../../../images/guides/tools/rapid-rnaseq/hookup-inputs.gif)
 
 ### Starting the workflow
 
@@ -176,7 +176,7 @@ Once your input files are hooked up, you should be able to start the workflow
 by clicking the "Run as Analysis..." button in the top right hand corner
 of the workflow dialog.
 
-![](../../images/guides/tools/rapid-rnaseq/run-analysis.gif)
+![](../../../images/guides/tools/rapid-rnaseq/run-analysis.gif)
 
 !!! tip
     If you cannot click this button, please ensure that all of the inputs are correctly hooked up (see [hooking up inputs](#hooking-up-inputs)).
@@ -193,14 +193,14 @@ Next, click "View Results" then select the "View Running Jobs" option.
 You will be redirected to the job monitoring page. Each job you kicked off
 gets one row in this table.
 
-![](../../images/guides/tools/rapid-rnaseq/monitoring-jobs.gif) 
+![](../../../images/guides/tools/rapid-rnaseq/monitoring-jobs.gif) 
 
 You can click the "+" on any of the runs to check 
 the status of individual steps of the Rapid RNA-Seq pipeline.
 Other information, such as time, cost of individual steps in the pipeline, 
 and even viewing the job logs can accessed by clicking around the sub-items.
 
-![](../../images/guides/tools/rapid-rnaseq/job-detailed-view.gif) 
+![](../../../images/guides/tools/rapid-rnaseq/job-detailed-view.gif) 
 
 !!! tip 
     Power users can refer to the [DNAnexus Monitoring Executions Documentation](https://documentation.dnanexus.com/user/running-apps-and-workflows/monitoring-executions) for advanced capabilities for monitoring jobs.
@@ -222,7 +222,7 @@ be taken to the filesystem view your cloud workspace. This is similar to your th
 filesystem on your computer, and you can do many common operations such as deleting,
 renaming, and moving files.
 
-![](../../images/guides/tools/rapid-rnaseq/rapid-rna-results.png) 
+![](../../../images/guides/tools/rapid-rnaseq/rapid-rna-results.png) 
 
 ### Navigating Results
 
@@ -234,14 +234,14 @@ description page is
 see a screen similar to the one in the screenshot below. In the left
 hand pane, select "View Results Files".
 
-![Click "View Results Files"](../../images/guides/tools/common/raw-results.png)
+![Click "View Results Files"](../../../images/guides/tools/common/raw-results.png)
 
 You should now be in the tool's workspace with access to files that you
 uploaded and results files that are generated. How/where the result
 files are generated are specific to each pipeline. Please refer to your
 individual pipeline's documentation on where the output files are kept.
 
-![](../../images/guides/tools/common/raw-results-success.png)
+![](../../../images/guides/tools/common/raw-results-success.png)
 
 #### Custom visualization results
 
@@ -251,11 +251,11 @@ description page is
 see a screen similar to the one in the screenshot below. In the left
 hand pane, select "Visualize Results".
 
-![Click "Visualize Results"](../../images/guides/tools/common/visualize-results.png)
+![Click "Visualize Results"](../../../images/guides/tools/common/visualize-results.png)
 
 You should now see a list of visualization files like the ones shown below.
 
-![](../../images/guides/tools/common/visualize-results-success.png)
+![](../../../images/guides/tools/common/visualize-results-success.png)
 
 
 ### Interpreting results

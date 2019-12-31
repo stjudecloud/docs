@@ -27,7 +27,7 @@ family history and related literature. Classification tags can be
 assigned to curated data enabling automated calculation of pathogenicity
 rating based on ACMG/AMP 2015 guidelines.
 
-See [<i class="material-icons material-icons-sjcloud-custom">file_download</i> PowerPoint slides](../../files/guides/tools/pecan-pie/pecanpie_ASHG_2017.pptx)
+See [<i class="material-icons material-icons-sjcloud-custom">file_download</i> PowerPoint slides](../../../files/guides/tools/pecan-pie/pecanpie_ASHG_2017.pptx)
 presented at the ASHG 2017 annual meeting (note that some of this
 information is out of date, various improvements have been made since
 then).
@@ -36,7 +36,7 @@ Go to <https://pecan.stjude.cloud/pie> to get started!
 
 ## Overview
 
-![](../../images/guides/tools/pecan-pie/Figure1.png)
+![](../../../images/guides/tools/pecan-pie/Figure1.png)
 
 An overview of the Pecan PIE workflow:
 
@@ -109,7 +109,7 @@ When your job is complete you will be taken to an overview page where
 you can browse your results and examine a detailed results page for each
 variant.
 
-![](../../images/guides/tools/pecan-pie/results-table.gif)
+![](../../../images/guides/tools/pecan-pie/results-table.gif)
 
 The variants in the results can be filtered by:
 
@@ -131,7 +131,7 @@ disease predisposition genes. Germline medals are only assigned for
 novel variants or those present in the ExAC (ex-TCGA) database with a
 MAF no greater than 0.1% (0.001 expressed fractionally).
 
-![](../../images/guides/tools/pecan-pie/Figure2.png)
+![](../../../images/guides/tools/pecan-pie/Figure2.png)
 
 * **Gold medals** are assigned to truncations in tumor suppressor genes,
 hotspots derived from the COSMIC database, as well as perfect matches to
@@ -146,7 +146,7 @@ damage-prediction algorithms. Variants having an imperfect match to a
 database (i.e. different variants at the same genomic position or codon)
 typically receive a lesser medal.
 
-A summary graphic can be found in slide 4 of the ASHG 2017 presentation ([download here](../../files/guides/tools/pecan-pie/pecanpie_ASHG_2017.pptx)). 
+A summary graphic can be found in slide 4 of the ASHG 2017 presentation ([download here](../../../files/guides/tools/pecan-pie/pecanpie_ASHG_2017.pptx)). 
 For additional details see [Zhang et al., NEJM
 2015](http://www.nejm.org/doi/full/10.1056/NEJMoa1508054#t=article)
 (supplementary appendix pp. 7-10).
@@ -268,7 +268,7 @@ There are two methods of running pipelines on DNAnexus:
 2.  **Command line.** Jobs may also be invoked via the `dx` command line
     client. Command-line use allows submitting cloud jobs without
     interacting with a GUI, and so supports scripting and easier
-    integration with local workflows. See [this section](../data/command-line.md#installation)
+    integration with local workflows. See [this section](../../genomics-platform/managing-data/command-line.md#installation)
     for information on how to get set up with the `dx-toolkit`.
 
 !!! note
@@ -401,7 +401,7 @@ Pecan PIE only works for human data.
 **Q. What genes are on the curated gene list?**
 
 A. The list consists of disease-related genes, both cancer and
-non-cancer, see the [<i class="material-icons material-icons-sjcloud-custom">file_download</i> Excel spreadsheet](../../files/guides/tools/pecan-pie/table_S1_gene_list_5_categories_v2.xlsx)
+non-cancer, see the [<i class="material-icons material-icons-sjcloud-custom">file_download</i> Excel spreadsheet](../../../files/guides/tools/pecan-pie/table_S1_gene_list_5_categories_v2.xlsx)
 for details. Filtering the source variants to a target list of genes
 reduces the processing burden on the system.
 

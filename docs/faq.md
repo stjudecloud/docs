@@ -68,17 +68,16 @@ be charged for anything with the exception of the following actions:
 
 *  You will be charged for any *derivative* files stored on the St. Jude Cloud, such as results files obtained through running analyses workflows.
 * There is a small monthly storage fee associated for any of your own data you upload to the cloud.
-* If you run any of our analysis workflows (such as Rapid RNA-Seq, WARDEN, etc.) or your own workflows that you have uploaded and packaged into the cloud, you will be charged for the
-  compute resources used in producing the results. Soon we hope to be able to sponsor all compute costs associated with running our St. Jude Cloud workflows.
+* If you run any of our analysis workflows (such as Rapid RNA-Seq, WARDEN, etc.) or your own workflows that you have uploaded and packaged into the cloud, you will be charged for the compute resources used in producing the results. Soon we hope to be able to sponsor all compute costs associated with running our St. Jude Cloud workflows.
 
 You can find DNAnexus's specific resource-based pricing table by navigating to the Billing Account tab of your profile page on DNAnexus and then clicking the green 'Add Billing Info' button next to your name.
 
 ### How can I set up billing for my lab?
-Billing setup is different based on whether you are an internal user (you work at St. Jude) or an external user. External users refer to the [Create an Account page](create-an-account.md) for instructions. Internal users search 'Bioinformatics self-service on St. Jude Cloud' from the [intranet home page](https://home.stjude.org/Pages/default.aspx) for instructions. 
+Billing setup is different based on whether you are an internal user (you work at St. Jude) or an external user. External users refer to the [Create an Account page](./guides/genomics-platform/requesting-data/create-an-account.md#billing-setup) for instructions. Internal users search 'Bioinformatics self-service on St. Jude Cloud' from the [intranet home page](https://home.stjude.org/Pages/default.aspx) for instructions. 
 
 
 ### Why do I need to sign the Data Access Agreement (DAA)?
-Although the [DAA](glossary.md#data-access-agreement) serves many purposes, the terms included in the data access
+Although the [DAA](./guides/genomics-platform/requesting-data/glossary.md#data-access-agreement) serves many purposes, the terms included in the data access
 agreement are ultimately in place to protect our patients. We take
 patient security very seriously, and we require that requesters are
 committed to protecting that privacy to the fullest extent.
@@ -90,31 +89,31 @@ As a rule, we do not negotiate the terms of the data access agreement unless ter
 No. If we provide an editable format, we cannot ensure that the legal document has not been changed. Since we do not accept different versions of this agreement, we unfortunately cannot provide the document in Word format.
 
 ### Where can I find the latest version of the Data Access Agreement (DAA)?
-We keep [our site](./guides/data/data-request.md) up to date with the latest version on the Data Access Agreement for you to download, or you can download a copy
+We keep [our site](./guides/genomics-platform/requesting-data/data-request.md) up to date with the latest version on the Data Access Agreement for you to download, or you can download a copy
 [here](./files/DAA_v4_10-1-2019.pdf).
 
 ### Where do I submit the Data Access Agreement (DAA)?
-You can submit your Data Access Agreement in the drag and drop box on the [last step of the data request process](./guides/data/data-request.md#requesting-data).
+You can submit your Data Access Agreement in the drag and drop box on the [last step of the data request process](./guides/genomics-platform/requesting-data/data-request.md#requesting-data).
 
 ### What if I did not fill out the Data Download Permission section of the original DAA, but now I want to download data?
-Since this would be a change in terms from the original agreement, you would need to fill out a new DAA (including the [Data Download Permission section](./guides/forms/how-to-fill-out-DAA.md#data-download-permission) for any datasets you want to download.
+Since this would be a change in terms from the original agreement, you would need to fill out a new DAA (including the [Data Download Permission section](./guides/genomics-platform/requesting-data/how-to-fill-out-DAA.md#the-data-access-agreement) for any datasets you want to download.
 
 
 ### What clinical information is available about samples in St. Jude Cloud?
-Currently the only [clinical information](./guides/data/about-our-data.md#metadata) we provide is age at diagnosis, diagnosis, ethnicity, sex, race, and oncotree disease code. Unfortunately, even if we do collect other information, such as other supportive oncology data, it is not available on the cloud at this time. We are working towards being able to provide additional clinical annotations in the future.
+Currently the only [clinical information](./guides/genomics-platform/requesting-data/about-our-data.md#metadata) we provide is age at diagnosis, diagnosis, ethnicity, sex, race, and oncotree disease code. Unfortunately, even if we do collect other information, such as other supportive oncology data, it is not available on the cloud at this time. We are working towards being able to provide additional clinical annotations in the future.
 
 ### Can I get a copy of IRB consent forms?
 Unfortunately, we will not be able to share blank consent forms at the current time. We have chosen to remain consistent with the requirements of the other major genomic data repositories in that (1) there is an internal vetting process by the St. Jude IRB to ensure samples may be shared with the research community, but (2) we do not share the informed consents with data requesters. It is important to remember that St. Jude Cloud is the platform upon which all St. Jude data is shared. This means that there are more than 100 consent forms + revisions for the various studies across St. Jude. Thus, there is an additional logistical barrier in that we simply don't have the bandwidth to pull together a packet containing all of this information for each requestor.
 
 ### Can I request FASTQ files on St. Jude Cloud?
-We do not share FASTQ formats, but several tools exist that you can leverage to revert BAM to FASTQ files. (We recommend using Picard SamToFastq to revert BAM files.) You can efficiently revert BAMs to FASTQs in the cloud by wrapping the conversion tool of your choice into a [Cloud App](./guides/data/creating-a-cloud-app.md).
+We do not share FASTQ formats, but several tools exist that you can leverage to revert BAM to FASTQ files. (We recommend using Picard SamToFastq to revert BAM files.) You can efficiently revert BAMs to FASTQs in the cloud by wrapping the conversion tool of your choice into a [Cloud App](./guides/genomics-platform/analyzing-data/creating-a-cloud-app.md).
 
 
 ### How can I explore and manipulate data files stored on the cloud without downloading the files to my local machine?
-You can quickly and easily interact with data files using the DNAnexus cloud workstation app. See [this guide](https://documentation.dnanexus.com/getting-started/tutorials/cloud-workstations#run-the-workstation-app) to help you setup and run the app. Note that if you are doing any type of large-scale, multi-sample analysis, especially if you plan to repeat the analysis or want to run in parallel, you will want to [write your own cloud app](./guides/data/creating-a-cloud-app.md) rather than use the cloud workstation app.
+You can quickly and easily interact with data files using the DNAnexus cloud workstation app. See [this guide](https://documentation.dnanexus.com/getting-started/tutorials/cloud-workstations#run-the-workstation-app) to help you setup and run the app. Note that if you are doing any type of large-scale, multi-sample analysis, especially if you plan to repeat the analysis or want to run in parallel, you will want to [write your own cloud app](./guides/genomics-platform/analyzing-data/creating-a-cloud-app.md) rather than use the cloud workstation app.
 
 ### How can I run an analysis workflow on multiple sample files at the same time?  
-The DNAnexus interface does have a batch tool available; however, it is in early testing, so we recommend using dx-toolkit on the command line as the most reliable and user friendly approach to batch and submit jobs. You can find our documentation on how to install and get started with dx-toolkit [here](./guides/data/command-line.md). You may also refer to the sample script below that loops through all the BAM files in the `data` folder and submits a job using the BAM and matching index file.   
+The DNAnexus interface does have a batch tool available; however, it is in early testing, so we recommend using dx-toolkit on the command line as the most reliable and user friendly approach to batch and submit jobs. You can find our documentation on how to install and get started with dx-toolkit [here](./guides/genomics-platform/managing-data/command-line.md). You may also refer to the sample script below that loops through all the BAM files in the `data` folder and submits a job using the BAM and matching index file.   
 ~~~~
 for bam in $(dx ls '/data/*.bam'); do  
   dx run \  
@@ -154,11 +153,11 @@ and are getting a connectivity error, it may be that your firewall is too restri
 We are currently in progress of preparing a paper for St. Jude Cloud. In the meantime, please refer to the [citation guide](citing-stjude-cloud.md).
 
 ### When can I publish my findings using St. Jude Cloud data?
-Once the [embargo date](glossary.md#embargo-date) for the St. Jude datasets that you've used in your research has passed, you are legally permitted to publish results based on that data.
+Once the [embargo date](./guides/genomics-platform/requesting-data/glossary.md#embargo-date) for the St. Jude datasets that you've used in your research has passed, you are legally permitted to publish results based on that data.
 
 ### Where can I find the embargo date?
 
-All of our samples are marked with an [embargo date](glossary.md#embargo-date).
+All of our samples are marked with an [embargo date](./guides/genomics-platform/requesting-data/glossary.md#embargo-date).
 You can find this by looking at the tags for each file or in the
 `SAMPLE_INFO.txt` file that is included with each data request.
 Select a sample and click info to see more.

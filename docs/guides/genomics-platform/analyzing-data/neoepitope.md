@@ -92,7 +92,7 @@ the "Start" button in the left hand pane. This creates a cloud workspace
 in DNAnexus with the same name as the tool. After this, you will be able 
 to upload your input files to that workspace.
 
-![](../../images/guides/tools/neoepitope/click-start.gif)
+![](../../../images/guides/tools/neoepitope/click-start.gif)
 
 !!! note
     If you can't see the "Start" button, one of these two scenarios is likely the case:
@@ -134,7 +134,7 @@ by users.
 
 **Mutation file example**
 
-![](../../images/guides/tools/neoepitope/mutation-file-example.png)
+![](../../../images/guides/tools/neoepitope/mutation-file-example.png)
 
 ## Uploading data
 
@@ -144,8 +144,8 @@ NeoepitopePred takes the following files as input:
   generated from whole genome sequencing, whole exome sequencing, or RNA-Seq. 
 * A file describing the mutations in a sample. 
 
-You can upload these files using the [data transfer application](../data/data-transfer-app.md)
-or by uploading them through [the command line](../data/command-line.md).
+You can upload these files using the [data transfer application](../managing-data/data-transfer-app.md)
+or by uploading them through [the command line](../managing-data/command-line.md).
 Both of the guides linked here will contain more details on how to upload
 data using that method, so we defer to those guides here.
 
@@ -156,7 +156,7 @@ data using that method, so we defer to those guides here.
     have the app, you can click "Open app" to open the app with the tool's cloud 
     workspace already opened and ready to drag-and-drop files into it!
 
-    For more information, check out the [data transfer application](../data/data-transfer-app.md) guide.
+    For more information, check out the [data transfer application](../managing-data/data-transfer-app.md) guide.
 
 ## Running the tool
 
@@ -169,7 +169,7 @@ Once you've uploaded data to your cloud workspace,
 click "Launch Tool" on the [tool's landing page](https://platform.stjude.cloud/tools/neoepitope). 
 A dropdown will present the different presets for running the workflow. Here, you can select whether you wish to start with FastQ files or a BAM file.
 
-![](../../images/guides/tools/neoepitope/launch-tool.gif)
+![](../../../images/guides/tools/neoepitope/launch-tool.gif)
 
 ### Selecting parameters
 
@@ -179,7 +179,7 @@ see the options available, click the gear cog next to the
 descriptions, see [the input section](#input) (specifically, you are 
 looking at the items in the table labeled "parameters").
 
-![](../../images/guides/tools/neoepitope/change-parameters.gif)
+![](../../../images/guides/tools/neoepitope/change-parameters.gif)
 
 ### Hooking up inputs
 
@@ -188,7 +188,7 @@ Next, you'll need to hook up the FastQ/BAM and mutation files you uploaded in
 clicking on the `BAM alignment file` and `BAM index file` and `Mutation array` slots and
 selecting the respective files.
 
-![](../../images/guides/tools/neoepitope/hookup-inputs.gif)
+![](../../../images/guides/tools/neoepitope/hookup-inputs.gif)
 
 ### Starting the workflow
 
@@ -196,7 +196,7 @@ Once your input files are hooked up, you should be able to start the workflow
 by clicking the "Run as Analysis..." button in the top right hand corner
 of the workflow dialog.
 
-![](../../images/guides/tools/neoepitope/run-analysis.gif)
+![](../../../images/guides/tools/neoepitope/run-analysis.gif)
 
 !!! tip
     If you cannot click this button, please ensure that all of the inputs are correctly hooked up (see [hooking up inputs](#hooking-up-inputs)).
@@ -213,14 +213,14 @@ Next, click "View Results" then select the "View Running Jobs" option.
 You will be redirected to the job monitoring page. Each job you kicked off
 gets one row in this table.
 
-![](../../images/guides/tools/neoepitope/monitoring-jobs.gif) 
+![](../../../images/guides/tools/neoepitope/monitoring-jobs.gif) 
 
 You can click the "+" on any of the runs to check 
 the status of individual steps of the ChIP-Seq pipeline.
 Other information, such as time, cost of individual steps in the pipeline, 
 and even viewing the job logs can accessed by clicking around the sub-items.
 
-![](../../images/guides/tools/neoepitope/job-detailed-view.gif) 
+![](../../../images/guides/tools/neoepitope/job-detailed-view.gif) 
 
 !!! tip 
     Power users can refer to the [DNAnexus Monitoring Executions Documentation](https://documentation.dnanexus.com/user/running-apps-and-workflows/monitoring-executions) for advanced capabilities for monitoring jobs.
@@ -241,7 +241,7 @@ be taken to the filesystem view your cloud workspace. This is similar to your th
 filesystem on your computer, and you can do many common operations such as deleting,
 renaming, and moving files.
 
-![](../../images/guides/tools/neoepitope/neo-pred-results.png) 
+![](../../../images/guides/tools/neoepitope/neo-pred-results.png) 
 
 ### Interpreting results
 
@@ -253,38 +253,38 @@ from OptiType.
 * A folder stamped with the time will present in the output folder
   (optitype), which contains the raw output.
 
-![](../../images/guides/tools/neoepitope/hlatype-result.png)
+![](../../../images/guides/tools/neoepitope/hlatype-result.png)
 
 * The file contains the predicted HLA alleles of the sample.
 
-![](../../images/guides/tools/neoepitope/hlatype-result2.png)
+![](../../../images/guides/tools/neoepitope/hlatype-result2.png)
 
 **Neoepitope prediction**
 
 The output contains one summary HTML, one folder with raw output, and one
 folder with outputs in Excel formats:
 
-![](../../images/guides/tools/neoepitope/epitope-result.png)
+![](../../../images/guides/tools/neoepitope/epitope-result.png)
 
 **Epitope_affinity_prediction.html** (shown below):   
 
 * This file provides a summary of the epitope prediction that can be visualized directly from web browser.  
 * The peptides with affinity lower than user-defined cutoff will be highlighted in green in the webpage.  
 
-![](../../images/guides/tools/neoepitope/epitope-result2.png)
+![](../../../images/guides/tools/neoepitope/epitope-result2.png)
 
 **Raw_output** (shown below): this folder contains the raw output of the affinity
 prediction. There will two major types files present here: affinity.out and flanking.seq.
 
-![](../../images/guides/tools/neoepitope/epitope-result3.png)
+![](../../../images/guides/tools/neoepitope/epitope-result3.png)
 
 
-![](../../images/guides/tools/neoepitope/epitope-result4.png)
+![](../../../images/guides/tools/neoepitope/epitope-result4.png)
 
 **affinity.out**: these files are the prediction results from the
     netMHCcons for each peptide.
 
-![](../../images/guides/tools/neoepitope/epitope-result5.png)
+![](../../../images/guides/tools/neoepitope/epitope-result5.png)
 
 The following columns will be shown in the output:
 
@@ -308,12 +308,12 @@ The following columns will be shown in the output:
 
 **flanking.seq**: these files contain the sequences used for the prediction.
 
-![](../../images/guides/tools/neoepitope/epitope-result6.png)
+![](../../../images/guides/tools/neoepitope/epitope-result6.png)
 
 **XLSX**: this folder contains the raw output of the affinity prediction as
 described above in Excel files. The files can be downloaded and opened with Excel for downstream filtering and analyses.
 
-![](../../images/guides/tools/neoepitope/epitope-result7.png)
+![](../../../images/guides/tools/neoepitope/epitope-result7.png)
 
 ## Frequently asked questions
 

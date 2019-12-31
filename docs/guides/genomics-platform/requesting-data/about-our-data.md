@@ -75,13 +75,6 @@ CNV files contain copy number alteration (CNA) analysis results for paired tumor
 
 
 
-
-
-
-
-
-
-
 ##Sequencing Information 
 
 ### Whole Genome and Whole Exome
@@ -151,15 +144,6 @@ CCSS is a multi-institutional, multi-disciplinary, NCI-funded collaborative reso
 
 
 
-
-
-
-
-
-
-
-
-
 ## Metadata 
 
 Each data request includes a text file called `SAMPLE_INFO.txt` that provides a number of file level properties (sample identifiers, clinical attributes, etc).
@@ -182,7 +166,7 @@ Each data request includes a text file called `SAMPLE_INFO.txt` that provides a 
 | sj_pmid_accessions   | If the file was associated with a paper, the related [Pubmed][pubmed] accession number.                                                                                                                                                                                            |
 | sj_ega_accessions    | If the file was associated with a paper, the related [EGA][ega] accession number.                                                                                                                                                                                                  |
 | sj_dataset_accession | If present, the permanent accession number assigned in St. Jude Cloud.                                                                                                                                                                                                             |
-| sj_embargo_date      | The [embargo date](../../glossary.md#embargo-date), which specifies the first date which the files can be used in a publication.                                                                                                                                               |
+| sj_embargo_date      | The [embargo date](glossary.md#embargo-date), which specifies the first date which the files can be used in a publication.                                                                                                                                               |
 
 ### Clinical and Phenotypic Information
 
