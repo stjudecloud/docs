@@ -1,16 +1,51 @@
-# St. Jude Cloud Documentation
+<p align="center">
+  <a href="https://github.com/stjudecloud/docs"><img src="./docs/docs-banner-lighthouse.jpg" width="800" title="St. Jude Cloud Workflows"></a>
+  <a href="https://travis-ci.org/stjudecloud/docs" target="_blank">
+    <img alt="Build Status: Master" src="https://travis-ci.org/stjudecloud/docs.svg?branch=master" />
+  </a>
+  <a href="https://github.com/stjudecloud/docs/blob/master/LICENSE.md" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+</p>
 
-[![Build Status](https://travis-ci.org/stjudecloud/docs.svg?branch=master)](https://travis-ci.org/stjudecloud/docs)
+> Documentation for the St. Jude Cloud project.
 
-This is the repository containing all technical documentation for the St. Jude Cloud. If you are a developer for the SJCloud and would like information on how to contribute to the documentation, please view the wiki: https://github.com/stjudecloud/docs/wiki.
+### 🏠 [Homepage](https://stjude.cloud/docs)
 
-## Building
+## Install
 
-To run a development copy of the St. Jude Cloud Documentation, run the following commands:
-
-```bash
-git clone git@github.com:stjudecloud/docs.git
-cd docs/
+```sh
 pip install -r requirements.txt
-mkdocs serve
 ```
+
+## Usage
+
+You can use the following commands to get started working with the docs.
+
+```sh
+# Run a development server
+mkdocs serve
+
+# Build a static HTML copy of the docs
+mkdocs build
+```
+
+If you'd like more in-depth instructions, please refer to [the project wiki](https://github.com/stjudecloud/docs/wiki/Getting-Started).
+
+## Author
+
+👤 **St. Jude Cloud Team**
+
+* Website: https://stjude.cloud
+* Github: [@stjudecloud](https://github.com/stjudecloud)
+* Twitter: [@StJudeResearch](https://twitter.com/StJudeResearch)
+
+## Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/stjudecloud/docs/issues). You can also take a look at the [contributing guide](https://github.com/stjudecloud/docs/blob/master/CONTRIBUTING.md).
+
+
+## 📝 License
+
+Copyright © 2020 [St. Jude Cloud Team](https://github.com/stjudecloud).<br />
+This project is [MIT](https://github.com/stjudecloud/docs/blob/master/LICENSE.md) licensed.
