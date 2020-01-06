@@ -76,7 +76,7 @@ Mutational Signatures only requires VCFs as inputs. This can be a single
 multi-sample VCF, multiple single-sample VCFs, or a combination of both. All
 other inputs are optional.
 
-Input files can be uploaded via the [data transfer application](../managing-data/data-transfer-app.md) or [command line](../managing-data/command-line.md).
+Input files can be uploaded via the [data transfer application](../managing-data/data-transfer-app.md) or [command line](../analyzing-data/command-line.md).
 
 
 <h4 id="vcfs">VCF(s)</h4>
@@ -142,7 +142,7 @@ VCF column_ to `1`.
 ## Uploading data
 
 Mutational Signatures requires at least one VCF and an optional sample sheet
-to be uploaded. These files can be uploaded via the [data transfer application](../managing-data/data-transfer-app.md) or [command line](../managing-data/command-line.md).
+to be uploaded. These files can be uploaded via the [data transfer application](../managing-data/data-transfer-app.md) or [command line](../analyzing-data/command-line.md).
 
 
 ## Analysis of results

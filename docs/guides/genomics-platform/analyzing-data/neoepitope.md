@@ -145,7 +145,7 @@ NeoepitopePred takes the following files as input:
 * A file describing the mutations in a sample. 
 
 You can upload these files using the [data transfer application](../managing-data/data-transfer-app.md)
-or by uploading them through [the command line](../managing-data/command-line.md).
+or by uploading them through [the command line](../analyzing-data/command-line.md).
 Both of the guides linked here will contain more details on how to upload
 data using that method, so we defer to those guides here.
 

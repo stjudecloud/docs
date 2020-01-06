@@ -42,3 +42,7 @@ The **Embargo Date** specifies the date that a publishing embargo on the file in
 | Clinical Genomics                | January 15, 2019  |
 | Sickle Cell Genome Project       | September 1, 2019 |
 | Childhood Cancer Survivor Study | November 1, 2019 |
+
+### Similar Topics
+
+[About our Data](about-our-data.md)  

@@ -84,7 +84,7 @@ the tool already exists. Click "Launch Tool" to start a new analysis.
 ### Input file configuration
 
 cis-X requires six tab-delimited input files to be prepared in advance. These
-files can be uploaded via the [data transfer application](../managing-data/data-transfer-app.md) or [command line](../managing-data/command-line.md).
+files can be uploaded via the [data transfer application](../managing-data/data-transfer-app.md) or [command line](../analyzing-data/command-line.md).
 
 
 !!! note
@@ -250,7 +250,7 @@ This file can be generating by CONSERTING.
 
 cis-X requires a total of eight files to be uploaded, as described in "[Input
 file configuration]". These files can be uploaded via the [data transfer
-application](../managing-data/data-transfer-app.md) or [command line](../managing-data/command-line.md).
+application](../managing-data/data-transfer-app.md) or [command line](../analyzing-data/command-line.md).
 
 
 ## Running the tool

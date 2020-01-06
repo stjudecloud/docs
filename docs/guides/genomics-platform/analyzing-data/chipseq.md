@@ -74,7 +74,7 @@ to upload your input files to that workspace.
 The ChIP-Seq Peak Caller takes Gzipped FastQ files generated from an
 IP experiment as input. You can upload your input FastQ files by
 using the [data transfer application](../managing-data/data-transfer-app.md)
-or by uploading them through [the command line](../managing-data/command-line.md).
+or by uploading them through [the command line](../analyzing-data/command-line.md).
 Both of the guides linked here will contain more details on how to upload
 data using that method, so we defer to those guides here.
 

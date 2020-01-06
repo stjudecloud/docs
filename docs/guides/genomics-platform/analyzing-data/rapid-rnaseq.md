@@ -148,7 +148,7 @@ to upload your input files to that workspace.
 The Rapid RNA-Seq pipeline takes either a paired set of Gzipped FastQ files or 
 a GRCh37-lite aligned BAM from human RNA-Seq. You can upload your input file(s)
 using the [data transfer application](../managing-data/data-transfer-app.md)
-or by uploading them through [the command line](../managing-data/command-line.md).
+or by uploading them through [the command line](../analyzing-data/command-line.md).
 Both of the guides linked here will contain more details on how to upload
 data using that method, so we defer to those guides here.
 

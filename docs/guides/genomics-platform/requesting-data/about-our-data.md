@@ -290,3 +290,10 @@ Embedded in both the filename and the `SAMPLE_INFO.txt` file that comes with you
 [ega]: https://www.ebi.ac.uk/ega/home
 [censusburea]: https://www.census.gov/mso/www/training/pdf/race-ethnicity-onepager.pdf
 [oncotree_2019_03_01]: http://oncotree.mskcc.org/#/home?version=oncotree_2019_03_01
+
+
+## Similar Topics
+
+[About our Decision Process & Terminology](glossary.md)  
+[Making a Data Request](data-request.md)  
+[Working with our Data Overview](../managing-data/working-with-our-data.md)  

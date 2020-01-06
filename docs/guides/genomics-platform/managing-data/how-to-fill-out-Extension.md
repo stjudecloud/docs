@@ -38,3 +38,8 @@ Follow the steps below to ensure that you have accurately filled out all section
     * If your research question(s) or contemplated use has changed since the original DAA, use this space to provide your updated project description. You may also use this space to explain why you need to extend your agreement. Finally, if the Administrative Authority or Information Security Officer has changed from the original DAA to this extension, please use this space to explain why.
 
 Once you have finished filling out the Extension Addendum, you may upload the completed form on the extension addendum page linked in the notification of expiration email from notifications@stjude.cloud.
+
+## Similar Topics
+
+[About our Decision Process & Terminology](../requesting-data/glossary.md)   
+[Filling Out a Data Access Agreement](../requesting-data/how-to-fill-out-DAA.md)   

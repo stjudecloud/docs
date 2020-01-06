@@ -2,7 +2,7 @@
 
 The Data Transfer App is a downloadable tool with an easy to use graphical user interface that allows you to upload/download files to/from your DNAnexus projects on the cloud. 
 
-For users looking to upload/download files using the command line, please refer to the [command line interaction guide](command-line.md).
+For users looking to upload/download files using the command line, please refer to the [command line interaction guide](../analyzing-data/command-line.md).
 
 If you are interested in viewing the source code, you can do so [here](https://github.com/stjude/sjcloud-data-transfer-app). If you
 would like to file an issue you are experiencing with the application,
@@ -45,6 +45,8 @@ or (2) highlight all the files you want to upload, then drag and drop them into 
 
 Review the list of files to upload, and click **Upload**.
 
+To learn how to upload files using the command line, please refer to the [command line interaction guide](../analyzing-data/command-line.md#uploading-data).
+
 ## Downloading Files
 Select the DNAnexus project on the left that you would like to download files from. Select **Download** in the app's Upload/Download panel. In may take a minute to display all the files in your project. Once all files are displayed, select the files you want to download and click **Download**.
 
@@ -52,4 +54,11 @@ Select the DNAnexus project on the left that you would like to download files fr
 
 Note that the Data Transfer App does not recognize any directory structure you may have within your DNAnexus projects. It is simply a dump of all the files in each project. 
 
+To learn how to download files using the command line, please refer to the [command line interaction guide](../analyzing-data/command-line.md#downloading-data).
 
+## Similar Topics
+
+[About our Data](../requesting-data/about-our-data.md)   
+[Making a Data Request](../requesting-data/data-request.md)   
+[Managing Data Overview](working-with-our-data.md)  
+[Command Line Interaction](../analyzing-data/command-line.md)  

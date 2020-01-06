@@ -157,3 +157,10 @@ data request:
     `#!bash dx download immediate/bam/*`.
 
     ![](../../../images/guides/data/download-bams.png)
+
+## Similar Topics
+
+[About our Data](../requesting-data/about-our-data.md)   
+[Making a Data Request](../requesting-data/data-request.md)   
+[Working with our Data Overview](../managing-data/working-with-our-data.md)   
+[Downloading/Uploading Data](../managing-data/data-transfer-app.md)    

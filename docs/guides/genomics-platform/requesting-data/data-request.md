@@ -85,3 +85,10 @@ The `SAMPLE_INFO.txt` file provides all the [metadata](about-our-data.md#metadat
     extra steps you'll need to follow such as [getting additional signatures](how-to-fill-out-DAA.md#data-download-permission)
     on your data access agreement. We recommend that you work with the data
     in the cloud if it's feasible; the data provided by St. Jude is free, the compute charges are reasonable, and working in the cloud helps to eliminate the long, error-prone downloading process. Porting your tools to be run in the cloud is easy, as well. We recommend you follow [this guide](../analyzing-data/creating-a-cloud-app.md) to get started.
+
+### Similar Topics
+
+[About our Data](about-our-data.md)  
+[About our Decision Process & Terminology](glossary.md)    
+[Creating an Account](create-an-account.md)   
+[Renewing your Data Access](../managing-data/how-to-fill-out-Extension.md)    

@@ -76,7 +76,7 @@ Learn how to [check your Request Status](data-request.md#checking-your-request-s
 
 ### Similar Topics
 
-[Studies](about-our-data.md#data-access-units)  
+[Studies](about-our-data.md#data-access-units)
 [Making a Data Request](data-request.md)  
-[Renewing Your Data Access](../managing-data/how-to-fill-out-Extension.md)  
-[Downloading Data](../managing-data/working-with-our-data.md#using-our-data)
+[Renewing your Data Access](../managing-data/how-to-fill-out-Extension.md)  
+[Managing Data Overview](../managing-data/working-with-our-data.md)
