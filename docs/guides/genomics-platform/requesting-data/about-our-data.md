@@ -296,4 +296,4 @@ Embedded in both the filename and the `SAMPLE_INFO.txt` file that comes with you
 
 [About our Decision Process & Terminology](glossary.md)  
 [Making a Data Request](data-request.md)  
-[Working with our Data Overview](../managing-data/working-with-our-data.md)  
+[Managing Data Overview](../managing-data/working-with-our-data.md)  

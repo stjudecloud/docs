@@ -69,9 +69,9 @@ Users who live in the United States will be given the option to complete the Dat
 
 After submitting the required information, the Data Access Agreement will be sent via email to each individual entered through the setup wizard. Each individual must follow the link in their email to sign the appropriate page of the agreement via DocuSign. If any individual rejects or declines to sign the agreement, you will need to start a new data request from the data browser. 
 
-Once all signatures have been collected, your data access request will be submitted to St. Jude Cloud. A St. Jude Cloud administrator will forward your Data Access Agreement and intended use to the appropriate [Data Access Committee(s)](glossary.md#data-access-committee) for approval. Upon approval from the DAC(s), you will receive an email with a link to the approved data, which will be hosted through DNAnexus.  
+Once you start the Electronic Data Access Agreement process, you will have a draft autosaved for you on your [Manage Data](https://platform.stjude.cloud/requests/manage) page, accessible at any time. Learn how to [check your Request Status](../managing-data/working-with-our-data.md#managing-your-data-requests)  
 
-Learn how to [check your Request Status](data-request.md#checking-your-request-status)  
+Once all signatures have been collected, your data access request will be submitted to St. Jude Cloud. A St. Jude Cloud administrator will forward your Data Access Agreement and intended use to the appropriate [Data Access Committee(s)](glossary.md#data-access-committee) for approval. Upon approval from the DAC(s), you will receive an email with a link to the approved data, which will be hosted through DNAnexus.  
 
 
 ### Similar Topics

@@ -17,13 +17,20 @@ environment.
 
 ### Selecting Data
 
-There are three main ways to make your data selection through our [Data Browser](https://platform.stjude.cloud/requests/diseases). You can peruse our raw genomic data by diagnosis, publication, or study and use a number of filtering options to narrow down your search. You may also be directed to the Genomics Platform through another App to request specific samples. 
+![](../../../images/guides/data/data-browser-overview.png)
 
-You must have [created an account](create-an-account.md) and be logged in to make a data request. If you have not yet created an account or you are not logged in, the red *Request Data* button will say *Log In*.
+The primary way to make your data selection is through our [Genomics Platform Data Browser](https://platform.stjude.cloud/requests/diseases). You can search our raw genomic data by diagnosis, publication, or study by selecting a tab along the top. You may further refine your search by applying filters from four categories: Sequencing Type, Sample Type, File Type, and Tissue Type. Please note that applying multiple filters within the same category filters using 'OR' logic while applying multiple filters across different categories filters using 'AND' logic. For example in the overview image above, we have filtered the browser to only show data that is (either WGS OR WES) AND (Diagnosis OR Relapse) AND BAM AND Paired Tumor-Normal.
+ 
+As you filter and make selections, the data summary panel in the upper left hand corner will update dynamically to give you important descriptive information about the set of data you have selected. Click on an empty box to make a selection; when selected, the box will turn blue with a white check mark. Once you have completed your data selection, click on *Request Data* to submit your request and proceed. 
 
 ![](../../../images/guides/data/request-data-select-data.gif)
 
-We ask that you review your selection and make sure that these are the [DAUs](glossary.md#data-access-unit) you would like to request. 
+!!! note
+    You must have [created an account](create-an-account.md) and be logged in to submit a data request. If you have not yet created an account or you are not logged in, the submit button will say *Log In* rather than *Request Data*.
+
+Alternatively, you may be directed to the Genomics Platform Data Browser through another App to request specific samples. The [PeCan homepage](../../applications/PeCan/pecan.md#requesting-raw-genomics-through-pecan) is one such app that allows you to select data through an interactive visualization.
+
+After clicking on *Request Data*, we ask that you review your selection and make sure that the [DAUs](glossary.md#data-access-unit) corresponding to the set of data you have selected is indeed the data you want to request. 
 
 ![](../../../images/guides/data/request-data-select-DAUs.png)
 
@@ -48,38 +55,15 @@ Every person who requests access to our controlled-access data must sign the [Da
 
 If you opt to do the process through the setup wizard, the necessary information will be collected and added automatically to your agreement. Once you have completed the setup wizard, the form will be sent to you and necessary signatories through email via [DocuSign](https://www.docusign.com). You can learn more about our electronic data access agreement process [here](how-to-fill-out-DAA.md#the-electronic-data-access-agreement-process). 
 
-!!! tip 
-    If you receive an email from us that your DAA is incomplete, you may edit your DAA and upload the revised copy using the 'Add a Form' button the on Manage Data page. 
-
-#### Checking your Request Status 
-Once you start the Electronic Data Access Agreement process, you will have a draft autosaved for you on your [Manage Data](https://platform.stjude.cloud/requests/manage) page, accessible at any time.
-    ![](../../../images/guides/forms/docs-manage-data-page-labelled.png)
-
-!!! example "Pending Request Types"
-    1. Request 1 is an Open Draft, meaning the requestor has not finished the setup wizard, and that the DocuSign envelope has not been sent to any of the signatories. 
-
-    2. Request 2, listed in the Projects section, has been sent to the signatories, but has not been completed by all of them. This status will look like the Request 3 when all of the signatories sign the document and it is ready to be sent to the Data Access Committee(s). 
-
-    3. Request 3 is pending approval from the Data Access Committee(s), and the status will change from Pending to either Approved or Rejected, based on their decision. All submitted manual-process Data Access Agreements will show up in your Manage Data page like Request 3. 
-
 Request approval typically takes a week or two if your data access agreement is correctly and completely filled out. You will receive automated emails from notifications@stjude.cloud at the time that your request is approved.
 
-### Accessing Your Data
+!!! tip 
+    If you receive an email from us that your DAA is incomplete, you may edit your DAA and upload the revised copy using the 'Add a Form' button the on [Manage Data](../managing-data/working-with-our-data.md) page. 
 
-From the Manage Data page, you can click on a request to navigate to the DNAnexus platform where a project will have been created with the project name that you entered through the setup wizard. Once your request is approved, the data will be vended to your DNAnexus project folder and will be accessible to you. You can also follow the link in the approval email from notifications@stjude.cloud to view your DNAnexus project folder. When the data is vended, the directory structure will typically look something like the following:
+#### Managing your Data Request
+Go to our [Managing Data Overview](../managing-data/working-with-our-data.md) documentation page to learn how to check the status of your data request, complete an EDAA draft, upload a revised DAA, and ultimately access your data from our [Manage Data](https://platform.stjude.cloud/requests/manage) page.
 
-```
-project_space/
-├── restricted/
-│   ├── bam/
-│   ├── gVCF/
-│   ├── Somatic_VCF/
-│   └── CNV/
-└── SAMPLE_INFO.txt
-```
 
-The `SAMPLE_INFO.txt` file provides all the [metadata](about-our-data.md#metadata) associated with the request, and the restricted folder contains all the data for which you were approved separated by file type. 
- 
 !!! info
     If you would like to download the data to local storage, there are
     extra steps you'll need to follow such as [getting additional signatures](how-to-fill-out-DAA.md#data-download-permission)
@@ -91,4 +75,5 @@ The `SAMPLE_INFO.txt` file provides all the [metadata](about-our-data.md#metadat
 [About our Data](about-our-data.md)  
 [About our Decision Process & Terminology](glossary.md)    
 [Creating an Account](create-an-account.md)   
+[Managing Data Overview](../managing-data/working-with-our-data.md)  
 [Renewing your Data Access](../managing-data/how-to-fill-out-Extension.md)    
