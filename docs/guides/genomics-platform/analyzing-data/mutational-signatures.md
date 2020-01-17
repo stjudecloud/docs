@@ -4,6 +4,8 @@
 | **Publication**         | Mutational Signatures employs MutationalPatterns: "[MutationalPatterns: comprehensive genome-wide analysis of mutational processes.][10.1186/s13073-018-0539-0]" |
 | **Technical Support**   | [Contact Us](https://stjude.cloud/contact) |
 
+## Overview
+
 **Mutational Signatures** finds and quantifies COSMIC mutational signatures
 across samples. This is done by finding the optimal non-negative linear
 combination of mutation signatures to reconstruct a mutation matrix. It
@@ -18,9 +20,8 @@ Mutational Signatures supports both hg19 (GRCh37) and hg38 (GRCh38).
 [MutationalPatterns]: https://bioconductor.org/packages/release/bioc/html/MutationalPatterns.html
 [Blokzijl, et al. (2018)]: #references
 
-## Overview
 
-<h3 id="inputs">Inputs</h3>
+## Inputs
 
 | Name                           | Type           | Description                                                                                  | Example               |
 |--------------------------------|----------------|----------------------------------------------------------------------------------------------|-----------------------|
@@ -37,49 +38,12 @@ Mutational Signatures supports both hg19 (GRCh37) and hg38 (GRCh38).
 [Output prefix]: #output-prefix
 [Disabled VCF column]: #disabled-vcf-column
 
-<h3 id="outputs">Outputs</h3>
-
-| Name                       | Type | Description                                                                        |
-|----------------------------|------|------------------------------------------------------------------------------------|
-| [Raw signatures]           | File | Tab-delimited file of the raw results with sample contributions for each signature |
-| [Signatures visualization] | File | HTML file for interactive plotting                                                 |
-| [Sample sheet][sso]        | File | Tab-delimited file (no headers) with sample ID and tag pairs                       |
-
-[Raw signatures]: #raw-signatures
-[Signatures visualization]: #signatures-visualization
-[sso]: #sample-sheet-out
-
-<h3 id="process">Process</h3>
-
-Mutational Signatures runs four steps using subcommands of [mtsg].
-
-  1. Split VCFs (single or multi-sample) to multiple single-sample VCFs.
-  2. If not given, generate a sample sheet from the directory of single-sample
-     VCFs.
-  3. Build a mutation matrix and reconstruct/fit it using COSMIC mutation
-     signatures.
-  4. Create a visualization file using the fitted signatures.
-
-## Getting started
-
-After logging in, click the "Start" button on the [Mutational Signatures tool
-page]. This creates a new DNAnexus project and imports the tool.
-
-With subsequent runs, the sidebar shows "Launch Tool", meaning the project with
-the tool already exists. Click "Launch Tool" to start a new analysis.
-
-[Mutational Signatures tool page]: https://platform.stjude.cloud/tools/mutational_signatures
-
 ### Input configuration
 
-Mutational Signatures only requires VCFs as inputs. This can be a single
-multi-sample VCF, multiple single-sample VCFs, or a combination of both. All
-other inputs are optional.
-
-Input files can be uploaded via the [data transfer application](../managing-data/data-transfer-app.md) or [command line](../analyzing-data/command-line.md).
+Mutational Signatures only requires VCFs as inputs. This can be a single multi-sample VCF, multiple single-sample VCFs, or a combination of both. All other inputs are optional.
 
 
-<h4 id="vcfs">VCF(s)</h4>
+<h4 id="VCF(s)">VCF(s)</h4>
 
 _VCF(s)_ is a list of VCF inputs. The inputs can be single-sample or
 multi-sample and uncompressed or gzipped. Sample names are taken from the VCF
@@ -90,7 +54,7 @@ denoted with `.:.`.
 
 gVCFs are not supported.
 
-<h4 id="sample-sheet">Sample sheet</h4>
+<h4 id="Sample Sheet">Sample Sheet</h4>
 
 _Sample sheet_ is a tab-delimited file (no headers) with two columns: the
 sample ID and a tag. The tag is an arbitrary identifier used to group the
@@ -99,6 +63,7 @@ samples, typically a disease abbreviation or tissue of origin.
 If not given, a sample sheet will be generated automatically.
 
 <h5>Example</h5>
+
 
 |             |      |
 |-------------|------|
@@ -139,21 +104,61 @@ VCF column_ to `1`.
 |--------|-----|----|-----|-----|------|--------|------|--------|------------|------------|
 | #CHROM | POS | ID | REF | ALT | QUAL | FILTER | INFO | FORMAT | SJEPD003_D | SJEPD003_G |
 
-## Uploading data
+## Outputs
 
-Mutational Signatures requires at least one VCF and an optional sample sheet
-to be uploaded. These files can be uploaded via the [data transfer application](../managing-data/data-transfer-app.md) or [command line](../analyzing-data/command-line.md).
+| Name                       | Type | Description                                                                        |
+|----------------------------|------|------------------------------------------------------------------------------------|
+| [Raw signatures]           | File | Tab-delimited file of the raw results with sample contributions for each signature |
+| [Signatures visualization] | File | HTML file for interactive plotting                                                 |
+| [Sample sheet][sso]        | File | Tab-delimited file (no headers) with sample ID and tag pairs                       |
+
+[Raw signatures]: #raw-signatures
+[Signatures visualization]: #signatures-visualization
+[sso]: #sample-sheet-out
+
+## Workflow Steps
+
+Mutational Signatures runs four steps using subcommands of [mtsg].
+
+  1. Split VCFs (single or multi-sample) to multiple single-sample VCFs.
+  2. If not given, generate a sample sheet from the directory of single-sample
+     VCFs.
+  3. Build a mutation matrix and reconstruct/fit it using COSMIC mutation
+     signatures.
+  4. Create a visualization file using the fitted signatures.
 
 
-## Analysis of results
+## Creating a workspace
+Before you can run one of our workflows, you must first create a workspace in DNAnexus for the run. Refer to [the general workflow guide](running-sj-workflows.md#getting-started) to learn how to create a DNAnexus workspace for each workflow run.
 
-Upon a successful run of Mutational Signatures, three files are saved to the
-results directory: raw signature contributions, a visualization file, and a
+You can navigate to the Mutational Signatures workflow page [here](https://platform.stjude.cloud/tools/mutational_signatures).
+
+## Uploading Input Files
+
+Mutational Signatures requires at least one VCF and an optional sample sheet to be uploaded. 
+
+Refer to [the general workflow guide](running-sj-workflows.md#uploading-files) to learn how to upload input files to the workspace you just created.
+
+## Running the Workflow
+
+Refer to [the general workflow guide](running-sj-workflows.md#running-the-workflow) to learn how to launch the workflow, hook up input files, adjust parameters, start a run, and monitor run progress.
+
+
+## Analysis of Results
+Each tool in St. Jude Cloud produces a visualization that makes understanding results more accessible than working with excel spreadsheet or tab delimited files. This is the primary way we recommend you work with your results. 
+
+Refer to [the general workflow guide](running-sj-workflows.md#custom-visualizations) to learn how to access these visualizations.
+
+We also include the raw output files for you to dig into if the visualization is not sufficient to answer your research question. 
+
+Refer to [the general workflow guide](running-sj-workflows.md#raw-results-files) to learn how to access raw results files.
+
+## Interpreting results
+
+Upon a successful run of Mutational Signatures, three files are saved to the results directory: raw signature contributions, a visualization file, and a
 sample sheet.
 
-### Interpreting results
-
-<h4 id="raw-signatures">Raw signatures</h4>
+### Raw signatures
 
 _Raw signatures_ is a tab-delimited file of the raw results with sample
 contributions for each signature. Column 1 is the sample name, columns
@@ -172,7 +177,7 @@ tag given in the [sample sheet](#sample-sheet).
 | SJACT001_D   |  1.71758029 |  131.033723 | … |   18.6910151 | ACT    |
 | SJAMLM7005_D |  51.9627312 |  7.10850351 | … |            0 | AMLM7  |
 
-<h4 id="signatures-visualization">Signatures visualization</h4>
+### Signatures visualization
 
 _Signatures visualization_ is an HTML file that can be used for interactive
 plotting.
@@ -182,7 +187,7 @@ stacked bar charts: total contributions by signature, total contributions by
 tag, and total contributions by sample per tag. The total contributions can be
 stacked as absolute values or as a percentage of the total.
 
-<h4 id="sample-sheet-out">Sample sheet</h4>
+### Sample Sheet
 
 When no sample sheet is given as an input, one is generated automatically,
 but it is not guaranteed the derived tags will be of any use. This generated
@@ -214,13 +219,28 @@ R:   Error in .Call2("solve_user_SEW", refwidths, start, end, width, translate.n
 R:   solving row 526: 'allow.nonnarrowing' is FALSE and the supplied start (79440206) is > refwidth + 1
 ```
 
+## Frequently asked questions
+
+None yet! If you have any questions not covered here, feel free to reach
+out on [our contact form](https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-contact/).
+
+
 ## References
 
   * Blokzijl F, Janssen R, van Boxtel R, Cuppen E (2018). "MutationalPatterns:
     comprehensive genome-wide analysis of mutational processes." _Genome
     Medicine_. doi: [10.1186/s13073-018-0539-0]. PMID: [29695279].
 
+
+## Similar Topics
+
+[Running our Workflows](../analyzing-data/running-sj-workflows.md)  
+[Working with our Data Overview](../managing-data/working-with-our-data.md)   
+[Downloading/Uploading Data](../managing-data/data-transfer-app.md)   
+
+
 [10.1186/s13073-018-0539-0]: https://doi.org/10.1186/s13073-018-0539-0
 [29695279]: https://www.ncbi.nlm.nih.gov/pubmed/29695279
 
 [mtsg]: https://github.com/stjude/mtsg
+

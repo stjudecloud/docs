@@ -4,6 +4,8 @@
 | **Publication**       | N/A (not published)                        |
 | **Technical Support** | [Contact Us](https://stjude.cloud/contact) |
 
+## Overview
+
 Fusion genes are important for cancer diagnosis, subtype definition and
 targeted therapy. RNASeq is useful for detecting fusion transcripts; however, computational methods face challenges to identify fusion transcripts
 due to events such as internal tandem duplication (ITD), multiple genes, low
@@ -11,9 +13,7 @@ expression, or non-templated insertions. To address some of these challenges, St
 clinically validated pipeline that detects gene fusions and ITDs from human RNA-Seq.
 
 
-## Overview
-
-**Inputs**
+## Inputs
 
 The input can be either of the two entries below, based on whether you want to start
 with FastQ files or a BAM file.
@@ -32,7 +32,7 @@ with FastQ files or a BAM file.
     [Picard's SamToFastq](https://broadinstitute.github.io/picard/command-line-overview.html#SamToFastq)
     functionality and using the FastQ version of the pipeline.
 
-**Outputs**
+## Outputs
 
 The Rapid RNA-Seq pipeline produces the following outputs:
 
@@ -44,7 +44,7 @@ The Rapid RNA-Seq pipeline produces the following outputs:
 | Interactive fusion visualization | Fusion visualization produced by ProteinPaint. |
 | Interactive coverage visualization | Coverage visualization produced by ProteinPaint. |
 
-**Process**
+## Workflow Steps 
 
 1. The raw sequence data is aligned to GRCh37-lite using standard STAR
    mapping.
@@ -113,8 +113,12 @@ is a simple text file with read IDs and sequences supporting a
 particular gene fusion. The fusion point is indicated with square
 brackets `[]`.
 
+## Creating a workspace
+Before you can run one of our workflows, you must first create a workspace in DNAnexus for the run. Refer to [the general workflow guide](running-sj-workflows.md#getting-started) to learn how to create a DNAnexus workspace for each workflow run.
 
-## Getting started
+You can navigate to the Rapid RNA-Seq workflow page [here](https://platform.stjude.cloud/tools/rapid_rna-seq).
+
+## Uploading Input Files
 
 !!! caution
     This pipeline assumes GRCh37-lite coordinates. If your BAM is 
@@ -122,141 +126,24 @@ brackets `[]`.
     back to FastQ files using [Picard's SamToFastq](https://broadinstitute.github.io/picard/command-line-overview.html#SamToFastq)
     functionality.
 
-To get started, you need to navigate to the [Rapid RNA-Seq tool page](https://platform.stjude.cloud/tools/rapid_rna-seq). You'll need to click
-the "Start" button in the left hand pane. This creates a cloud workspace
-in DNAnexus with the same name as the tool. After this, you will be able 
-to upload your input files to that workspace.
+The Rapid RNA-Seq pipeline takes as [input](#inputs) either a paired set of Gzipped FastQ files or a GRCh37-lite aligned BAM from human RNA-Seq. 
 
-![](../../../images/guides/tools/rapid-rnaseq/click-start.gif)
-
-!!! note
-    If you can't see the "Start" button, one of these two scenarios is likely the case:
-
-    * You see three buttons on the left sidebar instead of one. In this case,
-      you've already clicked the "Start" button previously, and a cloud workspace has
-      already been created for you. In this case, you're good! You can move
-      on to the next section.
-    * If you cannot see *any* buttons on the left side, you probably have not
-      logged in yet. If you see a sentence that says "Log in to launch this 
-      tool", simply login and try again.
-
-    If neither of these are the case and you still can't click "Start",
-    [contact us](https://stjude.cloud/contact).
-
-## Uploading data
-
-The Rapid RNA-Seq pipeline takes either a paired set of Gzipped FastQ files or 
-a GRCh37-lite aligned BAM from human RNA-Seq. You can upload your input file(s)
-using the [data transfer application](../managing-data/data-transfer-app.md)
-or by uploading them through [the command line](../analyzing-data/command-line.md).
-Both of the guides linked here will contain more details on how to upload
-data using that method, so we defer to those guides here.
+Refer to [the general workflow guide](running-sj-workflows.md#uploading-files) to learn how to upload input files to the workspace you just created.
 
 
-## Running the tool
+## Running the Workflow
 
-Once you've uploaded data to your cloud workspace, click "Launch Tool" on the [tool's landing page](https://platform.stjude.cloud/tools/rapid_rna-seq). A dropdown will present the different presets for running the workflow. Here, you can select whether you wish to start with FastQ files or a BAM file.
-
-![](../../../images/guides/tools/rapid-rnaseq/launch-tool.gif)
-
-### Hooking up inputs
-
-Next, you'll need to hook up the FastQ files you uploaded in 
-[the upload data section](#uploading-data). In this example,
-we are using the FastQ version of the pipeline, so you can 
-hook up the inputs by clicking on the `Fastq/R1` and `Fastq/R2`
-slots and selecting the respective files. If you are using 
-the BAM-based workflow, the process is similar.
-
-![](../../../images/guides/tools/rapid-rnaseq/hookup-inputs.gif)
-
-### Starting the workflow
-
-Once your input files are hooked up, you should be able to start the workflow
-by clicking the "Run as Analysis..." button in the top right hand corner
-of the workflow dialog.
-
-![](../../../images/guides/tools/rapid-rnaseq/run-analysis.gif)
-
-!!! tip
-    If you cannot click this button, please ensure that all of the inputs are correctly hooked up (see [hooking up inputs](#hooking-up-inputs)).
-
-    If you're still have trouble, please [contact us](https://stjude.cloud/contact) and include
-    a screenshot of the workflow screen above.
-
-## Monitoring run progress
-
-Once you have started one or more Rapid RNA-Seq runs, you can safely close your
-browser and come back later to check the status of the jobs. To do this,
-navigate to the [tool's landing page](https://platform.stjude.cloud/tools/rapid_rna-seq). 
-Next, click "View Results" then select the "View Running Jobs" option. 
-You will be redirected to the job monitoring page. Each job you kicked off
-gets one row in this table.
-
-![](../../../images/guides/tools/rapid-rnaseq/monitoring-jobs.gif) 
-
-You can click the "+" on any of the runs to check 
-the status of individual steps of the Rapid RNA-Seq pipeline.
-Other information, such as time, cost of individual steps in the pipeline, 
-and even viewing the job logs can accessed by clicking around the sub-items.
-
-![](../../../images/guides/tools/rapid-rnaseq/job-detailed-view.gif) 
-
-!!! tip 
-    Power users can refer to the [DNAnexus Monitoring Executions Documentation](https://documentation.dnanexus.com/user/running-apps-and-workflows/monitoring-executions) for advanced capabilities for monitoring jobs.
-
-## Analysis of results
-
-Each tool in St. Jude Cloud produces a visualization that makes understanding
-results more accessible than working with Excel spreadsheets or tab delimited
-files. This is the primary way we recommend you work with your Rapid RNA-Seq results. We also
-include the raw output files for you to dig into if the visualization is not 
-sufficient to answer your research question.
+Refer to [the general workflow guide](running-sj-workflows.md#running-the-workflow) to learn how to launch the workflow, hook up input files, adjust parameters, start a run, and monitor run progress.
 
 
-### Finding the raw results files
+## Analysis of Results
+Each tool in St. Jude Cloud produces a visualization that makes understanding results more accessible than working with excel spreadsheet or tab delimited files. This is the primary way we recommend you work with your results. 
 
-Navigate to the [tool's landing page](https://platform.stjude.cloud/tools/rapid_rna-seq). 
-In the left hand pane, click "View Results" then "View Results Files". You will
-be taken to the filesystem view your cloud workspace. This is similar to your the
-filesystem on your computer, and you can do many common operations such as deleting,
-renaming, and moving files.
+Refer to [the general workflow guide](running-sj-workflows.md#custom-visualizations) to learn how to access these visualizations.
 
-![](../../../images/guides/tools/rapid-rnaseq/rapid-rna-results.png) 
+We also include the raw output files for you to dig into if the visualization is not sufficient to answer your research question.
 
-### Navigating Results
-
-#### Raw result files
-
-Navigate to your tool's description page (for instance, Rapid RNA-Seq's
-description page is
-[here](https://platform.stjude.cloud/tools/rapid_rna-seq)). You should
-see a screen similar to the one in the screenshot below. In the left
-hand pane, select "View Results Files".
-
-![Click "View Results Files"](../../../images/guides/tools/common/raw-results.png)
-
-You should now be in the tool's workspace with access to files that you
-uploaded and results files that are generated. How/where the result
-files are generated are specific to each pipeline. Please refer to your
-individual pipeline's documentation on where the output files are kept.
-
-![](../../../images/guides/tools/common/raw-results-success.png)
-
-#### Custom visualization results
-
-Navigate to your tool's description page (for instance, Rapid RNA-Seq's
-description page is
-[here](https://platform.stjude.cloud/tools/rapid_rna-seq)). You should
-see a screen similar to the one in the screenshot below. In the left
-hand pane, select "Visualize Results".
-
-![Click "Visualize Results"](../../../images/guides/tools/common/visualize-results.png)
-
-You should now see a list of visualization files like the ones shown below.
-
-![](../../../images/guides/tools/common/visualize-results-success.png)
-
+Refer to [the general workflow guide](running-sj-workflows.md#raw-results-files) to learn how to access raw results files.
 
 ### Interpreting results
 
@@ -327,3 +214,9 @@ of this guide. Here, we will discuss each of the different output files in more 
 
 None yet! If you have any questions not covered here, feel free to reach
 out on [our contact form](https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-contact/).
+
+## Similar Topics
+
+[Running our Workflows](../analyzing-data/running-sj-workflows.md)  
+[Working with our Data Overview](../managing-data/working-with-our-data.md)   
+[Downloading/Uploading Data](../managing-data/data-transfer-app.md)   

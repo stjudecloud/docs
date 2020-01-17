@@ -1,31 +1,22 @@
-!!! Warning
-    cis-X is an upcoming St. Jude Cloud tool and is not yet publicly available.
-    See [cis-X on St. Jude Research][zhang-lab] for more information.
-
 |                       |                                            |
 |-----------------------|--------------------------------------------|
 | **Authors**           | Yu Liu, Chunliang Li, Shuhong Shen         |
 | **Publication**       | N/A (not published)                        |
 | **Technical Support** | [Contact Us](https://stjude.cloud/contact) |
 
-Activating regular variants usually cause the cis-activation of target genes.
-To find cis-activated genes, allelic specific/imbalance expressions (ASE) and
-outlier high expression (OHE) signals are used. Variants in the same
-topologically associated domains with the candidates can then be searched,
-including structural variants (SV), copy number aberrations (CNA), and single
-nucleotide variations (SNV) and insertion/deletions (indel).
+## Overview
 
-A transcription factor binding analysis is also done, using motifs from
-[HOCOMOCO] v10 models.
+Activating regular variants usually cause the cis-activation of target genes. To find cis-activated genes, allelic specific/imbalance expressions (ASE) and
+outlier high expression (OHE) signals are used. Variants in the same topologically associated domains with the candidates can then be searched, including structural variants (SV), copy number aberrations (CNA), and single nucleotide variations (SNV) and insertion/deletions (indel).
+
+A transcription factor binding analysis is also done, using motifs from [HOCOMOCO] v10 models.
 
 cis-X currently only works with hg19 (GRCh37).
 
 [HOCOMOCO]: http://hocomoco11.autosome.ru/
 [zhang-lab]: https://www.stjuderesearch.org/site/lab/zhang/cis-x
 
-## Overview
-
-<h3 id="inputs">Inputs</h3>
+## Inputs
 
 | Name                         | Type      | Description                                                                                     | Example        |
 |------------------------------|-----------|-------------------------------------------------------------------------------------------------|----------------|
@@ -51,35 +42,6 @@ cis-X currently only works with hg19 (GRCh37).
 [Somatic SVs]: #somatic-svs
 [Somatic CNVs]: #somatic-cnvs
 
-<h3 id="outputs">Outputs</h3>
-
-| Name                        | Description                                                                                                        |
-|-----------------------------|--------------------------------------------------------------------------------------------------------------------|
-| [cis-activated candidates]  | cis-activated candidates in the tumor genome under analysis                                                        |
-| [SV candidates]             | Structural variant (SV) candidates predicted as the causal for the cis-activated genes in the regulatory territory |
-| [CNA candidates]            | Copy number aberrations (CNA) predicted as the causal for the cis-activated genes in the regulatory territory      |
-| [SNV/indel candidates]      | SNV/indel candidates predicted as functional and predicted transcription factors                                   |
-| [OHE results]               | Raw outlier high expression (OHE) results                                                                          |
-| [Gene level ASE results]    | Raw gene level allelic specific expression (ASE) results                                                           |
-| [Single marker ASE results] | Raw single marker allelic specific expression (ASE) results                                                        |
-
-[cis-activated candidates]: #cis-activated-candidates
-[SV candidates]: #sv-candidates
-[CNA candidates]: #cna-candidates
-[SNV/indel candidates]: #snvindel-candidates
-[OHE results]: #ohe-results
-[Gene level ASE results]: #gene-level-ase-results
-[Single marker ASE results]: #single-marker-ase-results
-
-## Getting started
-
-After logging in, click the "Start" button on the [cis-X tool page]. This
-creates a new DNAnexus project and imports the tool.
-
-With subsequent runs, the sidebar shows "Launch Tool", meaning the project with
-the tool already exists. Click "Launch Tool" to start a new analysis.
-
-[cis-X tool page]: https://platform.stjude.cloud/tools/cis-x
 
 ### Input file configuration
 
@@ -92,7 +54,7 @@ files can be uploaded via the [data transfer application](../managing-data/data-
     somatic CNVs can be "empty", using such inputs will produce results with a
     much higher false positive rate.
 
-<h4 id="single-nucleotide-variants">Single nucleotide variants</h4>
+<h4 id="Single nucleotide variants">Single nucleotide variants</h4>
 
 A list of single nucleotide markers is a tab-delimited file with the
 following columns:
@@ -115,7 +77,8 @@ This file can be generated with Bambino.
 | chr11 | 61396 | TT         |                    |                     0 |                       3 |                      0 |                       10 |
 | chr11 | 72981 |            | T                  |                     1 |                       3 |                      2 |                        3 |
 
-<h4 id="cnvloh-regions">CNV/LOH regions</h4>
+
+<h4 id="CNV/LOH regions">CNV/LOH regions</h4>
 
 The CNV/LOH regions are all the genomic regions carrying copy number
 variations (CNV) or loss of heterozygosity (LOH), which will be filtered out
@@ -140,7 +103,9 @@ This file can be generated with CONSERTING.
 | chr9  |     10712 | 37855747 | SJALL018373_D1 | 0.471181417 |          | LOH    |
 | chr9  |  20276901 | 20703900 | SJALL018373_D1 |      -0.978 |   -5.696 | CNV    |
 
-<h4 id="gene-expression-table">Gene expression table</h4>
+
+<h4 id="Gene expression table">Gene expression table</h4>
+
 
 The gene expression table is a tab-delimited file containing gene level
 expressions for the tumor under analysis. The expressions are in FPKM
@@ -167,7 +132,8 @@ expression matrices generated from a larger cohort.
 | ENSG00000261122.2 | 5S_rRNA  | lincRNA | NOVEL  | chr16 | 34977639 | 34990886 |         0.0000 |
 | ENSG00000249352.3 | 7SK      | lincRNA | NOVEL  | chr5  | 68266266 | 68325992 |         4.5937 |
 
-<h4 id="somatic-snvindels">Somatic SNV/indels</h4>
+
+<h4 id="Somatic SNV/indels">Somatic SNV/indels</h4>
 
 This is a tab-delimited file containing somatic sequence mutations present in
 the genome under analysis. It includes both single nucleotide variants (SNV)
@@ -197,7 +163,8 @@ steps taken in "[The genetic basis of early T-cell precursor acute lymphoblastic
 | chr1  | 24782720 | G   | A   | snv  |
 | chr11 | 82896176 | T   | C   | snv  |
 
-<h4 id="somatic-svs">Somatic SVs</h4>
+
+<h4 id="Somatic SVs">Somatic SVs</h4>
 
 This is a tab-delimited file containing somatic-acquired structural variants
 (SV) in the cancer genome. The file must have the following columns:
@@ -224,7 +191,8 @@ This file can be generated by CREST.
 | chr11 | 33913169 | +    | chr7 | 142494049 | -    | CTX  |
 | chr11 | 64219334 | +    | chr2 | 205042527 | -    | CTX  |
 
-<h4 id="somatic-cnvs">Somatic CNVs</h4>
+
+<h4 id="Somatic CNVs">Somatic CNVs</h4>
 
 This is a tab-delimited file containing the genomic
 regions with somatic-acquired copy number aberrations (CNA) in the cancer
@@ -246,30 +214,57 @@ This file can be generating by CONSERTING.
 |------|---------:|---------:|------:|
 | chr9 | 20276901 | 20703900 |-5.696 |
 
-## Uploading data
 
-cis-X requires a total of eight files to be uploaded, as described in "[Input
-file configuration]". These files can be uploaded via the [data transfer
-application](../managing-data/data-transfer-app.md) or [command line](../analyzing-data/command-line.md).
+## Outputs
+
+| Name                        | Description                                                                                                        |
+|-----------------------------|--------------------------------------------------------------------------------------------------------------------|
+| [cis-activated candidates]  | cis-activated candidates in the tumor genome under analysis                                                        |
+| [SV candidates]             | Structural variant (SV) candidates predicted as the causal for the cis-activated genes in the regulatory territory |
+| [CNA candidates]            | Copy number aberrations (CNA) predicted as the causal for the cis-activated genes in the regulatory territory      |
+| [SNV/indel candidates]      | SNV/indel candidates predicted as functional and predicted transcription factors                                   |
+| [OHE results]               | Raw outlier high expression (OHE) results                                                                          |
+| [Gene level ASE results]    | Raw gene level allelic specific expression (ASE) results                                                           |
+| [Single marker ASE results] | Raw single marker allelic specific expression (ASE) results                                                        |
+
+[cis-activated candidates]: #cis-activated-candidates
+[SV candidates]: #sv-candidates
+[CNA candidates]: #cna-candidates
+[SNV/indel candidates]: #snvindel-candidates
+[OHE results]: #ohe-results
+[Gene level ASE results]: #gene-level-ase-results
+[Single marker ASE results]: #single-marker-ase-results
 
 
-## Running the tool
 
-!!! todo
+## Creating a workspace
+Before you can run one of our workflows, you must first create a workspace in DNAnexus for the run. Refer to [the general workflow guide](running-sj-workflows.md#getting-started) to learn how to create a DNAnexus workspace for each workflow run.
 
-## Monitoring run progress
+You can navigate to the Cis-X workflow page [here](https://platform.stjude.cloud/tools/cis-x)
 
-!!! todo
+## Uploading Input Files
 
-## Analysis of results
+cis-X requires a total of eight files to be uploaded, as [input](#input-file-configuration). 
 
-Upon a successful run of cis-X, seven tab-delimited files are saved to the
-results directory. These raw results can be processed through external tools
-for further analysis.
+Refer to [the general workflow guide](running-sj-workflows.md#uploading-files) to learn how to upload input files to the workspace you just created.
 
-### Interpreting results
 
-<h4 id="cis-activated-candidates">cis-activated candidates</h4>
+## Running the Workflow
+
+Refer to [the general workflow guide](running-sj-workflows.md#running-the-workflow) to learn how to launch the workflow, hook up input files, adjust parameters, start a run, and monitor run progress.
+
+## Analysis of Results
+Each tool in St. Jude Cloud produces a visualization that makes understanding results more accessible than working with excel spreadsheet or tab delimited files. This is the primary way we recommend you work with your results. 
+
+Refer to [the general workflow guide](running-sj-workflows.md#custom-visualizations) to learn how to access these visualizations.
+
+We also include the raw output files for you to dig into if the visualization is not sufficient to answer your research question.
+
+Refer to [the general workflow guide](running-sj-workflows.md#raw-results-files) to learn how to access raw results files.
+
+## Interpreting results
+
+### cis-activated candidates
 
 The main result file contains the cis-activated candidates in the tumor genome
 under analysis.
@@ -316,7 +311,7 @@ Coding sequence status is typically one of "none" (not specified), "unk"
 | NM_145804 | ABTB2 | chr11 | -      | 34172533 | 34379555 | cmpl         | cmpl       |       5 |           5 |            0.5 |          0.500 | 0.001953125,0.001953125,0.001953125,6.10351562500001e-05,0.000244140625 | 0.001953125,0.001953125,0.001953125,6.10351562500001e-05,0.000244140625 | 0.5,0.5,0.5,0.5,0.5   | 0.5,0.5,0.5,0.5,0.5   | 0.000644290972057077 |               0.5 | 0.000644290972057077 |    0.632049443587993 |   0.0110866672927557 | 7.6776 | bi_cohort  |              40 | 0.0367241086505276 |        1 |                   | ase_outlier     |
 | NM_003189 | TAL1  | chr1  | -      | 47681961 | 47698007 | cmpl         | cmpl       |       2 |           2 |          0.482 |          0.482 | 6.66361745922277e-28,3.30872245021211e-24                               | 6.66361745922277e-28,3.30872245021211e-24                               | 0.464912280701754,0.5 | 0.464912280701754,0.5 | 4.69553625126628e-26 | 0.482456140350877 | 4.69553625126628e-26 | 4.60632106249222e-23 | 6.11761294450693e-24 | 8.8168 | white_list |             167 | 0.0139385771987089 |        1 |                   | ase_outlier     |
 
-<h4 id="sv-candidates">SV candidates</h4>
+### SV candidates
 
 Structural variant (SV) candidates include candidates predicted as the causal
 for the cis-activated genes in the regulatory territory.
@@ -337,7 +332,7 @@ for the cis-activated genes in the regulatory territory.
 |----------------------|-----------------------|-------|---------:|------|------|----------:|------|------|
 | LMO2                 |                       | chr11 | 33913169 | +    | chr7 | 142494049 | -    | CTX  |
 
-<h4 id="cna-candidates">CNA candidates</h4>
+### CNA candidates
 
 Copy number aberration (CNA) candidates include candidates predicted as the
 causal for the cis-activated genes in the regulatory territory.
@@ -348,7 +343,7 @@ causal for the cis-activated genes in the regulatory territory.
   * `end`: genomic end location
   * `logR`: log ratio of the CNA
 
-<h4 id="snvindel-candidates">SNV/indel candidates</h4>
+### SNV/indel candidates
 
 SNV/indel candidates include predicted candidates as functional and predicted
 transcription factors. The mutations are also annotated for known regulatory
@@ -373,7 +368,7 @@ cell lines.
 |-------|---------:|-----|-----|------|--------|------|-----------------------------|---------------------|------------------------------------------------------------------------------|-------------------|
 | chr1  | 47696311 | C   | T   | snv  | TAL1   | 1696 | BCL11A,CEBPG,PBX2,YY1,ZBTB4 |                     | Brain,Digestive,ES-deriv,ESC,HSC & B-cell,Heart,Muscle,Other,Sm. Muscle,iPSC |                   |
 
-<h4 id="ohe-results">OHE results</h4>
+### OHE results
 
 OHE results are the raw results for the outlier expression test.
 
@@ -396,7 +391,7 @@ OHE results are the raw results for the outlier expression test.
 | 7SK  |   4.5937 |      na |                na |      na |         264 | 0.716284011918374 |         162 |         na |      na |         na |
 | A1BG |   0.2312 |      24 | 0.900132642257996 |      21 |         264 |  0.84055666600945 |         222 |         na |      na |         na |
 
-<h4 id="gene-level-ase-results">Gene level ASE results</h4>
+### Gene level ASE results
 
 Gene level ASE results are the raw results from the gene level ASE test.
 
@@ -429,7 +424,7 @@ Gene level ASE results are the raw results from the gene level ASE test.
 | NM_024684 | AAMDC    | chr11 | +      |  77532207 |  77583398 | cmpl         | cmpl       |       2 |           0 |          0.079 |             na | 0.924775093657227,0.0331439677875056 | na               | 0.00892857142857145,0.149122807017544  | na             | 0.175073458624837 | 0.0790256892230577 | 0.175073458624837 |          1 | 0.480780882445856 |
 | NM_015423 | AASDHPPT | chr11 | +      | 105948291 | 105969419 | cmpl         | cmpl       |       2 |           0 |          0.023 |             na | 0.749258624760841,1                  | na               | 0.0384615384615384,0.00769230769230766 | na             |  0.86559726476049 |  0.023076923076923 |  0.86559726476049 |          1 | 0.873257417545981 |
 
-<h4 id="single-marker-ase-results">Single marker ASE results</h4>
+### Single marker ASE results
 
 Single marker ASE results are the raw results from the single marker ASE test.
 
@@ -453,6 +448,17 @@ Single marker ASE results are the raw results from the single marker ASE test.
 | chr11 | 204147 | G   |   A |      36 |        0.472 |      85 |        0.553 |    38 |  47 |    0.385669420119278 | 0.0529411764705883 |
 | chr11 | 205198 | C   |   A |      23 |        0.522 |      83 |        0.313 |    57 |  26 | 0.000877551780002863 |  0.186746987951807 |
 
+## Frequently asked questions
+
+None yet! If you have any questions not covered here, feel free to reach
+out on [our contact form](https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-contact/).
+
 [Ensembl]: http://www.ensembl.org/
 [RefSeq]: https://www.ncbi.nlm.nih.gov/refseq/
 [NIH Roadmap Epigenomics Project]: https://egg2.wustl.edu/roadmap/web_portal/index.html
+
+## Similar Topics
+
+[Running our Workflows](../analyzing-data/running-sj-workflows.md)  
+[Working with our Data Overview](../managing-data/working-with-our-data.md)   
+[Downloading/Uploading Data](../managing-data/data-transfer-app.md)   

@@ -24,6 +24,8 @@ pages:
           - 'Uploading/Downloading Data': 'guides/genomics-platform/managing-data/data-transfer-app.md'
           - 'Renewing your Data Access': 'guides/genomics-platform/managing-data/how-to-fill-out-Extension.md'
       - 'Analyzing Data':
+          - 'Command Line Interaction': 'guides/genomics-platform/analyzing-data/command-line.md' 
+          - 'Running our Workflows': 'guides/genomics-platform/analyzing-data/running-sj-workflows.md'
           - 'SJ Cloud Workflows':
               - 'NeoepitopePred': 'guides/genomics-platform/analyzing-data/neoepitope.md'
               - 'ChIP-Seq Peak Calling': 'guides/genomics-platform/analyzing-data/chipseq.md'
@@ -35,7 +37,6 @@ pages:
               - 'XenoCP': 'guides/genomics-platform/analyzing-data/xeno-cp.md'
               - 'RNA Indel': 'guides/genomics-platform/analyzing-data/rna-indel.md'
               - 'FKPM': 'guides/genomics-platform/analyzing-data/fkpm.md'
-          - 'Command Line Interaction': 'guides/genomics-platform/analyzing-data/command-line.md'
           - 'Creating your own Workflow': 'guides/genomics-platform/analyzing-data/creating-a-cloud-app.md'
   - 'PeCan':
       - 'PeCan homepage': 'guides/applications/PeCan/pecan.md'

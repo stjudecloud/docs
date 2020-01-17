@@ -15,7 +15,7 @@ environment.
 
 
 
-### Selecting Data
+## Selecting Data
 
 ![](../../../images/guides/data/data-browser-overview.png)
 
@@ -36,7 +36,7 @@ After clicking on *Request Data*, we ask that you review your selection and make
 
 
 
-### Making the Request
+## Making the Request
 
 Now that you have selected your data, you will need to fill in some information to complete the request. From here, necessary information will be collected through a setup wizard. All of your progress will be automatically saved, and you can follow along with your progress on the left sidebar. 
 
@@ -45,10 +45,10 @@ This information will be collected whether you are requesting open-access or con
 ![](../../../images/guides/data/request-data-setup-wizard1.gif)
 
 
-### Applying for Data Access
+## Applying for Data Access
 If you already have access to the data or are requesting open-access data, you will not be prompted to go through this section.
 
-#### Signing the Data Access Agreement
+### Signing the Data Access Agreement
 
 Every person who requests access to our controlled-access data must sign the [Data Access Agreememnt (DAA)](glossary.md#data-access-agreement). If you are located in the United States of America, you can opt in to completing the DAA through an electronic setup wizard. If you are not located in the USA, or would like to complete the form manually, you can follow our instructions on [Filling Out The Data Access Agreement](how-to-fill-out-DAA.md).
 
@@ -60,7 +60,7 @@ Request approval typically takes a week or two if your data access agreement is 
 !!! tip 
     If you receive an email from us that your DAA is incomplete, you may edit your DAA and upload the revised copy using the 'Add a Form' button the on [Manage Data](../managing-data/working-with-our-data.md) page. 
 
-#### Managing your Data Request
+## Managing your Data Request
 Go to our [Managing Data Overview](../managing-data/working-with-our-data.md) documentation page to learn how to check the status of your data request, complete an EDAA draft, upload a revised DAA, and ultimately access your data from our [Manage Data](https://platform.stjude.cloud/requests/manage) page.
 
 
@@ -70,7 +70,7 @@ Go to our [Managing Data Overview](../managing-data/working-with-our-data.md) do
     on your data access agreement. We recommend that you work with the data
     in the cloud if it's feasible; the data provided by St. Jude is free, the compute charges are reasonable, and working in the cloud helps to eliminate the long, error-prone downloading process. Porting your tools to be run in the cloud is easy, as well. We recommend you follow [this guide](../analyzing-data/creating-a-cloud-app.md) to get started.
 
-### Similar Topics
+## Similar Topics
 
 [About our Data](about-our-data.md)  
 [About our Decision Process & Terminology](glossary.md)    

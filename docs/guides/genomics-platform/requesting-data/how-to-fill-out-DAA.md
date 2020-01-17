@@ -9,7 +9,7 @@ If you reside outside of the US, you must fill out the Data Access Agreement man
 
 ## The Data Access Agreement
 
-#### Downloading Data
+### Downloading Data
 
 *If and only if* you wish to download the genomic data locally, you must have the [Principal Investigator](#principal-investigator) initial on page 7 and have the [Information Security Officer](#information-security-officer) sign on page 13. If filling out the Data Access Agreement electronically, you must select the option to download within the setup wizard and input the contact information of your institution’s Information Security Officer. 
 

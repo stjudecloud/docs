@@ -4,6 +4,8 @@
 | **Publication** | [The Neoepitope Landscape in Pediatric Cancers. Genome Medicine. 2017. 9.1: 78](https://www.ncbi.nlm.nih.gov/pubmed/28854978). |
 | **Technical Support** | [Contact Us](https://stjude.cloud/contact/) |
 
+## Overview
+
 Cancers are caused by somatically acquired alterations including single 
 nucleotide variations (SNVs), small insertion/deletions (indels),
 translocations, and other types of rearrangements. The genes affected by
@@ -15,9 +17,7 @@ sequencing data. The workflow has been used to characterize neoepitope
 landscape of 23 subtypes of pediatric cancer in the Pediatric Cancer
 Genome Project[^1].
 
-## Overview
-
-**Inputs**
+## Inputs
 
 | Name | Type | Description | Example |
 |--|--|--|--|
@@ -29,84 +29,6 @@ Genome Project[^1].
 | Peptide size | Parameter | Size of the peptide. | 9 |
 | Affinity threshold | Parameter | Affinity cutoff for epitope prediction report. | 500 |
 
-**Outputs**
-
-| Name | Description |
-|--|--|
-| Epitope affinity prediction (html) | Epitope affinity. The peptide with affinity &lt; cutoff will be highlighted. |
-| Epitope affinity prediction (xlsx) | Excel tables for the information of all epitopes |
-| Affinity (raw output) | Epitope affinity |
-| Peptide sequence (raw output) | Peptide sequences in Fasta format |
-
-**HLA Typing Algorithm**
-
-The HLA typing algorithm is used to predict the HLA class I alleles.
-Users can either provide FastQ (paired or single end reads) or a BAM
-file as input. When using a BAM file as input, the reads surrounding the
-HLA loci and unmapped reads will be extracted. The reads will be fed
-into Optitype for HLA typing. The default settings for Optitype are
-used. The output of the HLA type can be combined with the our epitope
-detection algorithm to perform affinity prediction of neoepitopes.
-
-If you use **FastQ** files as input:  
-
-1.  The input FastQs will be aligned against the Optitype HLA reference
-    sequences using razers3 (see <https://github.com/FRED-2/OptiType>).
-2.  The fished FastQs will be used for HLA typing using Opitype.
-
-If you use **BAM** files as input:  
-
-1.  The reads falling within the HLA loci and their paralogous loci will
-    be extracted.
-2.  The reads unmapped to the human genome will be extracted.
-3.  The reads from step 1 and 2 will be combined and deduplicated (in
-    FastQ format).
-4.  The input FastQs will be aligned against the Optitype HLA reference
-    sequences using razers3 (see <https://github.com/FRED-2/OptiType>).
-5.  The fished FastQs will be used for HLA typing using Opitype.
-
-**Epitope Prediction Algorithm**
-
-The epitope prediction algorithm first extracts peptides covering an array
-of tiling peptides (size defined by users) overlapping each missense
-mutation or gene fusion. Fusion junctions can be identified using RNA-Seq
-by fusion detection tools (Li et. al, unpublished). NetMHCcons[^3] is subsequently 
-used to predict affinities of the peptide array for each HLA receptor in 
-each sample. The neoepitope with affinity lower than the threshold will 
-be highlighted in output file (default 500 nM). Below is an outline of internal steps the algorithm performs in order to generate the final report.
-
-1.  Check the version of the genomic position of the input SNV/fusion
-    file.
-2.  Lift over the genomic coordinations if the reference genomic
-    position is not HG19. Currently, the internal genome annotation was
-    based on HG19 and the genome coordinates of the mutation files will
-    be adjusted to HG19 for peptide extraction.
-3.  Extract the peptide flanking the mutations.
-4.  Run NetMHCcons to obtain the affinity prediction of the peptides.
-5.  Produce the affinity report of each peptide.
-
-## Getting started
-
-To get started, you need to navigate to the [NeoepitopePred tool page](https://platform.stjude.cloud/tools/neoepitope). You'll need to click
-the "Start" button in the left hand pane. This creates a cloud workspace
-in DNAnexus with the same name as the tool. After this, you will be able 
-to upload your input files to that workspace.
-
-![](../../../images/guides/tools/neoepitope/click-start.gif)
-
-!!! note
-    If you can't see the "Start" button, one of these two scenarios is likely the case:
-
-    * You see three buttons on the left sidebar instead of one. In this case,
-      you've already clicked the "Start" button previously, and a cloud workspace has
-      already been created for you. In this case, you're good! You can move
-      on to the next section.
-    * If you cannot see *any* buttons on the left side, you probably have not
-      logged in yet. If you see a sentence that says "Log in to launch this 
-      tool", simply login and try again.
-
-    If neither of these are the case and you still can't click "Start",
-    [contact us](https://stjude.cloud/contact).
 
 ### Input file configuration
 
@@ -136,112 +58,97 @@ by users.
 
 ![](../../../images/guides/tools/neoepitope/mutation-file-example.png)
 
-## Uploading data
+## Outputs
 
-NeoepitopePred takes the following files as input:
+| Name | Description |
+|--|--|
+| Epitope affinity prediction (html) | Epitope affinity. The peptide with affinity &lt; cutoff will be highlighted. |
+| Epitope affinity prediction (xlsx) | Excel tables for the information of all epitopes |
+| Affinity (raw output) | Epitope affinity |
+| Peptide sequence (raw output) | Peptide sequences in Fasta format |
+
+## Workflow Steps
+
+### HLA Typing Algorithm
+
+The HLA typing algorithm is used to predict the HLA class I alleles.
+Users can either provide FastQ (paired or single end reads) or a BAM
+file as input. When using a BAM file as input, the reads surrounding the
+HLA loci and unmapped reads will be extracted. The reads will be fed
+into Optitype for HLA typing. The default settings for Optitype are
+used. The output of the HLA type can be combined with the our epitope
+detection algorithm to perform affinity prediction of neoepitopes.
+
+If you use **FastQ** files as input:  
+
+1.  The input FastQs will be aligned against the Optitype HLA reference
+    sequences using razers3 (see <https://github.com/FRED-2/OptiType>).
+2.  The fished FastQs will be used for HLA typing using Opitype.
+
+If you use **BAM** files as input:  
+
+1.  The reads falling within the HLA loci and their paralogous loci will
+    be extracted.
+2.  The reads unmapped to the human genome will be extracted.
+3.  The reads from step 1 and 2 will be combined and deduplicated (in
+    FastQ format).
+4.  The input FastQs will be aligned against the Optitype HLA reference
+    sequences using razers3 (see <https://github.com/FRED-2/OptiType>).
+5.  The fished FastQs will be used for HLA typing using Opitype.
+
+### Epitope Prediction Algorithm
+
+The epitope prediction algorithm first extracts peptides covering an array
+of tiling peptides (size defined by users) overlapping each missense
+mutation or gene fusion. Fusion junctions can be identified using RNA-Seq
+by fusion detection tools (Li et. al, unpublished). NetMHCcons[^3] is subsequently 
+used to predict affinities of the peptide array for each HLA receptor in 
+each sample. The neoepitope with affinity lower than the threshold will 
+be highlighted in output file (default 500 nM). Below is an outline of internal steps the algorithm performs in order to generate the final report.
+
+1.  Check the version of the genomic position of the input SNV/fusion
+    file.
+2.  Lift over the genomic coordinations if the reference genomic
+    position is not HG19. Currently, the internal genome annotation was
+    based on HG19 and the genome coordinates of the mutation files will
+    be adjusted to HG19 for peptide extraction.
+3.  Extract the peptide flanking the mutations.
+4.  Run NetMHCcons to obtain the affinity prediction of the peptides.
+5.  Produce the affinity report of each peptide.
+
+## Creating a workspace
+Before you can run one of our workflows, you must first create a workspace in DNAnexus for the run. Refer to [the general workflow guide](running-sj-workflows.md#getting-started) to learn how to create a DNAnexus workspace for each workflow run.
+
+You can navigate to the NeoepitopePred workflow page [here](https://platform.stjude.cloud/tools/neoepitopepred).
+
+## Uploading Input files
+
+NeoepitopePred takes the following files as [input](#inputs):
 
 * A pair of Gzipped FastQ files or an HG19/HG38 aligned BAM file. These can be
   generated from whole genome sequencing, whole exome sequencing, or RNA-Seq. 
 * A file describing the mutations in a sample. 
 
-You can upload these files using the [data transfer application](../managing-data/data-transfer-app.md)
-or by uploading them through [the command line](../analyzing-data/command-line.md).
-Both of the guides linked here will contain more details on how to upload
-data using that method, so we defer to those guides here.
+Refer to [the general workflow guide](running-sj-workflows.md#uploading-files) to learn how to upload input files to the workspace you just created.
 
-!!! tip
-    If you plan to upload data through the St. Jude Cloud Data Transfer application
-    (recommended), you can click the "Upload Data" button in the left panel. If you
-    have not already downloaded the app, do so by clicking "Download app". Once you
-    have the app, you can click "Open app" to open the app with the tool's cloud 
-    workspace already opened and ready to drag-and-drop files into it!
+## Running the Workflow
 
-    For more information, check out the [data transfer application](../managing-data/data-transfer-app.md) guide.
-
-## Running the tool
+Refer to [the general workflow guide](running-sj-workflows.md#running-the-workflow) to learn how to launch the workflow, hook up input files, adjust parameters, start a run, and monitor run progress.
 
 !!! caution
     This pipeline assumes HG19 coordinates in the mutation file. If the
     coordinates are based on HG38, the coordinates will lifted over to HG19
     to perform epitope affinity prediction.
 
-Once you've uploaded data to your cloud workspace, 
-click "Launch Tool" on the [tool's landing page](https://platform.stjude.cloud/tools/neoepitope). 
-A dropdown will present the different presets for running the workflow. Here, you can select whether you wish to start with FastQ files or a BAM file.
 
-![](../../../images/guides/tools/neoepitope/launch-tool.gif)
+## Analysis of Results
+Each tool in St. Jude Cloud produces a visualization that makes understanding results more accessible than working with excel spreadsheet or tab delimited files. This is the primary way we recommend you work with your results. 
 
-### Selecting parameters
+Refer to [the general workflow guide](running-sj-workflows.md#custom-visualizations) to learn how to access these visualizations.
 
-There are a number of other parameters that can be customized. To 
-see the options available, click the gear cog next to the 
-"Neoepitope Prediction" substep. For a full list of the parameters and their
-descriptions, see [the input section](#input) (specifically, you are 
-looking at the items in the table labeled "parameters").
+We also include the raw output files for you to dig into if the visualization is not sufficient to answer your research question.
 
-![](../../../images/guides/tools/neoepitope/change-parameters.gif)
-
-### Hooking up inputs
-
-Next, you'll need to hook up the FastQ/BAM and mutation files you uploaded in 
-[the upload data section](#uploading-data). You can do this by 
-clicking on the `BAM alignment file` and `BAM index file` and `Mutation array` slots and
-selecting the respective files.
-
-![](../../../images/guides/tools/neoepitope/hookup-inputs.gif)
-
-### Starting the workflow
-
-Once your input files are hooked up, you should be able to start the workflow
-by clicking the "Run as Analysis..." button in the top right hand corner
-of the workflow dialog.
-
-![](../../../images/guides/tools/neoepitope/run-analysis.gif)
-
-!!! tip
-    If you cannot click this button, please ensure that all of the inputs are correctly hooked up (see [hooking up inputs](#hooking-up-inputs)).
-
-    If you're still have trouble, please [contact us](https://stjude.cloud/contact) and include
-    a screenshot of the workflow screen above.
-
-## Monitoring run progress
-
-Once you have started one or more NeoepitopePred runs, you can safely close your
-browser and come back later to check the status of the jobs. To do this,
-navigate to the [tool's landing page](https://platform.stjude.cloud/tools/neoepitope). 
-Next, click "View Results" then select the "View Running Jobs" option. 
-You will be redirected to the job monitoring page. Each job you kicked off
-gets one row in this table.
-
-![](../../../images/guides/tools/neoepitope/monitoring-jobs.gif) 
-
-You can click the "+" on any of the runs to check 
-the status of individual steps of the ChIP-Seq pipeline.
-Other information, such as time, cost of individual steps in the pipeline, 
-and even viewing the job logs can accessed by clicking around the sub-items.
-
-![](../../../images/guides/tools/neoepitope/job-detailed-view.gif) 
-
-!!! tip 
-    Power users can refer to the [DNAnexus Monitoring Executions Documentation](https://documentation.dnanexus.com/user/running-apps-and-workflows/monitoring-executions) for advanced capabilities for monitoring jobs.
-
-## Analysis of results
-
-Each tool in St. Jude Cloud produces a visualization that makes understanding
-results more accessible than working with excel spreadsheet or tab delimited
-files. This is the primary way we recommend you work with your results. We also
-include the raw output files for you to dig into if the visualization is not 
-sufficient to answer your research question.
-
-### Finding the raw results files
-
-Navigate to the [tool's landing page](https://platform.stjude.cloud/tools/neoepitopepred). 
-In the left hand pane, click "View Results" then "View Results Files". You will
-be taken to the filesystem view your cloud workspace. This is similar to your the
-filesystem on your computer, and you can do many common operations such as deleting,
-renaming, and moving files.
-
-![](../../../images/guides/tools/neoepitope/neo-pred-results.png) 
+Refer to [the general workflow guide](running-sj-workflows.md#raw-results-files) to learn how to access raw results files.
 
 ### Interpreting results
 
@@ -320,6 +227,14 @@ described above in Excel files. The files can be downloaded and opened with Exce
 None yet! If you have any questions not covered here, feel free to reach
 out on [our contact form](https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-contact/).
 
+
+## Similar Topics
+
+[Running our Workflows](../analyzing-data/running-sj-workflows.md)  
+[Working with our Data Overview](../managing-data/working-with-our-data.md)   
+[Downloading/Uploading Data](../managing-data/data-transfer-app.md)   
+
+
 [^1]: Downing JR, Wilson RK, Zhang J, et al. The Pediatric Cancer Genome
 Project. Nature genetics. 2012;44(6):619-622.
 [^2]: Szolek A, Schubert B, Mohr C, Sturm M, Feldhahn M, Kohlbacher O:
@@ -328,3 +243,4 @@ data. Bioinformatics 2014, 30:3310-3316.
 [^3]: Karosiene E, Lundegaard C, Lund O, Nielsen M: NetMHCcons: a
 consensus method for the major histocompatibility complex class I
 predictions. Immunogenetics 2012, 64:177-186.
+
