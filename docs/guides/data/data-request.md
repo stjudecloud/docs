@@ -43,7 +43,7 @@ If you already have access to the data or are requesting open-access data, you w
 
 #### Signing the Data Access Agreement
 
-Every person who requests access to our controlled-access data must sign the [Data Access Agreememnt (DAA)](../../glossary.md#data-access-agreement). If you are located in the United States of America, you can opt in to completing the DAA through an electronic setup wizard. If you are not located in the USA, or would like to complete the form manually, you can follow our instructions on [Filling Out The Data Access Agreement](../../guides/forms/how-to-fill-out-DAA).
+Every person who requests access to our controlled-access data must sign the [Data Access Agreement (DAA)](../../glossary.md#data-access-agreement). If you are located in the United States of America, you can opt in to completing the DAA through an electronic setup wizard. If you are not located in the USA, or would like to complete the form manually, you can follow our instructions on [Filling Out The Data Access Agreement](../../guides/forms/how-to-fill-out-DAA).
 
 
 If you opt to do the process through the setup wizard, the necessary information will be collected and added automatically to your agreement. Once you have completed the setup wizard, the form will be sent to you and necessary signatories through email via [DocuSign](https://www.docusign.com). You can learn more about our electronic data access agreement process [here](../../guides/forms/how-to-fill-out-DAA.md#the-electronic-data-access-agreement-process). 
