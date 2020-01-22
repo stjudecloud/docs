@@ -325,5 +325,9 @@ of this guide. Here, we will discuss each of the different output files in more 
 
 ## Frequently asked questions
 
-None yet! If you have any questions not covered here, feel free to reach
+If you have any questions not covered here, feel free to reach
 out on [our contact form](https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-contact/).
+
+### Submit batch jobs on command line
+
+See [How can I run an analysis workflow on multiple sample files at the same time?](https://www.stjude.cloud/docs/faq/#how-can-i-run-an-analysis-workflow-on-multiple-sample-files-at-the-same-time)
