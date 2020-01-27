@@ -23,15 +23,16 @@ You can apply many different capabilities of St. Jude Cloud to your research, su
 !!! note
     Please note that while it is free to receive and store our data in St. Jude Cloud, there are [compute and storage fees associated with working in the cloud, as well as egress fees for downloading our data](faq.md#will-i-be-charged-for-using-st-jude-cloud). 
 
-## Datasets
+## Studies
 
-The following projects currently distribute their data through St. Jude Cloud. Click [here](./guides/genomics-platform/requesting-data/about-our-data.md#data-access-units) for more information about the projects listed below.
+The following projects currently distribute data through St. Jude Cloud. Click [here](./guides/genomics-platform/requesting-data/about-our-data.md#data-access-units) for more information about the projects listed below. Or click on a project in the bulleted list below to go straight to the corresponding Study page.
 
-* Pediatric Cancer Genome Project (PCGP)
-* St. Jude Lifetime (SJLIFE)
-* Clinical Genomics (Clinical Pilot and G4K)
-* Sickle Cell Genome Project (SGP)
-* Childhood Cancer Survivor Study (CCSS)
+* [Pediatric Cancer Genome Project (PCGP)]()
+* [St. Jude Lifetime (SJLIFE)]()
+* [Clinical Genomics (Clinical Pilot and G4K)]()
+* [Sickle Cell Genome Project (SGP)](https://sickle-cell.stjude.cloud)
+* [Childhood Cancer Survivor Study (CCSS)]()
+
 
 ## Analysis Workflows
 
@@ -46,13 +47,14 @@ St. Jude shares a number of end-to-end analysis workflows on the cloud. Click on
 * cis-x (coming soon)
 * XenoCP (coming soon)
 
-## Portals
+## Applications
 
-St. Jude Cloud provides a number of user portals which you can use to interactively explore the results we produce. Click on the links below to
-visit each of the corresponding portals.
+St. Jude Cloud provides a number of applications which you can use for various purposes. Click on the links below to
+checkout one or more of our applications.
 
-* [Pediatric Cancer Portal (PeCan)](https://pecan.stjude.cloud). Interactively explore mutational recurrence and pathogenicity assessment of variants in pediatric cancer using a wide variety of St. Jude + publicly available data.
-* [Sickle Cell Diseases Portal](https://sickle-cell.stjude.cloud). Explore the latest from the Sickle Cell Genomics Project (a collaboration between St. Jude and Baylor College of Medicine). 
+* [Pediatric Cancer Portal (PeCan)](https://pecan.stjude.cloud). Interactively explore mutational recurrence and pathogenicity assessment of variants in pediatric cancer using a wide variety of St. Jude + publicly available data. 
+* [Visualization Community](). Explore, create, and share interactive visualizations using tools such as [ProteinPaint](https://pecan.stjude.cloud/proteinpaint/TP53) and [GenomePaint](https://genomepaint.stjude.cloud/). See [this guide](./guides/visualization-community/viz-com-about.md) to get started.
+* [Model Systems]()... 
 
 
 ## Contact Us

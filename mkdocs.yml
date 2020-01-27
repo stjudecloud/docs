@@ -52,7 +52,7 @@ pages:
       - 't-SNE Charts': 'guides/visualization-community/t-sne-charts.md'
   - 'Studies':
       - 'About/Common Features': 'guides/studies-about.md'
-      - '' : 'guides/portals/sickle-cell.md'
+      - 'Sickle Cell' : 'guides/portals/sickle-cell.md'
   - 'Frequently Asked Questions': 'faq.md'
   - 'Citing St. Jude Cloud': 'citing-stjude-cloud.md'
 
