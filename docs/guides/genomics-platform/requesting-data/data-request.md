@@ -58,10 +58,10 @@ If you opt to do the process through the setup wizard, the necessary information
 Request approval typically takes a week or two if your data access agreement is correctly and completely filled out. You will receive automated emails from notifications@stjude.cloud at the time that your request is approved.
 
 !!! tip 
-    If you receive an email from us that your DAA is incomplete, you may edit your DAA and upload the revised copy using the 'Add a Form' button the on [Manage Data](../managing-data/working-with-our-data.md) page. 
+    If you receive an email from us that your DAA is incomplete, you may edit your DAA and upload the revised copy using the 'Add a Form' button the on [My Dashboard](../managing-data/working-with-our-data.md#managing-your-data-requests) page. 
 
 ## Managing your Data Request
-Go to our [Managing Data Overview](../managing-data/working-with-our-data.md) documentation page to learn how to check the status of your data request, complete an EDAA draft, upload a revised DAA, and ultimately access your data from our [Manage Data](https://platform.stjude.cloud/requests/manage) page.
+Go to our [Managing Data Overview](../managing-data/working-with-our-data.md) documentation page to learn how to check the status of your data request, complete an EDAA draft, upload a revised DAA, and ultimately access your data from your [My Dashboard](https://platform.stjude.cloud/requests/manage) page.
 
 
 !!! info

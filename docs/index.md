@@ -6,7 +6,7 @@ Here, you'll find
 authoritative guides for accessing St. Jude Cloud data, running analysis workflows (our workflows or your own) on the cloud,
 and exploring curated data from numerous published studies by St. Jude and our collaborating institutions. For a brief overview of
 everything St. Jude Cloud provides, we recommend that you watch the video
-on [our home page](https://stjude.cloud).
+on [our home page](https://stjude.cloud). To learn more about our ecosystem, read this [guide](./ecosystem.md).
 
 Sign up [here](https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-subscribe/) to receive email notifications when we add new datasets, analysis pipelines, or other exciting features.
 
@@ -27,18 +27,24 @@ You can apply many different capabilities of St. Jude Cloud to your research, su
 
 The following projects currently distribute data through St. Jude Cloud. Click [here](./guides/genomics-platform/requesting-data/about-our-data.md#data-access-units) for more information about the projects listed below. Or click on a project in the bulleted list below to go straight to the corresponding Study page.
 
-* [Pediatric Cancer Genome Project (PCGP)]()
-* [St. Jude Lifetime (SJLIFE)]()
-* [Clinical Genomics (Clinical Pilot and G4K)]()
+* [Pediatric Cancer Genome Project (PCGP)](https://stjude.cloud/studies/pediatric-cancer-genome-project)
+* [St. Jude Lifetime (SJLIFE)](https://sjlife.stjude.org/)
+* [Clinical Genomics (Clinical Pilot and G4K)](https://stjude.cloud/studies/clinical-genomics)
 * [Sickle Cell Genome Project (SGP)](https://sickle-cell.stjude.cloud)
-* [Childhood Cancer Survivor Study (CCSS)]()
+* [Childhood Cancer Survivor Study (CCSS)](https://ccss.stjude.org/)
 
+## Applications
+
+St. Jude Cloud provides a number of applications which you can use for various purposes. Click on the links below to checkout one or more of our applications.
+
+* [Genomics Platform](https://www.stjude.cloud/data.html). Browse our publicly available genomics datasets, make a data request, and run analyses in a secure cloud environment. Go [here](./guides/genomics-platform/requesting-data/about-our-data.md) to learn more about our data.
+* [Pediatric Cancer Portal (PeCan)](https://pecan.stjude.cloud). Interactively explore mutational recurrence and pathogenicity assessment of variants in pediatric cancer using a wide variety of St. Jude + publicly available data. 
+* [Visualization Community](). Explore, create, and share interactive visualizations using tools such as [ProteinPaint](https://pecan.stjude.cloud/proteinpaint/TP53) and [GenomePaint](https://genomepaint.stjude.cloud/). See [this guide](./guides/visualization-community/viz-com-about.md) to get started.
 
 ## Analysis Workflows
 
 St. Jude shares a number of end-to-end analysis workflows on the cloud. Click on the links below to learn more about the workflow.
 
-* [PeCan Pie](https://platform.stjude.cloud/tools/pecan_pie)
 * [NeoepitopePred](https://platform.stjude.cloud/tools/neoepitopepred)
 * [ChIP-Seq Peak Calling](https://platform.stjude.cloud/tools/chip-seq)
 * [Rapid RNA-Seq Fusion Detection](https://platform.stjude.cloud/tools/rapid_rna-seq)
@@ -46,15 +52,7 @@ St. Jude shares a number of end-to-end analysis workflows on the cloud. Click on
 * [Mutational Signatures](https://platform.stjude.cloud/tools/mutational_signatures)
 * cis-x (coming soon)
 * XenoCP (coming soon)
-
-## Applications
-
-St. Jude Cloud provides a number of applications which you can use for various purposes. Click on the links below to
-checkout one or more of our applications.
-
-* [Pediatric Cancer Portal (PeCan)](https://pecan.stjude.cloud). Interactively explore mutational recurrence and pathogenicity assessment of variants in pediatric cancer using a wide variety of St. Jude + publicly available data. 
-* [Visualization Community](). Explore, create, and share interactive visualizations using tools such as [ProteinPaint](https://pecan.stjude.cloud/proteinpaint/TP53) and [GenomePaint](https://genomepaint.stjude.cloud/). See [this guide](./guides/visualization-community/viz-com-about.md) to get started.
-* [Model Systems]()... 
+* M2A (coming soon)
 
 
 ## Contact Us
