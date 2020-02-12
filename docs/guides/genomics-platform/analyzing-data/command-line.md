@@ -97,7 +97,7 @@ Cloud Platform tools:
     run. This will create a cloud workspace for you to upload your
     data to with the same name as the tool.
 
-    ![](../../../images/guides/data/rapid-rnaseq-start.png)
+    ![](../../../images/guides/data/RapidRNASeq_startPage.png)
 
 3.  Open up your terminal application and select the cloud workspace
     with the same name as the tool you are trying to run.
@@ -122,11 +122,7 @@ Cloud Platform tools:
 You can use the following steps to download data from a St. Jude Cloud
 data request:
 
-1.  Complete a data request using the St. Jude Cloud Platform. In this
-    example, we've created a request with the name "Retinoblastoma
-    Data".
-
-    ![](../../../images/guides/data/retinoblastoma-request-name.png)
+1.  Complete a data request using the Genomics Platform application. See this [guide](../requesting-data/data-request.md) for instructions.
 
 2.  Open up your terminal application and select the cloud workspace
     relevant to your data request. For instance, in this case we

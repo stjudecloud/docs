@@ -4,37 +4,25 @@ In this guide, we will explain generally how to run, from end-to-end, any of our
 
 ## Getting started
 
-To get started with any St. Jude Cloud workflow, first navigate to the appropriate tool page. Below is a complete list of the workflows we offer along with links to their corresponding tool page and documentation page.
+To get started with any St. Jude Cloud workflow, first navigate to the appropriate workflow page. Below is a complete list of the workflows we offer along with links to their corresponding tool page and documentation page.
 
 * NeoepitopePred [[tool page](https://platform.stjude.cloud/tools/neoepitopepred)] [[documentation](neoepitope.md)]
 * ChIP-Seq Peak Calling [[tool page](https://platform.stjude.cloud/tools/chip-seq)] [[documentation](chipseq.md)]
 * Rapid RNA-Seq Fusion Detection [[tool page](https://platform.stjude.cloud/tools/rapid_rna-seq)] [[documentation](rapid-rnaseq.md)]
 * WARDEN Differential Expression Analysis [[tool page](https://platform.stjude.cloud/tools/warden)] [[documentation](warden.md)]
 * Mutational Signatures [[tool page](https://platform.stjude.cloud/tools/mutational_signatures)] [[documentation](mutational-signatures.md)]
-* Cis-X [[tool page]()] [[documentation]()]
-* M2A [[tool page]()] [[documentation]()]
-* XenoCP [[tool page]()] [[documentation]()]
-* RNA Indel [[tool page]()] [[documentation]()]
-* FKPM [[tool page]()] [[documentation]()]
 
-From the appropriate tool page, click the "Start" button in the left hand pane. This creates a new DNAnexus cloud workspace (with the same name as the tool) and imports the tool. The gif below shows an example of starting the [Rapid RNA-Seq workflow](https://platform.stjude.cloud/tools/rapid_rna-seq).
 
-![](../../../images/guides/tools/rapid-rnaseq/click-start.gif)
+From the appropriate tool page, click the "Start" button in the left hand pane. This creates a new DNAnexus cloud workspace (with the same name as the tool) and imports the tool.
 
-With subsequent runs, the sidebar shows "Launch Tool", meaning the workspace with the tool already exists. Click "Launch Tool" to start a new analysis.
+![](../../../images/guides/data/analysis_workflow_click-start.png)
+
+With subsequent runs, in place of the "Start" button will be two buttons "Launch Tool" and "View Results", meaning a cloud workspace with the tool has already been created for you. In this case, you're good! You can move on to the next section.
 
 !!! note
-    If you can't see the "Start" button, one of these two scenarios is likely the case:
+    If you have not yet logged in, in place of the "Start" button will be a button the says "Log In". If you see this, simply login and try again. For a guide to creating an account go [here](../requesting-data/create-an-account.md).
 
-    * You see three buttons on the left sidebar instead of one. In this case,
-      you've already clicked the "Start" button previously, and a cloud workspace has
-      already been created for you. In this case, you're good! You can move
-      on to the next section.
-    * If you cannot see *any* buttons on the left side, you probably have not
-      logged in yet. If you see a sentence that says "Log in to launch this 
-      tool", simply login and try again.
-
-    If neither of these are the case and you still can't click "Start",
+    If you are still unable to start the workflow,
     [contact us](https://stjude.cloud/contact).
 
 
@@ -56,11 +44,11 @@ or by uploading them through [the command line](../analyzing-data/command-line.m
 
 ## Running the Workflow
 
-Once you've uploaded data to your cloud workspace, click "Launch Tool" on the tool's landing page. A dropdown will present any presets required for running the workflow. For example, some workflows ask that you select whether you wish to start with FastQ files or a BAM file.
+Once you've uploaded data to your cloud workspace, click "Launch Tool" on the tool's landing page. A dropdown will present any presets required for running the workflow. For example, some workflows ask that you select whether you wish to start with FastQ files or a BAM file. Launching the workflow will redirect you to you workspace in DNAnexus.
 
 The gif below shows an example with the [Rapid RNA-Seq workflow](https://platform.stjude.cloud/tools/rapid_rna-seq)
 
-![](../../../images/guides/tools/rapid-rnaseq/launch-tool.gif)
+![](../../../images/guides/data/example_tool-launch.gif)
 
 
 ### Selecting Parameters
@@ -90,14 +78,12 @@ Once your input files are hooked up, you should be able to start the workflow by
 
 ## Monitoring Run Progress
 
-Once you have started one or more workflow runs, you can safely close your browser and come back later to check the status of the jobs. To do this, navigate to the tool landing page of the workflow that you want to check. Next, click "View Results" then select the "View Running Jobs" option. 
-You will be redirected to the job monitoring page. Each job you kicked off gets one row in this table. See the two examples below for the Rapid RNA-Seq workflow.
+Once you have started one or more workflow runs, you can safely close your browser and come back later to check the status of the jobs. To do this, navigate to the landing page of the workflow that you want to check. Next, click "View Results" then select the "View Running Jobs" option. 
+You will be redirected to the job monitoring page in your DNAnexus workspace. Each job you kicked off gets one row in this table. See the two examples below for the Rapid RNA-Seq workflow.
 
-![](../../../images/guides/tools/rapid-rnaseq/monitoring-jobs.gif) 
+![](../../../images/guides/data/workflow_view-results_example.gif) 
 
-You can click the "+" on any of the runs to check 
-the status of individual steps of the workflow.
-Other information, such as time, cost of individual steps in the workflow, and even viewing the job logs can accessed by clicking around the sub-items.
+You can click the "+" on any of the runs to check the status of individual steps of the workflow. Other information, such as time, cost of individual steps in the workflow, and even viewing the job logs can accessed by clicking around the sub-items.
 
 ![](../../../images/guides/tools/rapid-rnaseq/job-detailed-view.gif) 
 
@@ -110,17 +96,13 @@ Other information, such as time, cost of individual steps in the workflow, and e
 ### Custom Visualizations
 Most workflows in St. Jude Cloud produce one or more visualizations that helps you to understand the raw results. 
 
-To access the visualization(s), navigate to your tool's description page (for instance, Rapid RNA-Seq's
-description page is
-[here](https://platform.stjude.cloud/tools/rapid_rna-seq)). You should see a screen similar to the one in the Rapid RNA-Seq workflow screenshot below. In the left hand pane, select "Visualize Results".
+To access the visualization(s), navigate to the landing page of the workflow that you want to check. Next, click "View Results" then select the "Visualize Results" option. 
 
-![Click "Visualize Results"](../../../images/guides/tools/common/visualize-results.png)
+![Click "Visualize Results"](../../../images/guides/data/workflow_VisualizeReults_example.gif)
 
-You should now see a list of visualization files like the ones shown below for the Rapid RNA-Seq workflow. Click on a visualization name to explore.
+You should now see a list of visualization files. Click on a visualization name to explore.
 
-![](../../../images/guides/tools/common/visualize-results-success.png)
-
-Below is a brief description of two custom visualizations.
+Below is a brief description of two of our custom visualizations.
 
 #### ProteinPaint BigWig Viewer
 
@@ -181,12 +163,11 @@ understanding of how it works.
 
 If additionally, you would like to view raw output files, you may do so by following the directions below. 
 
-Navigate to your tool's landing page (for instance, Rapid RNA-Seq's tool landing page is
-[here](https://platform.stjude.cloud/tools/rapid_rna-seq)). You should see a screen similar to the one in the screenshot below. In the left hand pane, select "View Results Files".
+To access the raw output file, navigate to the landing page of the workflow that you want to check. Next, click "View Results" then select the "View Results Files" option.
 
-![Click "View Results Files"](../../../images/guides/tools/common/raw-results.png)
+![Click "View Results Files"](../../../images/guides/data/workflow_Raw-results_example.gif)
 
-You should now be in the filesystem view of your workflow's workspace with access to files that you
+You should now be in the filesystem view of your workflow's workspace in DNAnexus with access to files that you
 uploaded as well as results files that are generated. See the example filesystem view below for the Rapid RNA-Seq workflow.
 
 ![](../../../images/guides/tools/rapid-rnaseq/rapid-rna-results.png) 

@@ -43,7 +43,7 @@ St. Jude Cloud provides a number of applications which you can use for various p
 
 ## Analysis Workflows
 
-St. Jude shares a number of end-to-end analysis workflows on the cloud. Click on the links below to learn more about the workflow.
+St. Jude shares a number of end-to-end analysis workflows as part of the Genomics Platform application. Click on the links below to learn more about the workflow.
 
 * [NeoepitopePred](https://platform.stjude.cloud/tools/neoepitopepred)
 * [ChIP-Seq Peak Calling](https://platform.stjude.cloud/tools/chip-seq)

@@ -62,12 +62,11 @@ Refer to [the general workflow guide](running-sj-workflows.md#uploading-files) t
 Refer to [the general workflow guide](running-sj-workflows.md#running-the-workflow) to learn how to launch the workflow, hook up input files, adjust parameters, start a run, and monitor run progress.
 
 For the ChIP-Seq workflow, you will see special preset options in the "Launch Tool" dropdown. These are explained below. 
- 
-![](../../../images/guides/tools/chipseq/launch-tool.gif)
 
-You'll need to decide **(1)** whether you'd like to run broad/narrow peak
+
+You'll need to decide **(1)** whether you'd like to run broad OR narrow peak
 calling and **(2)** whether you have a case sample and a control sample (preferred)
-or just a case sample. This will determine which preset you should click in this dropdown. Note that if you are not doing a case/control run, when you get to the [hooking up inputs step](running-sj-workflows.md#hooking-up-inputs) you only need to hook up the case sample.
+OR just a case sample. This will determine which preset you should click in this dropdown. Note that if you are not doing a case/control run, when you get to the [hooking up inputs step](running-sj-workflows.md#hooking-up-inputs) you only need to hook up the case sample.
 
 
 ### Broad vs. narrow peak calling
@@ -139,8 +138,6 @@ as outlined in the sections below.
 Refer to [the general workflow guide](running-sj-workflows.md#raw-results-files) to learn how to access raw results files.
 
 ChIP-Seq results will be in the `Results` folder. Select the output folder name you specified in the [parameters](#selecting-parameters) part of this workflow run.
-
-![](../../../images/guides/tools/chipseq/view-results-files.gif)
 
 
 ### Interpreting results
