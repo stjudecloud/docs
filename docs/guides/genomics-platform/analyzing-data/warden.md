@@ -112,7 +112,7 @@ LIMMA analysis.
 ## Creating a workspace
 Before you can run one of our workflows, you must first create a workspace in DNAnexus for the run. Refer to [the general workflow guide](running-sj-workflows.md#getting-started) to learn how to create a DNAnexus workspace for each workflow run.
 
-You can navigate to the WARDEN Differential Expression Analysis workflow page [here](https://platform.stjude.cloud/tools/warden).
+You can navigate to the WARDEN Differential Expression Analysis workflow page [here](https://platform.stjude.cloud/workflows/warden).
 
 ## Uploading Input Files
 

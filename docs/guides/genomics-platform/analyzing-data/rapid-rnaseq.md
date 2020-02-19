@@ -116,7 +116,7 @@ brackets `[]`.
 ## Creating a workspace
 Before you can run one of our workflows, you must first create a workspace in DNAnexus for the run. Refer to [the general workflow guide](running-sj-workflows.md#getting-started) to learn how to create a DNAnexus workspace for each workflow run.
 
-You can navigate to the Rapid RNA-Seq workflow page [here](https://platform.stjude.cloud/tools/rapid_rna-seq).
+You can navigate to the Rapid RNA-Seq workflow page [here](https://platform.stjude.cloud/workflows/rapid_rna-seq).
 
 ## Uploading Input Files
 

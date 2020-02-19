@@ -119,7 +119,7 @@ be highlighted in output file (default 500 nM). Below is an outline of internal 
 ## Creating a workspace
 Before you can run one of our workflows, you must first create a workspace in DNAnexus for the run. Refer to [the general workflow guide](running-sj-workflows.md#getting-started) to learn how to create a DNAnexus workspace for each workflow run.
 
-You can navigate to the NeoepitopePred workflow page [here](https://platform.stjude.cloud/tools/neoepitopepred).
+You can navigate to the NeoepitopePred workflow page [here](https://platform.stjude.cloud/workflows/neoepitopepred).
 
 ## Uploading Input files
 

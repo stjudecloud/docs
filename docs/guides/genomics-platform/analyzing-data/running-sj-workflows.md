@@ -6,18 +6,18 @@ In this guide, we will explain generally how to run, from end-to-end, any of our
 
 To get started with any St. Jude Cloud workflow, first navigate to the appropriate workflow page. Below is a complete list of the workflows we offer along with links to their corresponding tool page and documentation page.
 
-* NeoepitopePred [[tool page](https://platform.stjude.cloud/tools/neoepitopepred)] [[documentation](neoepitope.md)]
-* ChIP-Seq Peak Calling [[tool page](https://platform.stjude.cloud/tools/chip-seq)] [[documentation](chipseq.md)]
-* Rapid RNA-Seq Fusion Detection [[tool page](https://platform.stjude.cloud/tools/rapid_rna-seq)] [[documentation](rapid-rnaseq.md)]
-* WARDEN Differential Expression Analysis [[tool page](https://platform.stjude.cloud/tools/warden)] [[documentation](warden.md)]
-* Mutational Signatures [[tool page](https://platform.stjude.cloud/tools/mutational_signatures)] [[documentation](mutational-signatures.md)]
+* NeoepitopePred [[tool page](https://platform.stjude.cloud/workflows/neoepitopepred)] [[documentation](neoepitope.md)]
+* ChIP-Seq Peak Calling [[tool page](https://platform.stjude.cloud/workflows/chip-seq)] [[documentation](chipseq.md)]
+* Rapid RNA-Seq Fusion Detection [[tool page](https://platform.stjude.cloud/workflows/rapid_rna-seq)] [[documentation](rapid-rnaseq.md)]
+* WARDEN Differential Expression Analysis [[tool page](https://platform.stjude.cloud/workflows/warden)] [[documentation](warden.md)]
+* Mutational Signatures [[tool page](https://platform.stjude.cloud/workflows/mutational_signatures)] [[documentation](mutational-signatures.md)]
 
 
-From the appropriate tool page, click the "Start" button in the left hand pane. This creates a new DNAnexus cloud workspace (with the same name as the tool) and imports the tool.
+From the appropriate workflow page, click the "Start" button in the left hand pane. This creates a new DNAnexus cloud workspace (with the same name as the workflow) and imports the workflow.
 
 ![](../../../images/guides/data/analysis_workflow_click-start.png)
 
-With subsequent runs, in place of the "Start" button will be two buttons "Launch Tool" and "View Results", meaning a cloud workspace with the tool has already been created for you. In this case, you're good! You can move on to the next section.
+With subsequent runs, in place of the "Start" button will be two buttons "Launch Tool" and "View Results", meaning a cloud workspace with the workflow has already been created for you. In this case, you're good! You can move on to the next section.
 
 !!! note
     If you have not yet logged in, in place of the "Start" button will be a button the says "Log In". If you see this, simply login and try again. For a guide to creating an account go [here](../requesting-data/create-an-account.md).
@@ -37,14 +37,14 @@ or by uploading them through [the command line](../analyzing-data/command-line.m
     If you plan to upload data through the St. Jude Cloud Data Transfer application
     (recommended), you can click the "Upload Data" button the appears in the left panel after you click "Start". If you
     have not already downloaded the app, do so by clicking "Download app". Once you
-    have the app, you can click "Open app" to open the app with the tool's cloud 
+    have the app, you can click "Open app" to open the app with the workflow's cloud 
     workspace already opened and ready to drag-and-drop files into it!
 
     For more information, check out the [data transfer application](../managing-data/data-transfer-app.md) guide.
 
 ## Running the Workflow
 
-Once you've uploaded data to your cloud workspace, click "Launch Tool" on the tool's landing page. A dropdown will present any presets required for running the workflow. For example, some workflows ask that you select whether you wish to start with FastQ files or a BAM file. Launching the workflow will redirect you to you workspace in DNAnexus.
+Once you've uploaded data to your cloud workspace, click "Launch Tool" on the workflow's landing page. A dropdown will present any presets required for running the workflow. For example, some workflows ask that you select whether you wish to start with FastQ files or a BAM file. Launching the workflow will redirect you to you workspace in DNAnexus.
 
 The gif below shows an example with the [Rapid RNA-Seq workflow](https://platform.stjude.cloud/tools/rapid_rna-seq)
 

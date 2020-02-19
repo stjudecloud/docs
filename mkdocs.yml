@@ -14,7 +14,7 @@ pages:
   - 'Welcome to St. Jude Cloud': 'index.md'
   - 'About our Ecosystem': 'ecosystem.md'
   - 'Studies':
-    - 'About/Common Features': 'guides/studies/studies-about.md'
+    - 'About': 'guides/studies/studies-about.md'
     - 'Sickle Cell' : 'guides/studies/sickle-cell.md'
   - 'Genomics Platform': 
       - 'Creating an Account': 'guides/genomics-platform/requesting-data/create-an-account.md'

@@ -83,7 +83,7 @@ patient security very seriously, and we require that requesters are
 committed to protecting that privacy to the fullest extent.
 
 ### Can I make edits/revisions to the DAA?
-As a rule, we do not negotiate the terms of the data access agreement unless terms are found to be in conflict with the institution's state law. The terms included in the data access agreement are ultimately in place to protect our patients, a matter which we take very seriously.
+As a rule, we do not negotiate the terms of the data access agreement unless terms are found to be in conflict with the institution's state law. If you can provide the law or a case that specifically prohibits agreeing to certain provisions in the DAA, we will be glad to evaluate changes in light of those specific laws. Otherwise, we simply cannot operationally manage differing agreements with different parties. The terms included in the data access agreement are ultimately in place to protect our patients, a matter which we take very seriously.
 
 ### Can I get a Microsoft Word version of the DAA?
 No. If we provide an editable format, we cannot ensure that the legal document has not been changed. Since we do not accept different versions of this agreement, we unfortunately cannot provide the document in Word format.
@@ -100,7 +100,7 @@ Since this would be a change in terms from the original agreement, you would nee
 
 
 ### What clinical information is available about samples in St. Jude Cloud?
-Currently the only [clinical information](./guides/genomics-platform/requesting-data/about-our-data.md#metadata) we provide is age at diagnosis, diagnosis, ethnicity, sex, race, and oncotree disease code. Unfortunately, even if we do collect other information, such as other supportive oncology data, it is not available on the cloud at this time. We are working towards being able to provide additional clinical annotations in the future.
+Currently the [clinical information](./guides/genomics-platform/requesting-data/about-our-data.md#metadata) we provide is age at diagnosis, diagnosis, ethnicity, sex, race, and oncotree disease code. Unfortunately, even if we do collect other information, such as other supportive oncology data, it is not available on the cloud at this time. We are working towards being able to provide additional clinical annotations such as outcome and survival data in the future.
 
 ### Can I get a copy of IRB consent forms?
 Unfortunately, we will not be able to share blank consent forms at the current time. We have chosen to remain consistent with the requirements of the other major genomic data repositories in that (1) there is an internal vetting process by the St. Jude IRB to ensure samples may be shared with the research community, but (2) we do not share the informed consents with data requesters. It is important to remember that St. Jude Cloud is the platform upon which all St. Jude data is shared. This means that there are more than 100 consent forms + revisions for the various studies across St. Jude. Thus, there is an additional logistical barrier in that we simply don't have the bandwidth to pull together a packet containing all of this information for each requestor.

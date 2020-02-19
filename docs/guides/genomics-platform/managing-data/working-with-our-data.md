@@ -1,9 +1,9 @@
-In this overview, we will explain how to manage your data request(s) from St. Jude Cloud's genomics platform [My Dashboard page](https://platform.stjude.cloud/requests/manage) and how to access and manage your data (once it has been vended to you) from within a DNAnexus project.  The [DNAnexus](https://www.dnanexus.com/) genomic ecosystem is the backbone for the computation and storage in St. Jude Cloud. This means that each data request in St. Jude Cloud corresponds to a project in DNAnexus. If you'd like, you can read an introduction to the DNAnexus ecosystem [here](https://documentation.dnanexus.com/). If you haven't already, follow [this guide](../requesting-data/data-request.md) to request access to St. Jude data in this secure cloud ecosystem.
+In this overview, we will explain how to manage your data request(s) from St. Jude Cloud's genomics platform [My Dashboard page](https://platform.stjude.cloud/dashboard) and how to access and manage your data (once it has been vended to you) from within a DNAnexus project.  The [DNAnexus](https://www.dnanexus.com/) genomic ecosystem is the backbone for the computation and storage in St. Jude Cloud. This means that each data request in St. Jude Cloud corresponds to a project in DNAnexus. If you'd like, you can read an introduction to the DNAnexus ecosystem [here](https://documentation.dnanexus.com/). If you haven't already, follow [this guide](../requesting-data/data-request.md) to request access to St. Jude data in this secure cloud ecosystem.
 
 
 ## Managing Your Data Requests
 
-Below is a snapshot of the [My Dashboard](https://platform.stjude.cloud/requests/manage) on our Genomcis Platform. From this page you can check the status of your data request, complete an [EDAA](../requesting-data/how-to-fill-out-DAA.md#the-electronic-data-access-agreement-process) draft, upload a revised [DAA](../requesting-data/how-to-fill-out-DAA.md) or an [Extension Addendum](how-to-fill-out-Extension.md), or link to your DNAnexus project folder for a specific data request.
+Below is a snapshot of the [My Dashboard](https://platform.stjude.cloud/dashboard) on our Genomcis Platform. From this page you can check the status of your data request, complete an [EDAA](../requesting-data/how-to-fill-out-DAA.md#the-electronic-data-access-agreement-process) draft, upload a revised [DAA](../requesting-data/how-to-fill-out-DAA.md) or an [Extension Addendum](how-to-fill-out-Extension.md), or link to your DNAnexus project folder for a specific data request.
 
 ![](../../../images/guides/forms/docs-manage-data-page-labelled-tagged.png)
     
@@ -19,7 +19,7 @@ If you have a question about the status of your data request which is not answer
 
 ## Accessing Your Data
 
-Once your data access request is approved, the data you requested from St. Jude Cloud will automatically be distributed to a DNAnexus project with the same name that you entered through the data request setup wizard. From your [My Dashboard](https://platform.stjude.cloud/requests/manage) page, click on a specific data request name to navigate directly to your corresponding project in DNAnexus. (You can also follow the link in the approval email from notifications@stjude.cloud.)
+Once your data access request is approved, the data you requested from St. Jude Cloud will automatically be distributed to a DNAnexus project with the same name that you entered through the data request setup wizard. From your [My Dashboard](https://platform.stjude.cloud/dashboard) page, click on a specific data request name to navigate directly to your corresponding project in DNAnexus. (You can also follow the link in the approval email from notifications@stjude.cloud.)
 
 ![](../../../images/guides/data/DX-project-page.png)
 

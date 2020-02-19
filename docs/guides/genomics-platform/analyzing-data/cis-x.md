@@ -240,7 +240,7 @@ This file can be generating by CONSERTING.
 ## Creating a workspace
 Before you can run one of our workflows, you must first create a workspace in DNAnexus for the run. Refer to [the general workflow guide](running-sj-workflows.md#getting-started) to learn how to create a DNAnexus workspace for each workflow run.
 
-You can navigate to the Cis-X workflow page [here](https://platform.stjude.cloud/tools/cis-x)
+You can navigate to the Cis-X workflow page [here](https://platform.stjude.cloud/workflows/cis-x)
 
 ## Uploading Input Files
 

@@ -131,7 +131,7 @@ Mutational Signatures runs four steps using subcommands of [mtsg].
 ## Creating a workspace
 Before you can run one of our workflows, you must first create a workspace in DNAnexus for the run. Refer to [the general workflow guide](running-sj-workflows.md#getting-started) to learn how to create a DNAnexus workspace for each workflow run.
 
-You can navigate to the Mutational Signatures workflow page [here](https://platform.stjude.cloud/tools/mutational_signatures).
+You can navigate to the Mutational Signatures workflow page [here](https://platform.stjude.cloud/workflows/mutational_signatures).
 
 ## Uploading Input Files
 
