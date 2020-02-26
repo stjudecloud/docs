@@ -4,4 +4,4 @@ At St. Jude Cloud's [Visualization Community](https://viz.stjude.cloud/), explor
 
 You can search interactive visualizations by Name, [Tool](https://viz.stjude.cloud/tools), [Research Domain](../../ecosystem.md), or chronological order.
 
-![](../../images/guides/data/viz_com_search.gif)
+![](../../images/guides/visualization-community/viz_com_search.gif)

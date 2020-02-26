@@ -4,7 +4,7 @@ The Sickle Cell Genomics Portal contains two viewers for the exploration of data
 
 ### Overview
 Upon launching the browser, you will see an image similar to the one shown here.
-![](../../images/guides/portals/sickle-cell/BrowserOverview.png)
+![](../../images/guides/studies/sickle-cell/BrowserOverview.png)
 
 A description of the elements of the browser are as follows:
 
@@ -19,7 +19,7 @@ A description of the elements of the browser are as follows:
 
 
 ### Navigation buttons
-![](../../images/guides/portals/sickle-cell/NavigationButtons.png)
+![](../../images/guides/studies/sickle-cell/NavigationButtons.png)
 
 |#   |      Description      |  
 |----------|-------------|
@@ -32,7 +32,7 @@ A description of the elements of the browser are as follows:
 
 ### Filters
 
-![](../../images/guides/portals/sickle-cell/Filters.png)
+![](../../images/guides/studies/sickle-cell/Filters.png)
 
 |#   |      Description      |  
 |----------|-------------|
@@ -47,39 +47,39 @@ A description of the elements of the browser are as follows:
 #### Finding a variant of interest
 A user can navigate to a gene or to a variant ID.
 Enter in the variant ID rs13140464 into the search text field at the top of the browser. (See below)
-![](../../images/guides/portals/sickle-cell/findRs1314064.png)
+![](../../images/guides/studies/sickle-cell/findRs1314064.png)
 
 Pressing enter will center the browser of the selected variant.  (see below)
-![](../../images/guides/portals/sickle-cell/rs13140464_zoomed.png)
+![](../../images/guides/studies/sickle-cell/rs13140464_zoomed.png)
 
 #### Zooming in and out
 One can use the buttons next to the search field to zoom in and out along the genome.  Press the x50 button to zoom out 50 fold
-![](../../images/guides/portals/sickle-cell/rs13140464_zoomedButton.png)
+![](../../images/guides/studies/sickle-cell/rs13140464_zoomedButton.png)
 
 This will show a larger region of the chromosome.
-![](../../images/guides/portals/sickle-cell/rs13140464_zoomedx50b.png)
+![](../../images/guides/studies/sickle-cell/rs13140464_zoomedx50b.png)
 
 One can now see three DNase peaks (1) around the rs13140464 variant(2).  In addition there is another variant (3) seen near one of the DNase peaks.
-![](../../images/guides/portals/sickle-cell/rs13140464_zoomedx50Annotated.png)
+![](../../images/guides/studies/sickle-cell/rs13140464_zoomedx50Annotated.png)
 
 #### Obtaining additional variant information
 Left clicking a variant (see red circle below), will cause a new window to pop up in the browser that will contain additional information about the variant.
-![](../../images/guides/portals/sickle-cell/rs13140464_info.tmp.png)
+![](../../images/guides/studies/sickle-cell/rs13140464_info.tmp.png)
 
 #### Adding and removing tracks
 Select the tracks button from the top of the genome browser.
-![](../../images/guides/portals/sickle-cell/trackSelected.png)
+![](../../images/guides/studies/sickle-cell/trackSelected.png)
 A window displaying selected tracks and tracks available for selection will pop up.
-![](../../images/guides/portals/sickle-cell/tracks1.png)
+![](../../images/guides/studies/sickle-cell/tracks1.png)
 One can scroll down to see additional tracks.  Try selecting and unselecting various tracks and observe the updated tracks on the browser.
 
 #### Getting DNA sequence
 Select the 'More' button at the top of the browser.
-![](../../images/guides/portals/sickle-cell/more.png)
+![](../../images/guides/studies/sickle-cell/more.png)
 Several options will be available.  Select the DNA sequence button.
-![](../../images/guides/portals/sickle-cell/DNASequenceCircled.png)
+![](../../images/guides/studies/sickle-cell/DNASequenceCircled.png)
 You will be shown the DNA sequence for the region.
-![](../../images/guides/portals/sickle-cell/DNASequenceShown.png)
+![](../../images/guides/studies/sickle-cell/DNASequenceShown.png)
 
 
 
@@ -88,7 +88,7 @@ You will be shown the DNA sequence for the region.
 ### Overview
 
 When the Variants and Phenotype Viewer is launched, the user will be presented with the following visualization.
-![](../../images/guides/portals/sickle-cell/PhenoVariantAnnotated.png)
+![](../../images/guides/studies/sickle-cell/PhenoVariantAnnotated.png)
 The different elements of the view are as follows.
 
 |#   |      Description      |  
@@ -116,17 +116,17 @@ The different elements of the view are as follows.
 
 #### Sorting
 Hover your mouse over the MCV label in the graph.  A box will pop up with several icons.  Select the triangle that is pointed to the left to sort individuals by MCV.
-![](../../images/guides/portals/sickle-cell/PhenoVariantSortButton.png)
+![](../../images/guides/studies/sickle-cell/PhenoVariantSortButton.png)
 
 The following graph shows individuals sorted by MCV.  Blank columns represent no data available.  Note that PainRate, Sickle cell genotype and alpha deletion status appear to correlate with MCV values.
-![](../../images/guides/portals/sickle-cell/PhenoVariantPainSorted.png)
+![](../../images/guides/studies/sickle-cell/PhenoVariantPainSorted.png)
 
 #### View values for all patients
 Hovering over one column will enable the viewing of all phenotypic values for that patient.
 
 #### Undo
 While exploring the data, one may inadvertently sort or remove data.  One can undo the changes by selecting the undo button at the top of the viewer.  The redo button will revert the undo.
-![](../../images/guides/portals/sickle-cell/PhenoVariantsUndo.png)
+![](../../images/guides/studies/sickle-cell/PhenoVariantsUndo.png)
 
 ## Glossary 
 

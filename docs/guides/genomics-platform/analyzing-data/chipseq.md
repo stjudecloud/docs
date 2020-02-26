@@ -146,7 +146,7 @@ For the ChIP-Seq pipeline, every pipeline run outputs a `README.doc` file
 which contains the latest information on which results are included.
 You can refer to that file for the most up to date information on raw outputs.
 
-![](../../../images/guides/tools/chipseq/click-readme.gif)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/chipseq/click-readme.gif)
 
 
 ## Frequently asked questions

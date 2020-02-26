@@ -5,7 +5,7 @@ In this overview, we will explain how to manage your data request(s) from St. Ju
 
 Below is a snapshot of the [My Dashboard](https://platform.stjude.cloud/dashboard) on our Genomcis Platform. From this page you can check the status of your data request, complete an [EDAA](../requesting-data/how-to-fill-out-DAA.md#the-electronic-data-access-agreement-process) draft, upload a revised [DAA](../requesting-data/how-to-fill-out-DAA.md) or an [Extension Addendum](how-to-fill-out-Extension.md), or link to your DNAnexus project folder for a specific data request.
 
-![](../../../images/guides/forms/docs-manage-data-page-labelled-tagged.png)
+![](../../../images/guides/genomics-platform/managing-data/docs-manage-data-page-labelled-tagged.png)
     
 
 !!! example "Pending Request Types"
@@ -21,7 +21,7 @@ If you have a question about the status of your data request which is not answer
 
 Once your data access request is approved, the data you requested from St. Jude Cloud will automatically be distributed to a DNAnexus project with the same name that you entered through the data request setup wizard. From your [My Dashboard](https://platform.stjude.cloud/dashboard) page, click on a specific data request name to navigate directly to your corresponding project in DNAnexus. (You can also follow the link in the approval email from notifications@stjude.cloud.)
 
-![](../../../images/guides/data/DX-project-page.png)
+![](../../../images/guides/genomics-platform/managing-data/DX-project-page.png)
 
 
 When the data is vended, the directory structure of your DNAnexus project will look something like this:

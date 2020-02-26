@@ -19,7 +19,7 @@ A St. Jude Cloud **Data Access Unit (DAU)** is a grouping of data that typically
 
 On page 7 of the DAA, you must mark all Data Access Units for which you are applying. The DAU(s) associated to the data you requested are listed in the Controlled Access Data section, directly above the Download Data Access Agreement button. This can be found on the Request Data webpage which immediately follows your selection of data from the data browser. 
 
-![](../../../images/guides/forms/docs-DAU-short.png)
+![](../../../images/guides/genomics-platform/requesting-data/docs-DAU-short.png)
 
 If you mark the incorrect datasets, you will be required to resubmit your agreement with the correct datasets marked. When completing the DAA electronically using the setup wizard, the DAU options will be automatically preselected for you. 
 
@@ -27,7 +27,7 @@ If you mark the incorrect datasets, you will be required to resubmit your agreem
 
 On page 8 of the DAA, you must submit a description of your research project. Please specifically describe the intended role of St. Jude’s data in your research project. Your contemplated use can be anywhere from a paragraph to a few pages long, although a typical contemplated use is 1-2 paragraphs. Each [Data Access Committee](glossary.md#data-access-committee) will evaluate your contemplated use case and decide whether to approve or deny your application for data access based on their own set of protocols. Please [contact us](https://stjude.cloud/contact) if you have any questions regarding the protocols of the approval process.
 
-![](../../../images/guides/forms/docs-CU-short.png)
+![](../../../images/guides/genomics-platform/requesting-data/docs-CU-short.png)
 
 #### Contemplated Use Example
 
@@ -41,28 +41,28 @@ On page 9 of the DAA, the Principal Investigator of the research project must in
 
 **Who may qualify as a Principal Investigator (PI)?**  
 The PI is designated by the grantee organization to direct the project or activity being supported by the grant. The PI is responsible and accountable to the grantee for the proper conduct of the project or activity. The role of the PI within the eRA Commons is to complete the grant process, either by completing the required forms via the eRA Commons or by delegating this responsibility to another individual. A PI can access information for any grant for which they are designated the PI. See eRA Commons Roles & Privileges Matrix. 
-  ![](../../../images/guides/forms/docs-PI.png)
+  ![](../../../images/guides/genomics-platform/requesting-data/docs-PI.png)
 
 ### Additional Applicants
 
 Pages 10 and 11 of the DAA must be signed by any additional person(s) who will have access to the data. Additional applicants may include those working on your project, those working in your lab, or those who have access to where the data will be stored. These individuals will be legally bound to protecting and handling the data properly. Pages 10 and 11 may be duplicated and added to the agreement to accommodate for more than 8 additional applicants. When filling out the DAA electronically, you may only include up to 8 additional applicants on your agreement.
-![](../../../images/guides/forms/docs-AA.png)
+![](../../../images/guides/genomics-platform/requesting-data/docs-AA.png)
 
 ### Institutional Authority
 
 Page 12 of the agreement must be filled out and signed by your Institutional or Administrative Authority. The institutional authority is an individual who has the authority to sign for a grant application. This individual cannot be the same as the Principal Investigator that signed on page 9, as this additional signature provides a second-party authority of the institution to ensure that the institution will uphold the terms of this agreement.
-    ![](../../../images/guides/forms/docs-IA.png)
+    ![](../../../images/guides/genomics-platform/requesting-data/docs-IA.png)
 
 
 ### Information Security Officer
 
 On page 13 of the DAA, your institution’s Information Security Officer's signature is required *if and only if* you intend to [download](#downloading-data) a local copy of the data (note: you must also initial in the line below the DAU selection). This individual may go by varying job titles, such as Information Director or Chief Information Security Officer, but is the individual responsible for information security at your institution. This signature verifies that the data, once downloaded, will remain protected by your institution's data security protocols.
-    ![](../../../images/guides/forms/docs-ISO.png)
+    ![](../../../images/guides/genomics-platform/requesting-data/docs-ISO.png)
 
 ### Uploading A Revised DAA
 If your DAA is incomplete (for example you missed a required signature or neglected to check the box next to a dataset for which you requested data), you will be contacted by a member of the St. Jude Cloud team. Once you have made the required edits, you can reupload a revised DAA through the [Manage Data page](https://platform.stjude.cloud/requests/manage) by clicking on the *Add a Form* button.
 
-![](../../../images/guides/forms/docs-manage-data-add-form.png)
+![](../../../images/guides/genomics-platform/requesting-data/docs-manage-data-add-form.png)
 
 ## The Electronic Data Access Agreement Process
 Users who live in the United States will be given the option to complete the Data Access Agreement electronically or manually. If you elect to complete it electronically, the setup wizard will request information about you, your institution and your associates. You will also be asked to provide a detailed description of the research project in which the data you have requested will be used. 

@@ -36,7 +36,7 @@ Go to <https://pecan.stjude.cloud/pie> to get started!
 
 ## Overview
 
-![](../../../images/guides/tools/pecan-pie/Figure1.png)
+![](../../images/guides/pecan/pecan-pie/Figure1.png)
 
 An overview of the Pecan PIE workflow:
 
@@ -109,7 +109,7 @@ When your job is complete you will be taken to an overview page where
 you can browse your results and examine a detailed results page for each
 variant.
 
-![](../../../images/guides/tools/pecan-pie/results-table.gif)
+![](../../images/guides/pecan/pecan-pie/results-table.gif)
 
 The variants in the results can be filtered by:
 
@@ -131,7 +131,7 @@ disease predisposition genes. Germline medals are only assigned for
 novel variants or those present in the ExAC (ex-TCGA) database with a
 MAF no greater than 0.1% (0.001 expressed fractionally).
 
-![](../../../images/guides/tools/pecan-pie/Figure2.png)
+![](../../images/guides/pecan/pecan-pie/Figure2.png)
 
 * **Gold medals** are assigned to truncations in tumor suppressor genes,
 hotspots derived from the COSMIC database, as well as perfect matches to
@@ -268,7 +268,7 @@ There are two methods of running pipelines on DNAnexus:
 2.  **Command line.** Jobs may also be invoked via the `dx` command line
     client. Command-line use allows submitting cloud jobs without
     interacting with a GUI, and so supports scripting and easier
-    integration with local workflows. See [this section](../../genomics-platform/analyzing-data/command-line.md#installation)
+    integration with local workflows. See [this section](../genomics-platform/analyzing-data/command-line.md#installation)
     for information on how to get set up with the `dx-toolkit`.
 
 !!! note

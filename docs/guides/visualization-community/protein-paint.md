@@ -5,7 +5,7 @@
 ## Overview
 The image below shows an example ProteinPaint of the gene [TP53](https://pecan.stjude.cloud/proteinpaint/TP53) annotated with descriptions of the many interactive elements of a ProteinPaint visualization. As you can see, there is a lot to explore.
 
-![](../../images/guides/portals/pecan/protein_paint_overview.png)
+![](../../images/guides/visualization-community/protein-paint/protein_paint_overview.png)
 
 
 ## Glossary of Classes 

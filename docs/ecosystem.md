@@ -4,7 +4,7 @@ The St. Jude Cloud ecosystem has been designed with three main entry points, cal
 
 The diagram below shows an abstraction of our ecosystem. Research Domains are presented as vertical panels which cascade down through the sets of Apps and Studies, the building blocks of content along the Research Domains.
 
-![](./images/guides/data/SJCloud_Structure.jpg)
+![](./images/guides/SJCloud_Structure.jpg)
 
 Apps are interactive and facilitate data sharing and discovery. Studies are static pages of content that discuss how St. Jude has generated and used a particular dataset. Apps and Studies are disjoint ecosystem elements, yet they are distributed non-uniquely among the Research Domains in order to facilitate a focused sharing of content. For a complete list of Applications and Studies please visit the [Welcome to St. Jude](./index.md) documentation page.
 

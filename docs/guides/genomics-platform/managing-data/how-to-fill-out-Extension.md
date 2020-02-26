@@ -9,11 +9,11 @@ Follow the steps below to ensure that you have accurately filled out all section
 1. **Page 1**
     * In the top section, enter the current date on which that the agreement is being filled out, your current institution, and the date on which you signed the expiring DAA or extension.
 
-    ![](../../../images/guides/forms/ea-1.png)
+    ![](../../../images/guides/genomics-platform/managing-data/ea-1.png)
 
     * In the bottom section, enter a date that is one year after the date on which you signed the expiring DAA or extension. This can be found on the page linked from the email notifying you of agreement expiration.
 
-     ![](../../../images/guides/forms/ea-2.png)
+     ![](../../../images/guides/genomics-platform/managing-data/ea-2.png)
 
 
 2. **Page 2**
@@ -31,7 +31,7 @@ Follow the steps below to ensure that you have accurately filled out all section
     * The Information Security Officer must sign and date the extension.
 
     * The bottom section of page 3 is for St. Jude to sign and date. Do not fill out this section.
-         ![](../../../images/guides/forms/ea-3.png)
+         ![](../../../images/guides/genomics-platform/managing-data/ea-3.png)
 
 4. **Page 4**
 

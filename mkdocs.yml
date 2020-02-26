@@ -43,11 +43,11 @@ pages:
               # 'FKPM': 'guides/genomics-platform/analyzing-data/fkpm.md'
           - 'Creating your own Workflow': 'guides/genomics-platform/analyzing-data/creating-a-cloud-app.md'
   - 'PeCan':
-      - 'PeCan homepage': 'guides/applications/PeCan/pecan.md'
-      - 'Pecan PIE': 'guides/applications/PeCan/pecan-pie.md'
+      - 'PeCan homepage': 'guides/PeCan/pecan.md'
+      - 'Pecan PIE': 'guides/PeCan/pecan-pie.md'
   #- 'Model Systems':
-      #- 'CSTN': 'guides/applications/model-systems/cstn.md'
-      #- 'PBTP': 'guides/applications/model-systems/pbtp.md'
+      #- 'CSTN': 'guides/model-systems/cstn.md'
+      #- 'PBTP': 'guides/model-systems/pbtp.md'
   - 'Visualization Community':
       - 'About': 'guides/visualization-community/viz-com-about.md'
       - 'ProteinPaint' : 'guides/visualization-community/protein-paint.md'

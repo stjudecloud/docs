@@ -37,7 +37,7 @@ You'll need to create a sample sheet which describes the relationship between ca
 
 The final product for the excel spreadsheet will look like the screenshot below. If you create the sample sheet from scratch, please ensure the the columns are **exactly** in this order.
 
-> ![](../../../images/guides/tools/warden/excel-example.png)
+> ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/excel-example.png)
 
 **Sample rows**
 
@@ -139,7 +139,7 @@ Refer to [the general workflow guide](running-sj-workflows.md#running-the-workfl
 You'll need to hook up the FastQ files and sample sheet you uploaded in [the upload data section](#uploading-input-files). 
 Click the `FASTQ_FILES` input field and select **all** FastQ files. Next, click the `sampleList` input field and select the corresponding samplesheet.
 
-![](../../../images/guides/tools/warden/inputs-warden-2.gif)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/inputs-warden-2.gif)
 
 ### Selecting Parameters
 
@@ -161,7 +161,7 @@ by clicking on the `WARDEN WORKFLOW GENERATOR` substep. For the general workflow
     below the required parameters.
     1. When all parameters have been set, press the save button.
 
-![](../../../images/guides/tools/warden/parameters-warden-3.gif)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/parameters-warden-3.gif)
 
 ### Starting the workflow
 
@@ -169,11 +169,11 @@ Once your input files are hooked up and your parameters are set, you should be a
 
 The tool will begin running and will automatically take you to the Monitor page, where you should see that your workflow is "In Progress".
 
-![](../../../images/guides/tools/warden/in-progress-warden.gif)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/in-progress-warden.gif)
 
 When the custom workflow has finished generating, the word 'Done' will appear in green in the status column. This indicates that the bootstrapping step has completed successfully. 
 
-![](../../../images/guides/tools/warden/warden-running-1.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/warden-running-1.png)
 
 ## Custom Workflow Process
 
@@ -187,44 +187,44 @@ When the custom workflow has finished generating, the word 'Done' will appear in
     (including the generated workflow). Select the generated workflow as
     shown in the picture below.
 
-    ![](../../../images/guides/tools/warden/Workflow_generator_output.png)
+    ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/Workflow_generator_output.png)
 
 4.  You will now be within the output folder you specified earlier.
     Select the file that begins with 'WARDEN WORKFLOW:'
 
-    ![](../../../images/guides/tools/warden/Select_WARDEN_WORKFLOW.png)
+    ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/Select_WARDEN_WORKFLOW.png)
 
 5.  A workflow generated for your data will be presented to you. Select
     'Run as analysis' in the upper right.
 
-    ![](../../../images/guides/tools/warden/run_as_analysis_2.png)
+    ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/run_as_analysis_2.png)
 
 6.  The workflow will initiate, and you will be brought to the 'Monitor'
     page. (Note to get back to this page, you can select 'Monitor' on
     one of the menu bars near the top ) Expand the the workflow progress
     be selecting the '+' sign next to 'In Progress'
 
-    ![](../../../images/guides/tools/warden/workflowrunning.png)
+    ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/workflowrunning.png)
 
 7.  As parts of the pipeline are run, you will see different tasks in
     different colors. Green means done, blue is running, orange is
     waiting, and red means error.
 
-    ![](../../../images/guides/tools/warden/Workflow_running_status.png)
+    ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/Workflow_running_status.png)
 
 8.  When done the status will be shown as 'Done'. Select the Workflow
     name under Status.
 
-    ![](../../../images/guides/tools/warden/Workflow_done.png)
+    ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/Workflow_done.png)
 
 9.  You will be brought to a page that show more information about the
     workflow analysis. Click on the output folder to go to the output.
 
-    ![](../../../images/guides/tools/warden/Workflow_done2.png)
+    ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/Workflow_done2.png)
 
 10. The output folders will now be shown.
 
-    ![](../../../images/guides/tools/warden/Workflow_output.png)
+    ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/Workflow_output.png)
 
 For a description of the output, please refer to [Interpreting Results](#analysis-of-results).
 
@@ -252,7 +252,7 @@ reads and the percentage of mapped reads. An example of this file is
 below. (Within the DNAnexus output directory structure, these files will
 be in the COMBINED\_FLAGSTAT directory.)
 
-> ![](../../../images/guides/tools/warden/alignmentStatistics.png)
+> ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/alignmentStatistics.png)
 
 #### Multidimensional scaling (MDS) Plot
 
@@ -269,11 +269,11 @@ gene counts. These files will be labeled **mdsPlot.normCPM.png**.
 (Within the DNAnexus output directory structure, these files will be in
 the LIMMA directory.)
 
-![](../../../images/guides/tools/warden/mdsPlot.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/mdsPlot.png)
 
 MDS plot from just CPM normalized data.
 
-![](../../../images/guides/tools/warden/mdsPlot.normCPM.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/mdsPlot.normCPM.png)
 
 ### ProteinPaint Visualizations
 
@@ -294,7 +294,7 @@ expression values will also be shown. One can also type in multiple gene
 symbols in the provided text box. By pressing 'Show gene labels' all
 these genes will show up on the plots.
 
-![](../../../images/guides/tools/warden/ma_volcano.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/ma_volcano.png)
 
 **Simple differential expression viewer**
 
@@ -332,13 +332,13 @@ Input files that can be used for GSEA analysis. The tStat file is preferred for 
 
 - The MA plot shows the average expression of the gene on the X-axis, and Log2 fold change between condition/phenotype is on the Y-axis (if the name is for example maPlot.condition2-condition1.png then the fold change would represent condition1 minus condition2). Each gene is represented by a circle. The top 20 genes (by p-value) are identified on the plot. The genes are color coded by the chosen multiple testing correction method (False Discovery Rate (FDR) by default. An example MA plot can be seen below. (Within the DNAnexus output directory structure, these files will be in the LIMMA directory.)
 
-![](../../../images/guides/tools/warden/maPlot.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/maPlot.png)
 
 The volcano plot shows the Log2Fold change between the conditions on the
 X-axis, and the -Log10 of the multiple testing corrected P-value on the
 Y-axis.
 
-![](../../../images/guides/tools/warden/volcanoPlot.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/volcanoPlot.png)
 
 An MA plot is generated for all comparisons regardless of number of
 samples. This is the `simpleDEPlot.*.png` no statistics are shown
@@ -448,7 +448,7 @@ LIMMA and SIMPLE\_DIFEX folders. Bigwig files for viewing read coverage
 will be in the BIGWIG folder. Other folder contain different types of
 data and are explained in further detail below.
 
-> ![](../../../images/guides/tools/warden/Workflow_output.png)
+> ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/Workflow_output.png)
 
 The following description of files is sorted by their output directory.
 

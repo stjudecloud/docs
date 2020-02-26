@@ -17,22 +17,22 @@ environment.
 
 ## Selecting Data
 
-![](../../../images/guides/data/data-browser-overview.png)
+![](../../../images/guides/genomics-platform/requesting-data/data-browser-overview.png)
 
 The primary way to make your data selection is through our [Genomics Platform Data Browser](https://platform.stjude.cloud/requests/diseases). You can search our raw genomic data by diagnosis, publication, or study by selecting a tab along the top. You may further refine your search by applying filters from four categories: Sequencing Type, Sample Type, File Type, and Tissue Type. Please note that applying multiple filters within the same category filters using 'OR' logic while applying multiple filters across different categories filters using 'AND' logic. For example in the overview image above, we have filtered the browser to only show data that is (either WGS OR WES) AND (Diagnosis OR Relapse) AND BAM AND Paired Tumor-Normal.
  
 As you filter and make selections, the data summary panel in the upper left hand corner will update dynamically to give you important descriptive information about the set of data you have selected. Click on an empty box to make a selection; when selected, the box will turn blue with a white check mark. Once you have completed your data selection, click on *Request Data* to submit your request and proceed. 
 
-![](../../../images/guides/data/request-data-select-data.gif)
+![](../../../images/guides/genomics-platform/requesting-data/request-data-select-data.gif)
 
 !!! note
     You must have [created an account](create-an-account.md) and be logged in to submit a data request. If you have not yet created an account or you are not logged in, the submit button will say *Log In* rather than *Request Data*.
 
-Alternatively, you may be directed to the Genomics Platform Data Browser through another App to request specific samples. The [PeCan homepage](../../applications/PeCan/pecan.md#requesting-raw-genomics-through-pecan) is one such app that allows you to select data through an interactive visualization.
+Alternatively, you may be directed to the Genomics Platform Data Browser through another App to request specific samples. The [PeCan homepage](../../PeCan/pecan.md#requesting-raw-genomics-through-pecan) is one such app that allows you to select data through an interactive visualization.
 
 After clicking on *Request Data*, we ask that you review your selection and make sure that the [DAUs](glossary.md#data-access-unit) corresponding to the set of data you have selected is indeed the data you want to request. 
 
-![](../../../images/guides/data/request-data-select-DAUs.png)
+![](../../../images/guides/genomics-platform/requesting-data/request-data-select-DAUs.png)
 
 
 
@@ -42,7 +42,7 @@ Now that you have selected your data, you will need to fill in some information 
 
 This information will be collected whether you are requesting open-access or controlled-access data. It helps us structure your project folder correctly when we vend the data to you. 
 
-![](../../../images/guides/data/request-data-setup-wizard1.gif)
+![](../../../images/guides/genomics-platform/requesting-data/request-data-setup-wizard1.gif)
 
 
 ## Applying for Data Access

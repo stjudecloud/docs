@@ -64,7 +64,7 @@ the left of each. You should enter the number corresponding to the
 workspace you are wanting to interact with. In the example below, the
 user has selected the Rapid RNA-Seq tool.
 
-![](../../../images/guides/data/select-project.png)
+![](../../../images/guides/genomics-platform/analyzing-data/select-project.png)
 
 ### Some useful commands
 
@@ -97,19 +97,19 @@ Cloud Platform tools:
     run. This will create a cloud workspace for you to upload your
     data to with the same name as the tool.
 
-    ![](../../../images/guides/data/RapidRNASeq_startPage.png)
+    ![](../../../images/guides/genomics-platform/analyzing-data/RapidRNASeq_startPage.png)
 
 3.  Open up your terminal application and select the cloud workspace
     with the same name as the tool you are trying to run.
 
-    ![](../../../images/guides/data/select-rapid-rnaseq.png)
+    ![](../../../images/guides/genomics-platform/analyzing-data/select-rapid-rnaseq.png)
 
 4.  Last, navigate to the local files you'd like to upload to the cloud
     and use the `dx upload` command as specified in
     [upload-download-data]{role="ref"} to upload your data to St. Jude
     Cloud.
 
-    ![](../../../images/guides/data/rapid-rnaseq-upload-data.png)
+    ![](../../../images/guides/genomics-platform/analyzing-data/rapid-rnaseq-upload-data.png)
 
 ## Downloading data
 
@@ -128,7 +128,7 @@ data request:
     relevant to your data request. For instance, in this case we
     would type `#!bash dx select "Retinoblastoma Data"`.
 
-    ![](../../../images/guides/data/select-retinoblastoma.png)
+    ![](../../../images/guides/genomics-platform/analyzing-data/select-retinoblastoma.png)
 
 3.  You can use typical commands like `#!bash dx ls`,
     `#!bash dx pwd`, and `#!bash dx cd` to navigate around
@@ -139,7 +139,7 @@ data request:
     requesting access) or the **immediate** folder (if you
     were previously granted access permission).
 
-    ![](../../../images/guides/data/navigate-data-request.png)
+    ![](../../../images/guides/genomics-platform/analyzing-data/navigate-data-request.png)
 
 4.  In the root of every data request is a file called
     `SAMPLE_INFO.txt`. This should contain all of the
@@ -152,7 +152,7 @@ data request:
     download all of the BAM files to my local computer, I would type
     `#!bash dx download immediate/bam/*`.
 
-    ![](../../../images/guides/data/download-bams.png)
+    ![](../../../images/guides/genomics-platform/analyzing-data/download-bams.png)
 
 ## Similar Topics
 

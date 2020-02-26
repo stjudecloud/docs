@@ -56,7 +56,7 @@ by users.
 
 **Mutation file example**
 
-![](../../../images/guides/tools/neoepitope/mutation-file-example.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/neoepitope/mutation-file-example.png)
 
 ## Outputs
 
@@ -160,38 +160,38 @@ from OptiType.
 * A folder stamped with the time will present in the output folder
   (optitype), which contains the raw output.
 
-![](../../../images/guides/tools/neoepitope/hlatype-result.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/neoepitope/hlatype-result.png)
 
 * The file contains the predicted HLA alleles of the sample.
 
-![](../../../images/guides/tools/neoepitope/hlatype-result2.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/neoepitope/hlatype-result2.png)
 
 **Neoepitope prediction**
 
 The output contains one summary HTML, one folder with raw output, and one
 folder with outputs in Excel formats:
 
-![](../../../images/guides/tools/neoepitope/epitope-result.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/neoepitope/epitope-result.png)
 
 **Epitope_affinity_prediction.html** (shown below):   
 
 * This file provides a summary of the epitope prediction that can be visualized directly from web browser.  
 * The peptides with affinity lower than user-defined cutoff will be highlighted in green in the webpage.  
 
-![](../../../images/guides/tools/neoepitope/epitope-result2.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/neoepitope/epitope-result2.png)
 
 **Raw_output** (shown below): this folder contains the raw output of the affinity
 prediction. There will two major types files present here: affinity.out and flanking.seq.
 
-![](../../../images/guides/tools/neoepitope/epitope-result3.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/neoepitope/epitope-result3.png)
 
 
-![](../../../images/guides/tools/neoepitope/epitope-result4.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/neoepitope/epitope-result4.png)
 
 **affinity.out**: these files are the prediction results from the
     netMHCcons for each peptide.
 
-![](../../../images/guides/tools/neoepitope/epitope-result5.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/neoepitope/epitope-result5.png)
 
 The following columns will be shown in the output:
 
@@ -215,12 +215,12 @@ The following columns will be shown in the output:
 
 **flanking.seq**: these files contain the sequences used for the prediction.
 
-![](../../../images/guides/tools/neoepitope/epitope-result6.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/neoepitope/epitope-result6.png)
 
 **XLSX**: this folder contains the raw output of the affinity prediction as
 described above in Excel files. The files can be downloaded and opened with Excel for downstream filtering and analyses.
 
-![](../../../images/guides/tools/neoepitope/epitope-result7.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/neoepitope/epitope-result7.png)
 
 ## Frequently asked questions
 
