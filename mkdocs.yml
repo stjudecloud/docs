@@ -27,6 +27,7 @@ pages:
       - 'Rapid RNA-Seq Fusion Detection': 'guides/tools/rapid-rnaseq.md'
       - 'WARDEN Differential Expression Analysis': 'guides/tools/warden.md'
       - 'Mutational Signatures': 'guides/tools/mutational-signatures.md'
+      - 'XenoCP': 'guides/tools/xenocp.md'
       - '': 'guides/tools/cis-x.md'
   - 'Visualization Guides':
       - 'PeCan Data Portal' : 'guides/portals/pecan.md'
