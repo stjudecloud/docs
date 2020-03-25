@@ -1092,7 +1092,7 @@ For more information on variants for each of the individuals, please refer to th
 <p>Whole Genome Sequence (WGS) and Whole Exome Sequence (WES) BAM files were produced by the <a href="https://azure.microsoft.com/en-us/services/genomics/">Microsoft Genomics Service</a> aligned to HG38 (GRCh38 no alt analysis set). For more information about how Microsoft Genomics produces BAM files or any other questions regarding data generation, please refer to <a href="https://azure.microsoft.com/en-us/resources/accelerate-precision-medicine-with-microsoft-genomics/">the official Microsoft Genomics whitepaper</a>.</p>
 <h3 id="rna-seq">RNA-Seq</h3>
 <p>RNA-Seq BAM files are mapped to HG38 + <a href="https://www.thermofisher.com/order/catalog/product/4456740">ERCC Spike In Sequences</a> (commonly used for normalization of expression analyses). For alignment, <code class="codehilite"><span class="err">STAR</span></code> v2.5.3a 2-pass mapping followed by <code class="codehilite"><span class="err">Picard MarkDuplicates</span></code>. Below is the <code class="codehilite"><span class="err">STAR</span></code> command used during alignment. For more information about any of the parameters used, please refer to the <a href="https://github.com/alexdobin/STAR/blob/7283af27e84839e93ecf7ed6a14c8ff675fdf79c/doc/STARmanual.pdf">STAR manual</a> for v2.5.3a.</p>
-<div class="codehilite"><pre><span></span>    STAR <span class="se">\</span>
+<div class="codehilite"><pre><span></span><code>    STAR <span class="se">\</span>
         --runThreadN <span class="nv">$NUM_THREADS</span> <span class="se">\ </span>                          <span class="c1"># $NUM_THREADS is the number of threads to parallelize the alignment across (generally we use 4).</span>
         --genomeDir <span class="nv">$GENOME_DIR</span> <span class="se">\ </span>                            <span class="c1"># $GENOME_DIR is a STAR reference directory containing HG38 and ERCC Spike In sequences.</span>
         --readFilesIn <span class="nv">$READ_FILES</span> <span class="se">\ </span>                          <span class="c1"># $READ_FILES are the input FastQ files to align.</span>
@@ -1113,7 +1113,7 @@ For more information on variants for each of the individuals, please refer to th
         --alignSJDBoverhangMin <span class="m">1</span> <span class="se">\</span>
         --sjdbScore <span class="m">2</span> <span class="se">\</span>
         --twopassMode Basic
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="data-access-units">Data Access Units</h2>
@@ -1707,7 +1707,7 @@ CCSS is a multi-institutional, multi-disciplinary, NCI-funded collaborative reso
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/59119db">59119db</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/527b9af">527b9af</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of

@@ -1022,12 +1022,12 @@
 <h3 id="how-can-i-delete-my-account">How can I delete my account?</h3>
 <p>If you'd like to delete your account, please email DNAnexus support at
 <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#100;&#110;&#97;&#110;&#101;&#120;&#117;&#115;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#100;&#110;&#97;&#110;&#101;&#120;&#117;&#115;&#46;&#99;&#111;&#109;</a> with the following email.</p>
-<div class="codehilite"><pre><span></span><span class="n">Hi</span> <span class="n">DNAnexus</span><span class="p">,</span>
+<div class="codehilite"><pre><span></span><code><span class="n">Hi</span> <span class="n">DNAnexus</span><span class="p">,</span>
 
   <span class="n">Would</span> <span class="n">you</span> <span class="n">please</span> <span class="n">assist</span> <span class="n">me</span> <span class="k">in</span> <span class="n">deleting</span> <span class="n">my</span> <span class="n">St</span><span class="p">.</span> <span class="n">Jude</span> <span class="n">Cloud</span> <span class="n">account</span><span class="o">?</span> <span class="n">My</span> <span class="n">username</span> <span class="k">is</span> <span class="n">_____</span><span class="p">.</span>
 
 <span class="n">Thank</span> <span class="n">you</span><span class="o">!</span>
-</pre></div>
+</code></pre></div>
 
 
 <h3 id="will-i-be-charged-for-using-st-jude-cloud">Will I be charged for using St. Jude Cloud?</h3>
@@ -1070,14 +1070,14 @@ committed to protecting that privacy to the fullest extent.</p>
 <p>You can quickly and easily interact with data files using the DNAnexus cloud workstation app. See <a href="https://documentation.dnanexus.com/getting-started/tutorials/cloud-workstations#run-the-workstation-app">this guide</a> to help you setup and run the app. Note that if you are doing any type of large-scale, multi-sample analysis, especially if you plan to repeat the analysis or want to run in parallel, you will want to <a href="../guides/data/creating-a-cloud-app/">write your own cloud app</a> rather than use the cloud workstation app.</p>
 <h3 id="how-can-i-run-an-analysis-workflow-on-multiple-sample-files-at-the-same-time">How can I run an analysis workflow on multiple sample files at the same time?</h3>
 <p>The DNAnexus interface does have a batch tool available; however, it is in early testing, so we recommend using dx-toolkit on the command line as the most reliable and user friendly approach to batch and submit jobs. You can find our documentation on how to install and get started with dx-toolkit <a href="../guides/data/command-line/">here</a>. You may also refer to the sample script below that loops through all the BAM files in the <code class="codehilite"><span class="err">data</span></code> folder and submits a job using the BAM and matching index file.   </p>
-<div class="codehilite"><pre><span></span><span class="err">for bam in $(dx ls &#39;/data/*.bam&#39;); do  </span>
+<div class="codehilite"><pre><span></span><code><span class="err">for bam in $(dx ls &#39;/data/*.bam&#39;); do  </span>
 <span class="err">  dx run \  </span>
 <span class="err">    --yes \  </span>
 <span class="err">    --input &quot;0.BAM=/data/$bam&quot; \</span>
 <span class="err">    --input &quot;0.BAM_INDEX=/data/$bam.bai&quot; \</span>
 <span class="err">    &quot;$PROJECT_ID:/Rapid RNA-Seq (BAM)&quot;</span>
 <span class="err">done</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>Note that this sample script assumes that the BAM and index files are in the <code class="codehilite"><span class="err">data</span></code> folder and the Rapid RNA-Seq analysis workflow is in the project. <code class="codehilite"><span class="err">$PROJECT_ID</span></code> can be set to your project dxid, and <code class="codehilite"><span class="err">Rapid RNA-Seq (BAM)</span></code> can be changed to the workflow you want to run.</p>
@@ -1175,7 +1175,7 @@ Select a sample and click info to see more.</p>
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/59119db">59119db</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/527b9af">527b9af</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
