@@ -35,11 +35,16 @@ For this tutorial I have requested the PCGP dataset, and once my access request 
 
 | Tool       | Download                                                             | Website                                                               | Version  |
 | ---------- | -------------------------------------------------------------------- | --------------------------------------------------------------------- | -------- |
-| dx-toolkit | [Source](https://documentation.dnanexus.com/downloads)               | [DNAnexus](https://www.dnanexus.com/)                                 | v0.276.0 |
+| dx-toolkit | [Source](https://documentation.dnanexus.com/downloads)               | [DNAnexus](https://www.dnanexus.com/)                                 | v0.291.1 |
 | FastQC     | [Source](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) | [Babraham Bioinformatics](https://www.bioinformatics.babraham.ac.uk/) | v0.11.8  |
 
 </center>
 
+
+The easiest way to install `dx-toolkit` is through `pip`, the Python package manager. Simply run the following command in your terminal:
+```
+pip install dxpy --upgrade
+```
 
 For this application, we will be using the `dx-app-wizard` command that is included in the `dx-toolkit`. `dx-app-wizard` is an interactive prompt that creates a boilerplate project that will allow you to quickly create an application. For more on `dx-app-wizard`, refer to the DNAnexus wiki article on [Intro to Building Apps](https://documentation.dnanexus.com/developer/apps/intro-to-building-apps). Before continuing, be sure to refer to the [command line interaction page](../../guides/data/command-line.md) for a walkthrough on how to install [dx-toolkit](https://documentation.dnanexus.com/downloads#DNAnexus-Platform-SDK) and how to select your project workspace.
 
