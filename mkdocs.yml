@@ -11,7 +11,8 @@ extra_css:
   - css/extra.css
 
 pages:
-  - 'Welcome to St. Jude Cloud': 'index.md'
+  - 'Welcome to St. Jude Cloud': 'index.md' 
+  - 'COVID-19 Response' : 'guides/covid-19.md'
   - 'Create An Account': 'create-an-account.md'
   - 'Data Guides': 
       - 'About Our Data': 'guides/data/about-our-data.md'
