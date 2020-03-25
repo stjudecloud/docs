@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/stjudecloud/docs"><img src="./docs/docs-banner-lighthouse.jpg" width="800" title="St. Jude Cloud Workflows"></a>
+  <a href="https://github.com/stjudecloud/docs"><img src="./docs/docs-banner-lighthouse.jpg" width="800" title="St. Jude Cloud Docs"></a>
   <a href="https://travis-ci.org/stjudecloud/docs" target="_blank">
     <img alt="Build Status: Master" src="https://travis-ci.org/stjudecloud/docs.svg?branch=master" />
   </a>
@@ -14,20 +14,23 @@
 
 ## Install
 
-```sh
-pip install -r requirements.txt
+```bash
+pip install poetry # tested with 1.0.3
+poetry config virtualenvs.create true --local
+poetry config virtualenvs.in-project true --local
+poetry install
 ```
 
 ## Usage
 
 You can use the following commands to get started working with the docs.
 
-```sh
-# Run a development server
-mkdocs serve
+```bash
+# Build a one-time, static HTML copy of the docs
+poetry run mkdocs build
 
-# Build a static HTML copy of the docs
-mkdocs build
+# Run a development server
+poetry run mkdocs serve
 ```
 
 If you'd like more in-depth instructions, please refer to [the project wiki](https://github.com/stjudecloud/docs/wiki/Getting-Started).
