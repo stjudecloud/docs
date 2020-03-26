@@ -40,20 +40,21 @@ For this tutorial I have requested the PCGP dataset, and once my access request 
 
 </center>
 
-### Set up
-The easiest way to get a development environment started is to use `conda`, which is a package and environment manager.
-We recommend `miniconda` over `Anaconda`, but either will work. Get started [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)!
+Installing the dx-toolkit requires Python to be installed locally. Using the system provided version of Python can be problematic for a number of reasons, so we recommend using the [Anaconda](https://www.anaconda.com/distribution/) environment manager to install Python.
 
-Once you have `conda` installed, we're going to create the environment you'll do all your cloud development in.
-Open your terminal and type the following commands:
-```
-conda create -n dx python=3.7.4
-...
+You can view the following guides for how to install conda on your system.
+
+* **Windows.** https://docs.anaconda.com/anaconda/install/windows/
+* **Mac OS.** https://docs.anaconda.com/anaconda/install/mac-os/
+* **Linux.** https://docs.anaconda.com/anaconda/install/linux/
+
+Once you have conda installed, run the following commands to create a new environment with Python, activate it, and install the dx-toolkit.
+
+```bash
+conda create -n dx python=3.7
 conda activate dx
 pip install dxpy
 ```
-`pip` is another package manager, similar to `conda`. We used `conda` to create an environment with our desired Python version
-and then used `pip` to install `dx-toolkit` inside of our `dx` environment.
 
 Now whenever you want to develop something for the cloud using `dx-toolkit`, just open your terminal and type `conda activate dx`.
 
