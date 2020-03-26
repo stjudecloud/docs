@@ -13,7 +13,7 @@ extra_css:
 pages:
   - 'Welcome to St. Jude Cloud': 'index.md' 
   - 'COVID-19 Response' : 'guides/covid-19.md'
-  - 'Create An Account': 'create-an-account.md'
+  - 'Account and Billing': 'account-and-billing.md'
   - 'Data Guides': 
       - 'About Our Data': 'guides/data/about-our-data.md'
       - 'Making a Data Request': 'guides/data/data-request.md'

@@ -74,7 +74,7 @@ be charged for anything with the exception of the following actions:
 You can find DNAnexus's specific resource-based pricing table by navigating to the Billing Account tab of your profile page on DNAnexus and then clicking the green 'Add Billing Info' button next to your name.
 
 ### How can I set up billing for my lab?
-Billing setup is different based on whether you are an internal user (you work at St. Jude) or an external user. External users refer to the [Create an Account page](create-an-account.md) for instructions. Internal users search 'Bioinformatics self-service on St. Jude Cloud' from the [intranet home page](https://home.stjude.org/Pages/default.aspx) for instructions. 
+Billing setup is different based on whether you are an internal user (you work at St. Jude) or an external user. If you are a St. Jude Employee, please refer to the [Intranet](https://home.stjude.org/computational-biology/Pages/bioinformatics-self-service-cloud.aspx) for instrucions. If you are not a St. Jude Employee, please refer to our [Account and Billing page](account-and-billing.md#non-st-jude-employees).
 
 
 ### Why do I need to sign the Data Access Agreement (DAA)?

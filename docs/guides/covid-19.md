@@ -8,14 +8,12 @@
 
 Links You May Find Useful
 
-[How to create an account / login](../../create-an-account)
+[Account and Billing](../../account-and-billing)
 
 [How to upload data from your local computer](../../guides/data/command-line/#uploading-data)
 
-[How to upload data from your institution's HPC (cluster)]()
+[How to upload data from your institution's High-Performace Cluster]()
 
 [How to create a cloud app](../../guides/data/creating-a-cloud-app/)
 
-[How to use the interactive node (beta)]()
-
-[Billing](../../faq/#how-can-i-set-up-billing-for-my-lab)
+[How to use the interactive terminal (beta)]()
