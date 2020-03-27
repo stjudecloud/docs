@@ -12,7 +12,7 @@ Links You May Find Useful
 
 [How to upload data from your local computer](../../guides/data/command-line/#uploading-data)
 
-[How to upload data from your institution's High-Performace Cluster]()
+[How to upload data from your institution's High-Performace Cluster](../../guides/data/uploading-data-from-st-jude-hpc-to-dnanexus)
 
 [How to create a cloud app](../../guides/data/creating-a-cloud-app/)
 

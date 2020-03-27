@@ -18,6 +18,7 @@ pages:
       - 'About Our Data': 'guides/data/about-our-data.md'
       - 'Making a Data Request': 'guides/data/data-request.md'
       - 'Working with Our Data': 'guides/data/working-with-our-data.md'
+      - 'Uploading Data from St. Jude HPC to DNAnexus': 'guides/data/uploading-data-from-st-jude-hpc-to-dnanexus.md'
       - 'Creating a Cloud App': 'guides/data/creating-a-cloud-app.md'
       - 'Data Transfer Application': 'guides/data/data-transfer-app.md'
       - 'Command Line Interaction': 'guides/data/command-line.md'
