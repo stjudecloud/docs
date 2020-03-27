@@ -58,6 +58,11 @@ pip install dxpy
 
 Now whenever you want to develop something for the cloud using `dx-toolkit`, just open your terminal and type `conda activate dx`.
 
+To access your DNAnexus projects from the commandline, you must login using `dx-toolkit`.
+For users not affiliated with St. Jude, simply type `dx login` and enter your username and password when prompted.
+Users with a St. Jude account will need to generate an API token for authentication.
+Instructions can be found [here](https://documentation.dnanexus.com/user/login-and-logout#authentication-tokens).
+
 ### Getting started
 
 For this application, we will be using the `dx-app-wizard` command that is included in the `dx-toolkit`. `dx-app-wizard` is an interactive prompt that creates a boilerplate project that will allow you to quickly create an application. For more on `dx-app-wizard`, refer to the DNAnexus wiki article on [Intro to Building Apps](https://documentation.dnanexus.com/developer/apps/intro-to-building-apps). Before continuing, be sure to refer to the [command line interaction page](../../guides/data/command-line.md) for a walkthrough on how to install [dx-toolkit](https://documentation.dnanexus.com/downloads#DNAnexus-Platform-SDK) and how to select your project workspace.
