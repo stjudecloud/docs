@@ -75,12 +75,8 @@ The list below summarizes all origins of mutations used by ProteinPaint.
 There are several more advanced customizations you can leverage with ProteinPaint such as creating custom tracks, importing your own data, and embedding interactive visualizations on your web page. For instructions on these topics, please see our [detailed tutorial](https://docs.google.com/document/d/1JWKq3ScW62GISFGuJvAajXchcRenZ3HAvpaxILeGaw0/edit). Please excuse the different location and formatting as we work to incorporate this into our main documentation pages.
 
 
-## Studies
-[Here](https://pecan.stjude.cloud/studies) you can explore recently published, interactive visualizations that have been created in ProteinPaint.
-
 ## PeCan Pie
 PeCan Pie documentation can be found [here](../tools/pecan-pie).
-
 
 ## Requesting Raw Genomics through PeCan
 
