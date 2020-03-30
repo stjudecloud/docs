@@ -16,4 +16,4 @@ Links You May Find Useful
 
 [How to create a cloud app](../../guides/data/creating-a-cloud-app/)
 
-[How to use the interactive terminal (beta)]()
+[How to use the interactive terminal (beta)](../../guides/data/using-interactive-terminal)
