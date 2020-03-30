@@ -1,8 +1,8 @@
 site_name: 'St. Jude Cloud Documentation'
-site_url: 'https://www.stjude.cloud/docs/'
+# site_url: 'https://www.stjude.cloud/docs/'
 theme:
   name: 'material'
-  custom_dir: 'mkdocs-material/material'
+  custom_dir: 'mkdocs-stjudecloud/material'
   logo: 'images/stjude-logo-child-white.png'
   font: false
   favicon: 'assets/images/favicon.ico'
@@ -14,7 +14,7 @@ nav:
   - Welcome to St. Jude Cloud: index.md 
   - COVID-19:
       - Introduction: guides/covid-19/index.md
-      - Account and billing: guides/covid-19/accounts-and-billing.md
+      - Getting started: guides/covid-19/getting-started.md
       - Data upload (HPC): guides/covid-19/upload-cluster.md
       - Data upload (local): guides/covid-19/upload-local.md
       - Interactive terminal: guides/covid-19/interactive-terminal.md
@@ -53,7 +53,6 @@ edit_uri: 'edit/master/docs'
 
 # Copyright
 copyright: "Copyright &copy; 2017 - 2019 St. Jude Children's Research Hospital"
-
 
 # Extensions
 markdown_extensions:

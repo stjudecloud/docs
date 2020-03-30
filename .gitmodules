@@ -1,0 +1,3 @@
+[submodule "mkdocs-stjudecloud"]
+	path = mkdocs-stjudecloud
+	url = git@github.com:claymcleod/mkdocs-stjudecloud.git
