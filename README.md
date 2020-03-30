@@ -14,11 +14,11 @@
 
 ## Install
 
+We use conda to achieve consistency amongst our environment setups. You must [install conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) before running the commands below.
+
 ```bash
-pip install poetry # tested with 1.0.3
-poetry config virtualenvs.create true --local
-poetry config virtualenvs.in-project true --local
-poetry install
+conda env create
+conda activate docs
 ```
 
 ## Usage
@@ -26,11 +26,10 @@ poetry install
 You can use the following commands to get started working with the docs.
 
 ```bash
-# Build a one-time, static HTML copy of the docs
-poetry run mkdocs build
+mkdocs build
 
 # Run a development server
-poetry run mkdocs serve
+mkdocs serve
 ```
 
 If you'd like more in-depth instructions, please refer to [the project wiki](https://github.com/stjudecloud/docs/wiki/Getting-Started).
