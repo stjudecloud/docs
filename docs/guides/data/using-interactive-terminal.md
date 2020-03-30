@@ -38,7 +38,7 @@ Upload the credentials file to your project by running `dx upload creds.txt`. It
 
 The following command will run the app using the credentials you provided and will log you into the node after it boots up.
 
-`dx run cwic -icredentials=<DX_PROJECT_NAME_WITH_CREDS>:creds.txt --allow-ssh -y`
+`dx run cwic -icredentials=<DX_PROJECT_NAME_WITH_CREDS>:creds.txt --allow-ssh --ssh -y`
 
 where `YOUR_DX_PROJECT_NAME` is the name of the DNAnexus project with your credentials file. If you have SSH issues while trying to connect to the job, make sure your SSH keys are [configured properly](https://documentation.dnanexus.com/developer/apps/execution-environment/connecting-to-jobs).
 
@@ -105,10 +105,20 @@ Updates to any files in the `/project` directory only occur every 5 minutes. In 
 
 Run `dx-save-cwic` to save your latest environment so that you can resume your work easier the next time you use the interactive node.
 
-## Terminating the cwic node
+### Terminating the cwic node
 
 Since the cwic node is an interactive job, it gets billed for the duration of the job. Therefore it is important to terminate the node once you are done working.
 
 Save your work and environment, if needed, by running `dx-save-project` and `dx-save-cwic` respectively. To quit the node, type `exit` twice to get into the app execution environment. Press `Ctrl+c` to quit the cwic app and type `exit` twice to get out of the terminal completely. You will be prompted to terminate the job, type 'y' to terminate the job. You can check if the node is still running by checking the Monitor tab in your project on the DNAnexus website. Alternatively, you can terminate the job from the Monitor tab.
+
+## Advanced usage
+
+### Changing instance type of the cwic app
+
+By default the cwic nodes uses the `mem1_ssd1_x4` instance type. If you require more or less runtime requirements, you can change the instance type by specifying the flag `--instance-type` with a valid instance type from [this list](https://documentation.dnanexus.com/developer/api/running-analyses/instance-types#summary-of-instance-types).
+
+`dx run cwic -icredentials=<DX_PROJECT_NAME_WITH_CREDS>:creds.txt --allow-ssh --ssh -y`
+
+This is useful when you want to run some non-interactive jobs that have different memory or storage requirements.
 
 If you have any questions or suggestions on how we can improve this guide, please [file an issue](https://github.com/stjudecloud/docs/issues), contact us at [https://stjude.cloud/contact](https://stjude.cloud/contact), or email us at [support@stjude.cloud](mailto:support@stjude.cloud).
