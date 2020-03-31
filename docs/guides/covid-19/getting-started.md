@@ -2,7 +2,8 @@ Please complete the following check-list to get started with using St. Jude Clou
 
 - [x] If applicable, apply for COVID-19 Discovery Program ([link](#apply-for-covid-19-discovery-program)).
 - [x] Join St. Jude Cloud helpdesk channel on Slack ([link](#joining-slack)).
-- [x] Log in to your St. Jude Cloud account ([link](#log-in-to-your-st-jude-cloud-account)). 
+- [x] Log in to your St. Jude Cloud account ([link](#login-to-st-jude-cloud)). 
+- [x] Enable Microsoft Azure ([link](#enable-microsoft-azure)). 
 - [x] Create your first project ([link](#create-your-first-project)).
 - [x] Set up your billing account ([link](#set-up-your-billing-account)).
 
@@ -27,19 +28,36 @@ You should now see a screen similar to the one included below. You can type your
 ![Slack Helpdesk Channel](../../images/guides/covid-19/slack-channel-view.png)
 
 
-## Log in to your St. Jude Cloud account
+## Login to St. Jude Cloud
 
 Signing in to St. Jude Cloud is similarly easy — if you have a SJCRH account, you already have a St. Jude Cloud account.
 
 **Steps**
 
-1. Visit [https://cloud.stjude.org](https://cloud.stjude.org), log in with your St. Jude credentials, and fill in the basic profile page to your satisfaction if prompted. Congrats! You're now logged in to St. Jude Cloud.
+1. Visit [https://cloud.stjude.org](https://cloud.stjude.org), log in with your St. Jude credentials, and fill in the basic profile page to your satisfaction if prompted. Congrats! You're now logged in to St. Jude Cloud. 
 
 This should be sufficient for the purposes of this guide. For more detailed information, see our standard guide on [accounts and billing](../../account-and-billing.md).
 
+!!! tip
+    As you navigate around St. Jude Cloud, you can click the DNAnexus logo in the top left to go back to the home screen at any time.
+
+## Enable Microsoft Azure
+
+**Steps**
+
+1. Change your preferences to pull cloud resources from Microsoft Azure instead of Amazon AWS by default. To do this, (i) click on your profile in the top right corner, (ii) select "My Profile", and (iii) ensure "Azure US (West)" is checked. See the pictures below for more detail.
+
+![Step 1: Click "My Profile"](../../images/guides/covid-19/default-billing-region/1.png)
+![Step 2: Set default billing region](../../images/guides/covid-19/default-billing-region/2.png)
+
 ## Create your first project
 
-!!! todo
+**Steps**
+
+1. Select "New Project" in the upper left part of the screen, fill in the form as instructed in the image below, and click "Create Project". You should be redirected to your first DNAnexus project.
+2. We highly recommend you read through [DNAnexus's dedicated guide](https://documentation.dnanexus.com/getting-started/key-concepts/projects#create-a-new-project) to learn about projects: how you can navigate them, how you can share them with collaborators, and how they are billed. 
+
+![Step 1: Create a project](../../images/guides/covid-19/create-a-project/1.png)
 
 ## Set up your billing account
 
