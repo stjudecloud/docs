@@ -5,7 +5,7 @@ theme:
   custom_dir: 'mkdocs-stjudecloud/material'
   logo: 'images/stjude-logo-child-white.png'
   font: false
-  favicon: 'assets/images/favicon.ico'
+  favicon: 'images/favicon.ico'
 
 extra_css:
   - css/extra.css
