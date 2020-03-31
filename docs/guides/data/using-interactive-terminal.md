@@ -1,21 +1,68 @@
-# Using Interactive Terminal (beta)
+# Using Interactive Terminal
+
+Apart from creating and running cloud apps, you can request an interactive node in the cloud to iteratively develop on. This can be particularly useful if you want to run some quick analyses on the cloud, want to run tools without creating an app, or want to run an app multiple times.
+
+This guide assumes that you have a DNAnexus account and have dx-toolkit installed on your machine.
+
+## Cloud Workstation
+
+This is a fresh node on the cloud that can be used to run any command with access to data in your projects. You will be given root access to the node so you can download and install any tool you require. Since this is an interactive session, you will be charged for the duration of the session so it is important to terminate the session after use.
+
+### Configuring SSH
+
+Run `dx ssh_config` to configure your account to allow use of SSH connections to the node.
+
+### Connecting to the workstation
+
+To start an interactive workstation, first select the project you would like to start it in.
+
+`dx select "my_project"`
+
+or just `dx select` to select from a list of your projects.
+
+Next, run `dx run app-cloud_workstation --ssh`. You can set the maximum session length for this session or continue with the default options.
+
+### Setting up workspace
+
+Once you are connected to the node, you will have access to download and install tools to the node and use them. The node is a clean linux environment with the dx command line tool already installed.
+
+In order to upload and download files from your DNAnexus project, you must first run the following commands.
+
+```bash
+unset DX_WORKSPACE_ID
+dx cd $DX_PROJECT_WORKSPACE_ID:
+```
+
+### Downloading files from your DNAnexus project
+
+The node has access to the data in your projects. To download a file, `test.bam`, from your parent project, just run `dx download test.bam`. To download a file from any project you have access to, just specify the project and path to the file in your download command like `dx download project-XXXXXXXX:/path/to/test.bam`.
+
+Once you have all the tools and data you require, you can use the workstation as a general-purpose workstation to run analyses.
+
+### Uploading files back to your project
+
+Since the node is transient and will be deleted after the session is terminated, it is important to upload any required files to your project. You can do that by running `dx upload output.bam` or `dx upload --path "$DX_PROJECT_CONTEXT_ID:" output.bam` if you selected another project in the workstation.
+
+### Terminating the session
+
+By default, the session will end after the max session time set when the workstation was first started. You can terminate the session when you are done working by `exit`ing out of the terminal. You will be asked whether you want to terminate the job, enter 'y' to terminate. You can also terminate the job by going to the Monitor tab of your project in DNAnexus and terminate the running job from the website.
+
+For more information about cloud workstations, please refer to the [DNAnexus documentation](https://documentation.dnanexus.com/developer/cloud-workstations).
+
+## CWIC - Cloud Workstation In Container (beta)
 
 !!! warning
     This app is still in beta. There are improvements being made to the app and experience around it.
 
-Apart from creating and running cloud apps, you can request an interactive node in the cloud to iteratively develop on. This can be particularly useful if you want to run some quick analyses on the cloud, want to run tools without creating an app, or want to run an app multiple times.
+Cloud workstations are good for interactive work, but they require you to upload/download data from your projects. They also do not save your working environment so any tools you installed or changes you made to the machine will be lost when the session is terminated. The cwic app solves these issues by saving your environment and letting you easily work with your data on the cloud.
 
-This is a guide on how to get setup with the "cwic" nodes on DNAnexus. This guide assumes that you have a DNAnexus account and have dx-toolkit installed on your machine.
+To start a cwic node, you must first get access to the cwic app and copy it to one of your projects. Since this is still in beta, it is not publicly available on DNAnexus yet. Please [contact us](mailto:support@stjude.cloud) to get access to the app. Next, select the project with the cwic app on your command line using `dx select` on your machine.
 
-## CWIC - Cloud Workstation In Container
-
-This is an interactive node on the cloud that can save your environment to help you resume your work later. The cwic node is similar to an interactive node on a research cluster. To start a cwic node, you must first get access to the cwic app and copy it to one of your projects. Since this is still in beta, it is not publicly available on DNAnexus yet. Please [contact us](mailto:support@stjude.cloud) to get access to the app. Next, select the project with the cwic app on your command line using `dx select` on your machine.
-
-## Setting up your Docker Hub account
+### Setting up your Docker Hub account
 
 The workstation uses a Docker Hub repository to save your environment. To get started, go to hub.docker.com and sign in or create an account. Every Docker Hub account is given one free private repository. It is highly recommended to use a private repository as this will be your working environment. Once you have made your Docker Hub account, go to your "Account Settings", then "Security" and create a new access token. Save this token as it will be needed for the cwic nodes.
 
-## Creating a credentials file
+### Creating a credentials file
 
 Create a file with the template below and fill in your Docker Hub token and Docker Hub username in the appropriate places.
 
@@ -34,7 +81,7 @@ Note: If you would rather use a quay.io repository, you can use your quay creden
 
 Upload the credentials file to your project by running `dx upload creds.txt`. It is recommended to save your credentials in a separate, private DNAnexus project to ensure that others do not have access to it.
 
-## Starting an interactive terminal session
+### Starting an interactive terminal session
 
 The following command will run the app using the credentials you provided and will log you into the node after it boots up.
 
@@ -44,7 +91,7 @@ where `YOUR_DX_PROJECT_NAME` is the name of the DNAnexus project with your crede
 
 ![running cwic app](../../images/guides/data/interactive-terminal-1.png)
 
-## Working on the cwic node
+### Working on the cwic node
 
 Once the node starts, you will be taken to the home directory of the cwic node. This node is an ubuntu environment and you can install or run any commands you want.
 
@@ -64,11 +111,11 @@ You can upload some data to your project using `dx upload test.bam`. Refer to th
 
 We recommend installing [Anaconda](https://www.anaconda.com/distribution/) to manage any python or R packages in your cwic environment.
 
-### Saving your environment
+#### Saving your environment
 
 If you installed samtools, or any other tool to the node and want to save your environment, you can run `dx-save-cwic`. This will save the environment to your Docker Hub repository. The next time you launch a cwic node in this project, it will put you in an node with your saved environment. Therefore you will not need to reinstall samtools or any other tool you had in your environment.
 
-### Running batch jobs
+#### Running batch jobs
 
 We can dispatch non-interactive jobs from the node to parallelize analyses.
 
@@ -91,17 +138,17 @@ done
 
 After your jobs have finished running. You can run `dx-reload-project` to refresh the `/project` directory and see the newly added chromosome slices.
 
-### Reloading project directory
+#### Reloading project directory
 
 You may not see the updated files in your `/project/<YOUR_PROJECT_NAME>` directory immediately after they are added. In order to reload the project directory on the cwic node with the latest files from your DNAnexus project, run `dx-reload-project` and you will see any new files.
 
 If you get a message such as `umount: /project: target is busy.`, `cd` into a directory other than `/project` and try reloading again.
 
-### Saving any project updates
+#### Saving any project updates
 
 Updates to any files in the `/project` directory only occur every 5 minutes. In order to propagate any recent updates, run `dx-save-project` to save the files to the DNAnexus project.
 
-### Saving the environment
+#### Saving the environment
 
 Run `dx-save-cwic` to save your latest environment so that you can resume your work easier the next time you use the interactive node.
 
@@ -111,13 +158,15 @@ Since the cwic node is an interactive job, it gets billed for the duration of th
 
 Save your work and environment, if needed, by running `dx-save-project` and `dx-save-cwic` respectively. To quit the node, type `exit` twice to get into the app execution environment. Press `Ctrl+c` to quit the cwic app and type `exit` twice to get out of the terminal completely. You will be prompted to terminate the job, type 'y' to terminate the job. You can check if the node is still running by checking the Monitor tab in your project on the DNAnexus website. Alternatively, you can terminate the job from the Monitor tab.
 
-## Advanced usage
+## Advanced options
 
-### Changing instance type of the cwic app
+### Changing instance type
 
-By default the cwic nodes uses the `mem1_ssd1_x4` instance type. If you require more or less runtime requirements, you can change the instance type by specifying the flag `--instance-type` with a valid instance type from [this list](https://documentation.dnanexus.com/developer/api/running-analyses/instance-types#summary-of-instance-types).
+If you require more or less runtime requirements for your nodes, you can change the instance type by specifying the flag `--instance-type` with a valid instance type from [this list](https://documentation.dnanexus.com/developer/api/running-analyses/instance-types#summary-of-instance-types).
 
-`dx run cwic -icredentials=<DX_PROJECT_NAME_WITH_CREDS>:creds.txt --allow-ssh --ssh -y`
+`dx run app-cloud_workstation --instance-type azure:mem1_ssd1_x16 --ssh`
+or
+`dx run cwic -icredentials=<DX_PROJECT_NAME_WITH_CREDS>:creds.txt --instance-type mem1_ssd1_x4 --allow-ssh --ssh -y`
 
 This is useful when you want to run some non-interactive jobs that have different memory or storage requirements.
 

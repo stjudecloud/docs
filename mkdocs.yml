@@ -21,7 +21,7 @@ pages:
       - 'Creating a Cloud App': 'guides/data/creating-a-cloud-app.md'
       - 'Data Transfer Application': 'guides/data/data-transfer-app.md'
       - 'Command Line Interaction': 'guides/data/command-line.md'
-      - 'Using Interactive Terminal (beta)': 'guides/data/using-interactive-terminal.md'
+      - 'Using Interactive Terminal': 'guides/data/using-interactive-terminal.md'
   - 'Tool Guides':
       - 'Pecan PIE': 'guides/tools/pecan-pie.md'
       - 'NeoepitopePred': 'guides/tools/neoepitope.md'
