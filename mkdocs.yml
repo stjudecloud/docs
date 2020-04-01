@@ -12,7 +12,7 @@ extra_css:
 
 nav:
   - Welcome to St. Jude Cloud: index.md 
-  - COVID-19:
+  - COVID-19 Response:
       - Introduction: guides/covid-19/index.md
       - Getting started: guides/covid-19/getting-started.md
       - Data upload (HPC): guides/covid-19/upload-cluster.md

@@ -61,12 +61,17 @@ This should be sufficient for the purposes of this guide. For more detailed info
 
 ## Set up your billing account
 
-!!! todo
-    Different based on your engagement level:
+Billing is handled in St. Jude Cloud by creating and managing a DNAnexus billing organization (or "org"). Each project in DNAnexus is associated with a single org (you had to specify one when you created a project in the last step), and all compute and storage costs are billed to that org. By default, each new user on St. Jude Cloud gets a billing org called `user-[username]` with $50 of trial credit. You can view the billing orgs available to your account [here](https://platform.dnanexus.com/profile/settings/billing).  
 
-    * Describe how to get set up on a sponsored account for COVID-19 discovery labs.
-    * Describe how to set up your own billing for non-discovery.
-        * Though we will prioritize funds for discovery labs, we still want non-discovery labs to reach out to us to see what resources are available if they are in need.
+!!! info
+
+    We intend to prioritize funds for Discovery Sponsorship Program participants. However, there is the potential for left-over funds to be available. If you are a lab that would like to use the cloud but do not have funds available, please let us know at [support@stjude.cloud](mailto:support@stjude.cloud).
+
+**Steps**
+
+1. If your lab has been accepted into the Discovery Sponsorship Program, we will create an organization for you to bill your project against. If we have not already, we will be in contact with you shortly concerning this information.
+2. Otherwise, your lab will need to set up a billing org for itself. If you are interested, please view [this guide](https://home.stjude.org/computational-biology/Pages/bioinformatics-self-service-admin-guide.aspx) on the intranet for steps to get started. This process usually takes 5 business days to complete.
+
 
 
 [slack]: https://slack.com/

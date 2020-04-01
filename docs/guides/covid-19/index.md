@@ -1,3 +1,6 @@
+!!! info
+    This section of the documentation is geared towards St. Jude Children's Research Hospital research staff affected by COVID-19, not to other users of St. Jude Cloud. Regardless, anyone may use these pages as a path to follow should they wish to try out St. Jude Cloud.
+
 ### Overview
 
 * The sudden, fully remote operation of St. Jude research staff due to the COVID-19 pandemic has caused higher than normal demand on VPN and HPC cluster resources. 
@@ -7,10 +10,6 @@
 
 !!! tip 
     Currently, this is guide is focused on omics-based data analysis. The DNAnexus ecosystem can be used for many other types of data analysis, and can serve as a secure cloud environment to easily do other types of research. If you are interested, please [contact us](mailto:support@stjude.cloud) and let us know — we'd be happy to help.
-
-!!! warning
-    This guide is geared towards St. Jude Children's Research Hospital research staff, not to other users of St. Jude Cloud. Regardless, anyone may use these pages as a path to follow should they wish to try out St. Jude Cloud.
-
 
 ### Levels of Engagement
 
