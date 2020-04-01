@@ -1,7 +1,7 @@
 # Welcome to St. Jude Cloud Documentation!
 
 !!! info "COVID-19 Information"
-    See how St. Jude Cloud is responding to the coronavirus pandemic on our [Response](../../guides/covid-19/) page. To see how St. Jude Children's Research Hospital is responding to the coronavirus pandemic, please visit [St. Jude News](https://www.stjude.org/media-resources/news-releases.html).
+    See how St. Jude Cloud is responding to the coronavirus pandemic on our [Response](../../guides/covid-19/) page.
 
 ## Overview
 

@@ -1,15 +1,20 @@
 Please complete the following check-list to get started with using St. Jude Cloud:
 
-- [x] If applicable, apply for COVID-19 Discovery Program ([link](#apply-for-covid-19-discovery-program)).
+- [x] If applicable, apply for Discovery Sponsorship Program ([link](#apply-for-discovery-sponsorship-program)).
 - [x] Join St. Jude Cloud helpdesk channel on Slack ([link](#joining-slack)).
 - [x] Log in to your St. Jude Cloud account ([link](#login-to-st-jude-cloud)). 
 - [x] Enable Microsoft Azure ([link](#enable-microsoft-azure)). 
 - [x] Create your first project ([link](#create-your-first-project)).
 - [x] Set up your billing account ([link](#set-up-your-billing-account)).
 
-## Apply for COVID-19 Discovery Program
+## Apply for Discovery Sponsorship Program
 
-!!! todo
+Applying for the program is easy - just fill out the [application form](../../files/DSPApplicationForm.pdf) and submit it to [discoveryprogram@stjude.org](mailto: discoveryprogram@stjude.org). The last day to apply is April 9th. 
+
+#### About the Program:
+* Sponsored storage and compute costs
+* Weekly meeting with St. Jude Cloud team to make sure your research is moving forward effectively
+* Software Engineering support
     
 ## Joining Slack
 
@@ -25,7 +30,7 @@ If you have any issues with the instructions below, you can email [helpdesk@stju
 
 You should now see a screen similar to the one included below. You can type your questions into the chat box at the bottom. See you there!
    
-![Slack Helpdesk Channel](../../images/guides/covid-19/slack-channel-view.png)
+![Slack Helpdesk Channel](../../images/guides/covid-19/slack-messaging.png)
 
 
 ## Login to St. Jude Cloud
@@ -50,7 +55,7 @@ This should be sufficient for the purposes of this guide. For more detailed info
 ![Step 1: Click "My Profile"](../../images/guides/covid-19/default-billing-region/1.png)
 ![Step 2: Set default billing region](../../images/guides/covid-19/default-billing-region/2.png)
 
-## Create your first project
+## Create your First Project
 
 **Steps**
 
@@ -59,7 +64,7 @@ This should be sufficient for the purposes of this guide. For more detailed info
 
 ![Step 1: Create a project](../../images/guides/covid-19/create-a-project/1.png)
 
-## Set up your billing account
+## Set Up your Billing Account
 
 Billing is handled in St. Jude Cloud by creating and managing a DNAnexus billing organization (or "org"). Each project in DNAnexus is associated with a single org (you had to specify one when you created a project in the last step), and all compute and storage costs are billed to that org. By default, each new user on St. Jude Cloud gets a billing org called `user-[username]` with $50 of trial credit. You can view the billing orgs available to your account [here](https://platform.dnanexus.com/profile/settings/billing).  
 
@@ -70,8 +75,11 @@ Billing is handled in St. Jude Cloud by creating and managing a DNAnexus billing
 **Steps**
 
 1. If your lab has been accepted into the Discovery Sponsorship Program, we will create an organization for you to bill your project against. If we have not already, we will be in contact with you shortly concerning this information.
-2. Otherwise, your lab will need to set up a billing org for itself. If you are interested, please view [this guide](https://home.stjude.org/computational-biology/Pages/bioinformatics-self-service-admin-guide.aspx) on the intranet for steps to get started. This process usually takes 5 business days to complete.
+2. Otherwise, your lab will need to set up a billing org for itself. Please see our Account and Billing sections below. 
 
+    [Billing for St. Jude Employees](../../account-and-billing/#billing)
+
+    [Billing for Non-St. Jude Employees](../../account-and-billing/#billing_1)
 
 
 [slack]: https://slack.com/

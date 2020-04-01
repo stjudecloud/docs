@@ -4,25 +4,27 @@
 ### Overview
 
 * The sudden, fully remote operation of St. Jude research staff due to the COVID-19 pandemic has caused higher than normal demand on VPN and HPC cluster resources. 
-* Since the announcement of remote work, the St. Jude Cloud team has working with Information Services to create a plan to rapidly on-board interested labs to the cloud, relinquishing you of VPN and cluster issues and allowing you to continue your work uninterrupted. 
-* This page serves as a guide for how you can quickly try out the cloud and what experimental offerings we have been prototyping to ease your transition.
+* Since the announcement of remote work, the St. Jude Cloud team has working with Information Services to create a plan to rapidly on-board interested labs to the cloud, relinquishing the VPN and cluster from strain and allowing you to continue your work uninterrupted. 
+* This page serves as a guide for quickly trying out St. Jude Cloud and exploring experimental offerings we have prototyped to ease your transition.
 * Read below about the different levels of engagement we are offering during this time and decide which you are interested in. If you're interested in jumping in, you can skip to the guides in the [walkthrough section](#walkthrough).
 
 !!! tip 
     Currently, this is guide is focused on omics-based data analysis. The DNAnexus ecosystem can be used for many other types of data analysis, and can serve as a secure cloud environment to easily do other types of research. If you are interested, please [contact us](mailto:support@stjude.cloud) and let us know — we'd be happy to help.
 
+
+
 ### Levels of Engagement
 
-If you're interested in trying out the cloud, you'll need to pick which of the two levels of engagement we offer:
+If you're interested in trying our platform, you'll need to pick one of the two levels of engagement we offer:
 
-* **General Usage**. Use the guides and resources provided to self-navigate using St. Jude Cloud. Anyone can independently leverage St. Jude Cloud to move computational workloads from the HPC without involvement from our team. If you have a St. Jude SSO account, then you already have a St. Jude Cloud account! You can navigate to the [walkthrough section](#walkthrough) to get started.
-* **COVID-19 Discovery Program**. We are developing several experimental features, including a new, cloud-native BAM viewer and interactive nodes in the cloud, to help ease the transition. As such, we're looking for a small number of labs to collaborate much more closely with to develop out these features and ensure a successful transition to the cloud.
+* **General Use.** Use the guides and resources provided to self-navigate using St. Jude Cloud. Anyone can independently leverage St. Jude Cloud to move computational workloads from the HPC without involvement from our team. If you have a St. Jude SSO account, then you already have a St. Jude Cloud account! You can navigate to the [walkthrough section](#walkthrough) to get started.
+* **Discovery Sponsorship Program.** We are developing several experimental features, including a new, cloud-native BAM viewer and interactive nodes in the cloud, to help ease the transition. As such, we're looking for a small number of labs to collaborate much more closely with to develop out these features and ensure a successful transition to the cloud.
 
-If you are interested in helping us shape the St. Jude Cloud experience for all users and getting sponsored compute + storage, we recommend you [apply for one of the limited discovery programs slots](link-needed). All other users can navigate to the [walkthrough section](#walkthrough) to get started.
+If you are interested in helping us shape the St. Jude Cloud experience for all users and getting sponsored compute + storage, we recommend you [apply for one of the limited discovery program slots](../../files/DSPApplicationForm.pdf). All other users can navigate to the [walkthrough section](#walkthrough) to get started.
 
 You can see a more complete list of the differences between these two offerings in the figure below.
 
-![COVID-19 Programs](../../images/guides/covid-19/covid-19-programs.png)
+![COVID-19 Programs](../../images/guides/covid-19/levels-of-engagement.png)
 
 ### Walkthrough
 
