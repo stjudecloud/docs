@@ -1,13 +1,13 @@
-# Uploading Data from St. Jude `hpc` to DNAnexus
+# Uploading Data from St. Jude HPC to DNAnexus
 
 This guide describes how to upload data from St. Jude's research computing
-cluster to DNAnexus. It covers logging in to `hpc`, creating an interactive
-session, installing DNAnexus Upload Agent, and uploading files to DNAnexus.
+cluster to DNAnexus. It covers logging in to the HPC, creating an interactive
+session, loading the dx-toolkit, and uploading files to DNAnexus.
 
 The research cluster is restricted to St. Jude employees, as it is only
-accessible on St. Jude's intranet.
+accessible on St. Jude's intranet. If you are reading this page and work at another institution, please work with your HPC staff on translating the steps to your architecture.
 
-## Logging in to `hpc`
+## Logging in to `hpc.stjude.org`
 
 The SSH (Secure Shell) protocol is used to log in to `hpc`, the hostname of
 the entry point into St. Jude's research cluster. SSH provides a secure
@@ -16,6 +16,8 @@ method to log in to a remote computer.
 Regardless of platform, logging in requires a St. Jude username and will
 prompt you for your password. They are the same username and password used to
 log in to all St. Jude services.
+
+You can log in to the HPC cluster as you normally would:
 
 Upon a successful log in, you will see a prompt similar to
 `[username@splprhpc06 ~]$`.
@@ -33,7 +35,7 @@ OpenSSH is included as [a feature] that can be installed.
 Open PowerShell and run
 
 ```
-> ssh <username>@hpc
+ssh <username>@hpc
 ```
 
 Alternatively (or on older versions of Windows), install and use the terminal
@@ -63,7 +65,7 @@ $ ssh <username>@hpc
 
 When logging in to `hpc`, you are placed on a _head node_, a controlled gateway
 configured to allow external access to the cluster. This node is not meant for
-computation, which is done on a cluster node instead.
+computation, which should be done on a cluster node instead.
 
 To move to a cluster node, start an interactive session. The cluster's
 workload is managed by [IBM Spectrum LSF], and even though LSF commands can
@@ -168,19 +170,7 @@ killed. To avoid this from happening, a _job_ is submitted in its place,
 which continues to run even after the session is closed.
 
 To submit a job, use the LSF command [bsub], where `-P` is an arbitrary
-project name for the job submission.
-
-```
-$ bsub \
-    -P <project> \
-    -R "rusage[mem=2882]" \
-    ua \
-    --do-not-compress \
-    --project <project-name-or-id> \
-    <src>
-```
-
-When uploading a large batch of files, HPCF requests the
+project name for the job submission. When uploading a large batch of files, HPCF requests the
 `/stjudecloud/uploads` job group be used to rate limit upload jobs. This can
 be done using the `-g` option when submitting a job.
 
