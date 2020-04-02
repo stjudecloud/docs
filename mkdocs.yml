@@ -18,7 +18,7 @@ nav:
       - Data upload (local): guides/covid-19/upload-local.md
       - Data upload (HPC): guides/covid-19/upload-cluster.md
       - Creating a cloud app: guides/covid-19/creating-a-cloud-app-covid.md
-      - Ad-hoc analysis: guides/covid-19/interactive-terminal.md
+      - Interactive nodes: guides/covid-19/interactive-node.md
   - Account and Billing: ./account-and-billing.md
   - Data Guides: 
       - About Our Data: guides/data/about-our-data.md
