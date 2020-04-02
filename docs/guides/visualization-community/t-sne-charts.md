@@ -109,6 +109,13 @@ Once the resulting analysis job completes, an HTML plot of the results should be
 
 ![](../../images/guides/visualization-community/tsne-charts/tsne-example2.png)
 
+## Batch effect corrections
+
+When comparing numerous samples such as those included in this analysis, it is important to consider 
+the variation in data created by obtaining from various sources and across time. Therefore the t-SNE
+visualization incorporates some batch effect corrections for the reference data. Currently we correct 
+for batch effect based on strandedness of the RNA-Seq sample, library type, and read length protocol.
+
 ## Known issues
 
 !!! caution "Fresh Frozen Tissue Only
