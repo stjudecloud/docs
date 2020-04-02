@@ -31,7 +31,8 @@ You can see a more complete list of the differences between these two offerings 
 Please read the following guides in order to quickly get up to speed on how you can transition to using St. Jude Cloud. If you have any questions, please [contact us](mailto:support@stjude.cloud).
 
 1. [Getting started](./getting-started.md)
-2. [How to upload data from the cluster to St. Jude Cloud](./upload-cluster.md)
 3. [How to upload data from your laptop/desktop to St. Jude Cloud](./upload-local.md)
-4. [How to use the interactive terminal (beta)](./interactive-node.md)
+2. [How to upload data from the cluster to St. Jude Cloud](./upload-cluster.md)
 5. [Creating a production grade analysis app](./create-an-app.md)
+4. [How to use interactive nodes (alpha)](./interactive-node.md)
+4. [How to use visualize data using IGV and GenomePaint (alpha)](./visualizing-ngs-data.md)

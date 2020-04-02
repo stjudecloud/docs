@@ -9,12 +9,9 @@ Please complete the following check-list to get started with using St. Jude Clou
 
 ## Apply for Discovery Sponsorship Program
 
-Applying for the program is easy - just fill out the [application form](../../files/DSPApplicationForm.pdf) and submit it to [discoveryprogram@stjude.org](mailto: discoveryprogram@stjude.org). The last day to apply is April 9th. 
+Please see the **Discovery Sponsorship Program** (DSP) section in the figure below for an overview of program benefits. Applying for the program is easy - just fill out the [application form](../../files/DSPApplicationForm.pdf) and submit it to [discoveryprogram@stjude.org](mailto: discoveryprogram@stjude.org). The last day to apply is April 9th. 
 
-#### About the Program:
-* Sponsored storage and compute costs
-* Weekly meeting with St. Jude Cloud team to make sure your research is moving forward effectively
-* Software Engineering support
+![COVID-19 Programs](../../images/guides/covid-19/levels-of-engagement.png)
     
 ## Joining Slack
 
