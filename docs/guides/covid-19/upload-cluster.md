@@ -7,7 +7,7 @@ session, loading the dx-toolkit, and uploading files to DNAnexus.
 The research cluster is restricted to St. Jude employees, as it is only
 accessible on St. Jude's intranet. If you are reading this page and work at another institution, please work with your HPC staff on translating the steps to your architecture.
 
-## Logging in to `hpc.stjude.org`
+## Logging in to the HPC
 
 The SSH (Secure Shell) protocol is used to log in to `hpc`, the hostname of
 the entry point into St. Jude's research cluster. SSH provides a secure
@@ -16,11 +16,6 @@ method to log in to a remote computer.
 Regardless of platform, logging in requires a St. Jude username and will
 prompt you for your password. They are the same username and password used to
 log in to all St. Jude services.
-
-You can log in to the HPC cluster as you normally would:
-
-Upon a successful log in, you will see a prompt similar to
-`[username@splprhpc06 ~]$`.
 
 ### Windows
 
@@ -34,7 +29,7 @@ OpenSSH is included as [a feature] that can be installed.
 
 Open PowerShell and run
 
-```
+```bash
 ssh <username>@hpc
 ```
 
@@ -48,7 +43,7 @@ emulator [PuTTY].
 
 macOS includes OpenSSH by default. Open Terminal and run
 
-```
+```bash
 $ ssh <username>@hpc
 ```
 
@@ -57,7 +52,7 @@ $ ssh <username>@hpc
 Most Linux distributions have OpenSSH installed by default. Open a terminal
 and run
 
-```
+```bash
 $ ssh <username>@hpc
 ```
 
@@ -73,7 +68,7 @@ be used to create an interactive session, the High-Performance Computer
 Facility (HPCF) provides a convenience script named `hpcf_interactive` for a
 simpler invocation.
 
-```
+```bash
 $ hpcf_interactive
 ```
 
@@ -96,37 +91,23 @@ Job <99871669> is submitted to queue <interactive>.
 ## DNAnexus Upload Agent
 
 DNAnexus provides multiple methods to upload files to their platform. In this
-section, Upload Agent (UA) is used. It is simple to install and supports
+section, Upload Agent (UA) is used. It is simple to use and supports
 resuming interrupted transfers.
-
-### Install
-
-DNAnexus Upload Agent is available from DNAnexus Documentation's
-[Downloads][download] article. Download and install Upload Agent:
-
-```
-$ cd /tmp
-$ wget https://dnanexus-sdk.s3.amazonaws.com/dnanexus-upload-agent-1.5.31-linux.tar.gz
-$ mkdir -p $HOME/.local/bin
-$ tar xf dnanexus-upload-agent-*-linux.tar.gz --strip-components 1 --directory $HOME/.local/bin
-```
-
-The research cluster runs Red Hat Enterprise Linux 7.3, which is why the
-Linux package is used.
-
-The rest of this chapter assumes `$HOME/.local/bin` is in your `PATH`.
-Otherwise, when calling `ua`, use `$HOME/.local/bin/ua`.
-
-[download]: https://documentation.dnanexus.com/downloads#Upload-Agent
 
 ### Setup
 
-Set the environment variable `DX_SECURITY_CONTEXT` with [a DNAnexus
-authentication token]. Rather than exposing your username and password, an
-authentication token is an alternative way to log in to DNAnexus using a
-secret phrase. Replace `<auth-token>` with your own token.
+You can load the DNAnexus upload agent command line tool, `ua`, by loading the `dx-ua` module.
 
+```bash
+module load dx-ua/1.5.30
 ```
+
+Next, you'll need to configure the `ua` command line tool with access to your St. Jude Cloud account. Rather than exposing your username and password, best practice is to generate an authentication token that lives for a short period of time instead. You can do so by following this guide on how to generate [a DNAnexus
+authentication token].
+
+Replace `<auth-token>` with your own token in the example below.
+
+```bash
 $ export DX_SECURITY_CONTEXT='{"auth_token_type": "bearer", "auth_token": "<auth-token>"}'
 ```
 
@@ -136,22 +117,26 @@ This must be set once for ever new interactive session started.
 
 ## Uploading files
 
-With DNAnexus Upload Agent installed and configured, files can be uploaded by
-running `ua`.
-
 ### Basic usage
+
+With DNAnexus Upload Agent installed and configured, files can be uploaded by
+running `ua`. To get acquainted with the command, you can view the help message for `ua`.
+
+```bash
+ua --help
+```
 
 The simplest usage of `ua` is providing the DNAnexus project to upload to and
 a source file.
 
-```
+```bash
 $ ua --do-not-compress --project <project-name-or-id> <src>
 ```
 
 For example, with a DNAnexus project named `flagstat` and a file named
 `sample.1.bam`, the command would be
 
-```
+```bash
 $ ua --do-not-compress --project flagstat sample.1.bam
 ```
 
@@ -174,7 +159,7 @@ project name for the job submission. When uploading a large batch of files, HPCF
 `/stjudecloud/uploads` job group be used to rate limit upload jobs. This can
 be done using the `-g` option when submitting a job.
 
-```
+```bash
 $ bsub \
     -P dx-upload \
     -g /stjudecloud/uploads \
@@ -198,32 +183,32 @@ $ bsub \
 [bsub]: https://www.ibm.com/support/knowledgecenter/en/SSWRJV_10.1.0/lsf_command_ref/bsub.man_top.1.html
 [ua-main-mem]: https://github.com/dnanexus/dx-toolkit/blob/9e6398e1ce1e8b210df3f3f50abc82932084b2b3/src/ua/main.cpp#L151-L162
 
-## Examples
+## Further examples
 
-The following examples are common usages of Upload Agent.
+The following examples are common usages of Upload Agent. If you use any of these options, please be sure submit them to the HPC job group as shown in [batched jobs](#batched-jobs) to ensure the number of uploads is throttled.
 
 ### Upload multiple files
 
 `ua` takes multiple source arguments.
 
-```
+```bash
 $ ua --do-not-compress --project <project-name-or-id> <src...>
 ```
 
 For example, for two files `sample.1.bam` and `sample.1.bam.bai`, the command
 is
 
-```
+```bash
 $ ua --do-not-compress --project flagstat sample.1.bam sample.1.bam.bai
 ```
 
-### Upload a file to a directory on DNAnexus
+### Upload a folder in DNAnexus
 
 By default, all files uploaded via `ua` get placed at the root of the
 project, i.e., `/`. To upload to a particular directory, use the `--folder`
 option.
 
-```
+```bash
 $ ua --do-not-compress --project <project-name-or-id> --folder /data sample.1.bam
 ```
 
@@ -232,7 +217,7 @@ The resulting uploaded file will be located at `/data/sample.1.bam`.
 The directory does not have a previously exist in the DNAnexus project and
 will be created automatically, along with its parents (similar to `mkdir -p`).
 
-### Upload a directory
+### Upload a local directory
 
 When uploading a directory, `ua` will only use the files at the top level
 (similar to `find data -type f -maxdepth 1`). For example, take the following
@@ -256,7 +241,7 @@ The resulting files will be `/sample.1.bam` and `/sample.1.bam.bai`. Use the
 `--folder` option and name it the same as the local source directory to
 include the directory on DNAnexus.
 
-```
+```bash
 $ ua --do-not-compress --project <project-name-or-id> --folder /data data
 ```
 
@@ -264,7 +249,7 @@ The resulting files will be `/data/sample.1.bam` and `/data/sample1.bam.bai`.
 
 To include the subdirectories, use the `--recursive` option.
 
-```
+```bash
 $ ua --do-not-compress --project <project-name-or-id> --folder /data --recursive data
 ```
 
