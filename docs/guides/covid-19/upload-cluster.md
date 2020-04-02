@@ -2,7 +2,7 @@
 
 This guide describes how to upload data from St. Jude's research computing
 cluster to DNAnexus. It covers logging in to the HPC, creating an interactive
-session, loading the dx-toolkit, and uploading files to DNAnexus.
+session, loading the DNAnexus upload agent, and uploading files to DNAnexus.
 
 The research cluster is restricted to St. Jude employees, as it is only
 accessible on St. Jude's intranet. If you are reading this page and work at another institution, please work with your HPC staff on translating the steps to your architecture.
@@ -119,7 +119,7 @@ This must be set once for ever new interactive session started.
 
 ### Basic usage
 
-With DNAnexus Upload Agent installed and configured, files can be uploaded by
+With DNAnexus Upload Agent loaded, files can be uploaded by
 running `ua`. To get acquainted with the command, you can view the help message for `ua`.
 
 ```bash

@@ -1,5 +1,8 @@
 # Creating a Cloud Application
 
+!!! info
+    If you came here from the remote work quickstart guide, you can use [this link](../covid-19/creating-a-cloud-app-covid.md) to quickly jump back to your place in that guide.
+
 This guide will take you through the process of writing an application for working with and manipulating the St. Jude data you've requested. By creating your own application, you will be able to wrap genomic tools and packages from external sources, as well as any tool or application you might have written yourself.
 
 !!! tip

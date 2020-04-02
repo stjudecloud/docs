@@ -15,10 +15,10 @@ nav:
   - COVID-19 Response:
       - Introduction: guides/covid-19/index.md
       - Getting started: guides/covid-19/getting-started.md
-      - Data upload (HPC): guides/covid-19/upload-cluster.md
       - Data upload (local): guides/covid-19/upload-local.md
-      - Interactive terminal: guides/covid-19/interactive-terminal.md
-      - Creating a Cloud App: guides/covid-19/creating-a-cloud-app-covid.md
+      - Data upload (HPC): guides/covid-19/upload-cluster.md
+      - Creating a cloud app: guides/covid-19/creating-a-cloud-app-covid.md
+      - Ad-hoc analysis: guides/covid-19/interactive-terminal.md
   - Account and Billing: ./account-and-billing.md
   - Data Guides: 
       - About Our Data: guides/data/about-our-data.md
