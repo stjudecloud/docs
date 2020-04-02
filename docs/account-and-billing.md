@@ -47,14 +47,14 @@ If your account is already set up and you would like to access your Billing info
 4. On the Create New Account page, make sure to select "Microsoft Azure (westus)" as the Default Cloud Region.
 5. Click 'CREATE ACCOUNT'
 
-![](../../images/create-DX-account.gif)
+![](images/create-DX-account.gif)
 
 ### Billing 
 
 1. Click on the drop down next to your user name in the far right of the DNAnexus navigation bar, and select 'Profile'.
 2. Click on 'Billing Account' from the tabs listed just under the navigation bar.
 3. Click on the green 'ADD BILLING INFO' button to the right of your account name.
-![](../../images/DX-setup_billing_ext.gif)
+![](images/DX-setup_billing_ext.gif)
 4. A window labeled 'ACCOUNT UPGRADE' will pop up. In this window agree to DNAnexus's Terms of Service, agree to DNAnexus's pricing model, review your account information, and finally enter your billing information.
 5. Click 'Upgrade Account'. This will send an email to the individual listed as the billing contact requesting that they verify the change.
 

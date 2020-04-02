@@ -1,7 +1,6 @@
 ### Data Access Agreement
 
-A St. Jude Cloud **Data Access Agreement (DAA)** is a legally binding document outlining a number of terms and conditions to which anyone working with St. Jude Cloud data must agree.
-We do not negotiate the terms of this document unless terms are found to be in conflict with the institution's state law. Filling out the Data Access Agreement carefully and completely is crucial to having your request approved promptly. [Click Here](./files/DAA_v4_10-1-2019.pdf) to download a copy of the DAA. [Click Here](./guides/forms/how-to-fill-out-DAA) for a step by step guide on how to fill out the DAA.
+A St. Jude Cloud **Data Access Agreement (DAA)** is a legally binding document outlining a number of terms and conditions to which anyone working with St. Jude Cloud data must agree. We do not negotiate the terms of this document unless terms are found to be in conflict with the institution's state law. Filling out the Data Access Agreement carefully and completely is crucial to having your request approved promptly. [Click Here](./files/DAA_v4_10-1-2019.pdf) to download a copy of the DAA. [Click Here](./guides/forms/how-to-fill-out-DAA) for a step by step guide on how to fill out the DAA.
 
 If you have incompletely or incorrectly filled out your DAA and would like to upload a revised form, [Click Here](./guides/forms/how-to-fill-out-DAA#uploading-a-revised-daa) for instructions.
 
@@ -11,8 +10,7 @@ Once you have submitted a correctly filled out DAA and have been granted access 
 
 A St. Jude Cloud **Data Access Committee (DAC)** is group of St. Jude researchers who oversee access to a particular [Data Access Unit (DAU)](#data-access-unit) and evaluate incoming data requests.
 
-The first time you request access to files in 
-a DAU, it is required that you fill out a [Data Access Agreement (DAA)](#data-access-agreement). Access is granted at the DAU level based on the decision of each DAC upon reviewing the DAA.
+The first time you request access to files in a DAU, it is required that you fill out a [Data Access Agreement (DAA)](#data-access-agreement). Access is granted at the DAU level based on the decision of each DAC upon reviewing the DAA.
 
 !!! example
     For example, if you make a request asking for all of St. Jude's Acute 
@@ -26,7 +24,7 @@ a DAU, it is required that you fill out a [Data Access Agreement (DAA)](#data-ac
 
 ### Data Access Unit
 
-A St. Jude Cloud **Data Access Unit (DAU)** is a grouping of data that typically corresponds to a project, study, or dataset generated at the same time at the same institution. Each DAU has its own governing body of researchers, the [Data Access Committee](#data-access-committee), who preside over the data and who may grant or deny access. We currently have 5 DAUs: Pediatric Cancer Genome Project (PCGP), St. Jude Lifetime Cohort Study (SJLIFE), Genomes for Kids (G4K) and Clinical Genomics, Sickle Cell Genome Project (SGP), and Childhood Cancer Survivor Study (CCSS). For a brief description of each DAU see the [Studies page](./guides/data/about-our-data.md#data-access-units). For a more detailed description please see the respective [Schedule 1(s)](./citing-stjude-cloud.md#dataset-reference-table).
+A St. Jude Cloud **Data Access Unit (DAU)** is a grouping of data that typically corresponds to a project, study, or dataset generated at the same time at the same institution. Each DAU has its own governing body of researchers, the [Data Access Committee](#data-access-committee), who preside over the data and who may grant or deny access. We currently have 5 DAUs: Pediatric Cancer Genome Project (PCGP), St. Jude Lifetime Cohort Study (SJLIFE), Genomes for Kids (G4K) and Clinical Genomics, Sickle Cell Genome Project (SGP), and Childhood Cancer Survivor Study (CCSS). For a brief description of each DAU see our [Studies page](./guides/data/about-our-data.md#data-access-units) in the About Our Data guide. For a more detailed description please see our [Schedule 1](./citing-stjude-cloud.md#dataset-reference-table) section, also in the About Our Data guide.
 
 
 

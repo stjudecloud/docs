@@ -163,8 +163,8 @@ You can find this by looking at the tags for each file or in the
 `SAMPLE_INFO.txt` file that is included with each data request.
 Select a sample and click info to see more.
 
-![](../images/guides/data/embargo-date-1.png)
-![](../images/guides/data/embargo-date-2.png)
+![](images/guides/data/embargo-date-1.png)
+![](images/guides/data/embargo-date-2.png)
 
 
 ### Will St. Jude Cloud host my institution's data in the data browser or on PeCan?
