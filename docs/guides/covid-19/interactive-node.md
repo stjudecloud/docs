@@ -80,6 +80,8 @@ For more information about cloud workstations, please refer to the [DNAnexus doc
 
 Cloud workstations are good for interactive work, but they require you to upload/download data from your projects. They also do not save your working environment so any tools you installed or changes you made to the machine will be lost when the session is terminated. The Interactive Node experience, sometimes referred to by its codename "CWIC" (cloud workstations in containers), solves these issues by saving your environment and letting you work with your data on the cloud without manually downloading it to the node.
 
+### Get access to CWIC
+
 To start an interactive node, you must first get access to the CWIC app and copy it to one of your projects. Since this is still in beta, it is not publicly available on DNAnexus yet. Please contact us in [the St. Jude Cloud Slack channel] to get access to the app.
 
 Next, select the project containing the CWIC app on your command line using `dx select` on your machine.
