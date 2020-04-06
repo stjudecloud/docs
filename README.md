@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/stjudecloud/docs"><img src="./docs/docs-banner-lighthouse.jpg" width="800" title="St. Jude Cloud Workflows"></a>
+  <a href="https://github.com/stjudecloud/docs"><img src="./docs/docs-banner-lighthouse.jpg" width="800" title="St. Jude Cloud Docs"></a>
   <a href="https://travis-ci.org/stjudecloud/docs" target="_blank">
     <img alt="Build Status: Master" src="https://travis-ci.org/stjudecloud/docs.svg?branch=master" />
   </a>
@@ -14,20 +14,22 @@
 
 ## Install
 
-```sh
-pip install -r requirements.txt
+We use conda to achieve consistency amongst our environment setups. You must [install conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) before running the commands below.
+
+```bash
+conda env create
+conda activate docs
 ```
 
 ## Usage
 
 You can use the following commands to get started working with the docs.
 
-```sh
+```bash
+mkdocs build
+
 # Run a development server
 mkdocs serve
-
-# Build a static HTML copy of the docs
-mkdocs build
 ```
 
 If you'd like more in-depth instructions, please refer to [the project wiki](https://github.com/stjudecloud/docs/wiki/Getting-Started).

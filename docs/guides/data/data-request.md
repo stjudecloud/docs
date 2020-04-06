@@ -1,19 +1,25 @@
-## Request Process Overview
-
+### Overview
 Creating a data request is the premier way to access raw St. Jude next 
 generation sequencing data in the cloud. You can get a **free** copy of 
 the data in a secure cloud environment powered by [Microsoft Azure](https://azure.microsoft.com/en-us/) and 
 [DNAnexus](https://www.dnanexus.com/), or you can elect to download the data to your local computing 
 environment.
 
-!!! tip "Things to Remember"
+* Data in St. Jude Cloud is grouped into different [Data Access Units (DAUs)](../../glossary.md#data-access-unit), which are independent projects/data sources with different governance structures and usually correspond to large-scale sequencing initiatives at St. Jude. 
+* Individuals can apply for access to DAUs on a case-by-case basis for a specific amount of time (usually 1 year).
+* Each DAU has a separate [Data Access Committee (DAC)](../../glossary.md#data-access-committee) that evaluates incoming data requests based on a variety of factors. Access is granted at the DAU level based on the decision of each DAC.
+* The set of terms and conditions is outlined in the [Data Access Agreement (DAA)](https://platform.stjude.cloud/access_form). Everyone who will be working with data provided by St. Jude Cloud must read and understand these terms.
+* After you've been approved once, you can continue checking out files from that DAU until your access expires (generally after 1 year) and you need to renew.
 
-    1. Data in St. Jude Cloud is grouped into [Data Access Units (DAUs)](../../glossary.md#data-access-unit), which usually correspond to large-scale sequencing initiatives at St. Jude. 
-    2. Individuals can [apply for access](../../glossary.md#data-access-agreement) to DAUs on a case-by-case basis for a specific amount of time (usually 1 year).
-    3. Access to data in a given DAU is assessed by the corresponding [Data Access Committee](../../glossary.md#data-access-committee) who reviews a variety of factors to grant access.
-    4. There are a number of terms of use and restrictions outlined in the [Data Access Agreement](https://platform.stjude.cloud/access_form). Everyone who will be working with the data must understand and agree to these terms.
-
-
+!!! example
+    For example, if you make a request asking for all of St. Jude's Acute 
+    Lymphoblastic Leukemia sequencing data, you might be asking for data from 
+    multiple different projects here at St. Jude. For the sake of the example,
+    let's say the data you want is spread across three different DAUs. Once
+    you place a request, your application will be routed to the corresponding
+    three data access committees for approval. Since each DAC is made up of
+    different individuals using different criteria for evaluation, you may or
+    may not be approved for access to all of the files. 
 
 ### Selecting Data
 
