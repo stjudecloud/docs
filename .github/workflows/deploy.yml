@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
+      - uses: goanpeca/setup-miniconda@v1
+        with:
+          auto-update-conda: true
+          environment-file: environment.yml
       - name: Compile
-        uses: continuumio/miniconda3:4.8.2
-        run: |
-          conda env create
-          conda activate docs
-          mkdocs build
+        run: mkdocs build
       # - run: bash bin/ci-build.sh
       # - name: Deploy
       #   uses: peaceiris/actions-gh-pages@v3
