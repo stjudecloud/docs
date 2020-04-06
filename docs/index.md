@@ -1,7 +1,7 @@
 # Welcome to St. Jude Cloud Documentation!
 
 !!! info "COVID-19 Information"
-    See how St. Jude Cloud is responding to the coronavirus pandemic on our [Response](../../guides/covid-19/) page.
+    See how St. Jude Cloud is responding to the coronavirus pandemic on our [COVID-19 Quickstart](../../guides/covid-19/) page.
 
 ## Overview
 
@@ -26,33 +26,30 @@ You can apply many different capabilities of St. Jude Cloud to your research, su
 
 The following projects currently distribute their data through St. Jude Cloud. Click [here](./guides/data/about-our-data.md#data-access-units) for more information about the projects listed below.
 
-* Pediatric Cancer Genome Project (PCGP)
-* St. Jude Lifetime (SJLIFE)
-* Clinical Genomics (Clinical Pilot and G4K)
-* Sickle Cell Genome Project (SGP)
 * Childhood Cancer Survivor Study (CCSS)
+* Clinical Genomics (CG)
+    * Clinical Pilot
+    * Genomes4Kids
+    * Real-time Clinical Genomics
+* Pediatric Cancer Genome Project (PCGP)
+* Sickle Cell Genome Project (SGP)
+* St. Jude Lifetime (SJLIFE)
+
+
 
 ## Analysis Workflows
 
 St. Jude shares a number of end-to-end analysis workflows on the cloud. Click on the links below to learn more about the workflow.
 
-* [PeCan Pie](https://platform.stjude.cloud/tools/pecan_pie)
-* [NeoepitopePred](https://platform.stjude.cloud/tools/neoepitopepred)
 * [ChIP-Seq Peak Calling](https://platform.stjude.cloud/tools/chip-seq)
+* [Mutational Signatures](https://platform.stjude.cloud/tools/mutational_signatures)
+* [Neoepitope Prediction](https://platform.stjude.cloud/tools/neoepitopepred)
+* [PeCan Pie](https://platform.stjude.cloud/tools/pecan_pie)
 * [Rapid RNA-Seq Fusion Detection](https://platform.stjude.cloud/tools/rapid_rna-seq)
 * [WARDEN Differential Expression Analysis](https://platform.stjude.cloud/tools/warden)
-* [Mutational Signatures](https://platform.stjude.cloud/tools/mutational_signatures)
-* cis-x (coming soon)
-* XenoCP (coming soon)
-
-## Portals
-
-St. Jude Cloud provides a number of user portals which you can use to interactively explore the results we produce. Click on the links below to
-visit each of the corresponding portals.
-
-* [Pediatric Cancer Portal (PeCan)](https://pecan.stjude.cloud). Interactively explore mutational recurrence and pathogenicity assessment of variants in pediatric cancer using a wide variety of St. Jude + publicly available data.
-* [Sickle Cell Diseases Portal](https://sickle-cell.stjude.cloud). Explore the latest from the Sickle Cell Genomics Project (a collaboration between St. Jude and Baylor College of Medicine). 
-
+* Methylation2Activity (M2A) (Coming Soon) 
+* cis-x (Coming Soon) 
+* XenoCP (Coming Soon) 
 
 ## Contact Us
 

@@ -12,13 +12,13 @@ This guide assumes that you have a DNAnexus account and have `dxpy` installed on
 There are two different experiences for doing interactive or ad-hoc analysis in the cloud:
 
 * **Cloud Workstations**. Cloud workstations are a mature offering in the DNAnexus ecosystem, and you can use them in your production work. DNAnexus has [a full guide](https://documentation.dnanexus.com/developer/cloud-workstations) on how to use cloud workstations. Unfortunately, they do not fully replicate the experience of an interactive node on the cluster: each time you ssh into a new cloud workstation, you get a blank machine with no dependencies or data installed. Thus, you need to configure your environment, download data to the node using `dx`, and upload results back to DNAnexus using `dx`.
-* **Interactive Nodes**. Interactive nodes were created very recently between a partnership with St. Jude and DNAnexus. They offer a more complete alternative to interactive nodes in the HPC cluster, but the experience is currently in **alpha** (meaning that there are likely to be bugs and it is not ready for production use). We are actively looking for labs to partner with us to develop out this experience, so [apply for the discovery sponsorship program] if you are interested!
+* **Interactive Nodes**. Interactive nodes were created very recently between a partnership with St. Jude and DNAnexus. They offer a more complete alternative to interactive nodes in the HPC cluster, but the experience is currently in **alpha** (meaning that there are likely to be bugs and it is not ready for production use). We are actively looking for labs to partner with us to develop out this experience, so [apply for the Discovery Sponsorship Program] if you are interested!
 
 In this guide, we will briefly mention how to use Cloud Workstations and then spend the rest of the guide explaining how to use our new Interactive Node experience.
 
 [creating and running cloud apps]: ./creating-a-cloud-app-covid.md
 [the local data upload guide]: ./upload-local.md
-[apply for the discovery sponsorship program]: ./getting-started.md#apply-for-discovery-sponsorship-program
+[apply for the Discovery Sponsorship Program]: ./getting-started.md#apply-for-discovery-sponsorship-program
 
 ## Cloud Workstations
 

@@ -74,9 +74,9 @@ Billing is handled in St. Jude Cloud by creating and managing a DNAnexus billing
 1. If your lab has been accepted into the Discovery Sponsorship Program, we will create an organization for you to bill your project against. If we have not already, we will be in contact with you shortly concerning this information.
 2. Otherwise, your lab will need to set up a billing org for itself. Please see our Account and Billing sections below. 
 
-    [Billing for St. Jude Employees](../../account-and-billing/#billing)
+    [Billing for St. Jude Employees](../../../account-and-billing/#billing)
 
-    [Billing for Non-St. Jude Employees](../../account-and-billing/#billing_1)
+    [Billing for Non-St. Jude Employees](../../../account-and-billing/#billing_1)
 
 
 [slack]: https://slack.com/
