@@ -2,26 +2,30 @@ name: Continuous Deployment
 
 on:
   push:
-    # branches:
-    #   - master
+    branches:
+      - master
 
 jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: recursive
       - uses: goanpeca/setup-miniconda@v1
         with:
           auto-update-conda: true
           environment-file: environment.yml
+          activate-environment: docs
+          channels: conda-forge,bioconda,defaults
       - name: Compile
-        run: mkdocs build
-      # - run: bash bin/ci-build.sh
-      # - name: Deploy
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-      #     publish_dir: ./book
-      #     user_name: "St. Jude Cloud"
-      #     user_email: support@stjude.cloud
-      #     commit_message: "Deployed from ${{ github.event.head_commit.message }}"
+        shell: bash -l {0}
+        run: bin/ci-build.sh
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./site
+          user_name: "St. Jude Cloud"
+          user_email: support@stjude.cloud
+          commit_message: "Deployed from '${{ github.event.head_commit.message }}'"
