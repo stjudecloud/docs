@@ -20,7 +20,7 @@ jobs:
           channels: conda-forge,bioconda,defaults
       - name: Compile
         shell: bash -l {0}
-        run: bin/ci-build.sh
+        run: bash bin/ci-build.sh
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
