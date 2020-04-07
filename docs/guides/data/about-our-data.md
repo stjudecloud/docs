@@ -306,3 +306,13 @@ Embedded in both the filename and the `SAMPLE_INFO.txt` file that comes with you
 [ega]: https://www.ebi.ac.uk/ega/home
 [censusburea]: https://www.census.gov/mso/www/training/pdf/race-ethnicity-onepager.pdf
 [oncotree_2019_03_01]: http://oncotree.mskcc.org/#/home?version=oncotree_2019_03_01
+
+### Data Analysis Warnings
+
+**Xenograft Samples**
+Patient derived xenograft (PDX) samples contain a mixture of mouse and human cells.  As a result the sequences acquired from these samples are also a mixture of these two genomes, influencing both RNA seq and WGS results.  Specifically, RNA seq transcript counts will be inflated for genes with a high degree of conservation across species relative to species specific transcripts.  Further, SNP calls for WGS of xenograft samples may include numerous false positives due to mouse derived sequences that approximate human sequences.  
+Our standard pipelines map to the HG38 human genome alone so that the PDX samples in our datasets were not filtered for mouse reads.  We advise remapping PDX sequences to a combined mouse and human reference to screen out mouse reads.  Alternatively, we recommend using freely available software such as [XenofilteR] (https://github.com/PeeperLab/XenofilteR) to remove reads derived from the murine host.  PDX samples are included in the PCGP datasets and in the Childhood Solid Tumor Network (CSTN) data. 
+
+**Whole Genome Sequences (WGS) and Whole Exome Sequences**
+
+Not all of the data from over 11 thousand WGS and 13 thousand WES samples were mapped to precisely the same reference genome.   Data from some samples were mapped to a HG38 reference that includes Epstein-Barr virus (EBV) sequences and others to an HG38 reference that did not include these viral sequences.  This discrepancy will cause errors when running GATK over multiple samples.  Further reads with similarity to EBV sequences will not be consistently mapped when comparing results across samples.  Efforts are currently underway to remap all the samples to the same reference.
