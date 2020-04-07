@@ -53,7 +53,7 @@ repo_url: 'https://github.com/stjudecloud/docs'
 edit_uri: 'edit/master/docs'
 
 # Copyright
-copyright: "Copyright &copy; 2017 - 2019 St. Jude Children's Research Hospital"
+copyright: "Copyright &copy; 2017 - 2020 St. Jude Children's Research Hospital"
 
 # Extensions
 markdown_extensions:
