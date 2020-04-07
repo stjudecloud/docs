@@ -1,7 +1,7 @@
 # Welcome to St. Jude Cloud Documentation!
 
 !!! info "COVID-19 Information"
-    See how St. Jude Cloud is responding to the coronavirus pandemic on our [COVID-19 Quickstart](../../guides/covid-19/) page.
+    See how St. Jude Cloud is responding to the coronavirus pandemic on our [COVID-19 Quickstart](guides/covid-19/index.md) page.
 
 ## Overview
 
