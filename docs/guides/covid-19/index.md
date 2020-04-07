@@ -4,7 +4,7 @@
 ### Overview
 
 * The sudden, fully remote operation of St. Jude research staff due to the COVID-19 pandemic has caused higher than normal demand on VPN and HPC cluster resources. 
-* Since the announcement of remote work, the St. Jude Cloud team has working with Information Services to create a plan to rapidly on-board interested labs to the cloud, relinquishing the VPN and cluster from strain and allowing you to continue your work uninterrupted. 
+* In response to these events, the St. Jude Cloud team has worked with Information Services to accelerate our plans for exposing a cloud-based computational environment for production-grade pipelines and interactive, ad-hoc analysis.
 * This page serves as a guide for quickly trying out St. Jude Cloud and exploring experimental offerings we have prototyped to ease your transition.
 * Read below about the different levels of engagement we are offering during this time and decide which you are interested in. If you're interested in jumping in, you can skip to the guides in the [walkthrough section](#walkthrough).
 
