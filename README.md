@@ -14,6 +14,14 @@
 
 ## Install
 
+First, note that we include the theme as a submodule. You must use the
+`--recurse-submodules` command when you clone the repo to get everything needed
+to build the docs.
+
+```bash
+git clone --recurse-submodules git@github.com:stjudecloud/docs.git
+```
+
 We use conda to achieve consistency amongst our environment setups. You must [install conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) before running the commands below.
 
 ```bash
@@ -26,6 +34,7 @@ conda activate docs
 You can use the following commands to get started working with the docs.
 
 ```bash
+# Build the docs once
 mkdocs build
 
 # Run a development server
