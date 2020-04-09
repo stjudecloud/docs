@@ -80,17 +80,9 @@ For more information about cloud workstations, please refer to the [DNAnexus doc
 
 Cloud workstations are good for interactive work, but they require you to upload/download data from your projects. They also do not save your working environment so any tools you installed or changes you made to the machine will be lost when the session is terminated. The Interactive Node experience, sometimes referred to by its codename "CWIC" (cloud workstations in containers), solves these issues by saving your environment and letting you work with your data on the cloud without manually downloading it to the node.
 
-### Get access to CWIC
-
-To start an interactive node, you must first get access to the CWIC app and copy it to one of your projects. Since this is still in beta, it is not publicly available on DNAnexus yet. Please contact us in [the St. Jude Cloud Slack channel] to get access to the app.
-
-Next, select the project containing the CWIC app on your command line using `dx select` on your machine.
-
-[the St. Jude Cloud Slack channel]: ./getting-started.md#joining-slack
-
 ### Setting up your Docker Hub account
 
-The workstation uses Docker images pushed to a Docker Hub repository to save your environment. To get started, go to [Docker Hub](hub.docker.com) and sign in or create an account. Every Docker Hub account is given one free private repository. It is highly recommended to use a private repository as this will be your working environment.
+The workstation uses Docker images pushed to a Docker Hub repository to save your environment. To get started, go to [Docker Hub](hub.docker.com) and sign in or create an account. Every Docker Hub account is given one free private repository. It is highly recommended to [use a private repository](./interactive-node/#making-a-docker-hub-repository-private) as this will be your working environment.
 
 Once you have a Docker Hub account, go to your "Account Settings", then "Security" and create a new access token.
 
@@ -112,7 +104,7 @@ Create a file with the template below and fill in your Docker Hub token and Dock
 {
   "docker_registry": {
     "token": "<YOUR_DOCKERHUB_TOKEN>",
-    "repository": "<YOUR_DOCKERHUB_USERNAME>",
+    "organization": "<YOUR_DOCKERHUB_USERNAME>",
     "username": "<YOUR_DOCKERHUB_USERNAME>",
     "registry": "docker.io"
   }
@@ -130,7 +122,7 @@ Once you have made your credentials file on your computer, make a new DNAnexus p
 
 The following command will run the app using the credentials you provided and will log you into the node after it boots up.
 
-`dx run cwic -icredentials=mycredentials:creds.txt --allow-ssh --ssh -y`
+`dx run app-cwic -icredentials=mycredentials:creds.txt --allow-ssh --ssh -y`
 
 or replace `mycredentials` with the name of the DNAnexus project with your credentials file. If you have SSH issues while trying to connect to the job, make sure your SSH keys are [configured properly](https://documentation.dnanexus.com/developer/apps/execution-environment/connecting-to-jobs).
 
@@ -252,3 +244,23 @@ dx run cwic -icredentials=<DX_PROJECT_NAME_WITH_CREDS>:creds.txt --instance-type
 This is useful when you want to run some non-interactive jobs that have different memory or storage requirements.
 
 If you have any questions or suggestions on how we can improve this guide, please [file an issue](https://github.com/stjudecloud/docs/issues), contact us at [https://stjude.cloud/contact](https://stjude.cloud/contact), or email us at [support@stjude.cloud](mailto:support@stjude.cloud).
+
+### Making a Docker Hub repository private
+
+By default, the workstation creates a new public repository in Docker Hub. It is best practice to use a private repository so that your work environment is not publicly visible on Docker Hub. Follow the steps below to update an existing public repository to a private one. This should be done after you have already run `dx-save-cwic` once in the interactive session.
+
+First, go to your repositories page and click on the repository you want to make private.
+
+![Docker Hub Repositories](../../images/guides/covid-19/make-dockerhub-repo-private/1.png)
+
+Next, go to the 'Settings' tab and click on the 'Make private' button.
+
+![Docker Hub Repository Settings](../../images/guides/covid-19/make-dockerhub-repo-private/2.png)
+
+Type the name of the repository and click on the 'Make private' button.
+
+![Docker Hub Repository Make Private](../../images/guides/covid-19/make-dockerhub-repo-private/3.png)
+
+Finally, you can see the repository is now set to private and you can continue using interactive sessions as normal.
+
+![Docker Hub Repositories with Private](../../images/guides/covid-19/make-dockerhub-repo-private/4.png)
