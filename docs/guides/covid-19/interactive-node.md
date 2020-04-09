@@ -200,7 +200,7 @@ You can use samtools to split the bam by chromosome like below by specifying a c
 root@cwic:~# chromosomes=(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22)
 root@cwic:~# for chr in ${chromosomes[@]}; do
   echo $chr;
-  dx run cwic  \
+  dx run app-cwic  \
     -icredentials=<DX_PROJECT_WITH_CREDS>:creds.txt \
     -icmd="samtools view -b /project/<YOUR_DX_PROJECT_NAME>/test.bam ${chr} -o /project/<YOUR_DX_PROJECT_NAME>/bam_${chr}.bam;" \
     -y;
@@ -238,7 +238,7 @@ dx run app-cloud_workstation --instance-type azure:mem1_ssd1_x16 --ssh
 or
 
 ```bash
-dx run cwic -icredentials=<DX_PROJECT_NAME_WITH_CREDS>:creds.txt --instance-type mem1_ssd1_x4 --allow-ssh --ssh -y
+dx run app-cwic -icredentials=<DX_PROJECT_NAME_WITH_CREDS>:creds.txt --instance-type mem1_ssd1_x4 --allow-ssh --ssh -y
 ```
 
 This is useful when you want to run some non-interactive jobs that have different memory or storage requirements.
