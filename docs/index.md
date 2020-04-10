@@ -22,6 +22,18 @@ You can apply many different capabilities of St. Jude Cloud to your research, su
 !!! note
     Please note that while it is free to receive and store our data in St. Jude Cloud, there are [compute and storage fees associated with working in the cloud, as well as egress fees for downloading our data](faq.md#will-i-be-charged-for-using-st-jude-cloud). 
 
+## Applications
+
+St. Jude Cloud provides a number of applications which you can use for various purposes. Click on the links below to checkout one or more of our applications.
+
+* [Genomics Platform](https://platform.stjude.cloud/data). Browse our publicly available genomics datasets, make a data request, and run analyses in a secure cloud environment. Go [here](./guides/genomics-platform/requesting-data/about-our-data.md) to learn more about our data.
+* [Pediatric Cancer Portal (PeCan)](https://pecan.stjude.cloud). Interactively explore mutational recurrence and pathogenicity assessment of variants in pediatric cancer using a wide variety of St. Jude + publicly available data. 
+* [Visualization Community](https://viz.stjude.cloud/). Explore, create, and
+  share interactive visualizations using tools such as
+  [ProteinPaint](https://proteinpaint.stjude.org/) and
+  [GenomePaint](https://genomepaint.stjude.cloud/). See [this
+  guide](./guides/visualization-community/viz-com-about.md) to get started.
+
 ## Studies
 
 The following projects currently distribute data through St. Jude Cloud. Click [here](./guides/genomics-platform/requesting-data/about-our-data.md#data-access-units) for a brief description of each project listed below. Or click on a project in the bulleted list below to go straight to the corresponding Study page.
@@ -31,14 +43,6 @@ The following projects currently distribute data through St. Jude Cloud. Click [
 * [Clinical Genomics (Clinical Pilot and G4K)](https://stjude.cloud/studies/clinical-genomics)
 * [Sickle Cell Genome Project (SGP)](https://sickle-cell.stjude.cloud)
 * [Childhood Cancer Survivor Study (CCSS)](https://ccss.stjude.org/)
-
-## Applications
-
-St. Jude Cloud provides a number of applications which you can use for various purposes. Click on the links below to checkout one or more of our applications.
-
-* [Genomics Platform](https://platform.stjude.cloud/data). Browse our publicly available genomics datasets, make a data request, and run analyses in a secure cloud environment. Go [here](./guides/genomics-platform/requesting-data/about-our-data.md) to learn more about our data.
-* [Pediatric Cancer Portal (PeCan)](https://pecan.stjude.cloud). Interactively explore mutational recurrence and pathogenicity assessment of variants in pediatric cancer using a wide variety of St. Jude + publicly available data. 
-* [Visualization Community](https://viz.stjude.cloud/). Explore, create, and share interactive visualizations using tools such as [ProteinPaint](https://proteinpaint.stjude.org/) and [GenomePaint](https://genomepaint.stjude.cloud/). See [this guide](./guides/visualization-community/viz-com-about.md) to get started.
 
 ## Analysis Workflows
 
