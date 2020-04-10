@@ -6,12 +6,14 @@ theme:
   logo: 'images/stjude-logo-child-white.png'
   font: false
   favicon: 'images/favicon.ico'
+  feature:
+    tabs: true
 
 extra_css:
   - css/extra.css
 
 pages:
-  - Welcome to St. Jude Cloud: index.md
+  - Overview: index.md
   - About our Ecosystem: ecosystem.md
   - COVID-19 Quickstart:
       - Introduction: guides/covid-19/index.md
@@ -22,7 +24,8 @@ pages:
       - Interactive nodes: guides/covid-19/interactive-node.md
       - Visualizing NGS data: guides/covid-19/visualizing-ngs-data.md
   - Genomics Platform: 
-      - Creating an Account: guides/genomics-platform/requesting-data/create-an-account.md
+      - Getting Started: guides/genomics-platform/index.md
+      - Creating an Account: guides/genomics-platform/create-an-account.md
       - Requesting Data:
           - About our Data: guides/genomics-platform/requesting-data/about-our-data.md
           - Making a Data Request: guides/genomics-platform/requesting-data/data-request.md
@@ -47,14 +50,14 @@ pages:
               # RNA Indel: guides/genomics-platform/analyzing-data/rna-indel.md
               # FKPM: guides/genomics-platform/analyzing-data/fkpm.md
           - Creating your own Workflow: guides/genomics-platform/analyzing-data/creating-a-cloud-app.md
-  - Pediatric Cancer Portal (PeCan):
-      - PeCan homepage: guides/PeCan/pecan.md
-      - Pecan PIE: guides/PeCan/pecan-pie.md
+  - PeCan:
+      - Getting Started: guides/pecan/index.md
+      - Pecan PIE: guides/pecan/pecan-pie.md
   #- Model Systems:
       #- CSTN: guides/model-systems/cstn.md
       #- PBTP: guides/model-systems/pbtp.md
   - Visualization Community:
-      - About: guides/visualization-community/viz-com-about.md
+      - Getting Started: guides/visualization-community/index.md
       - ProteinPaint : guides/visualization-community/protein-paint.md
       - Genome Paint : guides/visualization-community/genome-paint.md
       #- SJ Charts: guides/visualization-community/sj-charts.md
