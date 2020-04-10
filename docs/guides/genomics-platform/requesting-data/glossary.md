@@ -15,8 +15,7 @@ Once you have submitted a correctly filled out DAA and have been granted access 
 
 A St. Jude Cloud **Data Access Committee (DAC)** is group of St. Jude researchers who oversee access to a particular [Data Access Unit (DAU)](#data-access-unit) and evaluate incoming data requests.
 
-The first time you request access to files in 
-a DAU, it is required that you fill out a [Data Access Agreement (DAA)](#data-access-agreement). Access is granted at the DAU level based on the decision of each DAC upon reviewing the DAA.
+The first time you request access to files in a DAU, it is required that you fill out a [Data Access Agreement (DAA)](#data-access-agreement). Access is granted at the DAU level based on the decision of each DAC upon reviewing the DAA.
 
 !!! example
     For example, if you make a request asking for all of St. Jude's Acute 
@@ -28,20 +27,19 @@ a DAU, it is required that you fill out a [Data Access Agreement (DAA)](#data-ac
     different individuals using different criteria for evaluation, you may or
     may not be approved for access to all of the files. 
 
-
 ### Embargo Date
 
 The **Embargo Date** specifies the date that a publishing embargo on the file in question has been lifted. Publishing using any of the files _before_ the embargo date has passed is strictly prohibited as outlined in the [Data Access Agreement (DAA)](#data-access-agreement). Typically, samples from the same [Data Access Unit (DAU)](#data-access-unit) all have the same embargo date, as they would have been released on St. Jude Cloud at the same time.
 
 **Current Embargo Dates**
 
-| Data Access Unit                 | Embargo Date      |
-| -------------------------------- | ----------------- |
-| Pediatric Cancer Genome Project  | July 23, 2018     |
-| St. Jude LIFE                    | January 15, 2019  |
-| Clinical Genomics                | January 15, 2019  |
-| Sickle Cell Genome Project       | September 1, 2019 |
-| Childhood Cancer Survivor Study | November 1, 2019 |
+| Data Access Unit                | Embargo Date                  |
+| ------------------------------- | ----------------------------- |
+| Pediatric Cancer Genome Project | July 23, 2018                 |
+| St. Jude LIFE                   | January 15, 2019              |
+| Clinical Genomics               | Rolling based on release date |
+| Sickle Cell Genome Project      | September 1, 2019             |
+| Childhood Cancer Survivor Study | November 1, 2019              |
 
 ### Similar Topics
 

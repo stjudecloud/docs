@@ -1,5 +1,8 @@
 # Creating a Cloud Application
 
+!!! info
+    If you came here from the remote work quickstart guide, you can use [this link](../covid-19/creating-a-cloud-app-covid.md) to quickly jump back to your place in that guide.
+
 This guide will take you through the process of writing an application for working with and manipulating the St. Jude data you've requested. By creating your own application, you will be able to wrap genomic tools and packages from external sources, as well as any tool or application you might have written yourself.
 
 !!! tip
@@ -35,11 +38,40 @@ For this tutorial I have requested the PCGP dataset, and once my access request 
 
 | Tool       | Download                                                             | Website                                                               | Version  |
 | ---------- | -------------------------------------------------------------------- | --------------------------------------------------------------------- | -------- |
-| dx-toolkit | [Source](https://documentation.dnanexus.com/downloads)               | [DNAnexus](https://www.dnanexus.com/)                                 | v0.276.0 |
+| dx-toolkit | [Source](https://documentation.dnanexus.com/downloads)               | [DNAnexus](https://www.dnanexus.com/)                                 | v0.291.1 |
 | FastQC     | [Source](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) | [Babraham Bioinformatics](https://www.bioinformatics.babraham.ac.uk/) | v0.11.8  |
 
 </center>
 
+Installing the dx-toolkit requires Python to be installed locally. Using the system provided version of Python can be problematic for a number of reasons, so we recommend using the [Anaconda](https://www.anaconda.com/distribution/) environment manager to install Python.
+
+You can view the following guides for how to install conda on your system.
+
+* **Windows.** https://docs.anaconda.com/anaconda/install/windows/
+* **Mac OS.** https://docs.anaconda.com/anaconda/install/mac-os/
+* **Linux.** https://docs.anaconda.com/anaconda/install/linux/
+
+Once you have conda installed, run the following commands to create a new environment with Python, activate it, and install the dx-toolkit.
+
+```bash
+conda create -n dx python=3.7
+conda activate dx
+pip install dxpy
+```
+
+Now whenever you want to develop something for the cloud using `dx-toolkit`, just open your terminal and type `conda activate dx`.
+
+To access your DNAnexus projects from the commandline, you must login using `dx-toolkit`.
+For users not affiliated with St. Jude, simply type `dx login` and enter your username and password when prompted.
+Users with a St. Jude account will need to generate an API token for authentication.
+Instructions can be found [here](https://documentation.dnanexus.com/user/login-and-logout#authentication-tokens).
+
+### Getting started
+
+The easiest way to install `dx-toolkit` is through `pip`, the Python package manager. Simply run the following command in your terminal:
+```
+pip install dxpy --upgrade
+```
 
 For this application, we will be using the `dx-app-wizard` command that is included in the `dx-toolkit`. `dx-app-wizard` is an interactive prompt that creates a boilerplate project that will allow you to quickly create an application. For more on `dx-app-wizard`, refer to the DNAnexus wiki article on [Intro to Building Apps](https://documentation.dnanexus.com/developer/apps/intro-to-building-apps). Before continuing, be sure to refer to the [command line interaction page](command-line.md) for a walkthrough on how to install [dx-toolkit](https://documentation.dnanexus.com/downloads#DNAnexus-Platform-SDK) and how to select your project workspace.
 
@@ -144,7 +176,7 @@ $ mkdir -p dx-fastqc-example-app/resources/usr/bin
 
 ## Packaging FastQC
 
-To incorporate FastQC into this project, we need to download the executable binary and package it within the `dx-fastqc-example-app`. Download the FastQC v0.11.8 (Win/Linux zip file) and unzip it. After unzipping, move the FastQC folder into the `resources` folder.
+To incorporate FastQC into this project, we need to download the executable binary and package it within the `dx-fastqc-example-app`. Download the [FastQC v0.11.8 (Win/Linux zip file)](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.8.zip) and unzip it. After unzipping, move the FastQC folder into the `resources` folder.
 
 ```bash
 $ unzip fastqc_v0.11.8.zip
@@ -288,8 +320,6 @@ mv ~/fastqc-out/*.zip ~/fastqc-out/fastqc-report.zip
 fastqc_html=$(dx upload ~/fastqc-out/fastqc-report.html --brief)
 fastqc_zip=$(dx upload ~/fastqc-out/fastqc-report.zip --brief)
 ```
-
-We are using `"$bam_file_prefix"` to help name the output report file. These helper variables are provided to help make file naming easy. For more information on helper variables, refer to the [Advanced App Tutorial](https://documentation.dnanexus.com/developer/apps/advanced-app-tutorial#set-output-name-using-bash-app-helper-variables).
 
 In this step, we are also moving the HTML and Zip file generated by FastQC to the directories which will be uploaded.
 

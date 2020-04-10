@@ -1,12 +1,11 @@
 # Welcome to St. Jude Cloud Documentation!
 
+!!! info "COVID-19 Information"
+    See how St. Jude Cloud is responding to the coronavirus pandemic on our [COVID-19 Quickstart](guides/covid-19/index.md) page.
+
 ## Overview
 
-Here, you'll find
-authoritative guides for accessing St. Jude Cloud data, running analysis workflows (our workflows or your own) on the cloud,
-and exploring curated data from numerous published studies by St. Jude and our collaborating institutions. For a brief overview of
-everything St. Jude Cloud provides, we recommend that you watch the video
-on [our home page](https://stjude.cloud). To learn more about our ecosystem, read this [guide](./ecosystem.md).
+The St. Jude Cloud documentation includes authoritative guides for accessing St. Jude Cloud data, creating and running analysis workflows on the cloud, and exploring curated data from numerous published studies by St. Jude and our collaborating institutions.To learn more about our ecosystem, read this [guide](./ecosystem.md). 
 
 Sign up [here](https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-subscribe/) to receive email notifications when we add new datasets, analysis pipelines, or other exciting features.
 
@@ -14,7 +13,7 @@ Sign up [here](https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-subscribe
 
 You can apply many different capabilities of St. Jude Cloud to your research, such as:
 
-* Explore the [raw genomics data](https://platform.stjude.cloud/data) we currently offer. You can browse by diagnosis, publication, or curated dataset while applying a number of different filters. For more information, see our [data request guide](./guides/genomics-platform/requesting-data/data-request.md).
+* Explore the [raw genomics data](https://platform.stjude.cloud/data/diseases) we currently offer. You can browse by diagnosis, publication, or curated dataset while applying a number of different filters. For more information, see our [data request guide](./guides/genomics-platform/requesting-data/data-request.md).
 * Run your tools on *our* data by [requesting data](./guides/genomics-platform/requesting-data/data-request.md) and packaging your tools in a secure cloud environment. See this [guide](./guides/genomics-platform/analyzing-data/creating-a-cloud-app.md) for an example.
 * Run our in house analysis workflows on *your* data by [moving your data](./guides/genomics-platform/managing-data/data-transfer-app.md) to the cloud and selecting a [workflow](https://platform.stjude.cloud/workflows) to run. See this [guide](./guides/genomics-platform/analyzing-data/running-sj-workflows.md) for an example. 
 * Explore St. Jude datasets through interactive visualizations that we have packaged for the community. For example, visit [PeCan](https://pecan.stjude.cloud) to visually investigate pediatric cancer mutation data.
@@ -53,7 +52,6 @@ St. Jude shares a number of end-to-end analysis workflows as part of the Genomic
 * cis-x (coming soon)
 * XenoCP (coming soon)
 * M2A (coming soon)
-
 
 ## Contact Us
 
