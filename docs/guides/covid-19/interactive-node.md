@@ -122,7 +122,7 @@ Once you have made your credentials file on your computer, make a new DNAnexus p
 
 The following command will run the app using the credentials you provided and will log you into the node after it boots up.
 
-`dx run app-cwic -icredentials=mycredentials:creds.txt --allow-ssh --ssh -y`
+`dx run app-cwic -icredentials=mycredentials:creds.txt --ssh -y`
 
 or replace `mycredentials` with the name of the DNAnexus project with your credentials file. If you have SSH issues while trying to connect to the job, make sure your SSH keys are [configured properly](https://documentation.dnanexus.com/developer/apps/execution-environment/connecting-to-jobs).
 
@@ -238,7 +238,7 @@ dx run app-cloud_workstation --instance-type azure:mem1_ssd1_x16 --ssh
 or
 
 ```bash
-dx run app-cwic -icredentials=<DX_PROJECT_NAME_WITH_CREDS>:creds.txt --instance-type mem1_ssd1_x4 --allow-ssh --ssh -y
+dx run app-cwic -icredentials=<DX_PROJECT_NAME_WITH_CREDS>:creds.txt --instance-type mem1_ssd1_x4 --ssh -y
 ```
 
 This is useful when you want to run some non-interactive jobs that have different memory or storage requirements.
