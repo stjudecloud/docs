@@ -404,13 +404,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#get-access-to-cwic" class="md-nav__link">
-    Get access to CWIC
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#setting-up-your-docker-hub-account" class="md-nav__link">
     Setting up your Docker Hub account
   </a>
@@ -502,6 +495,13 @@
           <li class="md-nav__item">
   <a href="#changing-instance-type" class="md-nav__link">
     Changing instance type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-a-docker-hub-repository-private" class="md-nav__link">
+    Making a Docker Hub repository private
   </a>
   
 </li>
@@ -990,13 +990,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#get-access-to-cwic" class="md-nav__link">
-    Get access to CWIC
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#setting-up-your-docker-hub-account" class="md-nav__link">
     Setting up your Docker Hub account
   </a>
@@ -1092,6 +1085,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#making-a-docker-hub-repository-private" class="md-nav__link">
+    Making a Docker Hub repository private
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1172,11 +1172,8 @@ dx <span class="nb">cd</span> <span class="s2">&quot;project-alpha:/&quot;</span
 <p>We are looking for labs across St. Jude to partner with us and tell us about their experience using the interactive node. If you are interested, please <a href="../getting-started/#apply-for-discovery-sponsorship-program">apply for the discovery sponsorship program</a>.</p>
 </div>
 <p>Cloud workstations are good for interactive work, but they require you to upload/download data from your projects. They also do not save your working environment so any tools you installed or changes you made to the machine will be lost when the session is terminated. The Interactive Node experience, sometimes referred to by its codename "CWIC" (cloud workstations in containers), solves these issues by saving your environment and letting you work with your data on the cloud without manually downloading it to the node.</p>
-<h3 id="get-access-to-cwic">Get access to CWIC</h3>
-<p>To start an interactive node, you must first get access to the CWIC app and copy it to one of your projects. Since this is still in beta, it is not publicly available on DNAnexus yet. Please contact us in <a href="../getting-started/#joining-slack">the St. Jude Cloud Slack channel</a> to get access to the app.</p>
-<p>Next, select the project containing the CWIC app on your command line using <code class="codehilite"><span class="err">dx select</span></code> on your machine.</p>
 <h3 id="setting-up-your-docker-hub-account">Setting up your Docker Hub account</h3>
-<p>The workstation uses Docker images pushed to a Docker Hub repository to save your environment. To get started, go to <a href="hub.docker.com">Docker Hub</a> and sign in or create an account. Every Docker Hub account is given one free private repository. It is highly recommended to use a private repository as this will be your working environment.</p>
+<p>The workstation uses Docker images pushed to a Docker Hub repository to save your environment. To get started, go to <a href="hub.docker.com">Docker Hub</a> and sign in or create an account. Every Docker Hub account is given one free private repository. It is highly recommended to <a href="./interactive-node/#making-a-docker-hub-repository-private">use a private repository</a> as this will be your working environment.</p>
 <p>Once you have a Docker Hub account, go to your "Account Settings", then "Security" and create a new access token.</p>
 <p><img alt="Creating a new Docker Hub access token" src="../../../images/guides/covid-19/interactive-node-0.png" /></p>
 <p>You can give it a descriptive name and copy the token.</p>
@@ -1188,7 +1185,7 @@ dx <span class="nb">cd</span> <span class="s2">&quot;project-alpha:/&quot;</span
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;docker_registry&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;YOUR_DOCKERHUB_TOKEN&gt;&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;repository&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;YOUR_DOCKERHUB_USERNAME&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;organization&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;YOUR_DOCKERHUB_USERNAME&gt;&quot;</span><span class="p">,</span>
     <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;YOUR_DOCKERHUB_USERNAME&gt;&quot;</span><span class="p">,</span>
     <span class="nt">&quot;registry&quot;</span><span class="p">:</span> <span class="s2">&quot;docker.io&quot;</span>
   <span class="p">}</span>
@@ -1204,7 +1201,7 @@ dx <span class="nb">cd</span> <span class="s2">&quot;project-alpha:/&quot;</span
 <p><img alt="Uploading credentials file" src="../../../images/guides/covid-19/interactive-node-3.png" /></p>
 <h3 id="starting-an-interactive-terminal-session">Starting an interactive terminal session</h3>
 <p>The following command will run the app using the credentials you provided and will log you into the node after it boots up.</p>
-<p><code class="codehilite"><span class="err">dx run cwic -icredentials=mycredentials:creds.txt --allow-ssh --ssh -y</span></code></p>
+<p><code class="codehilite"><span class="err">dx run app-cwic -icredentials=mycredentials:creds.txt --ssh -y</span></code></p>
 <p>or replace <code class="codehilite"><span class="err">mycredentials</span></code> with the name of the DNAnexus project with your credentials file. If you have SSH issues while trying to connect to the job, make sure your SSH keys are <a href="https://documentation.dnanexus.com/developer/apps/execution-environment/connecting-to-jobs">configured properly</a>.</p>
 <p><img alt="running CWIC app" src="../../../images/guides/covid-19/interactive-node-4.png" /></p>
 <h3 id="working-on-the-cwic-node">Working on the CWIC node</h3>
@@ -1261,7 +1258,7 @@ bwa
 <div class="codehilite"><pre><span></span><code>root@cwic:~# <span class="nv">chromosomes</span><span class="o">=(</span><span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">5</span> <span class="m">6</span> <span class="m">7</span> <span class="m">8</span> <span class="m">9</span> <span class="m">10</span> <span class="m">11</span> <span class="m">12</span> <span class="m">13</span> <span class="m">14</span> <span class="m">15</span> <span class="m">16</span> <span class="m">17</span> <span class="m">18</span> <span class="m">19</span> <span class="m">20</span> <span class="m">21</span> <span class="m">22</span><span class="o">)</span>
 root@cwic:~# <span class="k">for</span> chr in <span class="si">${</span><span class="nv">chromosomes</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
   <span class="nb">echo</span> <span class="nv">$chr</span><span class="p">;</span>
-  dx run cwic  <span class="se">\</span>
+  dx run app-cwic  <span class="se">\</span>
     -icredentials<span class="o">=</span>&lt;DX_PROJECT_WITH_CREDS&gt;:creds.txt <span class="se">\</span>
     -icmd<span class="o">=</span><span class="s2">&quot;samtools view -b /project/&lt;YOUR_DX_PROJECT_NAME&gt;/test.bam </span><span class="si">${</span><span class="nv">chr</span><span class="si">}</span><span class="s2"> -o /project/&lt;YOUR_DX_PROJECT_NAME&gt;/bam_</span><span class="si">${</span><span class="nv">chr</span><span class="si">}</span><span class="s2">.bam;&quot;</span> <span class="se">\</span>
     -y<span class="p">;</span>
@@ -1286,12 +1283,22 @@ root@cwic:~# <span class="k">for</span> chr in <span class="si">${</span><span c
 
 
 <p>or</p>
-<div class="codehilite"><pre><span></span><code>dx run cwic -icredentials<span class="o">=</span>&lt;DX_PROJECT_NAME_WITH_CREDS&gt;:creds.txt --instance-type mem1_ssd1_x4 --allow-ssh --ssh -y
+<div class="codehilite"><pre><span></span><code>dx run app-cwic -icredentials<span class="o">=</span>&lt;DX_PROJECT_NAME_WITH_CREDS&gt;:creds.txt --instance-type mem1_ssd1_x4 --ssh -y
 </code></pre></div>
 
 
 <p>This is useful when you want to run some non-interactive jobs that have different memory or storage requirements.</p>
 <p>If you have any questions or suggestions on how we can improve this guide, please <a href="https://github.com/stjudecloud/docs/issues">file an issue</a>, contact us at <a href="https://stjude.cloud/contact">https://stjude.cloud/contact</a>, or email us at <a href="mailto:support@stjude.cloud">support@stjude.cloud</a>.</p>
+<h3 id="making-a-docker-hub-repository-private">Making a Docker Hub repository private</h3>
+<p>By default, the workstation creates a new public repository in Docker Hub. It is best practice to use a private repository so that your work environment is not publicly visible on Docker Hub. Follow the steps below to update an existing public repository to a private one. This should be done after you have already run <code class="codehilite"><span class="err">dx-save-cwic</span></code> once in the interactive session.</p>
+<p>First, go to your repositories page and click on the repository you want to make private.</p>
+<p><img alt="Docker Hub Repositories" src="../../../images/guides/covid-19/make-dockerhub-repo-private/1.png" /></p>
+<p>Next, go to the 'Settings' tab and click on the 'Make private' button.</p>
+<p><img alt="Docker Hub Repository Settings" src="../../../images/guides/covid-19/make-dockerhub-repo-private/2.png" /></p>
+<p>Type the name of the repository and click on the 'Make private' button.</p>
+<p><img alt="Docker Hub Repository Make Private" src="../../../images/guides/covid-19/make-dockerhub-repo-private/3.png" /></p>
+<p>Finally, you can see the repository is now set to private and you can continue using interactive sessions as normal.</p>
+<p><img alt="Docker Hub Repositories with Private" src="../../../images/guides/covid-19/make-dockerhub-repo-private/4.png" /></p>
                 
                   
                 
@@ -1354,7 +1361,7 @@ root@cwic:~# <span class="k">for</span> chr in <span class="si">${</span><span c
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/bd1f077">bd1f077</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/5afcbaf">5afcbaf</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
