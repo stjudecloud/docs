@@ -1,7 +1,7 @@
 # Creating a Cloud Application
 
 !!! info
-    If you came here from the remote work quickstart guide, you can use [this link](../covid-19/creating-a-cloud-app-covid.md) to quickly jump back to your place in that guide.
+    If you came here from the remote work quickstart guide, you can use [this link](../../covid-19/creating-a-cloud-app-covid.md) to quickly jump back to your place in that guide.
 
 This guide will take you through the process of writing an application for working with and manipulating the St. Jude data you've requested. By creating your own application, you will be able to wrap genomic tools and packages from external sources, as well as any tool or application you might have written yourself.
 
@@ -27,7 +27,7 @@ For this tutorial I have requested the PCGP dataset, and once my access request 
 ![](../../../images/guides/genomics-platform/analyzing-data/creating-a-cloud-app-0.png)
 
 !!!note
-    If you do not yet have data in a DNAnexus project, you may request data from St. Jude Cloud by following the directions [here](../requesting-data/data-request.md) or you may upload your own data using the [data transfer app](../managing-data/data-transfer-app.md). In order to make a data request or upload your own data using the data transfer app, you must first [create a St. Jude Cloud account](../requesting-data/create-an-account.md).
+    If you do not yet have data in a DNAnexus project, you may request data from St. Jude Cloud by following the directions [here](../requesting-data/data-request.md) or you may upload your own data using the [data transfer app](../managing-data/data-transfer-app.md). In order to make a data request or upload your own data using the data transfer app, you must first [create a St. Jude Cloud account](../create-an-account.md).
 
 
 ## Writing the Application

@@ -28,7 +28,7 @@ OpenSSH is included as [a feature] that can be installed.
   * Under the OpenSSH Client entry, click _Install_.
 
 Open PowerShell and run
-
+    
 ```bash
 ssh <username>@hpc
 ```

@@ -1,6 +1,7 @@
-Please complete the following check-list to get started with using St. Jude Cloud:
+Please complete the following check-list to get started with using St. Jude
+Cloud.
 
-- [x] If applicable, apply for Discovery Sponsorship Program ([link](#apply-for-discovery-sponsorship-program)).
+- [X] If applicable, apply for Discovery Sponsorship Program ([link](#apply-for-discovery-sponsorship-program)).
 - [x] Join St. Jude Cloud helpdesk channel on Slack ([link](#joining-slack)).
 - [x] Log in to your St. Jude Cloud account ([link](#login-to-st-jude-cloud)). 
 - [x] Enable Microsoft Azure ([link](#enable-microsoft-azure)). 
@@ -38,7 +39,7 @@ Signing in to St. Jude Cloud is similarly easy — if you have a SJCRH account, 
 
 1. Visit [https://cloud.stjude.org](https://cloud.stjude.org), log in with your St. Jude credentials, and fill in the basic profile page to your satisfaction if prompted. Congrats! You're now logged in to St. Jude Cloud. 
 
-This should be sufficient for the purposes of this guide. For more detailed information, see our standard guide on [accounts and billing](../../account-and-billing.md).
+This should be sufficient for the purposes of this guide. For more detailed information, see our standard guide on [accounts and billing](../../guides/genomics-platform/create-an-account.md).
 
 !!! tip
     As you navigate around St. Jude Cloud, you can click the DNAnexus logo in the top left to go back to the home screen at any time.

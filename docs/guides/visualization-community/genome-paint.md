@@ -6,7 +6,7 @@
 
 The GenomePaint browser homepage lands on a dense cohort view of the TAL1 gene region of chromosome 1. Each section of the display can be interacted with by clicking, dragging, or hovering. Filter the information displayed on the tracks by clicking buttons in the legend. Customize the legend display by hiding/showing classes. Click **CONFIG** to the right of tracks for additional display customization.
 
-![](../../images/guides/portals/genome-paint/genome_paint_overview.png)
+![](../../images/guides/visualization-community/genome-paint/genome_paint_overview.png)
 
 To navigate tracks,
 

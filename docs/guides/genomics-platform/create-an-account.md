@@ -16,7 +16,7 @@ If you work at an institution that is not St. Jude (the standard case), you can 
 4. On the Create New Account page, make sure to select "Microsoft Azure (westus)" as the Default Cloud Region.
 5. Click 'CREATE ACCOUNT'
 
-![](../../../images/guides/genomics-platform/requesting-data/create-DX-account.gif)
+![](../../images/guides/genomics-platform/requesting-data/create-DX-account.gif)
 
 ## Logging in
 
@@ -26,7 +26,7 @@ Simply go to the [St. Jude Cloud log in page](https://platform.dnanexus.com/logi
 1. Click on the drop down next to your user name in the far right of the DNAnexus navigation bar, and select 'Profile'.
 2. Click on 'Billing Account' from the tabs listed just under the navigation bar.
 3. Click on the green 'ADD BILLING INFO' button to the right of your account name.
-![](../../../images/guides/genomics-platform/requesting-data/DX-setup_billing_ext.gif)
+![](../../images/guides/genomics-platform/requesting-data/DX-setup_billing_ext.gif)
 4. A window labeled 'ACCOUNT UPGRADE' will pop up. In this window agree to DNAnexus's Terms of Service, agree to DNAnexus's pricing model, review your account information, and finally enter your billing information.
 5. Click 'Upgrade Account'. This will send an email to the individual listed as the billing contact requesting that they verify the change.
 

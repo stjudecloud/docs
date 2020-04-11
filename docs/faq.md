@@ -73,7 +73,7 @@ be charged for anything with the exception of the following actions:
 You can find DNAnexus's specific resource-based pricing table by navigating to the Billing Account tab of your profile page on DNAnexus and then clicking the green 'Add Billing Info' button next to your name.
 
 ### How can I set up billing for my lab?
-Billing setup is different based on whether you are an internal user (you work at St. Jude) or an external user. If you are a St. Jude Employee, please refer to the [Intranet](https://home.stjude.org/computational-biology/Pages/bioinformatics-self-service-cloud.aspx) for instructions. If you are not a St. Jude Employee, please refer to our [Create an Account page](./guides/genomics-platform/requesting-data/create-an-account.md#billing-setup).
+Billing setup is different based on whether you are an internal user (you work at St. Jude) or an external user. If you are a St. Jude Employee, please refer to the [Intranet](https://home.stjude.org/computational-biology/Pages/bioinformatics-self-service-cloud.aspx) for instructions. If you are not a St. Jude Employee, please refer to our [Create an Account page](./guides/genomics-platform/create-an-account.md#billing-setup).
 
 
 ### Why do I need to sign the Data Access Agreement (DAA)?
@@ -161,10 +161,6 @@ All of our samples are marked with an [embargo date](./guides/genomics-platform/
 You can find this by looking at the tags for each file or in the
 `SAMPLE_INFO.txt` file that is included with each data request.
 Select a sample and click info to see more.
-
-![](images/guides/data/embargo-date-1.png)
-![](images/guides/data/embargo-date-2.png)
-
 
 ### Will St. Jude Cloud host my institution's data in the data browser or on PeCan?
 If you are interested in submitting data to St. Jude Cloud, please contact us at support@stjude.cloud.

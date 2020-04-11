@@ -27,7 +27,7 @@ family history and related literature. Classification tags can be
 assigned to curated data enabling automated calculation of pathogenicity
 rating based on ACMG/AMP 2015 guidelines.
 
-See [<i class="material-icons material-icons-sjcloud-custom">file_download</i> PowerPoint slides](../../../files/guides/tools/pecan-pie/pecanpie_ASHG_2017.pptx)
+See [<i class="material-icons material-icons-sjcloud-custom">file_download</i> PowerPoint slides](../../files/guides/tools/pecan-pie/pecanpie_ASHG_2017.pptx)
 presented at the ASHG 2017 annual meeting (note that some of this
 information is out of date, various improvements have been made since
 then).
@@ -146,7 +146,7 @@ damage-prediction algorithms. Variants having an imperfect match to a
 database (i.e. different variants at the same genomic position or codon)
 typically receive a lesser medal.
 
-A summary graphic can be found in slide 4 of the ASHG 2017 presentation ([download here](../../../files/guides/tools/pecan-pie/pecanpie_ASHG_2017.pptx)). 
+A summary graphic can be found in slide 4 of the ASHG 2017 presentation ([download here](../../files/guides/tools/pecan-pie/pecanpie_ASHG_2017.pptx)). 
 For additional details see [Zhang et al., NEJM
 2015](http://www.nejm.org/doi/full/10.1056/NEJMoa1508054#t=article)
 (supplementary appendix pp. 7-10).
@@ -401,7 +401,7 @@ Pecan PIE only works for human data.
 **Q. What genes are on the curated gene list?**
 
 A. The list consists of disease-related genes, both cancer and
-non-cancer, see the [<i class="material-icons material-icons-sjcloud-custom">file_download</i> Excel spreadsheet](../../../files/guides/tools/pecan-pie/table_S1_gene_list_5_categories_v2.xlsx)
+non-cancer, see the [<i class="material-icons material-icons-sjcloud-custom">file_download</i> Excel spreadsheet](../../files/guides/tools/pecan-pie/table_S1_gene_list_5_categories_v2.xlsx)
 for details. Filtering the source variants to a target list of genes
 reduces the processing burden on the system.
 

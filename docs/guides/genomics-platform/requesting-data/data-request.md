@@ -26,9 +26,9 @@ As you filter and make selections, the data summary panel in the upper left hand
 ![](../../../images/guides/genomics-platform/requesting-data/request-data-select-data.gif)
 
 !!! note
-    You must have [created an account](create-an-account.md) and be logged in to submit a data request. If you have not yet created an account or you are not logged in, the submit button will say *Log In* rather than *Request Data*.
+    You must have [created an account](../create-an-account.md) and be logged in to submit a data request. If you have not yet created an account or you are not logged in, the submit button will say *Log In* rather than *Request Data*.
 
-Alternatively, you may be directed to the Genomics Platform Data Browser through another App to request specific samples. The [PeCan homepage](../../PeCan/pecan.md#requesting-raw-genomics-through-pecan) is one such app that allows you to select data through an interactive visualization.
+Alternatively, you may be directed to the Genomics Platform Data Browser through another App to request specific samples. The [PeCan homepage](../../pecan/index.md#requesting-raw-genomics-through-pecan) is one such app that allows you to select data through an interactive visualization.
 
 After clicking on *Request Data*, we ask that you review your selection and make sure that the [DAUs](glossary.md#data-access-unit) corresponding to the set of data you have selected is indeed the data you want to request. 
 
@@ -74,6 +74,6 @@ Go to our [Managing Data Overview](../managing-data/working-with-our-data.md) do
 
 [About our Data](about-our-data.md)  
 [About our Decision Process & Terminology](glossary.md)    
-[Creating an Account](create-an-account.md)   
+[Creating an Account](../create-an-account.md)   
 [Managing Data Overview](../managing-data/working-with-our-data.md)  
 [Renewing your Data Access](../managing-data/how-to-fill-out-Extension.md)    

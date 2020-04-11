@@ -32,7 +32,7 @@ St. Jude Cloud provides a number of applications which you can use for various p
   share interactive visualizations using tools such as
   [ProteinPaint](https://proteinpaint.stjude.org/) and
   [GenomePaint](https://genomepaint.stjude.cloud/). See [this
-  guide](./guides/visualization-community/viz-com-about.md) to get started.
+  guide](./guides/visualization-community/index.md) to get started.
 
 ## Studies
 

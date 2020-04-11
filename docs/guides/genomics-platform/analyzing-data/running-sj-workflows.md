@@ -20,7 +20,7 @@ From the appropriate workflow page, click the "Start" button in the left hand pa
 With subsequent runs, in place of the "Start" button will be two buttons "Launch Tool" and "View Results", meaning a cloud workspace with the workflow has already been created for you. In this case, you're good! You can move on to the next section.
 
 !!! note
-    If you have not yet logged in, in place of the "Start" button will be a button the says "Log In". If you see this, simply login and try again. For a guide to creating an account go [here](../requesting-data/create-an-account.md).
+    If you have not yet logged in, in place of the "Start" button will be a button the says "Log In". If you see this, simply login and try again. For a guide to creating an account go [here](../create-an-account.md).
 
     If you are still unable to start the workflow,
     [contact us](https://stjude.cloud/contact).

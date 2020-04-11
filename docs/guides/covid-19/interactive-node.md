@@ -90,7 +90,9 @@ Next, select the project containing the CWIC app on your command line using `dx 
 
 ### Setting up your Docker Hub account
 
-The workstation uses Docker images pushed to a Docker Hub repository to save your environment. To get started, go to [Docker Hub](hub.docker.com) and sign in or create an account. Every Docker Hub account is given one free private repository. It is highly recommended to use a private repository as this will be your working environment.
+The workstation uses Docker images pushed to a Docker Hub repository to save your environment. To get started, go to [Docker Hub] and sign in or create an account. Every Docker Hub account is given one free private repository. It is highly recommended to use a private repository as this will be your working environment.
+
+[Docker Hub]: https://hub.docker.com
 
 Once you have a Docker Hub account, go to your "Account Settings", then "Security" and create a new access token.
 
