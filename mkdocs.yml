@@ -58,9 +58,9 @@ nav:
   #- PBTP: guides/model-systems/pbtp.md
   - Visualization Community:
       - Getting Started: guides/visualization-community/index.md
-      - ProteinPaint: guides/visualization-community/protein-paint.md
-      - Genome Paint: guides/visualization-community/genome-paint.md
-      #- SJ Charts: guides/visualization-community/sj-charts.md
+      - ProteinPaint: guides/visualization-community/proteinpaint.md
+      - Genome Paint: guides/visualization-community/genomepaint.md
+      #- SJ Charts: guides/visualization-community/sjcharts.md
       #- t-SNE Charts: guides/visualization-community/t-sne-charts.md
   - Studies:
       - About: guides/studies/studies-about.md
