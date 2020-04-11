@@ -1,11 +1,13 @@
 <p align="center">
   <a href="https://github.com/stjudecloud/docs"><img src="./docs/docs-banner-lighthouse.jpg" width="800" title="St. Jude Cloud Docs"></a>
-  <a href="https://travis-ci.org/stjudecloud/docs" target="_blank">
-    <img alt="Build Status: Master" src="https://travis-ci.org/stjudecloud/docs.svg?branch=master" />
-  </a>
-  <a href="https://github.com/stjudecloud/docs/blob/master/LICENSE.md" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
-  </a>
+  <p align="center">
+    <a href="https://travis-ci.org/stjudecloud/docs" target="_blank">
+      <img alt="Build Status: Master" src="https://github.com/stjudecloud/docs/workflows/Continuous%20Deployment/badge.svg" />
+    </a>
+    <a href="https://github.com/stjudecloud/docs/blob/master/LICENSE.md" target="_blank">
+      <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+    </a>
+  </p>
 </p>
 
 > Documentation for the St. Jude Cloud project.
