@@ -1,0 +1,1710 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <script src="//assets.adobedtm.com/launch-EN942f79c83ff84c10a45b4856a85eaccb.min.js" async></script>
+    <script>!function(e,a,t,n,g,c,o){e.GoogleAnalyticsObject=g,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),o=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",o.parentNode.insertBefore(c,o)}(window,document,"script",0,"ga"),ga("create","UA-107924368-1","auto"),ga("send","pageview")</script>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Mutational Signatures - St. Jude Cloud Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.7d2ef1ff.css">
+      
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.eca31fed.js"></script>
+    
+    
+      
+    
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#overview" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../.." title="St. Jude Cloud Documentation" aria-label="St. Jude Cloud Documentation" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="../../../../images/stjude-logo-child-white.png" width="40" height="28">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              St. Jude Cloud Documentation
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Mutational Signatures
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/stjudecloud/docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    stjudecloud/docs
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../.." class="md-tabs__link">
+        Overview
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../covid-19/" class="md-tabs__link">
+          COVID-19 Quickstart
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../" class="md-tabs__link md-tabs__link--active">
+          Genomics Platform
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../pecan/index.md" class="md-tabs__link">
+          PeCan
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../visualization-community/" class="md-tabs__link">
+          Visualization Community
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../studies/studies-about/" class="md-tabs__link">
+          Studies
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../.." title="St. Jude Cloud Documentation" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="../../../../images/stjude-logo-child-white.png" width="48" height="48">
+      
+    </a>
+    St. Jude Cloud Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/stjudecloud/docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    stjudecloud/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ecosystem/" title="About our Ecosystem" class="md-nav__link">
+      About our Ecosystem
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      COVID-19 Quickstart
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        COVID-19 Quickstart
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/getting-started/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/upload-local/" title="Data upload (local)" class="md-nav__link">
+      Data upload (local)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/upload-cluster/" title="Data upload (HPC)" class="md-nav__link">
+      Data upload (HPC)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/creating-a-cloud-app-covid/" title="Creating a cloud app" class="md-nav__link">
+      Creating a cloud app
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/interactive-node/" title="Interactive nodes" class="md-nav__link">
+      Interactive nodes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/visualizing-ngs-data/" title="Visualizing NGS data" class="md-nav__link">
+      Visualizing NGS data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Genomics Platform
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Genomics Platform
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../accounts-and-billing/" title="Accounts and Billing" class="md-nav__link">
+      Accounts and Billing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Requesting Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        Requesting Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../requesting-data/about-our-data/" title="About our Data" class="md-nav__link">
+      About our Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../requesting-data/data-request/" title="Making a Data Request" class="md-nav__link">
+      Making a Data Request
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../requesting-data/how-to-fill-out-DAA/" title="Filling Out a Data Access Agreement" class="md-nav__link">
+      Filling Out a Data Access Agreement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../requesting-data/glossary/" title="About our Decision Process & Terminology" class="md-nav__link">
+      About our Decision Process & Terminology
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Managing Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        Managing Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../managing-data/working-with-our-data/" title="Managing Data Overview" class="md-nav__link">
+      Managing Data Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../managing-data/data-transfer-app/" title="Uploading/Downloading Data" class="md-nav__link">
+      Uploading/Downloading Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../managing-data/how-to-fill-out-Extension/" title="Renewing your Data Access" class="md-nav__link">
+      Renewing your Data Access
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5" checked>
+    
+    <label class="md-nav__link" for="nav-4-5">
+      Analyzing Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
+        Analyzing Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../command-line/" title="Command Line Interaction" class="md-nav__link">
+      Command Line Interaction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../running-sj-workflows/" title="Running our Workflows" class="md-nav__link">
+      Running our Workflows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5-3" type="checkbox" id="nav-4-5-3" checked>
+    
+    <label class="md-nav__link" for="nav-4-5-3">
+      SJ Cloud Workflows
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-5-3">
+        SJ Cloud Workflows
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../neoepitope/" title="NeoepitopePred" class="md-nav__link">
+      NeoepitopePred
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../chipseq/" title="ChIP-Seq Peak Calling" class="md-nav__link">
+      ChIP-Seq Peak Calling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rapid-rnaseq/" title="Rapid RNA-Seq Fusion Detection" class="md-nav__link">
+      Rapid RNA-Seq Fusion Detection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../warden/" title="WARDEN Differential Expression Analysis" class="md-nav__link">
+      WARDEN Differential Expression Analysis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Mutational Signatures
+      </label>
+    
+    <a href="./" title="Mutational Signatures" class="md-nav__link md-nav__link--active">
+      Mutational Signatures
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    Inputs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input-configuration" class="md-nav__link">
+    Input configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    Outputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-steps" class="md-nav__link">
+    Workflow Steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-workspace" class="md-nav__link">
+    Creating a workspace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uploading-input-files" class="md-nav__link">
+    Uploading Input Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-workflow" class="md-nav__link">
+    Running the Workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-of-results" class="md-nav__link">
+    Analysis of Results
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpreting-results" class="md-nav__link">
+    Interpreting results
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raw-signatures" class="md-nav__link">
+    Raw signatures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signatures-visualization" class="md-nav__link">
+    Signatures visualization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-sheet" class="md-nav__link">
+    Sample Sheet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    Frequently asked questions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#similar-topics" class="md-nav__link">
+    Similar Topics
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../creating-a-cloud-app/" title="Creating your own Workflow" class="md-nav__link">
+      Creating your own Workflow
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      PeCan
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        PeCan
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pecan/index.md" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pecan/pecan-pie.md" title="Pecan PIE" class="md-nav__link">
+      Pecan PIE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Visualization Community
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Visualization Community
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../visualization-community/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../visualization-community/proteinpaint/" title="ProteinPaint" class="md-nav__link">
+      ProteinPaint
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../visualization-community/genomepaint/" title="Genome Paint" class="md-nav__link">
+      Genome Paint
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Studies
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Studies
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../studies/studies-about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../studies/sickle-cell/" title="Sickle Cell" class="md-nav__link">
+      Sickle Cell
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../faq/" title="Frequently Asked Questions" class="md-nav__link">
+      Frequently Asked Questions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../citing-stjude-cloud/" title="Citing St. Jude Cloud" class="md-nav__link">
+      Citing St. Jude Cloud
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    Inputs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input-configuration" class="md-nav__link">
+    Input configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    Outputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-steps" class="md-nav__link">
+    Workflow Steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-workspace" class="md-nav__link">
+    Creating a workspace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uploading-input-files" class="md-nav__link">
+    Uploading Input Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-workflow" class="md-nav__link">
+    Running the Workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-of-results" class="md-nav__link">
+    Analysis of Results
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpreting-results" class="md-nav__link">
+    Interpreting results
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raw-signatures" class="md-nav__link">
+    Raw signatures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signatures-visualization" class="md-nav__link">
+    Signatures visualization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-sheet" class="md-nav__link">
+    Sample Sheet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    Frequently asked questions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#similar-topics" class="md-nav__link">
+    Similar Topics
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/stjudecloud/docs/edit/master/docs/guides/genomics-platform/analyzing-data/mutational-signatures.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Mutational Signatures</h1>
+                
+                <table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Authors</strong></td>
+<td>Scott Newman, Michael Macias</td>
+</tr>
+<tr>
+<td><strong>Publication</strong></td>
+<td>Mutational Signatures employs MutationalPatterns: "<a href="https://doi.org/10.1186/s13073-018-0539-0">MutationalPatterns: comprehensive genome-wide analysis of mutational processes.</a>"</td>
+</tr>
+<tr>
+<td><strong>Technical Support</strong></td>
+<td><a href="https://stjude.cloud/contact">Contact Us</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p><strong>Mutational Signatures</strong> finds and quantifies COSMIC mutational signatures
+across samples. This is done by finding the optimal non-negative linear
+combination of mutation signatures to reconstruct a mutation matrix. It
+builds the initial mutation matrix from multiple single-sample VCFs and, by
+default, fits it to <a href="https://cancer.sanger.ac.uk/cosmic/signatures">mutational signatures from COSMIC</a>. Mutational
+Signatures employs <a href="https://bioconductor.org/packages/release/bioc/html/MutationalPatterns.html">MutationalPatterns</a> (<a href="#references">Blokzijl, et al. (2018)</a>) to
+achieve this.</p>
+<p>Mutational Signatures supports both hg19 (GRCh37) and hg38 (GRCh38).</p>
+<h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#vcfs">VCF(s)</a></td>
+<td>Array of files</td>
+<td>List of VCF inputs. Can be single-sample or multi-sample and uncompressed or gzipped.</td>
+<td>[<code>*.vcf</code>, <code>*.vcf.gz</code>]</td>
+</tr>
+<tr>
+<td><a href="#sample-sheet">Sample sheet</a></td>
+<td>File</td>
+<td>Tab-delimited file (no headers) with sample ID and tag pairs [optional]</td>
+<td><code>*.txt</code></td>
+</tr>
+<tr>
+<td>Genome build</td>
+<td>String</td>
+<td>Genome build used as reference. Can be either "GRCh37" or "GRCh38". [default: "GRCh38"]</td>
+<td>GRCh38</td>
+</tr>
+<tr>
+<td>Minimum mutation burden</td>
+<td>Integer</td>
+<td>Minimum number of somatic SNVs a sample must have to be considered for analysis [default: 9]</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Minimum signature contribution</td>
+<td>Integer</td>
+<td>Minimum number of mutations attributable to a single signature [default: 9]</td>
+<td>100</td>
+</tr>
+<tr>
+<td><a href="#output-prefix">Output prefix</a></td>
+<td>String</td>
+<td>Prefix to append to output filenames [optional]</td>
+<td>mtsg</td>
+</tr>
+<tr>
+<td><a href="#disabled-vcf-column">Disabled VCF column</a></td>
+<td>Integer</td>
+<td>VCF column (starting from sample names, zero-based) to ignore when reading VCFS [optional]</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="input-configuration">Input configuration<a class="headerlink" href="#input-configuration" title="Permanent link">&para;</a></h3>
+<p>Mutational Signatures only requires VCFs as inputs. This can be a single multi-sample VCF, multiple single-sample VCFs, or a combination of both. All other inputs are optional.</p>
+<h4 id="VCF(s)">VCF(s)</h4>
+
+<p><em>VCF(s)</em> is a list of VCF inputs. The inputs can be single-sample or
+multi-sample and uncompressed or gzipped. Sample names are taken from the VCF
+header.</p>
+<p>When using multi-sample VCFs, empty cells/absent variant calls must be
+denoted with <code>.:.</code>.</p>
+<p>gVCFs are not supported.</p>
+<h4 id="Sample Sheet">Sample Sheet</h4>
+
+<p><em>Sample sheet</em> is a tab-delimited file (no headers) with two columns: the
+sample ID and a tag. The tag is an arbitrary identifier used to group the
+samples, typically a disease abbreviation or tissue of origin.</p>
+<p>If not given, a sample sheet will be generated automatically.</p>
+<h5>Example</h5>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SJACT001_D</td>
+<td>ACT</td>
+</tr>
+<tr>
+<td>SJACT002_D</td>
+<td>ACT</td>
+</tr>
+<tr>
+<td>SJBALL063_D</td>
+<td>BALL</td>
+</tr>
+<tr>
+<td>SJHGG017_D</td>
+<td>HGG</td>
+</tr>
+</tbody>
+</table>
+<h4 id="output-prefix">Output prefix</h4>
+
+<p><em>Output prefix</em> is the prefix to append to the output filenames. By default,
+if a single input VCF is given, its basename is used as the output prefix. If
+multiple input VCFs are given, a default "mtsg" prefix is used. This behavior
+can be overridden by a user-defined prefix.</p>
+<h5>Example</h5>
+
+<table>
+<thead>
+<tr>
+<th>VCF(s)</th>
+<th>Prefix</th>
+<th>Output filename for raw signatures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[<code>pcgp.b38.refseq.goodbad.vcf</code>]</td>
+<td>pcgp.b38.refseq.goodbad</td>
+<td><code>pcgp.b38.refseq.goodbad.signatures.txt</code></td>
+</tr>
+<tr>
+<td>[<code>SJOS013_D.vcf</code>, <code>SJRHB007_D.vcf</code>]</td>
+<td>mtsg</td>
+<td><code>mtsg.signatures.txt</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="disabled-vcf-column">Disabled VCF column</h4>
+
+<p><em>Disabled VCF column</em> is the column index to ignore when reading VCFs. This
+is useful when the inputs are tumor-normal VCFs, and one column should be
+ignored. Otherwise, the results would likely be duplicated.</p>
+<p>The argument is a zero-based index relative to the sample names in the header
+of the VCF. For example, in a VCF with samples <code>SJEPD003_D</code> and <code>SJEPD003_G</code>,
+the germline sample (<code>SJEPD003_G</code>) can be discarded by setting the <em>disabled
+VCF column</em> to <code>1</code>.</p>
+<h5>Example</h5>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th>0</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#CHROM</td>
+<td>POS</td>
+<td>ID</td>
+<td>REF</td>
+<td>ALT</td>
+<td>QUAL</td>
+<td>FILTER</td>
+<td>INFO</td>
+<td>FORMAT</td>
+<td>SJEPD003_D</td>
+<td>SJEPD003_G</td>
+</tr>
+</tbody>
+</table>
+<h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#raw-signatures">Raw signatures</a></td>
+<td>File</td>
+<td>Tab-delimited file of the raw results with sample contributions for each signature</td>
+</tr>
+<tr>
+<td><a href="#signatures-visualization">Signatures visualization</a></td>
+<td>File</td>
+<td>HTML file for interactive plotting</td>
+</tr>
+<tr>
+<td><a href="#sample-sheet-out">Sample sheet</a></td>
+<td>File</td>
+<td>Tab-delimited file (no headers) with sample ID and tag pairs</td>
+</tr>
+</tbody>
+</table>
+<h2 id="workflow-steps">Workflow Steps<a class="headerlink" href="#workflow-steps" title="Permanent link">&para;</a></h2>
+<p>Mutational Signatures runs four steps using subcommands of <a href="https://github.com/stjude/mtsg">mtsg</a>.</p>
+<ol>
+<li>Split VCFs (single or multi-sample) to multiple single-sample VCFs.</li>
+<li>If not given, generate a sample sheet from the directory of single-sample
+     VCFs.</li>
+<li>Build a mutation matrix and reconstruct/fit it using COSMIC mutation
+     signatures.</li>
+<li>Create a visualization file using the fitted signatures.</li>
+</ol>
+<h2 id="creating-a-workspace">Creating a workspace<a class="headerlink" href="#creating-a-workspace" title="Permanent link">&para;</a></h2>
+<p>Before you can run one of our workflows, you must first create a workspace in DNAnexus for the run. Refer to <a href="../running-sj-workflows/#getting-started">the general workflow guide</a> to learn how to create a DNAnexus workspace for each workflow run.</p>
+<p>You can navigate to the Mutational Signatures workflow page <a href="https://platform.stjude.cloud/workflows/mutational_signatures">here</a>.</p>
+<h2 id="uploading-input-files">Uploading Input Files<a class="headerlink" href="#uploading-input-files" title="Permanent link">&para;</a></h2>
+<p>Mutational Signatures requires at least one VCF and an optional sample sheet to be uploaded. </p>
+<p>Refer to <a href="../running-sj-workflows/#uploading-files">the general workflow guide</a> to learn how to upload input files to the workspace you just created.</p>
+<h2 id="running-the-workflow">Running the Workflow<a class="headerlink" href="#running-the-workflow" title="Permanent link">&para;</a></h2>
+<p>Refer to <a href="../running-sj-workflows/#running-the-workflow">the general workflow guide</a> to learn how to launch the workflow, hook up input files, adjust parameters, start a run, and monitor run progress.</p>
+<h2 id="analysis-of-results">Analysis of Results<a class="headerlink" href="#analysis-of-results" title="Permanent link">&para;</a></h2>
+<p>Each tool in St. Jude Cloud produces a visualization that makes understanding results more accessible than working with excel spreadsheet or tab delimited files. This is the primary way we recommend you work with your results. </p>
+<p>Refer to <a href="../running-sj-workflows/#custom-visualizations">the general workflow guide</a> to learn how to access these visualizations.</p>
+<p>We also include the raw output files for you to dig into if the visualization is not sufficient to answer your research question. </p>
+<p>Refer to <a href="../running-sj-workflows/#raw-results-files">the general workflow guide</a> to learn how to access raw results files.</p>
+<h2 id="interpreting-results">Interpreting results<a class="headerlink" href="#interpreting-results" title="Permanent link">&para;</a></h2>
+<p>Upon a successful run of Mutational Signatures, three files are saved to the results directory: raw signature contributions, a visualization file, and a
+sample sheet.</p>
+<h3 id="raw-signatures">Raw signatures<a class="headerlink" href="#raw-signatures" title="Permanent link">&para;</a></h3>
+<p><em>Raw signatures</em> is a tab-delimited file of the raw results with sample
+contributions for each signature. Column 1 is the sample name, columns
+2-(N-1) are the COSMIC signatures contribution counts, and column N is the
+group tag, where N is the total number of columns. The number of columns is
+variable since if the signature has no contributions for all samples, it is
+completely omitted.</p>
+<p>Note that the last column <code>tissue</code> is a misnomer. It aligns to the arbitrary
+tag given in the <a href="#sample-sheet">sample sheet</a>.</p>
+<h5>Example</h5>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="right">Signature.1</th>
+<th align="right">Signature.2</th>
+<th align="center">…</th>
+<th align="right">Signature.30</th>
+<th>tissue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SJACT001_D</td>
+<td align="right">1.71758029</td>
+<td align="right">131.033723</td>
+<td align="center">…</td>
+<td align="right">18.6910151</td>
+<td>ACT</td>
+</tr>
+<tr>
+<td>SJAMLM7005_D</td>
+<td align="right">51.9627312</td>
+<td align="right">7.10850351</td>
+<td align="center">…</td>
+<td align="right">0</td>
+<td>AMLM7</td>
+</tr>
+</tbody>
+</table>
+<h3 id="signatures-visualization">Signatures visualization<a class="headerlink" href="#signatures-visualization" title="Permanent link">&para;</a></h3>
+<p><em>Signatures visualization</em> is an HTML file that can be used for interactive
+plotting.</p>
+<p>When opened in a web browser, a set of controls allows plotting various
+stacked bar charts: total contributions by signature, total contributions by
+tag, and total contributions by sample per tag. The total contributions can be
+stacked as absolute values or as a percentage of the total.</p>
+<h3 id="sample-sheet">Sample Sheet<a class="headerlink" href="#sample-sheet" title="Permanent link">&para;</a></h3>
+<p>When no sample sheet is given as an input, one is generated automatically,
+but it is not guaranteed the derived tags will be of any use. This generated
+sample sheet is given as an output in the case the tags need to be manually
+edited, and the job is resubmitted with it as an input.</p>
+<p>When a sample sheet is given as an input, the sample sheet output is a copy
+of the input.</p>
+<p>See also the description for the input <a href="#sample-sheet">sample sheet</a>.</p>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<p>To troubleshoot a failed run of Mutational Signatures, check the job log for
+details.</p>
+<h3 id="wrong-genome-build">Wrong genome build</h3>
+
+<p>If the "Building mutation matrix" step during <code>run</code> fails, it is likely that
+the selected genome build does not match the input VCF(s). Rerun the job with
+a matching genome build.</p>
+<h4>Example</h4>
+
+<div class="highlight"><pre><span></span><code>R: Building mutation matrix from 6 VCFs
+R: Error in mut_matrix(vcf_list = filtered_vcfs, ref_genome = ref_genome) :
+R:   Error in .Call2(&quot;solve_user_SEW&quot;, refwidths, start, end, width, translate.negative.coord,  :
+R:   solving row 526: &#39;allow.nonnarrowing&#39; is FALSE and the supplied start (79440206) is &gt; refwidth + 1
+</code></pre></div>
+
+<h2 id="frequently-asked-questions">Frequently asked questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
+<p>None yet! If you have any questions not covered here, feel free to reach
+out on <a href="https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-contact/">our contact form</a>.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Blokzijl F, Janssen R, van Boxtel R, Cuppen E (2018). "MutationalPatterns:
+    comprehensive genome-wide analysis of mutational processes." <em>Genome
+    Medicine</em>. doi: <a href="https://doi.org/10.1186/s13073-018-0539-0">10.1186/s13073-018-0539-0</a>. PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29695279">29695279</a>.</li>
+</ul>
+<h2 id="similar-topics">Similar Topics<a class="headerlink" href="#similar-topics" title="Permanent link">&para;</a></h2>
+<p><a href="../running-sj-workflows/">Running our Workflows</a><br />
+<a href="../../managing-data/working-with-our-data/">Working with our Data Overview</a> <br />
+<a href="../../managing-data/data-transfer-app/">Downloading/Uploading Data</a>   </p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../warden/" title="WARDEN Differential Expression Analysis" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                WARDEN Differential Expression Analysis
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../creating-a-cloud-app/" title="Creating your own Workflow" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Creating your own Workflow
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 St. Jude Children's Research Hospital
+          </div>
+        
+        
+        built from <a href="https://github.com/stjudecloud/docs/tree/45fe635">45fe635</a> using
+        
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and a modified version of
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs
+        </a>.
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://www.facebook.com/stjuderesearch/" target="_blank" rel="noopener" title="facebook" class="md-footer-social__link fa fa-facebook"></a>
+    
+      <a href="https://twitter.com/stjuderesearch?lang=en" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/st-jude-childrens-research-hospital" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://github.com/stjude" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.2d55c750.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../../../.."}})</script>
+      
+    
+  </body>
+</html>

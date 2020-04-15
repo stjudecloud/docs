@@ -1,0 +1,1460 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <script src="//assets.adobedtm.com/launch-EN942f79c83ff84c10a45b4856a85eaccb.min.js" async></script>
+    <script>!function(e,a,t,n,g,c,o){e.GoogleAnalyticsObject=g,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),o=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",o.parentNode.insertBefore(c,o)}(window,document,"script",0,"ga"),ga("create","UA-107924368-1","auto"),ga("send","pageview")</script>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Running our Workflows - St. Jude Cloud Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.7d2ef1ff.css">
+      
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.eca31fed.js"></script>
+    
+    
+      
+    
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#getting-started" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../.." title="St. Jude Cloud Documentation" aria-label="St. Jude Cloud Documentation" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="../../../../images/stjude-logo-child-white.png" width="40" height="28">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              St. Jude Cloud Documentation
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Running our Workflows
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/stjudecloud/docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    stjudecloud/docs
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../.." class="md-tabs__link">
+        Overview
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../covid-19/" class="md-tabs__link">
+          COVID-19 Quickstart
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../" class="md-tabs__link md-tabs__link--active">
+          Genomics Platform
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../pecan/index.md" class="md-tabs__link">
+          PeCan
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../visualization-community/" class="md-tabs__link">
+          Visualization Community
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../studies/studies-about/" class="md-tabs__link">
+          Studies
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../.." title="St. Jude Cloud Documentation" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="../../../../images/stjude-logo-child-white.png" width="48" height="48">
+      
+    </a>
+    St. Jude Cloud Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/stjudecloud/docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    stjudecloud/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ecosystem/" title="About our Ecosystem" class="md-nav__link">
+      About our Ecosystem
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      COVID-19 Quickstart
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        COVID-19 Quickstart
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/getting-started/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/upload-local/" title="Data upload (local)" class="md-nav__link">
+      Data upload (local)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/upload-cluster/" title="Data upload (HPC)" class="md-nav__link">
+      Data upload (HPC)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/creating-a-cloud-app-covid/" title="Creating a cloud app" class="md-nav__link">
+      Creating a cloud app
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/interactive-node/" title="Interactive nodes" class="md-nav__link">
+      Interactive nodes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/visualizing-ngs-data/" title="Visualizing NGS data" class="md-nav__link">
+      Visualizing NGS data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Genomics Platform
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Genomics Platform
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../accounts-and-billing/" title="Accounts and Billing" class="md-nav__link">
+      Accounts and Billing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Requesting Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        Requesting Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../requesting-data/about-our-data/" title="About our Data" class="md-nav__link">
+      About our Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../requesting-data/data-request/" title="Making a Data Request" class="md-nav__link">
+      Making a Data Request
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../requesting-data/how-to-fill-out-DAA/" title="Filling Out a Data Access Agreement" class="md-nav__link">
+      Filling Out a Data Access Agreement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../requesting-data/glossary/" title="About our Decision Process & Terminology" class="md-nav__link">
+      About our Decision Process & Terminology
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Managing Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        Managing Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../managing-data/working-with-our-data/" title="Managing Data Overview" class="md-nav__link">
+      Managing Data Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../managing-data/data-transfer-app/" title="Uploading/Downloading Data" class="md-nav__link">
+      Uploading/Downloading Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../managing-data/how-to-fill-out-Extension/" title="Renewing your Data Access" class="md-nav__link">
+      Renewing your Data Access
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5" checked>
+    
+    <label class="md-nav__link" for="nav-4-5">
+      Analyzing Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
+        Analyzing Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../command-line/" title="Command Line Interaction" class="md-nav__link">
+      Command Line Interaction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Running our Workflows
+      </label>
+    
+    <a href="./" title="Running our Workflows" class="md-nav__link md-nav__link--active">
+      Running our Workflows
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uploading-files" class="md-nav__link">
+    Uploading Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-workflow" class="md-nav__link">
+    Running the Workflow
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selecting-parameters" class="md-nav__link">
+    Selecting Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hooking-up-inputs" class="md-nav__link">
+    Hooking up Inputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-the-workflow" class="md-nav__link">
+    Starting the Workflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-run-progress" class="md-nav__link">
+    Monitoring Run Progress
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-results" class="md-nav__link">
+    Accessing Results
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-visualizations" class="md-nav__link">
+    Custom Visualizations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proteinpaint-bigwig-viewer" class="md-nav__link">
+    ProteinPaint BigWig Viewer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteinpaint-fusion-viewer" class="md-nav__link">
+    ProteinPaint Fusion Viewer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raw-results-files" class="md-nav__link">
+    Raw Results Files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#similar-topics" class="md-nav__link">
+    Similar Topics
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5-3" type="checkbox" id="nav-4-5-3">
+    
+    <label class="md-nav__link" for="nav-4-5-3">
+      SJ Cloud Workflows
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-5-3">
+        SJ Cloud Workflows
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../neoepitope/" title="NeoepitopePred" class="md-nav__link">
+      NeoepitopePred
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../chipseq/" title="ChIP-Seq Peak Calling" class="md-nav__link">
+      ChIP-Seq Peak Calling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rapid-rnaseq/" title="Rapid RNA-Seq Fusion Detection" class="md-nav__link">
+      Rapid RNA-Seq Fusion Detection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../warden/" title="WARDEN Differential Expression Analysis" class="md-nav__link">
+      WARDEN Differential Expression Analysis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mutational-signatures/" title="Mutational Signatures" class="md-nav__link">
+      Mutational Signatures
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../creating-a-cloud-app/" title="Creating your own Workflow" class="md-nav__link">
+      Creating your own Workflow
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      PeCan
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        PeCan
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pecan/index.md" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pecan/pecan-pie.md" title="Pecan PIE" class="md-nav__link">
+      Pecan PIE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Visualization Community
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Visualization Community
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../visualization-community/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../visualization-community/proteinpaint/" title="ProteinPaint" class="md-nav__link">
+      ProteinPaint
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../visualization-community/genomepaint/" title="Genome Paint" class="md-nav__link">
+      Genome Paint
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Studies
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Studies
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../studies/studies-about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../studies/sickle-cell/" title="Sickle Cell" class="md-nav__link">
+      Sickle Cell
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../faq/" title="Frequently Asked Questions" class="md-nav__link">
+      Frequently Asked Questions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../citing-stjude-cloud/" title="Citing St. Jude Cloud" class="md-nav__link">
+      Citing St. Jude Cloud
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uploading-files" class="md-nav__link">
+    Uploading Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-workflow" class="md-nav__link">
+    Running the Workflow
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selecting-parameters" class="md-nav__link">
+    Selecting Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hooking-up-inputs" class="md-nav__link">
+    Hooking up Inputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-the-workflow" class="md-nav__link">
+    Starting the Workflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-run-progress" class="md-nav__link">
+    Monitoring Run Progress
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-results" class="md-nav__link">
+    Accessing Results
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-visualizations" class="md-nav__link">
+    Custom Visualizations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proteinpaint-bigwig-viewer" class="md-nav__link">
+    ProteinPaint BigWig Viewer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteinpaint-fusion-viewer" class="md-nav__link">
+    ProteinPaint Fusion Viewer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raw-results-files" class="md-nav__link">
+    Raw Results Files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#similar-topics" class="md-nav__link">
+    Similar Topics
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/stjudecloud/docs/edit/master/docs/guides/genomics-platform/analyzing-data/running-sj-workflows.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Running our Workflows</h1>
+                
+                <p>In this guide, we will explain generally how to run, from end-to-end, any of our in house analysis workflows from within the DNAnexus cloud ecosystem. The <a href="https://www.dnanexus.com/">DNAnexus</a> genomic ecosystem is the backbone for the computation and storage in St. Jude Cloud. If you'd like, you can read an introduction to the DNAnexus ecosystem <a href="https://documentation.dnanexus.com/">here</a>. If you haven't already, follow <a href="../../requesting-data/data-request/">this guide</a> to request access to St. Jude data in this secure cloud ecosystem. </p>
+<h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<p>To get started with any St. Jude Cloud workflow, first navigate to the appropriate workflow page. Below is a complete list of the workflows we offer along with links to their corresponding tool page and documentation page.</p>
+<ul>
+<li>NeoepitopePred [<a href="https://platform.stjude.cloud/workflows/neoepitopepred">tool page</a>] [<a href="../neoepitope/">documentation</a>]</li>
+<li>ChIP-Seq Peak Calling [<a href="https://platform.stjude.cloud/workflows/chip-seq">tool page</a>] [<a href="../chipseq/">documentation</a>]</li>
+<li>Rapid RNA-Seq Fusion Detection [<a href="https://platform.stjude.cloud/workflows/rapid_rna-seq">tool page</a>] [<a href="../rapid-rnaseq/">documentation</a>]</li>
+<li>WARDEN Differential Expression Analysis [<a href="https://platform.stjude.cloud/workflows/warden">tool page</a>] [<a href="../warden/">documentation</a>]</li>
+<li>Mutational Signatures [<a href="https://platform.stjude.cloud/workflows/mutational_signatures">tool page</a>] [<a href="../mutational-signatures/">documentation</a>]</li>
+</ul>
+<p>From the appropriate workflow page, click the "Start" button in the left hand pane. This creates a new DNAnexus cloud workspace (with the same name as the workflow) and imports the workflow.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/analysis_workflow_click-start.png" /></p>
+<p>With subsequent runs, in place of the "Start" button will be two buttons "Launch Tool" and "View Results", meaning a cloud workspace with the workflow has already been created for you. In this case, you're good! You can move on to the next section.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you have not yet logged in, in place of the "Start" button will be a button the says "Log In". If you see this, simply login and try again. For a guide to creating an account go <a href="../../accounts-and-billing/">here</a>.</p>
+<p>If you are still unable to start the workflow,
+<a href="https://stjude.cloud/contact">contact us</a>.</p>
+</div>
+<h2 id="uploading-files">Uploading Files<a class="headerlink" href="#uploading-files" title="Permanent link">&para;</a></h2>
+<p>Now that a DNAnexus cloud workspace has been created, you will be able to upload input files to that workspace. The specific documentation for each workflow will detail what input files you will need to upload. </p>
+<p>You can upload these files using the <a href="../../managing-data/data-transfer-app/">data transfer application</a>
+or by uploading them through <a href="../command-line/">the command line</a>. Both of the guides linked here will contain more details on how to upload data using that method, so we defer to those guides here.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you plan to upload data through the St. Jude Cloud Data Transfer application
+(recommended), you can click the "Upload Data" button the appears in the left panel after you click "Start". If you
+have not already downloaded the app, do so by clicking "Download app". Once you
+have the app, you can click "Open app" to open the app with the workflow's cloud 
+workspace already opened and ready to drag-and-drop files into it!</p>
+<p>For more information, check out the <a href="../../managing-data/data-transfer-app/">data transfer application</a> guide.</p>
+</div>
+<h2 id="running-the-workflow">Running the Workflow<a class="headerlink" href="#running-the-workflow" title="Permanent link">&para;</a></h2>
+<p>Once you've uploaded data to your cloud workspace, click "Launch Tool" on the workflow's landing page. A dropdown will present any presets required for running the workflow. For example, some workflows ask that you select whether you wish to start with FastQ files or a BAM file. Launching the workflow will redirect you to you workspace in DNAnexus.</p>
+<p>The gif below shows an example with the <a href="https://platform.stjude.cloud/tools/rapid_rna-seq">Rapid RNA-Seq workflow</a></p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/example_tool-launch.gif" /></p>
+<h3 id="selecting-parameters">Selecting Parameters<a class="headerlink" href="#selecting-parameters" title="Permanent link">&para;</a></h3>
+<p>Some workflows allow you to specify or customize one or more run parameters. Many parameters will be set to a default value. To see all parameter options available, click the gear cog next to the substep titled with the workflow name. For a full list of the parameters and their
+descriptions, see <strong>Inputs</strong> table on the documentation page for the workflow that you are running. Below is an example showing how to customize parameters for the Neoepitope Prediction workflow.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/change-parameters.gif" /></p>
+<h3 id="hooking-up-inputs">Hooking up Inputs<a class="headerlink" href="#hooking-up-inputs" title="Permanent link">&para;</a></h3>
+<p>Next, you'll need to hook up the input files you uploaded in 
+<a href="#uploading-files">the upload files section</a>. In the example below, we are running the Rapid RNA-Seq workflow using the FastQ version of the pipeline. The example gif shows  that you hook up the inputs by clicking on the <code>Fastq/R1</code> and <code>Fastq/R2</code> slots and selecting the respective input files. This process is similar for all workflows.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/hookup-inputs.gif" /></p>
+<h3 id="starting-the-workflow">Starting the Workflow<a class="headerlink" href="#starting-the-workflow" title="Permanent link">&para;</a></h3>
+<p>Once your input files are hooked up, you should be able to start the workflow by clicking the <strong>Run as Analysis...</strong> button in the top right hand corner of the workflow dialog. See the example below using the Rapid RNA-Seq workflow.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/run-analysis.gif" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you cannot click this button, please ensure that all of the inputs are correctly hooked up.</p>
+<p>If you're still have trouble, please <a href="https://stjude.cloud/contact">contact us</a> and include a screenshot of the workflow screen above.</p>
+</div>
+<h2 id="monitoring-run-progress">Monitoring Run Progress<a class="headerlink" href="#monitoring-run-progress" title="Permanent link">&para;</a></h2>
+<p>Once you have started one or more workflow runs, you can safely close your browser and come back later to check the status of the jobs. To do this, navigate to the landing page of the workflow that you want to check. Next, click "View Results" then select the "View Running Jobs" option. 
+You will be redirected to the job monitoring page in your DNAnexus workspace. Each job you kicked off gets one row in this table. See the two examples below for the Rapid RNA-Seq workflow.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/workflow_view-results_example.gif" /> </p>
+<p>You can click the "+" on any of the runs to check the status of individual steps of the workflow. Other information, such as time, cost of individual steps in the workflow, and even viewing the job logs can accessed by clicking around the sub-items.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/job-detailed-view.gif" /> </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Refer to the <a href="https://documentation.dnanexus.com/user/running-apps-and-workflows/monitoring-executions">DNAnexus Monitoring Executions Documentation</a> for advanced capabilities for monitoring jobs.</p>
+</div>
+<h2 id="accessing-results">Accessing Results<a class="headerlink" href="#accessing-results" title="Permanent link">&para;</a></h2>
+<h3 id="custom-visualizations">Custom Visualizations<a class="headerlink" href="#custom-visualizations" title="Permanent link">&para;</a></h3>
+<p>Most workflows in St. Jude Cloud produce one or more visualizations that helps you to understand the raw results. </p>
+<p>To access the visualization(s), navigate to the landing page of the workflow that you want to check. Next, click "View Results" then select the "Visualize Results" option. </p>
+<p><img alt="Click &quot;Visualize Results&quot;" src="../../../../images/guides/genomics-platform/analyzing-data/workflow_VisualizeReults_example.gif" /></p>
+<p>You should now see a list of visualization files. Click on a visualization name to explore.</p>
+<p>Below is a brief description of two of our custom visualizations.</p>
+<h4 id="proteinpaint-bigwig-viewer">ProteinPaint BigWig Viewer<a class="headerlink" href="#proteinpaint-bigwig-viewer" title="Permanent link">&para;</a></h4>
+<p>The ProteinPaint interactive coverage viewer is used to visualize any
+bigWig file. You can follow these steps to get an
+understanding of how it works.</p>
+<ol>
+<li>Open up the custom viewer file output by your pipeline. The name of
+    this file will vary, so consult the specific pipeline guide to know
+    where to find it.</li>
+<li>
+<p>Click "Launch" in the bottom right corner to launch the custom
+    viewer.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/bigwig_viewer_startup.png" /></p>
+</li>
+<li>
+<p>Once the page has loaded, you will be able to see the bigWig viewer.
+    You can navigate around the genome by gene or genomic location.
+    Alongside the coverage track is the GENCODE gene reference.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/bigwig_detail.png" /></p>
+</li>
+</ol>
+<h4 id="proteinpaint-fusion-viewer">ProteinPaint Fusion Viewer<a class="headerlink" href="#proteinpaint-fusion-viewer" title="Permanent link">&para;</a></h4>
+<p>The ProteinPaint interactive fusion viewer is used to visualize putative
+fusions called by Rapid RNA-Seq. You can follow these steps to get an
+understanding of how it works.</p>
+<ol>
+<li>Open up the custom viewer file output by your pipeline. The name of
+    this file will vary, so consult the specific pipeline guide to know
+    where to find it.</li>
+<li>
+<p>Click "Launch" in the bottom right corner to launch the custom
+    viewer.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/fusions_viewer_startup.png" /></p>
+</li>
+<li>
+<p>Once the page has finished loading, you will be presented with a
+    summary of all of the fusions produced by the pipeline. Each bullet
+    point is a separate category for the structural variants, with the
+    more interesting fusions at the top. Click one of the categories to
+    view the fusions in that category.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/fusions_click_hq.png" /></p>
+</li>
+<li>
+<p>You can see all of the fusions in that category are now listed on
+    the screen. Hover over one of the fusions to see the detailed view.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/fusions_hover.png" /></p>
+</li>
+<li>
+<p>The popup contains a large amount of information that might be
+    interesting to you based on your use case, such as the transcript
+    and other metrics like read counts, quality metrics, and recurrence.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/fusions_detail.png" /></p>
+</li>
+</ol>
+<h3 id="raw-results-files">Raw Results Files<a class="headerlink" href="#raw-results-files" title="Permanent link">&para;</a></h3>
+<p>If additionally, you would like to view raw output files, you may do so by following the directions below. </p>
+<p>To access the raw output file, navigate to the landing page of the workflow that you want to check. Next, click "View Results" then select the "View Results Files" option.</p>
+<p><img alt="Click &quot;View Results Files&quot;" src="../../../../images/guides/genomics-platform/analyzing-data/workflow_Raw-results_example.gif" /></p>
+<p>You should now be in the filesystem view of your workflow's workspace in DNAnexus with access to files that you
+uploaded as well as results files that are generated. See the example filesystem view below for the Rapid RNA-Seq workflow.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/rapid-rna-results.png" /> </p>
+<p>This is similar to your the filesystem on your computer, and you can do many common operations such as deleting, renaming, and moving files. How/where the result files are generated are specific to each pipeline. Please refer to your individual workflow's documentation on where the output files are kept.</p>
+<p>If you have any unanswered questions about how to run one of our in-house workflows, please <a href="https://stjude.cloud/contact">contact us</a>.</p>
+<h2 id="similar-topics">Similar Topics<a class="headerlink" href="#similar-topics" title="Permanent link">&para;</a></h2>
+<p><a href="../command-line/">Command Line Interaction</a><br />
+<a href="../../managing-data/working-with-our-data/">Working with our Data Overview</a> <br />
+<a href="../../managing-data/data-transfer-app/">Downloading/Uploading Data</a><br />
+<a href="../../../../faq/#how-can-i-explore-and-manipulate-data-files-stored-on-the-cloud-without-downloading-the-files-to-my-local-machine">Technical FAQs</a></p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../command-line/" title="Command Line Interaction" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Command Line Interaction
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../neoepitope/" title="NeoepitopePred" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                NeoepitopePred
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 St. Jude Children's Research Hospital
+          </div>
+        
+        
+        built from <a href="https://github.com/stjudecloud/docs/tree/45fe635">45fe635</a> using
+        
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and a modified version of
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs
+        </a>.
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://www.facebook.com/stjuderesearch/" target="_blank" rel="noopener" title="facebook" class="md-footer-social__link fa fa-facebook"></a>
+    
+      <a href="https://twitter.com/stjuderesearch?lang=en" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/st-jude-childrens-research-hospital" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://github.com/stjude" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.2d55c750.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../../../.."}})</script>
+      
+    
+  </body>
+</html>

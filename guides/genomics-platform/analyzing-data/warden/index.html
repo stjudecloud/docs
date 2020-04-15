@@ -1,0 +1,2316 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <script src="//assets.adobedtm.com/launch-EN942f79c83ff84c10a45b4856a85eaccb.min.js" async></script>
+    <script>!function(e,a,t,n,g,c,o){e.GoogleAnalyticsObject=g,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),o=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",o.parentNode.insertBefore(c,o)}(window,document,"script",0,"ga"),ga("create","UA-107924368-1","auto"),ga("send","pageview")</script>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>WARDEN Differential Expression Analysis - St. Jude Cloud Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.7d2ef1ff.css">
+      
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.eca31fed.js"></script>
+    
+    
+      
+    
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#overview" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../.." title="St. Jude Cloud Documentation" aria-label="St. Jude Cloud Documentation" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="../../../../images/stjude-logo-child-white.png" width="40" height="28">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              St. Jude Cloud Documentation
+            </span>
+            <span class="md-header-nav__topic">
+              
+                WARDEN Differential Expression Analysis
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/stjudecloud/docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    stjudecloud/docs
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../.." class="md-tabs__link">
+        Overview
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../covid-19/" class="md-tabs__link">
+          COVID-19 Quickstart
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../" class="md-tabs__link md-tabs__link--active">
+          Genomics Platform
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../pecan/index.md" class="md-tabs__link">
+          PeCan
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../visualization-community/" class="md-tabs__link">
+          Visualization Community
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../studies/studies-about/" class="md-tabs__link">
+          Studies
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../.." title="St. Jude Cloud Documentation" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="../../../../images/stjude-logo-child-white.png" width="48" height="48">
+      
+    </a>
+    St. Jude Cloud Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/stjudecloud/docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    stjudecloud/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ecosystem/" title="About our Ecosystem" class="md-nav__link">
+      About our Ecosystem
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      COVID-19 Quickstart
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        COVID-19 Quickstart
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/getting-started/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/upload-local/" title="Data upload (local)" class="md-nav__link">
+      Data upload (local)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/upload-cluster/" title="Data upload (HPC)" class="md-nav__link">
+      Data upload (HPC)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/creating-a-cloud-app-covid/" title="Creating a cloud app" class="md-nav__link">
+      Creating a cloud app
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/interactive-node/" title="Interactive nodes" class="md-nav__link">
+      Interactive nodes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/visualizing-ngs-data/" title="Visualizing NGS data" class="md-nav__link">
+      Visualizing NGS data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Genomics Platform
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Genomics Platform
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../accounts-and-billing/" title="Accounts and Billing" class="md-nav__link">
+      Accounts and Billing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Requesting Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        Requesting Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../requesting-data/about-our-data/" title="About our Data" class="md-nav__link">
+      About our Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../requesting-data/data-request/" title="Making a Data Request" class="md-nav__link">
+      Making a Data Request
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../requesting-data/how-to-fill-out-DAA/" title="Filling Out a Data Access Agreement" class="md-nav__link">
+      Filling Out a Data Access Agreement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../requesting-data/glossary/" title="About our Decision Process & Terminology" class="md-nav__link">
+      About our Decision Process & Terminology
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Managing Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        Managing Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../managing-data/working-with-our-data/" title="Managing Data Overview" class="md-nav__link">
+      Managing Data Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../managing-data/data-transfer-app/" title="Uploading/Downloading Data" class="md-nav__link">
+      Uploading/Downloading Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../managing-data/how-to-fill-out-Extension/" title="Renewing your Data Access" class="md-nav__link">
+      Renewing your Data Access
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5" checked>
+    
+    <label class="md-nav__link" for="nav-4-5">
+      Analyzing Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
+        Analyzing Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../command-line/" title="Command Line Interaction" class="md-nav__link">
+      Command Line Interaction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../running-sj-workflows/" title="Running our Workflows" class="md-nav__link">
+      Running our Workflows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5-3" type="checkbox" id="nav-4-5-3" checked>
+    
+    <label class="md-nav__link" for="nav-4-5-3">
+      SJ Cloud Workflows
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-5-3">
+        SJ Cloud Workflows
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../neoepitope/" title="NeoepitopePred" class="md-nav__link">
+      NeoepitopePred
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../chipseq/" title="ChIP-Seq Peak Calling" class="md-nav__link">
+      ChIP-Seq Peak Calling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rapid-rnaseq/" title="Rapid RNA-Seq Fusion Detection" class="md-nav__link">
+      Rapid RNA-Seq Fusion Detection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        WARDEN Differential Expression Analysis
+      </label>
+    
+    <a href="./" title="WARDEN Differential Expression Analysis" class="md-nav__link md-nav__link--active">
+      WARDEN Differential Expression Analysis
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    Inputs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input-file-configuration" class="md-nav__link">
+    Input file configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepare-using-microsoft-excel" class="md-nav__link">
+    Prepare using Microsoft Excel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-using-a-text-editor" class="md-nav__link">
+    Prepare using a text editor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    Outputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-steps" class="md-nav__link">
+    Workflow Steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-workspace" class="md-nav__link">
+    Creating a workspace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uploading-input-files" class="md-nav__link">
+    Uploading Input Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-workflow" class="md-nav__link">
+    Running the Workflow
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hooking-up-inputs" class="md-nav__link">
+    Hooking up Inputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecting-parameters" class="md-nav__link">
+    Selecting Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-the-workflow" class="md-nav__link">
+    Starting the workflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-workflow-process" class="md-nav__link">
+    Custom Workflow Process
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-of-results" class="md-nav__link">
+    Analysis of Results
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interpreting-primary-results" class="md-nav__link">
+    Interpreting Primary Results
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alignment-statistics" class="md-nav__link">
+    Alignment statistics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multidimensional-scaling-mds-plot" class="md-nav__link">
+    Multidimensional scaling (MDS) Plot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteinpaint-visualizations" class="md-nav__link">
+    ProteinPaint Visualizations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpreting-secondary-results" class="md-nav__link">
+    Interpreting Secondary Results
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interactive-mavolcano-plots" class="md-nav__link">
+    Interactive MA/Volcano Plots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differential-expression-results" class="md-nav__link">
+    Differential expression results
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gseainputtxt-and-gseatstattxt" class="md-nav__link">
+    GSEA.input.txt and GSEA.tStat.txt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differential-analysis-input" class="md-nav__link">
+    Differential analysis input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coverage-results" class="md-nav__link">
+    Coverage results
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-control-results-fastqc" class="md-nav__link">
+    Quality Control Results (FastQC)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bam-alignment-files" class="md-nav__link">
+    BAM alignment files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chimeric-reads-and-junction-files" class="md-nav__link">
+    Chimeric reads and junction files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fpkm-and-count-files-per-sample" class="md-nav__link">
+    FPKM and count files (per sample)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods-files" class="md-nav__link">
+    Methods Files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auxiliary-files" class="md-nav__link">
+    Auxiliary Files
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#align" class="md-nav__link">
+    ALIGN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bigwig" class="md-nav__link">
+    BIGWIG
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bigwig_viewer" class="md-nav__link">
+    BIGWIG_VIEWER
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combined_flagstat" class="md-nav__link">
+    COMBINED_FLAGSTAT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combined_htseq" class="md-nav__link">
+    COMBINED_HTSEQ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coverage" class="md-nav__link">
+    COVERAGE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fastqc" class="md-nav__link">
+    FastQC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#htseq" class="md-nav__link">
+    HTSEQ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limma" class="md-nav__link">
+    LIMMA
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    Frequently Asked Questions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#similar-topics" class="md-nav__link">
+    Similar Topics
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mutational-signatures/" title="Mutational Signatures" class="md-nav__link">
+      Mutational Signatures
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../creating-a-cloud-app/" title="Creating your own Workflow" class="md-nav__link">
+      Creating your own Workflow
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      PeCan
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        PeCan
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pecan/index.md" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pecan/pecan-pie.md" title="Pecan PIE" class="md-nav__link">
+      Pecan PIE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Visualization Community
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Visualization Community
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../visualization-community/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../visualization-community/proteinpaint/" title="ProteinPaint" class="md-nav__link">
+      ProteinPaint
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../visualization-community/genomepaint/" title="Genome Paint" class="md-nav__link">
+      Genome Paint
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Studies
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Studies
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../studies/studies-about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../studies/sickle-cell/" title="Sickle Cell" class="md-nav__link">
+      Sickle Cell
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../faq/" title="Frequently Asked Questions" class="md-nav__link">
+      Frequently Asked Questions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../citing-stjude-cloud/" title="Citing St. Jude Cloud" class="md-nav__link">
+      Citing St. Jude Cloud
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    Inputs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input-file-configuration" class="md-nav__link">
+    Input file configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepare-using-microsoft-excel" class="md-nav__link">
+    Prepare using Microsoft Excel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-using-a-text-editor" class="md-nav__link">
+    Prepare using a text editor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    Outputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-steps" class="md-nav__link">
+    Workflow Steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-workspace" class="md-nav__link">
+    Creating a workspace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uploading-input-files" class="md-nav__link">
+    Uploading Input Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-workflow" class="md-nav__link">
+    Running the Workflow
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hooking-up-inputs" class="md-nav__link">
+    Hooking up Inputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecting-parameters" class="md-nav__link">
+    Selecting Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-the-workflow" class="md-nav__link">
+    Starting the workflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-workflow-process" class="md-nav__link">
+    Custom Workflow Process
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-of-results" class="md-nav__link">
+    Analysis of Results
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interpreting-primary-results" class="md-nav__link">
+    Interpreting Primary Results
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alignment-statistics" class="md-nav__link">
+    Alignment statistics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multidimensional-scaling-mds-plot" class="md-nav__link">
+    Multidimensional scaling (MDS) Plot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteinpaint-visualizations" class="md-nav__link">
+    ProteinPaint Visualizations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpreting-secondary-results" class="md-nav__link">
+    Interpreting Secondary Results
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interactive-mavolcano-plots" class="md-nav__link">
+    Interactive MA/Volcano Plots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differential-expression-results" class="md-nav__link">
+    Differential expression results
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gseainputtxt-and-gseatstattxt" class="md-nav__link">
+    GSEA.input.txt and GSEA.tStat.txt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differential-analysis-input" class="md-nav__link">
+    Differential analysis input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coverage-results" class="md-nav__link">
+    Coverage results
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-control-results-fastqc" class="md-nav__link">
+    Quality Control Results (FastQC)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bam-alignment-files" class="md-nav__link">
+    BAM alignment files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chimeric-reads-and-junction-files" class="md-nav__link">
+    Chimeric reads and junction files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fpkm-and-count-files-per-sample" class="md-nav__link">
+    FPKM and count files (per sample)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods-files" class="md-nav__link">
+    Methods Files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auxiliary-files" class="md-nav__link">
+    Auxiliary Files
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#align" class="md-nav__link">
+    ALIGN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bigwig" class="md-nav__link">
+    BIGWIG
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bigwig_viewer" class="md-nav__link">
+    BIGWIG_VIEWER
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combined_flagstat" class="md-nav__link">
+    COMBINED_FLAGSTAT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combined_htseq" class="md-nav__link">
+    COMBINED_HTSEQ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coverage" class="md-nav__link">
+    COVERAGE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fastqc" class="md-nav__link">
+    FastQC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#htseq" class="md-nav__link">
+    HTSEQ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limma" class="md-nav__link">
+    LIMMA
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    Frequently Asked Questions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#similar-topics" class="md-nav__link">
+    Similar Topics
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/stjudecloud/docs/edit/master/docs/guides/genomics-platform/analyzing-data/warden.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>WARDEN Differential Expression Analysis</h1>
+                
+                <table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Authors</strong></td>
+<td>Lance Palmer</td>
+</tr>
+<tr>
+<td><strong>Publication</strong></td>
+<td>N/A (not published)</td>
+</tr>
+<tr>
+<td><strong>Technical Support</strong></td>
+<td><a href="https://stjude.cloud/contact">Contact Us</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The WARDEN (<strong>W**orkflow for the **A**nalysis of **R**NA-Seq **D**ifferential **E**xpressio**N</strong>)
+software uses RNA-Seq sequence files to perform alignment, coverage
+analysis, gene counts and differential expression analysis.</p>
+<h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
+<p>The WARDEN workflow requires two types of input files and that two parameters be set manually. All other parameters are preset with reasonable defaults.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FastQ files (<em>required</em>)</td>
+<td>Input file(s)</td>
+<td>Gzipped FastQ files generated by experiment</td>
+<td>Sample1.fastq.gz, Sample2.fastq.gz</td>
+</tr>
+<tr>
+<td>Sample sheet (<em>required</em>)</td>
+<td>Input file</td>
+<td>Sample sheet generated and uploaded by the user</td>
+<td>*.txt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="input-file-configuration">Input file configuration<a class="headerlink" href="#input-file-configuration" title="Permanent link">&para;</a></h3>
+<p>You'll need to create a sample sheet which describes the relationship between case and control samples, phenotype/condition information, and the comparisons you would like to perform. The sample sheet is a tab-delimited text document that can be created in Microsoft Excel (recommended) or a text editor.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will need to upload your sample sheet in a similar manner as your
+FastQ files, so you can follow the <a href="../running-sj-workflows/#uploading-files">same uploading instructions</a>
+to achieve this.</p>
+</div>
+<h4 id="prepare-using-microsoft-excel">Prepare using Microsoft Excel<a class="headerlink" href="#prepare-using-microsoft-excel" title="Permanent link">&para;</a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Download the <a href="../../../../files/guides/tools/warden/samplesheet.xlsx"><i class="material-icons material-icons-sjcloud-custom">file_download</i> sample excel spreadsheet</a> as a starting
+point!</p>
+</div>
+<p>The final product for the excel spreadsheet will look like the screenshot below. If you create the sample sheet from scratch, please ensure the the columns are <strong>exactly</strong> in this order.</p>
+<blockquote>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/excel-example.png" /></p>
+</blockquote>
+<p><strong>Sample rows</strong></p>
+<p>Each row in the spreadsheet (except for the last row, which we will talk 
+about in the next section) corresponds to a sample with one or more FastQ files. You should fill in these rows based on your data and the guidelines below:</p>
+<div class="admonition example">
+<p class="admonition-title">Guidelines</p>
+<ul>
+<li>The sample name should be unique and should only contain letters,
+numbers and underscores.</li>
+<li>The condition/phenotype column associates similar samples together.
+The values should contain only letters, numbers and underscores.</li>
+<li>ReadFile1 should contain forward reads (e.g. <code>*.R1.fastq.gz</code> or <code>*_1.fastq.gz</code>).</li>
+<li>ReadFile2 will contain reads in reverse orientation to ReadFile2
+(e.g. <code>*.R2.fastq.gz</code> or <code>*_2.fastq.gz</code>).</li>
+<li>For single end reads a single dash ('-') should be entered in the ReadFile2 column.</li>
+</ul>
+</div>
+<p><strong>Comparison row</strong></p>
+<p>The last line in the sample sheet is called the "comparison row". This
+line specifies the comparisons to be done between conditions/phenotypes.
+All pairwise combinations of the values in the "Phenotype" column can be 
+analyzed. To specify the comparisons, on a separate line, include <code>#comparisons=</code> followed be a comma delimited list of two conditions separated by a dash. </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>The following lines are all valid examples.</p>
+<ol>
+<li><code>#comparisons=KO-WT</code></li>
+<li><code>#comparisons=Condition1-Control,Condition2-Control</code></li>
+<li><code>#comparisons=Phenotype2-Phenotype1,Phenotype3-Phenotype2,Phenotype3-Phenotype1</code></li>
+</ol>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a comparison has at least 3 samples for each condition/phenotype,
+VOOM/LIMMA will be run. A simple differential comparison will be run on
+all samples.</p>
+</div>
+<p><strong>Finalizing the sample sheet</strong></p>
+<p>To finalize the sample sheet, save the Microsoft Excel file with
+whatever name you like. Save the file as an Excel Workbook with the
+.xlsx extension.</p>
+<h4 id="prepare-using-a-text-editor">Prepare using a text editor<a class="headerlink" href="#prepare-using-a-text-editor" title="Permanent link">&para;</a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Download the <a href="../../../../files/guides/tools/warden/samplesheet.txt"><i class="material-icons material-icons-sjcloud-custom">file_download</i> sample text file</a> as a starting
+point!</p>
+</div>
+<p>Creating a sample sheet with a text editor is an option for advanced users. The process of creating a sample sheet with a text editor is the same as creating one with Microsoft Excel, with the small difference that you must manually create your columns using the tab character. Save the file
+with a .txt extension.</p>
+<h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FastQC Report</td>
+<td>Quality control analysis by FastQC.</td>
+</tr>
+<tr>
+<td>Aligned BAM</td>
+<td>Aligned BAM files from STAR mapping.</td>
+</tr>
+<tr>
+<td>Splice junctions</td>
+<td>Splice junction information from STAR mapping.</td>
+</tr>
+<tr>
+<td>Coverage files</td>
+<td>bigWig (<code>.bw</code>) and BED (<code>.bed</code>) files detailing coverage.</td>
+</tr>
+<tr>
+<td>Gene counts</td>
+<td>Gene counts generated by HT-Seq count.</td>
+</tr>
+<tr>
+<td>VOOM/LIMMA results</td>
+<td>Pairwise comparisons of expression data. Requires at least 3 samples vs 3 samples.</td>
+</tr>
+<tr>
+<td>Simple DE analysis</td>
+<td>No statistical analysis, requires only a 1 samples vs 1 sample comparison.</td>
+</tr>
+<tr>
+<td>MA/Volcano plots</td>
+<td>Both of the above produce tabular outputs, MA plots and volcano plots.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="workflow-steps">Workflow Steps<a class="headerlink" href="#workflow-steps" title="Permanent link">&para;</a></h2>
+<ol>
+<li>FastQ files generated by RNA-Seq are mapped to a reference genome using the STAR.</li>
+<li>HT-Seq count is used to assign mapped reads to genes. </li>
+<li>Differential expression analysis is performed using VOOM normalization of counts and
+LIMMA analysis. </li>
+<li>Coverage plots of mapped reads are generated as interactive visualizations.</li>
+</ol>
+<h2 id="creating-a-workspace">Creating a workspace<a class="headerlink" href="#creating-a-workspace" title="Permanent link">&para;</a></h2>
+<p>Before you can run one of our workflows, you must first create a workspace in DNAnexus for the run. Refer to <a href="../running-sj-workflows/#getting-started">the general workflow guide</a> to learn how to create a DNAnexus workspace for each workflow run.</p>
+<p>You can navigate to the WARDEN Differential Expression Analysis workflow page <a href="https://platform.stjude.cloud/workflows/warden">here</a>.</p>
+<h2 id="uploading-input-files">Uploading Input Files<a class="headerlink" href="#uploading-input-files" title="Permanent link">&para;</a></h2>
+<p>The WARDEN Differential Expression analysis pipeline takes Gzipped FastQ files generated by an RNA-Seq experiment as <a href="#inputs">input</a>. </p>
+<p>Refer to <a href="../running-sj-workflows/#uploading-files">the general workflow guide</a> to learn how to upload input files to the workspace you just created.</p>
+<h2 id="running-the-workflow">Running the Workflow<a class="headerlink" href="#running-the-workflow" title="Permanent link">&para;</a></h2>
+<p>Refer to <a href="../running-sj-workflows/#running-the-workflow">the general workflow guide</a> to learn how to launch the workflow, hook up input files, adjust parameters, start a run, and monitor run progress.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The WARDEN tool operation is slightly different than the other pipelines
+because it accepts a variable number of samples. <strong>First</strong>, you will run
+a "bootstrapping" step that creates a custom executable for your
+analysis. <strong>Second</strong>, you will need to manually execute the generated
+workflow from the first step. This allows us to take advantage of many
+nice features, like check-pointing and cost reduction. Don't worry, 
+we'll show you how to do this step by step below.</p>
+</div>
+<h3 id="hooking-up-inputs">Hooking up Inputs<a class="headerlink" href="#hooking-up-inputs" title="Permanent link">&para;</a></h3>
+<p>You'll need to hook up the FastQ files and sample sheet you uploaded in <a href="#uploading-input-files">the upload data section</a>. 
+Click the <code>FASTQ_FILES</code> input field and select <strong>all</strong> FastQ files. Next, click the <code>sampleList</code> input field and select the corresponding samplesheet.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/inputs-warden-2.gif" /></p>
+<h3 id="selecting-parameters">Selecting Parameters<a class="headerlink" href="#selecting-parameters" title="Permanent link">&para;</a></h3>
+<p>We now need to configure the parameters for the pipeline, such as reference genome and sequencing method. You can access all of the available parameters 
+by clicking on the <code>WARDEN WORKFLOW GENERATOR</code> substep. For the general workflow instructions refer <a href="../running-sj-workflows/#selecting-parameters">here</a></p>
+<div class="admonition example">
+<p class="admonition-title">Parameter setup steps</p>
+<ol>
+<li>In the <code>Output Folder</code> field, select a folder to output to. You can
+structure your experiments however you like (e.g. <code>/My_Outputs</code>)</li>
+<li>In the <code>analysisName</code> field, enter a prefix for all of the output files. This
+can be any value you want to use to remember this run. <strong>Be sure to use underscores
+instead of spaces here!</strong></li>
+<li>Select the <code>sequenceStandedness</code> from the drop down menu. 
+This information can be determined from the sequencing or source 
+of the data. If you don't know what to put here, select "no".</li>
+<li>Select the <code>Genome</code> pulldown menu. Choose the appropriate box.</li>
+<li>The LIMMA parameters can be left alone for most analyses. If you are
+an advanced LIMMA user, you can change the various settings exposed
+below the required parameters.</li>
+<li>When all parameters have been set, press the save button.</li>
+</ol>
+</div>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/parameters-warden-3.gif" /></p>
+<h3 id="starting-the-workflow">Starting the workflow<a class="headerlink" href="#starting-the-workflow" title="Permanent link">&para;</a></h3>
+<p>Once your input files are hooked up and your parameters are set, you should be able to start the workflow by clicking the "Run as Analysis..." button in the top right hand corner of the workflow dialog. For the general workflow instructions refer <a href="../running-sj-workflows/#starting-the-workflow">here</a>.</p>
+<p>The tool will begin running and will automatically take you to the Monitor page, where you should see that your workflow is "In Progress".</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/in-progress-warden.gif" /></p>
+<p>When the custom workflow has finished generating, the word 'Done' will appear in green in the status column. This indicates that the bootstrapping step has completed successfully. </p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/warden-running-1.png" /></p>
+<h2 id="custom-workflow-process">Custom Workflow Process<a class="headerlink" href="#custom-workflow-process" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Wait for the workflow generator to finish.</li>
+<li>
+<p>Click on the WARDEN name in the name column.</p>
+</li>
+<li>
+<p>You will now be on a page specific to the running of the workflow.
+    On the left side, you will see the inputs you selected for the
+    workflow generator. On the right side are the output files
+    (including the generated workflow). Select the generated workflow as
+    shown in the picture below.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/Workflow_generator_output.png" /></p>
+</li>
+<li>
+<p>You will now be within the output folder you specified earlier.
+    Select the file that begins with 'WARDEN WORKFLOW:'</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/Select_WARDEN_WORKFLOW.png" /></p>
+</li>
+<li>
+<p>A workflow generated for your data will be presented to you. Select
+    'Run as analysis' in the upper right.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/run_as_analysis_2.png" /></p>
+</li>
+<li>
+<p>The workflow will initiate, and you will be brought to the 'Monitor'
+    page. (Note to get back to this page, you can select 'Monitor' on
+    one of the menu bars near the top ) Expand the the workflow progress
+    be selecting the '+' sign next to 'In Progress'</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/workflowrunning.png" /></p>
+</li>
+<li>
+<p>As parts of the pipeline are run, you will see different tasks in
+    different colors. Green means done, blue is running, orange is
+    waiting, and red means error.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/Workflow_running_status.png" /></p>
+</li>
+<li>
+<p>When done the status will be shown as 'Done'. Select the Workflow
+    name under Status.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/Workflow_done.png" /></p>
+</li>
+<li>
+<p>You will be brought to a page that show more information about the
+    workflow analysis. Click on the output folder to go to the output.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/Workflow_done2.png" /></p>
+</li>
+<li>
+<p>The output folders will now be shown.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/Workflow_output.png" /></p>
+</li>
+</ol>
+<p>For a description of the output, please refer to <a href="#analysis-of-results">Interpreting Results</a>.</p>
+<h2 id="analysis-of-results">Analysis of Results<a class="headerlink" href="#analysis-of-results" title="Permanent link">&para;</a></h2>
+<p>Each tool in St. Jude Cloud produces a visualization that makes understanding results more accessible than working with excel spreadsheet or tab delimited files. This is the primary way we recommend you work with your results. </p>
+<p>Refer to <a href="../running-sj-workflows/#custom-visualizations">the general workflow guide</a> to learn how to access these visualizations.</p>
+<p>We also include the raw output files for you to dig into if the visualization is not sufficient to answer your research question.</p>
+<p>Refer to <a href="../running-sj-workflows/#raw-results-files">the general workflow guide</a> to learn how to access raw results files.</p>
+<h3 id="interpreting-primary-results">Interpreting Primary Results<a class="headerlink" href="#interpreting-primary-results" title="Permanent link">&para;</a></h3>
+<h4 id="alignment-statistics">Alignment statistics<a class="headerlink" href="#alignment-statistics" title="Permanent link">&para;</a></h4>
+<p>Several files should be examined initially to determine the quality of
+the results. <strong>alignmentStatistics.txt</strong> shows alignment statistics for
+all samples. This file is a plain text tab-delimited file that can be
+opened in Excel or a text editor such as Notepad++. This file contains
+information on the total reads per sample, the percentage of duplicate
+reads and the percentage of mapped reads. An example of this file is
+below. (Within the DNAnexus output directory structure, these files will
+be in the COMBINED_FLAGSTAT directory.)</p>
+<blockquote>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/alignmentStatistics.png" /></p>
+</blockquote>
+<h4 id="multidimensional-scaling-mds-plot">Multidimensional scaling (MDS) Plot<a class="headerlink" href="#multidimensional-scaling-mds-plot" title="Permanent link">&para;</a></h4>
+<p>The second set of files to look at are the <a href="https://en.wikipedia.org/wiki/Multidimensional_scaling">Multidimensional scaling
+(MDS) plots</a>
+using the plotMDS function within LIMMA. Similar to PCA, these graphs
+will show how similar samples are to each other. There are different
+sets of MDS plots. For comparisons where there are 3 or more samples per
+condition, an MDS plot using Voom (Limma) normalized values are
+generated. An example can be seen below. These files will be labeled
+<strong>mdsPlot.png</strong>. For all comparisons, regardless of sample size, and MDS
+plot will also be generated with Counts per million (CPM) normalized
+gene counts. These files will be labeled <strong>mdsPlot.normCPM.png</strong>.
+(Within the DNAnexus output directory structure, these files will be in
+the LIMMA directory.)</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/mdsPlot.png" /></p>
+<p>MDS plot from just CPM normalized data.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/mdsPlot.normCPM.png" /></p>
+<h3 id="proteinpaint-visualizations">ProteinPaint Visualizations<a class="headerlink" href="#proteinpaint-visualizations" title="Permanent link">&para;</a></h3>
+<p>Several files on DNAnexus allow the data to be viewed in the Protein
+Paint viewer. (Note: We plan to have links downloaded in the future to
+allow the viewing of these files off of DNAnexus.)</p>
+<p><strong>LIMMA differential expression viewer</strong></p>
+<p>Within LIMMA/VIEWERS directory (note if no comparisons meet the 3 sample
+condition, the LIMMA folder will not exist), there will be a viewer file
+for each valid comparison ( *<em>results.</em>.txt.viewer**). Simply select
+the file and press 'Launch viewer' in the lower right. A viewer will pop
+up showing both the MA Plot and Volcano plot. By moving the mouse over a
+circle, the circle will highlight and the corresponding gene on the other
+graph will also highlight. Additional information about the gene and its
+expression values will also be shown. One can also type in multiple gene
+symbols in the provided text box. By pressing 'Show gene labels' all
+these genes will show up on the plots.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/ma_volcano.png" /></p>
+<p><strong>Simple differential expression viewer</strong></p>
+<p>There will also be a viewer for the simple differential expression
+analysis in SIMPLE_DIFEX/VIEWERS. The P-value for the results have all
+been set to 1, so the volcano plot will not be relevant.</p>
+<p><strong>bigWig viewer</strong></p>
+<p>In the BIGWIG_VIEWER directory there will be a bigwigViewer file.
+Select this file and then 'Launch viewer'. A graph of coverage for the
+genome should be visible.</p>
+<h3 id="interpreting-secondary-results">Interpreting Secondary Results<a class="headerlink" href="#interpreting-secondary-results" title="Permanent link">&para;</a></h3>
+<hr />
+<h4 id="interactive-mavolcano-plots">Interactive MA/Volcano Plots<a class="headerlink" href="#interactive-mavolcano-plots" title="Permanent link">&para;</a></h4>
+<p>In addition to viewing the MA and volcano plots through the visualization tool</p>
+<hr />
+<h4 id="differential-expression-results">Differential expression results<a class="headerlink" href="#differential-expression-results" title="Permanent link">&para;</a></h4>
+<p>Other useful differential expression results will be downloaded by the desktop app. This included tabular output from the differential expression analysis. For each comparison with three or more samples per condition, <code>results.*.txt</code> will be produced.</p>
+<hr />
+<h4 id="gseainputtxt-and-gseatstattxt">GSEA.input.txt and GSEA.tStat.txt<a class="headerlink" href="#gseainputtxt-and-gseatstattxt" title="Permanent link">&para;</a></h4>
+<p>Input files that can be used for GSEA analysis. The tStat file is preferred for a more accurate analysis, but will not give a heatmap diagram.
+- (Within the DNAnexus output directory structure, these files will be in the LIMMA directory.)</p>
+<ul>
+<li>
+<p>For plain text results from the simple differential expression analysis, the files will be named <code>simpleDE.*.txt</code>. (Within the DNAnexus output directory structure, these files will be in the SIMPLE_DIFEX directory.)</p>
+</li>
+<li>
+<p>Prelabelled MA and volcano plots are provided for the analysis. These files are labeled <code>maPlot.*.png</code> and <code>volcanoPlot.*.png</code> where <code>*</code> is the comparison (e.g. ko_vs_wt)</p>
+</li>
+<li>
+<p>The MA plot shows the average expression of the gene on the X-axis, and Log2 fold change between condition/phenotype is on the Y-axis (if the name is for example maPlot.condition2-condition1.png then the fold change would represent condition1 minus condition2). Each gene is represented by a circle. The top 20 genes (by p-value) are identified on the plot. The genes are color coded by the chosen multiple testing correction method (False Discovery Rate (FDR) by default. An example MA plot can be seen below. (Within the DNAnexus output directory structure, these files will be in the LIMMA directory.)</p>
+</li>
+</ul>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/maPlot.png" /></p>
+<p>The volcano plot shows the Log2Fold change between the conditions on the
+X-axis, and the -Log10 of the multiple testing corrected P-value on the
+Y-axis.</p>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/volcanoPlot.png" /></p>
+<p>An MA plot is generated for all comparisons regardless of number of
+samples. This is the <code>simpleDEPlot.*.png</code> no statistics are shown
+and genes are not labeled. (Within the DNAnexus output directory structure, these files will be in the SIMPLE_DIFEX directory.)</p>
+<hr />
+<h4 id="differential-analysis-input">Differential analysis input<a class="headerlink" href="#differential-analysis-input" title="Permanent link">&para;</a></h4>
+<p>Inputs and commands are provided for rerunning differential expression
+analysis on ones own computer. The R commands used for the analysis are
+found in <strong>voomLimma.R</strong>. An experienced R user can rerun the analysis
+with any desired changes. This analysis requires the input
+<strong>countFile.txt</strong> which contains counts per genes, the
+<strong>Rparameters.txt</strong> file containing input parameters, and a processed
+sample list file <strong>sampleList.txt</strong></p>
+<p>(Within the DNAnexus output directory structure, these files will be in
+the LIMMA directory.)</p>
+<p>The input for the simple differential analysis expression will be
+<strong>Rparameters_simple.txt</strong>, <strong>simpleDE.R</strong>, <strong>countFile.txt</strong> and
+<strong>sampleList.txt</strong>. <strong>countFile.txt</strong> and <strong>sampleList.txt</strong> are the
+same files used by the LIMMA analysis.</p>
+<p>(Within the DNAnexus output directory structure, these files will be in
+the SIMPLE_DIFEX directory.)</p>
+<hr />
+<h4 id="coverage-results">Coverage results<a class="headerlink" href="#coverage-results" title="Permanent link">&para;</a></h4>
+<p>bigWig files will be generated for use in genome browsers (such as IGV
+<a href="http://software.broadinstitute.org/software/igv/">http://software.broadinstitute.org/software/igv/</a>). For each sample,
+multiple bigWig files will be found. For all types of sequencing
+strandedness, there will be bigWig files labeled,
+<strong>*.sortedCoverageFile.bed.bw</strong> where '<em>' is the sample name. For
+stranded data there will also be*.sortedPosCoverageFile.bed.bw</em>* and
+<strong>*.sortedNegCoverageFile.bed.bw</strong> which contains coverage information
+for the positive and negative strand of the genome.</p>
+<p>(Within the DNAnexus output directory structure, these files will be in
+the BIGWIG directory.)</p>
+<hr />
+<h4 id="quality-control-results-fastqc">Quality Control Results (FastQC)<a class="headerlink" href="#quality-control-results-fastqc" title="Permanent link">&para;</a></h4>
+<p>Within the FastQC directory, for each sample and read direction there
+will be an html file and a zip file (<strong>*.FastQc.html</strong>
+<strong>*.FastQc.zip</strong> where '*' is the base FastQ name), containing results
+from FastQTC. For the average user the html file is sufficient. This
+file can give some basic statistics on the quality of the data.</p>
+<p>(Within the DNAnexus output directory structure, these files will be in
+the FastQC directory.)</p>
+<hr />
+<h4 id="bam-alignment-files">BAM alignment files<a class="headerlink" href="#bam-alignment-files" title="Permanent link">&para;</a></h4>
+<p>There are two BAM files generated per sample that contain mapping
+information for all reads. The first is labeled
+<strong>*.Aligned.sortedByCoord.dup.bam</strong> where '<em>' is the sample name. The
+BAM file is sorted by coordinates and has duplicates marked. The second
+file is*.Aligned.toTranscriptome.out.bam</em>* and contains reads mapped
+to transcripts.</p>
+<p>(Within the DNAnexus output directory structure, these files will be in
+the ALIGN directory.)</p>
+<hr />
+<h4 id="chimeric-reads-and-junction-files">Chimeric reads and junction files<a class="headerlink" href="#chimeric-reads-and-junction-files" title="Permanent link">&para;</a></h4>
+<p>Additional files created by STAR are provided. More information on these
+files can be found <a href="http://labshare.cshl.edu/shares/gingeraslab/www-data/dobin/STAR/STAR.posix/doc/STARmanual.pdf">here</a>.
+<strong>*.SJ.out.tab</strong> contain splice junction information. Fusion detection
+files are labeled <strong>*.Chimeric.out.bam</strong> and
+<strong>*.Chimeric.out.junction</strong>.</p>
+<p>(Within the DNAnexus output directory structure, these files will be in
+the ALIGN directory.)</p>
+<hr />
+<h4 id="fpkm-and-count-files-per-sample">FPKM and count files (per sample)<a class="headerlink" href="#fpkm-and-count-files-per-sample" title="Permanent link">&para;</a></h4>
+<p>Per sample files containing FPKM and raw count values for each gene can
+be found in <strong>*.fpkm.txt</strong> and <strong>*.htseq_counts.txt</strong> where '*' is
+the sample name. Within the DNAnexus output directory structure, these files will be in
+the HTSEQ directory.</p>
+<hr />
+<h3 id="methods-files">Methods Files<a class="headerlink" href="#methods-files" title="Permanent link">&para;</a></h3>
+<p>A more human readable explanation is found in <strong>methods.docx</strong>. Detailed
+documentation can be found in <strong>methods.txt</strong></p>
+<p>(Within the DNAnexus output directory structure, these files will be in
+the METHODS directory.)</p>
+<h3 id="auxiliary-files">Auxiliary Files<a class="headerlink" href="#auxiliary-files" title="Permanent link">&para;</a></h3>
+<p>This section describes the files that exist within the DNAnexus output
+folder. Most of these files will not be of interest to the average user.
+However, interactive viewers are describe in <a href="#limma-differential-expression-viewer">LIMMA differential
+expression viewer</a> and <a href="#simple-differential-expression-viewer">Simple
+differential expression viewer</a>.</p>
+<p>The output will be divided into multiple folders. The results being the
+most useful will be the differential expression analysis results in the
+LIMMA and SIMPLE_DIFEX folders. Bigwig files for viewing read coverage
+will be in the BIGWIG folder. Other folder contain different types of
+data and are explained in further detail below.</p>
+<blockquote>
+<p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/Workflow_output.png" /></p>
+</blockquote>
+<p>The following description of files is sorted by their output directory.</p>
+<hr />
+<h4 id="align">ALIGN<a class="headerlink" href="#align" title="Permanent link">&para;</a></h4>
+<p>This directory contains the BAM files described in <a href="#bam-alignment-files">BAM alignment
+files</a> and the chimeric and junction files are
+described in <a href="#chimeric-reads-and-junction-files">Chimeric reads and junction
+files</a>. In addition there are 2 log
+files. <strong>*Log.final.out</strong> has relevant statistics for the alignment.
+The <strong>*.Log.out</strong> file just contains a log of the analysis run,
+including input parameters. Per sample FLAGSTAT results are found in
+<strong>*.flagStatOut.txt</strong>. Finally the ALIGN directory has
+multiple <em>.starAlign.methods.txt files. These files can be ignored as
+they are summarized in the finalmethods.docx</em>* and <strong>methods.txt</strong>
+files described in <a href="#methods-files">Methods Files</a>.</p>
+<hr />
+<h4 id="bigwig">BIGWIG<a class="headerlink" href="#bigwig" title="Permanent link">&para;</a></h4>
+<p>All of the files here are described in section <a href="#coverage-results">Coverage
+results</a>. The <strong>bgToBw.methods.txt</strong> files can be
+ignored as they are summarized in the files described in <a href="#methods-files">Methods
+Files</a>.</p>
+<hr />
+<h4 id="bigwig_viewer">BIGWIG_VIEWER<a class="headerlink" href="#bigwig_viewer" title="Permanent link">&para;</a></h4>
+<p>See <a href="#bigwig-viewer">bigWig viewer</a></p>
+<hr />
+<h4 id="combined_flagstat">COMBINED_FLAGSTAT<a class="headerlink" href="#combined_flagstat" title="Permanent link">&para;</a></h4>
+<p>This directory contains the <strong>alignmentStatistics.txt</strong> file, which contains the combined alignment statistics from all samples.  It is generated from the flagstat files describe in the ALIGN directory.</p>
+<hr />
+<h4 id="combined_htseq">COMBINED_HTSEQ<a class="headerlink" href="#combined_htseq" title="Permanent link">&para;</a></h4>
+<p>Used for input in differential expression analysis. The
+combineCountFile.txt is the same as countFile.txt described in
+<a href="#differential-analysis-input">Differential analysis input</a></p>
+<hr />
+<h4 id="coverage">COVERAGE<a class="headerlink" href="#coverage" title="Permanent link">&para;</a></h4>
+<p>BED graph files used to generate bigWig files are here.</p>
+<hr />
+<h4 id="fastqc">FastQC<a class="headerlink" href="#fastqc" title="Permanent link">&para;</a></h4>
+<p>See <a href="#quality-control-results-FastQc">Quality Control Results (FastQC)</a></p>
+<hr />
+<h4 id="htseq">HTSEQ<a class="headerlink" href="#htseq" title="Permanent link">&para;</a></h4>
+<p>Per-sample HTSEQ-count results (<strong>*.htseq_counts.txt</strong>) and FPKM
+results (<strong>*.fpkm.txt</strong>). Temporary methods files are found as
+*.htseq-count.methods.txt</p>
+<hr />
+<h4 id="limma">LIMMA<a class="headerlink" href="#limma" title="Permanent link">&para;</a></h4>
+<p><strong>mdsPlot.png</strong>, <strong>maPlot.png</strong>,<strong>volcanoPlot.png</strong> are described in
+<a href="#initial-analysis-of-results">Initial analysis of results</a></p>
+<p><strong>results.txt</strong>,<strong>GSEA.input.txt</strong> and <strong>GSEA.tStat.txt</strong> are
+describe in <a href="#differential-expression-results">Differential expression
+results</a></p>
+<p><strong>voomLimma.R</strong>, <strong>countFile.txt</strong>, <strong>Rparameters.txt</strong>, and
+<strong>sampleList.txt</strong> are described in <a href="#differential-analysis-input">Differential analysis
+input</a></p>
+<p>See <a href="#limma-differential-expression-viewer">LIMMA differential expression
+viewer</a> for a description of the
+VIEWERS directory.</p>
+<p>Other files in the LIMMA directory include contrastFiles.txt
+contrastsFile.txt, and limmaSampleList.txt which are used internally.
+limmaMethods.txt is an intermediate file describing methods. Out.tar.gz
+is used for testing purposes. The sessionInfo.txt file describe the R
+session working parameters and modules loaded. meanVariance.png is a
+plot for assessing quality of count data
+(<a href="https://genomebiology.biomedcentral.com/articles/10.1186/gb-2014-15-2-r29">https://genomebiology.biomedcentral.com/articles/10.1186/gb-2014-15-2-r29</a>)</p>
+<hr />
+<p><strong>METHODS</strong></p>
+<p>The files here are described in <a href="#methods-files">Methods Files</a>.</p>
+<hr />
+<p><strong>SAMPLELIST</strong></p>
+<p>These files are used internally by the pipeline.</p>
+<hr />
+<p><strong>SIMPLE_DIFEX</strong></p>
+<p><strong>mdsPlot.normCPM.png</strong> and <strong>simpleDEPlot.png</strong> are described in
+<a href="#initial-analysis-of-results">Initial analysis of results</a></p>
+<p><strong>simpleDE.txt</strong> are describe in <a href="#differential-expression-results">Differential expression
+results</a></p>
+<p><strong>simpleDE.R</strong>, <strong>countFile.txt</strong>, <strong>Rparameters_simple.txt</strong>, and
+<strong>sampleList.txt</strong> are described in <a href="#differential-analysis-input">Differential analysis
+input</a></p>
+<p>See <a href="#simple-differential-expression-viewer">Simple differential expression
+viewer</a> for a description of the
+VIEWERS directory.</p>
+<p>Other files in the SIMPLE_DIFEX directory include contrastFiles.txt
+contrastsFile.txt, and limmaSampleList.txt which are used internally.
+simpleDifEx.methods.txt is an intermediate file describing methods.
+Out.tar.gz is used for testing purposes. The sessionInfo.txt file
+describe the R session working parameters and modules loaded.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
+<p>None yet! If you have any questions not covered here, feel free to reach
+out on <a href="https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-contact/">our contact
+form</a>.</p>
+<h2 id="similar-topics">Similar Topics<a class="headerlink" href="#similar-topics" title="Permanent link">&para;</a></h2>
+<p><a href="../running-sj-workflows/">Running our Workflows</a><br />
+<a href="../../managing-data/working-with-our-data/">Working with our Data Overview</a> <br />
+<a href="../../managing-data/data-transfer-app/">Downloading/Uploading Data</a>   </p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../rapid-rnaseq/" title="Rapid RNA-Seq Fusion Detection" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Rapid RNA-Seq Fusion Detection
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../mutational-signatures/" title="Mutational Signatures" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Mutational Signatures
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 St. Jude Children's Research Hospital
+          </div>
+        
+        
+        built from <a href="https://github.com/stjudecloud/docs/tree/45fe635">45fe635</a> using
+        
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and a modified version of
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs
+        </a>.
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://www.facebook.com/stjuderesearch/" target="_blank" rel="noopener" title="facebook" class="md-footer-social__link fa fa-facebook"></a>
+    
+      <a href="https://twitter.com/stjuderesearch?lang=en" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/st-jude-childrens-research-hospital" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://github.com/stjude" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.2d55c750.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../../../.."}})</script>
+      
+    
+  </body>
+</html>
