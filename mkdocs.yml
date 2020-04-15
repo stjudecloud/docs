@@ -63,7 +63,7 @@ nav:
       #- SJ Charts: guides/visualization-community/sjcharts.md
       #- t-SNE Charts: guides/visualization-community/t-sne-charts.md
   - Studies:
-      - About: guides/studies/studies-about.md
+      - About: guides/studies/index.md
       - Sickle Cell: guides/studies/sickle-cell.md
   - Frequently Asked Questions: faq.md
   - Citing St. Jude Cloud: citing-stjude-cloud.md
