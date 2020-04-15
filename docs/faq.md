@@ -52,11 +52,11 @@ We are always adding data to St. Jude Cloud, and if you would like to sign up fo
 If you'd like to delete your account, please email DNAnexus support at
 <support@dnanexus.com> with the following email.
 
-    Hi DNAnexus,
-
-      Would you please assist me in deleting my St. Jude Cloud account? My username is _____.
-
-    Thank you!
+> Hi DNAnexus,
+>
+>   Would you please assist me in deleting my St. Jude Cloud account? My username is _____.
+>
+> Thank you!
 
 
 ### Will I be charged for using St. Jude Cloud?
