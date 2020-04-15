@@ -39,7 +39,7 @@ Signing in to St. Jude Cloud is similarly easy — if you have a SJCRH account, 
 
 1. Visit [https://cloud.stjude.org](https://cloud.stjude.org), log in with your St. Jude credentials, and fill in the basic profile page to your satisfaction if prompted. Congrats! You're now logged in to St. Jude Cloud. 
 
-This should be sufficient for the purposes of this guide. For more detailed information, see our standard guide on [accounts and billing](../../guides/genomics-platform/create-an-account.md).
+This should be sufficient for the purposes of this guide. For more detailed information, see our standard guide on [accounts and billing](../../guides/genomics-platform/accounts-and-billing.md).
 
 !!! tip
     As you navigate around St. Jude Cloud, you can click the DNAnexus logo in the top left to go back to the home screen at any time.

@@ -27,7 +27,7 @@ For this tutorial I have requested the PCGP dataset, and once my access request 
 ![](../../../images/guides/genomics-platform/analyzing-data/creating-a-cloud-app-0.png)
 
 !!!note
-    If you do not yet have data in a DNAnexus project, you may request data from St. Jude Cloud by following the directions [here](../requesting-data/data-request.md) or you may upload your own data using the [data transfer app](../managing-data/data-transfer-app.md). In order to make a data request or upload your own data using the data transfer app, you must first [create a St. Jude Cloud account](../create-an-account.md).
+    If you do not yet have data in a DNAnexus project, you may request data from St. Jude Cloud by following the directions [here](../requesting-data/data-request.md) or you may upload your own data using the [data transfer app](../managing-data/data-transfer-app.md). In order to make a data request or upload your own data using the data transfer app, you must first [create a St. Jude Cloud account](../accounts-and-billing.md).
 
 
 ## Writing the Application
