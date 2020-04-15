@@ -38,7 +38,7 @@
     
     
       
-        <title>PeCan - St. Jude Cloud Documentation</title>
+        <title>Getting Started - St. Jude Cloud Documentation</title>
       
     
     
@@ -103,7 +103,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                PeCan
+                Getting Started
               
             </span>
           
@@ -171,14 +171,16 @@
       
         
 
-<nav class="md-tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="../.." class="md-tabs__link md-tabs__link--active">
+      <a href="../.." class="md-tabs__link">
         Overview
       </a>
     
@@ -218,7 +220,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../pecan/index.md" class="md-tabs__link">
+        <a href="./" class="md-tabs__link md-tabs__link--active">
           PeCan
         </a>
       
@@ -759,10 +761,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       PeCan
@@ -778,11 +782,76 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../pecan/index.md" title="Getting Started" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Getting Started
+      </label>
+    
+    <a href="./" title="Getting Started" class="md-nav__link md-nav__link--active">
       Getting Started
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#homepage" class="md-nav__link">
+    Homepage
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#donut-chart" class="md-nav__link">
+    Donut Chart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bubble-chart" class="md-nav__link">
+    Bubble Chart
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requesting-raw-genomics-through-pecan" class="md-nav__link">
+    Requesting Raw Genomics through PeCan
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -792,7 +861,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../pecan/pecan-pie.md" title="Pecan PIE" class="md-nav__link">
+    <a href="pecan-pie/" title="Pecan PIE" class="md-nav__link">
       Pecan PIE
     </a>
   </li>
@@ -1005,7 +1074,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/stjudecloud/docs/edit/master/docs/guides/PeCan/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/stjudecloud/docs/edit/master/docs/guides/pecan/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
                 <h1 id="pecan">PeCan<a class="headerlink" href="#pecan" title="Permanent link">&para;</a></h1>
@@ -1060,6 +1129,41 @@
         
 <footer class="md-footer">
   
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../genomics-platform/analyzing-data/creating-a-cloud-app/" title="Creating your own Workflow" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Creating your own Workflow
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="pecan-pie/" title="Pecan PIE" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Pecan PIE
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
@@ -1069,7 +1173,7 @@
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/45fe635">45fe635</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/7bc17fb">7bc17fb</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
