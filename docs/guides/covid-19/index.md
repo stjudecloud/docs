@@ -11,8 +11,6 @@
 !!! tip 
     Currently, this is guide is focused on omics-based data analysis. The DNAnexus ecosystem can be used for many other types of data analysis, and can serve as a secure cloud environment to easily do other types of research. If you are interested, please [contact us](mailto:support@stjude.cloud) and let us know — we'd be happy to help.
 
-
-
 ### Levels of Engagement
 
 If you're interested in trying our platform, you'll need to pick one of the two levels of engagement we offer:
@@ -27,15 +25,4 @@ You can see a more complete list of the differences between these two offerings 
 ![COVID-19 Programs](../../images/guides/covid-19/levels-of-engagement.png)
 
 ### Walkthrough
-
-Please read the following guides in order to quickly get up to speed on how you can transition to using St. Jude Cloud. If you have any questions, please [contact us](mailto:support@stjude.cloud).
-
-1. [Getting started](./getting-started.md)
-2. [How to upload data from your laptop/desktop to St. Jude Cloud](./upload-local.md)
-3. [How to upload data from the cluster to St. Jude Cloud](./upload-cluster.md)
-4. [Creating a production grade analysis app](./create-an-app.md)
-5. [How to use interactive nodes (alpha)](./interactive-node.md)
-6. [How to use visualize data using IGV and GenomePaint (alpha)](./visualizing-ngs-data.md)
-7. [How to use the interactive terminal (beta)](./interactive-terminal.md)
-8. [Creating a production grade analysis app](./creating-a-cloud-app-covid.md)
-
+Please read the guides on the left in order to quickly get up to speed on how you can transition to using St. Jude Cloud. If you have any questions, please [contact us](mailto:support@stjude.cloud).
