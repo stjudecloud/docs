@@ -45,10 +45,11 @@ This information will be collected whether you are requesting open-access or con
 ![](../../../images/guides/genomics-platform/requesting-data/request-data-setup-wizard1.gif)
 
 
-## Applying for Data Access
-If you already have access to the data or are requesting open-access data, you will not be prompted to go through this section.
+## Signing the Data Access Agreement
 
-### Signing the Data Access Agreement
+!!! info 
+    If you already have access to the data or are requesting open-access data, you will not be prompted to go through this section.
+
 
 Every person who requests access to our controlled-access data must sign the [Data Access Agreememnt (DAA)](glossary.md#data-access-agreement). If you are located in the United States of America, you can opt in to completing the DAA through an electronic setup wizard. If you are not located in the USA, or would like to complete the form manually, you can follow our instructions on [Filling Out The Data Access Agreement](how-to-fill-out-DAA.md).
 

@@ -25,7 +25,7 @@ nav:
       - Visualizing NGS data: guides/covid-19/visualizing-ngs-data.md
   - Genomics Platform:
       - Getting Started: guides/genomics-platform/index.md
-      - Creating an Account: guides/genomics-platform/create-an-account.md
+      - Accounts and Billing: guides/genomics-platform/accounts-and-billing.md
       - Requesting Data:
           - About our Data: guides/genomics-platform/requesting-data/about-our-data.md
           - Making a Data Request: guides/genomics-platform/requesting-data/data-request.md

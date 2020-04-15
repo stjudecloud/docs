@@ -29,7 +29,7 @@ You can see the selected disease shown at the top (1). The bubbles represent the
 
 For some disease sets (like the one shown above), we have identified the most important disease pathway for the gene and have categorized them as such. This information is represented here via the use of colors. The legend at the bottom allows you to view the pathway information being shown (including the number of genes that are attached to each pathway).
 
-Hovering over a pathway in the legend will highlight all matching genes. Clicking a gene will open it's ProteinPaint.
+Hovering over a pathway in the legend will highlight all matching genes. Clicking a gene will open it's ProteinPaint view. To learn more about the software behind ProteinPaint, visit the [ProteinPaint documentation](../../visualization-community/proteinpaint.md). 
 
 
 ## Requesting Raw Genomics through PeCan

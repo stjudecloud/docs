@@ -20,7 +20,7 @@ You can apply many different capabilities of St. Jude Cloud to your research, su
 * Create manuscript quality figures with *your* data to use in publications or to host on your website with [ProteinPaint](https://proteinpaint.stjude.org/) or [GenomePaint](https://genomepaint.stjude.cloud/). See the [ProteinPaint documentation](./guides/visualization-community/proteinpaint.md) and [GenomePaint documentation](./guides/visualization-community/genomepaint.md) for help.
 
 !!! note
-    Please note that while it is free to receive and store our data in St. Jude Cloud, there are [compute and storage fees associated with working in the cloud, as well as egress fees for downloading our data](faq.md#will-i-be-charged-for-using-st-jude-cloud). 
+    Please note that while it is free to receive and store our data in St. Jude Cloud, there are [compute and storage fees associated with working in the cloud, as well as egress fees for downloading data](faq.md#will-i-be-charged-for-using-st-jude-cloud). 
 
 ## Applications
 

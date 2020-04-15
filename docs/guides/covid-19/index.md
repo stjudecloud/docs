@@ -25,5 +25,4 @@ You can see a more complete list of the differences between these two offerings 
 ![COVID-19 Programs](../../images/guides/covid-19/levels-of-engagement.png)
 
 ### Walkthrough
-
 Please read the guides on the left in order to quickly get up to speed on how you can transition to using St. Jude Cloud. If you have any questions, please [contact us](mailto:support@stjude.cloud).
