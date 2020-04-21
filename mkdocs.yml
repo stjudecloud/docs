@@ -50,6 +50,7 @@ nav:
               # RNA Indel: guides/genomics-platform/analyzing-data/rna-indel.md
               # FKPM: guides/genomics-platform/analyzing-data/fkpm.md
           - Creating your own Workflow: guides/genomics-platform/analyzing-data/creating-a-cloud-app.md
+      - Frequently Asked Questions: guides/genomics-platform/faq.md
   - PeCan:
       - Getting Started: guides/pecan/index.md
       - Pecan PIE: guides/pecan/pecan-pie.md
@@ -59,7 +60,8 @@ nav:
   - Visualization Community:
       - Getting Started: guides/visualization-community/index.md
       - ProteinPaint: guides/visualization-community/proteinpaint.md
-      - Genome Paint: guides/visualization-community/genomepaint.md
+      - GenomePaint: guides/visualization-community/genomepaint.md
+      - Frequently Asked Questions: guides/visualization-community/faq.md
       #- SJ Charts: guides/visualization-community/sjcharts.md
       #- t-SNE Charts: guides/visualization-community/t-sne-charts.md
   - Studies:
@@ -87,6 +89,7 @@ markdown_extensions:
   - meta
   - toc:
       permalink: true
+      toc_depth: "2-5"
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
