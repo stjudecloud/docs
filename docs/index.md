@@ -22,17 +22,21 @@ You can apply many different capabilities of St. Jude Cloud to your research, su
 !!! note
     Please note that while it is free to receive and store our data in St. Jude Cloud, there are [compute and storage fees associated with working in the cloud, as well as egress fees for downloading data](faq.md#will-i-be-charged-for-using-st-jude-cloud). 
 
-## Applications
+## Apps
 
 St. Jude Cloud provides a number of applications which you can use for various purposes. Click on the links below to checkout one or more of our applications.
 
-* [Genomics Platform](https://platform.stjude.cloud/data). Browse our publicly available genomics datasets, make a data request, and run analyses in a secure cloud environment. Go [here](./guides/genomics-platform/requesting-data/about-our-data.md) to learn more about our data.
-* [Pediatric Cancer Portal (PeCan)](https://pecan.stjude.cloud). Interactively explore mutational recurrence and pathogenicity assessment of variants in pediatric cancer using a wide variety of St. Jude + publicly available data. 
-* [Visualization Community](https://viz.stjude.cloud/). Explore, create, and
-  share interactive visualizations using tools such as
-  [ProteinPaint](https://proteinpaint.stjude.org/) and
-  [GenomePaint](https://genomepaint.stjude.cloud/). See [this
-  guide](./guides/visualization-community/index.md) to get started.
+* [Genomics Platform](https://platform.stjude.cloud)
+    
+    Browse our publicly available genomics datasets, make a data request, and run analyses in a secure cloud environment. View the documentation for this app [here](./guides/genomics-platform/index.md). 
+
+* [Pediatric Cancer Portal (PeCan)](https://pecan.stjude.cloud)
+    
+    Interactively explore mutational recurrence and pathogenicity assessment of variants in pediatric cancer using a wide variety of St. Jude + publicly available data. View the documentation for this app [here](./guides/pecan/index.md).
+
+* [Visualization Community](https://viz.stjude.cloud/)
+    
+    Explore, create, and share interactive visualizations using tools such as ProteinPaint and GenomePaint. View the documentation for this app [here](./guides/visualization-community/index.md).
 
 ## Studies
 
@@ -53,8 +57,6 @@ St. Jude shares a number of end-to-end analysis workflows as part of the Genomic
 * [Rapid RNA-Seq Fusion Detection](https://platform.stjude.cloud/workflows/rapid_rna-seq)
 * [WARDEN Differential Expression Analysis](https://platform.stjude.cloud/workflows/warden)
 * [Mutational Signatures](https://platform.stjude.cloud/workflows/mutational_signatures)
-* cis-x (coming soon)
-* XenoCP (coming soon)
 * M2A (coming soon)
 
 ## Contact Us
