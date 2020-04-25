@@ -1,4 +1,4 @@
-# Genome Paint
+# GenomePaint
 
 [GenomePaint](https://genomepaint.stjude.cloud/) is a visualization browser for simultaneously viewing genomic, transcriptomic, and epigenomic pediatric cancer mutation datasets across a multitude of disease cohorts. GenomePaint datasets include WGS, WES, RNA-Seq, SNP-chip, ChIP-Seq, and Hi-C data visualized over the hg19 reference genome. You can use GenomePaint to interpret the impact of somatic coding and noncoding alterations from ~3,800 pediatric tumors, make novel discoveries through visual exploration, and create publication ready figures!
 
@@ -20,7 +20,7 @@ You can even zoom in to display mutations at bp resolution.
 
 ![](../../images/guides/visualization-community/genomepaint/bp_resolution.png)
 
-Genome Paint offers three different views: cohort view, sample view, and matrix view. The figure below summarizes how each view is connected.
+GenomePaint offers three different views: cohort view, sample view, and matrix view. The figure below summarizes how each view is connected.
 
 ![](../../images/guides/visualization-community/genomepaint/genome_paint_views.png)
 
