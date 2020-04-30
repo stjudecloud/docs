@@ -6,7 +6,7 @@
 This guide will take you through the process of writing an application for working with and manipulating the St. Jude data you've requested. By creating your own application, you will be able to wrap genomic tools and packages from external sources, as well as any tool or application you might have written yourself.
 
 !!! tip
-    The source code for the DNAnexus application created in this guide is available in the [St. Jude App Examples](https://github.com/stjudecloud/cloud-app-tutorial/tree/master/examples/dx-fastqc-example-app) repository on GitHub. Feel free to clone the repository and use it as a reference while following this tutorial or try building the application and running it on your own project.
+    We have created a wide variety of example cloud applications which you can view at [this GitHub repo](https://github.com/stjudecloud/cloud-app-tutorial). The completed source code for the particular application created here is available in the [dx-fastqc-example-app](https://github.com/stjudecloud/cloud-app-tutorial/tree/master/examples/dx-fastqc-example-app) folder. You are welcome to clone the repository and use it as a reference while following this tutorial or try building the application and running it on your own project.
 
 ## Overview
 
