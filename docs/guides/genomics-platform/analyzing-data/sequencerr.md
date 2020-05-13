@@ -30,7 +30,7 @@ By sequencing a common DNA library on different sequencers, we demonstrate that 
 
 ## Running the Analysis
 
-Refer to the [analaysis workflow guide](../../../files/guides/tools/sequencerr/SequencErr_Cloud_App_Instructions.pdf) to learn how to launch the workflow, hook up input files, adjust parameters, start a run, and monitor run progress.
+Refer to the [analysis workflow guide](../../../files/guides/tools/sequencerr/SequencErr_Cloud_App_Instructions.pdf) to learn how to launch the workflow, hook up input files, adjust parameters, start a run, and monitor run progress.
 
 You can navigate to the **SequencErr** application [here](https://platform.stjude.cloud/workflows/sequencerr).
 
