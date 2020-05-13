@@ -57,6 +57,7 @@ St. Jude shares a number of end-to-end analysis workflows as part of the Genomic
 * [Rapid RNA-Seq Fusion Detection](https://platform.stjude.cloud/workflows/rapid_rna-seq)
 * [WARDEN Differential Expression Analysis](https://platform.stjude.cloud/workflows/warden)
 * [Mutational Signatures](https://platform.stjude.cloud/workflows/mutational_signatures)
+* [SequencErr](https://platform.stjude.cloud/workflows/sequencerr)
 * M2A (coming soon)
 
 ## Contact Us
