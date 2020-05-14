@@ -17,15 +17,15 @@ By sequencing a common DNA library on different sequencers, we demonstrate that 
 
 | Name | Type | Description | Example |
 |--|--|--|--|
-| BAM file | Input file | Binary version of the SAM file format (*.bam) | Sample_1.bam |
-| BAM index file | Input file | Index file for the BAM file (*.bai) | Sample_1.bam.bai |
+| BAM file | Input file | Binary version of the SAM file format (`*.bam`) | `Sample_1.bam` |
+| BAM index file | Input file | Index file for the BAM file (`*.bai`) | `Sample_1.bam.bai` |
 
 ## Outputs
 
 | Name | Format | Description  |
 |--|--|--|
-| PairError file | .txt | Base concordance/discordance counts |
-| Counts file | .txt | Base call frequencies for each genomic coordinate |
+| PairError file | `.txt` | Base concordance/discordance counts |
+| Counts file | `.txt` | Base call frequencies for each genomic coordinate |
 
 
 ## Running the Analysis
@@ -35,13 +35,13 @@ Refer to the [analysis workflow guide](../../../files/guides/tools/sequencerr/Se
 You can navigate to the **SequencErr** application [here](https://platform.stjude.cloud/workflows/sequencerr).
 
 ### Selecting parameters
-1. **bam file name** _[Required]_
+1. **BAM file name** _[Required]_
 
-    A bamfile to process. 
+    A BAM file to process. 
 
-2. **bam index file name** _[Required]_
+2. **BAM index file name** _[Required]_
 
-    The bam index for your bamfile
+    The BAM index for your BAM file
 
 3. **sample id** _[Required]_
 
