@@ -44,6 +44,7 @@ nav:
               - Rapid RNA-Seq Fusion Detection: guides/genomics-platform/analyzing-data/rapid-rnaseq.md
               - WARDEN Differential Expression Analysis: guides/genomics-platform/analyzing-data/warden.md
               - Mutational Signatures: guides/genomics-platform/analyzing-data/mutational-signatures.md
+              - SequencErr: guides/genomics-platform/analyzing-data/sequencerr.md
               # Cis-X: guides/genomics-platform/analyzing-data/cis-x.md
               # M2A: guides/genomics-platform/analyzing-data/m2a.md
               # XenoCP: guides/genomics-platform/analyzing-data/xeno-cp.md

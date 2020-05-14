@@ -1,0 +1,17 @@
+excluded_words:
+  - SequencErr
+  - sequencerr
+
+  # Names
+  - Dongren
+  - Kolekar
+  - Nakitandwe
+  - Pandurang
+  - Ren
+  - Robison
+  - Shao
+  - Szlachta
+  - Xiaotu
+  - Yanling
+  - Ying
+  - Zhaoming
