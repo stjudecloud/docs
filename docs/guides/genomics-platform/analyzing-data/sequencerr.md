@@ -22,7 +22,7 @@ By sequencing a common DNA library on different sequencers, we demonstrate that 
 
 ## Outputs
 
-| Name            | Format | Description                                       |
+| Name           | Format | Description                                       |
 | -------------- | ------ | ------------------------------------------------- |
 | PairError file | `.txt` | Base concordance/discordance counts               |
 | Counts file    | `.txt` | Base call frequencies for each genomic coordinate |
@@ -45,6 +45,7 @@ You can navigate to the **SequencErr** application [here](https://platform.stjud
 ![](../../../files/guides/tools/sequencerr/SequencErr_steps_5-7.png)
 
 **Selecting Input Files and Parameters**
+
 1. **BAM file name** _[Required]_
 
     A BAM file to process. 
