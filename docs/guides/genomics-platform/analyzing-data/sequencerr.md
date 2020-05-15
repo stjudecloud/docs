@@ -85,7 +85,7 @@ You can navigate to the **SequencErr** application [here](https://platform.stjud
 **Locate Output File(s) after Completion of the Analysis**
 ![](../../../files/guides/tools/sequencerr/SequencErr_steps_11-12.png)
 
-## Interpretation of Output Files
+## Interpreting results
 
 * **\*.pairError.txt** file: A text file containing Instrument, Flowcell, Lane and Tile level base concordance/discordance counts
 
