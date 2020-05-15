@@ -38,7 +38,7 @@ You can navigate to the **SequencErr** application [here](https://platform.stjud
     This tool is intended free-of-charge for non-profit usages. 
     Please contact [Dr. Xiaotu Ma](mailto:Xiaotu.Ma@stjude.org) for for-profit usages and modifications
     
-### Log in, Run the app and Select the Project
+**Log in, Run the app and Select the Project**
 ![](../../../files/guides/tools/sequencerr/SequencErr_steps_1-4.png) 
 
 ### Configure Analysis Settings and Select Input Files
