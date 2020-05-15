@@ -82,7 +82,7 @@ You can navigate to the **SequencErr** application [here](https://platform.stjud
 **Provide Input Parameters and Run the Analysis**
 ![](../../../files/guides/tools/sequencerr/SequencErr_steps_7a-10.png)
 
-### Locate Output File(s) after Completion of the Analysis
+**Locate Output File(s) after Completion of the Analysis**
 ![](../../../files/guides/tools/sequencerr/SequencErr_steps_11-12.png)
 
 ## Interpretation of Output Files
