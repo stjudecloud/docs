@@ -41,7 +41,7 @@ You can navigate to the **SequencErr** application [here](https://platform.stjud
 **Log in, Run the app and Select the Project**
 ![](../../../files/guides/tools/sequencerr/SequencErr_steps_1-4.png) 
 
-### Configure Analysis Settings and Select Input Files
+**Configure Analysis Settings and Select Input Files**
 ![](../../../files/guides/tools/sequencerr/SequencErr_steps_5-7.png)
 
 ### Selecting Input Files and Parameters 
