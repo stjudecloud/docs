@@ -797,18 +797,12 @@
     Running the Analysis
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#selecting-parameters" class="md-nav__link">
-    Selecting parameters
-  </a>
-  
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#interpreting-results" class="md-nav__link">
+    Interpreting results
+  </a>
   
 </li>
       
@@ -1112,18 +1106,12 @@
     Running the Analysis
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#selecting-parameters" class="md-nav__link">
-    Selecting parameters
-  </a>
-  
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#interpreting-results" class="md-nav__link">
+    Interpreting results
+  </a>
   
 </li>
       
@@ -1230,14 +1218,38 @@ By sequencing a common DNA library on different sequencers, we demonstrate that 
 </tbody>
 </table>
 <h2 id="running-the-analysis">Running the Analysis<a class="headerlink" href="#running-the-analysis" title="Permanent link">&para;</a></h2>
-<p>Refer to the <a href="../../../../files/guides/tools/sequencerr/SequencErr_Cloud_App_Instructions.pdf">analysis workflow guide</a> to learn how to launch the workflow, hook up input files, adjust parameters, start a run, and monitor run progress.</p>
+<p>Please refer to the following steps to learn how to launch the workflow, hook up input files, adjust parameters, start a run, and monitor run progress.</p>
 <p>You can navigate to the <strong>SequencErr</strong> application <a href="https://platform.stjude.cloud/workflows/sequencerr">here</a>.</p>
-<h3 id="selecting-parameters">Selecting parameters<a class="headerlink" href="#selecting-parameters" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This tool is intended free-of-charge for non-profit usages. 
+Please contact <a href="mailto:Xiaotu.Ma@stjude.org">Dr. Xiaotu Ma</a> for for-profit usages and modifications</p>
+</div>
+<p><strong>Log in, Run the app and Select the Project</strong>
+<img alt="" src="../../../../files/guides/tools/sequencerr/SequencErr_steps_1-4.png" /> </p>
+<p><strong>Configure Analysis Settings and Select Input Files</strong>
+<img alt="" src="../../../../files/guides/tools/sequencerr/SequencErr_steps_5-7.png" /></p>
+<p><strong>Selecting Input Files and Parameters</strong>
+1. <strong>BAM file name</strong> <em>[Required]</em></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">A</span> <span class="n">BAM</span> <span class="n">file</span> <span class="n">to</span> <span class="n">process</span><span class="p">.</span>
+
+<span class="o">!!!</span> <span class="n">example</span> <span class="s">&quot;Notes on preparing the BAM file&quot;</span>
+    <span class="o">-</span>   <span class="n">Read</span> <span class="n">names</span> <span class="n">must</span> <span class="n">have</span> <span class="n">all</span> <span class="n">the</span> <span class="mi">7</span> <span class="n">fields</span> <span class="n">as</span> <span class="n">described</span> <span class="n">below</span><span class="p">,</span>
+    <span class="o">-</span>   <span class="o">**</span><span class="err">\</span><span class="p">[</span><span class="n">instrument</span><span class="p">]</span><span class="o">:</span><span class="err">\</span><span class="p">[</span><span class="n">run</span> <span class="n">number</span><span class="p">]</span><span class="o">:</span><span class="err">\</span><span class="p">[</span><span class="n">flowcell</span> <span class="n">ID</span><span class="p">]</span><span class="o">:</span><span class="err">\</span><span class="p">[</span><span class="n">lane</span><span class="p">]</span><span class="o">:</span><span class="err">\</span><span class="p">[</span><span class="n">tile</span><span class="p">]</span><span class="o">:</span><span class="err">\</span><span class="p">[</span><span class="n">x</span><span class="o">-</span><span class="n">pos</span><span class="p">]</span><span class="o">:</span><span class="err">\</span><span class="p">[</span><span class="n">y</span><span class="o">-</span><span class="n">pos</span><span class="p">]</span><span class="o">**</span>
+    <span class="o">-</span>   <span class="nl">Example</span><span class="p">:</span> <span class="o">**</span><span class="nl">A041</span><span class="p">:</span><span class="mi">30</span><span class="o">:</span><span class="nl">HHTYVDSXX</span><span class="p">:</span><span class="mi">1</span><span class="o">:</span><span class="mi">2242</span><span class="o">:</span><span class="mi">28366</span><span class="o">:</span><span class="mi">18897</span><span class="o">**</span>
+    <span class="o">-</span>   <span class="n">BAM</span> <span class="n">format</span> <span class="n">details</span> <span class="p">[</span><span class="n">here</span><span class="p">](</span><span class="nl">http</span><span class="p">:</span><span class="c1">//samtools.github.io/hts-specs/SAMv1.pdf)</span>
+    <span class="o">-</span>   <span class="n">See</span> <span class="p">[</span><span class="n">this</span> <span class="n">page</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//help.basespace.illumina.com/articles/descriptive/fastq-files/) for details of the fields in readname</span>
+</code></pre></div>
+</td></tr></table>
+
 <ol>
-<li>
-<p><strong>BAM file name</strong> <em>[Required]</em></p>
-<p>A BAM file to process. </p>
-</li>
 <li>
 <p><strong>BAM index file name</strong> <em>[Required]</em></p>
 <p>The BAM index for your BAM file</p>
@@ -1262,6 +1274,19 @@ Default: 20</p>
 Default: true</p>
 </li>
 </ol>
+<p><strong>Provide Input Parameters and Run the Analysis</strong>
+<img alt="" src="../../../../files/guides/tools/sequencerr/SequencErr_steps_7a-10.png" /></p>
+<p><strong>Locate Output File(s) after Completion of the Analysis</strong>
+<img alt="" src="../../../../files/guides/tools/sequencerr/SequencErr_steps_11-12.png" /></p>
+<h2 id="interpreting-results">Interpreting results<a class="headerlink" href="#interpreting-results" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>*.pairError.txt</strong> file: A text file containing Instrument, Flowcell, Lane and Tile level base concordance/discordance counts</li>
+</ul>
+<p><img alt="" src="../../../../files/guides/tools/sequencerr/pairErrorOut.png" /></p>
+<ul>
+<li><strong>*.counts.txt</strong> file [optional] : A text file containing the base call frequencies and coverage for each genomic coordinate at specified base quality cut-off</li>
+</ul>
+<p><img alt="" src="../../../../files/guides/tools/sequencerr/testCountOut.png" /></p>
 <h2 id="similar-topics">Similar Topics<a class="headerlink" href="#similar-topics" title="Permanent link">&para;</a></h2>
 <p><a href="../running-sj-workflows/">Running our Workflows</a><br />
 <a href="../../managing-data/working-with-our-data/">Working with our Data Overview</a> <br />
@@ -1328,7 +1353,7 @@ Default: true</p>
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/a7158e8">a7158e8</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/6987726">6987726</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
