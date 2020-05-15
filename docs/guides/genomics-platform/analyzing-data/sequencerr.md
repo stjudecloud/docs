@@ -79,7 +79,7 @@ You can navigate to the **SequencErr** application [here](https://platform.stjud
     Set this to prevent large count files from being generated
     Default: true
 
-### Provide Input Parameters and Run the Analysis
+**Provide Input Parameters and Run the Analysis**
 ![](../../../files/guides/tools/sequencerr/SequencErr_steps_7a-10.png)
 
 ### Locate Output File(s) after Completion of the Analysis
