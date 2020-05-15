@@ -44,7 +44,7 @@ You can navigate to the **SequencErr** application [here](https://platform.stjud
 **Configure Analysis Settings and Select Input Files**
 ![](../../../files/guides/tools/sequencerr/SequencErr_steps_5-7.png)
 
-### Selecting Input Files and Parameters 
+**Selecting Input Files and Parameters**
 1. **BAM file name** _[Required]_
 
     A BAM file to process. 
