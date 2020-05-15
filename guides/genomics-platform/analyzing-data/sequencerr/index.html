@@ -1229,27 +1229,22 @@ Please contact <a href="mailto:Xiaotu.Ma@stjude.org">Dr. Xiaotu Ma</a> for for-p
 <img alt="" src="../../../../files/guides/tools/sequencerr/SequencErr_steps_1-4.png" /> </p>
 <p><strong>Configure Analysis Settings and Select Input Files</strong>
 <img alt="" src="../../../../files/guides/tools/sequencerr/SequencErr_steps_5-7.png" /></p>
-<p><strong>Selecting Input Files and Parameters</strong>
-1. <strong>BAM file name</strong> <em>[Required]</em></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">A</span> <span class="n">BAM</span> <span class="n">file</span> <span class="n">to</span> <span class="n">process</span><span class="p">.</span>
-
-<span class="o">!!!</span> <span class="n">example</span> <span class="s">&quot;Notes on preparing the BAM file&quot;</span>
-    <span class="o">-</span>   <span class="n">Read</span> <span class="n">names</span> <span class="n">must</span> <span class="n">have</span> <span class="n">all</span> <span class="n">the</span> <span class="mi">7</span> <span class="n">fields</span> <span class="n">as</span> <span class="n">described</span> <span class="n">below</span><span class="p">,</span>
-    <span class="o">-</span>   <span class="o">**</span><span class="err">\</span><span class="p">[</span><span class="n">instrument</span><span class="p">]</span><span class="o">:</span><span class="err">\</span><span class="p">[</span><span class="n">run</span> <span class="n">number</span><span class="p">]</span><span class="o">:</span><span class="err">\</span><span class="p">[</span><span class="n">flowcell</span> <span class="n">ID</span><span class="p">]</span><span class="o">:</span><span class="err">\</span><span class="p">[</span><span class="n">lane</span><span class="p">]</span><span class="o">:</span><span class="err">\</span><span class="p">[</span><span class="n">tile</span><span class="p">]</span><span class="o">:</span><span class="err">\</span><span class="p">[</span><span class="n">x</span><span class="o">-</span><span class="n">pos</span><span class="p">]</span><span class="o">:</span><span class="err">\</span><span class="p">[</span><span class="n">y</span><span class="o">-</span><span class="n">pos</span><span class="p">]</span><span class="o">**</span>
-    <span class="o">-</span>   <span class="nl">Example</span><span class="p">:</span> <span class="o">**</span><span class="nl">A041</span><span class="p">:</span><span class="mi">30</span><span class="o">:</span><span class="nl">HHTYVDSXX</span><span class="p">:</span><span class="mi">1</span><span class="o">:</span><span class="mi">2242</span><span class="o">:</span><span class="mi">28366</span><span class="o">:</span><span class="mi">18897</span><span class="o">**</span>
-    <span class="o">-</span>   <span class="n">BAM</span> <span class="n">format</span> <span class="n">details</span> <span class="p">[</span><span class="n">here</span><span class="p">](</span><span class="nl">http</span><span class="p">:</span><span class="c1">//samtools.github.io/hts-specs/SAMv1.pdf)</span>
-    <span class="o">-</span>   <span class="n">See</span> <span class="p">[</span><span class="n">this</span> <span class="n">page</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//help.basespace.illumina.com/articles/descriptive/fastq-files/) for details of the fields in readname</span>
-</code></pre></div>
-</td></tr></table>
-
+<p><strong>Selecting Input Files and Parameters</strong></p>
 <ol>
+<li>
+<p><strong>BAM file name</strong> <em>[Required]</em></p>
+<p>A BAM file to process. </p>
+<div class="admonition example">
+<p class="admonition-title">Notes on preparing the BAM file</p>
+<ul>
+<li>Read names must have all the 7 fields as described below,</li>
+<li><strong>[instrument]:[run number]:[flowcell ID]:[lane]:[tile]:[x-pos]:[y-pos]</strong></li>
+<li>Example: <strong>A041:30:HHTYVDSXX:1:2242:28366:18897</strong></li>
+<li>BAM format details <a href="http://samtools.github.io/hts-specs/SAMv1.pdf">here</a></li>
+<li>See <a href="https://help.basespace.illumina.com/articles/descriptive/fastq-files/">this page</a> for details of the fields in readname </li>
+</ul>
+</div>
+</li>
 <li>
 <p><strong>BAM index file name</strong> <em>[Required]</em></p>
 <p>The BAM index for your BAM file</p>
@@ -1353,7 +1348,7 @@ Default: true</p>
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/6987726">6987726</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/99d4723">99d4723</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
