@@ -86,13 +86,13 @@ The workstation uses Docker images pushed to a Docker Hub repository to save you
 
 Once you have a Docker Hub account, go to your "Account Settings", then "Security" and create a new access token.
 
-![Creating a new Docker Hub access token](../../images/guides/covid-19/interactive-node-0.png)
+![Creating a new Docker Hub access token](../../images/guides/covid-19/interactive-node/interactive-node-0.png)
 
 You can give it a descriptive name and copy the token.
 
-![Naming Docker Hub access token](../../images/guides/covid-19/interactive-node-1.png)
+![Naming Docker Hub access token](../../images/guides/covid-19/interactive-node/interactive-node-1.png)
 
-![Saved Docker Hub access token](../../images/guides/covid-19/interactive-node-2.png)
+![Saved Docker Hub access token](../../images/guides/covid-19/interactive-node/interactive-node-2.png)
 
 The access token will be needed for the credentials file below.
 
@@ -116,7 +116,7 @@ Create a file with the template below and fill in your Docker Hub token and Dock
 
 Once you have made your credentials file on your computer, make a new DNAnexus project to save your credentials using `dx new project`. Upload the credentials file to your project by running `dx upload creds.txt`. It is recommended to save your credentials in a separate, private DNAnexus project to ensure that others do not have access to it.
 
-![Uploading credentials file](../../images/guides/covid-19/interactive-node-3.png)
+![Uploading credentials file](../../images/guides/covid-19/interactive-node/interactive-node-3.png)
 
 ### Starting an interactive terminal session
 
@@ -126,13 +126,13 @@ The following command will run the app using the credentials you provided and wi
 
 or replace `mycredentials` with the name of the DNAnexus project with your credentials file. If you have SSH issues while trying to connect to the job, make sure your SSH keys are [configured properly](https://documentation.dnanexus.com/developer/apps/execution-environment/connecting-to-jobs).
 
-![running CWIC app](../../images/guides/covid-19/interactive-node-4.png)
+![running CWIC app](../../images/guides/covid-19/interactive-node/interactive-node-4.png)
 
 ### Working on the CWIC node
 
 Once the node starts, you will be taken to the home directory of the CWIC node. This node is an ubuntu environment and you can install or run any commands you want.
 
-![CWIC terminal](../../images/guides/covid-19/interactive-node-5.png)
+![CWIC terminal](../../images/guides/covid-19/interactive-node/interactive-node-5.png)
 
 For example, you can install `samtools` by running `sudo apt install samtools`.
 
@@ -142,7 +142,7 @@ There are two main directories to work with data:
 
 * `/project/` - This directory contains your DNAnexus project and the data in it. If you copy or move files to this directory, it saves to your DNAnexus project, which is a persistent storage. You can go to `/project/<YOUR_DX_PROJECT_NAME>` and see the files in your DNAnexus project.
 
-![CWIC directories](../../images/guides/covid-19/interactive-node-6.png)
+![CWIC directories](../../images/guides/covid-19/interactive-node/interactive-node-6.png)
 
 Upload some data to your project from a local machine for testing in the interactive node — here, we assume a BAM file uploaded from a laptop called `sample.bam`. Once data is uploaded to your DNAnexus project, you can access it on your CWIC node at `/project/<YOUR_DX_PROJECT_NAME>/test.bam`. For instance, when running `samtools index /project/<YOUR_DX_PROJECT_NAME>/test.bam`, you will find the index file samtools creates is saved to your cloud project.
 
@@ -251,16 +251,32 @@ By default, the workstation creates a new public repository in Docker Hub. It is
 
 First, go to your repositories page and click on the repository you want to make private.
 
-![Docker Hub Repositories](../../images/guides/covid-19/make-dockerhub-repo-private/1.png)
+![Docker Hub Repositories](../../images/guides/covid-19/interactive-node/make-dockerhub-repo-private-1.png)
 
 Next, go to the 'Settings' tab and click on the 'Make private' button.
 
-![Docker Hub Repository Settings](../../images/guides/covid-19/make-dockerhub-repo-private/2.png)
+![Docker Hub Repository Settings](../../images/guides/covid-19/interactive-node/make-dockerhub-repo-private-2.png)
 
 Type the name of the repository and click on the 'Make private' button.
 
-![Docker Hub Repository Make Private](../../images/guides/covid-19/make-dockerhub-repo-private/3.png)
+![Docker Hub Repository Make Private](../../images/guides/covid-19/interactive-node/make-dockerhub-repo-private-3.png)
 
 Finally, you can see the repository is now set to private and you can continue using interactive sessions as normal.
 
-![Docker Hub Repositories with Private](../../images/guides/covid-19/make-dockerhub-repo-private/4.png)
+![Docker Hub Repositories with Private](../../images/guides/covid-19/interactive-node/make-dockerhub-repo-private-4.png)
+
+### Reconnecting to an interactive terminal
+
+If, for some reason, you lose your connection to the interactive node, your node will still be running on the cloud. You can ssh back into the node if you have the DNAnexus job ID. You can find the job ID by going to the Monitor tab in your DNAnexus project. You can click on the job name to find the `EXECUTION ID`.
+
+![Cwic Monitor Tab](../../images/guides/covid-19/interactive-node/reconnecting-to-node-1.png)
+
+![Cwic Job ID](../../images/guides/covid-19/interactive-node/reconnecting-to-node-2.png)
+
+The job ID is also printed in the terminal when you first start the interactive session.
+
+![Cwic App Log](../../images/guides/covid-19/interactive-node/reconnecting-to-node-3.png)
+
+In order to connect to the interactive node, copy the job ID and use the command `dx ssh <JOB_ID>` in your terminal. This will connect you back to the default workspace in the cwic node.
+
+![DX SSH Cwic](../../images/guides/covid-19/interactive-node/reconnecting-to-node-4.png)
