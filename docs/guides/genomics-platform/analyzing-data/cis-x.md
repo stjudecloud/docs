@@ -20,7 +20,7 @@ cis-X currently only works with hg19 (GRCh37).
 | Name                         | Type    | Description                                                                                            | Example        |
 |------------------------------|---------|--------------------------------------------------------------------------------------------------------|----------------|
 | Sample ID                    | String  | The ID of the input sample                                                                             | SJALL018373_D1 |
-| Disease subtype              | String  | The disease name under analysis. Must be either TALL or AML.                                           | TALL           |
+| Disease subtype              | String  | The disease name under analysis. Must be either NBL or TALL.                                           | TALL           |
 | [Single nucleotide variants] | File    | Tab-delimited file containing raw sequence variants                                                    | *.txt          |
 | [CNV/LOH regions]            | File    | Tab-delimited file containing any aneuploidy region existing in the tumor genome under analysis        | *.txt          |
 | RNA-seq BAM                  | File    | BAM file aligned to hg19 (GRCh37)                                                                      | *.bam          |
