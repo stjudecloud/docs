@@ -17,22 +17,25 @@ cis-X currently only works with hg19 (GRCh37).
 
 ## Inputs
 
-| Name                         | Type    | Description                                                                                            | Example        |
-|------------------------------|---------|--------------------------------------------------------------------------------------------------------|----------------|
-| Sample ID                    | String  | The ID of the input sample                                                                             | SJALL018373_D1 |
-| Disease subtype              | String  | The disease name under analysis. Must be either NBL or TALL.                                           | TALL           |
-| [Single nucleotide variants] | File    | Tab-delimited file containing raw sequence variants                                                    | *.txt          |
-| [CNV/LOH regions]            | File    | Tab-delimited file containing any aneuploidy region existing in the tumor genome under analysis        | *.txt          |
-| RNA-seq BAM                  | File    | BAM file aligned to hg19 (GRCh37)                                                                      | *.bam          |
-| RNA-seq BAM index            | File    | BAM index for the given BAM                                                                            | *.bam.bai      |
-| [Gene expression table]      | File    | Tab-delimited file containing gene level expressions for the tumor under analysis in FPKM              | *.txt          |
-| [Somatic SNV/indels]         | File    | Tab-delimited file containing somatic SNV/indels in the tumor genome                                   | *.txt          |
-| [Somatic SVs]                | File    | Tab-delimited file containing somatic acquired structural variants in the tumor genome                 | *.txt          |
-| [Somatic CNVs]               | File    | Tab-delimited file containing copy number aberrations in the tumor genome                              | *.txt          |
-| CNV/LOH action               | String  | The behavior when handling markers in CNV/LOH regions. Can be either `keep` or `drop`. [default: keep] | drop           |
-| Minimum coverage for WGS     | Integer | The minimum coverage in WGS to be included in the analysis [default:  10]                              | 10             |
-| Minimum coverage for RNA-seq | Integer | The minimum coverage in RNA-seq to be included in the analysis [default: 10]                           | 5              |
-| Candidate FPKM threshold     | Float   | The FPKM threshold for the nomination of a cis-activated candidate [default: 5.0]                      | 0.1            |
+| Name                         | Type    | Description                                                                                                                       | Example        |
+|------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------|----------------|
+| Sample ID                    | String  | The ID of the input sample                                                                                                        | SJALL018373_D1 |
+| Disease subtype              | String  | The disease name under analysis. Must be either NBL or TALL.                                                                      | TALL           |
+| [Single nucleotide variants] | File    | Tab-delimited file containing raw sequence variants                                                                               | *.txt          |
+| [CNV/LOH regions]            | File    | Tab-delimited file containing any aneuploidy region existing in the tumor genome under analysis                                   | *.txt          |
+| RNA-seq BAM                  | File    | BAM file aligned to hg19 (GRCh37)                                                                                                 | *.bam          |
+| RNA-seq BAM index            | File    | BAM index for the given BAM                                                                                                       | *.bam.bai      |
+| [Gene expression table]      | File    | Tab-delimited file containing gene level expressions for the tumor under analysis in FPKM                                         | *.txt          |
+| [Somatic SNV/indels]         | File    | Tab-delimited file containing somatic SNV/indels in the tumor genome                                                              | *.txt          |
+| [Somatic SVs]                | File    | Tab-delimited file containing somatic acquired structural variants in the tumor genome                                            | *.txt          |
+| [Somatic CNVs]               | File    | Tab-delimited file containing copy number aberrations in the tumor genome                                                         | *.txt          |
+| CNV/LOH action               | String  | The behavior when handling markers in CNV/LOH regions. Can be either `keep` or `drop`. [default: keep]                            | drop           |
+| Minimum coverage for WGS     | Integer | The minimum coverage in WGS to be included in the analysis [default:  10]                                                         | 10             |
+| Minimum coverage for RNA-seq | Integer | The minimum coverage in RNA-seq to be included in the analysis [default: 10]                                                      | 5              |
+| Candidate FPKM threshold     | Float   | The FPKM threshold for the nomination of a cis-activated candidate [default: 5.0]                                                 | 0.1            |
+| User annotations             | File    | User applied annotations [optional]                                                                                               | *.bed          |
+| chr Prefix                   | String  | Whether the names in the reference sequence dictionary are prefixed with "chr". Must be either `TRUE` or `FALSE`. [default: TRUE] | TRUE           |
+| TAD annotations              | File    | TAD annotations [optional]                                                                                                        | *.bed          |
 
 [Single nucleotide variants]: #single-nucleotide-variants
 [CNV/LOH regions]: #cnvloh-regions
