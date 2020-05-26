@@ -1380,7 +1380,7 @@ outlier high expression (OHE) signals are used. Variants in the same topological
 <tr>
 <td>Disease subtype</td>
 <td>String</td>
-<td>The disease name under analysis. Must be either TALL or AML.</td>
+<td>The disease name under analysis. Must be either NBL or TALL.</td>
 <td>TALL</td>
 </tr>
 <tr>
@@ -1434,26 +1434,44 @@ outlier high expression (OHE) signals are used. Variants in the same topological
 <tr>
 <td>CNV/LOH action</td>
 <td>String</td>
-<td>The behavior when handling markers in CNV/LOH regions. Can be either <code>keep</code> or <code>drop</code>.</td>
+<td>The behavior when handling markers in CNV/LOH regions. Can be either <code>keep</code> or <code>drop</code>. [default: keep]</td>
 <td>drop</td>
 </tr>
 <tr>
 <td>Minimum coverage for WGS</td>
 <td>Integer</td>
-<td>The minimum coverage in WGS to be included in the analysis</td>
+<td>The minimum coverage in WGS to be included in the analysis [default:  10]</td>
 <td>10</td>
 </tr>
 <tr>
 <td>Minimum coverage for RNA-seq</td>
 <td>Integer</td>
-<td>The minimum coverage in RNA-seq to be included in the analysis</td>
+<td>The minimum coverage in RNA-seq to be included in the analysis [default: 10]</td>
 <td>5</td>
 </tr>
 <tr>
 <td>Candidate FPKM threshold</td>
 <td>Float</td>
-<td>The FPKM threshold for the nomination of a cis-activated candidate</td>
+<td>The FPKM threshold for the nomination of a cis-activated candidate [default: 5.0]</td>
 <td>0.1</td>
+</tr>
+<tr>
+<td>User annotations</td>
+<td>File</td>
+<td>User applied annotations [optional]</td>
+<td>*.bed</td>
+</tr>
+<tr>
+<td>chr Prefix</td>
+<td>String</td>
+<td>Whether the names in the reference sequence dictionary are prefixed with "chr". Must be either <code>TRUE</code> or <code>FALSE</code>. [default: TRUE]</td>
+<td>TRUE</td>
+</tr>
+<tr>
+<td>TAD annotations</td>
+<td>File</td>
+<td>TAD annotations [optional]</td>
+<td>*.bed</td>
 </tr>
 </tbody>
 </table>
@@ -2352,7 +2370,7 @@ out on <a href="https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-contact/
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/fe9dca0">fe9dca0</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/8c0ec0a">8c0ec0a</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
