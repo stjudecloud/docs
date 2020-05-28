@@ -1,5 +1,10 @@
 ## Measuring and suppressing sequencer errors in next generation sequencing
 
+
+!!! note
+    **To manuscript reviewers:** to ensure anonymous review, we have asked the editor to send you accounts so that you do not need to create your own account to keep your test run anonymous. Please contact the editor if you do not receive the account information.
+
+
 |                       |                                                                                                                                                                                                                                                    |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Authors**           | Eric M Davis, Yu Sun, Yanling Liu, Pandurang Kolekar, Ying Shao, Karol Szlachta, Heather L Mulder, Dongren Ren, Stephen V Rice, Zhaoming Wang, Joy Nakitandwe, Alex Gout, Leslie L Robison, Stanley Pounds, Jefferey Klco, John Easton, Xiaotu Ma* |
@@ -28,23 +33,7 @@ By sequencing a common DNA library on different sequencers, we demonstrate that 
 | Counts file    | `.txt` | Base call frequencies for each genomic coordinate |
 
 
-## Running the Analysis
-
-Please refer to the following steps to learn how to launch the workflow, hook up input files, adjust parameters, start a run, and monitor run progress.
-
-You can navigate to the **SequencErr** application [here](https://platform.stjude.cloud/workflows/sequencerr).
-
-!!! note
-    This tool is intended free-of-charge for non-profit usages. 
-    Please contact [Dr. Xiaotu Ma](mailto:Xiaotu.Ma@stjude.org) for for-profit usages and modifications
-    
-**Log in, Run the app and Select the Project**
-![](../../../files/guides/tools/sequencerr/SequencErr_steps_1-4.png) 
-
-**Configure Analysis Settings and Select Input Files**
-![](../../../files/guides/tools/sequencerr/SequencErr_steps_5-7.png)
-
-**Selecting Input Files and Parameters**
+## Details of SequencErr Input Files and Parameters
 
 1. **BAM file name** _[Required]_
 
@@ -80,11 +69,60 @@ You can navigate to the **SequencErr** application [here](https://platform.stjud
     Set this to prevent large count files from being generated
     Default: true
 
-**Provide Input Parameters and Run the Analysis**
-![](../../../files/guides/tools/sequencerr/SequencErr_steps_7a-10.png)
+## Running the Analysis
+
+**SequencErr** application can be accssed from [https://platform.stjude.cloud/workflows/sequencerr](https://platform.stjude.cloud/workflows/sequencerr)
+
+!!! note
+    This tool is intended free-of-charge for non-profit usages. 
+    Please contact [Dr. Xiaotu Ma](mailto:Xiaotu.Ma@stjude.org) for for-profit usages and modifications
+
+Please refer to the stepwise **instructions PDF [here](../../../files/guides/tools/sequencerr/SequencErr_Instructions.pdf)** or following steps to learn how to launch the workflow, hook up input files, adjust parameters, run analysis and inspect output files.
+
+**Log in and Launch the (SequencErr)[https://platform.stjude.cloud/workflows/sequencerr]**
+
+![](../../../files/guides/tools/sequencerr/Sequencerr_log_in_1.png)
+
+![](../../../files/guides/tools/sequencerr/Sequencerr_log_in_2.png)
+
+![](../../../files/guides/tools/sequencerr/Sequencerr_log_in_3.png)
+
+![](../../../files/guides/tools/sequencerr/Sequencerr_launch_4.png)
+
+
+**Choose Input BAM and Index Files**
+
+Users can upload and download data files with the help of **Data Transfer App** as described [here](../../../guides/genomics-platform/managing-data/data-transfer-app.md) 
+
+![](../../../files/guides/tools/sequencerr/Sequencerr_BAM_5.png)
+
+![](../../../files/guides/tools/sequencerr/Sequencerr_BAM_6.png)
+
+![](../../../files/guides/tools/sequencerr/Sequencerr_BAM_7.png)
+
+![](../../../files/guides/tools/sequencerr/Sequencerr_BAM_8.png)
+
+Follow the similar steps to choose and select the corresponding BAM index file from SequencErr Demo project
+
+![](../../../files/guides/tools/sequencerr/Sequencerr_BAM_Index_9.png)
+
+![](../../../files/guides/tools/sequencerr/Sequencerr_BAM_Index_10.png)
+
+**Provide Input Parameters**
+
+![](../../../files/guides/tools/sequencerr/Sequencerr_Parameters_11.png)
+
+![](../../../files/guides/tools/sequencerr/Sequencerr_Parameters_12.png)
+
+**Run the Analysis**
+
+![](../../../files/guides/tools/sequencerr/Sequencerr_Run_Analysis_13.png)
+
+![](../../../files/guides/tools/sequencerr/Sequencerr_Run_Status_14.png)
 
 **Locate Output File(s) after Completion of the Analysis**
-![](../../../files/guides/tools/sequencerr/SequencErr_steps_11-12.png)
+
+![](../../../files/guides/tools/sequencerr/Sequencerr_Output_15.png)
 
 ## Interpreting results
 
