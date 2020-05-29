@@ -93,6 +93,7 @@ Please refer to the stepwise **instructions PDF [here](../../../files/guides/too
 **Choose Input BAM and Index Files**
 
 Users can upload and download data files with the help of **Data Transfer App** as described [here](../../../guides/genomics-platform/managing-data/data-transfer-app.md) 
+or through **command line interactions** as described [here](../../../guides/genomics-platform/analyzing-data/command-line.md)
 
 ![](../../../files/guides/tools/sequencerr/Sequencerr_BAM_5.png)
 
@@ -102,7 +103,7 @@ Users can upload and download data files with the help of **Data Transfer App** 
 
 ![](../../../files/guides/tools/sequencerr/Sequencerr_BAM_8.png)
 
-Follow the similar steps to choose and select the corresponding BAM index file from SequencErr Demo project
+Follow the similar steps to choose and select the corresponding BAM index file
 
 ![](../../../files/guides/tools/sequencerr/Sequencerr_BAM_Index_9.png)
 
