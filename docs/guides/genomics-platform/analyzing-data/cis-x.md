@@ -1,7 +1,7 @@
 |                       |                                            |
 |-----------------------|--------------------------------------------|
-| **Authors**           | Yu Liu, Chunliang Li, Shuhong Shen         |
-| **Publication**       | N/A (not published)                        |
+| **Authors**           | Yu Liu<sup>1,2,\*,#</sup>, Chunliang Li<sup>3,\*</sup>, Shuhong Shen<sup>1,4,\*</sup>, Xiaolong Chen<sup>2</sup>, Karol Szlachta<sup>2</sup>, Michael N. Edmonson<sup>2</sup>, Ying Shao<sup>2</sup>, Xiaotu Ma<sup>2</sup>, Judith Hyle<sup>3</sup>, Shaela Wright<sup>3</sup>, Bensheng Ju<sup>2</sup>, Michael C. Rusch<sup>2</sup>, Yanling Liu<sup>2</sup>, Benshang Li<sup>1,4</sup>, Michael Macias<sup>2</sup>, Liqing Tian<sup>2</sup>, John Easton<sup>2</sup>, Maoxiang Qian<sup>5</sup>, Jun J. Yang<sup>5,6,7</sup>, Shaoyan Hu<sup>8</sup>, A. Thomas Look<sup>9,10</sup> and Jinghui Zhang<sup>2,#</sup> |
+| **Publication**       | "Discovery of regulatory non-coding variants in individual cancer genomes using cis-X" (in submission) |
 | **Technical Support** | [Contact Us](https://stjude.cloud/contact) |
 
 ## Overview
@@ -464,3 +464,46 @@ out on [our contact form](https://hospital.stjude.org/apps/forms/fb/st-jude-clou
 [Running our Workflows](../analyzing-data/running-sj-workflows.md)  
 [Working with our Data Overview](../managing-data/working-with-our-data.md)   
 [Downloading/Uploading Data](../managing-data/data-transfer-app.md)   
+
+<h2 id="Footnotes">Footnotes</h2>
+
+<small>
+
+  <sup>1</sup> Pediatric Translational Medicine Institute, Shanghai Children's
+  Medical Center, Shanghai Jiao Tong University School of Medicine, Shanghai,
+  China
+
+  <sup>2</sup> Department of Computational Biology, St. Jude Children's
+  Research Hospital, Memphis, TN 38105, USA
+
+  <sup>3</sup> Department of Tumor Cell Biology, St. Jude Children's Research
+  Hospital, Memphis, TN 38105, USA
+
+  <sup>4</sup> Key Laboratory of Pediatric Hematology & Oncology Ministry of
+  Health, Department of Hematology & Oncology, Shanghai Children's Medical
+  Center, Shanghai Jiao Tong University School of Medicine, Shanghai, China
+
+  <sup>5</sup> Department of Pharmaceutical Sciences, St. Jude Children's
+  Research Hospital, Memphis, TN 38105, USA
+
+  <sup>6</sup> Hematological Malignancies Program, St. Jude Children's Research
+  Hospital, Memphis, TN 38105, USA
+
+  <sup>7</sup> Department of Oncology, St. Jude Children's Research Hospital,
+  Memphis, TN 38105, USA
+
+  <sup>8</sup> Children's Hospital of Soochow University, Suzhou, Jiangsu,
+  China
+
+  <sup>9</sup> Department of Pediatric Oncology, Dana-Farber Cancer Institute,
+  Harvard Medical School, Boston, MA 02215, USA
+
+  <sup>10</sup> Division of Pediatric Hematology-Oncology, Boston Children's
+  Hospital, MA 02115, USA
+
+  <sup>\*</sup> Contributed equally to this work.
+
+  <sup>#</sup> Correspondence should be addressed to Y.L. (liuyu@scmc.com.cn)
+  or J.Z. (jinghui.zhang@stjude.org).
+
+</small>
