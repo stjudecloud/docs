@@ -71,7 +71,7 @@ By sequencing a common DNA library on different sequencers, we demonstrate that 
 
 ## Running the Analysis
 
-**SequencErr** application can be accssed from [https://platform.stjude.cloud/workflows/sequencerr](https://platform.stjude.cloud/workflows/sequencerr)
+**SequencErr** application can be accessed from [https://platform.stjude.cloud/workflows/sequencerr](https://platform.stjude.cloud/workflows/sequencerr)
 
 !!! note
     This tool is intended free-of-charge for non-profit usages. 
