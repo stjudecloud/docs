@@ -65,6 +65,14 @@ nav:
       - Frequently Asked Questions: guides/visualization-community/faq.md
       #- SJ Charts: guides/visualization-community/sjcharts.md
       #- t-SNE Charts: guides/visualization-community/t-sne-charts.md
+  - ProteinPaint: 
+      - Getting Started: guides/proteinpaint/index.md
+      - Navigation: guides/proteinpaint/navigating-the-protein-diagram.md
+      - Loading Datasets: guides/proteinpaint/loading-datasets.md
+      - Inspecting Mutations: guides/proteinpaint/view-mutation-details.md
+      - Filtering Mutations: guides/proteinpaint/filtering-mutations.md
+      - Advanced Usage:
+          - Custom Protein Domains: guides/proteinpaint/custom-protein-domains.md
   - Studies:
       - About: guides/studies/index.md
       - Sickle Cell: guides/studies/sickle-cell.md
