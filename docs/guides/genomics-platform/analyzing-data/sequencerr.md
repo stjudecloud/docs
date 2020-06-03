@@ -74,17 +74,24 @@ By sequencing a common DNA library on different sequencers, we demonstrate that 
 
 ## Running the Analysis
 
-**SequencErr** application can be accessed from [https://platform.stjude.cloud/workflows/sequencerr](https://platform.stjude.cloud/workflows/sequencerr)
-
 !!! note
     This tool is intended free-of-charge for non-profit usages. 
     Please contact [Dr. Xiaotu Ma](mailto:Xiaotu.Ma@stjude.org) for for-profit usages and modifications
 
-Please refer to the stepwise **instructions PDF [here](../../../files/guides/tools/sequencerr/SequencErr_Instructions.pdf)** or following steps to learn how to launch the workflow, hook up input files, adjust parameters, run analysis and inspect output files.
+Please refer to the following steps to learn how to launch the workflow, hook up input files, adjust parameters, run analysis and inspect output files.
 
-**Log in and Launch the (SequencErr)[https://platform.stjude.cloud/workflows/sequencerr]**
+**Log in and Launch the SequencErr**
+
+**SequencErr** application can be accessed from [https://platform.stjude.cloud/workflows/sequencerr](https://platform.stjude.cloud/workflows/sequencerr)
 
 ![](../../../files/guides/tools/sequencerr/Sequencerr_log_in_1.png)
+
+!!! caution "For Manuscript Reviewers only" 
+    Please select **_DNAnexus account_** option to log in.
+    
+    Follow the stepwise instructions available in the **PDF [here](../../../files/guides/tools/sequencerr/SequencErr_Instructions.pdf)** .
+
+General users please refer to the following instructions.
 
 ![](../../../files/guides/tools/sequencerr/Sequencerr_log_in_2.png)
 
