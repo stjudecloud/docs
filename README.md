@@ -45,6 +45,17 @@ mkdocs build
 mkdocs serve
 ```
 
+## Development
+
+St. Jude Cloud's documentation is built with [mkdocs](https://www.mkdocs.org/) and [mkdocs-material](https://squidfunk.github.io/mkdocs-material/). All features outlined in the mkdocs-material technical documentation should be available to be enabled and used. 
+
+Please follow these best practices:
+
+* Heavily research and understand what mkdocs-material supports! Particularly [admonitions](https://squidfunk.github.io/mkdocs-material/extensions/admonition/) and [code highlighting](https://squidfunk.github.io/mkdocs-material/extensions/codehilite/). These will greatly improve the quality of your documentation.
+* You are permitted to use HTML tags and elements when Markdown does not support something you need (e.g. underlining), but please use Markdown when at all possible. The code base will become very hard to maintain if we use HTML unnecessarily.
+* When working on large features, please make a branch and submit a pull request.
+* We will continue to add automation to ensure links are live, words are spelled correctly, etc. Please pay attention to these statuses as you check-in code.
+
 ## Deployment
 
 Commits to `master` automatically deploy after 5-10 minutes to https://stjude.cloud/docs. There is no other deploy process available (or needed) currently. If you are working on a large change, we highly recommend you start a branch and submit a pull request when you are finished.
