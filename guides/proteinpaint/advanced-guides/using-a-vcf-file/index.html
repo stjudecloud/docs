@@ -1,0 +1,2739 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <script src="//assets.adobedtm.com/launch-EN942f79c83ff84c10a45b4856a85eaccb.min.js" async></script>
+    <script>!function(e,a,t,n,g,c,o){e.GoogleAnalyticsObject=g,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),o=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",o.parentNode.insertBefore(c,o)}(window,document,"script",0,"ga"),ga("create","UA-107924368-1","auto"),ga("send","pageview")</script>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Using a vcf file - St. Jude Cloud Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.7d2ef1ff.css">
+      
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.eca31fed.js"></script>
+    
+    
+      
+    
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#preparing-a-vcf-file" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../.." title="St. Jude Cloud Documentation" aria-label="St. Jude Cloud Documentation" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="../../../../images/stjude-logo-child-white.png" width="40" height="28">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              St. Jude Cloud Documentation
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Using a vcf file
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/stjudecloud/docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    stjudecloud/docs
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../.." class="md-tabs__link md-tabs__link--active">
+        Overview
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../covid-19/" class="md-tabs__link">
+          COVID-19 Quickstart
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../genomics-platform/" class="md-tabs__link">
+          Genomics Platform
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../pecan/" class="md-tabs__link">
+          PeCan
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../visualization-community/" class="md-tabs__link">
+          Visualization Community
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../" class="md-tabs__link">
+          ProteinPaint
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../studies/" class="md-tabs__link">
+          Studies
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../.." title="St. Jude Cloud Documentation" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="../../../../images/stjude-logo-child-white.png" width="48" height="48">
+      
+    </a>
+    St. Jude Cloud Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/stjudecloud/docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    stjudecloud/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ecosystem/" title="About our Ecosystem" class="md-nav__link">
+      About our Ecosystem
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      COVID-19 Quickstart
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        COVID-19 Quickstart
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/getting-started/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/upload-local/" title="Data upload (local)" class="md-nav__link">
+      Data upload (local)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/upload-cluster/" title="Data upload (HPC)" class="md-nav__link">
+      Data upload (HPC)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/creating-a-cloud-app-covid/" title="Creating a cloud app" class="md-nav__link">
+      Creating a cloud app
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/interactive-node/" title="Interactive nodes" class="md-nav__link">
+      Interactive nodes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/visualizing-ngs-data/" title="Visualizing NGS data" class="md-nav__link">
+      Visualizing NGS data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Genomics Platform
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Genomics Platform
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/accounts-and-billing/" title="Accounts and Billing" class="md-nav__link">
+      Accounts and Billing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Requesting Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        Requesting Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/requesting-data/about-our-data/" title="About our Data" class="md-nav__link">
+      About our Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/requesting-data/data-request/" title="Making a Data Request" class="md-nav__link">
+      Making a Data Request
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/requesting-data/how-to-fill-out-DAA/" title="Filling Out a Data Access Agreement" class="md-nav__link">
+      Filling Out a Data Access Agreement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/requesting-data/glossary/" title="About our Decision Process & Terminology" class="md-nav__link">
+      About our Decision Process & Terminology
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Managing Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        Managing Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/managing-data/working-with-our-data/" title="Managing Data Overview" class="md-nav__link">
+      Managing Data Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/managing-data/data-transfer-app/" title="Uploading/Downloading Data" class="md-nav__link">
+      Uploading/Downloading Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/managing-data/how-to-fill-out-Extension/" title="Renewing your Data Access" class="md-nav__link">
+      Renewing your Data Access
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
+    
+    <label class="md-nav__link" for="nav-4-5">
+      Analyzing Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
+        Analyzing Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/analyzing-data/command-line/" title="Command Line Interaction" class="md-nav__link">
+      Command Line Interaction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/analyzing-data/running-sj-workflows/" title="Running our Workflows" class="md-nav__link">
+      Running our Workflows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5-3" type="checkbox" id="nav-4-5-3">
+    
+    <label class="md-nav__link" for="nav-4-5-3">
+      SJ Cloud Workflows
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-5-3">
+        SJ Cloud Workflows
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/analyzing-data/neoepitope/" title="NeoepitopePred" class="md-nav__link">
+      NeoepitopePred
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/analyzing-data/chipseq/" title="ChIP-Seq Peak Calling" class="md-nav__link">
+      ChIP-Seq Peak Calling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/analyzing-data/rapid-rnaseq/" title="Rapid RNA-Seq Fusion Detection" class="md-nav__link">
+      Rapid RNA-Seq Fusion Detection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/analyzing-data/warden/" title="WARDEN Differential Expression Analysis" class="md-nav__link">
+      WARDEN Differential Expression Analysis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/analyzing-data/mutational-signatures/" title="Mutational Signatures" class="md-nav__link">
+      Mutational Signatures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/analyzing-data/sequencerr/" title="SequencErr" class="md-nav__link">
+      SequencErr
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/analyzing-data/cis-x/" title="cis-X" class="md-nav__link">
+      cis-X
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/analyzing-data/creating-a-cloud-app/" title="Creating your own Workflow" class="md-nav__link">
+      Creating your own Workflow
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/faq/" title="Frequently Asked Questions" class="md-nav__link">
+      Frequently Asked Questions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      PeCan
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        PeCan
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pecan/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pecan/pecan-pie/" title="Pecan PIE" class="md-nav__link">
+      Pecan PIE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Visualization Community
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Visualization Community
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../visualization-community/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../visualization-community/proteinpaint/" title="ProteinPaint" class="md-nav__link">
+      ProteinPaint
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../visualization-community/genomepaint/" title="GenomePaint" class="md-nav__link">
+      GenomePaint
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../visualization-community/faq/" title="Frequently Asked Questions" class="md-nav__link">
+      Frequently Asked Questions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      ProteinPaint
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        ProteinPaint
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+    
+    <label class="md-nav__link" for="nav-7-2">
+      User Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-2">
+        User Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../navigating-the-protein-diagram/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../loading-datasets/" title="Loading Datasets" class="md-nav__link">
+      Loading Datasets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../view-mutation-details/" title="Viewing SNV/Indel Mutations" class="md-nav__link">
+      Viewing SNV/Indel Mutations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../exploring-gene-fusions/" title="Viewing Gene Fusions" class="md-nav__link">
+      Viewing Gene Fusions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../exploring-gene-expression/" title="Viewing Expression Data" class="md-nav__link">
+      Viewing Expression Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../filtering-mutations/" title="Filtering Mutations" class="md-nav__link">
+      Filtering Mutations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../exporting-figures-and-data/" title="Exporting Figures and Data" class="md-nav__link">
+      Exporting Figures and Data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      Advanced Usage
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        Advanced Usage
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced-usage/stratify-mutation-by-cancer-subtype.md" title="Stratifying Mutations by Cancer Subtype" class="md-nav__link">
+      Stratifying Mutations by Cancer Subtype
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced-usage/visualize-custom-mutations.md" title="Visualize Your Mutation Data" class="md-nav__link">
+      Visualize Your Mutation Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced-usage/custom-protein-domains.md" title="Add Custom Protein Domains" class="md-nav__link">
+      Add Custom Protein Domains
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-4" type="checkbox" id="nav-7-4">
+    
+    <label class="md-nav__link" for="nav-7-4">
+      Developer's Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-4">
+        Developer's Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developers-guide/index.md" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developers-guide/required-parameters.md" title="Required Parameters" class="md-nav__link">
+      Required Parameters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developers-guide/genome-browser-view.md" title="Genome Browser View" class="md-nav__link">
+      Genome Browser View
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developers-guide/genomepaint.md" title="GenomePaint" class="md-nav__link">
+      GenomePaint
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developers-guide/gene-view.md" title="Gene View" class="md-nav__link">
+      Gene View
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developers-guide/motif-change-prediction.md" title="Motif Change Prediction" class="md-nav__link">
+      Motif Change Prediction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developers-guide/differential-gene-expression-viewer.md" title="Differential Gene Expression Viewer" class="md-nav__link">
+      Differential Gene Expression Viewer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developers-guide/fusion-editor.md" title="Fusion Editor" class="md-nav__link">
+      Fusion Editor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developers-guide/study-view.md" title="Study View" class="md-nav__link">
+      Study View
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developers-guide/other-parameters.md" title="Other Parameters" class="md-nav__link">
+      Other Parameters
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Studies
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Studies
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../studies/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../studies/sickle-cell/" title="Sickle Cell" class="md-nav__link">
+      Sickle Cell
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../faq/" title="Frequently Asked Questions" class="md-nav__link">
+      Frequently Asked Questions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../citing-stjude-cloud/" title="Citing St. Jude Cloud" class="md-nav__link">
+      Citing St. Jude Cloud
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-a-vcf-file" class="md-nav__link">
+    Preparing a VCF file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hosting-a-vcf-file" class="md-nav__link">
+    Hosting a VCF file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#showing-a-vcf-file-on-proteinpaint" class="md-nav__link">
+    Showing a VCF file on ProteinPaint
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#via-url-parameters" class="md-nav__link">
+    Via URL parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via-embedding-api" class="md-nav__link">
+    Via embedding API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variant-annotation-formats" class="md-nav__link">
+    Variant annotation formats
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vep-format" class="md-nav__link">
+    VEP format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ann-format" class="md-nav__link">
+    ANN format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-house-format" class="md-nav__link">
+    In-house format
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-multiple-vcf-files-in-one-track" class="md-nav__link">
+    Combining multiple VCF files in one track
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#highlighting-and-filtering-variants-with-info-fields" class="md-nav__link">
+    Highlighting and filtering variants with INFO fields
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#categorical-info-field-locus-level" class="md-nav__link">
+    Categorical INFO field, locus-level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categorical-info-field-alt-allele-level" class="md-nav__link">
+    Categorical INFO field, alt-allele-level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categorical-field-without-predefined-categories-and-automatic-color-assignment" class="md-nav__link">
+    Categorical field without predefined categories and automatic color assignment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numerical-info-field" class="md-nav__link">
+    Numerical INFO field
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-features" class="md-nav__link">
+    Additional features
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#population-frequency-filter" class="md-nav__link">
+    Population frequency filter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coverage-vaf-plot" class="md-nav__link">
+    Coverage-VAF plot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-line-plots" class="md-nav__link">
+    Sample line plots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genotype-by-numeric-value" class="md-nav__link">
+    Genotype by numeric value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boxplots-by-genotype" class="md-nav__link">
+    Boxplots by genotype
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-metadata-annotation" class="md-nav__link">
+    Sample metadata annotation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speeding-up-multi-sample-vcf-track-loading" class="md-nav__link">
+    Speeding up multi-sample VCF track loading
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linking-an-image-to-each-variant" class="md-nav__link">
+    Linking an image to each variant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-display-of-multi-column-info-field" class="md-nav__link">
+    Table display of multi-column INFO Field
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#info2table" class="md-nav__link">
+    info2table:{}
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#info2singletable" class="md-nav__link">
+    info2singletable:{}
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hidetrue" class="md-nav__link">
+    .hide:true
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namestr" class="md-nav__link">
+    .name:STR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ampersand2brtrue" class="md-nav__link">
+    .ampersand2br:true
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isurltrue" class="md-nav__link">
+    .isurl:true
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appendurl-str" class="md-nav__link">
+    .appendUrl: STR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#urlmatchlst" class="md-nav__link">
+    .urlMatchLst:{}
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#separate_tables" class="md-nav__link">
+    separate_tables:\[\]
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url-links-for-variants" class="md-nav__link">
+    URL links for variants
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-vcf-track-object" class="md-nav__link">
+    Summary of VCF track object
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/stjudecloud/docs/edit/master/docs/guides/proteinpaint/advanced-guides/using-a-vcf-file.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Using a vcf file</h1>
+                
+                <p><strong>Using VCF file on ProteinPaint</strong></p>
+<p>Current implementation works for SNV/indel data only.</p>
+<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image6.png" /></p>
+<h2 id="preparing-a-vcf-file">Preparing a VCF file<a class="headerlink" href="#preparing-a-vcf-file" title="Permanent link">&para;</a></h2>
+<p>Input file: file.vcf</p>
+<div class="highlight"><pre><span></span><code>bgzip file.vcf
+tabix -p vcf file.vcf.gz
+</code></pre></div>
+
+<p>If successful, this will produce two files "file.vcf.gz" and
+"file.vcf.gz.tbi". The latter is the TBI index file. CSI index also
+works.</p>
+<h2 id="hosting-a-vcf-file">Hosting a VCF file<a class="headerlink" href="#hosting-a-vcf-file" title="Permanent link">&para;</a></h2>
+<p>Host it on the ProteinPaint server:</p>
+<ol>
+<li>
+<p>Put both the .gz file and the index file at the same directory
+    &gt; inside the <TP> directory of the ProteinPaint server.</p>
+<p>a.  The <TP> directory is specified in the file "serverconfig.json".</p>
+</li>
+<li>
+<p>Obtain the relative path to the .gz file from but not include the <TP> directory.</p>
+<p>a.  E.g. for <TP>/path/to/file.vcf.gz, the path would be "path/to/file.vcf.gz"</p>
+</li>
+</ol>
+<p>Host it on a web server:</p>
+<ol>
+<li>
+<p>Put the .gz and index files on the web server. Obtain the URL of the .gz file for submission. For most cases ProteinPaint expects to find the index file at the same location of the .gz file</p>
+</li>
+<li>
+<p>If the index file does not share URL with the .gz file, provide its URL via the .indexURL attribute in the JSON definition</p>
+</li>
+</ol>
+<h2 id="showing-a-vcf-file-on-proteinpaint">Showing a VCF file on ProteinPaint<a class="headerlink" href="#showing-a-vcf-file-on-proteinpaint" title="Permanent link">&para;</a></h2>
+<h3 id="via-url-parameters">Via URL parameters<a class="headerlink" href="#via-url-parameters" title="Permanent link">&para;</a></h3>
+<p>Examples:</p>
+<div class="highlight"><pre><span></span><code>http://server?block=on&amp;genome=[genome]&amp;vcffile=[name],[file path]
+http://server?block=on&amp;genome=[genome]&amp;vcfurl=[name],[file URL]
+</code></pre></div>
+
+<p>The "vcfurl" cannot accept a separate URL for the index file, for such
+case, use embedding API instead</p>
+<p>This will launch a genome browser view showing the VCF track.</p>
+<h3 id="via-embedding-api">Via embedding API<a class="headerlink" href="#via-embedding-api" title="Permanent link">&para;</a></h3>
+<p>If the index file is using a separate URL with the .gz file, the
+embedding API must be used, in which the attribute "indexURL" can be
+used to provide an additional URL for the index file.</p>
+<p><a href="https://docs.google.com/document/d/1KNx4pVCKd4wgoHI4pjknBRTLrzYp6AL_D-j6MjcQSvQ/edit?usp=sharing">General introduction of embedding API.</a></p>
+<p><a href="https://docs.google.com/document/d/1ZnPZKSSajWyNISSLELMozKxrZHQbdxQkkkQFnxw6zTs/edit?usp=sharing">General introduction on JSON definition for tracks.</a></p>
+<p>See section <strong>Summary of VCF track object</strong> for an overview of the VCF
+track object.</p>
+<h2 id="variant-annotation-formats">Variant annotation formats<a class="headerlink" href="#variant-annotation-formats" title="Permanent link">&para;</a></h2>
+<p>This section describes supported formats for functional annotation of
+variants. The annotation is optional and mostly for coding variants. The
+annotation will color-code variants using ProteinPaint's built-in
+protein mutation classes.</p>
+<p>Shortcoming is the built-in classes are hardcoded and cannot be
+customized.</p>
+<p>ProteinPaint fully supports custom defined classes through an
+alternative method. See the section on highlighting and filtering with
+INFO fields.</p>
+<h3 id="vep-format">VEP format<a class="headerlink" href="#vep-format" title="Permanent link">&para;</a></h3>
+<p>The VCF output from the VEP is accepted by ProteinPaint. Find details at
+<a href="http://useast.ensembl.org/info/docs/tools/vep/vep_formats.html">http://useast.ensembl.org/info/docs/tools/vep/vep_formats.html</a>
+at the "VCF output" section.</p>
+<p>The annotation is encoded in an INFO field called CSQ. It supports
+functional annotation of multiple isoforms on a given allele.</p>
+<p>Description of the CSQ sub-fields must be in a required format for the
+purpose of identifying the name and order of the sub-fields. Following
+is one example:</p>
+<div class="highlight"><pre><span></span><code>##INFO=&lt;ID=CSQ,Number=.,Type=String,Description=&quot;Consequence type as predicted by VEP. Format: Allele|Gene|Feature|Feature_type|Consequence|cDNA_position|CDS_position|Protein_position|Amino_acids|Codons|Existing_variation|ALLELE_NUM|DISTANCE|STRAND|SYMBOL|SYMBOL_SOURCE|HGNC_ID|BIOTYPE|CANONICAL|CCDS|ENSP|SWISSPROT|TREMBL|UNIPARC|SIFT|PolyPhen|EXON|INTRON|DOMAINS|HGVSc|HGVSp|GMAF|AFR_MAF|AMR_MAF|ASN_MAF|EUR_MAF|AA_MAF|EA_MAF|CLIN_SIG|SOMATIC|PUBMED|MOTIF_NAME|MOTIF_POS|HIGH_INF_POS|MOTIF_SCORE_CHANGE|LoF_info|LoF_flags|LoF_filter|LoF&quot;&gt;
+</code></pre></div>
+
+<p>Required CSQ sub-fields:</p>
+<ul>
+<li>
+<p>Feature_type</p>
+<ul>
+<li>When the value of Feature_type is "Transcript" for a variant, the value of "Feature" should be isoform name, e.g. RefSeq or ENSEMBL isoform. If multiple isoform names joined by comma, the first will be used</li>
+</ul>
+</li>
+<li>
+<p>Consequence</p>
+<ul>
+<li>The VEP consequence notation <a href="http://useast.ensembl.org/info/genome/variation/predicted_data.html">http://useast.ensembl.org/info/genome/variation/predicted_data.html</a> is converted to internal notation used by ProteinPaint. A match table is shown below</li>
+</ul>
+</li>
+<li>
+<p>HGVSp</p>
+</li>
+<li>
+<p>Protein_position</p>
+</li>
+<li>
+<p>Amino_acids</p>
+</li>
+<li>
+<p>HGVSc</p>
+</li>
+<li>
+<p>Existing_variation</p>
+<ul>
+<li>If any above fields are available, will use the value as the label of the variant</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>VEP notation</strong></th>
+<th><strong>ProteinPaint notation</strong></th>
+<th><strong>Note</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>transcript_ablation</td>
+<td>deletion, intragenic</td>
+<td>Not yet supported.</td>
+</tr>
+<tr>
+<td>splice_acceptor_variant</td>
+<td>splice</td>
+<td></td>
+</tr>
+<tr>
+<td>splice_donor_variant</td>
+<td>splice</td>
+<td></td>
+</tr>
+<tr>
+<td>stop_gained</td>
+<td>nonsense</td>
+<td></td>
+</tr>
+<tr>
+<td>frameshift_variant</td>
+<td>frameshift</td>
+<td></td>
+</tr>
+<tr>
+<td>stop_lost</td>
+<td>nonsense</td>
+<td></td>
+</tr>
+<tr>
+<td>start_lost</td>
+<td>nonsense</td>
+<td></td>
+</tr>
+<tr>
+<td>transcript_amplification</td>
+<td>nonstandard</td>
+<td>Not yet supported.</td>
+</tr>
+<tr>
+<td>inframe_insertion</td>
+<td>proteinins</td>
+<td></td>
+</tr>
+<tr>
+<td>inframe_deletion</td>
+<td>proteindel</td>
+<td></td>
+</tr>
+<tr>
+<td>missense_variant</td>
+<td>missense</td>
+<td></td>
+</tr>
+<tr>
+<td>protein_altering_variant</td>
+<td>nonsense</td>
+<td>Not explicitly supported</td>
+</tr>
+<tr>
+<td>splice_region_variant</td>
+<td>splice_region</td>
+<td></td>
+</tr>
+<tr>
+<td>incomplete_terminal_codon_variant</td>
+<td>nonsense</td>
+<td></td>
+</tr>
+<tr>
+<td>stop_retained_variant</td>
+<td>silent</td>
+<td>Not explicitly supported.</td>
+</tr>
+<tr>
+<td>synonymous_variant</td>
+<td>silent</td>
+<td></td>
+</tr>
+<tr>
+<td>coding_sequence_variant</td>
+<td>nonstandard</td>
+<td>Not explicitly supported.</td>
+</tr>
+<tr>
+<td>mature_miRNA_variant</td>
+<td>exon</td>
+<td>Not yet supported.</td>
+</tr>
+<tr>
+<td>5_prime_UTR_variant</td>
+<td>utr_5</td>
+<td></td>
+</tr>
+<tr>
+<td>3_prime_UTR_variant</td>
+<td>utr_3</td>
+<td></td>
+</tr>
+<tr>
+<td>non_coding_transcript_exon_variant</td>
+<td>exon</td>
+<td></td>
+</tr>
+<tr>
+<td>intron_variant</td>
+<td>intron</td>
+<td></td>
+</tr>
+<tr>
+<td>NMD_transcript_variant</td>
+<td>silent</td>
+<td>Not equivalent.</td>
+</tr>
+<tr>
+<td>non_coding_transcript_variant</td>
+<td>exon</td>
+<td></td>
+</tr>
+<tr>
+<td>upstream_gene_variant</td>
+<td>noncoding</td>
+<td>Not explicitly supported.</td>
+</tr>
+<tr>
+<td>downstream_gene_variant</td>
+<td>noncoding</td>
+<td>Not explicitly supported.</td>
+</tr>
+<tr>
+<td>TFBS_ablation</td>
+<td>noncoding</td>
+<td>Not yet supported.</td>
+</tr>
+<tr>
+<td>TFBS_amplification</td>
+<td>noncoding</td>
+<td>Not yet supported.</td>
+</tr>
+<tr>
+<td>TF_binding_site_variant</td>
+<td>noncoding</td>
+<td>Not yet supported.</td>
+</tr>
+<tr>
+<td>regulatory_region_ablation</td>
+<td>noncoding</td>
+<td>Not yet supported.</td>
+</tr>
+<tr>
+<td>regulatory_region_amplification</td>
+<td>noncoding</td>
+<td>Not yet supported.</td>
+</tr>
+<tr>
+<td>feature_elongation</td>
+<td>noncoding</td>
+<td>Not yet supported.</td>
+</tr>
+<tr>
+<td>regulatory_region_variant</td>
+<td>noncoding</td>
+<td>Not yet supported.</td>
+</tr>
+<tr>
+<td>feature_truncation</td>
+<td>noncoding</td>
+<td>Not yet supported.</td>
+</tr>
+<tr>
+<td>intergenic_variant</td>
+<td>noncoding</td>
+<td>Not yet supported.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ann-format">ANN format<a class="headerlink" href="#ann-format" title="Permanent link">&para;</a></h3>
+<p>As generated by SnpEff:
+<a href="http://snpeff.sourceforge.net/VCFannotationformat_v1.0.pdf">http://snpeff.sourceforge.net/VCFannotationformat_v1.0.pdf</a></p>
+<p>This format uses the "ANN" INFO field. The meta line:
+<div class="highlight"><pre><span></span><code>##INFO=&lt;ID=ANN,Number=.,Type=String,Description=&quot;Functional annotations: &#39;Allele | Annotation | Annotation_Impact | Gene_Name | Gene_ID | Feature_Type | Feature_ID | Transcript_BioType | Rank | HGVS.c | HGVS.p | cDNA.pos / cDNA.length | CDS.pos / CDS.length | AA.pos / AA.length | Distance | ERRORS / WARNINGS / INFO&#39; &quot;&gt;
+</code></pre></div></p>
+<p>Example annotation data:</p>
+<div class="highlight"><pre><span></span><code>ANN=T|5_prime_UTR_variant|MODIFIER|TUBB8|TUBB8|transcript|XM_011519459.2|protein_coding|1/4|c.-177G&gt;A|||||750|,T|upstream_gene_variant|MODIFIER|TUBB8|TUBB8|transcript|NM_177987.2|protein_coding||c.-187G&gt;A|||||187|,T|upstream_gene_variant|MODIFIER|TUBB8|TUBB8|transcript|XM_011519460.2|protein_coding||c.-1248G&gt;A|||||961|,T|upstream_gene_variant|MODIFIER|TUBB8|TUBB8|transcript|XM_017016193.1|protein_coding||c.-1370G&gt;A|||||967|,T|upstream_gene_variant|MODIFIER|TUBB8|TUBB8|transcript|XM_017016192.1|protein_coding||c.-1370G&gt;A|||||955|
+</code></pre></div>
+
+<p>The "Annotation" notations are converted to the built-in mutation class
+using the same set of VEP rules.</p>
+<h3 id="in-house-format">In-house format<a class="headerlink" href="#in-house-format" title="Permanent link">&para;</a></h3>
+<p>This format uses multiple INFO fields to provide per-alt allele values:</p>
+<div class="highlight"><pre><span></span><code>##INFO=&lt;ID=AV_POS,Number=A,Type=Integer,Description=&quot;Annovar+: adjusted allele position in order of ALT column&quot;&gt;
+##INFO=&lt;ID=AV_REF,Number=A,Type=String,Description=&quot;Annovar+: adjusted reference allele in order of ALT column&quot;&gt;
+##INFO=&lt;ID=AV_ALT,Number=A,Type=String,Description=&quot;Annovar+: adjusted variant allele in order of ALT column&quot;&gt;
+##INFO=&lt;ID=AV_ACC,Number=A,Type=String,Description=&quot;Annovar+: isoform accession in order of ALT column&quot;&gt;
+##INFO=&lt;ID=AV_AA,Number=A,Type=String,Description=&quot;Annovar+: amino acid change in order of ALT column&quot;&gt;
+##INFO=&lt;ID=AV_CLASS,Number=A,Type=String,Description=&quot;Annovar+: variant class in order of ALT column&quot;&gt;
+</code></pre></div>
+
+<p>Example annotation:</p>
+<div class="highlight"><pre><span></span><code>AV_POS=69655;AV_REF=G;AV_ALT=C;AV_ACC=NM_001005484;AV_AA=D189H;AV_CLASS=missense
+</code></pre></div>
+
+<h2 id="combining-multiple-vcf-files-in-one-track">Combining multiple VCF files in one track<a class="headerlink" href="#combining-multiple-vcf-files-in-one-track" title="Permanent link">&para;</a></h2>
+<p>This is only achievable by declaring the tracks in JSON and calling
+ProteinPaint's <a href="https://docs.google.com/document/d/1KNx4pVCKd4wgoHI4pjknBRTLrzYp6AL_D-j6MjcQSvQ/edit?usp=sharing">embedding API</a>.</p>
+<p>Following example shows the JSON part of a VCF track which combines
+multiple VCF files.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="s2">&quot;vcf&quot;</span><span class="p">,</span>
+<span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;track name&quot;</span><span class="p">,</span>
+<span class="s2">&quot;tracks&quot;</span><span class="o">:</span><span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;file&quot;</span><span class="o">:</span><span class="s2">&quot;path/to/sample1.gz&quot;</span>
+    <span class="p">},</span>  
+    <span class="p">{</span>   
+       <span class="s2">&quot;file&quot;</span><span class="o">:</span><span class="s2">&quot;path/to/sample2.gz&quot;</span>
+    <span class="p">},</span>  
+    <span class="p">...</span> <span class="nx">more</span> <span class="nx">files</span> <span class="p">...</span>
+<span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>In above example, the "tracks" attribute provides a list of member
+tracks.</p>
+<p>Each member track can have 0 or multiple samples.</p>
+<h2 id="highlighting-and-filtering-variants-with-info-fields">Highlighting and filtering variants with INFO fields<a class="headerlink" href="#highlighting-and-filtering-variants-with-info-fields" title="Permanent link">&para;</a></h2>
+<p>Variants from a VCF track can be highlighted by other types of
+annotation, in addition to the default mutation class.</p>
+<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image4.png" /></p>
+<p>To recreate this display, save following text into an HTML file, and
+display it in a web browser.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://proteinpaint.stjude.org/bin/proteinpaint.js&quot;</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">aaa</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;margin:10px&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="nx">runproteinpaint</span><span class="p">({</span>
+    <span class="nx">host</span><span class="o">:</span><span class="s1">&#39;https://proteinpaint.stjude.org&#39;</span><span class="p">,</span>
+    <span class="nx">holder</span><span class="o">:</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;aaa&#39;</span><span class="p">),</span>
+    <span class="nx">parseurl</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span>
+    <span class="nx">block</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span>
+    <span class="nx">genome</span><span class="o">:</span><span class="s1">&#39;hg38&#39;</span><span class="p">,</span>
+    <span class="nx">position</span><span class="o">:</span><span class="s1">&#39;chr12:25245155-25246060&#39;</span><span class="p">,</span>
+    <span class="nx">nativetracks</span><span class="o">:</span><span class="s1">&#39;RefGene&#39;</span><span class="p">,</span>
+    <span class="nx">tracks</span><span class="o">:</span><span class="p">[</span>   <span class="p">{</span>
+        <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;vcf&#39;</span><span class="p">,</span>
+        <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;Clinvar&#39;</span><span class="p">,</span>
+        <span class="nx">file</span><span class="o">:</span><span class="s1">&#39;hg38/clinvar.hg38.vcf.gz&#39;</span><span class="p">,</span>
+        <span class="nx">vcfinfofilter</span><span class="o">:</span><span class="p">{</span><span class="nx">lst</span><span class="o">:</span><span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;Clinical significance&#39;</span><span class="p">,</span>
+                <span class="nx">locusinfo</span><span class="o">:</span><span class="p">{</span>
+                    <span class="nx">key</span><span class="o">:</span><span class="s1">&#39;CLNSIG&#39;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="nx">categories</span><span class="o">:</span><span class="p">{</span>
+                    <span class="s1">&#39;Uncertain_significance&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#aaa&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Uncertain significance&#39;</span><span class="p">,</span><span class="nx">textcolor</span><span class="o">:</span><span class="s1">&#39;white&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;not_provided&#39;</span><span class="o">:</span> <span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#ccc&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Not provided&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;_not_provided&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#ccc&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Not provided&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;Benign&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#43ac6a&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Benign&#39;</span><span class="p">,</span><span class="nx">textcolor</span><span class="o">:</span><span class="s1">&#39;white&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;Benign/Likely_benign&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#43ac6a&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Benign/Likely benign&#39;</span><span class="p">,</span><span class="nx">textcolor</span><span class="o">:</span><span class="s1">&#39;white&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;Likely_benign&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#5bc0de&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Likely benign&#39;</span><span class="p">,</span><span class="nx">textcolor</span><span class="o">:</span><span class="s1">&#39;white&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;Likely_pathogenic&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#e99002&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Likely pathogenic&#39;</span><span class="p">,</span><span class="nx">textcolor</span><span class="o">:</span><span class="s1">&#39;white&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;Pathogenic&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#f04124&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Pathogenic&#39;</span><span class="p">,</span><span class="nx">textcolor</span><span class="o">:</span><span class="s1">&#39;white&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;Pathogenic/Likely_pathogenic&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#f04124&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Pathogenic/Likely pathogenic&#39;</span><span class="p">,</span><span class="nx">textcolor</span><span class="o">:</span><span class="s1">&#39;white&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;drug_response&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;gold&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Drug response&#39;</span><span class="p">,</span><span class="nx">textcolor</span><span class="o">:</span><span class="s1">&#39;white&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;_drug_response&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;gold&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Drug response&#39;</span><span class="p">,</span><span class="nx">textcolor</span><span class="o">:</span><span class="s1">&#39;white&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;Conflicting_interpretations_of_pathogenicity&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#90C3D4&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Conflicting interpretations of pathogenicity&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;other&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#ccc&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Other&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;_other&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#ccc&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Other&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;not_provided&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#ccc&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Not provided&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;_not_provided&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#ccc&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Not provided&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;risk_factor&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#ccc&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Risk factor&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;_risk_factor&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#ccc&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Risk factor&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;association&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#ccc&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Association&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;_association&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#ccc&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Association&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;Affects&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#ccc&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Affects&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;_Affects&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#ccc&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Affects&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;protective&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#ccc&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Protective&#39;</span><span class="p">},</span>
+                    <span class="s1">&#39;_protective&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#ccc&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Protective&#39;</span><span class="p">},</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;ExAC frequency&#39;</span><span class="p">,</span>
+                <span class="nx">locusinfo</span><span class="o">:</span><span class="p">{</span> <span class="nx">key</span><span class="o">:</span><span class="s1">&#39;AF_EXAC&#39;</span> <span class="p">},</span>
+                <span class="nx">numericfilter</span><span class="o">:</span><span class="p">[</span> <span class="p">{</span><span class="nx">side</span><span class="o">:</span><span class="s1">&#39;&lt;&#39;</span><span class="p">,</span><span class="nx">value</span><span class="o">:</span><span class="mf">0.0001</span><span class="p">},</span> <span class="p">{</span><span class="nx">side</span><span class="o">:</span><span class="s1">&#39;&lt;&#39;</span><span class="p">,</span><span class="nx">value</span><span class="o">:</span><span class="mf">0.001</span><span class="p">},</span>  <span class="p">{</span><span class="nx">side</span><span class="o">:</span><span class="s1">&#39;&lt;&#39;</span><span class="p">,</span><span class="nx">value</span><span class="o">:</span><span class="mf">.01</span><span class="p">}</span> <span class="p">],</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;GO-ESP frequency&#39;</span><span class="p">,</span>
+                <span class="nx">locusinfo</span><span class="o">:</span><span class="p">{</span> <span class="nx">key</span><span class="o">:</span><span class="s1">&#39;AF_ESP&#39;</span> <span class="p">},</span>
+                <span class="nx">numericfilter</span><span class="o">:</span><span class="p">[</span> <span class="p">{</span><span class="nx">side</span><span class="o">:</span><span class="s1">&#39;&lt;&#39;</span><span class="p">,</span><span class="nx">value</span><span class="o">:</span><span class="mf">0.0001</span><span class="p">},</span> <span class="p">{</span><span class="nx">side</span><span class="o">:</span><span class="s1">&#39;&lt;&#39;</span><span class="p">,</span><span class="nx">value</span><span class="o">:</span><span class="mf">0.001</span><span class="p">},</span>  <span class="p">{</span><span class="nx">side</span><span class="o">:</span><span class="s1">&#39;&lt;&#39;</span><span class="p">,</span><span class="nx">value</span><span class="o">:</span><span class="mf">.01</span><span class="p">}</span> <span class="p">],</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;1000 Genomes frequency&#39;</span><span class="p">,</span>
+                <span class="nx">locusinfo</span><span class="o">:</span><span class="p">{</span> <span class="nx">key</span><span class="o">:</span><span class="s1">&#39;AF_TGP&#39;</span> <span class="p">},</span>
+                <span class="nx">numericfilter</span><span class="o">:</span><span class="p">[</span> <span class="p">{</span><span class="nx">side</span><span class="o">:</span><span class="s1">&#39;&lt;&#39;</span><span class="p">,</span><span class="nx">value</span><span class="o">:</span><span class="mf">0.0001</span><span class="p">},</span> <span class="p">{</span><span class="nx">side</span><span class="o">:</span><span class="s1">&#39;&lt;&#39;</span><span class="p">,</span><span class="nx">value</span><span class="o">:</span><span class="mf">0.001</span><span class="p">},</span>  <span class="p">{</span><span class="nx">side</span><span class="o">:</span><span class="s1">&#39;&lt;&#39;</span><span class="p">,</span><span class="nx">value</span><span class="o">:</span><span class="mf">.01</span><span class="p">}</span> <span class="p">],</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+               <span class="nx">setidx4mclass</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span>
+               <span class="nx">setidx4numeric</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span>
+               <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">})</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>The example declares the VCF track as a JavaScript object (with the
+attribute "vcfinfofilter" explained below), and submit it to the public
+ProteinPaint server through the <a href="https://docs.google.com/document/d/1KNx4pVCKd4wgoHI4pjknBRTLrzYp6AL_D-j6MjcQSvQ/edit?usp=sharing">embedding API</a>.</p>
+<p>The attribute "<strong>vcfinfofilter</strong>" provides instructions about what INFO fields can be used to highlight variants. It must contain the "<strong>lst</strong>" attribute which is an array, and each element is an object describing an INFO field.</p>
+<p>In each object describing an INFO field, use "<strong>locusinfo</strong>" to indicate that this field provides a value for each locus, and "<strong>altalleleinfo</strong>" to indicate that this field provides one value for each alternative allele, for a given locus.</p>
+<p>In a VCF file, an INFO field may describes categorical information about variants. In this case, the attribute "<strong>categories</strong>" is used to list a set of keys from such categorical information. And for each key, it provides the color and text label. Keys found in the VCF file but not listed here will be shown in black color. Variants not annotated by this INFO field will be aggregated under the category "Not annotated" and shown in black.</p>
+<p>Numerical INFO field can be used to provide cutoff values and filter variants, through "<strong>numericfilter</strong>". The attribute "categories" should not be used for numerical INFO.</p>
+<h3 id="categorical-info-field-locus-level">Categorical INFO field, locus-level<a class="headerlink" href="#categorical-info-field-locus-level" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;Variant origin&#39;</span><span class="p">,</span>
+    <span class="nx">locusinfo</span><span class="o">:</span><span class="p">{</span> 
+             <span class="nx">key</span><span class="o">:</span><span class="s1">&#39;SAO&#39;</span>
+       <span class="p">},</span>
+    <span class="nx">categories</span><span class="o">:</span><span class="p">{</span>
+        <span class="s1">&#39;0&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#aaa&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;unspecified&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;1&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Germline&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;2&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Somatic&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;3&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;magenta&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Both&#39;</span><span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">},</span>
+</code></pre></div>
+
+<p>Its META line:</p>
+<div class="highlight"><pre><span></span><code>##INFO=&lt;ID=SAO,Number=1,Type=Integer,Description=&quot;Variant Allele Origin: 0 - unspecified, 1 - Germline, 2 - Somatic, 3 - Both&quot;&gt;
+</code></pre></div>
+
+<p>Annotation to a variant:</p>
+<div class="highlight"><pre><span></span><code>#CHROM  POS     ID    REF     ALT     QUAL    FILTER  INFO
+1       1014143 .     C       T       .       .       ...;SAO=1;...
+</code></pre></div>
+
+<h3 id="categorical-info-field-alt-allele-level">Categorical INFO field, alt-allele-level<a class="headerlink" href="#categorical-info-field-alt-allele-level" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;Review status&#39;</span><span class="p">,</span>
+    <span class="nx">altalleleinfo</span><span class="o">:</span><span class="p">{</span>
+        <span class="nx">key</span><span class="o">:</span><span class="s1">&#39;CLNREVSTAT&#39;</span><span class="p">,</span>
+        <span class="nx">separator</span><span class="o">:</span><span class="s1">&#39;|&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nx">categories</span><span class="o">:</span><span class="p">{</span>
+        <span class="s1">&#39;no_assertion&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#545454&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;no assertion&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;no_criteria&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;#858585&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;no criteria&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;mult&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;multiple submitters no conflicts&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;conf&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;conflicting&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;exp&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;expert&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;guide&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Practice guideline&#39;</span><span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Its META line:</p>
+<div class="highlight"><pre><span></span><code>##INFO=&lt;ID=CLNREVSTAT,Number=.,Type=String,Description=&quot;no_assertion - No assertion provided, no_criteria - No assertion criteria provided, single - Criteria provided single submitter, mult - Criteria provided multiple submitters no conflicts, conf - Criteria provided conflicting interpretations, exp - Reviewed by expert panel, guideline - Practice guideline&quot;&gt;
+</code></pre></div>
+
+<p>Annotation to a variant:</p>
+<div class="highlight"><pre><span></span><code>1       1051336 rs141463750     C       G,T     .       .       ...;CLNREVSTAT=single;...
+</code></pre></div>
+
+<p>(this may not be a good example of alt-allele-level INFO given the
+particular way that ClinVar selects an allele to describe, see the
+CLNALLE field)</p>
+<h3 id="categorical-field-without-predefined-categories-and-automatic-color-assignment">Categorical field without predefined categories and automatic color assignment<a class="headerlink" href="#categorical-field-without-predefined-categories-and-automatic-color-assignment" title="Permanent link">&para;</a></h3>
+<p>This can apply to both locus-level and alt-allele level INFO fields.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;...&#39;</span><span class="p">,</span>
+    <span class="nx">altalleleinfo</span><span class="o">:</span><span class="p">{</span>
+        <span class="nx">key</span><span class="o">:</span><span class="s1">&#39;CLNREVSTAT&#39;</span>
+    <span class="p">},</span>
+      <span class="nx">autocategory</span><span class="o">:</span><span class="kc">true</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>When "autocategory" is set to true, it no longer requires the
+"categories{}" to predefine the list of types and colors. Such will be
+dynamically assigned each time the mutation data is loaded. A fixed
+color list will be used for assigning color to the list of showing
+categories by the order of abundance.</p>
+<p>May allow adding a color list.</p>
+<h3 id="numerical-info-field">Numerical INFO field<a class="headerlink" href="#numerical-info-field" title="Permanent link">&para;</a></h3>
+<p>For numerical INFO field, its value can be used for filtering variants
+in the style of population frequency. Same as categorical INFO, it can
+be either alt-allele-level or locus-level.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="nx">vcfinfofilter</span><span class="o">:</span><span class="p">{</span><span class="nx">lst</span><span class="o">:</span><span class="p">[</span>
+    <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;Population frequency filter&#39;</span><span class="p">,</span>
+    <span class="nx">altalleleinfo</span><span class="o">:</span><span class="p">{</span>
+        <span class="nx">key</span><span class="o">:</span><span class="s1">&#39;AF&#39;</span>
+    <span class="p">},</span>
+    <span class="nx">numericfilter</span><span class="o">:</span><span class="p">[</span><span class="mf">.000001</span><span class="p">,</span> <span class="mf">0.00001</span><span class="p">,</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">],</span>
+      <span class="nx">numericCutoff</span><span class="o">:</span><span class="mf">0.0001</span><span class="p">,</span>
+      <span class="nx">numericCutoffSide</span><span class="o">:</span><span class="s1">&#39;&gt;&#39;</span>
+    <span class="p">}</span>
+<span class="p">]}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The META line:</p>
+<div class="highlight"><pre><span></span><code>##INFO=&lt;ID=AF,Number=A,Type=Float,Description=&quot;Allele Frequency, for each ALT allele, in the same order as listed&quot;&gt;
+</code></pre></div>
+
+<p>Annotation to a variant:</p>
+<div class="highlight"><pre><span></span><code>1       13528   .       C       G,T     1771.54 .      ...;AF=5.438e-04,3.738e-04;...
+</code></pre></div>
+
+<p>By default the filter will retain variants with values lower than the
+cutoff. To change the side of comparison, use the optional "side"
+attribute:</p>
+<div class="highlight"><pre><span></span><code>    numericfilter:[ {side:&quot;&gt;&quot;,value:1}, {side:&quot;&gt;&quot;, value:10} ... ]
+</code></pre></div>
+
+<p>To set the default cutoff values from a numeric filter, use the
+"<strong>numericCutoff</strong>" and "<strong>numericCutoffSide</strong>" attributes as shown in
+above example.</p>
+<p><strong>Missing value</strong>: if the numeric INFO field is missing for a variant,
+[its value will default to 0]{.underline}. This may work for the case of
+population frequency (AF), but may not make sense for other types of
+data. Possible solutions:</p>
+<ul>
+<li>
+<p>Specify a value that a missing variant will default to.</p>
+</li>
+<li>
+<p>Underneath the Y scale, show a new row labeled "missing" to bin all the missing variants.</p>
+</li>
+</ul>
+<h2 id="additional-features">Additional features<a class="headerlink" href="#additional-features" title="Permanent link">&para;</a></h2>
+<p>These features will draw certain charts based on numeric attributes of
+the underlying samples.</p>
+<h3 id="population-frequency-filter">Population frequency filter<a class="headerlink" href="#population-frequency-filter" title="Permanent link">&para;</a></h3>
+<p>The population frequency filter can be applied to any multi-sample VCF
+track, and requires appropriate configuration.</p>
+<p>As above, this requires declaring the track as JSON object and working
+with the embedding API. following is one example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;vcf&#39;</span><span class="p">,</span>
+    <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;SCD 143 samples&#39;</span><span class="p">,</span>
+    <span class="nx">file</span><span class="o">:</span><span class="s1">&#39;path/to/vcf.gz&#39;</span><span class="p">,</span>
+    <span class="nx">populationfrequencyfilter</span><span class="o">:</span><span class="p">{</span>
+         <span class="nx">name</span><span class="o">:</span><span class="s2">&quot;Population frequency filter&quot;</span><span class="p">,</span>
+         <span class="nx">lst</span><span class="o">:</span><span class="p">[</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">]</span>
+       <span class="p">}</span>
+<span class="p">},</span>
+</code></pre></div>
+
+<p>The attribute "populationfrequencyfilter" defines a set of fraction
+values between 0 and 1. Each value will search as a cutoff, e.g. value
+0.01 allows to select variants with less than 1% frequency in the
+population (dividend is the total # of samples in the VCF track).</p>
+<p>In ProteinPaint, it's displayed as below:</p>
+<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image1.png" /></p>
+<p>The cutoff values (1%, 5%, 10%) are listed in the legend section at the
+bottom. Click '&lt;5%' to enable filtering, and resulted in 28 out of 35
+variants visible in the track display. Click on the same cutoff value
+again to disable filtering.</p>
+<h3 id="coverage-vaf-plot">Coverage-VAF plot<a class="headerlink" href="#coverage-vaf-plot" title="Permanent link">&para;</a></h3>
+<p>The coverage-VAF plot is available for any multi-sample tracks with
+allele read count information. The plot can be generated upon clicking
+on a mutation that is present in 2 or more samples.</p>
+<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image5.png" /></p>
+<p>This graph Requires the AD FORMAT field</p>
+<div class="highlight"><pre><span></span><code>##FORMAT=&lt;ID=AD,Number=R,Type=Integer,Description=&quot;Allelic depths for the ref and alt alleles in the order listed&quot;&gt;
+</code></pre></div>
+
+<p>Declare the track as the following JSON object with the
+"vaf2coverageplot" attribute.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;vcf&#39;</span><span class="p">,</span>
+    <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;SCD 143 samples&#39;</span><span class="p">,</span>
+    <span class="nx">file</span><span class="o">:</span><span class="s1">&#39;path/to/vcf.gz&#39;</span><span class="p">,</span>
+    <span class="nx">vaf2coverageplot</span><span class="o">:</span><span class="p">{}</span>
+<span class="p">},</span>
+</code></pre></div>
+
+<p>Optionally, specify following attributes in vaf2coverageplot to
+distinguish samples by color in the plot.</p>
+<div class="admonition todo">
+<p class="admonition-title">Todo</p>
+</div>
+<h3 id="sample-line-plots">Sample line plots<a class="headerlink" href="#sample-line-plots" title="Permanent link">&para;</a></h3>
+<p>Track Shows numerical Y axis, for each variant, all samples are shown as strokes</p>
+<p>One numerical value for each sample, as provided by a metadata
+attribute.</p>
+<div class="highlight"><pre><span></span><code>              <span class="s2">&quot;samplebynumericvalue&quot;</span><span class="o">:</span><span class="p">{</span>
+                     <span class="s2">&quot;attrkey&quot;</span><span class="o">:</span><span class="s2">&quot;HbFlevel&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;axislabel&quot;</span><span class="o">:</span><span class="s2">&quot;HbF level&quot;</span>
+               <span class="p">},</span>
+</code></pre></div>
+
+<h3 id="genotype-by-numeric-value">Genotype by numeric value<a class="headerlink" href="#genotype-by-numeric-value" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image2.png" /></p>
+<p>Track shows numerical Y axis. For each variant, one circle is shown for
+each genotype. Each circle represent a group of samples carrying that
+genotype. Circle vertical position is determined by a consensus value
+(mean) across the samples. This value should be provided as INFO fields. Circle sizes are scaled by number of samples in that group.</p>
+<p>The following configuration will require a multi-sample VCF file for
+getting the total number of samples for each genotype.</p>
+<div class="highlight"><pre><span></span><code>            <span class="s2">&quot;genotypebynumericvalue&quot;</span><span class="o">:</span><span class="p">{</span>
+                <span class="s2">&quot;axislabel&quot;</span><span class="o">:</span><span class="s2">&quot;Genotype HbF&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;refref&quot;</span><span class="o">:</span><span class="p">{</span>
+                    <span class="s2">&quot;infokey&quot;</span><span class="o">:</span><span class="s2">&quot;Hom_Ref_HbF&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;color&quot;</span><span class="o">:</span><span class="s2">&quot;gray&quot;</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;refalt&quot;</span><span class="o">:</span><span class="p">{</span>
+                    <span class="s2">&quot;infokey&quot;</span><span class="o">:</span><span class="s2">&quot;Het_HbF&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;color&quot;</span><span class="o">:</span><span class="s2">&quot;blue&quot;</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;altalt&quot;</span><span class="o">:</span><span class="p">{</span>
+                    <span class="s2">&quot;infokey&quot;</span><span class="o">:</span><span class="s2">&quot;Hom_Alt_HbF&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;color&quot;</span><span class="o">:</span><span class="s2">&quot;red&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+</code></pre></div>
+
+<p>Following configuration will als provide sample count in each genotype
+group as a INFO field. This requires two INFO fields for each genotype,
+one to provide Y-axis value, the other to provide number of samples for
+sizing the circle.</p>
+<div class="highlight"><pre><span></span><code>    <span class="s2">&quot;genotypebynumericvalue&quot;</span><span class="o">:</span><span class="p">{</span>
+          <span class="s2">&quot;axislabel&quot;</span><span class="o">:</span><span class="s2">&quot;Genotype HbF&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;refref&quot;</span><span class="o">:</span><span class="p">{</span>
+              <span class="s2">&quot;infokey&quot;</span><span class="o">:</span><span class="s2">&quot;Hom_Ref_HbF&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;genotyepCountInfokey&quot;</span><span class="o">:</span> <span class="nx">STR</span><span class="p">,</span>
+            <span class="s2">&quot;color&quot;</span><span class="o">:</span><span class="s2">&quot;gray&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;refalt&quot;</span><span class="o">:</span><span class="p">{</span>
+            <span class="s2">&quot;infokey&quot;</span><span class="o">:</span><span class="s2">&quot;Het_HbF&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;genotyepCountInfokey&quot;</span><span class="o">:</span> <span class="nx">STR</span><span class="p">,</span>
+            <span class="s2">&quot;color&quot;</span><span class="o">:</span><span class="s2">&quot;blue&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;altalt&quot;</span><span class="o">:</span><span class="p">{</span>
+            <span class="s2">&quot;infokey&quot;</span><span class="o">:</span><span class="s2">&quot;Hom_Alt_HbF&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;genotyepCountInfokey&quot;</span><span class="o">:</span> <span class="nx">STR</span><span class="p">,</span>
+            <span class="s2">&quot;color&quot;</span><span class="o">:</span><span class="s2">&quot;red&quot;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+</code></pre></div>
+
+<h3 id="boxplots-by-genotype">Boxplots by genotype<a class="headerlink" href="#boxplots-by-genotype" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image8.png" /></p>
+<p>Upon clicking a variant, this will show a set of boxplots, one for each
+group of samples carrying one genotype from this variant. The boxplot
+reflects distribution of samples with respect to a specified numeric
+attribute.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="s2">&quot;genotype2boxplot&quot;</span><span class="o">:</span><span class="p">{</span>
+      <span class="s2">&quot;axislabel&quot;</span><span class="o">:</span> <span class="nx">STR</span><span class="p">,</span>
+      <span class="s2">&quot;sampleannotationkey&quot;</span><span class="o">:</span> <span class="nx">STR</span><span class="p">,</span>
+      <span class="s2">&quot;boxplotvaluekey&quot;</span><span class="o">:</span> <span class="nx">STR</span>  <span class="c1">// alternative to sampleannotationkey</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>If "<strong>sampleannoationkey</strong>" is set, will require sampleannotation to be
+provided. See the section on "sample metadata annotation".</p>
+<p>If "<strong>boxplotvaluekey</strong>" is provided, its value should be the name of an INFO field that provides the box-and-whisker values for creating
+boxplots for each genotype.</p>
+<p>The INFO field should be defined as:</p>
+<div class="highlight"><pre><span></span><code>##INFO=&lt;ID=boxplotbygenotype,Number=1,Type=String,Description=&quot;For each possible genotype, define a boxplot with 5 numbers: low whisker, 1st quartile, median, 3rd quartile, high whisker. Genotypes are represented as refref, refalt, altalt. Separate genotypes by |, separate values by /&quot;&gt;
+</code></pre></div>
+
+<p>Example value to this INFO field:</p>
+<div class="highlight"><pre><span></span><code>boxplotbygenotype=refref/0.1/1/4/6/8|refalt/1/2/3/4/5|altalt/2/3/4/5/6
+</code></pre></div>
+
+<h3 id="sample-metadata-annotation">Sample metadata annotation<a class="headerlink" href="#sample-metadata-annotation" title="Permanent link">&para;</a></h3>
+<p>Sample annotation is an optional feature. If provided, it can be used to improve coverage-VAF plot, and divide samples to groups by the
+"sampletype" attribute to make separate coverage-VAF plots for each.</p>
+<p>To provide sample annotation, add a nested attribute
+"<strong>sampleannotation.annotation</strong>" to the VCF track object:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="p">...</span> <span class="nx">VCF</span> <span class="nx">definitions</span> <span class="p">...</span> 
+
+    <span class="s2">&quot;sampleannotation&quot;</span><span class="o">:</span><span class="p">{</span>
+      <span class="s2">&quot;annotation&quot;</span><span class="o">:</span><span class="p">{</span>
+         <span class="s2">&quot;sample1_D&quot;</span><span class="o">:</span><span class="p">{</span>
+            <span class="s2">&quot;diagnosis&quot;</span><span class="o">:</span><span class="s2">&quot;SCD&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sampletype&quot;</span><span class="o">:</span><span class="s2">&quot;Tumor&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;color&quot;</span><span class="o">:</span><span class="s2">&quot;blue&quot;</span>
+         <span class="p">},</span>
+         <span class="s2">&quot;sample1_G&quot;</span><span class="o">:</span><span class="p">{</span>
+            <span class="s2">&quot;diagnosis&quot;</span><span class="o">:</span><span class="s2">&quot;SCD&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sampletype&quot;</span><span class="o">:</span><span class="s2">&quot;Normal&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;color&quot;</span><span class="o">:</span><span class="s2">&quot;blue&quot;</span>
+         <span class="p">},</span>
+         <span class="p">...</span> <span class="nx">more</span> <span class="nx">samples</span> <span class="p">...</span> 
+       <span class="p">},</span>
+       <span class="s2">&quot;key4annotation&quot;</span><span class="o">:</span><span class="s2">&quot;sample&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>"annotation" provides a hash, where <sampleID> are keys and values are annotations for this sample.</p>
+<p>"Key4annotation" defines the attribute name for <sampleID>. It enables user to specify if the annotation is at sample-level or patient-level.</p>
+<div class="admonition todo">
+<p class="admonition-title">Todo</p>
+<p>further clarify</p>
+</div>
+<p>Additional enhancements/description can be added to "<strong>sampleannotation</strong>":</p>
+<div class="highlight"><pre><span></span><code>    <span class="nx">sampleannotation</span><span class="o">:</span><span class="p">{</span>
+      <span class="nx">levels</span><span class="o">:</span><span class="p">[</span>
+              <span class="p">{</span><span class="nx">k</span><span class="o">:</span><span class="s1">&#39;diagnosis&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Diagnosis&#39;</span><span class="p">,</span><span class="nx">full</span><span class="o">:</span><span class="s1">&#39;diagnosis_full_name&#39;</span><span class="p">},</span>
+              <span class="p">{</span><span class="nx">k</span><span class="o">:</span><span class="s1">&#39;subtype&#39;</span><span class="p">,</span><span class="nx">label</span><span class="o">:</span><span class="s1">&#39;Subtype&#39;</span><span class="p">,</span><span class="nx">full</span><span class="o">:</span><span class="s1">&#39;subtype_full_name&#39;</span><span class="p">}</span>
+         <span class="p">],</span>
+      <span class="nx">variantsunburst</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span>
+      <span class="nx">key2color</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;root...SCD&quot;</span><span class="o">:</span><span class="s2">&quot;green&quot;</span><span class="p">}</span>
+    <span class="p">},</span>
+</code></pre></div>
+
+<p>"Levels" provides a hierarchy of attributes for stratifying samples. Levels are arranged from high to low hierarchy. In each level, the string value of "<strong>k</strong>" and "<strong>full</strong>" should be found as attributes in "sampleannotation.annotation" of any sample.</p>
+<p>"Variantsunburst" allows showing a sunburst chart of samples when
+clicking on a variant.</p>
+<p>"Key2color" is a temp fix to define color for an annotation value from any level. In the example, "SCD" is the actual value of first level, and it must have prefix "root...". This defines the display color in
+sunburst chart.</p>
+<p>Live example:
+<a href="https://proteinpaint.stjude.org/pcgp.html">https://proteinpaint.stjude.org/pcgp.html</a>
+in which the track "PCGP somatic mutation" is a multi-sample VCF track
+and is equipped with metadata annotation to its samples. Its track
+legend shows the annotation which can be used to filter samples:</p>
+<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image3.png" /></p>
+<p>All the metadata annotation and track JSON declaration can be found in
+the source of the HTML page, around following lines:</p>
+<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image9.png" /></p>
+<h3 id="speeding-up-multi-sample-vcf-track-loading">Speeding up multi-sample VCF track loading<a class="headerlink" href="#speeding-up-multi-sample-vcf-track-loading" title="Permanent link">&para;</a></h3>
+<p>Given a multi-sample VCF track (cohort_VCF), prepare a variant-only
+version of this track (variant_VCF), and combine them in the track
+definition like below:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;vcf&#39;</span><span class="p">,</span>
+    <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;lots of samples&#39;</span><span class="p">,</span>
+    <span class="nx">file</span><span class="o">:</span><span class="s1">&#39;path/to/variant_VCF&#39;</span><span class="p">,</span>
+    <span class="nx">vcfcohorttrack</span><span class="o">:</span><span class="p">{</span>
+        <span class="nx">file</span><span class="o">:</span><span class="s1">&#39;path/to/cohort_VCF&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>When displaying this track in ProteinPaint, the variant_VCF will be
+loaded for showing all variants in the view range. Upon clicking a
+variant, the cohort_VCF will be queried to retrieve sample information
+on this variant, for rendering coverage-VAF plot or other uses.</p>
+<p>This design cuts down data transfer and can greatly improve performance
+for loading large-cohort VCF track.</p>
+<p>The "samplenamemap()" function can be applied in such track setup. Add
+this function in the "vcfcohortrack" object.</p>
+<h3 id="linking-an-image-to-each-variant">Linking an image to each variant<a class="headerlink" href="#linking-an-image-to-each-variant" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;vcf&#39;</span><span class="p">,</span>
+    <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;lots of samples&#39;</span><span class="p">,</span>
+    <span class="nx">file</span><span class="o">:</span><span class="s1">&#39;path/to/variant_VCF&#39;</span><span class="p">,</span>
+    <span class="nx">variant2img</span><span class="o">:</span><span class="p">{</span>
+        <span class="nx">path</span><span class="o">:</span><span class="s1">&#39;path/to/imagefolder/&#39;</span><span class="p">,</span>
+            <span class="nx">ext</span><span class="o">:</span><span class="s1">&#39;png&#39;</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>By setting "variant2img", it allows to link an image to each variant. A "Image" button will appear at the details panel of the variant; clicking the button will display the image associated with this variant below.</p>
+<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image10.png" /></p>
+<p>For each variant, the image will be located in the following way; note
+that the position is 1-based, and path is relative to the TP directory.</p>
+<p>variant2img.path + chromosome.position.REFallele.ALTallele + . +
+variant2img.ext</p>
+<h3 id="table-display-of-multi-column-info-field">Table display of multi-column INFO Field<a class="headerlink" href="#table-display-of-multi-column-info-field" title="Permanent link">&para;</a></h3>
+<p>For a complex INFO field such as:</p>
+<div class="highlight"><pre><span></span><code>##INFO=&lt;ID=INFOKEY,Number=.,Type=String,Description=&quot;Consequence annotations. Format: Allele|Consequence|SYMBOL|Entrez Gene ID|Feature_type|Feature|HGVSc|HGVSp|CIViC Variant Name|CIViC Variant ID|CIViC Variant Aliases|CIViC HGVS|Allele Registry ID|ClinVar IDs|CIViC Variant Evidence Score|CIViC Entity Type|CIViC Entity ID|CIViC Entity URL|CIViC Entity Source|CIViC Entity Variant Origin|CIViC Entity Status&quot;&gt;
+</code></pre></div>
+
+<p>Through configuration, contents of such INFO field for a variant can be
+displayed as a table:</p>
+<table>
+<thead>
+<tr>
+<th>CIViC Entity Type</th>
+<th>CIViC Entity ID</th>
+<th>CIViC Entity URL</th>
+<th>CIViC Entity Source</th>
+<th>CIViC Entity Variant Origin</th>
+<th>CIViC Entity Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>evidence</td>
+<td>3766</td>
+<td>[<a href="https://civicdb.org/links/evidence/3766]{.underline}](https://civicdb.org/links/evidence/3766">https://civicdb.org/links/evidence/3766]{.underline}](https://civicdb.org/links/evidence/3766</a>)</td>
+<td>PUBMED [<a href="https://www.ncbi.nlm.nih.gov/pubmed/22621641">22621641</a></td>
+<td>Somatic</td>
+<td>submitted</td>
+</tr>
+<tr>
+<td>evidence</td>
+<td>7485</td>
+<td>[<a href="https://civicdb.org/links/evidence/7485]{.underline}](https://civicdb.org/links/evidence/7485">https://civicdb.org/links/evidence/7485]{.underline}](https://civicdb.org/links/evidence/7485</a>)</td>
+<td>PUBMED [<a href="https://www.ncbi.nlm.nih.gov/pubmed/31151904">31151904</a></td>
+<td>Somatic</td>
+<td>submitted</td>
+</tr>
+<tr>
+<td>evidence</td>
+<td>7077</td>
+<td>[<a href="https://civicdb.org/links/evidence/7077]{.underline}](https://civicdb.org/links/evidence/7077">https://civicdb.org/links/evidence/7077]{.underline}](https://civicdb.org/links/evidence/7077</a>)</td>
+<td>PUBMED [<a href="https://www.ncbi.nlm.nih.gov/pubmed/25527633">25527633</a></td>
+<td>Somatic</td>
+<td>submitted</td>
+</tr>
+<tr>
+<td>evidence</td>
+<td>3768</td>
+<td>[<a href="https://civicdb.org/links/evidence/3768]{.underline}](https://civicdb.org/links/evidence/3768">https://civicdb.org/links/evidence/3768]{.underline}](https://civicdb.org/links/evidence/3768</a>)</td>
+<td>PUBMED [<a href="https://www.ncbi.nlm.nih.gov/pubmed/23278307">23278307</a></td>
+<td>Somatic</td>
+<td>submitted</td>
+</tr>
+<tr>
+<td>evidence</td>
+<td>3781</td>
+<td>[<a href="https://civicdb.org/links/evidence/3781]{.underline}](https://civicdb.org/links/evidence/3781">https://civicdb.org/links/evidence/3781]{.underline}](https://civicdb.org/links/evidence/3781</a>)</td>
+<td>PUBMED [<a href="https://www.ncbi.nlm.nih.gov/pubmed/23733758">23733758</a></td>
+<td>Somatic</td>
+<td>submitted</td>
+</tr>
+</tbody>
+</table>
+<h4 id="info2table"><code>info2table:{}</code><a class="headerlink" href="#info2table" title="Permanent link">&para;</a></h4>
+<p>Key: name of the CSQ-like INFO field.</p>
+<p>Value: {} with keys of "col_separator" and "fields" array.</p>
+<p>"Fields" array should contain all the sub-fields in the INFO field, even for those hidden ones. Each element describes configurations with
+display/formatting instructions for each sub-field.</p>
+<div class="highlight"><pre><span></span><code><span class="nx">info2table</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">INFOKEY</span><span class="o">:</span> <span class="p">{</span>
+       <span class="nx">col_separator</span><span class="o">:</span> <span class="s1">&#39;|&#39;</span><span class="p">,</span>
+       <span class="nx">separate_tables</span><span class="o">:</span><span class="p">[</span> <span class="p">...</span> <span class="p">],</span> <span class="c1">// optional</span>
+       <span class="nx">fields</span><span class="o">:</span> <span class="p">[</span>
+           <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Allele&#39;</span> <span class="p">},</span>
+           <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Consequence&#39;</span> <span class="p">},</span>
+           <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;SYMBOL&#39;</span> <span class="p">},</span>
+           <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Entrez Gene ID&#39;</span> <span class="p">},</span>
+           <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Feature_type&#39;</span> <span class="p">},</span>
+           <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Feature&#39;</span> <span class="p">},</span>
+           <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;HGVSc&#39;</span> <span class="p">},</span>
+           <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;HGVSp&#39;</span> <span class="p">},</span>
+           <span class="p">...</span> <span class="nx">more</span> <span class="nx">fields</span> <span class="p">...</span> 
+       <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="info2singletable"><code>info2singletable:{}</code><a class="headerlink" href="#info2singletable" title="Permanent link">&para;</a></h4>
+<p>Same setting as the "info2table".</p>
+<p>Will only parse the first item of the CSQ field. This is useful in such
+cases when the given sub-fields are duplicated across all items.</p>
+<p>A "vertical" two-column table will be displayed, with a row for each
+sub-field.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&gt; Allele</td>
+<td>&gt; T</td>
+</tr>
+<tr>
+<td>&gt; Consequence</td>
+<td>&gt; missense_variant</td>
+</tr>
+<tr>
+<td>&gt; SYMBOL</td>
+<td>&gt; BRAF</td>
+</tr>
+<tr>
+<td>&gt; Entrez Gene ID</td>
+<td>&gt; 673</td>
+</tr>
+<tr>
+<td>&gt; Feature_type</td>
+<td>&gt; transcript</td>
+</tr>
+<tr>
+<td>&gt; Feature</td>
+<td>&gt; ENST00000288602.6</td>
+</tr>
+<tr>
+<td>&gt; HGVSc</td>
+<td>&gt; ENST00000288602.6:c.1799T&gt;A</td>
+</tr>
+</tbody>
+</table>
+<h5 id="hidetrue"><code>.hide:true</code><a class="headerlink" href="#hidetrue" title="Permanent link">&para;</a></h5>
+<p>If set, the field will be hidden from the table.</p>
+<h5 id="namestr"><code>.name:STR</code><a class="headerlink" href="#namestr" title="Permanent link">&para;</a></h5>
+<p>Required. A display name of the field.</p>
+<h5 id="ampersand2brtrue"><code>.ampersand2br:true</code><a class="headerlink" href="#ampersand2brtrue" title="Permanent link">&para;</a></h5>
+<p>Will convert all '&amp;' to HTML line break <br>.</p>
+<h5 id="isurltrue"><code>.isurl:true</code><a class="headerlink" href="#isurltrue" title="Permanent link">&para;</a></h5>
+<p>The column value is a full URL and will be shown as a <a> tag.</p>
+<h5 id="appendurl-str"><code>.appendUrl: STR</code><a class="headerlink" href="#appendurl-str" title="Permanent link">&para;</a></h5>
+<p>To append the value to the end of the given partial URL and display the
+composed URL.</p>
+<h5 id="urlmatchlst"><code>.urlMatchLst:{}</code><a class="headerlink" href="#urlmatchlst" title="Permanent link">&para;</a></h5>
+<p>Example config:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">urlMatchLst</span><span class="o">:</span> <span class="p">{</span>
+   <span class="nx">separator</span><span class="o">:</span> <span class="s1">&#39;_&#39;</span><span class="p">,</span>
+   <span class="nx">idIndex</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+   <span class="nx">types</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;pubmed&#39;</span><span class="p">,</span> <span class="nx">appendUrl</span><span class="o">:</span> <span class="s1">&#39;https://www.ncbi.nlm.nih.gov/pubmed/&#39;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;asco&#39;</span><span class="p">,</span> <span class="nx">appendUrl</span><span class="o">:</span> <span class="s1">&#39;https://meetinglibrary.asco.org/record/&#39;</span> <span class="p">}</span>
+   <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Which allows to parse following values into respective URL links.</p>
+<div class="highlight"><pre><span></span><code>31566309_(PubMed)
+168986_(ASCO)
+</code></pre></div>
+
+<h5 id="separate_tables"><code>separate_tables:\[\]</code><a class="headerlink" href="#separate_tables" title="Permanent link">&para;</a></h5>
+<p>Optional, and only applies to "info2table" but not "info2singletable".</p>
+<p>When multiple "rows" could be contained in one INFO field, the rows are
+to be divided into groups based on criteria of the "groupers" array, and
+shown in separate tables. Each table has the same set of columns, as
+defined in the "fields[]" array.</p>
+<div class="highlight"><pre><span></span><code><span class="nx">separate_tables</span><span class="o">:</span> <span class="p">[</span>
+   <span class="p">{</span>
+       <span class="nx">headhtml</span><span class="o">:</span> <span class="s1">&#39;Accepted evidence&#39;</span><span class="p">,</span>
+       <span class="nx">groupers</span><span class="o">:</span> <span class="p">[</span>
+           <span class="p">{</span> <span class="nx">field</span><span class="o">:</span> <span class="s1">&#39;CIViC Entity Type&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;evidence&#39;</span> <span class="p">},</span>
+           <span class="p">{</span> <span class="nx">field</span><span class="o">:</span> <span class="s1">&#39;CIViC Entity Status&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;accepted&#39;</span> <span class="p">}</span>
+       <span class="p">]</span>
+   <span class="p">},</span>
+   <span class="p">{</span> <span class="p">...</span> <span class="nx">another</span> <span class="nx">table</span> <span class="p">...</span> <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+
+<h2 id="url-links-for-variants">URL links for variants<a class="headerlink" href="#url-links-for-variants" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image7.png" /></p>
+<p>A URL can be made for SNV/indel variants from a VCF track, so that when
+user clicks on the variant and shows the details, the URL link will be
+shown, to link to the variant in another website.</p>
+<p>To enable this, add the "<strong>url4variant</strong>" attribute in the track
+definition:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;vcf&#39;</span><span class="p">,</span>
+    <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;Clinvar&#39;</span><span class="p">,</span>
+    <span class="nx">file</span><span class="o">:</span><span class="s1">&#39;hg38/clinvar.hg38.201612.vcf.gz&#39;</span><span class="p">,</span>
+    <span class="nx">url4variant</span><span class="o">:</span><span class="p">[</span>
+        <span class="p">{</span>
+        <span class="nx">label</span><span class="o">:</span><span class="s1">&#39;PeCAN-PIE&#39;</span><span class="p">,</span>
+        <span class="nx">makeurl</span><span class="o">:</span><span class="p">(</span><span class="nx">m</span><span class="p">)=&gt;{</span>
+            <span class="k">return</span> <span class="s1">&#39;https://pecan.stjude.org/#/variant/view/&#39;</span>
+                <span class="o">+</span><span class="nx">m</span><span class="p">.</span><span class="nx">chr</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;chr&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+                <span class="o">+</span><span class="s1">&#39;/&#39;</span>
+                <span class="o">+</span><span class="p">(</span><span class="nx">m</span><span class="p">.</span><span class="nx">pos</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+                <span class="o">+</span><span class="s1">&#39;/&#39;</span>
+                <span class="o">+</span><span class="nx">m</span><span class="p">.</span><span class="nx">ref</span>
+                <span class="o">+</span><span class="s1">&#39;/&#39;</span>
+                <span class="o">+</span><span class="nx">m</span><span class="p">.</span><span class="nx">alt</span>
+        <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Each element in "url4variant" describes a method to produce a URL for
+the variant. This allows multiple URL links to be produced on the same
+variant.</p>
+<p>Each element has the "<strong>makeurl</strong>" attribute, a JavaScript function that
+takes in the variant object as input, and returns the fully-formed URL
+string, parameterized by the attributes of the variant.</p>
+<p>The method may not work for mutation types other than SNV/indel.</p>
+<h2 id="summary-of-vcf-track-object">Summary of VCF track object<a class="headerlink" href="#summary-of-vcf-track-object" title="Permanent link">&para;</a></h2>
+<p>A schematic overview of all available options that you can use to
+customize a VCF track.</p>
+<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image11.png" /></p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 St. Jude Children's Research Hospital
+          </div>
+        
+        
+        built from <a href="https://github.com/stjudecloud/docs/tree/b30c7e0">b30c7e0</a> using
+        
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and a modified version of
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs
+        </a>.
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://www.facebook.com/stjuderesearch/" target="_blank" rel="noopener" title="facebook" class="md-footer-social__link fa fa-facebook"></a>
+    
+      <a href="https://twitter.com/stjuderesearch?lang=en" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/st-jude-childrens-research-hospital" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://github.com/stjude" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.2d55c750.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../../../.."}})</script>
+      
+    
+  </body>
+</html>

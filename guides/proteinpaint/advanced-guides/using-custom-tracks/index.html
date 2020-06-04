@@ -1,0 +1,2028 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <script src="//assets.adobedtm.com/launch-EN942f79c83ff84c10a45b4856a85eaccb.min.js" async></script>
+    <script>!function(e,a,t,n,g,c,o){e.GoogleAnalyticsObject=g,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),o=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",o.parentNode.insertBefore(c,o)}(window,document,"script",0,"ga"),ga("create","UA-107924368-1","auto"),ga("send","pageview")</script>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Using custom tracks - St. Jude Cloud Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.7d2ef1ff.css">
+      
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.eca31fed.js"></script>
+    
+    
+      
+    
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#use-these-color-names" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../.." title="St. Jude Cloud Documentation" aria-label="St. Jude Cloud Documentation" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="../../../../images/stjude-logo-child-white.png" width="40" height="28">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              St. Jude Cloud Documentation
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Using custom tracks
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/stjudecloud/docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    stjudecloud/docs
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../.." class="md-tabs__link md-tabs__link--active">
+        Overview
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../covid-19/" class="md-tabs__link">
+          COVID-19 Quickstart
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../genomics-platform/" class="md-tabs__link">
+          Genomics Platform
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../pecan/" class="md-tabs__link">
+          PeCan
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../visualization-community/" class="md-tabs__link">
+          Visualization Community
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../" class="md-tabs__link">
+          ProteinPaint
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../studies/" class="md-tabs__link">
+          Studies
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../.." title="St. Jude Cloud Documentation" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="../../../../images/stjude-logo-child-white.png" width="48" height="48">
+      
+    </a>
+    St. Jude Cloud Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/stjudecloud/docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    stjudecloud/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ecosystem/" title="About our Ecosystem" class="md-nav__link">
+      About our Ecosystem
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      COVID-19 Quickstart
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        COVID-19 Quickstart
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/getting-started/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/upload-local/" title="Data upload (local)" class="md-nav__link">
+      Data upload (local)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/upload-cluster/" title="Data upload (HPC)" class="md-nav__link">
+      Data upload (HPC)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/creating-a-cloud-app-covid/" title="Creating a cloud app" class="md-nav__link">
+      Creating a cloud app
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/interactive-node/" title="Interactive nodes" class="md-nav__link">
+      Interactive nodes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../covid-19/visualizing-ngs-data/" title="Visualizing NGS data" class="md-nav__link">
+      Visualizing NGS data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Genomics Platform
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Genomics Platform
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/accounts-and-billing/" title="Accounts and Billing" class="md-nav__link">
+      Accounts and Billing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Requesting Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        Requesting Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/requesting-data/about-our-data/" title="About our Data" class="md-nav__link">
+      About our Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/requesting-data/data-request/" title="Making a Data Request" class="md-nav__link">
+      Making a Data Request
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/requesting-data/how-to-fill-out-DAA/" title="Filling Out a Data Access Agreement" class="md-nav__link">
+      Filling Out a Data Access Agreement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/requesting-data/glossary/" title="About our Decision Process & Terminology" class="md-nav__link">
+      About our Decision Process & Terminology
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Managing Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        Managing Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/managing-data/working-with-our-data/" title="Managing Data Overview" class="md-nav__link">
+      Managing Data Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/managing-data/data-transfer-app/" title="Uploading/Downloading Data" class="md-nav__link">
+      Uploading/Downloading Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/managing-data/how-to-fill-out-Extension/" title="Renewing your Data Access" class="md-nav__link">
+      Renewing your Data Access
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
+    
+    <label class="md-nav__link" for="nav-4-5">
+      Analyzing Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
+        Analyzing Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/analyzing-data/command-line/" title="Command Line Interaction" class="md-nav__link">
+      Command Line Interaction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/analyzing-data/running-sj-workflows/" title="Running our Workflows" class="md-nav__link">
+      Running our Workflows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5-3" type="checkbox" id="nav-4-5-3">
+    
+    <label class="md-nav__link" for="nav-4-5-3">
+      SJ Cloud Workflows
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-5-3">
+        SJ Cloud Workflows
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/analyzing-data/neoepitope/" title="NeoepitopePred" class="md-nav__link">
+      NeoepitopePred
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/analyzing-data/chipseq/" title="ChIP-Seq Peak Calling" class="md-nav__link">
+      ChIP-Seq Peak Calling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/analyzing-data/rapid-rnaseq/" title="Rapid RNA-Seq Fusion Detection" class="md-nav__link">
+      Rapid RNA-Seq Fusion Detection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/analyzing-data/warden/" title="WARDEN Differential Expression Analysis" class="md-nav__link">
+      WARDEN Differential Expression Analysis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/analyzing-data/mutational-signatures/" title="Mutational Signatures" class="md-nav__link">
+      Mutational Signatures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/analyzing-data/sequencerr/" title="SequencErr" class="md-nav__link">
+      SequencErr
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/analyzing-data/cis-x/" title="cis-X" class="md-nav__link">
+      cis-X
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/analyzing-data/creating-a-cloud-app/" title="Creating your own Workflow" class="md-nav__link">
+      Creating your own Workflow
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../genomics-platform/faq/" title="Frequently Asked Questions" class="md-nav__link">
+      Frequently Asked Questions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      PeCan
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        PeCan
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pecan/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pecan/pecan-pie/" title="Pecan PIE" class="md-nav__link">
+      Pecan PIE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Visualization Community
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Visualization Community
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../visualization-community/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../visualization-community/proteinpaint/" title="ProteinPaint" class="md-nav__link">
+      ProteinPaint
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../visualization-community/genomepaint/" title="GenomePaint" class="md-nav__link">
+      GenomePaint
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../visualization-community/faq/" title="Frequently Asked Questions" class="md-nav__link">
+      Frequently Asked Questions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      ProteinPaint
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        ProteinPaint
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+    
+    <label class="md-nav__link" for="nav-7-2">
+      User Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-2">
+        User Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../navigating-the-protein-diagram/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../loading-datasets/" title="Loading Datasets" class="md-nav__link">
+      Loading Datasets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../view-mutation-details/" title="Viewing SNV/Indel Mutations" class="md-nav__link">
+      Viewing SNV/Indel Mutations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../exploring-gene-fusions/" title="Viewing Gene Fusions" class="md-nav__link">
+      Viewing Gene Fusions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../exploring-gene-expression/" title="Viewing Expression Data" class="md-nav__link">
+      Viewing Expression Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../filtering-mutations/" title="Filtering Mutations" class="md-nav__link">
+      Filtering Mutations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../exporting-figures-and-data/" title="Exporting Figures and Data" class="md-nav__link">
+      Exporting Figures and Data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      Advanced Usage
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        Advanced Usage
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced-usage/stratify-mutation-by-cancer-subtype.md" title="Stratifying Mutations by Cancer Subtype" class="md-nav__link">
+      Stratifying Mutations by Cancer Subtype
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced-usage/visualize-custom-mutations.md" title="Visualize Your Mutation Data" class="md-nav__link">
+      Visualize Your Mutation Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced-usage/custom-protein-domains.md" title="Add Custom Protein Domains" class="md-nav__link">
+      Add Custom Protein Domains
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-4" type="checkbox" id="nav-7-4">
+    
+    <label class="md-nav__link" for="nav-7-4">
+      Developer's Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-4">
+        Developer's Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developers-guide/index.md" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developers-guide/required-parameters.md" title="Required Parameters" class="md-nav__link">
+      Required Parameters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developers-guide/genome-browser-view.md" title="Genome Browser View" class="md-nav__link">
+      Genome Browser View
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developers-guide/genomepaint.md" title="GenomePaint" class="md-nav__link">
+      GenomePaint
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developers-guide/gene-view.md" title="Gene View" class="md-nav__link">
+      Gene View
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developers-guide/motif-change-prediction.md" title="Motif Change Prediction" class="md-nav__link">
+      Motif Change Prediction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developers-guide/differential-gene-expression-viewer.md" title="Differential Gene Expression Viewer" class="md-nav__link">
+      Differential Gene Expression Viewer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developers-guide/fusion-editor.md" title="Fusion Editor" class="md-nav__link">
+      Fusion Editor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developers-guide/study-view.md" title="Study View" class="md-nav__link">
+      Study View
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developers-guide/other-parameters.md" title="Other Parameters" class="md-nav__link">
+      Other Parameters
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Studies
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Studies
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../studies/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../studies/sickle-cell/" title="Sickle Cell" class="md-nav__link">
+      Sickle Cell
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../faq/" title="Frequently Asked Questions" class="md-nav__link">
+      Frequently Asked Questions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../citing-stjude-cloud/" title="Citing St. Jude Cloud" class="md-nav__link">
+      Citing St. Jude Cloud
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#use-these-color-names" class="md-nav__link">
+    Use these color names
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gallery" class="md-nav__link">
+    Gallery
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attributes-applicable-to-all-track-types" class="md-nav__link">
+    Attributes applicable to all track types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#track-bigwig-for-numerical-data" class="md-nav__link">
+    Track: bigWig for numerical data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#track-a-pair-of-bigwig-for-data-from-forward-and-reverse-strands" class="md-nav__link">
+    Track: a pair of bigWig for data from forward and reverse strands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#track-json-bed" class="md-nav__link">
+    Track: JSON-BED
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#track-genomic-profile-combined-with-gene-expression-value-pgv" class="md-nav__link">
+    Track: genomic profile combined with gene expression value (PGV)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#track-splice-junction" class="md-nav__link">
+    Track: splice junction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#track-vcf" class="md-nav__link">
+    Track: VCF
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#track-bampile" class="md-nav__link">
+    Track: bampile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#track-aicheck" class="md-nav__link">
+    Track: aicheck
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#track-genomepaint" class="md-nav__link">
+    Track: GenomePaint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#track-ase-single-sample" class="md-nav__link">
+    Track: ASE, single-sample
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/stjudecloud/docs/edit/master/docs/guides/proteinpaint/advanced-guides/using-custom-tracks.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <p><strong>Using custom tracks in ProteinPaint</strong></p>
+<p><img alt="" src="./images/guides/proteinpaint/advanced-guides/using-custom-tracks/media/image1.png" /></p>
+<ul>
+<li>
+<p>Tracks are defined as JSON objects.</p>
+</li>
+<li>
+<p>Submit tracks by launching a genome browser, see below:</p>
+</li>
+<li>
+<p><strong>All text values are case-sensitive</strong>.</p>
+</li>
+</ul>
+<h3 id="use-these-color-names">Use these color names<a class="headerlink" href="#use-these-color-names" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Common names such as red, green: <a href="https://en.wikipedia.org/wiki/Web_colors">https://en.wikipedia.org/wiki/Web_colors</a></p>
+</li>
+<li>
+<h1>FF0000</h1>
+</li>
+<li>
+<p>rgb(255,0,0)</p>
+</li>
+<li>
+<p>rgba(255,0,0,.5)</p>
+</li>
+</ul>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<p>Go to <a href="https://proteinpaint.stjude.org">https://proteinpaint.stjude.org</a>, launch hg19 genome browser and paste in following JSON text to add two tracks:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="s2">&quot;bigwig&quot;</span><span class="p">,</span><span class="s2">&quot;file&quot;</span><span class="o">:</span><span class="s2">&quot;hg19/hg19.100way.phastCons.bw&quot;</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;UCSC phastCons 100ways&quot;</span><span class="p">,</span><span class="s2">&quot;dotplotfactor&quot;</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span><span class="s2">&quot;height&quot;</span><span class="o">:</span><span class="mi">100</span><span class="p">},</span>
+<span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="s2">&quot;bedj&quot;</span><span class="p">,</span><span class="s2">&quot;file&quot;</span><span class="o">:</span><span class="s2">&quot;anno/refGene.hg19.gz&quot;</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;RefSeq genes&quot;</span><span class="p">,</span><span class="s2">&quot;translatecoding&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;color&quot;</span><span class="o">:</span><span class="s2">&quot;#417D4C&quot;</span><span class="p">,</span><span class="s2">&quot;stackheight&quot;</span><span class="o">:</span><span class="mi">20</span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+
+<p>View or debug JSON with <a href="https://jsonlint.com/">https://jsonlint.com/</a></p>
+<p>The JSON track objects can be used with <a href="https://docs.google.com/document/d/1KNx4pVCKd4wgoHI4pjknBRTLrzYp6AL_D-j6MjcQSvQ/edit#">embedding API</a>. </p>
+<h3 id="gallery">Gallery<a class="headerlink" href="#gallery" title="Permanent link">&para;</a></h3>
+<p><a href="https://proteinpaint.stjude.org/examples/">https://proteinpaint.stjude.org/examples/</a></p>
+<h3 id="attributes-applicable-to-all-track-types">Attributes applicable to all track types<a class="headerlink" href="#attributes-applicable-to-all-track-types" title="Permanent link">&para;</a></h3>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;name of the track&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;type&quot;</span><span class="o">:&lt;</span><span class="nx">typecode</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="s2">&quot;url&quot;</span><span class="o">:</span><span class="s2">&quot;http://domain/file.gz&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;indexURL&quot;</span><span class="o">:</span><span class="s2">&quot;http://domain/path/file.gz.tbi&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;file&quot;</span><span class="o">:</span><span class="s2">&quot;path/to/file.gz&quot;</span><span class="p">,</span> <span class="c1">// use this when not using URL</span>
+    <span class="s2">&quot;toppad&quot;</span><span class="o">:</span><span class="mi">5</span><span class="p">,</span>
+    <span class="s2">&quot;bottompad&quot;</span><span class="o">:</span><span class="mi">5</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<ul>
+<li>
+<p>"<strong>name</strong>": STR</p>
+<ul>
+<li>A string as track name</li>
+</ul>
+</li>
+<li>
+<p>"<strong>type</strong>": <type></p>
+<ul>
+<li>
+<p>Typecode of the track. Allowed values are:</p>
+<ul>
+<li>
+<p>bigwig</p>
+</li>
+<li>
+<p>bigwigstranded</p>
+</li>
+<li>
+<p>bedj</p>
+</li>
+<li>
+<p>profilegenevalue</p>
+</li>
+<li>
+<p>junction</p>
+</li>
+<li>
+<p>vcf</p>
+</li>
+<li>
+<p>bampile</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>"<strong>file</strong>": STR</p>
+</li>
+<li>
+<p>"<strong>url</strong>": STR</p>
+</li>
+<li>
+<p>"<strong>indexURL</strong>": STR</p>
+<ul>
+<li>
+<p>Either "file" or "url" should be provided, but not both. When using "file", provide the relative path to the track file starting from <TP> directory as is configured on the ProteinPaint server.</p>
+</li>
+<li>
+<p>When using URL for tabix-indexed files, by default it requires the index file to share URL with the .gz file. When it's not sharing the URL, the attribute "indexURL" must be used to provide the URL of the index file.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>"<strong>toppad</strong>": INT</p>
+<ul>
+<li>Number of pixels as the padding space on the top, default: 5</li>
+</ul>
+</li>
+<li>
+<p>"<strong>bottompad</strong>": INT</p>
+<ul>
+<li>Number of pixels as the padding space at the bottom, default: 5</li>
+</ul>
+</li>
+<li>
+<p>"<strong>hidden</strong>": 1</p>
+<ul>
+<li>If set, the track will be hidden by default and can be found in the track menu (by clicking the "Tracks" button)</li>
+</ul>
+</li>
+</ul>
+<h3 id="track-bigwig-for-numerical-data">Track: bigWig for numerical data<a class="headerlink" href="#track-bigwig-for-numerical-data" title="Permanent link">&para;</a></h3>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;track name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;bigwig&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;file&quot;</span><span class="o">:</span> <span class="s2">&quot;targetRNAcoverage/SJNBL017066_D1.bw&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;scale&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;min&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;max&quot;</span><span class="o">:</span> <span class="mi">100</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;height&quot;</span><span class="o">:</span> <span class="mi">100</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Live example: <a href="https://proteinpaint.stjude.org/examples/bigwig.html">https://proteinpaint.stjude.org/examples/bigwig.html</a></p>
+<p>bigWig track attributes:</p>
+<ul>
+<li>
+<p><strong>scale : { }</strong></p>
+<ul>
+<li>
+<p><strong>min</strong></p>
+</li>
+<li>
+<p><strong>max</strong></p>
+<ul>
+<li>Set a fixed scale range of the Y axis</li>
+</ul>
+</li>
+<li>
+<p><strong>percentile</strong></p>
+<ul>
+<li>
+<p>Value is integer from 1 to 99, representing a percentile of all the data in the view range</p>
+</li>
+<li>
+<p>Overrides min/max</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>auto</strong></p>
+<ul>
+<li>
+<p>Value is simply "1" for "on".</p>
+</li>
+<li>
+<p>Set automatic scale, will override all other settings in "scale"</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>height</strong></p>
+<ul>
+<li>
+<p>Bar plot height in number of pixels.</p>
+</li>
+<li>
+<p>If height is below 10, the track will be rendered as heatmap.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>pcolor</strong></p>
+<ul>
+<li>Bar color of the positive values</li>
+</ul>
+</li>
+<li>
+<p><strong>pcolor2</strong></p>
+<ul>
+<li>Rendering color for data points above Y axis maximum value.</li>
+</ul>
+</li>
+<li>
+<p><strong>ncolor</strong></p>
+<ul>
+<li>Bar color of negative values</li>
+</ul>
+</li>
+<li>
+<p><strong>ncolor2</strong></p>
+<ul>
+<li>Rendering color for data points below Y axis minimum value</li>
+</ul>
+</li>
+<li>
+<p><strong>dotplotfactor</strong></p>
+<ul>
+<li>Value is positive integer e.g. 5 or 10. When applied, will request 5 or 10 times more data points from a bigWig track and plot each point as a dot, rather than bars. A use case is checking (large-scale) CNV from DNA sequencing coverage track</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="./images/guides/proteinpaint/advanced-guides/using-custom-tracks/media/image3.png" /></p>
+<h3 id="track-a-pair-of-bigwig-for-data-from-forward-and-reverse-strands">Track: a pair of bigWig for data from forward and reverse strands<a class="headerlink" href="#track-a-pair-of-bigwig-for-data-from-forward-and-reverse-strands" title="Permanent link">&para;</a></h3>
+<p>Example: <a href="https://proteinpaint.stjude.org/examples/bigwig.stranded.html">https://proteinpaint.stjude.org/examples/bigwig.stranded.html</a></p>
+<p>For showing stranded RNA-seq coverage data as a pair of bigWig tracks,
+with forward strand on top and reverse strand on bottom.</p>
+<p><img alt="" src="./images/guides/proteinpaint/advanced-guides/using-custom-tracks/media/image4.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;stranded RNA-seq coverage&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;bigwigstranded&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;strand1&quot;</span><span class="o">:</span><span class="p">{</span>
+        <span class="s2">&quot;file&quot;</span><span class="o">:</span> <span class="s2">&quot;path/to/sample.forwardstrand.bw&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;scale&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;min&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;max&quot;</span><span class="o">:</span> <span class="mi">100</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;height&quot;</span><span class="o">:</span> <span class="mi">50</span>
+     <span class="p">},</span>
+     <span class="s2">&quot;strand2&quot;</span><span class="o">:</span><span class="p">{</span>
+        <span class="s2">&quot;file&quot;</span><span class="o">:</span> <span class="s2">&quot;path/to/sample.reversestrand.bw&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;scale&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;max&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;min&quot;</span><span class="o">:</span> <span class="o">-</span><span class="mi">100</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;height&quot;</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span>
+         <span class="s2">&quot;normalize&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="s2">&quot;dividefactor&quot;</span><span class="o">:</span> <span class="o">-</span><span class="mi">1</span> <span class="p">}</span>
+     <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<ul>
+<li>
+<p><strong>strand1 : {}</strong></p>
+<ul>
+<li>
+<p>The bigWig track of the data from forward strand</p>
+</li>
+<li>
+<p>For read-coverage data, the values in the forward-strand bigWig file should be positive</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>strand2 : {}</strong></p>
+<ul>
+<li>
+<p>The bigWig track of the data from reverse strand</p>
+</li>
+<li>
+<p>Both strands follow the bigWig track definition.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Note: for stranded bigwig files using all positive values for both
+strands (e.g. sequencing read coverage), a "normalization value" of -1
+should be applied to the reverse strand, so the bars will point down.</p>
+<p>If the reverse strand bigwig track has been prepared to have negative
+values, then no need to apply the -1 normalizing factor.</p>
+<h3 id="track-json-bed">Track: JSON-BED<a class="headerlink" href="#track-json-bed" title="Permanent link">&para;</a></h3>
+<p>Example:
+<a href="https://proteinpaint.stjude.org/examples/bedj.html">https://proteinpaint.stjude.org/examples/bedj.html</a></p>
+<p>The JSON-BED track for annotating genomic features, e.g. genes.</p>
+<p><a href="https://drive.google.com/open?id=1GP81rer7YEb0RpIej2XXfx-k7SCAL1Od9At_oczf06A">Full specification of the JSON-BED track format</a>.</p>
+<h3 id="track-genomic-profile-combined-with-gene-expression-value-pgv">Track: genomic profile combined with gene expression value (PGV)<a class="headerlink" href="#track-genomic-profile-combined-with-gene-expression-value-pgv" title="Permanent link">&para;</a></h3>
+<p>Example:
+<a href="https://proteinpaint.stjude.org/examples/pgv.html">https://proteinpaint.stjude.org/examples/pgv.html</a></p>
+<p><a href="https://drive.google.com/open?id=1yrRpDUZWSRGuCa0snGwRuo721WRHgdYTX7GWIsZ_fSY">Read more about the PGV track</a></p>
+<h3 id="track-splice-junction">Track: splice junction<a class="headerlink" href="#track-splice-junction" title="Permanent link">&para;</a></h3>
+<p>Example:
+<a href="https://proteinpaint.stjude.org/examples/junction.html">https://proteinpaint.stjude.org/examples/junction.html</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;junction&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;sample junction&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;file&quot;</span><span class="o">:</span> <span class="s2">&quot;junction/targetALL/10-PANYGB-diagnosis-SJCOGALL010859_D2.gz&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;categories&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;known&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Known&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;color&quot;</span><span class="o">:</span> <span class="s2">&quot;#9c9c9c&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;novel&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Novel&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;color&quot;</span><span class="o">:</span> <span class="s2">&quot;#cc0000&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>"categories" specifies the rendering color for types of junctions.</p>
+<p><a href="https://docs.google.com/document/d/1PFva3Mn-U4VPNW0vHHC-CSnYBeotRnqbhCMQPmyLQG4/edit?usp=sharing">Read the splice junction file format.</a></p>
+<p>Multiple junction tracks can be aggregated to show in one track, via the .tracks[ ] attribute:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="s2">&quot;junction&quot;</span><span class="p">,</span>
+<span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;sample junction&quot;</span><span class="p">,</span>
+<span class="s2">&quot;tracks&quot;</span><span class="o">:</span><span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;sample&quot;</span><span class="o">:</span><span class="s2">&quot;sample1&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;file&quot;</span><span class="o">:</span><span class="s2">&quot;path/to/sample1.gz&quot;</span>
+    <span class="p">},</span>  
+    <span class="p">{</span>   
+       <span class="s2">&quot;sample&quot;</span><span class="o">:</span><span class="s2">&quot;sample2&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;file&quot;</span><span class="o">:</span><span class="s2">&quot;path/to/sample2.gz&quot;</span>
+    <span class="p">},</span>  
+    <span class="p">...</span> <span class="nx">more</span> <span class="nx">samples</span> <span class="p">...</span>
+<span class="p">],</span>
+<span class="s2">&quot;categories&quot;</span><span class="o">:</span><span class="p">{</span> <span class="p">...</span> <span class="p">}</span> 
+<span class="p">}</span>
+</code></pre></div>
+
+<p>In the .tracks[ ], add one object for each member track.</p>
+<p>When combining multiple junction tracks, each track can contain one or
+multiple samples.</p>
+<h3 id="track-vcf">Track: VCF<a class="headerlink" href="#track-vcf" title="Permanent link">&para;</a></h3>
+<p>Example:
+<a href="https://proteinpaint.stjude.org/clinvar.html">https://proteinpaint.stjude.org/clinvar.html</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;track name&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;vcf&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;file&quot;</span><span class="o">:</span> <span class="s2">&quot;path/to/vcffile.gz&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;url&quot;</span><span class="o">:</span>  <span class="s2">&quot;use url if the vcf file is hosted on a web server&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><img alt="" src="./images/guides/proteinpaint/advanced-guides/using-custom-tracks/media/image2.png" /></p>
+<ul>
+<li>
+<p>SNV and indel variants only, other types are not yet supported, e.g. CNV and SV.</p>
+</li>
+<li>
+<p>A VCF file can contain one or multiple samples.</p>
+</li>
+</ul>
+<p>ProteinPaint requires <a href="https://samtools.github.io/hts-specs/VCFv4.2.pdf">VCF format specification version 4.2</a></p>
+<p><a href="https://docs.google.com/document/d/1dbuYeQR6cgkpzcPaIChRFtXwolJVheoTr9NEW_Mfthw/edit?usp=sharing">Please refer to this document on following topics about the VCF track</a></p>
+<ol>
+<li>Preparing and hosting a VCF file</li>
+<li>Encoding functional annotation for coding-region mutations</li>
+<li>Combining multiple VCF files into one track</li>
+<li>Highlighting and filtering variants by values of an INFO field</li>
+<li>Features available for multi-sample VCF track
+    a.  Population frequency filter
+    b.  Sample annotation
+    c.  VAF-coverage plot</li>
+</ol>
+<h3 id="track-bampile">Track: bampile<a class="headerlink" href="#track-bampile" title="Permanent link">&para;</a></h3>
+<p>Bampile track can be used to examine the very rare alleles from a
+high-depth (capture-based) DNA sequencing experiment. Example of bampile
+track:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;track name&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;vcf&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;file&quot;</span><span class="o">:</span> <span class="s2">&quot;path/to/vcffile.gz&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;url&quot;</span><span class="o">:</span>  <span class="s2">&quot;use url if the vcf file is hosted on a web server&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><a href="https://docs.google.com/document/d/1ZS0v_t1WvZ4NX8LRhWRM9twl-M3IZt7b4tRCPKyYW1M/edit?usp=sharing">Read the bampile file format.</a></p>
+<ul>
+<li>fineheight<ul>
+<li>Height of the bar plot at bottom showing low-frequency alleles, the Y scale uses a cutoff value as defined by "fineymax"</li>
+</ul>
+</li>
+<li>allheight<ul>
+<li>Height of the bar plot at top showing frequency of all alleles with automatic scale for coverage</li>
+</ul>
+</li>
+<li>midpad<ul>
+<li>Padding distance between top and bottom bar plots</li>
+</ul>
+</li>
+<li>fineymax<ul>
+<li>Y scale used by the bottom bar plot</li>
+</ul>
+</li>
+<li>usegrade<ul>
+<li>Name of the grade to use</li>
+</ul>
+</li>
+</ul>
+<h3 id="track-aicheck">Track: aicheck<a class="headerlink" href="#track-aicheck" title="Permanent link">&para;</a></h3>
+<p>Example: <a href="https://proteinpaint.stjude.org/examples/aicheck.html">https://proteinpaint.stjude.org/examples/aicheck.html</a></p>
+<p><a href="https://docs.google.com/document/d/1dZIOoLLbQE-kmZ31Ia_5cud30d9UeRodP4hRCSw3HII/edit?usp=sharing">Read the aicheck track tutorial.</a></p>
+<h3 id="track-genomepaint">Track: GenomePaint<a class="headerlink" href="#track-genomepaint" title="Permanent link">&para;</a></h3>
+<p>Example: <a href="https://proteinpaint.stjude.org/examples/svcnv.html">https://proteinpaint.stjude.org/examples/svcnv.html</a></p>
+<p>This launches <strong>custom</strong> MDS track (aka GenomePaint). To access official tracks, see <a href="https://docs.google.com/document/d/1KNx4pVCKd4wgoHI4pjknBRTLrzYp6AL_D-j6MjcQSvQ/edit#heading=h.jibbdhrfuw7f">embedding API</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;track name&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;mdssvcnv&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;file&quot;</span><span class="o">:</span> <span class="s2">&quot;path/to/svcnv.gz&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;checkexpressionrank&quot;</span><span class="o">:</span><span class="p">{</span>
+     <span class="s2">&quot;file&quot;</span><span class="o">:</span><span class="s2">&quot;hg38/tcga-gdc/SKCM/TCGA_SKCM.fpkm.gz&quot;</span>
+  <span class="p">}</span>
+  <span class="s2">&quot;checkvcf&quot;</span><span class="o">:</span><span class="p">{</span>
+      <span class="s2">&quot;file&quot;</span><span class="o">:</span><span class="s2">&quot;hg38/tcga-gdc/SKCM/TCGA_SKCM.vcf.gz&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Read the <a href="https://drive.google.com/open?id=1owXUQuqw5hBHFERm0Ria7anKtpyoPBaZY_MCiXXf5wE">GenomePaint tutorial</a>.</p>
+<p>You can replace "file" with "url" in above 3 places.</p>
+<p>Following attributes can be applied in the track object as <a href="https://docs.google.com/document/d/1KNx4pVCKd4wgoHI4pjknBRTLrzYp6AL_D-j6MjcQSvQ/edit#heading=h.jibbdhrfuw7f">detailed in the Embedding API</a>.</p>
+<ul>
+<li>
+<p>singlesample:{}</p>
+</li>
+<li>
+<p>isfull:true / isdense:true</p>
+</li>
+<li>
+<p>sampleAttribute:{}</p>
+</li>
+<li>
+<p>vcf:{}</p>
+</li>
+<li>
+<p>hide_cnvgain:true</p>
+</li>
+<li>
+<p>hide_cnvloss:true</p>
+</li>
+<li>
+<p>cnv:{}</p>
+</li>
+<li>
+<p>sampleset:[]</p>
+</li>
+</ul>
+<p>A derivative of the "mdssvcnv" track is the multi-sample ASE track.</p>
+<p>Example: <a href="https://proteinpaint.stjude.org/examples/ase.html">https://proteinpaint.stjude.org/examples/ase.html</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span> 
+    <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;mdssvcnv&#39;</span><span class="p">,</span>
+    <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;Multi-sample ASE analysis&#39;</span><span class="p">,</span>
+    <span class="nx">checkvcf</span><span class="o">:</span><span class="p">{</span>
+         <span class="nx">file</span><span class="o">:</span><span class="s1">&#39;hg19/TARGET/DNA/test/oct3/sorted.vcf.gz&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nx">checkrnabam</span><span class="o">:</span><span class="p">{</span>
+         <span class="nx">samples</span><span class="o">:</span><span class="p">{</span>
+              <span class="nx">SJALL015260_D1</span><span class="o">:</span> <span class="p">{</span>
+                   <span class="nx">file</span><span class="o">:</span><span class="s1">&#39;hg19/TARGET/RNAbam/SJALL015260_D1.bam&#39;</span><span class="p">,</span>
+                   <span class="nx">totalreads</span><span class="o">:</span> <span class="mi">83388794</span><span class="p">,</span>
+              <span class="p">},</span>
+         <span class="nx">SJALL015643_D1</span><span class="o">:</span> <span class="p">{</span>
+              <span class="nx">file</span><span class="o">:</span><span class="s1">&#39;hg19/TARGET/RNAbam/SJALL015643_D1.bam&#39;</span><span class="p">,</span>
+              <span class="nx">totalreads</span><span class="o">:</span> <span class="mi">103477133</span><span class="p">,</span>
+         <span class="p">},</span>
+         <span class="p">...</span> <span class="nx">more</span> <span class="nx">BAM</span> <span class="nx">files</span> <span class="p">...</span> 
+    <span class="p">},</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="track-ase-single-sample">Track: ASE, single-sample<a class="headerlink" href="#track-ase-single-sample" title="Permanent link">&para;</a></h3>
+<p>Example: <a href="https://proteinpaint.stjude.org/examples/ase.single.html">https://proteinpaint.stjude.org/examples/ase.single.html</a></p>
+<p>This carries on-the-fly ASE analysis for a single sample.</p>
+<p>This track can be built standalone, or spawned from a multi-sample track
+(a special mode of mdssvcnv track)</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;ase&#39;</span><span class="p">,</span>
+    <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;My sample ASE&#39;</span><span class="p">,</span>
+    <span class="nx">samplename</span><span class="o">:</span><span class="s1">&#39;my_sample_name&#39;</span><span class="p">,</span>
+    <span class="nx">rnabamfile</span><span class="o">:</span><span class="s1">&#39;path/to/sample.rnaseq.bam&#39;</span><span class="p">,</span>
+    <span class="nx">rnabamtotalreads</span><span class="o">:</span> <span class="mi">103477133</span><span class="p">,</span>
+    <span class="nx">vcffile</span><span class="o">:</span><span class="s1">&#39;path/to/SJALL015643_D1.gz&#39;</span><span class="p">,</span>
+<span class="p">},</span>
+</code></pre></div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 St. Jude Children's Research Hospital
+          </div>
+        
+        
+        built from <a href="https://github.com/stjudecloud/docs/tree/b30c7e0">b30c7e0</a> using
+        
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and a modified version of
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs
+        </a>.
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://www.facebook.com/stjuderesearch/" target="_blank" rel="noopener" title="facebook" class="md-footer-social__link fa fa-facebook"></a>
+    
+      <a href="https://twitter.com/stjuderesearch?lang=en" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/st-jude-childrens-research-hospital" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://github.com/stjude" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.2d55c750.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../../../.."}})</script>
+      
+    
+  </body>
+</html>
