@@ -6,10 +6,10 @@
 ## File format
 
 There are 4 columns, separated by **tab**:
-1.  Chromosome
-2.  Start position (0-based)
-3.  Stop position (not including the ending base)
-4.  JSON string
+1. Chromosome
+2. Start position (0-based)
+3. Stop position (not including the ending base)
+4. JSON string
 
 Each line is a genomic feature. The feature can be richly described in
 the JSON string.
@@ -28,7 +28,7 @@ same directory on the web server. Obtain the URL to the .gz file and
 submit it to the browser.
 
 To host the track on ProteinPaint server: put both .gz and .gz.tbi files
-at the same directory under the \<TP\> directory. Obtain the relative
+at the same directory under the <TP> directory. Obtain the relative
 path to the .gz file and submit it to browser.
 
 ## JSON object for a BED item
@@ -54,20 +54,20 @@ Format requirements:
     -   **stop**
     -   **canvas**
 
-See full JSON spec at [[http://json.org/]{.underline}](http://json.org/)
+See full JSON spec at [http://json.org/](http://json.org/)
 
-### \"name\": STR
+### "name": STR
 
 Value is a string.
 
 For genes, "name" is gene symbol.
 
-When "**itemurl\_appendname**" is specified, "name" is required to
+When "**itemurl_appendname**" is specified, "name" is required to
 enable clicking on an item from track display and trigger a URL .
 
 ### "isoform": STR
 
-Gene isoform accession, e.g. NM\_000546 or ENST00000269305
+Gene isoform accession, e.g. NM_000546 or ENST00000269305
 
 Both name and isoform can appear in the tooltip when hovering cursor
 over the track display.
@@ -100,8 +100,7 @@ For coding genes:
 
     -   Value should be all exons.
 
--   Despite there are already "utr5", "utr3", "coding", "intron"
-    > attributes, the "exon" attribute is still required.
+-   Despite there are already "utr5", "utr3", "coding", "intron" attributes, the "exon" attribute is still required.
 
 ### "intron":\[\]
 
@@ -160,21 +159,21 @@ translation according to the coding exons as well as coding frame
 defined by the "coding:\[\]" attribute. The translation can happen when
 the browser is at sufficient resolution.
 
-### \"description\": STR
+### "description": STR
 
 Some text, e.g. gene function.
 
-### \"color\": STR
+### "color": STR
 
 Rendering color of this item. Use follow color names:
 
--   Names such as "red" "green" listed in [[https://en.wikipedia.org/wiki/Web\_colors]{.underline}](https://en.wikipedia.org/wiki/Web_colors)
+-   Names such as "red" "green" listed in [https://en.wikipedia.org/wiki/Web_colors](https://en.wikipedia.org/wiki/Web_colors)
 
--   \#FF0000
+-   #FF0000
 
 -   rgb(255,0,0)
 
-### \"category\": STR
+### "category": STR
 
 Value is string or integer. Value must be a key of the "categories"
 attribute of the track object.
@@ -184,7 +183,7 @@ attribute of the track object.
 ```javascript
 {
 "type":"bedj",
-"name":"gene track”,
+"name":"gene track",
 "file":"anno/gencode.v24.hg19.gz",
 "stackheight":14,
 "stackspace":1
@@ -227,8 +226,8 @@ attribute of the track object.
 
     -   Will translate genes when the resolution is fine enough. This requires the .coding\[\] attribute in the JSON objects of BED items.
 
--   **itemurl\_appendname**: URL
+-   **itemurl_appendname**: URL
 
     -   Allows clicking on an item from the track and open up a URL customized by the name of that item; item's name will be appended to the end of the URL as the value of a parameter.
 
-    -   Example: given URL of "[[http://google.com?query=]{.underline}](http://google.com?query=)". When clicked on an item named "HOX", this URL will be triggered: [[http://google.com?query=HOX]{.underline}](http://google.com?query=HOX)
+    -   Example: given URL of "[http://google.com?query=]{.underline}](http://google.com?query=)". When clicked on an item named "HOX", this URL will be triggered: [[http://google.com?query=HOX](http://google.com?query=HOX)

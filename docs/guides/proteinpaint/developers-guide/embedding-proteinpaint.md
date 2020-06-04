@@ -43,14 +43,14 @@ This function accepts an object as input, which contain key-value pairs to do ma
 
 Parameter names are case-sensitive.
 
-If you want to use the "heatmap”, you need to also include the "sjcharts”:
+If you want to use the "heatmap", you need to also include the "sjcharts":
 
 ```html
 <html>
 <body>
 <script src="https://pecan.stjude.cloud/sjcharts/bin/sjcharts.js" charset="utf-8"></script>
 <script src="https://proteinpaint.stjude.org/bin/proteinpaint.js" charset="utf-8"></script>
-… rest omitted ...
+... rest omitted ...
 ```
 
 ## Required Parameters
@@ -125,25 +125,21 @@ be set.
 Show one or more native tracks. The tracks must be available from this
 genome on this ProteinPaint server. Value can be following:
 
--   Track names joined by comma, e.g. "refgene", or
-    > "refgene,repeatmasker"
+-   Track names joined by comma, e.g. "refgene", or "refgene,repeatmasker"
 
 -   Array of track names, \["refgene", "repeatmasker"\]
 
--   Array of track objects, with custom settings, each track must have
-    > the "name" attribute
+-   Array of track objects, with custom settings, each track must have the "name" attribute
 
     -   \[ {"name":"refgene", "stackheight":15} \]
 
--   All track names are case-insensitive, e.g. "refgene" and "RefGene"
-    > refers to the same track
+-   All track names are case-insensitive, e.g. "refgene" and "RefGene" refers to the same track
 
 ### `tracks:[]`
 
 Provide one or more custom tracks.
 
-Tracks must be declared as JSON objects, [[as defined in this
-tutorial]{.underline}](https://drive.google.com/open?id=1ZnPZKSSajWyNISSLELMozKxrZHQbdxQkkkQFnxw6zTs).
+Tracks must be declared as JSON objects, [as defined in this tutorial](https://drive.google.com/open?id=1ZnPZKSSajWyNISSLELMozKxrZHQbdxQkkkQFnxw6zTs).
 
 ### Defining view range
 
@@ -187,8 +183,7 @@ Will change the default position.
 
 #### `hlregion=region1,region2,...`
 
-To highlight the given regions. [[Requirements defined
-here]{.underline}](https://docs.google.com/document/d/1e0JVdcf1yQDZst3j77Xeoj_hDN72B6XZ1bo_cAd2rss/edit#heading=h.51kfvkz9mjua).
+To highlight the given regions. [Requirements defined here](https://docs.google.com/document/d/1e0JVdcf1yQDZst3j77Xeoj_hDN72B6XZ1bo_cAd2rss/edit#heading=h.51kfvkz9mjua).
 
 ### Genome browser API
 
@@ -200,7 +195,7 @@ methods so you can manipulate the genome browser through your code.
 #### Changing view range
 
 ```javascript
-runproteinpaint({ block:true, …  })
+runproteinpaint({ block:true, ...  })
 .then(_=>{
   _.block.jump_1basedcoordinate('chr1:222-333')
   // above will enforce a minimum 400bp range
@@ -212,7 +207,7 @@ runproteinpaint({ block:true, …  })
 #### Highlight a region
 
 ```javascript
-runproteinpaint({ block:true, …  })
+runproteinpaint({ block:true, ...  })
 .then(_=>{
   _.block.highlight_1basedcoordinate('chr1:222-333')
 })
@@ -223,7 +218,7 @@ runproteinpaint({ block:true, …  })
 All the other tracks of the same type will be turned hidden.
 
 ```javascript
-runproteinpaint({ block:true, …  })
+runproteinpaint({ block:true, ...  })
 .then(_=>{
   _.block.showTrackByFile([
      {type:'bam',file:'path/to/file1.bam'},
@@ -235,7 +230,7 @@ runproteinpaint({ block:true, …  })
 #### Show given tracks
 
 ```javascript
-runproteinpaint({ block:true, …  })
+runproteinpaint({ block:true, ...  })
 .then(_=>{
   _.block.turnOnTrack([
      {type:'bam',file:'path/to/file1.bam'},
@@ -247,7 +242,7 @@ runproteinpaint({ block:true, …  })
 #### Hide given tracks
 
 ```javascript
-runproteinpaint({ block:true, …  })
+runproteinpaint({ block:true, ...  })
 .then(_=>{
   _.block.turnOffTrack([
      {type:'bam',file:'path/to/file1.bam'},
@@ -299,18 +294,15 @@ singlesample:{
 
 -   "name" is the sample name, required.
 
--   "waterfall" is optional. If provided, will apply the settings to the
-    > waterfall plot.
+-   "waterfall" is optional. If provided, will apply the settings to the waterfall plot.
 
-Following attributes also works for defining [[custom
-track]{.underline}](https://docs.google.com/document/d/1ZnPZKSSajWyNISSLELMozKxrZHQbdxQkkkQFnxw6zTs/edit#heading=h.k8aosi1ye7no):
+Following attributes also works for defining [custom track](https://docs.google.com/document/d/1ZnPZKSSajWyNISSLELMozKxrZHQbdxQkkkQFnxw6zTs/edit#heading=h.k8aosi1ye7no):
 
 **isfull**: BOOL
 
 **isdense**: BOOL
 
--   Defines if to show in "dense" or "expanded" mode, works for
-    > multi-sample.
+-   Defines if to show in "dense" or "expanded" mode, works for multi-sample.
 
 -   This overrides the default setting on the dataset.
 
@@ -324,18 +316,17 @@ sampleAttribute:{
 }
 ```
 
--   Optional. If provided, will filter out samples if they match with
-    > given sample attribute key and values.
+-   Optional. If provided, will filter out samples if they match with given sample attribute key and values.
 
 **vcf**:{}
 
--   hiddenclass: \[ \'M\', \'N\', ... \]
+-   hiddenclass: \[ 'M', 'N', ... \]
 
     -   See hlaachange for list of SNV/indel classes
 
-**.hide\_cnvgain:true**
+**.hide_cnvgain:true**
 
-**.hide\_cnvloss:true**
+**.hide_cnvloss:true**
 
 -   Setting to true to hide either gain or loss
 
@@ -369,37 +360,33 @@ sampleAttribute:{
 
 ```javascript
 sampleset:[
-   { name:'Group1', samples:['sample1','sample2', … ] },
-   { name:'Group2', samples:['sampleA','sampleB', … ] }
+   { name:'Group1', samples:['sample1','sample2', ... ] },
+   { name:'Group2', samples:['sampleA','sampleB', ... ] }
 }
 ```
 
--   Optional. Provides one or more groups of samples to limit the view
-    > only to these samples.
+-   Optional. Provides one or more groups of samples to limit the view only to these samples.
 
 ### `mdssamplescatterplot:{ dataset:'xxx' }`
 
 Launches the sample scatterplot view from a GenomePaint dataset. Only
-available for official datasets. [[See
-example]{.underline}](https://proteinpaint.stjude.org/examples/svcnv.scatter.html).
+available for official datasets. [See example](https://proteinpaint.stjude.org/examples/svcnv.scatter.html).
 
 ### `mdssurvivalplot:{}`
 
 Launches a set of Kaplan-Meier plots from a GenomePaint dataset, with
 customizations for each plot.
 
-Only available for official datasets. [[View
-instructions]{.underline}](https://docs.google.com/document/d/19k9_Z-DxN8WRD4yJEw7f9yCEzSGZj98n97-bV3MRlmE/edit?usp=sharing).
+Only available for official datasets. [View instructions](https://docs.google.com/document/d/19k9_Z-DxN8WRD4yJEw7f9yCEzSGZj98n97-bV3MRlmE/edit?usp=sharing).
 
 ### `display_termdb:{}`
 
-Launch termdb. [[Refer to termdb
-document]{.underline}](https://docs.google.com/document/d/1uESIx4U6Dg02k8mDcT6PBhcq_3OuabctF-01PEsgjS4/edit#).
+Launch termdb. [Refer to termdb document](https://docs.google.com/document/d/1uESIx4U6Dg02k8mDcT6PBhcq_3OuabctF-01PEsgjS4/edit#).
 
 ### `samplematrix:{}`
 
 Using an official dataset
-([[example]{.underline}](https://proteinpaint.stjude.org/F/hg19/pediatric.mds.example/matrix.nbl.KM.html)):
+([example](https://proteinpaint.stjude.org/F/hg19/pediatric.mds.example/matrix.nbl.KM.html)):
 
 ```javascript
 samplematrix:{
@@ -418,7 +405,7 @@ samplematrix:{
          excludeclasses:{snv:1,Intron:1,E:1,mnv:1,Utr3:1,Utr5:1}
        }
     },
-    { … another feature … }
+    { ... another feature ... }
   ]
 }
 ```
@@ -448,7 +435,7 @@ samplematrix:{
       position:'chr9:21843776-22119276',
       snvindel:{excludeclasses:{Intron:1}}
     },
-    { … another feature … }
+    { ... another feature ... }
   ]
 }
 ```
@@ -458,7 +445,7 @@ samplematrix:{
 ### `gene:'ikzf1'`
 
 To launch a gene-view with the given gene. Value can be gene symbol
-(TP53) or isoform name (NM\_000546), case-insensitive.
+(TP53) or isoform name (NM_000546), case-insensitive.
 
 ### `dataset:'clinvar'`
 
@@ -507,11 +494,11 @@ supported classes.
 | S          | SILENT         |
 | D          | PROTEINDEL     |
 | I          | PROTEININS     |
-| P          | SPLICE\_REGION |
+| P          | SPLICE_REGION |
 | L          | SPLICE         |
 | Intron     | INTRON         |
-| Utr3       | UTR\_3         |
-| Utr5       | UTR\_5         |
+| Utr3       | UTR_3         |
+| Utr5       | UTR_5         |
 | X          | NONSTANDARD    |
 | noncoding  | NONCODING      |
 | snv        | SNV            |
@@ -537,10 +524,10 @@ mset: [
              pos:140482900,
              dt:1
            },
-           … more variants
+           ... more variants
        ]
      },
-     … more sets
+     ... more sets
 ]
 ```
 
@@ -591,7 +578,7 @@ fimo: {
        alt:'AAAC'
    },
    fimo_thresh:1e-3,
-   factor_profiles:[ { profile1}, {profile2}, … ]
+   factor_profiles:[ { profile1}, {profile2}, ... ]
 }
 ```
 
@@ -671,13 +658,11 @@ The bigWig format file must be named as following to be recognized:
 
 ### `fusioneditor:{}`
 
-Will launch the [[Fusion
-Editor]{.underline}](https://drive.google.com/open?id=1DRVzE_WenG490eRYB7VGFOygtSqtF5L97rhK0HOUCNY),
+Will launch the [Fusion Editor](https://drive.google.com/open?id=1DRVzE_WenG490eRYB7VGFOygtSqtF5L97rhK0HOUCNY),
 value is an object, keys:
 
 -   input:"... ..."
-    -   A long string of fusion gene data (from CICERO output). \\n as line break, tab separates columns, first line is header, refer to [[Format
-        specification]{.underline}](https://drive.google.com/open?id=1klDZ0MHVkQTW2-lCu_AvpRE4_FcbhdB-yI17wNdPaOM)
+    -   A long string of fusion gene data (from CICERO output). \n as line break, tab separates columns, first line is header, refer to [Format specification](https://drive.google.com/open?id=1klDZ0MHVkQTW2-lCu_AvpRE4_FcbhdB-yI17wNdPaOM)
 -   urls:[ URL1, URL2, ... ]
     -   List of URLs of text files as input, format of each file should match specification: [Format specification](https://drive.google.com/open?id=1klDZ0MHVkQTW2-lCu_AvpRE4_FcbhdB-yI17wNdPaOM)
     -   "urls" will be ignored if "input" is set.
@@ -702,15 +687,14 @@ that contain the entire content of a text file.
 ```javascript
 studyview: {
     snvindel:"a string, \n as line breaks, first line is header",
-    svjson:"sv/fusion/itd/trunctation/deletion data in json format … ",
+    svjson:"sv/fusion/itd/trunctation/deletion data in json format ... ",
     cnv:"cnv data in tabular format, \n as line breaks, first line is header ", 
     name:"name of this dataset",
     genome:"hg19",
 }
 ```
 
-The "studyview" object is very similar to the [[JSON definition of
-study]{.underline}](https://drive.google.com/open?id=121SsSYiCb3NCU8jz0bF7UujFSN-1Y20b674dqa30iXE),
+The "studyview" object is very similar to the [JSON definition of study](https://drive.google.com/open?id=121SsSYiCb3NCU8jz0bF7UujFSN-1Y20b674dqa30iXE),
 with most attributes applicable here, except these:
 
 -   mutationset : \[\]
@@ -721,10 +705,9 @@ with most attributes applicable here, except these:
 
 Loads a study view from a server-side JSON file.
 
-Value is the JSON file path starting from \<TP\> path.
+Value is the JSON file path starting from <TP> path.
 
-[[Visit here for JSON file
-format]{.underline}](https://drive.google.com/open?id=121SsSYiCb3NCU8jz0bF7UujFSN-1Y20b674dqa30iXE).
+[Visit here for JSON file format](https://drive.google.com/open?id=121SsSYiCb3NCU8jz0bF7UujFSN-1Y20b674dqa30iXE).
 
 ## Other parameters
 

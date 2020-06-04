@@ -2,8 +2,19 @@
 
 There are two primary ways you can use ProteinPaint. You can use ProteinPaint to explore mutations our curated pediatric and adult cohorts using [PeCan][pecan] (ex: [TP53][pecan-tp53]). If you'd like to create and publish to the community your own visualizations with ProteinPaint, you can do so with the [Visualization Community][viz-community] (**still in development, available soon!**).
 
-## Features
+<p align="center">
+    <a style="font-weight: bold" href="https://proteinpaint.stjude.org/?block=1&genome=hg19">Human, hg19</a> — 
+    <a style="font-weight: bold" href="https://proteinpaint.stjude.org/?block=1&genome=hg38">Human, hg38</a> — 
+    <a style="font-weight: bold" href="https://proteinpaint.stjude.org/?block=1&genome=mm9">Mouse, mm9</a> — 
+    <a style="font-weight: bold" href="https://proteinpaint.stjude.org/?block=1&genome=mm10">Mouse, mm10</a> 
+</p>
+<p align="center">
+    <a style="font-weight: bold" href="https://proteinpaint.stjude.org/?block=1&genome=dm3">Fruit fly, dm3</a> — 
+    <a style="font-weight: bold" href="https://proteinpaint.stjude.org/?block=1&genome=dm6">Fruit fly, dm6</a> —
+    <a style="font-weight: bold" href="https://proteinpaint.stjude.org/?block=1&genome=danRer10">Zebra fish, danRer10</a>
+</p>
 
+## Features
 
 * Explore SNV and Indel mutations from the Pediatric, COSMIC, and ClinVar datasets ([learn more][loading-datasets]).
 * Load custom protein domains and annotations ([learn more][custom-protein-domains]).
@@ -32,32 +43,6 @@ There are two primary ways you can use ProteinPaint. You can use ProteinPaint to
 - Profile-Gene-Value ([learn more](./file-formats/pgv.md))
 - Bampile ([learn more](./file-formats/bampile.md))
 
-### Quick Links
-
--   Human
-
-    -   [[https://proteinpaint.stjude.org/?block=1&genome=hg19]{.underline}](https://proteinpaint.stjude.org/?block=1&genome=hg19)
-
-    -   [[https://proteinpaint.stjude.org/?block=1&genome=hg38]{.underline}](https://proteinpaint.stjude.org/?block=1&genome=hg38)
-
--   Mouse
-
-    -   [[https://proteinpaint.stjude.org/?block=1&genome=mm9]{.underline}](https://proteinpaint.stjude.org/?block=1&genome=mm9)
-
-    -   [[https://proteinpaint.stjude.org/?block=1&genome=mm10]{.underline}](https://proteinpaint.stjude.org/?block=1&genome=mm10)
-
--   Fruit fly
-
-    -   [[https://proteinpaint.stjude.org/?block=1&genome=dm3]{.underline}](https://proteinpaint.stjude.org/?block=1&genome=dm3)
-
-    -   [[https://proteinpaint.stjude.org/?block=1&genome=dm6]{.underline}](https://proteinpaint.stjude.org/?block=1&genome=dm6)
-
--   Zebra fish
-
-    -   [[https://proteinpaint.stjude.org/?block=1&genome=danRer10]{.underline}](https://proteinpaint.stjude.org/?block=1&genome=danRer10)
-
-
-![](../../images/guides/proteinpaint/index/media/image1.png)
 
 [pecan]: https://pecan.stjude.cloud
 [viz-community]: https://viz.stjude.cloud

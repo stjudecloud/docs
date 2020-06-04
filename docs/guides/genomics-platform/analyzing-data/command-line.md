@@ -24,13 +24,9 @@ computer by following [this guide](https://documentation.dnanexus.com/downloads#
 !!! tip
     A quickstart to getting up and running with the dx-toolkit:
 
-    1.  Install Python 2.7.13+. Note that using the system-level Python is
-        usually not a good idea (by default, system level Python is
-        typically too old/does not support the latest security protocols
-        required). You can install using [Anaconda](https://conda.io/docs/user-guide/getting-started.html) (recommended) or using
-        the default [Python installer](https://www.python.org/downloads/).
-    2.  Run `pip install dxpy`.
-    3.  Type `dx --help` at the command line.
+    1. Install Python 2.7.13+. Note that using the system-level Python is usually not a good idea (by default, system level Python is typically too old/does not support the latest security protocols required). You can install using [Anaconda](https://conda.io/docs/user-guide/getting-started.html) (recommended) or using the default [Python installer](https://www.python.org/downloads/).
+    2. Run `pip install dxpy`.
+    3. Type `dx --help` at the command line.
 
 ## A quick tour
 
@@ -89,70 +85,61 @@ dx --help
 You can use the following process to upload data to be used by St. Jude
 Cloud Platform tools:
 
-1.  First, click "View" on the tool you'd like to run from [this
-    page](https://stjude.cloud/tools.html). In this example, we will
-    choose the Rapid RNA-Seq tool.
+1. First, click "View" on the tool you'd like to run from [this page](https://stjude.cloud/tools.html). In this example, we will choose the Rapid RNA-Seq tool.
 
-2.  If you have not already, click "Start" on the tool you'd like to
-    run. This will create a cloud workspace for you to upload your
-    data to with the same name as the tool.
+2. If you have not already, click "Start" on the tool you'd like to run. This will create a cloud workspace for you to upload your data to with the same name as the tool.
 
-    ![](../../../images/guides/genomics-platform/analyzing-data/RapidRNASeq_startPage.png)
+   ![](../../../images/guides/genomics-platform/analyzing-data/RapidRNASeq_startPage.png)
 
-3.  Open up your terminal application and select the cloud workspace
-    with the same name as the tool you are trying to run.
+3. Open up your terminal application and select the cloud workspace with the same name as the tool you are trying to run.
 
-    ![](../../../images/guides/genomics-platform/analyzing-data/select-rapid-rnaseq.png)
+   ![](../../../images/guides/genomics-platform/analyzing-data/select-rapid-rnaseq.png)
 
-4.  Last, navigate to the local files you'd like to upload to the cloud
-    and use the `dx upload` command as specified in
-    [upload-download-data]{role="ref"} to upload your data to St. Jude
-    Cloud.
+4. Last, navigate to the local files you'd like to upload to the cloud and use the `dx upload` command as specified in [upload-download-data]{role="ref"} to upload your data to St. Jude Cloud.
 
-    ![](../../../images/guides/genomics-platform/analyzing-data/rapid-rnaseq-upload-data.png)
+   ![](../../../images/guides/genomics-platform/analyzing-data/rapid-rnaseq-upload-data.png)
 
 ## Downloading data
 
 !!! warning
     To download data from a St. Jude Cloud data request, you must have
     indicated that you wished to download the data in your Data Access
-    Agreement (DAA) during your submission. Any downloading of St. Jude data
-    without completing this step is strictly PROHIBITED.
+    Agreement (DAA) during your submission. Any downloading of St. Jude data without completing this step is strictly PROHIBITED.
 
 You can use the following steps to download data from a St. Jude Cloud
 data request:
 
-1.  Complete a data request using the Genomics Platform application. See this [guide](../requesting-data/data-request.md) for instructions.
+1. Complete a data request using the Genomics Platform application. See this [guide](../requesting-data/data-request.md) for instructions.
 
-2.  Open up your terminal application and select the cloud workspace
-    relevant to your data request. For instance, in this case we
-    would type `#!bash dx select "Retinoblastoma Data"`.
+2. Open up your terminal application and select the cloud workspace
+   relevant to your data request. For instance, in this case we
+   would type `#!bash dx select "Retinoblastoma Data"`.
 
-    ![](../../../images/guides/genomics-platform/analyzing-data/select-retinoblastoma.png)
+   ![](../../../images/guides/genomics-platform/analyzing-data/select-retinoblastoma.png)
 
-3.  You can use typical commands like `#!bash dx ls`,
-    `#!bash dx pwd`, and `#!bash dx cd` to navigate around
-    your cloud folder as you would a local folder. Your project may look
-    different based on what data you requested and whether you were
-    previously approved to access the data. Your data should either be
-    in the **restricted** folder (if this is your first time
-    requesting access) or the **immediate** folder (if you
-    were previously granted access permission).
+3. You can use typical commands like `#!bash dx ls`,
+   `#!bash dx pwd`, and `#!bash dx cd` to navigate around
+   your cloud folder as you would a local folder. Your project may look
+   different based on what data you requested and whether you were
+   previously approved to access the data. Your data should either be
+   in the **restricted** folder (if this is your first time
+   requesting access) or the **immediate** folder (if you
+   were previously granted access permission).
 
-    ![](../../../images/guides/genomics-platform/analyzing-data/navigate-data-request.png)
+   ![](../../../images/guides/genomics-platform/analyzing-data/navigate-data-request.png)
 
-4.  In the root of every data request is a file called
-    `SAMPLE_INFO.txt`. This should contain all of the
-    information about the samples you checked out as well as the
-    associated metadata we provide.
+4. In the root of every data request is a file called
+   `SAMPLE_INFO.txt`. This should contain all of the
+   information about the samples you checked out as well as the
+   associated metadata we provide.
 
-5.  To download data from the cloud to local storage, use the
-    `#!bash dx download` command as specified in
-    [upload-download-data]{role="ref"}. For instance, if I wanted to
-    download all of the BAM files to my local computer, I would type
-    `#!bash dx download immediate/bam/*`.
+5. To download data from the cloud to local storage, use the
+   `#!bash dx download` command as specified in
+   [upload-download-data]{role="ref"}. For instance, if I wanted to
+   download all of the BAM files to my local computer, I would type
+   `#!bash dx download immediate/bam/*`.
 
-    ![](../../../images/guides/genomics-platform/analyzing-data/download-bams.png)
+   ![](../../../images/guides/genomics-platform/analyzing-data/download-bams.png)
 
 ## Similar Topics
 

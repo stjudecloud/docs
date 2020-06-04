@@ -26,15 +26,9 @@ changes.
 
 !!! tip "Show a preconfigured map"
 
-    1.  A preconfigured map can be stored in the schematics of
-        > a study view. [[Refer to the "**heatmapJSON**"
-        > attribute of the study
-        > schematics]{.underline}](https://drive.google
-    .com/open?id=121SsSYiCb3NCU8jz0bF7UujFSN-1Y20b674dqa30iXE)
-    2.  Also in study view, try the "**hard-coded map**" in
-        > which you have complete control of what is showing in
-        > one or more maps.                                     
-    3.  To embed a map in your website, [[use the "studyview" as instructed here]{.underline}](https://docs.google.com/document/d/1KNx4pVCKd4wgoHI4pjknBRTLrzYp6AL_D-j6MjcQSvQ/edit?usp=sharing).
+    1. A preconfigured map can be stored in the schematics of a study view. [Refer to the "**heatmapJSON**" attribute of the study schematics](https://drive.google.com/open?id=121SsSYiCb3NCU8jz0bF7UujFSN-1Y20b674dqa30iXE)
+    2. Also in study view, try the "**hard-coded map**" in which you have complete control of what is showing in one or more maps.                                     
+    3. To embed a map in your website, [use the "studyview" as instructed here](https://docs.google.com/document/d/1KNx4pVCKd4wgoHI4pjknBRTLrzYp6AL_D-j6MjcQSvQ/edit?usp=sharing).
 
 ## Genes
 
@@ -92,19 +86,19 @@ and borders can be drawn around each group, so that they appear distinct
 visually.
 
 ```javascript
-{“samplegroup”: [
+{"samplegroup": [
     {
-       “name”:”sample group 1”,
-       “lst”:[
-                {  “name”:”sample_1” },
-                {  “name”:”sample_2”}
+       "name":"sample group 1",
+       "lst":[
+                {  "name":"sample_1" },
+                {  "name":"sample_2"}
         ]
      },
      {
-        “name”:”sample group 2”,
-        “lst”:[
-                {  “name”:”sample_3” },
-                {  “name”:”sample_4”}
+        "name":"sample group 2",
+        "lst":[
+                {  "name":"sample_3" },
+                {  "name":"sample_4"}
          ]
      }
    ]
@@ -137,8 +131,8 @@ Will be available in the next release.
 ### Sample/gene group border
 
 ```javascript
-{“border”:”black”,
-“borderwidth”:1}
+{"border":"black",
+"borderwidth":1}
 ```
 
 Add border attribute to either a sample or gene group, and a solid
@@ -154,7 +148,7 @@ Default applied to gene group.
 ### Heatmap cell background color
 
 ```javascript
-{“cellbg”:”#f1f1f1”}
+{"cellbg":"#f1f1f1"}
 ```
 
 The background fill color for a heatmap cell if there is no data.
@@ -164,7 +158,7 @@ Default provided.
 ### Sample group background color
 
 ```javascript
-{“background”:”black”}
+{"background":"black"}
 ```
 
 Add background attribute to a sample group. The entire group will show
@@ -178,7 +172,7 @@ The border width will be controlled by row/column spacing.
 ### Cell background color by sample
 
 ```javascript
-{“name”:”20-PANLJN”, “cellbg”:”#CCCCCC”}
+{"name":"20-PANLJN", "cellbg":"#CCCCCC"}
 ```
 
 Add the **cellbg** attribute to a sample. All cells belonging to this
@@ -225,7 +219,7 @@ This is deprecated. Try to use "**metadatabymatrix**" instead.
 "PAPKXS":{"a":"female","b":"WGS"},
 "PAMNLH":{"a":"male",  "b":"WES"}
 },
-“metadataborder”:”black”,
+"metadataborder":"black",
 ```
 
 **Rendered**
@@ -235,7 +229,7 @@ This is deprecated. Try to use "**metadatabymatrix**" instead.
 ### Metadata terms
 
 ```javascript
-“metadata”:[ … ]
+"metadata":[ ... ]
 ```
 
 Root-level attribute.
@@ -267,7 +261,7 @@ rendering color.
 ### Metadata box border and color
 
 ```javascript
-“metadataborder”:”color”,
+"metadataborder":"color",
 ```
 
 Root-level attribute.
@@ -277,7 +271,7 @@ If present, draw border around metadata section with given color.
 ### Width of metadata box border
 
 ```javascript
-“metadataborderwidth”:2,
+"metadataborderwidth":2,
 ```
 
 Root-level attribute.
@@ -300,7 +294,7 @@ Value is a hash, with patient names as keys, and annotations as values.
         "term1key":"term1attribute1",
         "term2key":"term2attribute1",
     },
-    “sample2”:{ … },
+    "sample2":{ ... },
     ...
 },
 ```
@@ -326,15 +320,15 @@ sample type as level-2 keys, and sample annotations as values.
 ```javascript
 {
    "patient1name":{
-        “sampletype1”:{
+        "sampletype1":{
            "term1key":"term1attribute1",
            "term2key":"term2attribute1"
          },
-         “Sampletype2”:{
-                … annotation to this sample in this patient
+         "Sampletype2":{
+                ... annotation to this sample in this patient
          }
     },
-    “patient2name”:{ … },
+    "patient2name":{ ... },
     ...
 },
 ```
@@ -349,9 +343,9 @@ Prepare metadata annotation in a spreadsheet and declare it using
 Example:
 
 ```javascript
-“metadatabymatrix”:{
-   “annotations”:[
-      {”text”:”matrix data lines”}
+"metadatabymatrix":{
+   "annotations":[
+      {"text":"matrix data lines"}
    ],
    "terms":{
        "Cytogenetics":{
@@ -383,9 +377,9 @@ Example:
 }
 ```
 
-Metadata rows “1q” to “Y” belongs to the group “Cytogenetics”, as defined in metadatabymatrix.terms:{}.
+Metadata rows "1q" to "Y" belongs to the group "Cytogenetics", as defined in metadatabymatrix.terms:{}.
 
-In the legend, it will show “Cytogenetics” but rather each chromosome arm like 1q, 5p and such.
+In the legend, it will show "Cytogenetics" but rather each chromosome arm like 1q, 5p and such.
 
 ![](../../../images/guides/proteinpaint/advanced-guides/using-the-heatmap/media/image5.png)
 ![](../../../images/guides/proteinpaint/advanced-guides/using-the-heatmap/media/image1.png)
@@ -402,7 +396,7 @@ columns are joined by "\t" and lines joined by "\n".
 ### Gene recurrence
 
 ```javascript
-“samplecount4gene”:true 
+"samplecount4gene":true 
 ```
 
 Root-level attribute.

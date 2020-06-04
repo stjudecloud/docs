@@ -8,7 +8,7 @@ one gene over a set of samples.
 
 ![](../../../images/guides/proteinpaint/file-formats/pgv/media/image1.png)
 
-A live example: [[https://pecan.stjude.org/proteinpaint/study/retina2017]{.underline}](https://pecan.stjude.org/proteinpaint/study/retina2017)
+A live example: [https://pecan.stjude.org/proteinpaint/study/retina2017](https://pecan.stjude.org/proteinpaint/study/retina2017)
 
 ### Gene-value track
 
@@ -22,22 +22,22 @@ chr1    3205900 3671498 {"sample":"sample3","value":3.21379,"gene":"Gm19938"}
 ```
 
 The file has four columns:
-1.  Chromosome name
-2.  Start position of the gene (feature), 0-based
-3.  Stop position of the gene (feature), 0-based
-4.  JSON object
+1. Chromosome name
+2. Start position of the gene (feature), 0-based
+3. Stop position of the gene (feature), 0-based
+4. JSON object
     a.  Required keys:
-        i.  \"**sample**\":STR
-        ii. \"**gene**\": STR
-        iii. \"**value**\": FLOAT
-             1.  Currently, only nonnegative values are supported
+        i.  "**sample**":STR
+        ii. "**gene**": STR
+        iii. "**value**": FLOAT
+             1. Currently, only nonnegative values are supported
     b.  The chromosomal position should match with the gene. It's totally okay to describe other type of genomic features rather than genes, but the "gene" key should still be used for the moment.
 
 Each line represents a numerical value for a gene in a sample. The gene
 chromosome positions are for indexing purpose.
 
 The gene-value track should be compressed and indexed, and hosted in the
-same way as the [[JSON-BED track]{.underline}](https://drive.google.com/open?id=1GP81rer7YEb0RpIej2XXfx-k7SCAL1Od9At_oczf06A).
+same way as the [JSON-BED track](https://drive.google.com/open?id=1GP81rer7YEb0RpIej2XXfx-k7SCAL1Od9At_oczf06A).
 
 ### Track format with single type of gene-value
 
@@ -50,10 +50,10 @@ Example:
 {
 "type":"profilegenevalue",
 "genevaluetrack":{
-    “file”:"rhb/fpkm.db"
+    "file":"rhb/fpkm.db"
 },
 "genevaluetype":"FPKM",
-“genevaluematchname”:”sampleID”,
+"genevaluematchname":"sampleID",
 "legendimg":{
     "file":"rhb/chromhmm.png",
    },
@@ -65,17 +65,17 @@ Example:
      "stackheight":20,
      "stackspace":1,
      "name":"sample1",
-     “sampleID”:”sample1”
+     "sampleID":"sample1"
     },
-    {“type”:”bigwig”,
-     ”file”:”path/to/file.bw”,
-     ”height”:20,
-     ”name”:”sample2”,
-     “sampleID”:”sample2”,
-     ”scale”:{“auto”:1},
-     ”pcolor”:”blue”
+    {"type":"bigwig",
+     "file":"path/to/file.bw",
+     "height":20,
+     "name":"sample2",
+     "sampleID":"sample2",
+     "scale":{"auto":1},
+     "pcolor":"blue"
     },
-   … more member tracks …
+   ... more member tracks ...
 ]
 }
 ```
@@ -83,7 +83,7 @@ Example:
 -   **genevaluetrack**
     -   A JSON-BED file that stores numerical data **per gene per sample**.
         -   When the file is stored on the ProteinPaint server, use "file" to provide path. Otherwise, provide the URL with the "url" keyword.
-    -   The file follows [[JSON-BED format]{.underline}](https://drive.google.com/open?id=1GP81rer7YEb0RpIej2XXfx-k7SCAL1Od9At_oczf06A) and needs to be compressed by bgzip and indexed by tabix.
+    -   The file follows [JSON-BED format](https://drive.google.com/open?id=1GP81rer7YEb0RpIej2XXfx-k7SCAL1Od9At_oczf06A) and needs to be compressed by bgzip and indexed by tabix.
     -   Each line stores one numerical value for one gene in one sample. The JSON part should be an object with following attributes:
         -   **gene**
             -   the name of gene
@@ -137,7 +137,7 @@ above.
     "matchname":"PROTEINsampleID",
     }
 },
-"tracks":[  … member tracks … ]
+"tracks":[  ... member tracks ... ]
 }
 ```
 
@@ -158,7 +158,7 @@ types will be specific to genes. May also support fixed set of types.
     "axistickformat":".0e",
     }
 },
-"tracks":[  … member tracks … ]
+"tracks":[  ... member tracks ... ]
 }
 ```
 

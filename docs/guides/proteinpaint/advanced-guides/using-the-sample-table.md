@@ -12,11 +12,9 @@ are indicated (SNV/indel, SV, CNV).
 
 Notes:
 
--   The table only shows names of patients, rather than the name of
-    > specific sample.
+-   The table only shows names of patients, rather than the name of specific sample.
 
--   ProteinPaint does not assume "diagnosis/relapse" are the only valid
-    > sample type. User is free to use any word to describe sample type.
+-   ProteinPaint does not assume "diagnosis/relapse" are the only valid sample type. User is free to use any word to describe sample type.
 
 Click on the "diagnosis/relapse" button representing sample types to
 generate a whole-genome view of data from this sample:

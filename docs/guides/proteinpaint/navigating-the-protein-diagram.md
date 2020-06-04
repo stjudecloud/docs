@@ -6,7 +6,7 @@ example "TP53".
 The TP53 protein is rendered as a color-banded ruler, with the numerical
 axis the representing number of amino acid residues from N-terminus to
 C-terminus. This example shows the protein translated from the preferred
-isoform of *TP53* gene (NM\_000546), shown on the top left. Click the
+isoform of *TP53* gene (NM_000546), shown on the top left. Click the
 gene symbol to view all isoforms for *TP53:*
 
 ![](../../images/guides/proteinpaint/navigating-the-protein-diagram/media/image5.png)
@@ -84,3 +84,7 @@ left or right. To zoom out and view entire protein again, click the
 "Show all" button on the top:
 
 ![](../../images/guides/proteinpaint/navigating-the-protein-diagram/media/image8.png)
+
+## Summary
+
+![](../../images/guides/proteinpaint/index/media/image1.png)

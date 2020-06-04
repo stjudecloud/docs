@@ -14,7 +14,7 @@ data set buttons and select "Upload text files":
 ![](../../../images/guides/proteinpaint/advanced-guides/loading-snv-indel-mutations-from-a-file/media/image2.png)
 
 Alternatively, go to
-[[https://proteinpaint.stjude.org/]{.underline}](https://proteinpaint.stjude.org/),
+[https://proteinpaint.stjude.org/](https://proteinpaint.stjude.org/),
 click the "Apps" button at the top and select the option "Load mutation
 from text file".
 

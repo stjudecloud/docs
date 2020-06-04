@@ -2,8 +2,7 @@
 
 ###  File uploading procedure
 
-[[See the uploading procedure
-here.]{.underline}](https://docs.google.com/document/d/15NtAMVNtLNxJ7YAWFk2P6iE2jYDR6YSnXb46HVujT3g/edit?usp=sharing)
+[See the uploading procedure here.](https://docs.google.com/document/d/15NtAMVNtLNxJ7YAWFk2P6iE2jYDR6YSnXb46HVujT3g/edit?usp=sharing)
 
 ### General notes
 
@@ -31,7 +30,7 @@ here.]{.underline}](https://docs.google.com/document/d/15NtAMVNtLNxJ7YAWFk2P6iE2
 
 -   **chromosome**
 
-    -   Can be either "chr1\" or \"1\", case-insensitive
+    -   Can be either "chr1" or "1", case-insensitive
 
 -   **start**
 
@@ -65,11 +64,11 @@ here.]{.underline}](https://docs.google.com/document/d/15NtAMVNtLNxJ7YAWFk2P6iE2
 
         -   splice
 
-        -   splice\_region
+        -   splice_region
 
-        -   utr\_3
+        -   utr_3
 
-        -   utr\_5
+        -   utr_5
 
         -   intron
 
@@ -105,27 +104,27 @@ here.]{.underline}](https://docs.google.com/document/d/15NtAMVNtLNxJ7YAWFk2P6iE2
 
 -   **sampletype**
 
-    -   A special field for distinguish multiple samples of the same patient or individual, e.g. \"diagnosis\" or \"relapse\". Not to be confused with variant origin.
+    -   A special field for distinguish multiple samples of the same patient or individual, e.g. "diagnosis" or "relapse". Not to be confused with variant origin.
 
     -   If sampletype is specified, patient name should be provided, so that multiple samples from the same patient can be correctly identified. In this case, sample name becomes optional. When not provided, ProteinPaint will combine patient name and sample type to get sample name. If provided, ProteinPaint requires that different samples from the same patient must have different sample names.
 
 ### Optional columns describing mutations
 
--   **mutant\_in\_tumor**
+-   **mutant_in_tumor**
 
     -   Number of reads with the mutant allele in tumor sample
 
--   **total\_in\_tumor**
+-   **total_in_tumor**
 
     -   Total number of reads in tumor sample over the mutation locus
 
-    -   By providing "mutant\_in\_tumor" and "total\_in\_tumor", the "maf-coverage" plot can be generated.
+    -   By providing "mutant_in_tumor" and "total_in_tumor", the "maf-coverage" plot can be generated.
 
--   **mutant\_in\_normal**
+-   **mutant_in_normal**
 
     -   Number of reads with the mutant allele in normal sample
 
--   **total\_in\_normal**
+-   **total_in_normal**
 
     -   Total number of reads in normal sample over the mutation locus
 

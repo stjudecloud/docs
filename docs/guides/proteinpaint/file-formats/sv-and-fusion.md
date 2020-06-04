@@ -2,43 +2,43 @@
 
 First line must be the header line, with following columns.
 
--   gene\_a
+-   gene_a
 
-    -   gene on 5\' end of a fusion. Do not apply value for intergenic break-end.
+    -   gene on 5' end of a fusion. Do not apply value for intergenic break-end.
 
--   isoform\_a
+-   isoform_a
 
-    -   The RefSeq/Ensembl accession of gene\_a. Leave blank for intergenic break-end.
+    -   The RefSeq/Ensembl accession of gene_a. Leave blank for intergenic break-end.
 
--   chr\_a
+-   chr_a
 
-    -   Chromosome name of gene\_a. In case of intergenic translocation, use the 5\' end of the break point. Use name "chr10" but not "10".
+    -   Chromosome name of gene_a. In case of intergenic translocation, use the 5' end of the break point. Use name "chr10" but not "10".
 
--   position\_a
+-   position_a
 
-    -   Chromosomal position of the 5\' end break point, 0-based.
+    -   Chromosomal position of the 5' end break point, 0-based.
 
--   strand\_a
+-   strand_a
 
-    -   \+ or -
+    -   + or -
 
--   gene\_b
+-   gene_b
 
-    -   Gene on 3\' end of a fusion. In case of intergenic translocation, leave unspecified.
+    -   Gene on 3' end of a fusion. In case of intergenic translocation, leave unspecified.
 
--   isoform\_b
+-   isoform_b
 
-    -   The RefSeq/Ensembl accession of gene\_b. Leave blank for intergenic break-end.
+    -   The RefSeq/Ensembl accession of gene_b. Leave blank for intergenic break-end.
 
--   chr\_b
+-   chr_b
 
-    -   Chromosome name of gene\_b. In case of intergenic translocation, use the 3\' end of the break point.
+    -   Chromosome name of gene_b. In case of intergenic translocation, use the 3' end of the break point.
 
--   position\_b
+-   position_b
 
-    -   Chromosomal position of the 3\' end break point, 0-based.
+    -   Chromosomal position of the 3' end break point, 0-based.
 
--   strand\_b
+-   strand_b
 
     -   + or -
 

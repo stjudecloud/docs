@@ -21,20 +21,20 @@ works.
 
 Host it on the ProteinPaint server:
 
-1.  Put both the .gz file and the index file at the same directory
-    > inside the \<TP\> directory of the ProteinPaint server.
+1. Put both the .gz file and the index file at the same directory
+    > inside the <TP> directory of the ProteinPaint server.
 
-    a.  The \<TP\> directory is specified in the file "serverconfig.json".
+    a.  The <TP> directory is specified in the file "serverconfig.json".
 
-2.  Obtain the relative path to the .gz file from but not include the \<TP\> directory.
+2. Obtain the relative path to the .gz file from but not include the <TP> directory.
 
-    a.  E.g. for \<TP\>/path/to/file.vcf.gz, the path would be "path/to/file.vcf.gz"
+    a.  E.g. for <TP>/path/to/file.vcf.gz, the path would be "path/to/file.vcf.gz"
 
 Host it on a web server:
 
-1.  Put the .gz and index files on the web server. Obtain the URL of the .gz file for submission. For most cases ProteinPaint expects to find the index file at the same location of the .gz file
+1. Put the .gz and index files on the web server. Obtain the URL of the .gz file for submission. For most cases ProteinPaint expects to find the index file at the same location of the .gz file
 
-2.  If the index file does not share URL with the .gz file, provide its URL via the .indexURL attribute in the JSON definition
+2. If the index file does not share URL with the .gz file, provide its URL via the .indexURL attribute in the JSON definition
 
 ## Showing a VCF file on ProteinPaint
 
@@ -58,11 +58,9 @@ If the index file is using a separate URL with the .gz file, the
 embedding API must be used, in which the attribute "indexURL" can be
 used to provide an additional URL for the index file.
 
-[[General introduction of embedding
-API.]{.underline}](https://docs.google.com/document/d/1KNx4pVCKd4wgoHI4pjknBRTLrzYp6AL_D-j6MjcQSvQ/edit?usp=sharing)
+[General introduction of embedding API.](https://docs.google.com/document/d/1KNx4pVCKd4wgoHI4pjknBRTLrzYp6AL_D-j6MjcQSvQ/edit?usp=sharing)
 
-[[General introduction on JSON definition for
-tracks.]{.underline}](https://docs.google.com/document/d/1ZnPZKSSajWyNISSLELMozKxrZHQbdxQkkkQFnxw6zTs/edit?usp=sharing)
+[General introduction on JSON definition for tracks.](https://docs.google.com/document/d/1ZnPZKSSajWyNISSLELMozKxrZHQbdxQkkkQFnxw6zTs/edit?usp=sharing)
 
 See section **Summary of VCF track object** for an overview of the VCF
 track object.
@@ -84,7 +82,7 @@ INFO fields.
 ### VEP format
 
 The VCF output from the VEP is accepted by ProteinPaint. Find details at
-[[http://useast.ensembl.org/info/docs/tools/vep/vep\_formats.html]{.underline}](http://useast.ensembl.org/info/docs/tools/vep/vep_formats.html)
+[http://useast.ensembl.org/info/docs/tools/vep/vep_formats.html](http://useast.ensembl.org/info/docs/tools/vep/vep_formats.html)
 at the "VCF output" section.
 
 The annotation is encoded in an INFO field called CSQ. It supports
@@ -100,68 +98,68 @@ is one example:
 
 Required CSQ sub-fields:
 
--   Feature\_type
+-   Feature_type
 
-    -   When the value of Feature\_type is "Transcript" for a variant, the value of "Feature" should be isoform name, e.g. RefSeq or ENSEMBL isoform. If multiple isoform names joined by comma, the first will be used
+    -   When the value of Feature_type is "Transcript" for a variant, the value of "Feature" should be isoform name, e.g. RefSeq or ENSEMBL isoform. If multiple isoform names joined by comma, the first will be used
 
 -   Consequence
 
-    -   The VEP consequence notation [[http://useast.ensembl.org/info/genome/variation/predicted\_data.html]{.underline}](http://useast.ensembl.org/info/genome/variation/predicted_data.html) is converted to internal notation used by ProteinPaint. A match table is shown below
+    -   The VEP consequence notation [http://useast.ensembl.org/info/genome/variation/predicted_data.html](http://useast.ensembl.org/info/genome/variation/predicted_data.html) is converted to internal notation used by ProteinPaint. A match table is shown below
 
 -   HGVSp
 
--   Protein\_position
+-   Protein_position
 
--   Amino\_acids
+-   Amino_acids
 
 -   HGVSc
 
--   Existing\_variation
+-   Existing_variation
 
     -   If any above fields are available, will use the value as the label of the variant
 
 | **VEP notation**                       | **ProteinPaint notation** | **Note**                  |
 | -------------------------------------- | ------------------------- | ------------------------- |
-| transcript\_ablation                   | deletion, intragenic      | Not yet supported.        |
-| splice\_acceptor\_variant              | splice                    |                           |
-| splice\_donor\_variant                 | splice                    |                           |
-| stop\_gained                           | nonsense                  |                           |
-| frameshift\_variant                    | frameshift                |                           |
-| stop\_lost                             | nonsense                  |                           |
-| start\_lost                            | nonsense                  |                           |
-| transcript\_amplification              | nonstandard               | Not yet supported.        |
-| inframe\_insertion                     | proteinins                |                           |
-| inframe\_deletion                      | proteindel                |                           |
-| missense\_variant                      | missense                  |
-| protein\_altering\_variant             | nonsense                  | Not explicitly supported  |
-| splice\_region\_variant                | splice\_region            |                           |
-| incomplete\_terminal\_codon\_variant   | nonsense                  |                           |
-| stop\_retained\_variant                | silent                    | Not explicitly supported. |
-| synonymous\_variant                    | silent                    |                           |
-| coding\_sequence\_variant              | nonstandard               | Not explicitly supported. |
-| mature\_miRNA\_variant                 | exon                      | Not yet supported.        |
-| 5\_prime\_UTR\_variant                 | utr\_5                    |                           |
-| 3\_prime\_UTR\_variant                 | utr\_3                    |                           |
-| non\_coding\_transcript\_exon\_variant | exon                      |                           |
-| intron\_variant                        | intron                    |                           |
-| NMD\_transcript\_variant               | silent                    | Not equivalent.           |
-| non\_coding\_transcript\_variant       | exon                      |                           |
-| upstream\_gene\_variant                | noncoding                 | Not explicitly supported. |
-| downstream\_gene\_variant              | noncoding                 | Not explicitly supported. |
-| TFBS\_ablation                         | noncoding                 | Not yet supported.        |
-| TFBS\_amplification                    | noncoding                 | Not yet supported.        |
-| TF\_binding\_site\_variant             | noncoding                 | Not yet supported.        |
-| regulatory\_region\_ablation           | noncoding                 | Not yet supported.        |
-| regulatory\_region\_amplification      | noncoding                 | Not yet supported.        |
-| feature\_elongation                    | noncoding                 | Not yet supported.        |
-| regulatory\_region\_variant            | noncoding                 | Not yet supported.        |
-| feature\_truncation                    | noncoding                 | Not yet supported.        |
-| intergenic\_variant                    | noncoding                 | Not yet supported.        |
+| transcript_ablation                   | deletion, intragenic      | Not yet supported.        |
+| splice_acceptor_variant              | splice                    |                           |
+| splice_donor_variant                 | splice                    |                           |
+| stop_gained                           | nonsense                  |                           |
+| frameshift_variant                    | frameshift                |                           |
+| stop_lost                             | nonsense                  |                           |
+| start_lost                            | nonsense                  |                           |
+| transcript_amplification              | nonstandard               | Not yet supported.        |
+| inframe_insertion                     | proteinins                |                           |
+| inframe_deletion                      | proteindel                |                           |
+| missense_variant                      | missense                  |
+| protein_altering_variant             | nonsense                  | Not explicitly supported  |
+| splice_region_variant                | splice_region            |                           |
+| incomplete_terminal_codon_variant   | nonsense                  |                           |
+| stop_retained_variant                | silent                    | Not explicitly supported. |
+| synonymous_variant                    | silent                    |                           |
+| coding_sequence_variant              | nonstandard               | Not explicitly supported. |
+| mature_miRNA_variant                 | exon                      | Not yet supported.        |
+| 5_prime_UTR_variant                 | utr_5                    |                           |
+| 3_prime_UTR_variant                 | utr_3                    |                           |
+| non_coding_transcript_exon_variant | exon                      |                           |
+| intron_variant                        | intron                    |                           |
+| NMD_transcript_variant               | silent                    | Not equivalent.           |
+| non_coding_transcript_variant       | exon                      |                           |
+| upstream_gene_variant                | noncoding                 | Not explicitly supported. |
+| downstream_gene_variant              | noncoding                 | Not explicitly supported. |
+| TFBS_ablation                         | noncoding                 | Not yet supported.        |
+| TFBS_amplification                    | noncoding                 | Not yet supported.        |
+| TF_binding_site_variant             | noncoding                 | Not yet supported.        |
+| regulatory_region_ablation           | noncoding                 | Not yet supported.        |
+| regulatory_region_amplification      | noncoding                 | Not yet supported.        |
+| feature_elongation                    | noncoding                 | Not yet supported.        |
+| regulatory_region_variant            | noncoding                 | Not yet supported.        |
+| feature_truncation                    | noncoding                 | Not yet supported.        |
+| intergenic_variant                    | noncoding                 | Not yet supported.        |
 
 ### ANN format
 
 As generated by SnpEff:
-[[http://snpeff.sourceforge.net/VCFannotationformat\_v1.0.pdf]{.underline}](http://snpeff.sourceforge.net/VCFannotationformat_v1.0.pdf)
+[http://snpeff.sourceforge.net/VCFannotationformat_v1.0.pdf](http://snpeff.sourceforge.net/VCFannotationformat_v1.0.pdf)
 
 This format uses the "ANN" INFO field. The meta line:
 ```
@@ -199,8 +197,7 @@ AV_POS=69655;AV_REF=G;AV_ALT=C;AV_ACC=NM_001005484;AV_AA=D189H;AV_CLASS=missense
 ## Combining multiple VCF files in one track
 
 This is only achievable by declaring the tracks in JSON and calling
-ProteinPaint's [[embedding
-API]{.underline}](https://docs.google.com/document/d/1KNx4pVCKd4wgoHI4pjknBRTLrzYp6AL_D-j6MjcQSvQ/edit?usp=sharing).
+ProteinPaint's [embedding API](https://docs.google.com/document/d/1KNx4pVCKd4wgoHI4pjknBRTLrzYp6AL_D-j6MjcQSvQ/edit?usp=sharing).
 
 Following example shows the JSON part of a VCF track which combines
 multiple VCF files.
@@ -216,7 +213,7 @@ multiple VCF files.
     {   
        "file":"path/to/sample2.gz"
     },  
-    … more files …
+    ... more files ...
 ]
 }
 ```
@@ -318,8 +315,7 @@ runproteinpaint({
 
 The example declares the VCF track as a JavaScript object (with the
 attribute "vcfinfofilter" explained below), and submit it to the public
-ProteinPaint server through the [[embedding
-API]{.underline}](https://docs.google.com/document/d/1KNx4pVCKd4wgoHI4pjknBRTLrzYp6AL_D-j6MjcQSvQ/edit?usp=sharing).
+ProteinPaint server through the [embedding API](https://docs.google.com/document/d/1KNx4pVCKd4wgoHI4pjknBRTLrzYp6AL_D-j6MjcQSvQ/edit?usp=sharing).
 
 The attribute "**vcfinfofilter**" provides instructions about what INFO fields can be used to highlight variants. It must contain the "**lst**" attribute which is an array, and each element is an object describing an INFO field.
 
@@ -456,7 +452,7 @@ cutoff. To change the side of comparison, use the optional "side"
 attribute:
 
 ```
-    numericfilter:[ {side:”>”,value:1}, {side:”>”, value:10} … ]
+    numericfilter:[ {side:">",value:1}, {side:">", value:10} ... ]
 ```
 
 To set the default cutoff values from a numeric filter, use the
@@ -491,7 +487,7 @@ with the embedding API. following is one example:
     name:'SCD 143 samples',
     file:'path/to/vcf.gz',
     populationfrequencyfilter:{
-         name:”Population frequency filter”,
+         name:"Population frequency filter",
          lst:[0.01, 0.05, 0.1]
        }
 },
@@ -507,7 +503,7 @@ In ProteinPaint, it's displayed as below:
 ![](../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image1.png)
 
 The cutoff values (1%, 5%, 10%) are listed in the legend section at the
-bottom. Click '\<5%' to enable filtering, and resulted in 28 out of 35
+bottom. Click '<5%' to enable filtering, and resulted in 28 out of 35
 variants visible in the track display. Click on the same cutoff value
 again to disable filtering.
 
@@ -659,7 +655,7 @@ To provide sample annotation, add a nested attribute
 
 ```javascript
 {
-    … VCF definitions … 
+    ... VCF definitions ... 
 
     "sampleannotation":{
       "annotation":{
@@ -673,16 +669,16 @@ To provide sample annotation, add a nested attribute
             "sampletype":"Normal",
             "color":"blue"
          },
-         … more samples … 
+         ... more samples ... 
        },
        "key4annotation":"sample"
     }
 }
 ```
 
-"annotation" provides a hash, where \<sampleID\> are keys and values are annotations for this sample.
+"annotation" provides a hash, where <sampleID> are keys and values are annotations for this sample.
 
-"Key4annotation" defines the attribute name for \<sampleID\>. It enables user to specify if the annotation is at sample-level or patient-level.
+"Key4annotation" defines the attribute name for <sampleID>. It enables user to specify if the annotation is at sample-level or patient-level.
 
 !!! todo
     further clarify
@@ -705,11 +701,11 @@ Additional enhancements/description can be added to "**sampleannotation**":
 "Variantsunburst" allows showing a sunburst chart of samples when
 clicking on a variant.
 
-"Key2color" is a temp fix to define color for an annotation value from any level. In the example, "SCD" is the actual value of first level, and it must have prefix "root\...\". This defines the display color in
+"Key2color" is a temp fix to define color for an annotation value from any level. In the example, "SCD" is the actual value of first level, and it must have prefix "root...". This defines the display color in
 sunburst chart.
 
 Live example:
-[[https://proteinpaint.stjude.org/pcgp.html]{.underline}](https://proteinpaint.stjude.org/pcgp.html)
+[https://proteinpaint.stjude.org/pcgp.html](https://proteinpaint.stjude.org/pcgp.html)
 in which the track "PCGP somatic mutation" is a multi-sample VCF track
 and is equipped with metadata annotation to its samples. Its track
 legend shows the annotation which can be used to filter samples:
@@ -723,8 +719,8 @@ the source of the HTML page, around following lines:
 
 ### Speeding up multi-sample VCF track loading
 
-Given a multi-sample VCF track (cohort\_VCF), prepare a variant-only
-version of this track (variant\_VCF), and combine them in the track
+Given a multi-sample VCF track (cohort_VCF), prepare a variant-only
+version of this track (variant_VCF), and combine them in the track
 definition like below:
 
 ```javascript
@@ -738,9 +734,9 @@ definition like below:
 }
 ```
 
-When displaying this track in ProteinPaint, the variant\_VCF will be
+When displaying this track in ProteinPaint, the variant_VCF will be
 loaded for showing all variants in the view range. Upon clicking a
-variant, the cohort\_VCF will be queried to retrieve sample information
+variant, the cohort_VCF will be queried to retrieve sample information
 on this variant, for rendering coverage-VAF plot or other uses.
 
 This design cuts down data transfer and can greatly improve performance
@@ -786,17 +782,17 @@ displayed as a table:
 
 | CIViC Entity Type | CIViC Entity ID | CIViC Entity URL                                                                                 | CIViC Entity Source                                                           | CIViC Entity Variant Origin | CIViC Entity Status |
 | ----------------- | --------------- | ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------- | --------------------------- | ------------------- |
-| evidence          | 3766            | [[https://civicdb.org/links/evidence/3766]{.underline}](https://civicdb.org/links/evidence/3766) | PUBMED [[22621641]{.underline}](https://www.ncbi.nlm.nih.gov/pubmed/22621641) | Somatic                     | submitted           |
-| evidence          | 7485            | [[https://civicdb.org/links/evidence/7485]{.underline}](https://civicdb.org/links/evidence/7485) | PUBMED [[31151904]{.underline}](https://www.ncbi.nlm.nih.gov/pubmed/31151904) | Somatic                     | submitted           |
-| evidence          | 7077            | [[https://civicdb.org/links/evidence/7077]{.underline}](https://civicdb.org/links/evidence/7077) | PUBMED [[25527633]{.underline}](https://www.ncbi.nlm.nih.gov/pubmed/25527633) | Somatic                     | submitted           |
-| evidence          | 3768            | [[https://civicdb.org/links/evidence/3768]{.underline}](https://civicdb.org/links/evidence/3768) | PUBMED [[23278307]{.underline}](https://www.ncbi.nlm.nih.gov/pubmed/23278307) | Somatic                     | submitted           |
-| evidence          | 3781            | [[https://civicdb.org/links/evidence/3781]{.underline}](https://civicdb.org/links/evidence/3781) | PUBMED [[23733758]{.underline}](https://www.ncbi.nlm.nih.gov/pubmed/23733758) | Somatic                     | submitted           |
+| evidence          | 3766            | [https://civicdb.org/links/evidence/3766]{.underline}](https://civicdb.org/links/evidence/3766) | PUBMED [[22621641](https://www.ncbi.nlm.nih.gov/pubmed/22621641) | Somatic                     | submitted           |
+| evidence          | 7485            | [https://civicdb.org/links/evidence/7485]{.underline}](https://civicdb.org/links/evidence/7485) | PUBMED [[31151904](https://www.ncbi.nlm.nih.gov/pubmed/31151904) | Somatic                     | submitted           |
+| evidence          | 7077            | [https://civicdb.org/links/evidence/7077]{.underline}](https://civicdb.org/links/evidence/7077) | PUBMED [[25527633](https://www.ncbi.nlm.nih.gov/pubmed/25527633) | Somatic                     | submitted           |
+| evidence          | 3768            | [https://civicdb.org/links/evidence/3768]{.underline}](https://civicdb.org/links/evidence/3768) | PUBMED [[23278307](https://www.ncbi.nlm.nih.gov/pubmed/23278307) | Somatic                     | submitted           |
+| evidence          | 3781            | [https://civicdb.org/links/evidence/3781]{.underline}](https://civicdb.org/links/evidence/3781) | PUBMED [[23733758](https://www.ncbi.nlm.nih.gov/pubmed/23733758) | Somatic                     | submitted           |
 
 #### `info2table:{}`
 
 Key: name of the CSQ-like INFO field.
 
-Value: {} with keys of "col\_separator" and "fields" array.
+Value: {} with keys of "col_separator" and "fields" array.
 
 "Fields" array should contain all the sub-fields in the INFO field, even for those hidden ones. Each element describes configurations with
 display/formatting instructions for each sub-field.
@@ -805,7 +801,7 @@ display/formatting instructions for each sub-field.
 info2table: {
     INFOKEY: {
        col_separator: '|',
-       separate_tables:[ … ], // optional
+       separate_tables:[ ... ], // optional
        fields: [
            { name: 'Allele' },
            { name: 'Consequence' },
@@ -815,7 +811,7 @@ info2table: {
            { name: 'Feature' },
            { name: 'HGVSc' },
            { name: 'HGVSp' },
-           … more fields … 
+           ... more fields ... 
        ]
     }
 }
@@ -834,12 +830,12 @@ sub-field.
 |                  |                                |
 | ---------------- | ------------------------------ |
 | > Allele         | > T                            |
-| > Consequence    | > missense\_variant            |
+| > Consequence    | > missense_variant            |
 | > SYMBOL         | > BRAF                         |
 | > Entrez Gene ID | > 673                          |
-| > Feature\_type  | > transcript                   |
+| > Feature_type  | > transcript                   |
 | > Feature        | > ENST00000288602.6            |
-| > HGVSc          | > ENST00000288602.6:c.1799T\>A |
+| > HGVSc          | > ENST00000288602.6:c.1799T>A |
 
 ##### `.hide:true`
 
@@ -851,11 +847,11 @@ Required. A display name of the field.
 
 ##### `.ampersand2br:true`
 
-Will convert all '&' to HTML line break \<br\>.
+Will convert all '&' to HTML line break <br>.
 
 ##### `.isurl:true`
 
-The column value is a full URL and will be shown as a \<a\> tag.
+The column value is a full URL and will be shown as a <a> tag.
 
 ##### `.appendUrl: STR`
 
@@ -884,7 +880,7 @@ Which allows to parse following values into respective URL links.
 168986_(ASCO)
 ```
 
-##### `separate\_tables:\[\]`
+##### `separate_tables:\[\]`
 
 Optional, and only applies to "info2table" but not "info2singletable".
 
@@ -902,7 +898,7 @@ separate_tables: [
            { field: 'CIViC Entity Status', value: 'accepted' }
        ]
    },
-   { … another table … }
+   { ... another table ... }
 ]
 ```
 

@@ -5,8 +5,7 @@ Updated: Dec 11, 2015
 ![](../../../images/guides/proteinpaint/advanced-guides/using-the-gene-table/media/image5.png)
 
 Above example shows the gene table after loading a public data set (TCGA
-skin cancer SNV/indel). [[See this
-tutorial]{.underline}](https://docs.google.com/document/d/1Aexsd7eYxPIm2FnIIDmDOajLfVv7zl9xyxzt55kFUYc/edit?usp=sharing)
+skin cancer SNV/indel). [See this tutorial](https://docs.google.com/document/d/1Aexsd7eYxPIm2FnIIDmDOajLfVv7zl9xyxzt55kFUYc/edit?usp=sharing)
 for procedures to obtain and upload this data set.
 
 By default, the gene table shows top-100 recurrently mutated genes from
@@ -47,7 +46,7 @@ If there are noncoding mutations, user can determine whether to show
 them in the table. Use the show/hide switch to toggle the noncoding
 mutation visibility.
 
-The noncoding mutation includes classes of silent, splice\_region, exon,
+The noncoding mutation includes classes of silent, splice_region, exon,
 UTR, and intron.
 
 **Importing pediatric and COSMIC data sets for comparison**
@@ -64,15 +63,9 @@ different data sets.
 
 Here's how ProteinPaint decides whether to import **silent** mutation:
 
--   Do not import silent mutation when there is no silent mutation in
-    > uploaded data set.
+-   Do not import silent mutation when there is no silent mutation in uploaded data set.
 
--   Otherwise, silent mutation will only be imported if the
-    > **missense-to-silent ratio** is less than 5 in the uploaded data
-    > set. Total number of missense and silent mutations across all
-    > genes in the uploaded data set is used. If the missense-to-silent
-    > ratio is greater than 5, the silent mutation is considered
-    > insignificant.
+-   Otherwise, silent mutation will only be imported if the **missense-to-silent ratio** is less than 5 in the uploaded data set. Total number of missense and silent mutations across all genes in the uploaded data set is used. If the missense-to-silent ratio is greater than 5, the silent mutation is considered insignificant.
 
 Note that the importing function is limited to 10 genes at a time since
 a larger request may delay the response and cause timeout error. To show

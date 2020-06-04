@@ -15,14 +15,11 @@ columns by tab. Order of columns does not matter.
 
     -   optional.
 
-    -   RNA nucleotide position of the 5' end of the deleted region on
-        > the gene transcript, relative to transcription start site.
-        > 1-based.
+    -   RNA nucleotide position of the 5' end of the deleted region on the gene transcript, relative to transcription start site. 1-based.
 
 -   rnaDellength
 
-    -   RNA nucleotide length of the deleted region, required if
-        > "rnaPosition" is used.
+    -   RNA nucleotide length of the deleted region, required if "rnaPosition" is used.
 
 -   chr
 

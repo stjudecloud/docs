@@ -13,9 +13,7 @@ Below is a snapshot of the [My Dashboard](https://platform.stjude.cloud/dashboar
 
     2. Request 2, listed in the Projects section, has been sent to the signatories, but has not been completed by all of them. This status will look like the Request 3 when all of the signatories sign the document and it is ready to be sent to the Data Access Committee(s). 
 
-    3. Request 3 is pending approval from the Data Access Committee(s), and the status will change from Pending to either Approved or Rejected, based on their decision. All submitted manual-process Data Access Agreements will show up on your My Dashboard page like Request 3. 
-
-If you have a question about the status of your data request which is not answered on the "My Dashboard" page, you can email us at [support@stjude.cloud](mailto:support@stjude.cloud).
+    3. Request 3 is pending approval from the Data Access Committee(s), and the status will change from Pending to either Approved or Rejected, based on their decision. All submitted manual-process Data Access Agreements will show up on your My Dashboard page like Request 3. If you have a question about the status of your data request which is not answered on the "My Dashboard" page, you can email us at [support@stjude.cloud](mailto:support@stjude.cloud).
 
 ## Accessing Your Data
 
