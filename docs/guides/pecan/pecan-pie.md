@@ -40,12 +40,12 @@ Go to <https://pecan.stjude.cloud/pie> to get started!
 
 An overview of the Pecan PIE workflow:
 
-1.  Log in and upload a VCF of SNVs and indels.
-2.  The portal will process your variants, notifying you upon
+1. Log in and upload a VCF of SNVs and indels.
+2. The portal will process your variants, notifying you upon
     completion. Variants are annotated with VEP+ (VEP with
     postprocessing for enhanced splice variant calling) then classified
     with Medal Ceremony.
-3.  Browse results, which include a detailed page for each variation.
+3. Browse results, which include a detailed page for each variation.
     Variants may be formally classified with an interface based on ACMG
     guidelines.
 
@@ -443,9 +443,9 @@ variants are excluded, as are those in non-coding transcripts.
 
 A. The reported ExAC frequency may differ for several reasons:
 
-1.  PIE uses the TCGA-subtracted distribution of ExAC rather than the
+1. PIE uses the TCGA-subtracted distribution of ExAC rather than the
     main distribution.
-2.  PIE reports the primary allele frequencies in the ExAC database,
+2. PIE reports the primary allele frequencies in the ExAC database,
     specifically the AC, AN, and AF fields from the VCF distribution.
     The [ExAC portal](http://exac.broadinstitute.org/) appears to use
     the "adjusted" frequencies which may be different.

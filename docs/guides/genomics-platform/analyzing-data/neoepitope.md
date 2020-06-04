@@ -81,20 +81,20 @@ detection algorithm to perform affinity prediction of neoepitopes.
 
 If you use **FastQ** files as input:  
 
-1.  The input FastQs will be aligned against the Optitype HLA reference
+1. The input FastQs will be aligned against the Optitype HLA reference
     sequences using razers3 (see <https://github.com/FRED-2/OptiType>).
-2.  The fished FastQs will be used for HLA typing using Opitype.
+2. The fished FastQs will be used for HLA typing using Optitype.
 
 If you use **BAM** files as input:  
 
-1.  The reads falling within the HLA loci and their paralogous loci will
+1. The reads falling within the HLA loci and their paralogous loci will
     be extracted.
-2.  The reads unmapped to the human genome will be extracted.
-3.  The reads from step 1 and 2 will be combined and deduplicated (in
+2. The reads unmapped to the human genome will be extracted.
+3. The reads from step 1 and 2 will be combined and deduplicated (in
     FastQ format).
-4.  The input FastQs will be aligned against the Optitype HLA reference
+4. The input FastQs will be aligned against the Optitype HLA reference
     sequences using razers3 (see <https://github.com/FRED-2/OptiType>).
-5.  The fished FastQs will be used for HLA typing using Opitype.
+5. The fished FastQs will be used for HLA typing using Optitype.
 
 ### Epitope Prediction Algorithm
 
@@ -106,15 +106,15 @@ used to predict affinities of the peptide array for each HLA receptor in
 each sample. The neoepitope with affinity lower than the threshold will 
 be highlighted in output file (default 500 nM). Below is an outline of internal steps the algorithm performs in order to generate the final report.
 
-1.  Check the version of the genomic position of the input SNV/fusion
+1. Check the version of the genomic position of the input SNV/fusion
     file.
-2.  Lift over the genomic coordinations if the reference genomic
+2. Lift over the genomic coordinates if the reference genomic
     position is not HG19. Currently, the internal genome annotation was
     based on HG19 and the genome coordinates of the mutation files will
     be adjusted to HG19 for peptide extraction.
-3.  Extract the peptide flanking the mutations.
-4.  Run NetMHCcons to obtain the affinity prediction of the peptides.
-5.  Produce the affinity report of each peptide.
+3. Extract the peptide flanking the mutations.
+4. Run NetMHCcons to obtain the affinity prediction of the peptides.
+5. Produce the affinity report of each peptide.
 
 ## Creating a workspace
 Before you can run one of our workflows, you must first create a workspace in DNAnexus for the run. Refer to [the general workflow guide](running-sj-workflows.md#getting-started) to learn how to create a DNAnexus workspace for each workflow run.

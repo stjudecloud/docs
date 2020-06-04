@@ -111,15 +111,15 @@ The ProteinPaint interactive coverage viewer is used to visualize any
 bigWig file. You can follow these steps to get an
 understanding of how it works.
 
-1.  Open up the custom viewer file output by your pipeline. The name of
+1. Open up the custom viewer file output by your pipeline. The name of
     this file will vary, so consult the specific pipeline guide to know
     where to find it.
-2.  Click "Launch" in the bottom right corner to launch the custom
+2. Click "Launch" in the bottom right corner to launch the custom
     viewer.
 
     ![](../../../images/guides/genomics-platform/analyzing-data/bigwig_viewer_startup.png)
 
-3.  Once the page has loaded, you will be able to see the bigWig viewer.
+3. Once the page has loaded, you will be able to see the bigWig viewer.
     You can navigate around the genome by gene or genomic location.
     Alongside the coverage track is the GENCODE gene reference.
 
@@ -132,15 +132,15 @@ The ProteinPaint interactive fusion viewer is used to visualize putative
 fusions called by Rapid RNA-Seq. You can follow these steps to get an
 understanding of how it works.
 
-1.  Open up the custom viewer file output by your pipeline. The name of
+1. Open up the custom viewer file output by your pipeline. The name of
     this file will vary, so consult the specific pipeline guide to know
     where to find it.
-2.  Click "Launch" in the bottom right corner to launch the custom
+2. Click "Launch" in the bottom right corner to launch the custom
     viewer.
 
     ![](../../../images/guides/genomics-platform/analyzing-data/fusions_viewer_startup.png)
 
-3.  Once the page has finished loading, you will be presented with a
+3. Once the page has finished loading, you will be presented with a
     summary of all of the fusions produced by the pipeline. Each bullet
     point is a separate category for the structural variants, with the
     more interesting fusions at the top. Click one of the categories to
@@ -148,12 +148,12 @@ understanding of how it works.
 
     ![](../../../images/guides/genomics-platform/analyzing-data/fusions_click_hq.png)
 
-4.  You can see all of the fusions in that category are now listed on
+4. You can see all of the fusions in that category are now listed on
     the screen. Hover over one of the fusions to see the detailed view.
 
     ![](../../../images/guides/genomics-platform/analyzing-data/fusions_hover.png)
 
-5.  The popup contains a large amount of information that might be
+5. The popup contains a large amount of information that might be
     interesting to you based on your use case, such as the transcript
     and other metrics like read counts, quality metrics, and recurrence.
 

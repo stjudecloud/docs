@@ -177,11 +177,11 @@ When the custom workflow has finished generating, the word 'Done' will appear in
 
 ## Custom Workflow Process
 
-1.  Wait for the workflow generator to finish.
-2.  Click on the WARDEN name in the name column.
+1. Wait for the workflow generator to finish.
+2. Click on the WARDEN name in the name column.
 
 
-3.  You will now be on a page specific to the running of the workflow.
+3. You will now be on a page specific to the running of the workflow.
     On the left side, you will see the inputs you selected for the
     workflow generator. On the right side are the output files
     (including the generated workflow). Select the generated workflow as
@@ -189,35 +189,35 @@ When the custom workflow has finished generating, the word 'Done' will appear in
 
     ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/Workflow_generator_output.png)
 
-4.  You will now be within the output folder you specified earlier.
+4. You will now be within the output folder you specified earlier.
     Select the file that begins with 'WARDEN WORKFLOW:'
 
     ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/Select_WARDEN_WORKFLOW.png)
 
-5.  A workflow generated for your data will be presented to you. Select
+5. A workflow generated for your data will be presented to you. Select
     'Run as analysis' in the upper right.
 
     ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/run_as_analysis_2.png)
 
-6.  The workflow will initiate, and you will be brought to the 'Monitor'
+6. The workflow will initiate, and you will be brought to the 'Monitor'
     page. (Note to get back to this page, you can select 'Monitor' on
     one of the menu bars near the top ) Expand the the workflow progress
     be selecting the '+' sign next to 'In Progress'
 
     ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/workflowrunning.png)
 
-7.  As parts of the pipeline are run, you will see different tasks in
+7. As parts of the pipeline are run, you will see different tasks in
     different colors. Green means done, blue is running, orange is
     waiting, and red means error.
 
     ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/Workflow_running_status.png)
 
-8.  When done the status will be shown as 'Done'. Select the Workflow
+8. When done the status will be shown as 'Done'. Select the Workflow
     name under Status.
 
     ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/Workflow_done.png)
 
-9.  You will be brought to a page that show more information about the
+9. You will be brought to a page that show more information about the
     workflow analysis. Click on the output folder to go to the output.
 
     ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/warden/Workflow_done2.png)
