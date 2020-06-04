@@ -75,21 +75,33 @@ nav:
           - Viewing Expression Data: guides/proteinpaint/exploring-gene-expression.md
           - Filtering Mutations: guides/proteinpaint/filtering-mutations.md
           - Exporting Figures and Data: guides/proteinpaint/exporting-figures-and-data.md
+          - Using the Gene Table: guides/proteinpaint/advanced-guides/using-the-gene-table.md
+          - Using the Sample Table: guides/proteinpaint/advanced-guides/using-the-sample-table.md
+          - Using the Heatmap: guides/proteinpaint/advanced-guides/using-the-heatmap.md
+          - Using Disease Pie Charts: guides/proteinpaint/advanced-guides/using-disease-pie-charts.md
+          - Stratifying Mutations by Cancer Subtype: guides/proteinpaint/advanced-guides/stratify-mutation-by-cancer-subtype.md
+      - File Formats:
+          - SNV and Indel: guides/proteinpaint/file-formats/snv-and-indel.md
+          - SV and fusion transcript: guides/proteinpaint/file-formats/sv-and-fusion.md
+          - Copy Number Variants: guides/proteinpaint/file-formats/cnv.md
+          - Internal tandem duplications: guides/proteinpaint/file-formats/itd.md
+          - Intragenic deletion: guides/proteinpaint/file-formats/intragenic-deletion.md
+          - Trunction, N-loss or C-loss: guides/proteinpaint/file-formats/truncation.md
+          - JSON-BED: guides/proteinpaint/file-formats/json-bed.md
+          - Splice Junction: guides/proteinpaint/file-formats/splice-junction.md
+          - Profile-Gene-Value: guides/proteinpaint/file-formats/pgv.md
+          - Bampile: guides/proteinpaint/file-formats/bampile.md
       - Advanced Usage:
-          - Stratifying Mutations by Cancer Subtype: guides/proteinpaint/advanced-usage/stratify-mutation-by-cancer-subtype.md
-          - Visualize Your Mutation Data: guides/proteinpaint/advanced-usage/visualize-custom-mutations.md
-          - Add Custom Protein Domains: guides/proteinpaint/advanced-usage/custom-protein-domains.md
+          - Add Custom Protein Domains: guides/proteinpaint/advanced-guides/custom-protein-domains.md
+          - Using Custom Tracks: guides/proteinpaint/advanced-guides/using-custom-tracks.md
+          - Visualize Your Mutation Data: guides/proteinpaint/advanced-guides/visualize-custom-mutations.md
+          - Loading SNV/Indel Mutations from a File: guides/proteinpaint/advanced-guides/loading-snv-indel-mutations-from-a-file.md
+          - Uploaded Mutation Data User Interface: guides/proteinpaint/advanced-guides/uploaded-mutation-data-user-interface.md
+          - Loading a TCGA MAF File: guides/proteinpaint/advanced-guides/using-a-vcf-file.md
+          - Loading a VCF File: guides/proteinpaint/advanced-guides/using-a-vcf-file.md
       - Developer's Guide:
-          - Quick Start: guides/proteinpaint/developers-guide/index.md
-          - Required Parameters: guides/proteinpaint/developers-guide/required-parameters.md
-          - Genome Browser View: guides/proteinpaint/developers-guide/genome-browser-view.md
-          - GenomePaint: guides/proteinpaint/developers-guide/genomepaint.md
-          - Gene View: guides/proteinpaint/developers-guide/gene-view.md
-          - Motif Change Prediction: guides/proteinpaint/developers-guide/motif-change-prediction.md
-          - Differential Gene Expression Viewer: guides/proteinpaint/developers-guide/differential-gene-expression-viewer.md
-          - Fusion Editor: guides/proteinpaint/developers-guide/fusion-editor.md
-          - Study View: guides/proteinpaint/developers-guide/study-view.md
-          - Other Parameters: guides/proteinpaint/developers-guide/other-parameters.md
+          - Embedding ProteinPaint: guides/proteinpaint/developers-guide/embedding-proteinpaint.md
+          - Organizing Data into a Study View: guides/proteinpaint/developers-guide/organizing-data-into-a-study-view.md
   - Studies:
       - About: guides/studies/index.md
       - Sickle Cell: guides/studies/sickle-cell.md
