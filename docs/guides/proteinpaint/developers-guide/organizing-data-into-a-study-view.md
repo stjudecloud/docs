@@ -202,7 +202,7 @@ Declare an assay type for the VCF tracks, e.g.:
 
 ### Facet tables
 
-To customly define what samples and assays are to be used in making a
+To define what samples and assays are to be used in making a
 facet table, use the "trackfacets" attribute.
 
 The value is an array, where each element defines one facet table. This

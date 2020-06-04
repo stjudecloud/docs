@@ -83,7 +83,7 @@ If you use **FastQ** files as input:
 
 1. The input FastQs will be aligned against the Optitype HLA reference
     sequences using razers3 (see <https://github.com/FRED-2/OptiType>).
-2. The fished FastQs will be used for HLA typing using Opitype.
+2. The fished FastQs will be used for HLA typing using Optitype.
 
 If you use **BAM** files as input:  
 
@@ -94,7 +94,7 @@ If you use **BAM** files as input:
     FastQ format).
 4. The input FastQs will be aligned against the Optitype HLA reference
     sequences using razers3 (see <https://github.com/FRED-2/OptiType>).
-5. The fished FastQs will be used for HLA typing using Opitype.
+5. The fished FastQs will be used for HLA typing using Optitype.
 
 ### Epitope Prediction Algorithm
 
@@ -108,7 +108,7 @@ be highlighted in output file (default 500 nM). Below is an outline of internal 
 
 1. Check the version of the genomic position of the input SNV/fusion
     file.
-2. Lift over the genomic coordinations if the reference genomic
+2. Lift over the genomic coordinates if the reference genomic
     position is not HG19. Currently, the internal genome annotation was
     based on HG19 and the genome coordinates of the mutation files will
     be adjusted to HG19 for peptide extraction.

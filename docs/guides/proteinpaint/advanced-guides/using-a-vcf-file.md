@@ -75,7 +75,7 @@ protein mutation classes.
 Shortcoming is the built-in classes are hardcoded and cannot be
 customized.
 
-ProteinPaint fully supports customly defined classes through an
+ProteinPaint fully supports custom defined classes through an
 alternative method. See the section on highlighting and filtering with
 INFO fields.
 
