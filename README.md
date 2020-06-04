@@ -31,6 +31,8 @@ conda env create
 conda activate docs
 ```
 
+If you wish to install the dependencies in your own Python environment without conda, you can certainly do so, but you're on your own :).
+
 ## Usage
 
 You can use the following commands to get started working with the docs.
@@ -43,20 +45,13 @@ mkdocs build
 mkdocs serve
 ```
 
-If you'd like more in-depth instructions, please refer to [the project wiki](https://github.com/stjudecloud/docs/wiki/Getting-Started).
+## Deployment
 
-## Author
-
-👤 **St. Jude Cloud Team**
-
-* Website: https://stjude.cloud
-* Github: [@stjudecloud](https://github.com/stjudecloud)
-* Twitter: [@StJudeResearch](https://twitter.com/StJudeResearch)
+Commits to `master` automatically deploy after 5-10 minutes to https://stjude.cloud/docs. There is no other deploy process available (or needed) currently. If you are working on a large change, we highly recommend you start a branch and submit a pull request when you are finished.
 
 ## Contributing
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/stjudecloud/docs/issues). You can also take a look at the [contributing guide](https://github.com/stjudecloud/docs/blob/master/CONTRIBUTING.md).
-
 
 ## 📝 License
 
