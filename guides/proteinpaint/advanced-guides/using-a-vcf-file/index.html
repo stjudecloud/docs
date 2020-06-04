@@ -2150,7 +2150,7 @@
                 
                 <p><strong>Using VCF file on ProteinPaint</strong></p>
 <p>Current implementation works for SNV/indel data only.</p>
-<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image6.png" /></p>
+<p><img alt="" src="../../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image6.png" /></p>
 <h2 id="preparing-a-vcf-file">Preparing a VCF file<a class="headerlink" href="#preparing-a-vcf-file" title="Permanent link">&para;</a></h2>
 <p>Input file: file.vcf</p>
 <div class="highlight"><pre><span></span><code>bgzip file.vcf
@@ -2493,7 +2493,7 @@ tracks.</p>
 <h2 id="highlighting-and-filtering-variants-with-info-fields">Highlighting and filtering variants with INFO fields<a class="headerlink" href="#highlighting-and-filtering-variants-with-info-fields" title="Permanent link">&para;</a></h2>
 <p>Variants from a VCF track can be highlighted by other types of
 annotation, in addition to the default mutation class.</p>
-<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image4.png" /></p>
+<p><img alt="" src="../../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image4.png" /></p>
 <p>To recreate this display, save following text into an HTML file, and
 display it in a web browser.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
@@ -2724,7 +2724,7 @@ values between 0 and 1. Each value will search as a cutoff, e.g. value
 0.01 allows to select variants with less than 1% frequency in the
 population (dividend is the total # of samples in the VCF track).</p>
 <p>In ProteinPaint, it's displayed as below:</p>
-<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image1.png" /></p>
+<p><img alt="" src="../../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image1.png" /></p>
 <p>The cutoff values (1%, 5%, 10%) are listed in the legend section at the
 bottom. Click '&lt;5%' to enable filtering, and resulted in 28 out of 35
 variants visible in the track display. Click on the same cutoff value
@@ -2733,7 +2733,7 @@ again to disable filtering.</p>
 <p>The coverage-VAF plot is available for any multi-sample tracks with
 allele read count information. The plot can be generated upon clicking
 on a mutation that is present in 2 or more samples.</p>
-<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image5.png" /></p>
+<p><img alt="" src="../../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image5.png" /></p>
 <p>This graph Requires the AD FORMAT field</p>
 <div class="highlight"><pre><span></span><code>##FORMAT=&lt;ID=AD,Number=R,Type=Integer,Description=&quot;Allelic depths for the ref and alt alleles in the order listed&quot;&gt;
 </code></pre></div>
@@ -2764,7 +2764,7 @@ attribute.</p>
 </code></pre></div>
 
 <h3 id="genotype-by-numeric-value">Genotype by numeric value<a class="headerlink" href="#genotype-by-numeric-value" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image2.png" /></p>
+<p><img alt="" src="../../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image2.png" /></p>
 <p>Track shows numerical Y axis. For each variant, one circle is shown for
 each genotype. Each circle represent a group of samples carrying that
 genotype. Circle vertical position is determined by a consensus value
@@ -2813,7 +2813,7 @@ sizing the circle.</p>
 </code></pre></div>
 
 <h3 id="boxplots-by-genotype">Boxplots by genotype<a class="headerlink" href="#boxplots-by-genotype" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image8.png" /></p>
+<p><img alt="" src="../../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image8.png" /></p>
 <p>Upon clicking a variant, this will show a set of boxplots, one for each
 group of samples carrying one genotype from this variant. The boxplot
 reflects distribution of samples with respect to a specified numeric
@@ -2893,10 +2893,10 @@ sunburst chart.</p>
 in which the track "PCGP somatic mutation" is a multi-sample VCF track
 and is equipped with metadata annotation to its samples. Its track
 legend shows the annotation which can be used to filter samples:</p>
-<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image3.png" /></p>
+<p><img alt="" src="../../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image3.png" /></p>
 <p>All the metadata annotation and track JSON declaration can be found in
 the source of the HTML page, around following lines:</p>
-<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image9.png" /></p>
+<p><img alt="" src="../../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image9.png" /></p>
 <h3 id="speeding-up-multi-sample-vcf-track-loading">Speeding up multi-sample VCF track loading<a class="headerlink" href="#speeding-up-multi-sample-vcf-track-loading" title="Permanent link">&para;</a></h3>
 <p>Given a multi-sample VCF track (cohort_VCF), prepare a variant-only
 version of this track (variant_VCF), and combine them in the track
@@ -2932,7 +2932,7 @@ this function in the "vcfcohortrack" object.</p>
 </code></pre></div>
 
 <p>By setting "variant2img", it allows to link an image to each variant. A "Image" button will appear at the details panel of the variant; clicking the button will display the image associated with this variant below.</p>
-<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image10.png" /></p>
+<p><img alt="" src="../../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image10.png" /></p>
 <p>For each variant, the image will be located in the following way; note
 that the position is 1-based, and path is relative to the TP directory.</p>
 <p>variant2img.path + chromosome.position.REFallele.ALTallele + . +
@@ -3113,7 +3113,7 @@ defined in the "fields[]" array.</p>
 </code></pre></div>
 
 <h2 id="url-links-for-variants">URL links for variants<a class="headerlink" href="#url-links-for-variants" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image7.png" /></p>
+<p><img alt="" src="../../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image7.png" /></p>
 <p>A URL can be made for SNV/indel variants from a VCF track, so that when
 user clicks on the variant and shows the details, the URL link will be
 shown, to link to the variant in another website.</p>
@@ -3151,7 +3151,7 @@ string, parameterized by the attributes of the variant.</p>
 <h2 id="summary-of-vcf-track-object">Summary of VCF track object<a class="headerlink" href="#summary-of-vcf-track-object" title="Permanent link">&para;</a></h2>
 <p>A schematic overview of all available options that you can use to
 customize a VCF track.</p>
-<p><img alt="" src="../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image11.png" /></p>
+<p><img alt="" src="../../../../images/guides/proteinpaint/advanced-guides/using-a-vcf-file/media/image11.png" /></p>
                 
                   
                 
@@ -3214,7 +3214,7 @@ customize a VCF track.</p>
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/22bb778">22bb778</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/27dd154">27dd154</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
