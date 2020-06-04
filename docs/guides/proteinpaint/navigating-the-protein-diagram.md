@@ -43,9 +43,7 @@ domain hidden:
 
 ![](../../images/guides/proteinpaint/navigating-the-protein-diagram/media/image7.png)
 
-Hidden domains will be excluded from screenshots (see [section
-2-9](https://docs.google.com/document/d/1JWKq3ScW62GISFGuJvAajXchcRenZ3HAvpaxILeGaw0/edit#heading=h.35nkun2)).
-Click the box marked by "X" to toggle the domain visible again.
+Hidden domains will be excluded from screenshots. Click the box marked by "X" to toggle the domain visible again.
 
 ### Exon junction
 

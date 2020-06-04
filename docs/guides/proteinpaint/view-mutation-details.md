@@ -104,3 +104,10 @@ record in the dbSNP database:
 
 The button labeled "highlight in RNA-seq panel" is explained in section
 \[put link here\].
+
+## Zooming in to browse mutations at nucleotide level
+
+!!! todo
+    We are still working on importing this content to the official St. Jude Cloud guide. Please be patient with us! If you have any questions, please [contact us](mailto:support@stjude.cloud). 
+    
+    Original Link: https://plus.google.com/u/0/+XinZhou_s/posts/5Ji9ZkecaDD

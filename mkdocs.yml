@@ -66,13 +66,30 @@ nav:
       #- SJ Charts: guides/visualization-community/sjcharts.md
       #- t-SNE Charts: guides/visualization-community/t-sne-charts.md
   - ProteinPaint: 
-      - Getting Started: guides/proteinpaint/index.md
-      - Navigation: guides/proteinpaint/navigating-the-protein-diagram.md
-      - Loading Datasets: guides/proteinpaint/loading-datasets.md
-      - Inspecting Mutations: guides/proteinpaint/view-mutation-details.md
-      - Filtering Mutations: guides/proteinpaint/filtering-mutations.md
+      - Introduction: guides/proteinpaint/index.md
+      - User Guide:
+          - Getting Started: guides/proteinpaint/navigating-the-protein-diagram.md
+          - Loading Datasets: guides/proteinpaint/loading-datasets.md
+          - Viewing SNV/Indel Mutations: guides/proteinpaint/view-mutation-details.md
+          - Viewing Gene Fusions: guides/proteinpaint/exploring-gene-fusions.md
+          - Viewing Expression Data: guides/proteinpaint/exploring-gene-expression.md
+          - Filtering Mutations: guides/proteinpaint/filtering-mutations.md
+          - Exporting Figures and Data: guides/proteinpaint/exporting-figures-and-data.md
       - Advanced Usage:
-          - Custom Protein Domains: guides/proteinpaint/custom-protein-domains.md
+          - Stratifying Mutations by Cancer Subtype: guides/proteinpaint/advanced-usage/stratify-mutation-by-cancer-subtype.md
+          - Visualize Your Mutation Data: guides/proteinpaint/advanced-usage/visualize-custom-mutations.md
+          - Add Custom Protein Domains: guides/proteinpaint/advanced-usage/custom-protein-domains.md
+      - Developer's Guide:
+          - Quick Start: guides/proteinpaint/developers-guide/index.md
+          - Required Parameters: guides/proteinpaint/developers-guide/required-parameters.md
+          - Genome Browser View: guides/proteinpaint/developers-guide/genome-browser-view.md
+          - GenomePaint: guides/proteinpaint/developers-guide/genomepaint.md
+          - Gene View: guides/proteinpaint/developers-guide/gene-view.md
+          - Motif Change Prediction: guides/proteinpaint/developers-guide/motif-change-prediction.md
+          - Differential Gene Expression Viewer: guides/proteinpaint/developers-guide/differential-gene-expression-viewer.md
+          - Fusion Editor: guides/proteinpaint/developers-guide/fusion-editor.md
+          - Study View: guides/proteinpaint/developers-guide/study-view.md
+          - Other Parameters: guides/proteinpaint/developers-guide/other-parameters.md
   - Studies:
       - About: guides/studies/index.md
       - Sickle Cell: guides/studies/sickle-cell.md

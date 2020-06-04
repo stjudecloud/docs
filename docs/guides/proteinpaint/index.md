@@ -7,32 +7,14 @@ There are two primary ways you can use ProteinPaint. You can use ProteinPaint to
 
 * Explore SNV and Indel mutations from the Pediatric, COSMIC, and ClinVar datasets ([learn more][loading-datasets]).
 * Load custom protein domains and annotations ([learn more][custom-protein-domains]).
+* Inspect details for a given mutation ([learn more][inspect-mutation])
 * Filtering of mutations based on class and origin ([learn more][filtering-mutations]).
-    -   [[Viewing details about
-        > mutations]{.underline}](https://docs.google.com/document/d/15Ob3Ll4D7dL1NycgTFKja4aX6unYwUoeMZHPXoEA0j0/edit?usp=sharing),
-        > including disease chart and table
-
-    -   [[Stratifying mutations based on cancer types and
-        > subtypes]{.underline}](https://docs.google.com/document/d/1gQCypfjOhfRtv2hVVM16Ku5qVpLFAKFfiSshHeZXgNw/edit?usp=sharing)
-
-    -   [[Submitting custom SNV/indel mutation
-        > data]{.underline}](https://plus.google.com/+XinZhou_s/posts/B9iVVGAL2u9)
-
-    -   [[Zooming in to browse mutations at nucleotide
-        > level]{.underline}](https://plus.google.com/u/0/+XinZhou_s/posts/5Ji9ZkecaDD)
-
-    -   [[Exporting figure or
-        > data]{.underline}](https://docs.google.com/document/d/1jIcBtfBQaRBV8EdD3JclXfHSYYkmB_O4xGLoRiOiklA/edit?usp=sharing)
-
--   [[Exploring fusion
-    > genes]{.underline}](https://docs.google.com/document/d/1BmKSLc4lPuwyUCcyak8jlgjMnkM-8sAzvnsGnaMcaV0/edit?usp=sharing)
-
--   [[Exploring Pediatric gene expression
-    > data]{.underline}](https://docs.google.com/document/d/1bjgPWfXgwKl0E1yPQucTugklSV7DUaX3fbLFAt3o_RI/edit?usp=sharing),
-    > including "rope graph", boxplots, and sunburst charts
-
--   [[Embedding ProteinPaint in your web
-    > page]{.underline}](https://docs.google.com/document/d/1KNx4pVCKd4wgoHI4pjknBRTLrzYp6AL_D-j6MjcQSvQ/edit?usp=sharing)
+* Stratifying mutations based on cancer subtype ([learn more][stratify-mutation-by-cancer-subtype]).
+* Visualize your own SNV and Indel mutations ([learn more][visualize-custom-mutations]).
+* Saving figures and exporting data ([learn more][export-figures-and-data]).
+* Explore gene fusions ([learn more][explore-gene-fusions]).
+* Explore gene expression data including "rope graph", boxplots, and sunburst charts ([learn more][explore-gene-expression]).
+* Embed ProteinPaint on your website ([learn more][embed-proteinpaint]).
 
 ### Using custom data
 
@@ -137,4 +119,11 @@ height="7.041666666666667in"}
 
 [custom-protein-domains]: ./custom-protein-domains.md
 [loading-datasets]: ./loading-datasets.md
+[inspect-mutation]: ./view-mutation-details.md
 [filtering-mutations]: ./filtering-mutations.md
+[stratify-mutation-by-cancer-subtype]: ./stratify-mutation-by-cancer-subtype.md
+[visualize-custom-mutations]: ./visualize-custom-mutations.md
+[export-figures-and-data]: ./exporting-figures-and-data.md
+[explore-gene-fusions]: ./exploring-gene-fusions.md
+[explore-gene-expression]: ./exploring-gene-expression.md
+[embed-proteinpaint]: ./developers-guide/index.md
