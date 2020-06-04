@@ -1,4 +1,5 @@
-**GenomePaint user tutorial**
+!!! tip
+    This guide is still being written! Check back often for updates.
 
 ## Introduction
 

@@ -103,7 +103,7 @@ nav:
           - Embedding ProteinPaint: guides/proteinpaint/developers-guide/embedding-proteinpaint.md
           - Organizing Data into a Study View: guides/proteinpaint/developers-guide/organizing-data-into-a-study-view.md
   - GenomePaint:
-      - User Guide: guides/genomepaint/index.md
+      - GenomePaint User Guide: guides/genomepaint/index.md
   - Studies:
       - About: guides/studies/index.md
       - Sickle Cell: guides/studies/sickle-cell.md
