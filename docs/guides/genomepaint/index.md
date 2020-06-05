@@ -17,7 +17,7 @@ This front page provides following contents:
 
 3. Links to live Figures of the manuscript, this tutorial, and the user community on Google Group.
 
-![](./media/image87.png)
+<img src="./media/image87.png" style="width:7.1in;height:3.41667in" />
 
 ### Genome browser navigation
 
@@ -31,20 +31,20 @@ browser.
 
 -   To zoom out, click a zoom out button on top of the genome browser.
 
-![](./media/image91.png)
+<img src="./media/image91.png" style="width:5.78325in;height:2.70139in" />
 
 ### From the protein view
 
 To view the dataset in a protein view, go to [https://proteinpaint.stjude.org](https://proteinpaint.stjude.org). At the top search bar, type in the gene name and display the gene. Make sure "hg19" is selected at the drop down menu.
 
-![](./media/image38.png)
+<img src="./media/image38.png" style="width:3.7728in;height:0.71362in" />
 
-![](./media/image5.png)
+<img src="./media/image5.png" style="width:5.37581in;height:0.97742in" />
 
 Then click "Pediatric2" on top, and select "Pediatric tumor mutation" to
 show the dataset over the protein view of the gene.
 
-![](./media/image58.png)
+<img src="./media/image58.png" style="width:7.1in;height:1.76389in" />
 
 ### Transitioning from genome view to protein view
 
@@ -53,14 +53,14 @@ to easily transition into protein view, so you can examine the
 GenomePaint track or any other current set of tracks over the protein
 view.
 
-![](./media/image52.png)
+<img src="./media/image52.png" style="width:6.63831in;height:5.45081in" />
 
 ### Three viewpoints
 
 GenomePaint offers **Cohort View**, **Sample View**, and **Matrix
 View**, connected as below.
 
-![](./media/image42.png)
+<img src="./media/image42.png" style="width:7.1in;height:4.66667in" />
 
 -   **Cohort View**: showing mutations from all samples over a genomic region, along with the gene expression ranks for each of the samples.
 
@@ -93,7 +93,7 @@ following parts:
 
 -   Legends at bottom.
 
-![](./media/image68.png)
+<img src="./media/image68.png" style="width:7.1in;height:3.52778in" />
 
 #### Mutation and breakpoint density plot in dense mode
 
@@ -103,31 +103,31 @@ For SNV/indel, dot colors represent mutation classes. For SV, each dot
 represents one or more samples from the same cancer type. Hover over a
 dot for details:
 
-![](./media/image41.png)
+<img src="./media/image41.png" style="width:3.44257in;height:2.89236in" />
 
 Above example shows KRAS gene locus at a low resolution and its exon as
 a thin sliver. All missense mutations from that exon are represented by
 one big dot. Zoom in on the exon and the large dot will break up to
 smaller dots.
 
-![](./media/image20.png)
+<img src="./media/image20.png" style="width:2.02083in;height:0.75694in" />
 
 Zooming in at base-pair level, each dot now represents the collection of
 all mutations at one base-pair; it's also positioned to that base-pair.
 
-![](./media/image53.png)
+<img src="./media/image53.png" style="width:5.16102in;height:0.87847in" />
 
 Clicking on a dot to show the actual list of mutations. From this panel,
 hover over a sample to see sample-level information about this mutation.
 
-![](./media/image22.png)
+<img src="./media/image22.png" style="width:6.15417in;height:3.36584in" />
 
 #### dbSNP and ClinVar matching
 
 At the bottom of the mutation tooltip shows if any dbSNP or ClinVar
 entry matches with the mutation.
 
-![](./media/image15.png)
+<img src="./media/image15.png" style="width:3.40243in;height:0.68583in" />
 
 Either match will be shown as URL links to their respective databases.
 
@@ -158,7 +158,7 @@ Samples are grouped by cancer type, as shown by the cancer type names on
 the left. Each cancer type is labeled by abbreviations. Hover over the
 label for details.
 
-![](./media/image33.png)
+<img src="./media/image33.png" style="width:2.69583in;height:1.32809in" />
 
 You can filter mutation data by cancer type. See section [Cancer type filter](#cancer-type-filter).
 
@@ -167,11 +167,11 @@ You can filter mutation data by cancer type. See section [Cancer type filter](#c
 On the top right, click "CONFIG" to show the configuration menu, then
 choose "Expanded" to go into expanded mode:
 
-![](./media/image51.png)
+<img src="./media/image51.png" style="width:4.16111in;height:0.78707in" />
 
 The expanded mode looks like below:
 
-![](./media/image67.png)
+<img src="./media/image67.png" style="width:7.1in;height:3.41667in" />
 
 In expanded mode, all mutations for each sample are shown in the same
 row. Circles represent SV/fusion breakpoints, and x marks represent
@@ -186,12 +186,12 @@ This section applies to both dense and expanded modes.
 CNVs are horizontal bars, with red for gain and blue for loss, and
 darkness by the log2(ratio). Hover over a CNV for details:
 
-![](./media/image39.png)
+<img src="./media/image39.png" style="width:4.45898in;height:2.5625in" />
 
 The log2(ratio) color scale from CNVs in the view range is shown in the
 legend:
 
-![](./media/image75.png)
+<img src="./media/image75.png" style="width:3.18889in;height:0.50499in" />
 
 To prevent outlier log2(ratio) value from skewing the view, the cutoff
 value is set by the upper whisker value of boxplot ( (3rd quartile) +
@@ -202,7 +202,7 @@ events. By default, the size limit is 2 Mb, and CNV segments wider than
 2 Mb will not be shown. Click the "CONFIG" label at the right of the
 track to change this cutoff.
 
-![](./media/image28.png)
+<img src="./media/image28.png" style="width:3.12639in;height:1.25414in" />
 
 By setting the size limit to 0, the limit will be disabled and CNV of
 all sizes will be shown.
@@ -225,12 +225,12 @@ allele of the TP53 germline mutation R337H (blue x).
 To arrive at this view, you need to disable the LOH segment size limit
 by setting it to 0.
 
-![](./media/image17.png)
+<img src="./media/image17.png" style="width:4.4875in;height:2.37075in" />
 
 The degree of LOH is determined by the "seg.mean" value, see the color
 scale in the legend:
 
-![](./media/image85.png)
+<img src="./media/image85.png" style="width:2.2996in;height:0.52778in" />
 
 As in CNV, you can choose to show focal LOH using the segment size
 filter. You can also set a minimum seg.mean value cutoff to drop
@@ -249,12 +249,12 @@ multiple circles in the same row.
 Following example shows the translocation hotspot in *TCF3* in BALL. The
 text labels are shown for RNA fusion transcripts, but not genomic SV.
 
-![](./media/image26.png)
+<img src="./media/image26.png" style="width:4.19017in;height:3.21528in" />
 
 Use the CONFIG menu to toggle the label visibility for SV and fusion
 separately.
 
-![](./media/image64.png)
+<img src="./media/image64.png" style="width:3.14028in;height:0.58594in" />
 
 #### SNV/indel in expanded mode
 
@@ -264,13 +264,13 @@ class (mostly for coding mutations, see "Mutation" in legend). For genic
 mutations, a HGVS styled label can be shown, as is generated by VEP.
 Toggle label visibility in the CONFIG menu.
 
-![](./media/image16.png)
+<img src="./media/image16.png" style="width:6.42587in;height:5.21042in" />
 
 #### ITD in the expanded mode
 
 ITD is represented as magenta bars over gene coding regions.
 
-![](./media/image12.png)
+<img src="./media/image12.png" style="width:3.0948in;height:1.33681in" />
 
 ### Gene expression
 
@@ -296,7 +296,7 @@ Expression rankings are rendered as bar plots under the 0 to 100 scale,
 0 for lowest among the group, 100 for highest. Hover over a bar to see
 the actual rank, FPKM value, along with sample attributes.
 
-![](./media/image13.png)
+<img src="./media/image13.png" style="width:3.47361in;height:2.8695in" />
 
 Blank row indicates either there is no expression data for selected gene
 from that sample, or the sample has no expression data at all.
@@ -306,24 +306,24 @@ from that sample, or the sample has no expression data at all.
 It is possible to show expression rank for multiple genes like below.
 See the section on [Fixed genes](#fixed-genes).
 
-![](./media/image69.png)
+<img src="./media/image69.png" style="width:2.3125in;height:2.10417in" />
 
 ##### Find expression rank when there are no genes in view range
 
 When there are no genes in view range, no expression ranking will be
 shown. In its place, the "ADD GENE" phrase will be shown.
 
-![](./media/image65.png)
+<img src="./media/image65.png" style="width:5.20972in;height:2.59559in" />
 
 Clicking "ADD GENE" to show a search box; type in gene name to search
 for a gene.
 
-![](./media/image72.png)
+<img src="./media/image72.png" style="width:3.22462in;height:2.07639in" />
 
 By selecting a gene from the list, the expression ranking of this gene
 will be added.
 
-![](./media/image23.png)
+<img src="./media/image23.png" style="width:3.56389in;height:2.00943in" />
 
 See the section [Fixed genes](#fixed-genes) for details.
 
@@ -336,7 +336,7 @@ This is indicated using bar colors:
 
 Hover over a bar to see details about the ASE status.
 
-![](./media/image55.png)
+<img src="./media/image55.png" style="width:5.04306in;height:2.77294in" />
 
 At the bottom of the tooltip, the ASE call is further explained with
 four fields:
@@ -371,11 +371,11 @@ in a sample (mono-allelic, bi-allelic, uncertain). To customize the
 cutoff values, click the gene label and select "Customize ASE/OHE
 parameters":
 
-![](./media/image94.png)
+<img src="./media/image94.png" style="width:2.45641in;height:1.50694in" />
 
 In the ASE decision tree, three cutoff values are customizable:
 
-![](./media/image34.png)
+<img src="./media/image34.png" style="width:2.39722in;height:2.67429in" />
 
 For ASE, values for number of heterozygous SNPs, number of ASE SNPs,
 mean delta, and q-value are precomputed (Cis-X, Yu et. al., in
@@ -394,14 +394,14 @@ names from the view range. Choose a gene to change. By choosing a gene
 here, whenever this gene is in the view range, it will always be shown
 irrespective of its order of appearance.
 
-![](./media/image4.png)
+<img src="./media/image4.png" style="width:1.30694in;height:1.44853in" />
 
 #### "Fixed" genes
 
 GenomePaint allows you to show the expression of multiple genes
 side-by-side:
 
-![](./media/image10.png)
+<img src="./media/image10.png" style="width:1.9875in;height:1.96975in" />
 
 The gene on the left is "automatic". The gene on right is added by user,
 and will be always shown irrespective of the view range, hence the
@@ -411,7 +411,7 @@ To add a fixed gene, click the gene label on top of the automatic
 expression rank axis to show the menu. Type into the search box on top
 of the menu to find matching gene names:
 
-![](./media/image82.png)
+<img src="./media/image82.png" style="width:1.32778in;height:1.1785in" />
 
 Select a gene from the list, and its expression rank will appear as a
 new column. More than 1 fixed genes can be added. The samples are
@@ -419,18 +419,18 @@ aligned for both automatic and fixed genes.
 
 To remove a fixed gene, click the gene label and select "Remove".
 
-![](./media/image57.png)
+<img src="./media/image57.png" style="width:2.44583in;height:1.25572in" />
 
 As an example, while browsing the recurrently duplicated NOTCH1 MYC
 enhancer locus in TALL, the distal target gene MYC is not in view range,
 thus its expression is not shown automatically.
 
-![](./media/image54.png)
+<img src="./media/image54.png" style="width:6.48645in;height:2.24653in" />
 
 By adding MYC as a "fixed gene", its expression is shown for TALL tumors
 with enhancer duplication:
 
-![](./media/image3.png)
+<img src="./media/image3.png" style="width:7.1in;height:2.22222in" />
 
 ### Filters for samples and genomic variants
 
@@ -439,14 +439,14 @@ of these filters can be found in the track legend at the bottom of the
 page, where the filters are listed as legend entries. Some filters are
 hidden by default, click "MORE" at bottom to show them:
 
-![](./media/image76.png)
+<img src="./media/image76.png" style="width:1.32675in;height:1.14375in" />
 
 #### Cancer type filter
 
 In cohort view, one or more cancer types will be shown on the left of
 the mutation data display. Click on a cancer name to show a menu:
 
-![](./media/image43.png)
+<img src="./media/image43.png" style="width:1.34792in;height:2.02544in" />
 
 Click "Hide" to hide samples of this cancer type; click "Show only" to
 only show samples of this cancer type.
@@ -454,21 +454,21 @@ only show samples of this cancer type.
 In the legend, hidden cancer types are indicated with a strikethrough;
 click a striked label to turn it back on:
 
-![](./media/image37.png)
+<img src="./media/image37.png" style="width:7.1in;height:0.34722in" />
 
 #### Other sample filters
 
 You can filter samples by cancer group, sample type, gender, and race,
 in the same way as cancer type.
 
-![](./media/image73.png)
+<img src="./media/image73.png" style="width:5.9375in;height:0.86111in" />
 
 #### Mutation class filter
 
 Mutation class legend is shown as below. You can select a class and hide
 it or show it only.
 
-![](./media/image44.png)
+<img src="./media/image44.png" style="width:5.425in;height:1.29659in" />
 
 #### Mutation attribute filter
 
@@ -477,7 +477,7 @@ Unlike mutation class which annotates a mutation no matter if it is
 germline or somatic, these attributes are assigned to mutations in each
 sample.
 
-![](./media/image48.png)
+<img src="./media/image48.png" style="width:3.90417in;height:0.84916in" />
 
 ### Custom sample subsetting
 
@@ -485,12 +485,12 @@ In addition to grouping tumors with predefined cancer types, users can
 choose to limit the Cohort View to a customly defined sample subset. To
 do that, click CONFIG, then select the "Use a sample list" button.
 
-![](./media/image6.png)
+<img src="./media/image6.png" style="width:1.97292in;height:1.56014in" />
 
 An input box is displayed prompting the user to enter the set of
 samples.
 
-![](./media/image14.png)
+<img src="./media/image14.png" style="width:1.9568in;height:1.38542in" />
 
 For the moment, space character is reserved for dividing the sample and
 group names, and cannot be used in either sample or group name.
@@ -524,18 +524,18 @@ SJHYPER013_D B-ALLs
 The Cohort View will be transformed to showing only these samples in two
 groups:
 
-![](./media/image83.png)
+<img src="./media/image83.png" style="width:4.05104in;height:1.77604in" />
 
 Click a group label to see options:
 
-![](./media/image86.png)
+<img src="./media/image86.png" style="width:1.16357in;height:1.03646in" />
 
 After submission, a sample set can be edited. To do that, inside the
 CONFIG menu click on the "Edit" button following the "Restricted to xx
 samples" phrase, and open the same input box allowing to edit the list
 of samples.
 
-![](./media/image74.png)
+<img src="./media/image74.png" style="width:2.73125in;height:1.39578in" />
 
 Click on the "Remove" button to cancel the sample subsetting and go back
 to full Cohort View.
@@ -552,7 +552,7 @@ As an example, T-ALL displays 78 samples with alterations at the TAL1
 locus. The "21%" percentage is imprecise and only servers as a rough
 guide, as it doesn't account for assay availability.
 
-![](./media/image70.png)
+<img src="./media/image70.png" style="width:6.68958in;height:3.796in" />
 
 The track legend shows two DNA assay types for these alterations: SNP6
 and "amplicon sequencing". In addition there are also fusion events from
@@ -561,11 +561,11 @@ alteration, one needs the total number of T-ALLs with either SNP6,
 amplicon sequencing, or RNA-seq. To get the actual total number, click
 the "HM, TALL" label on the left and select "Assay summary" option.
 
-![](./media/image31.png)
+<img src="./media/image31.png" style="width:1.31747in;height:2.01042in" />
 
 The assay availability for T-ALL is displayed as a map below.
 
-![](./media/image36.png)
+<img src="./media/image36.png" style="width:3.03958in;height:2.00113in" />
 
 The map is an assay-by-sample matrix, with assays as rows and samples as
 columns. All assays available for T-ALLs are included. By default, the
@@ -592,7 +592,7 @@ the row order by dragging a label up or down. As below, the RNA-seq,
 SNP6, and Capture-seq rows are moved to the top, yielding a total of 337
 samples (267+70) for the samples with TAL1 locus alterations.
 
-![](./media/image18.png)
+<img src="./media/image18.png" style="width:3.01134in;height:1.675in" />
 
 ### Kaplan-Meier plot
 
@@ -624,7 +624,7 @@ deletions overlapping with this range will be separated from samples
 that don't. As a result, a survival curve like below can be shown for
 BALL.
 
-![](./media/image78.png)
+<img src="./media/image78.png" style="width:7.1in;height:5.09722in" />
 
 Such procedure can be applied to other types of mutation/alteration as
 well. If a CNV is selected, samples may be divided to up to three groups
@@ -645,7 +645,7 @@ and select the "Survival plot" option. This will select TALL patients
 with any variant in the view range into the "mutated" group, for
 comparing with the "no mutation" group in the Kaplan-Meier analysis.
 
-![](./media/image50.png)
+<img src="./media/image50.png" style="width:7.1in;height:7.5in" />
 
 CNV, LOH parameter settings and [mutation class filter](#mutation-class-filter) will be applied to filter
 alteration events in the survival plot.
@@ -657,14 +657,14 @@ may lead to worse outcome in cancer patients. To test this hypothesis,
 show MDM2 in GenomePaint. On the right of gene expression rank plot,
 click "MDM2" label, then select "Survival plot by MDM2 FPKM".
 
-![](./media/image11.png)
+<img src="./media/image11.png" style="width:2.52222in;height:2.18023in" />
 
 This will perform the analysis on BALL by default, using MDM2 median
 expression as cutoff to divide the samples to two groups. Switch the
 cancer type to AML, and median into quartile, to view the plot showing
 high MDM2 expression is correlated with worse outcome in AML.
 
-![](./media/image63.png)
+<img src="./media/image63.png" style="width:4.05in;height:5.03453in" />
 
 ## Sample View
 
@@ -673,7 +673,7 @@ left of this panel, click the "Sample View" button to show a new browser
 view showing data tracks from this sample in a region surrounding the
 mutation:
 
-![](./media/image88.png)
+<img src="./media/image88.png" style="width:7.1in;height:2.34722in" />
 
 ### Pediatric tumors in Sample View
 
@@ -685,14 +685,14 @@ example below, a Wilms' tumor shows 4 different types of mutations over
 the MYCN gene, including copy number gain, LOH (not copy-neutral), SV
 supporting this CNV, and a coding mutation in MYCN.
 
-![](./media/image47.png)
+<img src="./media/image47.png" style="width:7.1in;height:1.72222in" />
 
 #### Mutation signature
 
 In the above example, the missense mutation is colored in green because
 of its mutation signature assignment in that sample.
 
-![](./media/image66.png)
+<img src="./media/image66.png" style="width:3.70278in;height:1.80464in" />
 
 Mutation signature is available for 915 tumors from the Pan-TARGET study
 (Ma, X et al. Nature 2018). For such tumors, their mutations in Sample
@@ -700,7 +700,7 @@ View will be colored by assigned signatures. Users can also view the
 mutation signature abundance for a sample by clicking the "Mutation
 signature" button on top.
 
-![](./media/image60.png)
+<img src="./media/image60.png" style="width:5.09861in;height:2.01104in" />
 
 #### Multi-region display for inter-chromosomal SV
 
@@ -711,7 +711,7 @@ following example shows a pair of genomic regions upon clicking the
 ETV6-ABL1 fusion transcript in a TALL sample; the left region with ETV6
 is chr12, and the right-side region with ABL1 is chr9.
 
-![](./media/image25.png)
+<img src="./media/image25.png" style="width:7.1in;height:1.06944in" />
 
 To zoom in on either region, drag on the coordinate ruler on top of one
 region.
@@ -722,7 +722,7 @@ To zoom out on the right-side region, instead of clicking on the "zoom
 out" buttons, hover and show an option on top, click that option to zoom
 the right-side region.
 
-![](./media/image2.png)
+<img src="./media/image2.png" style="width:2.94583in;height:0.81361in" />
 
 #### Sequencing coverage and allelic-imbalance tracks in single-sample view
 
@@ -731,7 +731,7 @@ in interpreting mutations from individual tumors. This includes
 additional genomic assay tracks on individual tumors if they are
 available to us. Following is a typical example:
 
-![](./media/image61.png)
+<img src="./media/image61.png" style="width:7.1in;height:2.23611in" />
 
 In the above example, it shows coverage of WGS and RNA-seq of tumor, and
 the allelic-imbalance from the tumor-normal paired WGS results.
@@ -748,13 +748,13 @@ line (NALM6), all grouped with primary tumors of the same cancer type.
 When a cell line appears in the genomic mutation data panel, it will be
 marked by a black notch on left:
 
-![](./media/image56.png)
+<img src="./media/image56.png" style="width:5.02222in;height:1.46135in" />
 
 These cell lines all come with in-situ Hi-C data, in addition to the
 histone modification ChIP-seq. These tracks will be shown in the
 single-sample view of these cell lines.
 
-![](./media/image19.png)
+<img src="./media/image19.png" style="width:7.1in;height:4.06944in" />
 
 [Learn more about the Hi-C track](https://docs.google.com/document/d/1MQ0Z_AD5moDmaSx2tcn7DyVKGp49TS63pO0cceGL_Ns/edit?usp=sharing).
 
@@ -764,7 +764,7 @@ Matrix View is a light-weight method for combining multiple genomic
 regions into one view so as to compare their mutational profiles over a
 group of samples, via a sample-by-region matrix:
 
-![](./media/image90.png)
+<img src="./media/image90.png" style="width:0.82268in;height:3.75347in" />
 
 Such a matrix can be generated for samples from one cancer type.
 Following demonstrates how to use the Matrix View to observe the
@@ -772,38 +772,38 @@ MYCN-ATRX mutual exclusivity in neuroblastoma.
 
 First, show the NBL mutation profile at the MYCN locus.
 
-![](./media/image46.png)
+<img src="./media/image46.png" style="width:7.1in;height:2.43056in" />
 
 By default MYCNOS gene is showing for the expression rank, change it to
 MYCN. This can allow the region to be named as "MYCN" rather than
 "MYCNOS" in the Matrix View.
 
-![](./media/image49.png)
+<img src="./media/image49.png" style="width:1.43889in;height:1.19172in" />
 
 Click on the "ST, NBL" label on left, and select "Matrix view".
 
-![](./media/image29.png)
+<img src="./media/image29.png" style="width:1.30624in;height:2.20486in" />
 
 This gathers the group of NBL tumors with mutations in MYCN into a
 single-column matrix.
 
-![](./media/image45.png)
+<img src="./media/image45.png" style="width:1.32839in;height:7.29514in" />
 
 Back to the Cohort View. Type "atrx" into the coordinate box and press
 ENTER.
 
-![](./media/image8.png)
+<img src="./media/image8.png" style="width:2.32083in;height:0.90892in" />
 
 Cohort View now shows ATRX mutations from NBL. Click the "ST, NBL" label
 on the left, and select "Matrix View".
 
-![](./media/image30.png)
+<img src="./media/image30.png" style="width:4.14028in;height:2.19247in" />
 
 This will add ATRX as a new column alongside MYCN in the Matrix View. It
 shows that the majority of NBL tumors only display alteration at one
 gene.
 
-![](./media/image1.png)
+<img src="./media/image1.png" style="width:0.84365in;height:5.99653in" />
 
 ## Custom track
 
@@ -1030,7 +1030,7 @@ In the JSON object of this CNV, the "**mattr**" attribute points to a
 key-value pair. Here "dna_assay" is used to indicate the assay type,
 which will show up in the tooltip like below.
 
-![](./media/image84.png)
+<img src="./media/image84.png" style="width:4.25139in;height:1.61453in" />
 
 ### FPKM gene expression
 
@@ -1255,27 +1255,27 @@ Next, store your track files on the platform by uploading them to a
 For example, following files "TCGA_DLBC.*" have been stored in the
 folder.
 
-![](./media/image62.png)
+<img src="./media/image62.png" style="width:7.1in;height:2.26389in" />
 
 Follow the instructions in the next section to obtain the **GenomePaint
 FileViewer**.
 
 Once obtained, the FileViewer looks like below in your account.
 
-![](./media/image77.png)
+<img src="./media/image77.png" style="width:4.6235in;height:0.39998in" />
 
 Click the FileViewer to open up the file selection interface.
 
-![](./media/image93.png)
+<img src="./media/image93.png" style="width:7.10417in;height:2.61227in" />
 
 Select the necessary track files.
 
-![](./media/image92.png)
+<img src="./media/image92.png" style="width:7.1in;height:3.70833in" />
 
 Click the button "Launch viewer" at bottom right. The Viewer will start
 up by prompting you to select the correct genome build for your data.
 
-![](./media/image21.png)
+<img src="./media/image21.png" style="width:3.56266in;height:1.04026in" />
 
 By selecting a genome build, GenomePaint will launch and show your
 custom track.
@@ -1293,19 +1293,19 @@ web browser, log yourself in at
 [https://platform.dnanexus.com/](https://platform.dnanexus.com/).
 Click the top-right user icon and select "My Profile".
 
-![](./media/image81.png)
+<img src="./media/image81.png" style="width:1.49074in;height:1.09375in" />
 
 Then, click the "API Tokens" tab. Then click the "+ New Token" button.
 
-![](./media/image24.png)
+<img src="./media/image24.png" style="width:4.25833in;height:0.79734in" />
 
 At the prompt, enter a label and click "Generate Token".
 
-![](./media/image89.png)
+<img src="./media/image89.png" style="width:5.40417in;height:2.607in" />
 
 The token is now displayed. Select and copy it.
 
-![](./media/image71.png)
+<img src="./media/image71.png" style="width:6.00139in;height:0.66878in" />
 
 At the terminal of your computer, log into "dx" with the token.
 
@@ -1380,11 +1380,11 @@ Login to your account and access the "S3 Management Console" at
 [https://console.aws.amazon.com/s3/](https://console.aws.amazon.com/s3/).
 Here, click the "+ Create bucket" button.
 
-![A screenshot of a cell phone Description automatically generated](./media/image40.png)
+<img src="./media/image40.png" style="width:2.83123in;height:1.39723in"/>
 
 A new window pops up with details required for creating a new bucket.
 
-![](./media/image27.png)
+<img src="./media/image27.png" style="width:6.5in;height:4.73542in"/>
 
 In the 'Bucket name' box enter a unique DNS-compliant name. This name
 should be unique across all buckets on Amazon S3. The URL for the
@@ -1397,7 +1397,7 @@ At "Set permissions", make the bucket public so files can be accessible
 from GenomePaint. To make the Bucket public, leave all the checkboxes
 unchecked.
 
-![A screenshot of a cell phone Description automatically generated](./media/image79.png)}
+<img src="./media/image79.png" style="width:6.5in;height:4.74236in" />
 
 Next page will summarize all settings for the new bucket. After
 confirming, click "Create bucket".
@@ -1406,35 +1406,35 @@ confirming, click "Create bucket".
 
 Select the bucket you want files to upload to.
 
-![A screenshot of a cell phone Description automatically generated](./media/image32.png)
+<img src="./media/image32.png" style="width:6.5in;height:1.93542in" />
 
 Then, click the "Upload" button.
 
-![A screenshot of a cell phone Description automatically generated](./media/image59.png)
+<img src="./media/image59.png" style="width:3.09514in;height:1.29167in" />
 
 On the next page, select all the GenomePaint track files and associated
 index files for uploading.
 
-![A screenshot of a cell phone Description automatically generated](./media/image80.png)
+<img src="./media/image80.png" style="width:6.14898in;height:3.01268in" />
 
 Once a file is selected, it will appear in the menu. Click 'Upload' at
 the bottom. Make sure to add index files (.tbi and .csi) with the vcf,
 svcnv or fpkm files.
 
-![A screenshot of a cell phone Description automatically generated](./media/image35.png)
+<img src="./media/image35.png" style="width:5.84568in;height:3.71788in" />
 
 #### Enable public access to the track files
 
 Once the file is uploaded to the bucket, it will appear in the list of
 files.
 
-![A screenshot of a cell phone Description automatically generated](./media/image7.png)
+<img src="./media/image7.png" style="width:6.24754in;height:3.78323in" />
 
 Select all the files you want to visualize in the GenomePaint. Click
 "Actions" and select "Make public" option. A window will pop-up to
 confirm the action.
 
-![A screenshot of a social media post Description automatically generated](./media/image9.png)
+<img src="./media/image9.png" style="width:3.26563in;height:3.46973in" />
 
 #### Submit a custom track from S3 to GenomePaint
 
