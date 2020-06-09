@@ -101,6 +101,7 @@ nav:
           - Loading a VCF File: guides/proteinpaint/advanced-guides/using-a-vcf-file.md
       - Developer's Guide:
           - Embedding ProteinPaint: guides/proteinpaint/developers-guide/embedding-proteinpaint.md
+          - URL Parameters: guides/proteinpaint/developers-guide/url-parameters.md
           - Organizing Data into a Study View: guides/proteinpaint/developers-guide/organizing-data-into-a-study-view.md
   - GenomePaint:
       - GenomePaint User Guide: guides/genomepaint/index.md
