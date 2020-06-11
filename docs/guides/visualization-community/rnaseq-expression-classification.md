@@ -108,6 +108,15 @@ Once the resulting analysis job completes, an HTML plot of the results should be
 
 ![](../../images/guides/visualization-community/rnaseq-expression-classification/rnaseq-expression-plot.png)
 
+## Cost Estimation
+
+| Workflow Name | Per sample cost | Outliers |
+|--|--|--|
+| Realignment workflow | $2.50 | $5.00 |
+| Aligned BAM workflow | $1.00 | $2.00-3.00 |
+| Feature read counts workflow | $0.002-0.004 | |
+
+
 ## Batch effect corrections
 
 When comparing numerous samples such as those included in this analysis, it is important to consider 
