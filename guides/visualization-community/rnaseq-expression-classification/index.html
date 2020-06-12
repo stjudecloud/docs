@@ -38,7 +38,7 @@
     
     
       
-        <title>t-SNE Charts - St. Jude Cloud Documentation</title>
+        <title>RNA-Seq Expression Classification - St. Jude Cloud Documentation</title>
       
     
     
@@ -103,7 +103,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                t-SNE Charts
+                RNA-Seq Expression Classification
               
             </span>
           
@@ -1605,6 +1605,33 @@
     Workflow Steps
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mapping" class="md-nav__link">
+    Mapping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-counts" class="md-nav__link">
+    Feature Counts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    Visualization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1657,6 +1684,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#cost-estimation" class="md-nav__link">
+    Cost Estimation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#batch-effect-corrections" class="md-nav__link">
     Batch effect corrections
   </a>
@@ -1700,16 +1734,16 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/stjudecloud/docs/edit/master/docs/guides/visualization-community/t-sne-charts.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/stjudecloud/docs/edit/master/docs/guides/visualization-community/rnaseq-expression-classification.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1>t-SNE Charts</h1>
-<p>St. Jude Cloud provides functionality for generating t-Distributed Stochastic Neighbor Embedding (t-SNE) plots. You can find the t-SNE paper <a href="http://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf">here</a>. This tool allows plotting of RNA-seq data by running through the St. Jude Cloud normalization <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.html">pipeline</a>. The generated count data is then compared to a reference set of data from a cohort of St. Jude samples using t-SNE and a plot is produced. </p>
+                <h1>RNA-Seq Expression Classification</h1>
+<p>St. Jude Cloud provides functionality for generating RNA-Seq Expression Classification plots. This tool allows plotting of RNA-seq data by running through the St. Jude Cloud normalization <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.html">pipeline</a>. The generated count data is then compared to a reference set of data from a cohort of St. Jude samples and a plot is produced. </p>
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The t-SNE pipeline reference data uses sequencing data from fresh, frozen tissue samples. It has not been evaluated for use with sequencing data generated from formalin-fixed paraffin-embedded (FFPE) specimens. </li>
-<li>If running the aligned BAM or count-based t-SNE pipelines, alignment must be done against the <a href="ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz">GRCh38_no_alt reference</a>. It should use parameters as specifed in our <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html">RNA-seq workflow</a> to minimize any discrepancies caused by differing alignment specification.</li>
-<li>If running the count-based t-SNE pipeline, feature counts should be generated with htseq-count as described in our <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html">RNA-seq workflow</a>. This pipeline uses <a href="ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_31/gencode.v31.annotation.gtf.gz">Gencode v31</a> annotations. </li>
+<li>The RNA-Seq Expression Classification pipeline reference data uses sequencing data from fresh, frozen tissue samples. It has not been evaluated for use with sequencing data generated from formalin-fixed paraffin-embedded (FFPE) specimens. </li>
+<li>If running the aligned BAM or count-based pipelines, alignment must be done against the <a href="ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz">GRCh38_no_alt reference</a>. It should use parameters as specifed in our <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html">RNA-seq workflow</a> to minimize any discrepancies caused by differing alignment specification.</li>
+<li>If running the count-based pipeline, feature counts should be generated with htseq-count as described in our <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html">RNA-seq workflow</a>. This pipeline uses <a href="ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_31/gencode.v31.annotation.gtf.gz">Gencode v31</a> annotations. </li>
 </ul>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <p>The input can be either of the two entries below, based on whether you want to start
@@ -1745,7 +1779,7 @@ or the results can occur. If your BAM is <em>not</em> aligned to this genome bui
 recommend submitting the BAM to the realignment-based workflow.</p>
 </div>
 <h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
-<p>The interactive t-SNE pipeline produces the following outputs:</p>
+<p>The RNA-Seq Expression Classification pipeline produces the following outputs:</p>
 <table>
 <thead>
 <tr>
@@ -1756,8 +1790,8 @@ recommend submitting the BAM to the realignment-based workflow.</p>
 </thead>
 <tbody>
 <tr>
-<td>Interactive t-SNE plot (.html)</td>
-<td>t-SNE visualization</td>
+<td>Interactive expression plot (.html)</td>
+<td>Visualization of RNA-Seq data</td>
 <td>all</td>
 </tr>
 <tr>
@@ -1780,45 +1814,72 @@ recommend submitting the BAM to the realignment-based workflow.</p>
 <li>A feature count (.count.txt) file is produced for comparison to 
    St. Jude Cloud reference data.</li>
 <li>For BAM-based and realignment workflows</li>
-<li>A t-SNE visualizations for genomic features is produced. </li>
+<li>A visualization for genomic features is produced. </li>
 </ol>
-<p><strong>Mapping</strong></p>
+<h3 id="mapping">Mapping<a class="headerlink" href="#mapping" title="Permanent link">&para;</a></h3>
 <p>We use the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3530905/">STAR aligner</a> 
 to rapidly map reads to the GRCh38 human reference genome. </p>
-<p><strong>Feature Counts</strong></p>
+<h3 id="feature-counts">Feature Counts<a class="headerlink" href="#feature-counts" title="Permanent link">&para;</a></h3>
 <p>We use <a href="https://htseq.readthedocs.io/en/latest/count.html">htseq-count</a> 
 to produce genomic feature counts. </p>
-<p><strong>Visualization</strong></p>
-<p>A t-SNE visualization is produced using <a href="https://github.com/jkrijthe/Rtsne">Rtsne</a>.</p>
+<h3 id="visualization">Visualization<a class="headerlink" href="#visualization" title="Permanent link">&para;</a></h3>
+<p>A t-Distributed Stochastic Neighbor Embedding (t-SNE) visualization is produced using <a href="https://github.com/jkrijthe/Rtsne">Rtsne</a>. You can find the t-SNE paper <a href="http://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf">here</a>.</p>
 <h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>If you provide a BAM file to the non-alignemnet pipeline or counts data to the counts-based pipeline, 
+<p>If you provide a BAM file to the non-alignement pipeline or counts data to the counts-based pipeline, 
 it <strong>must</strong> be aligned to <code>GRCh38_no_alt</code>.
 Running a BAM aligned to any other reference genome is not supported. Maybe more
 importantly, we do not check the genome build of the BAM, so errors in computation
 or the results can occur. If your BAM is <em>not</em> aligned to this genome build, we 
 recommend submitting the BAM to the realignment-based workflow.</p>
 </div>
-<p>We provide three versions of the t-SNE tool depending on desired input. The full workflow allows a user to upload a sample in BAM format. That sample will then be converted to <code>FastQ</code> format, aligned with <code>STAR</code> two-pass alignment, and feature counts generated with <code>htseq-count</code></p>
-<p>To get started, you need to navigate to the <a href="https://platform.stjude.cloud/tools/interactive-tsne">Interactive t-SNE tool page</a>. You'll need to click the "Start" button in the left hand pane. This creates a cloud workspace in DNAnexus with the same name as the tool. After this, you will be able to upload your input files to that workspace.</p>
+<p>We provide three versions of the RNA-Seq Expression Classification tool depending on desired input. The full workflow allows a user to upload a sample in BAM format. That sample will then be converted to <code>FastQ</code> format, aligned with <code>STAR</code> two-pass alignment, and feature counts generated with <code>htseq-count</code></p>
+<p>To get started, you need to navigate to the <a href="https://platform.stjude.cloud/tools/rnaseq-expression-classification">RNA-Seq Expression Classification tool page</a>. You'll need to click the "Start" button in the left hand pane. This creates a cloud workspace in DNAnexus with the same name as the tool. After this, you will be able to upload your input files to that workspace.</p>
 <h2 id="uploading-data">Uploading data<a class="headerlink" href="#uploading-data" title="Permanent link">&para;</a></h2>
-<p>The Interactive t-SNE pipeline takes either a htseq-count count file or a GRCh38_no_alt aligned BAM from human RNA-Seq. You can upload your input file(s) using the data transfer application or by uploading them through the command line. Both of the guides linked here will contain more details on how to upload data using that method, so we defer to those guides here.</p>
+<p>The RNA-Seq Expression Classification pipeline takes either a htseq-count count file or a GRCh38_no_alt aligned BAM from human RNA-Seq. You can upload your input file(s) using the data transfer application or by uploading them through the command line. Both of the guides linked here will contain more details on how to upload data using that method, so we defer to those guides here.</p>
 <h2 id="running-the-tool">Running the tool<a class="headerlink" href="#running-the-tool" title="Permanent link">&para;</a></h2>
 <p>Once you've uploaded data to your cloud workspace, click "Launch Tool" on the tool's landing page. A dropdown will present the different presets for running the workflow. Here, you can select whether you wish to start with a counts file or a BAM file.</p>
 <h2 id="hooking-up-inputs">Hooking up inputs<a class="headerlink" href="#hooking-up-inputs" title="Permanent link">&para;</a></h2>
 <p>Next, you'll need to hook up either the counts file or the BAM file you uploaded in the upload data section. In this example, we are using the realignment version of the pipeline, so you can hook up the inputs by clicking on the in_bams slot and selecting the respective files. If you are using the BAM-based or counts-based workflow, the process is similar.</p>
-<p><img alt="" src="../../../images/guides/visualization-community/tsne-charts/tsne-main.png" /></p>
+<p><img alt="" src="../../../images/guides/visualization-community/rnaseq-expression-classification/rnaseq-expression-main.png" /></p>
 <p>Additionally, a parameter selecting the tissue type to compare against must be selected. The available options are "blood", "brain", and "solid". Based on the selection, a reference collection of tumors of that type will be selected from St. Jude Cloud data and the input samples will be compared against this reference collection.</p>
-<p><img alt="" src="../../../images/guides/visualization-community/tsne-charts/tsne-param.png" /></p>
+<p><img alt="" src="../../../images/guides/visualization-community/rnaseq-expression-classification/tsne-param.png" /></p>
 <h2 id="starting-the-workflow">Starting the workflow<a class="headerlink" href="#starting-the-workflow" title="Permanent link">&para;</a></h2>
 <p>Once your input files are hooked up, you should be able to start the workflow by clicking the "Run as Analysis..." button in the top right hand corner of the workflow dialog.</p>
 <h2 id="monitoring-run-progress">Monitoring run progress<a class="headerlink" href="#monitoring-run-progress" title="Permanent link">&para;</a></h2>
-<p>Once you have started one or more Interactive t-SNE runs, you can safely close your browser and come back later to check the status of the jobs. To do this, navigate to the tool's landing page. Next, click "View Results" then select the "View Running Jobs" option. You will be redirected to the job monitoring page. Each job you kicked off gets one row in this table.</p>
-<p>You can click the "+" on any of the runs to check the status of individual steps of the Interactive t-SNE pipeline. Other information, such as time, cost of individual steps in the pipeline, and even viewing the job logs can accessed by clicking around the sub-items.</p>
+<p>Once you have started one or more RNA-Seq Expression Classification runs, you can safely close your browser and come back later to check the status of the jobs. To do this, navigate to the tool's landing page. Next, click "View Results" then select the "View Running Jobs" option. You will be redirected to the job monitoring page. Each job you kicked off gets one row in this table.</p>
+<p>You can click the "+" on any of the runs to check the status of individual steps of the RNA-Seq Expression Classification pipeline. Other information, such as time, cost of individual steps in the pipeline, and even viewing the job logs can accessed by clicking around the sub-items.</p>
 <h2 id="visualizing-results">Visualizing results<a class="headerlink" href="#visualizing-results" title="Permanent link">&para;</a></h2>
-<p>Once the resulting analysis job completes, an HTML plot of the results should be available. The plot is generated with the <a href="https://plot.ly/r/">Plotly R library</a>. The plot can be zoomed arbitrarily and group labels can be turned on/off for manual inspection. User input samples will be displayed in black marks with a label on the graph as well as an entry in the legend. </p>
-<p><img alt="" src="../../../images/guides/visualization-community/tsne-charts/tsne-example2.png" /></p>
+<p>Once the resulting analysis job completes, an HTML plot of the results should be available. The plot is generated with the <a href="https://plot.ly/r/">Plotly R library</a>. The plot can be zoomed arbitrarily and group labels can be turned on/off for manual inspection. User input samples will be displayed in black marks with a label on the graph as well as an entry in the legend.</p>
+<p><img alt="" src="../../../images/guides/visualization-community/rnaseq-expression-classification/rnaseq-expression-plot.png" /></p>
+<h2 id="cost-estimation">Cost Estimation<a class="headerlink" href="#cost-estimation" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Workflow Name</th>
+<th>Per sample cost</th>
+<th>Outliers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Realignment workflow</td>
+<td>$2.50</td>
+<td>$5.00</td>
+</tr>
+<tr>
+<td>Aligned BAM workflow</td>
+<td>$1.00</td>
+<td>$2.00-3.00</td>
+</tr>
+<tr>
+<td>Feature read counts workflow</td>
+<td>$0.002-0.004</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="batch-effect-corrections">Batch effect corrections<a class="headerlink" href="#batch-effect-corrections" title="Permanent link">&para;</a></h2>
 <p>When comparing numerous samples such as those included in this analysis, it is important to consider 
 the variation in data created by obtaining from various sources and across time. Therefore the t-SNE
@@ -1826,19 +1887,18 @@ visualization incorporates some batch effect corrections for the reference data.
 for batch effect based on strandedness of the RNA-Seq sample, library type, and read length protocol.</p>
 <h2 id="known-issues">Known issues<a class="headerlink" href="#known-issues" title="Permanent link">&para;</a></h2>
 <p>!!! caution "Fresh Frozen Tissue Only
-     The t-SNE pipeline reference data uses sequencing data from fresh, frozen 
+     The RNA-Seq Expression Classification pipeline reference data uses sequencing data from fresh, frozen 
      tissue samples. It has not been evaluated for use with sequencing data 
      generated from formalin-fixed paraffin-embedded (FFPE) specimens. </p>
 <div class="admonition caution">
 <p class="admonition-title">GRCh38 required</p>
-<p>If running the aligned BAM or count-based t-SNE pipelines, alignment must be 
+<p>If running the aligned BAM or count-based RNA-Seq Expression Classification pipelines, alignment must be 
 done against the <a href="ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz">GRCh38_no_alt reference</a>. 
-It should use parameters as specifed in our <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html">RNA-seq workflow</a> 
-to minimize any discrepancies caused by differing alignment specification.</p>
+It should use parameters as specifed in our <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html">RNA-seq workflow</a> to minimize any discrepancies caused by differing alignment specification.</p>
 </div>
 <div class="admonition caution">
 <p class="admonition-title">Standardized feature counts must be provided</p>
-<p>If running the count-based t-SNE pipeline, feature counts should be generated 
+<p>If running the count-based RNA-Seq Expression Classification pipeline, feature counts should be generated 
 with htseq-count as described in our <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html">RNA-seq workflow</a>. 
 This pipeline uses <a href="ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_31/gencode.v31.annotation.gtf.gz">Gencode v31</a> annotations. </p>
 </div>
@@ -1873,7 +1933,7 @@ This pipeline uses <a href="ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_hu
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/fceecca">fceecca</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/e7e1ebe">e7e1ebe</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
