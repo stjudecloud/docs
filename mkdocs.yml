@@ -65,46 +65,47 @@ nav:
       - Frequently Asked Questions: guides/visualization-community/faq.md
       #- SJ Charts: guides/visualization-community/sjcharts.md
       #- t-SNE Charts: guides/visualization-community/t-sne-charts.md
-  - ProteinPaint: 
-      - Introduction: guides/proteinpaint/index.md
-      - User Guide:
-          - Getting Started: guides/proteinpaint/navigating-the-protein-diagram.md
-          - Loading Datasets: guides/proteinpaint/loading-datasets.md
-          - Viewing SNV/Indel Mutations: guides/proteinpaint/view-mutation-details.md
-          - Viewing Gene Fusions: guides/proteinpaint/exploring-gene-fusions.md
-          - Viewing Expression Data: guides/proteinpaint/exploring-gene-expression.md
-          - Filtering Mutations: guides/proteinpaint/filtering-mutations.md
-          - Exporting Figures and Data: guides/proteinpaint/exporting-figures-and-data.md
-          - Using the Gene Table: guides/proteinpaint/advanced-guides/using-the-gene-table.md
-          - Using the Sample Table: guides/proteinpaint/advanced-guides/using-the-sample-table.md
-          - Using the Heatmap: guides/proteinpaint/advanced-guides/using-the-heatmap.md
-          - Using Disease Pie Charts: guides/proteinpaint/advanced-guides/using-disease-pie-charts.md
-          - Stratifying Mutations by Cancer Subtype: guides/proteinpaint/advanced-guides/stratify-mutation-by-cancer-subtype.md
-      - File Formats:
-          - SNV and Indel: guides/proteinpaint/file-formats/snv-and-indel.md
-          - SV and fusion transcript: guides/proteinpaint/file-formats/sv-and-fusion.md
-          - Copy Number Variants: guides/proteinpaint/file-formats/cnv.md
-          - Internal tandem duplications: guides/proteinpaint/file-formats/itd.md
-          - Intragenic deletion: guides/proteinpaint/file-formats/intragenic-deletion.md
-          - Trunction, N-loss or C-loss: guides/proteinpaint/file-formats/truncation.md
-          - JSON-BED: guides/proteinpaint/file-formats/json-bed.md
-          - Splice Junction: guides/proteinpaint/file-formats/splice-junction.md
-          - Profile-Gene-Value: guides/proteinpaint/file-formats/pgv.md
-          - Bampile: guides/proteinpaint/file-formats/bampile.md
-      - Advanced Usage:
-          - Add Custom Protein Domains: guides/proteinpaint/advanced-guides/custom-protein-domains.md
-          - Using Custom Tracks: guides/proteinpaint/advanced-guides/using-custom-tracks.md
-          - Visualize Your Mutation Data: guides/proteinpaint/advanced-guides/visualize-custom-mutations.md
-          - Loading SNV/Indel Mutations from a File: guides/proteinpaint/advanced-guides/loading-snv-indel-mutations-from-a-file.md
-          - Uploaded Mutation Data User Interface: guides/proteinpaint/advanced-guides/uploaded-mutation-data-user-interface.md
-          - Loading a TCGA MAF File: guides/proteinpaint/advanced-guides/loading-tcga-maf-file.md
-          - Loading a VCF File: guides/proteinpaint/advanced-guides/using-a-vcf-file.md
-      - Developer's Guide:
-          - Embedding ProteinPaint: guides/proteinpaint/developers-guide/embedding-proteinpaint.md
-          - URL Parameters: guides/proteinpaint/developers-guide/url-parameters.md
-          - Organizing Data into a Study View: guides/proteinpaint/developers-guide/organizing-data-into-a-study-view.md
-  - GenomePaint:
-      - GenomePaint User Guide: guides/genomepaint/index.md
+  - ProteinPaint:
+    - ProteinPaint: 
+        - Introduction: guides/proteinpaint/index.md
+        - User Guide:
+            - Getting Started: guides/proteinpaint/navigating-the-protein-diagram.md
+            - Loading Datasets: guides/proteinpaint/loading-datasets.md
+            - Viewing SNV/Indel Mutations: guides/proteinpaint/view-mutation-details.md
+            - Viewing Gene Fusions: guides/proteinpaint/exploring-gene-fusions.md
+            - Viewing Expression Data: guides/proteinpaint/exploring-gene-expression.md
+            - Filtering Mutations: guides/proteinpaint/filtering-mutations.md
+            - Exporting Figures and Data: guides/proteinpaint/exporting-figures-and-data.md
+            - Using the Gene Table: guides/proteinpaint/advanced-guides/using-the-gene-table.md
+            - Using the Sample Table: guides/proteinpaint/advanced-guides/using-the-sample-table.md
+            - Using the Heatmap: guides/proteinpaint/advanced-guides/using-the-heatmap.md
+            - Using Disease Pie Charts: guides/proteinpaint/advanced-guides/using-disease-pie-charts.md
+            - Stratifying Mutations by Cancer Subtype: guides/proteinpaint/advanced-guides/stratify-mutation-by-cancer-subtype.md
+        - File Formats:
+            - SNV and Indel: guides/proteinpaint/file-formats/snv-and-indel.md
+            - SV and fusion transcript: guides/proteinpaint/file-formats/sv-and-fusion.md
+            - Copy Number Variants: guides/proteinpaint/file-formats/cnv.md
+            - Internal tandem duplications: guides/proteinpaint/file-formats/itd.md
+            - Intragenic deletion: guides/proteinpaint/file-formats/intragenic-deletion.md
+            - Trunction, N-loss or C-loss: guides/proteinpaint/file-formats/truncation.md
+            - JSON-BED: guides/proteinpaint/file-formats/json-bed.md
+            - Splice Junction: guides/proteinpaint/file-formats/splice-junction.md
+            - Profile-Gene-Value: guides/proteinpaint/file-formats/pgv.md
+            - Bampile: guides/proteinpaint/file-formats/bampile.md
+        - Advanced Usage:
+            - Add Custom Protein Domains: guides/proteinpaint/advanced-guides/custom-protein-domains.md
+            - Using Custom Tracks: guides/proteinpaint/advanced-guides/using-custom-tracks.md
+            - Visualize Your Mutation Data: guides/proteinpaint/advanced-guides/visualize-custom-mutations.md
+            - Loading SNV/Indel Mutations from a File: guides/proteinpaint/advanced-guides/loading-snv-indel-mutations-from-a-file.md
+            - Uploaded Mutation Data User Interface: guides/proteinpaint/advanced-guides/uploaded-mutation-data-user-interface.md
+            - Loading a TCGA MAF File: guides/proteinpaint/advanced-guides/loading-tcga-maf-file.md
+            - Loading a VCF File: guides/proteinpaint/advanced-guides/using-a-vcf-file.md
+        - Developer's Guide:
+            - Embedding ProteinPaint: guides/proteinpaint/developers-guide/embedding-proteinpaint.md
+            - URL Parameters: guides/proteinpaint/developers-guide/url-parameters.md
+            - Organizing Data into a Study View: guides/proteinpaint/developers-guide/organizing-data-into-a-study-view.md
+    - GenomePaint:
+        - User Guide: guides/genomepaint/index.md
   - Studies:
       - About: guides/studies/index.md
       - Sickle Cell: guides/studies/sickle-cell.md
