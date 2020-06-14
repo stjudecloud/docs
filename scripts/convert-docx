@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+usage() {
+  >&2 echo "Usage: `basename $0` [docx-file] [guide-name] [output-dir]"
+}
+
+[[ "$#" -ne 3 ]] && usage && exit 1
+
+DOCX_FILE=$1; shift;
+GUIDE_NAME=$1; shift;
+OUTPUT_DIR=$1; shift;
+
+# echo "DOCX_FILE: $DOCX_FILE"
+# echo "GUIDE_NAME: $GUIDE_NAME"
+# echo "OUTPUT_DIR: $OUTPUT_DIR"
+
+DIR="$CWD"
+cd "$OUTPUT_DIR"
+
+pandoc -s "$DOCX_FILE" \
+       -f docx-empty_paragraphs \
+       -t markdown_strict-smart+pipe_tables-all_symbols_escapable \
+       -o "$GUIDE_NAME.md" \
+       --extract-media . \
+       --atx-headers \
+       --toc \
+       --wrap=none \
+       --shift-heading-level-by 1 \
+       --tab-stop 2
+
+cd "$DIR"
