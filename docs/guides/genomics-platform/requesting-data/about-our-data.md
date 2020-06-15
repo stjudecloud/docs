@@ -86,9 +86,9 @@ RNA-Seq BAM files are mapped to HG38. For alignment, `STAR` v2.7.1a 2-pass mappi
 
 ```bash
     STAR \
-             --readFilesIn $(cat read_one_fastqs_sorted.txt) $(cat read_two_fastqs_sorted.txt) \      # $READ_FILES are the input FastQ files to align.
-             --genomeDir ~{stardb_dir} \                                                              # $GENOME_DIR is a STAR reference directory containing HG38 and ERCC Spike In sequences.
-             --runThreadN $n_cores \                                                                  # $NUM_THREADS is the number of threads to parallelize the alignment across.
+             --readFilesIn $(cat read_one_fastqs_sorted.txt) $(cat read_two_fastqs_sorted.txt) \
+             --genomeDir ~{stardb_dir} \
+             --runThreadN $n_cores \
              --outSAMunmapped Within \
              --outSAMstrandField intronMotif \
              --outSAMtype BAM Unsorted \
@@ -104,7 +104,7 @@ RNA-Seq BAM files are mapped to HG38. For alignment, `STAR` v2.7.1a 2-pass mappi
              --outFilterScoreMinOverLread 0.66 \
              --outFileNamePrefix ~{output_prefix + "."} \
              --twopassMode Basic \
-             --limitBAMsortRAM ~{(memory_gb - 2) + "000000000"} \                                    # $MEMORY_LIMIT is a upper limit on the amount of RAM to use in the alignment.
+             --limitBAMsortRAM ~{(memory_gb - 2) + "000000000"} \
              --outSAMattrRGline $(cat read_groups_sorted.txt)
 ```
 
