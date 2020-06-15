@@ -82,30 +82,30 @@ Whole Genome Sequence (WGS) and Whole Exome Sequence (WES) BAM files were produc
 
 ### RNA-Seq
 
-RNA-Seq BAM files are mapped to HG38 + [ERCC Spike In Sequences][ercc] (commonly used for normalization of expression analyses). For alignment, `STAR` v2.5.3a 2-pass mapping followed by `Picard MarkDuplicates`. Below is the `STAR` command used during alignment. For more information about any of the parameters used, please refer to the [STAR manual][star-manual] for v2.5.3a.
+RNA-Seq BAM files are mapped to HG38. For alignment, `STAR` v2.7.1a 2-pass mapping. Below is the `STAR` command used during alignment. For more information about any of the parameters used, please refer to the [STAR manual][star-manual] for v2.7.1a.
 
 ```bash
     STAR \
-        --runThreadN $NUM_THREADS \                           # $NUM_THREADS is the number of threads to parallelize the alignment across (generally we use 4).
-        --genomeDir $GENOME_DIR \                             # $GENOME_DIR is a STAR reference directory containing HG38 and ERCC Spike In sequences.
-        --readFilesIn $READ_FILES \                           # $READ_FILES are the input FastQ files to align.
-        --limitBAMsortRAM $MEMORY_LIMIT \                     # $MEMORY_LIMIT is a upper limit on the amount of RAM to use in the alignment.
-        --outFileNamePrefix $OUT_FILE_PREFIX \
-        --outSAMtype BAM SortedByCoordinate \
-        --outSAMstrandField intronMotif \
-        --outSAMattributes NH   HI   AS   nM   NM   MD   XS \
-        --outSAMunmapped Within \
-        --outSAMattrRGline $RGs \                             # $RGs is the read group information for each FastQ passed in $READ_FILES.
-        --outFilterMultimapNmax 20 \
-        --outFilterMultimapScoreRange 1 \
-        --outFilterScoreMinOverLread 0.66 \
-        --outFilterMatchNminOverLread 0.66 \
-        --outFilterMismatchNmax 10 \
-        --alignIntronMax 500000 \
-        --alignMatesGapMax 1000000 \
-        --alignSJDBoverhangMin 1 \
-        --sjdbScore 2 \
-        --twopassMode Basic
+             --readFilesIn $(cat read_one_fastqs_sorted.txt) $(cat read_two_fastqs_sorted.txt) \      # $READ_FILES are the input FastQ files to align.
+             --genomeDir ~{stardb_dir} \                                                              # $GENOME_DIR is a STAR reference directory containing HG38 and ERCC Spike In sequences.
+             --runThreadN $n_cores \                                                                  # $NUM_THREADS is the number of threads to parallelize the alignment across.
+             --outSAMunmapped Within \
+             --outSAMstrandField intronMotif \
+             --outSAMtype BAM Unsorted \
+             --outSAMattributes NH HI AS nM NM MD XS \
+             --outFilterMultimapScoreRange 1 \
+             --outFilterMultimapNmax 20 \
+             --outFilterMismatchNmax 10 \
+             --alignIntronMax 500000 \
+             --alignMatesGapMax 1000000 \
+             --sjdbScore 2 \
+             --alignSJDBoverhangMin 1 \
+             --outFilterMatchNminOverLread 0.66 \
+             --outFilterScoreMinOverLread 0.66 \
+             --outFileNamePrefix ~{output_prefix + "."} \
+             --twopassMode Basic \
+             --limitBAMsortRAM ~{(memory_gb - 2) + "000000000"} \                                    # $MEMORY_LIMIT is a upper limit on the amount of RAM to use in the alignment.
+             --outSAMattrRGline $(cat read_groups_sorted.txt)
 ```
 
 ## Data Access Units
