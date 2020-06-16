@@ -2075,28 +2075,28 @@ For more information on variants for each of the individuals, please refer to th
 <h3 id="whole-genome-and-whole-exome">Whole Genome and Whole Exome<a class="headerlink" href="#whole-genome-and-whole-exome" title="Permanent link">&para;</a></h3>
 <p>Whole Genome Sequence (WGS) and Whole Exome Sequence (WES) BAM files were produced by the <a href="https://azure.microsoft.com/en-us/services/genomics/">Microsoft Genomics Service</a> aligned to HG38 (GRCh38 no alt analysis set). For more information about how Microsoft Genomics produces BAM files or any other questions regarding data generation, please refer to <a href="https://azure.microsoft.com/en-us/resources/accelerate-precision-medicine-with-microsoft-genomics/">the official Microsoft Genomics whitepaper</a>.</p>
 <h3 id="rna-seq">RNA-Seq<a class="headerlink" href="#rna-seq" title="Permanent link">&para;</a></h3>
-<p>RNA-Seq BAM files are mapped to HG38 + <a href="https://www.thermofisher.com/order/catalog/product/4456740">ERCC Spike In Sequences</a> (commonly used for normalization of expression analyses). For alignment, <code>STAR</code> v2.5.3a 2-pass mapping followed by <code>Picard MarkDuplicates</code>. Below is the <code>STAR</code> command used during alignment. For more information about any of the parameters used, please refer to the <a href="https://github.com/alexdobin/STAR/blob/7283af27e84839e93ecf7ed6a14c8ff675fdf79c/doc/STARmanual.pdf">STAR manual</a> for v2.5.3a.</p>
+<p>RNA-Seq BAM files are mapped to HG38. For alignment, <code>STAR</code> v2.7.1a 2-pass mapping is used. Below is the <code>STAR</code> command used during alignment. For more information about any of the parameters used, please refer to the <a href="https://github.com/alexdobin/STAR/blob/a22ad18600c827841e3fcd74118e9baac75669f4/doc/STARmanual.pdf">STAR manual</a> for v2.7.1a. The complete RNA-Seq WDL pipeline is available on <a href="https://github.com/stjudecloud/workflows/blob/master/workflows/rnaseq/rnaseq-standard.wdl">GitHub</a>. The STAR alignment parameters are also available on <a href="https://github.com/stjudecloud/workflows/blob/master/tools/star.wdl">GitHub</a>. </p>
 <div class="highlight"><pre><span></span><code>    STAR <span class="se">\</span>
-        --runThreadN <span class="nv">$NUM_THREADS</span> <span class="se">\ </span>                          <span class="c1"># $NUM_THREADS is the number of threads to parallelize the alignment across (generally we use 4).</span>
-        --genomeDir <span class="nv">$GENOME_DIR</span> <span class="se">\ </span>                            <span class="c1"># $GENOME_DIR is a STAR reference directory containing HG38 and ERCC Spike In sequences.</span>
-        --readFilesIn <span class="nv">$READ_FILES</span> <span class="se">\ </span>                          <span class="c1"># $READ_FILES are the input FastQ files to align.</span>
-        --limitBAMsortRAM <span class="nv">$MEMORY_LIMIT</span> <span class="se">\ </span>                    <span class="c1"># $MEMORY_LIMIT is a upper limit on the amount of RAM to use in the alignment.</span>
-        --outFileNamePrefix <span class="nv">$OUT_FILE_PREFIX</span> <span class="se">\</span>
-        --outSAMtype BAM SortedByCoordinate <span class="se">\</span>
-        --outSAMstrandField intronMotif <span class="se">\</span>
-        --outSAMattributes NH   HI   AS   nM   NM   MD   XS <span class="se">\</span>
-        --outSAMunmapped Within <span class="se">\</span>
-        --outSAMattrRGline <span class="nv">$RGs</span> <span class="se">\ </span>                            <span class="c1"># $RGs is the read group information for each FastQ passed in $READ_FILES.</span>
-        --outFilterMultimapNmax <span class="m">20</span> <span class="se">\</span>
-        --outFilterMultimapScoreRange <span class="m">1</span> <span class="se">\</span>
-        --outFilterScoreMinOverLread <span class="m">0</span>.66 <span class="se">\</span>
-        --outFilterMatchNminOverLread <span class="m">0</span>.66 <span class="se">\</span>
-        --outFilterMismatchNmax <span class="m">10</span> <span class="se">\</span>
-        --alignIntronMax <span class="m">500000</span> <span class="se">\</span>
-        --alignMatesGapMax <span class="m">1000000</span> <span class="se">\</span>
-        --alignSJDBoverhangMin <span class="m">1</span> <span class="se">\</span>
-        --sjdbScore <span class="m">2</span> <span class="se">\</span>
-        --twopassMode Basic
+             --readFilesIn <span class="k">$(</span>cat read_one_fastqs_sorted.txt<span class="k">)</span> <span class="k">$(</span>cat read_two_fastqs_sorted.txt<span class="k">)</span> <span class="se">\</span>
+             --genomeDir ~<span class="o">{</span>stardb_dir<span class="o">}</span> <span class="se">\</span>
+             --runThreadN <span class="nv">$n_cores</span> <span class="se">\</span>
+             --outSAMunmapped Within <span class="se">\</span>
+             --outSAMstrandField intronMotif <span class="se">\</span>
+             --outSAMtype BAM Unsorted <span class="se">\</span>
+             --outSAMattributes NH HI AS nM NM MD XS <span class="se">\</span>
+             --outFilterMultimapScoreRange <span class="m">1</span> <span class="se">\</span>
+             --outFilterMultimapNmax <span class="m">20</span> <span class="se">\</span>
+             --outFilterMismatchNmax <span class="m">10</span> <span class="se">\</span>
+             --alignIntronMax <span class="m">500000</span> <span class="se">\</span>
+             --alignMatesGapMax <span class="m">1000000</span> <span class="se">\</span>
+             --sjdbScore <span class="m">2</span> <span class="se">\</span>
+             --alignSJDBoverhangMin <span class="m">1</span> <span class="se">\</span>
+             --outFilterMatchNminOverLread <span class="m">0</span>.66 <span class="se">\</span>
+             --outFilterScoreMinOverLread <span class="m">0</span>.66 <span class="se">\</span>
+             --outFileNamePrefix ~<span class="o">{</span>output_prefix + <span class="s2">&quot;.&quot;</span><span class="o">}</span> <span class="se">\</span>
+             --twopassMode Basic <span class="se">\</span>
+             --limitBAMsortRAM ~<span class="o">{(</span>memory_gb - <span class="m">2</span><span class="o">)</span> + <span class="s2">&quot;000000000&quot;</span><span class="o">}</span> <span class="se">\</span>
+             --outSAMattrRGline <span class="k">$(</span>cat read_groups_sorted.txt<span class="k">)</span>
 </code></pre></div>
 
 <h2 id="data-access-units">Data Access Units<a class="headerlink" href="#data-access-units" title="Permanent link">&para;</a></h2>
@@ -2695,7 +2695,7 @@ CCSS is a multi-institutional, multi-disciplinary, NCI-funded collaborative reso
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/42a9060">42a9060</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/c88b584">c88b584</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
