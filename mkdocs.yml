@@ -65,6 +65,9 @@ nav:
       - Frequently Asked Questions: guides/visualization-community/faq.md
       #- SJ Charts: guides/visualization-community/sjcharts.md
       #- t-SNE Charts: guides/visualization-community/t-sne-charts.md
+  - Portals:
+    - Childhood Solid Tumor Network Portal: guides/cstn.md
+    - Pediatric Brain Tumor Portal: guides/pbtp.md
   - ProteinPaint:
     - ProteinPaint: 
         - Introduction: guides/proteinpaint/index.md
