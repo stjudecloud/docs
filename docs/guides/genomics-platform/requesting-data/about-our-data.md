@@ -70,7 +70,7 @@ CNV files contain copy number alteration (CNA) analysis results for paired tumor
 [gvcf-spec]:https://software.broadinstitute.org/gatk/documentation/article?id=11004
 [gvcf-diff-from-vcf]: https://software.broadinstitute.org/gatk/documentation/article?id=4017
 [bam-spec]: https://samtools.github.io/hts-specs/SAMv1.pdf
-[star-manual]: https://github.com/alexdobin/STAR/blob/7283af27e84839e93ecf7ed6a14c8ff675fdf79c/doc/STARmanual.pdf
+[star-manual]: https://github.com/alexdobin/STAR/blob/a22ad18600c827841e3fcd74118e9baac75669f4/doc/STARmanual.pdf
 [ercc]: https://www.thermofisher.com/order/catalog/product/4456740
 
 
@@ -82,30 +82,30 @@ Whole Genome Sequence (WGS) and Whole Exome Sequence (WES) BAM files were produc
 
 ### RNA-Seq
 
-RNA-Seq BAM files are mapped to HG38 + [ERCC Spike In Sequences][ercc] (commonly used for normalization of expression analyses). For alignment, `STAR` v2.5.3a 2-pass mapping followed by `Picard MarkDuplicates`. Below is the `STAR` command used during alignment. For more information about any of the parameters used, please refer to the [STAR manual][star-manual] for v2.5.3a.
+RNA-Seq BAM files are mapped to HG38. For alignment, `STAR` v2.7.1a 2-pass mapping is used. Below is the `STAR` command used during alignment. For more information about any of the parameters used, please refer to the [STAR manual][star-manual] for v2.7.1a. The complete RNA-Seq WDL pipeline is available on [GitHub](https://github.com/stjudecloud/workflows/blob/master/workflows/rnaseq/rnaseq-standard.wdl). The STAR alignment parameters are also available on [GitHub](https://github.com/stjudecloud/workflows/blob/master/tools/star.wdl). 
 
 ```bash
     STAR \
-        --runThreadN $NUM_THREADS \                           # $NUM_THREADS is the number of threads to parallelize the alignment across (generally we use 4).
-        --genomeDir $GENOME_DIR \                             # $GENOME_DIR is a STAR reference directory containing HG38 and ERCC Spike In sequences.
-        --readFilesIn $READ_FILES \                           # $READ_FILES are the input FastQ files to align.
-        --limitBAMsortRAM $MEMORY_LIMIT \                     # $MEMORY_LIMIT is a upper limit on the amount of RAM to use in the alignment.
-        --outFileNamePrefix $OUT_FILE_PREFIX \
-        --outSAMtype BAM SortedByCoordinate \
-        --outSAMstrandField intronMotif \
-        --outSAMattributes NH   HI   AS   nM   NM   MD   XS \
-        --outSAMunmapped Within \
-        --outSAMattrRGline $RGs \                             # $RGs is the read group information for each FastQ passed in $READ_FILES.
-        --outFilterMultimapNmax 20 \
-        --outFilterMultimapScoreRange 1 \
-        --outFilterScoreMinOverLread 0.66 \
-        --outFilterMatchNminOverLread 0.66 \
-        --outFilterMismatchNmax 10 \
-        --alignIntronMax 500000 \
-        --alignMatesGapMax 1000000 \
-        --alignSJDBoverhangMin 1 \
-        --sjdbScore 2 \
-        --twopassMode Basic
+             --readFilesIn $(cat read_one_fastqs_sorted.txt) $(cat read_two_fastqs_sorted.txt) \
+             --genomeDir ~{stardb_dir} \
+             --runThreadN $n_cores \
+             --outSAMunmapped Within \
+             --outSAMstrandField intronMotif \
+             --outSAMtype BAM Unsorted \
+             --outSAMattributes NH HI AS nM NM MD XS \
+             --outFilterMultimapScoreRange 1 \
+             --outFilterMultimapNmax 20 \
+             --outFilterMismatchNmax 10 \
+             --alignIntronMax 500000 \
+             --alignMatesGapMax 1000000 \
+             --sjdbScore 2 \
+             --alignSJDBoverhangMin 1 \
+             --outFilterMatchNminOverLread 0.66 \
+             --outFilterScoreMinOverLread 0.66 \
+             --outFileNamePrefix ~{output_prefix + "."} \
+             --twopassMode Basic \
+             --limitBAMsortRAM ~{(memory_gb - 2) + "000000000"} \
+             --outSAMattrRGline $(cat read_groups_sorted.txt)
 ```
 
 ## Data Access Units
