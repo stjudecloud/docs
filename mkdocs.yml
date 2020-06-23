@@ -55,9 +55,6 @@ nav:
   - PeCan:
       - Getting Started: guides/pecan/index.md
       - Pecan PIE: guides/pecan/pecan-pie.md
-  #- Model Systems:
-  #- CSTN: guides/model-systems/cstn.md
-  #- PBTP: guides/model-systems/pbtp.md
   - Visualization Community:
       - Getting Started: guides/visualization-community/index.md
       - ProteinPaint: guides/visualization-community/proteinpaint.md
