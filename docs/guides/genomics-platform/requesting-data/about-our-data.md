@@ -76,7 +76,7 @@ CNV files contain copy number alteration (CNA) analysis results for paired tumor
 
 ### Feature Counts files
 
-Feature counts are text files that contain counts of reads aligned to genomic features. St. Jude Cloud feature files are generated using HTSeq. The detailed command is documented in our [RNA-Seq V2 RFC][rnaseq-rfc]. The files contain a count of the number of reads overlapping each genomic feature, in this case, genes as specified in [GENCODE V31][gencode]. St. Jude Cloud uses the gene name as feature key. The files are tab-delimited text and contain the feature name and read count for that feature. 
+Feature counts are text files that contain counts of reads aligned to genomic features. St. Jude Cloud feature files are generated using HTSeq. The detailed command is documented in our [RNA-Seq V2 RFC][rnaseq-rfc]. The files contain a count of the number of reads overlapping each genomic feature, in this case, genes as specified in [GENCODE V31][gencode]. St. Jude Cloud uses the gene name as feature key. The files are tab-delimited text and contain the feature key and read count for that feature. 
 
 [rnaseq-rfc]: https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html#specification
 [gencode]: https://www.gencodegenes.org/human/release_31.html
