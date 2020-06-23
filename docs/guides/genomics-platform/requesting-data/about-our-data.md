@@ -10,7 +10,7 @@ St. Jude Cloud hosts both raw genomic data files and processed results files:
 | gVCF        | [Genomic VCF][gvcf-spec] files produced by [Microsoft Genomics Service][msgen].                                    | [Click here](#gvcf-files)        |
 | Somatic VCF | Curated list of somatic variants produced by the St. Jude somatic variant analysis pipeline.                       | [Click here](#somatic-vcf-files) |
 | CNV         | List of somatic copy number alterations produced by St. Jude CONSERTING pipeline.                                  | [Click here](#cnv-files)         |
-| Feature Counts         | Curated list of read counts map to each gene produced by [HTSeq](https://htseq.readthedocs.io/en/master/)   | [Click here](#feature-counts-files)         |
+| Feature Counts         | Curated list of read counts mapped to each gene produced by [HTSeq](https://htseq.readthedocs.io/en/master/)   | [Click here](#feature-counts-files)         |
 
 
 ### BAM files
