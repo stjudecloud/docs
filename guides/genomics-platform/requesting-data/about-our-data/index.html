@@ -595,6 +595,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#feature-counts-files" class="md-nav__link">
+    Feature Counts files
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1883,6 +1890,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#feature-counts-files" class="md-nav__link">
+    Feature Counts files
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2055,6 +2069,11 @@
 <td>List of somatic copy number alterations produced by St. Jude CONSERTING pipeline.</td>
 <td><a href="#cnv-files">Click here</a></td>
 </tr>
+<tr>
+<td>Feature Counts</td>
+<td>Curated list of read counts mapped to each gene produced by <a href="https://htseq.readthedocs.io/en/master/">HTSeq</a></td>
+<td><a href="#feature-counts-files">Click here</a></td>
+</tr>
 </tbody>
 </table>
 <h3 id="bam-files">BAM files<a class="headerlink" href="#bam-files" title="Permanent link">&para;</a></h3>
@@ -2132,6 +2151,8 @@ For more information on variants for each of the individuals, please refer to th
 </tr>
 </tbody>
 </table>
+<h3 id="feature-counts-files">Feature Counts files<a class="headerlink" href="#feature-counts-files" title="Permanent link">&para;</a></h3>
+<p>Feature counts are text files that contain counts of reads aligned to genomic features. St. Jude Cloud feature files are generated using HTSeq. The detailed command is documented in our <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html#specification">RNA-Seq V2 RFC</a>. The files contain a count of the number of reads overlapping each genomic feature, in this case, genes as specified in <a href="https://www.gencodegenes.org/human/release_31.html">GENCODE V31</a>. St. Jude Cloud uses the gene name as feature key. The files are tab-delimited text and contain the feature key and read count for that feature. </p>
 <h2 id="sequencing-information">Sequencing Information<a class="headerlink" href="#sequencing-information" title="Permanent link">&para;</a></h2>
 <h3 id="whole-genome-and-whole-exome">Whole Genome and Whole Exome<a class="headerlink" href="#whole-genome-and-whole-exome" title="Permanent link">&para;</a></h3>
 <p>Whole Genome Sequence (WGS) and Whole Exome Sequence (WES) BAM files were produced by the <a href="https://azure.microsoft.com/en-us/services/genomics/">Microsoft Genomics Service</a> aligned to HG38 (GRCh38 no alt analysis set). For more information about how Microsoft Genomics produces BAM files or any other questions regarding data generation, please refer to <a href="https://azure.microsoft.com/en-us/resources/accelerate-precision-medicine-with-microsoft-genomics/">the official Microsoft Genomics whitepaper</a>.</p>
@@ -2756,7 +2777,7 @@ CCSS is a multi-institutional, multi-disciplinary, NCI-funded collaborative reso
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/6257f49">6257f49</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/c8cd930">c8cd930</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
