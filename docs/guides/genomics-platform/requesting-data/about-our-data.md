@@ -77,7 +77,7 @@ CNV files contain copy number alteration (CNA) analysis results for paired tumor
 ### Feature Counts files
 
 !!! Note "Coming Soon"
-    This documentation is not yet written. For more information, please contact us at supoprt@stjude.cloud
+    This documentation is not yet written. For now, you can refer to the [official documentation](https://htseq.readthedocs.io/en/master/) or contact us at support@stjude.cloud. 
 
 
 ## Sequencing Information 
