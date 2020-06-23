@@ -10,7 +10,7 @@ St. Jude Cloud hosts both raw genomic data files and processed results files:
 | gVCF        | [Genomic VCF][gvcf-spec] files produced by [Microsoft Genomics Service][msgen].                                    | [Click here](#gvcf-files)        |
 | Somatic VCF | Curated list of somatic variants produced by the St. Jude somatic variant analysis pipeline.                       | [Click here](#somatic-vcf-files) |
 | CNV         | List of somatic copy number alterations produced by St. Jude CONSERTING pipeline.                                  | [Click here](#cnv-files)         |
-| Feature Counts         | Curated list of number of reads map to each feature, generally a gene, produced by [HTSeq](https://htseq.readthedocs.io/en/master/)   | [Click here](#feature-counts-files)         |
+| Feature Counts         | Curated list of read counts map to each gene produced by [HTSeq](https://htseq.readthedocs.io/en/master/)   | [Click here](#feature-counts-files)         |
 
 
 ### BAM files
@@ -76,9 +76,10 @@ CNV files contain copy number alteration (CNA) analysis results for paired tumor
 
 ### Feature Counts files
 
-!!! Note "Coming Soon"
-    This documentation is not yet written. For now, you can refer to the [official documentation](https://htseq.readthedocs.io/en/master/) or contact us at support@stjude.cloud. 
+Feature counts are text files that contain counts of reads aligned to genomic features. St. Jude Cloud feature files are generated using HTSeq. The detailed command is documented in our [RNA-Seq V2 RFC][rnaseq-rfc]. The files contain a count of the number of reads overlapping each genomic feature, in this case, genes as specified in [GENCODE V31][gencode]. St. Jude Cloud uses the gene name as feature key. The files are tab-delimited text and contain the feature name and read count for that feature. 
 
+[rnaseq-rfc]: https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html#specification
+[gencode]: https://www.gencodegenes.org/human/release_31.html
 
 ## Sequencing Information 
 
