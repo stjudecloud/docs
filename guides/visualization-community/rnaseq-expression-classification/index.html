@@ -77,7 +77,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#requirements" tabindex="0" class="md-skip">
+      <a href="#overview" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -1658,6 +1658,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#requirements" class="md-nav__link">
     Requirements
   </a>
@@ -1755,8 +1762,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#visualizing-results" class="md-nav__link">
-    Visualizing results
+  <a href="#interpreting-results" class="md-nav__link">
+    Interpreting Results
   </a>
   
 </li>
@@ -1816,6 +1823,7 @@
                 
                 
                 <h1>RNA-Seq Expression Classification</h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>St. Jude Cloud provides functionality for generating RNA-Seq Expression Classification plots. This tool allows plotting of RNA-seq data by running through the St. Jude Cloud normalization <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.html">pipeline</a>. The generated count data is then compared to a reference set of data from a cohort of St. Jude samples and a plot is produced. </p>
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1928,7 +1936,7 @@ recommend submitting the BAM to the realignment-based workflow.</p>
 <h2 id="monitoring-run-progress">Monitoring run progress<a class="headerlink" href="#monitoring-run-progress" title="Permanent link">&para;</a></h2>
 <p>Once you have started one or more RNA-Seq Expression Classification runs, you can safely close your browser and come back later to check the status of the jobs. To do this, navigate to the tool's landing page. Next, click "View Results" then select the "View Running Jobs" option. You will be redirected to the job monitoring page. Each job you kicked off gets one row in this table.</p>
 <p>You can click the "+" on any of the runs to check the status of individual steps of the RNA-Seq Expression Classification pipeline. Other information, such as time, cost of individual steps in the pipeline, and even viewing the job logs can accessed by clicking around the sub-items.</p>
-<h2 id="visualizing-results">Visualizing results<a class="headerlink" href="#visualizing-results" title="Permanent link">&para;</a></h2>
+<h2 id="interpreting-results">Interpreting Results<a class="headerlink" href="#interpreting-results" title="Permanent link">&para;</a></h2>
 <p>Once the resulting analysis job completes, an HTML plot of the results should be available. The plot is generated with the <a href="https://plot.ly/r/">Plotly R library</a>. The plot can be zoomed arbitrarily and group labels can be turned on/off for manual inspection. User input samples will be displayed in black marks with a label on the graph as well as an entry in the legend.</p>
 <p><img alt="" src="../../../images/guides/visualization-community/rnaseq-expression-classification/rnaseq-expression-plot.png" /></p>
 <h2 id="cost-estimation">Cost Estimation<a class="headerlink" href="#cost-estimation" title="Permanent link">&para;</a></h2>
@@ -2011,7 +2019,7 @@ This pipeline uses <a href="ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_hu
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/c8cd930">c8cd930</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/d9b3f53">d9b3f53</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
