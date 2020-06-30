@@ -21,7 +21,7 @@ with a counts file or a BAM file.
 | Counts file | htseq-count output feature counts file from human RNA-Seq | Sample.counts.txt |
 
 !!! caution
-    If you provide a BAM file to the non-alignement pipeline or counts data to the counts-based pipeline, 
+    If you provide a BAM file to the non-alignment pipeline or counts data to the counts-based pipeline, 
     it **must** be aligned to `GRCh38_no_alt`.
     Running a BAM aligned to any other reference genome is not supported. Maybe more
     importantly, we do not check the genome build of the BAM, so errors in computation
