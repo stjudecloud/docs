@@ -89,11 +89,11 @@ Once you've uploaded data to your cloud workspace, click "Launch Tool" on the to
 
 Next, you'll need to hook up either the counts file or the BAM file you uploaded in the upload data section. In this example, we are using the realignment version of the pipeline, so you can hook up the inputs by clicking on the in_bams slot and selecting the respective files. If you are using the BAM-based or counts-based workflow, the process is similar.
 
-![](../../images/guides/visualization-community/rnaseq-expression-classification/rnaseq-expression-main.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/rnaseq-expression-main.png)
 
 Additionally, a parameter selecting the tissue type to compare against must be selected. The available options are "blood", "brain", and "solid". Based on the selection, a reference collection of tumors of that type will be selected from St. Jude Cloud data and the input samples will be compared against this reference collection.
 
-![](../../images/guides/visualization-community/rnaseq-expression-classification/tsne-param.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/tsne-param.png)
 
 ## Starting the workflow
 
@@ -108,7 +108,7 @@ You can click the "+" on any of the runs to check the status of individual steps
 
 Once the resulting analysis job completes, an HTML plot of the results should be available. The plot is generated with the [Plotly R library](https://plot.ly/r/). The plot can be zoomed arbitrarily and group labels can be turned on/off for manual inspection. User input samples will be displayed in black marks with a label on the graph as well as an entry in the legend.
 
-![](../../images/guides/visualization-community/rnaseq-expression-classification/rnaseq-expression-plot.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/rnaseq-expression-plot.png)
 
 ## Cost Estimation
 
