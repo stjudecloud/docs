@@ -1,19 +1,21 @@
+!!! warning "For-Profit Companies"
+    St. Jude Cloud does not allow for-profit companies to access any restricted access genomics data. We are persistently working with our institution to create a path forward for companies. If you work for a for-profit company and would like to be notified if this rule changes, feel free to email us at
+    [support@stjude.cloud](mailto:support@stjude.cloud).
+    
 ## Request Process Overview
-
+   
 Creating a data request is the premier way to access raw St. Jude next 
 generation sequencing data in the cloud. You can get a **free** copy of 
 the data in a secure cloud environment powered by [Microsoft Azure](https://azure.microsoft.com/en-us/) and 
 [DNAnexus](https://www.dnanexus.com/), or you can elect to download the data to your local computing 
 environment.
 
-!!! tip "Things to Remember"
+#### Helpful Things to Remember:
 
-    1. Data in St. Jude Cloud is grouped into [Data Access Units (DAUs)](glossary.md#data-access-unit), which usually correspond to large-scale sequencing initiatives at St. Jude. 
-    2. Individuals can [apply for access](glossary.md#data-access-agreement) to DAUs on a case-by-case basis for a specific amount of time (usually 1 year).
-    3. Access to data in a given DAU is assessed by the corresponding [Data Access Committee](glossary.md#data-access-committee) who reviews a variety of factors to grant access.
-    4. There are a number of terms of use and restrictions outlined in the [Data Access Agreement](https://platform.stjude.cloud/access_form). Everyone who will be working with the data must understand and agree to these terms.
-
-
+1. Data in St. Jude Cloud is grouped into [Data Access Units (DAUs)](glossary.md#data-access-unit), which usually correspond to large-scale sequencing initiatives at St. Jude. 
+2. Individuals can [apply for access](glossary.md#data-access-agreement) to DAUs on a case-by-case basis for a specific amount of time (usually 1 year).
+3. Access to data in a given DAU is assessed by the corresponding [Data Access Committee](glossary.md#data-access-committee) who reviews a variety of factors to grant access.
+4. There are a number of terms of use and restrictions outlined in the [Data Access Agreement](https://platform.stjude.cloud/access_form). Everyone who will be working with the data must understand and agree to these terms.
 
 ## Selecting Data
 
