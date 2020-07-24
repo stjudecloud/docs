@@ -36,6 +36,11 @@ page](https://home.stjude.org/computational-biology/Pages/bioinformatics-self-se
 for instructions. If you are not a St. Jude Employee, please refer to our
 [Create an Account](./accounts-and-billing.md#billing-setup) guide.
 
+## Does St. Jude Cloud allow for-profit companies to access genomics data? 
+
+We do not allow for-profit companies to access any of our restricted access genomics data. We are persistently working with our institution to create a path forward for companies. If you work for a for-profit company and would like to be notified if this rule changes, feel free to email us at
+[support@stjude.cloud](mailto:support@stjude.cloud).
+
 ## Why do I need to sign the Data Access Agreement (DAA)?
 
 The [data access
@@ -51,7 +56,7 @@ We do not alter the terms of the data access agreement **for any reason** except
 when the terms are found to be directly in conflict with state or national law.
 In this case, please send a reference to law and a short description to
 [support@stjude.cloud](mailto:support@stjude.cloud). Otherwise, please
-understand that we are a small team that simply cannot operational overhead of
+understand that simply cannot manage the operational overhead of
 differing agreements with different parties.
 
 ## Can I get a Microsoft Word version of the DAA?
