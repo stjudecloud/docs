@@ -1,5 +1,5 @@
 !!! warning "For-Profit Companies"
-    St. Jude Cloud does not allow for-profit companies to access any restricted access genomics data. We are persistently working with our institution to create a path forward for companies. If you work for a for-profit company and would like to be notified if this rule changes, feel free to email us at
+    St. Jude Cloud does not allow for-profit companies to access any restricted access genomics data. We are actively working with our institution to assess the feasibility of providing data to for-profit entities. If you work for a for-profit company and would like to be notified if this restriction changes, feel free to email us at
     [support@stjude.cloud](mailto:support@stjude.cloud).
     
 ## Request Process Overview
