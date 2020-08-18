@@ -705,8 +705,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#short-disease-code-mapping" class="md-nav__link">
-    Short Disease Code Mapping
+  <a href="#diagnosis-codes" class="md-nav__link">
+    Diagnosis Codes
   </a>
   
 </li>
@@ -2024,8 +2024,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#short-disease-code-mapping" class="md-nav__link">
-    Short Disease Code Mapping
+  <a href="#diagnosis-codes" class="md-nav__link">
+    Diagnosis Codes
   </a>
   
 </li>
@@ -2275,7 +2275,7 @@ CCSS is a multi-institutional, multi-disciplinary, NCI-funded collaborative reso
 </tr>
 <tr>
 <td>sj_diseases</td>
-<td>Short disease identifier assigned at the time of genomic sequencing. Note that this diagnosis may be refined after undergoing genomic testing. When including diagnosis in your analysis, we recommend you use <code>attr_diagnosis</code>, which is the most up to date value for diagnosis.</td>
+<td>If your data request was process after August 18, 2020, the field should be interpreted as the harmonized St. Jude Cloud diagnosis based on the best available information (data provided by the lab or PI and followup by scientists on the St. Jude Cloud team). If your data request was processed before August 18, 2020, this field should be interpreted as the disease identifier assigned at the time of genomic sequencing (keyly, the diagnosis known at the time of genomic testing may not be the best available information). <strong>If your data request was processed after August 18, 2020 and you'd like to use the most up to date, harmonized diagnosis</strong>, we recommend using <code>sj_diseases</code> when including diagnosis in your analysis. If your data request was made before this time <em>or</em> if you wish to use the values exactly as provided by the lab or PI, we recommend using the lab-provided value in <code>attr_diagnosis</code>.</td>
 </tr>
 <tr>
 <td>sj_datasets</td>
@@ -2315,7 +2315,7 @@ CCSS is a multi-institutional, multi-disciplinary, NCI-funded collaborative reso
 </tr>
 <tr>
 <td>attr_diagnosis</td>
-<td>Primary diagnosis reported by the clinic.</td>
+<td>Unharmonized primary diagnosis as reported by the lab or PI upon submission of data to St. Jude Cloud.</td>
 </tr>
 <tr>
 <td>attr_ethnicity</td>
@@ -2335,403 +2335,1184 @@ CCSS is a multi-institutional, multi-disciplinary, NCI-funded collaborative reso
 </tr>
 </tbody>
 </table>
-<h3 id="short-disease-code-mapping">Short Disease Code Mapping<a class="headerlink" href="#short-disease-code-mapping" title="Permanent link">&para;</a></h3>
-<p>Embedded in both the filename and the <code>SAMPLE_INFO.txt</code> file that comes with your data request will be a list of short diagnosis codes (<code>sj_diseases</code>). These short codes were assigned at the time that the sample was sent for sequencing, and they are not necessarily the final diagnosis (<code>attr_diagnosis</code>). For instance, the diagnosis is often refined as the sample undergoes genomic testing. Below, we include a table of short disease code to long disease name mappings so you can interpret what these abbreviations mean.</p>
+<h3 id="diagnosis-codes">Diagnosis Codes<a class="headerlink" href="#diagnosis-codes" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>During the release of the St. Jude Cloud paper, we undertook a massive effort to curate and harmonize diagnosis values within St. Jude Cloud. We provide two values for diagnosis, and you should select carefully which value you use based on your use case:</p>
+<ol>
+<li><code>sj_diseases</code>, which, since August 18, 2020, represents the harmonized diagnosis value curated by scientists on the St. Jude Cloud team (before that time it represented the diagnosis known at time of sequencing).</li>
+<li><code>attr_diagnosis</code>, which contains the unharmonized diagnosis value directly as it was submitted to us from the lab or PI.</li>
+</ol>
+<p><strong>If your data request was processed after August 18, 2020 and you'd like to use the most up to date, harmonized diagnosis</strong>, we recommend using <code>sj_diseases</code> field. If your data request was made before this time <em>or</em> if you wish to use the values exactly as provided by the lab or PI, we recommend using the value in <code>attr_diagnosis</code>.</p>
+</div>
+<p>The <code>SAMPLE_INFO.txt</code> file that comes with your data request will contain the list of associated harmonized diagnosis codes (<code>sj_diseases</code>) for each sample. These codes represent the harmonized diagnosis values curated by the St. Jude Cloud team and reflect the most up to date information about the sample. Below, we include the full set of diagnosis values in St. Jude Cloud Genomics Platform, the category of the tumor, and the closest available OncoTree term. We regularly work with the OncoTree committee to update new subtypes, so any discrepancies between our diagnosis code and the OncoTree term can be interpreted as more granular classifications that OncoTree does not yet account for.</p>
 <table>
 <thead>
 <tr>
-<th>Short Disease Code</th>
-<th>Long Diagnosis Description</th>
+<th>Tumor Category</th>
+<th>Diagnosis</th>
+<th>Diagnosis Code</th>
+<th>Corresponding Oncotree Code</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>ACT</td>
-<td>Adrenocortical Carcinoma</td>
-</tr>
-<tr>
-<td>AEL</td>
-<td>Acute erythroid leukemia (AML M6)</td>
-</tr>
-<tr>
-<td>ALCL</td>
-<td>Anaplastic Large Cell Lymphoma</td>
-</tr>
-<tr>
-<td>ALL</td>
-<td>Acute Lymphoblastic Leukemia</td>
-</tr>
-<tr>
-<td>ALS</td>
-<td>Amyotrophic Lateral Sclerosis ("Lou Gehrig's Disease"")"</td>
-</tr>
-<tr>
-<td>ALZ</td>
-<td>Alzheimer's Disease</td>
-</tr>
-<tr>
-<td>AML</td>
-<td>Acute Myeloid Leukemia</td>
-</tr>
-<tr>
-<td>AMLM</td>
-<td>Acute Megakaryoblastic Leukemia</td>
-</tr>
-<tr>
-<td>ANEM</td>
-<td>Anemia</td>
-</tr>
-<tr>
-<td>ASPS</td>
-<td>Alveolar Soft Part Sarcoma</td>
-</tr>
-<tr>
-<td>AUL</td>
-<td>Acute Undifferentiated Leukemia</td>
-</tr>
-<tr>
-<td>BALL</td>
-<td>B-cell Acute Lymphoblastic Leukemia</td>
-</tr>
-<tr>
-<td>BCC</td>
-<td>Basal Cell Carcinoma</td>
-</tr>
-<tr>
-<td>BLACA</td>
-<td>Bladder Cancer</td>
-</tr>
-<tr>
-<td>BT</td>
 <td>Brain Tumor</td>
+<td>Astrocytoma, NOS</td>
+<td>ASTR</td>
+<td>ASTR</td>
 </tr>
 <tr>
-<td>CA</td>
-<td>Carcinoma</td>
+<td>Brain Tumor</td>
+<td>Atypical Meningioma</td>
+<td>ATM</td>
+<td>ATM</td>
 </tr>
 <tr>
-<td>CBF</td>
-<td>Acute Myeloid Leukemia - Core Binding Factor subtype</td>
+<td>Brain Tumor</td>
+<td>Atypical Teratoid/Rhabdoid Tumor</td>
+<td>ATRT</td>
+<td>ATRT</td>
 </tr>
 <tr>
-<td>CLL</td>
-<td>Chronic Lymphocytic Leukemia</td>
+<td>Brain Tumor</td>
+<td>Central Neurocytoma</td>
+<td>CNC</td>
+<td>CNC</td>
 </tr>
 <tr>
-<td>CML</td>
-<td>Chronic Myelogenous Leukemia</td>
-</tr>
-<tr>
-<td>CMML</td>
-<td>Chronic Myelomonocytic Leukemia</td>
-</tr>
-<tr>
-<td>CMV</td>
-<td>Cytomegalovirus</td>
-</tr>
-<tr>
-<td>CNS</td>
-<td>Central Nervous System</td>
-</tr>
-<tr>
-<td>CPC</td>
+<td>Brain Tumor</td>
 <td>Choroid Plexus Carcinoma</td>
+<td>CPC</td>
+<td>CPC</td>
 </tr>
 <tr>
-<td>CRC</td>
-<td>Colorectal Cancer</td>
+<td>Brain Tumor</td>
+<td>Craniopharyngioma, Adamantinomatous Type</td>
+<td>ACPG</td>
+<td>ACPG</td>
 </tr>
 <tr>
-<td>CS</td>
-<td>Chondrosarcoma</td>
+<td>Brain Tumor</td>
+<td>Craniopharyngioma, NOS</td>
+<td>CPG</td>
+<td>SELT</td>
 </tr>
 <tr>
-<td>CTP</td>
-<td>Congenital Thrombocytopenia</td>
+<td>Brain Tumor</td>
+<td>Desmoplastic/Nodular Medulloblastoma</td>
+<td>DMBL</td>
+<td>DMBL</td>
 </tr>
 <tr>
-<td>DIPG</td>
-<td>Diffuse Intrinsic Pontine Glioma</td>
+<td>Brain Tumor</td>
+<td>Dysembryoplastic Neuroepithelial Tumor</td>
+<td>DNT</td>
+<td>DNT</td>
 </tr>
 <tr>
-<td>DLBCL</td>
-<td>Diffuse Large B-cell Lymphoma</td>
+<td>Brain Tumor</td>
+<td>Embryonal Tumor with Multilayered Rosettes, Brain</td>
+<td>ETMR</td>
+<td>EMBT</td>
 </tr>
 <tr>
-<td>DOWN</td>
-<td>Down Syndrome</td>
+<td>Brain Tumor</td>
+<td>Embryonal Tumor, Brain</td>
+<td>EBMT</td>
+<td>EMBT</td>
 </tr>
 <tr>
-<td>DSRCT</td>
-<td>Desmoplastic Small Round Cell Tumor</td>
+<td>Brain Tumor</td>
+<td>Ependymomal Tumor</td>
+<td>EPMT</td>
+<td>EPMT</td>
 </tr>
 <tr>
-<td>E2A</td>
-<td>B-Lineage Acute Lymphoblastic Leukemia - E2A-PBX1 subtype</td>
+<td>Brain Tumor</td>
+<td>Ependymomal Tumor, Posterior Fossa</td>
+<td>EPMTPF</td>
+<td>EPMT</td>
 </tr>
 <tr>
-<td>ECD</td>
-<td>Erdheim-Chester Disease</td>
+<td>Brain Tumor</td>
+<td>Ependymomal Tumor, Spinal Tumor</td>
+<td>EPMTST</td>
+<td>EPMT</td>
 </tr>
 <tr>
-<td>EPD</td>
-<td>Ependymoma</td>
+<td>Brain Tumor</td>
+<td>Ependymomal Tumor, Supratentorial</td>
+<td>EPMTSU</td>
+<td>EPMT</td>
 </tr>
 <tr>
-<td>ERG</td>
-<td>Acute Lymphoblastic Leukemia - ERG alteration subtype</td>
+<td>Brain Tumor</td>
+<td>Fibrillary Astrocytoma</td>
+<td>FASTR</td>
+<td>DASTR</td>
 </tr>
 <tr>
-<td>ETV</td>
-<td>Acute Lymphoblastic Leukemia - ETV6-RUNX1 fusion subtype</td>
+<td>Brain Tumor</td>
+<td>Gangliocytoma</td>
+<td>GNG</td>
+<td>GNG</td>
 </tr>
 <tr>
-<td>EWS</td>
-<td>Ewing's Sarcoma</td>
+<td>Brain Tumor</td>
+<td>Glioblastoma</td>
+<td>GB</td>
+<td>GB</td>
 </tr>
 <tr>
-<td>GCT</td>
-<td>Germ Cell Tumor</td>
+<td>Brain Tumor</td>
+<td>Glioma, NOS</td>
+<td>GNOS</td>
+<td>GNOS</td>
 </tr>
 <tr>
-<td>GENBN</td>
-<td>General Bone</td>
+<td>Brain Tumor</td>
+<td>High-Grade Glioma, NOS</td>
+<td>HGGNOS</td>
+<td>HGGNOS</td>
 </tr>
 <tr>
-<td>GENKY</td>
-<td>General Kidney</td>
+<td>Brain Tumor</td>
+<td>High-Grade Neuroepithelial Tumor</td>
+<td>HGNET</td>
+<td>HGNET</td>
 </tr>
 <tr>
-<td>GENLK</td>
-<td>General Leukemia</td>
+<td>Brain Tumor</td>
+<td>Low-Grade Glioma, NOS</td>
+<td>LGGNOS</td>
+<td>LGGNOS</td>
 </tr>
 <tr>
-<td>GICT</td>
-<td>Giant Cell Tumor</td>
-</tr>
-<tr>
-<td>GIST</td>
-<td>Gastrointestinal Stromal Tumor</td>
-</tr>
-<tr>
-<td>HB</td>
-<td>Hepatoblastoma</td>
-</tr>
-<tr>
-<td>HGG</td>
-<td>High Grade Glioma</td>
-</tr>
-<tr>
-<td>HGS</td>
-<td>High Grade Sarcoma</td>
-</tr>
-<tr>
-<td>HIST</td>
-<td>Histiocytosis</td>
-</tr>
-<tr>
-<td>HL</td>
-<td>Hodgkin's Lymphoma</td>
-</tr>
-<tr>
-<td>HM</td>
-<td>Hematopoietic Malignancies</td>
-</tr>
-<tr>
-<td>HS</td>
-<td>Hidradenitis Suppurativa</td>
-</tr>
-<tr>
-<td>HYPER</td>
-<td>Acute Lymphoblastic Leukemia - Hyperdiploid subtype</td>
-</tr>
-<tr>
-<td>HYPO</td>
-<td>Acute Lymphoblastic Leukemia - Hypodiploid subtype</td>
-</tr>
-<tr>
-<td>IFS</td>
-<td>Infantile Fibromyosarcoma</td>
-</tr>
-<tr>
-<td>INF</td>
-<td>Acute Lymphoblastic Leukemia (Infant)</td>
-</tr>
-<tr>
-<td>ITP</td>
-<td>Idiopathic Thrombocytopenia</td>
-</tr>
-<tr>
-<td>JMML</td>
-<td>Juvenile Myelomonocytic Leukemia</td>
-</tr>
-<tr>
-<td>LCH</td>
-<td>Langerhans Cell Histiocytocis</td>
-</tr>
-<tr>
-<td>LGG</td>
-<td>Low Grade Glioma</td>
-</tr>
-<tr>
-<td>LM</td>
-<td>Liver Malignancies</td>
-</tr>
-<tr>
-<td>MB</td>
+<td>Brain Tumor</td>
 <td>Medulloblastoma</td>
+<td>MBL</td>
+<td>MBL</td>
 </tr>
 <tr>
+<td>Brain Tumor</td>
+<td>Medulloblastoma, Group 3</td>
+<td>MBLG3</td>
+<td>MBL</td>
+</tr>
+<tr>
+<td>Brain Tumor</td>
+<td>Medulloblastoma, Group 4</td>
+<td>MBLG4</td>
+<td>MBL</td>
+</tr>
+<tr>
+<td>Brain Tumor</td>
+<td>Medulloblastoma, SHH subtype</td>
+<td>MBLSHH</td>
+<td>MBL</td>
+</tr>
+<tr>
+<td>Brain Tumor</td>
+<td>Medulloblastoma, WNT subtype</td>
+<td>MBLWNT</td>
+<td>MBL</td>
+</tr>
+<tr>
+<td>Brain Tumor</td>
+<td>Medulloepithelioma</td>
+<td>MDEP</td>
+<td>MDEP</td>
+</tr>
+<tr>
+<td>Brain Tumor</td>
+<td>Meningioma</td>
+<td>MNG</td>
+<td>MNG</td>
+</tr>
+<tr>
+<td>Brain Tumor</td>
+<td>Miscellaneous Brain Tumor</td>
+<td>MBT</td>
+<td>MBT</td>
+</tr>
+<tr>
+<td>Brain Tumor</td>
+<td>Mixed Myxopapillary Anaplastic Ependymoma, Spinal Tumor</td>
+<td>MEPMST</td>
+<td>EPMT</td>
+</tr>
+<tr>
+<td>Brain Tumor</td>
+<td>Myxopapillary Ependymoma</td>
+<td>MPE</td>
+<td>MPE</td>
+</tr>
+<tr>
+<td>Brain Tumor</td>
+<td>Myxopapillary Ependymoma, Fourth Ventrice</td>
+<td>MPEFV</td>
+<td>MPE</td>
+</tr>
+<tr>
+<td>Brain Tumor</td>
+<td>Myxopapillary Ependymoma, Posterior Fossa</td>
+<td>MPEPF</td>
+<td>MPE</td>
+</tr>
+<tr>
+<td>Brain Tumor</td>
+<td>Neuroepithelioma</td>
+<td>NEP</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Brain Tumor</td>
+<td>Oligodendroglioma</td>
+<td>ODG</td>
+<td>ODG</td>
+</tr>
+<tr>
+<td>Brain Tumor</td>
+<td>Papillary Ependymoma, NOS</td>
+<td>PEPNOS</td>
+<td>EPMT</td>
+</tr>
+<tr>
+<td>Brain Tumor</td>
+<td>Peripheral Primitive Neuroectodermal Tumor</td>
+<td>PPNET</td>
+<td>PNET</td>
+</tr>
+<tr>
+<td>Brain Tumor</td>
+<td>Pilocytic Astrocytoma</td>
+<td>PAST</td>
+<td>PAST</td>
+</tr>
+<tr>
+<td>Brain Tumor</td>
+<td>Pineoblastoma</td>
+<td>PBL</td>
+<td>PBL</td>
+</tr>
+<tr>
+<td>Brain Tumor</td>
+<td>Pleomorphic Xanthoastrocytoma</td>
+<td>PXA</td>
+<td>PXA</td>
+</tr>
+<tr>
+<td>Brain Tumor</td>
+<td>Primitive Neuroectodermal Tumor</td>
+<td>PNET</td>
+<td>PNET</td>
+</tr>
+<tr>
+<td>Brain Tumor</td>
+<td>Subependymal Giant Cell Astrocytoma</td>
+<td>SEGA</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Germ Cell Tumor</td>
+<td>Choriocarcinoma</td>
+<td>CCA</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Germ Cell Tumor</td>
+<td>Dysgerminoma</td>
+<td>DYS</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Germ Cell Tumor</td>
+<td>Dysgerminoma, Ovarian</td>
+<td>ODYS</td>
+<td>ODYS</td>
+</tr>
+<tr>
+<td>Germ Cell Tumor</td>
+<td>Dysgerminoma, Pelvis</td>
+<td>PDYS</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Germ Cell Tumor</td>
+<td>Embryonal Carcinoma, NOS</td>
+<td>ECNOS</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Germ Cell Tumor</td>
+<td>Germ Cell Tumor, Brain</td>
+<td>BGCT</td>
+<td>BGCT</td>
+</tr>
+<tr>
+<td>Germ Cell Tumor</td>
+<td>Germ Cell Tumor, NOS</td>
+<td>GCT</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Germ Cell Tumor</td>
+<td>Germinoma</td>
+<td>GMN</td>
+<td>GMN</td>
+</tr>
+<tr>
+<td>Germ Cell Tumor</td>
+<td>Mixed Germ Cell Tumor, Brain</td>
+<td>BMGCT</td>
+<td>BMGCT</td>
+</tr>
+<tr>
+<td>Germ Cell Tumor</td>
+<td>Mixed Germ Cell Tumor, NOS</td>
+<td>MGCTNOS</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Germ Cell Tumor</td>
+<td>Mixed Germ Cell Tumor, Ovary and Lymph Node</td>
+<td>OMGCT</td>
+<td>OMGCT</td>
+</tr>
+<tr>
+<td>Germ Cell Tumor</td>
+<td>Mixed Germ Cell Tumor, Testis</td>
+<td>MGCT</td>
+<td>MGCT</td>
+</tr>
+<tr>
+<td>Germ Cell Tumor</td>
+<td>Teratocarcinoma</td>
+<td>TTC</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Germ Cell Tumor</td>
+<td>Teratoma, NOS</td>
+<td>TTNOS</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Germ Cell Tumor</td>
+<td>Yolk Sac Tumor, Brain</td>
+<td>BYST</td>
+<td>BYST</td>
+</tr>
+<tr>
+<td>Germ Cell Tumor</td>
+<td>Yolk Sac Tumor, NOS</td>
+<td>YSTNOS</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>Acute Leukemias of Ambiguous Lineage</td>
+<td>ALAL</td>
+<td>ALAL</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>Acute Lymphoblastic Leukemia, NOS</td>
+<td>ALL</td>
+<td>LNM</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>Acute Megakaryoblastic Leukemia</td>
+<td>AMKL</td>
+<td>AMKL</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>Acute Myeloid Leukemia</td>
+<td>AML</td>
+<td>AML</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>Acute Myeloid Leukemia, Core Binding Factor</td>
+<td>CBF</td>
+<td>AMLRGA</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>Acute Myeloid Leukemia, KMT2A rearrangement</td>
+<td>AML</td>
+<td>AMLRGA</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>Acute Promyelocytic Leukemia</td>
+<td>APLPMLRARA</td>
+<td>APLPMLRARA</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>Acute Undifferentiated Leukemia, KMT2A rearrangement</td>
+<td>AULKMT2A</td>
+<td>AUL</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>Anaplastic Large Cell Lymphoma</td>
+<td>ALCL</td>
+<td>ALCL</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>B-cell Acute Lymphoblastic Leukemia, BCR-ABL1</td>
+<td>BALLBCRABL1</td>
+<td>BLLBCRABL1</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>B-cell Acute Lymphoblastic Leukemia, BCR-ABL1 like</td>
+<td>BALLBCRABL1L</td>
+<td>BLLBCRABL1L</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>B-cell Acute Lymphoblastic Leukemia, DUX4-IGH</td>
+<td>BALLDUX4IGH</td>
+<td>BLLRGA</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>B-cell Acute Lymphoblastic Leukemia, DUX4-IGH like</td>
+<td>BALLDUX4IGHL</td>
+<td>BLLRGA</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>B-cell Acute Lymphoblastic Leukemia, ETV6-RUNX1</td>
+<td>BALLETV6RUNX1</td>
+<td>BLLETV6RUNX1</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>B-cell Acute Lymphoblastic Leukemia, ETV6-RUNX1 like</td>
+<td>BALLETV6RUNX1L</td>
+<td>BLLRGA</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>B-cell Acute Lymphoblastic Leukemia, HLF rearrangement</td>
+<td>BALLHLF</td>
+<td>BLLRGA</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>B-cell Acute Lymphoblastic Leukemia, Hyperdiploidy</td>
+<td>BALLHYPER</td>
+<td>BLLHYPER</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>B-cell Acute Lymphoblastic Leukemia, Hypodiploidy</td>
+<td>BALLHYPO</td>
+<td>BLLHYPO</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>B-cell Acute Lymphoblastic Leukemia, iAMP21</td>
+<td>BALLIAMP21</td>
+<td>BLLIAMP21</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>B-cell Acute Lymphoblastic Leukemia, IGH-CEBPD</td>
+<td>BALLIGHCEBPD</td>
+<td>BLLRGA</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>B-cell Acute Lymphoblastic Leukemia, KMT2A rearrangement</td>
+<td>BALLKMT2A</td>
+<td>BLLKMT2A</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>B-cell Acute Lymphoblastic Leukemia, MEF2D rearrangement</td>
+<td>BALLMEF2D</td>
+<td>BLLRGA</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>B-cell Acute Lymphoblastic Leukemia, MYC rearrangement</td>
+<td>BALLMYC</td>
+<td>BLLRGA</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>B-cell Acute Lymphoblastic Leukemia, NOS</td>
+<td>BALLNOS</td>
+<td>BLLNOS</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>B-cell Acute Lymphoblastic Leukemia, NUTM1 rearrangement</td>
+<td>BALLNUTM1</td>
+<td>BLLRGA</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>B-cell Acute Lymphoblastic Leukemia, PAX5 Alteration</td>
+<td>BALLPAX5</td>
+<td>BLLRGA</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>B-cell Acute Lymphoblastic Leukemia, PAX5 P80R</td>
+<td>BALLPAX5P80R</td>
+<td>BLLRGA</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>B-cell Acute Lymphoblastic Leukemia, TCF3-PBX1</td>
+<td>BALLTCF3PBX1</td>
+<td>BLLTCF3PBX1</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>B-cell Acute Lymphoblastic Leukemia, ZNF384 rearrangement</td>
+<td>BALLZNF384</td>
+<td>BLLRGA</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>B-cell Acute Lymphoblastic Leukemia, ZNF384 rearrangement like</td>
+<td>BALLZNF384L</td>
+<td>BLLRGA</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>Blood Cancer of Unknown Primary</td>
+<td>BCUP</td>
+<td>CUP</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>Burkitt Lymphoma</td>
+<td>BL</td>
+<td>BL</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>Chronic Myeloid Leukemia</td>
+<td>CML</td>
+<td>CML</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>Diffuse Large B-cell Lymphoma, NOS</td>
+<td>DLBCLNOS</td>
+<td>DLBCLNOS</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>General Leukemia</td>
+<td>SJGENLK</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>Hodgkin Lymphoma</td>
+<td>HL</td>
+<td>HL</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>Langerhans Cell Histiocytosis</td>
+<td>LCH</td>
+<td>LCH</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>Lymphocyte-Depleted Classical Hodgkin Lymphoma</td>
+<td>LDCHL</td>
+<td>LDCHL</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>Lymphocyte-Rich Classical Hodgkin Lymphoma</td>
+<td>LRCHL</td>
+<td>LRCHL</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>Mixed Cellularity Classical Hodgkin Lymphoma</td>
+<td>MCCHL</td>
+<td>MCCHL</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>Mycosis Fungoides</td>
+<td>MYCF</td>
+<td>MYCF</td>
+</tr>
+<tr>
+<td>Hematologic Malignancy</td>
+<td>Myelodysplastic Syndromes</td>
 <td>MDS</td>
-<td>Myelodysplastic Syndrome</td>
+<td>MDS</td>
 </tr>
 <tr>
-<td>MEL</td>
-<td>Melanoma</td>
+<td>Hematologic Malignancy</td>
+<td>Myeloid Sarcoma</td>
+<td>MS</td>
+<td>MS</td>
 </tr>
 <tr>
-<td>MLL</td>
-<td>Mixed Lineage Leukemia</td>
+<td>Hematologic Malignancy</td>
+<td>Nodular Lymphocyte-Predominant Hodgkin Lymphoma</td>
+<td>NLPHL</td>
+<td>NLPHL</td>
 </tr>
 <tr>
-<td>MM</td>
-<td>Multiple Myeloma</td>
+<td>Hematologic Malignancy</td>
+<td>Nodular Sclerosis Classical Hodgkin Lymphoma</td>
+<td>NSCHL</td>
+<td>NSCHL</td>
 </tr>
 <tr>
-<td>MPAL</td>
-<td>Acute Lymphoblastic Leukemia - Multi-phenotypic</td>
-</tr>
-<tr>
-<td>MPNST</td>
-<td>Malignant Peripheral Nerve Sheath Tumor</td>
-</tr>
-<tr>
-<td>MRT</td>
-<td>Malignant Rhabdoid Tumour</td>
-</tr>
-<tr>
-<td>MYF</td>
-<td>Myelofibrosis</td>
-</tr>
-<tr>
-<td>NBL</td>
-<td>Neuroblastoma</td>
-</tr>
-<tr>
-<td>NEUTP</td>
-<td>Neutropenia</td>
-</tr>
-<tr>
+<td>Hematologic Malignancy</td>
+<td>Non-Hodgkin Lymphoma</td>
 <td>NHL</td>
-<td>Non-Hodgkin's Lymphoma</td>
+<td>NHL</td>
 </tr>
 <tr>
-<td>NM</td>
-<td>Non-malignancy</td>
-</tr>
-<tr>
-<td>NORM</td>
-<td>Control Sample</td>
-</tr>
-<tr>
-<td>NPC</td>
-<td>Nasopharyngeal Carcinoma</td>
-</tr>
-<tr>
-<td>NPCA</td>
-<td>Nasopharyngeal Carcinoma</td>
-</tr>
-<tr>
-<td>OS</td>
-<td>Osteosarcoma</td>
-</tr>
-<tr>
-<td>PF</td>
-<td>Posterior Fossa</td>
-</tr>
-<tr>
-<td>PGL</td>
-<td>Paraganglioma</td>
-</tr>
-<tr>
-<td>PHALL</td>
-<td>Acute Lymphoblastic Leukemia - BCR-ABL1 fusion subtype</td>
-</tr>
-<tr>
-<td>PHCML</td>
-<td>Ph+ Chronic Myeloid Leukemia</td>
-</tr>
-<tr>
-<td>PML</td>
-<td>Promyelocitic Leukemia</td>
-</tr>
-<tr>
-<td>PRAD</td>
-<td>Prostate Adenocarcoma</td>
-</tr>
-<tr>
-<td>PSO</td>
-<td>Psoriasis</td>
-</tr>
-<tr>
-<td>RB</td>
-<td>Retinoblastoma</td>
-</tr>
-<tr>
-<td>RCC</td>
-<td>Renal cell carcinoma</td>
-</tr>
-<tr>
-<td>RECA</td>
-<td>Renal Cancer</td>
-</tr>
-<tr>
-<td>RHB</td>
-<td>Rhabdomyosarcoma</td>
-</tr>
-<tr>
-<td>SBO</td>
-<td>Spina Bifida Occulta</td>
-</tr>
-<tr>
-<td>SCD</td>
-<td>Sickle Cell Disease</td>
-</tr>
-<tr>
-<td>SCZ</td>
-<td>Schizophrenia</td>
-</tr>
-<tr>
-<td>SS</td>
-<td>Synovial Sarcoma</td>
-</tr>
-<tr>
-<td>ST</td>
-<td>Solid Tumor</td>
-</tr>
-<tr>
-<td>STS</td>
-<td>Soft Tissue Sarcoma</td>
-</tr>
-<tr>
-<td>TALL</td>
+<td>Hematologic Malignancy</td>
 <td>T-cell Acute Lymphoblastic Leukemia</td>
+<td>TALL</td>
+<td>TLL</td>
 </tr>
 <tr>
-<td>TCP</td>
-<td>Thrombocytopenia</td>
+<td>Hematologic Malignancy</td>
+<td>T-cell Acute Lymphoblastic Leukemia, KMT2A rearrangement</td>
+<td>TALLKMT2A</td>
+<td>TLL</td>
 </tr>
 <tr>
-<td>TESCA</td>
-<td>Testicular Cancer</td>
+<td>Hematologic Malignancy</td>
+<td>T-cell Lymphoblastic Lymphoma</td>
+<td>TLL</td>
+<td>TLL</td>
 </tr>
 <tr>
-<td>THCA</td>
-<td>Thyroid Carcinoma</td>
+<td>Non-Malignancy</td>
+<td>Non-Malignancy</td>
+<td>SJNM</td>
+<td><NA></td>
 </tr>
 <tr>
-<td>WLM</td>
-<td>Wilms' tumor</td>
+<td>Normal</td>
+<td>SJLIFE Normal Control</td>
+<td>SJNORM</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Sickle Cell Disease</td>
+<td>Sickle Cell Disease</td>
+<td>SJSCD</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Acinar Cell Carcinoma</td>
+<td>ACN</td>
+<td>ACN</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Adenocarcinoma, NOS</td>
+<td>ADNOS</td>
+<td>ADNOS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Adrenocortical Carcinoma</td>
+<td>ACC</td>
+<td>ACC</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Alveolar Rhabdomyosarcoma</td>
+<td>ARMS</td>
+<td>ARMS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Alveolar Soft Part Sarcoma</td>
+<td>ASPS</td>
+<td>ASPS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Angiomatoid Fibrous Histiocytoma</td>
+<td>AFH</td>
+<td>AFH</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Basal Cell Carcinoma</td>
+<td>BCC</td>
+<td>BCC</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Botryoid Type Embryonal Rhabdomyosarcoma</td>
+<td>BERMS</td>
+<td>ERMS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Carcinoma, NOS</td>
+<td>CNOS</td>
+<td>CUP</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Chondroblastic Osteosarcoma</td>
+<td>CHOS</td>
+<td>CHOS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Chondrosarcoma</td>
+<td>CHS</td>
+<td>CHS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Chordoma</td>
+<td>CHDM</td>
+<td>CHDM</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Clear Cell Sarcoma of Kidney</td>
+<td>CCSK</td>
+<td>CCSK</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Congenital Mesoblastic Nephroma</td>
+<td>CMN</td>
+<td>RCC</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Dermatofibrosarcoma Protuberans</td>
+<td>DFSP</td>
+<td>DFSP</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Desmoid/Aggressive Fibromatosis</td>
+<td>DES</td>
+<td>DES</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Desmoplastic Small Round Cell Tumor</td>
+<td>DSRCT</td>
+<td>DSRCT</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Embryonal Rhabdomyosarcoma</td>
+<td>ERMS</td>
+<td>ERMS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Endometrioid Adenocarcinoma, NOS</td>
+<td>EACNOS</td>
+<td>ADNOS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Epithelioid Hemangioendothelioma</td>
+<td>EHAE</td>
+<td>EHAE</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Epithelioid Sarcoma</td>
+<td>EPIS</td>
+<td>EPIS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Ewing Sarcoma</td>
+<td>EWS</td>
+<td>ES</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Fibroblastic Osteosarcoma</td>
+<td>FIOS</td>
+<td>FIOS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Fibromyxoid Sarcoma</td>
+<td>FMS</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Fibrosarcoma, NOS</td>
+<td>FIBS</td>
+<td>FIBS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Follicular Thyroid Cancer</td>
+<td>THFO</td>
+<td>THFO</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Ganglioneuroblastoma</td>
+<td>GNBL</td>
+<td>GNBL</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Ganglioneuroma</td>
+<td>GN</td>
+<td>GN</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Gastrointestinal Stromal Tumor</td>
+<td>GIST</td>
+<td>GIST</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>General Bone Tumor</td>
+<td>SJGENBN</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Giant Cell Tumor, NOS</td>
+<td>GICT</td>
+<td>GCTB</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Granulosa Cell Tumor</td>
+<td>GRCT</td>
+<td>GRCT</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Hepatoblastoma</td>
+<td>HB</td>
+<td>LIHB</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Hepatocellular Carcinoma</td>
+<td>HCC</td>
+<td>HCC</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Infantile Fibrosarcoma</td>
+<td>IFS</td>
+<td>IFS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Leiomyosarcoma, NOS</td>
+<td>LMS</td>
+<td>LMS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Liposarcoma</td>
+<td>LIPO</td>
+<td>LIPO</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Liver Malignancy, NOS</td>
+<td>LMNOS</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Malignant Fibrous Histiocytoma</td>
+<td>MFH</td>
+<td>MFH</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Malignant Mesenchymoma</td>
+<td>MME</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Malignant Mesenchymoma of the Liver</td>
+<td>MMEL</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Malignant Peripheral Nerve Sheath Tumor</td>
+<td>MPNST</td>
+<td>MPNST</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Malignant Rhabdoid Tumor of the Liver</td>
+<td>MRTL</td>
+<td>MRTL</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Melanoma</td>
+<td>MEL</td>
+<td>MEL</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Mesenchymal Chondrosarcoma</td>
+<td>MCHS</td>
+<td>MCHS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Mixed Spindle Cell and Embryonal Rhabdomyosarcoma</td>
+<td>MSCERMS</td>
+<td>RMS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Mucinous Adenocarcinoma of the Colon and Rectum</td>
+<td>MACR</td>
+<td>MACR</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Mucinous Adenocarcinoma, NOS</td>
+<td>MACNOS</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Mucoepidermoid Carcinoma</td>
+<td>MUCC</td>
+<td>MUCC</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Nasopharyngeal Carcinoma</td>
+<td>NPC</td>
+<td>NPC</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Neuroblastoma</td>
+<td>NBL</td>
+<td>NBL</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Neurofibroma</td>
+<td>NFIB</td>
+<td>NFIB</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Osteosarcoma</td>
+<td>OS</td>
+<td>OS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Pancreatic Neuroendocrine Tumor</td>
+<td>PANET</td>
+<td>PANET</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Papillary Renal Cell Carcinoma</td>
+<td>PRCC</td>
+<td>PRCC</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Papillary Thyroid Cancer</td>
+<td>THPA</td>
+<td>THPA</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Paraganglioma</td>
+<td>PGNG</td>
+<td>PGNG</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Parosteal Osteosarcoma</td>
+<td>PAOS</td>
+<td>PAOS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Periosteal Osteosarcoma</td>
+<td>PEOS</td>
+<td>PEOS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Pleuropulmonary Blastoma</td>
+<td>PPB</td>
+<td>PPB</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Renal Cell Carcinoma</td>
+<td>RCC</td>
+<td>RCC</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Renal Clear Cell Carcinoma</td>
+<td>CCRCC</td>
+<td>CCRCC</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Retinoblastoma</td>
+<td>RBL</td>
+<td>RBL</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Rhabdoid Cancer, Kidney</td>
+<td>MRT</td>
+<td>MRT</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Rhabdomyosarcoma</td>
+<td>RMS</td>
+<td>RMS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Round Cell Sarcoma, NOS</td>
+<td>RCSNOS</td>
+<td>RCSNOS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Serous Surface Papillary Carcinoma</td>
+<td>SSPC</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Small Cell Osteosarcoma</td>
+<td>SCOS</td>
+<td>SCOS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Soft Tissue Sarcoma, NOS</td>
+<td>STSNOS</td>
+<td>CUP</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Solid Cancer of Unknown Primary</td>
+<td>SCUP</td>
+<td>CUP</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Solitary Fibrous Tumor/Hemangiopericytoma</td>
+<td>SFT</td>
+<td>SFT</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Spindle Cell Rhabdomyosarcoma</td>
+<td>SCRMS</td>
+<td>SCRMS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Spindle Cell Sarcoma, NOS</td>
+<td>SCSNOS</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Spindle Cell/Sclerosing Rhabdomyosarcoma</td>
+<td>SCSRMS</td>
+<td>SCSRMS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Spindle Epithelial Tumor with Thymus-Like Differentiation</td>
+<td>SETTLE</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Squamous Cell Carcinoma, NOS</td>
+<td>SCCNOS</td>
+<td>SCCNOS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Stomach Inflammatory Pseudotumor</td>
+<td>SIPT</td>
+<td><NA></td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Synovial Sarcoma</td>
+<td>SYNS</td>
+<td>SYNS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Telangiectatic Osteosarcoma</td>
+<td>TEOS</td>
+<td>TEOS</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Undifferentiated Embryonal Sarcoma of the Liver</td>
+<td>UESL</td>
+<td>UESL</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Wilms</td>
+<td>WT</td>
+<td>WT</td>
+</tr>
+<tr>
+<td>Solid Tumor</td>
+<td>Wilms, Bilateral</td>
+<td>WTB</td>
+<td>WT</td>
 </tr>
 </tbody>
 </table>
@@ -2801,7 +3582,7 @@ CCSS is a multi-institutional, multi-disciplinary, NCI-funded collaborative reso
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/2d04f3c">2d04f3c</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/763d5f0">763d5f0</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
