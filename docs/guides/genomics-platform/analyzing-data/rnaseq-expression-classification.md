@@ -7,7 +7,7 @@ St. Jude Cloud provides functionality for generating RNA-Seq Expression Classifi
 ## Requirements
 
 * The RNA-Seq Expression Classification pipeline reference data uses sequencing data from fresh, frozen tissue samples. It has not been evaluated for use with sequencing data generated from formalin-fixed paraffin-embedded (FFPE) specimens. 
-* If running the aligned BAM or count-based pipelines, alignment must be done against the [GRCh38_no_alt reference](ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz). It should use parameters as specifed in our [RNA-seq workflow](https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html) to minimize any discrepancies caused by differing alignment specification.
+* If running the count-based pipeline, alignment must be done against the [GRCh38_no_alt reference](ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz). It should use parameters as specifed in our [RNA-seq workflow](https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html) to minimize any discrepancies caused by differing alignment specification.
 * If running the count-based pipeline, feature counts should be generated with htseq-count as described in our [RNA-seq workflow](https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html). This pipeline uses [Gencode v31](ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_31/gencode.v31.annotation.gtf.gz) annotations. 
 
 ## Inputs 
@@ -21,12 +21,12 @@ with a counts file or a BAM file.
 | Counts file | htseq-count output feature counts file from human RNA-Seq | Sample.counts.txt |
 
 !!! caution
-    If you provide a BAM file to the non-alignment pipeline or counts data to the counts-based pipeline, 
+    If you provide counts data to the counts-based pipeline, 
     it **must** be aligned to `GRCh38_no_alt`.
-    Running a BAM aligned to any other reference genome is not supported. Maybe more
+    Running a sample aligned to any other reference genome is not supported. Maybe more
     importantly, we do not check the genome build of the BAM, so errors in computation
-    or the results can occur. If your BAM is *not* aligned to this genome build, we 
-    recommend submitting the BAM to the realignment-based workflow.
+    or the results can occur. If your sample is *not* aligned to this genome build, we 
+    recommend submitting the sample to the realignment-based workflow.
 
 ## Outputs
 
@@ -36,7 +36,7 @@ The RNA-Seq Expression Classification pipeline produces the following outputs:
 |--|--|--|
 | Interactive expression plot (.html) | Visualization of RNA-Seq data | all |
 | Aligned BAM (.bam) | BAM file produced by our RNA-Seq pipeline for the input samples. | Realignment |
-| Feature read counts (.txt) | Read counts for the Gencode features. | BAM-based and Realignment |
+| Feature read counts (.txt) | Read counts for the Gencode features. | Realignment |
 
 ## Workflow Steps 
 
@@ -45,7 +45,7 @@ The RNA-Seq Expression Classification pipeline produces the following outputs:
    * Only for realignment workflow
 2. A feature count (.count.txt) file is produced for comparison to 
    St. Jude Cloud reference data.
-   * For BAM-based and realignment workflows
+   * Only for realignment workflow
 3. A visualization for genomic features is produced. 
 
 ### Mapping
@@ -65,14 +65,14 @@ A t-Distributed Stochastic Neighbor Embedding (t-SNE) visualization is produced 
 ## Getting Started
 
 !!! caution
-    If you provide a BAM file to the non-alignement pipeline or counts data to the counts-based pipeline, 
+    If you provide counts data to the counts-based pipeline, 
     it **must** be aligned to `GRCh38_no_alt`.
-    Running a BAM aligned to any other reference genome is not supported. Maybe more
-    importantly, we do not check the genome build of the BAM, so errors in computation
-    or the results can occur. If your BAM is *not* aligned to this genome build, we 
-    recommend submitting the BAM to the realignment-based workflow.
+    Running a sample aligned to any other reference genome is not supported. Maybe more
+    importantly, we do not check the genome build of the sample, so errors in computation
+    or the results can occur. If your sample is *not* aligned to this genome build, we 
+    recommend submitting the sample to the realignment-based workflow.
 
-We provide three versions of the RNA-Seq Expression Classification tool depending on desired input. The full workflow allows a user to upload a sample in BAM format. That sample will then be converted to `FastQ` format, aligned with `STAR` two-pass alignment, and feature counts generated with `htseq-count`
+We provide two versions of the RNA-Seq Expression Classification tool depending on desired input. The full workflow allows a user to upload a sample in BAM format. That sample will then be converted to `FastQ` format, aligned with `STAR` two-pass alignment, and feature counts generated with `htseq-count`
 
 To get started, you need to navigate to the [RNA-Seq Expression Classification tool page](https://platform.stjude.cloud/tools/rnaseq-expression-classification). You'll need to click the "Start" button in the left hand pane. This creates a cloud workspace in DNAnexus with the same name as the tool. After this, you will be able to upload your input files to that workspace.
 
@@ -85,13 +85,19 @@ The RNA-Seq Expression Classification pipeline takes either a htseq-count count 
 
 Once you've uploaded data to your cloud workspace, click "Launch Tool" on the tool's landing page. A dropdown will present the different presets for running the workflow. Here, you can select whether you wish to start with a counts file or a BAM file.
 
+## Obtaining reference data
+
+Reference feature count data can be downloaded through the [Genomics Platform Data Browser](https://platform.stjude.cloud/data/diseases).
+
 ## Hooking up inputs
 
-Next, you'll need to hook up either the counts file or the BAM file you uploaded in the upload data section. In this example, we are using the realignment version of the pipeline, so you can hook up the inputs by clicking on the in_bams slot and selecting the respective files. If you are using the BAM-based or counts-based workflow, the process is similar.
+You will need to select reference counts files from your project. These can be specified in the reference counts data input. 
+
+Next, you'll need to hook up either the counts file or the BAM file you uploaded in the upload data section. In this example, we are using the realignment version of the pipeline, so you can hook up the inputs by clicking on the in_bams slot and selecting the respective files. If you are using the counts-based workflow, the process is similar.
 
 ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/rnaseq-expression-main.png)
 
-Additionally, a parameter selecting the tissue type to compare against must be selected. The available options are "blood", "brain", and "solid". Based on the selection, a reference collection of tumors of that type will be selected from St. Jude Cloud data and the input samples will be compared against this reference collection.
+Additionally, a parameter selecting the tissue type to compare against can be selected. The available options are "Blood Cancers", "Brain Tumors", and "Solid Tumors". Based on the selection, a reference collection of tumors of that type will be selected from St. Jude Cloud data and the input samples will be compared against this reference collection.
 
 ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/tsne-param.png)
 
@@ -114,9 +120,8 @@ Once the resulting analysis job completes, an HTML plot of the results should be
 
 | Workflow Name | Per sample cost | Outliers |
 |--|--|--|
-| Realignment workflow | $2.50 | $5.00 |
-| Aligned BAM workflow | $1.00 | $2.00-3.00 |
-| Feature read counts workflow | $0.002-0.004 | |
+| Realignment workflow | $3-$10 | $25 |
+| Feature read counts workflow | $0.30-0.40 | |
 
 
 ## Batch effect corrections
@@ -134,7 +139,7 @@ for batch effect based on strandedness of the RNA-Seq sample, library type, and 
      generated from formalin-fixed paraffin-embedded (FFPE) specimens. 
 
 !!! caution "GRCh38 required"
-    If running the aligned BAM or count-based RNA-Seq Expression Classification pipelines, alignment must be 
+    If running the count-based RNA-Seq Expression Classification pipeline, alignment must be 
     done against the [GRCh38_no_alt reference](ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz). 
     It should use parameters as specifed in our [RNA-seq workflow](https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html) to minimize any discrepancies caused by differing alignment specification.
 
