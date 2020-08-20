@@ -78,7 +78,13 @@ To get started, you need to navigate to the [RNA-Seq Expression Classification t
 
 ## Uploading data
 
-The RNA-Seq Expression Classification pipeline takes either a htseq-count count file or a GRCh38_no_alt aligned BAM from human RNA-Seq. You can upload your input file(s) using the data transfer application or by uploading them through the command line. Both of the guides linked here will contain more details on how to upload data using that method, so we defer to those guides here.
+The RNA-Seq Expression Classification pipeline takes either a htseq-count count file or a GRCh38_no_alt aligned BAM from human RNA-Seq. You can upload your input file(s) through the command line. See [Uploading Data from your Local Computer](../../../covid-19/upload-local).
+
+Once you have the `dx` doolkit, to upload a sample HTSeq count file `sample.counts.txt` to the `inputs` folder of the `project-rnaseq` cloud project, you could use the following command:
+
+```bash
+dx upload sample.counts.txt --destination "project-rnaseq:/inputs/"
+```
 
 ## Running the tool
 
@@ -106,14 +112,17 @@ To input properties in DNAnexus, you can either use the web UI or the command li
 # you can run the following code snippet after filling in your values
 # to successfully prepare the file.
 
-file_id=<DNAnexus file ID>
+file_id=<DNAnexus file ID> # file ID or file path
 dx set_properties $file_id sample_name "<value>" # Should match the file name up to the first period character
 dx set_properties $file_id strandedness "<value>" # Stranded-Forward, Stranded-Reverse, or Unstranded
 dx set_properties $file_id library "<value>" # PolyA or Total
 dx set_properties $file_id readlength "<value>" # Integer number of base pairs in reads
 dx set_properties $file_id pairing "<value>" # Paired-end or Single-end
-
 ```
+
+The file ID can be retrieved from the DNAnexus web interface. Click on the file of interest and the file ID is displayed in the sidebar.
+
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/file_id.png)
 
 ## Hooking up inputs
 
@@ -121,11 +130,11 @@ You will need to select reference counts files from your project. These can be s
 
 Next, you'll need to hook up either the counts file or the BAM file you uploaded in the upload data section. In this example, we are using the realignment version of the pipeline, so you can hook up the inputs by clicking on the in_bams slot and selecting the respective files. If you are using the counts-based workflow, the process is similar.
 
-![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/rnaseq-expression-workflow.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/rnaseq-expression-workflow-new-ui.png)
 
 Additionally, a parameter selecting the tissue type to compare against can be selected. The available options are "Blood Cancer", "Brain Tumor", and "Solid Tumor". Based on the selection, a reference collection of tumors of that type will be selected from St. Jude Cloud data and the input samples will be compared against this reference collection.
 
-![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/rnaseq-expression-options.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/rnaseq-expression-workflow-options-new-ui.png)
 
 ## Starting the workflow
 
@@ -146,7 +155,7 @@ Once the resulting analysis job completes, an HTML plot of the results should be
 
 | Workflow Name | Per sample cost | Outliers |
 |--|--|--|
-| Realignment workflow | $3-$10 | $25 |
+| Realignment workflow | $3-10 | $25 |
 | Feature read counts workflow | $0.30-0.40 | |
 
 ## Batch effect corrections
@@ -154,24 +163,35 @@ Once the resulting analysis job completes, an HTML plot of the results should be
 When comparing numerous samples such as those included in this analysis, it is important to consider 
 the variation in data created by obtaining from various sources and across time. Therefore the t-SNE
 visualization incorporates some batch effect corrections for the reference data. Currently we correct 
-for batch effect based on strandedness of the RNA-Seq sample, library type, and read length protocol.
+for batch effect based on strandedness of the RNA-Seq sample, library type, read pairing, and read length.
+
+| Batch Variable | Values |
+|--|--|
+| Library Type | PolyA or Total |
+| Read Length | integer, in bp, e.g. 101, 126|
+| Strandedness | Stranded-Forward, Stranded-Reverse, Unstranded |
+| Pairing | Paired-end or Single-end |
 
 ## Known issues
 
-!!! caution "Fresh Frozen Tissue Only
-     The RNA-Seq Expression Classification pipeline reference data uses sequencing data from fresh, frozen
-     tissue samples. It has not been evaluated for use with sequencing data
-     generated from formalin-fixed paraffin-embedded (FFPE) specimens.
+There are a few known cautions with the RNA-Seq Expression Classification workflow.
 
-!!! caution "GRCh38 required"
+!!! caution "Data must fit well defined values"
+    The RNA-Seq Expression Classification pipeline reference data is based on GRCh38 aligned, Gencode v31 annotated samples from fresh, frozen tissue samples. It has not been evaluated for samples not meet this criteria.
+
+    The RNA-Seq Expression Classification pipeline reference data uses sequencing data from fresh, frozen
+    tissue samples. It has not been evaluated for use with sequencing data
+    generated from formalin-fixed paraffin-embedded (FFPE) specimens.
+     
     If running the count-based RNA-Seq Expression Classification pipeline, alignment must be
     done against the [GRCh38_no_alt reference](ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz). 
     It should use parameters as specifed in our [RNA-seq workflow](https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html) to minimize any discrepancies caused by differing alignment specification.
 
-!!! caution "Standardized feature counts must be provided"
     If running the count-based RNA-Seq Expression Classification pipeline, feature counts should be generated
     with htseq-count as described in our [RNA-seq workflow](https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html). 
     This pipeline uses [Gencode v31](ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_31/gencode.v31.annotation.gtf.gz) annotations.
+
+     Batch correction requires a minimum of two samples per batch to run properly. Introducing a single sample batch by adding an input sample with a unique protocol will cause unexpected results.
 
 ## Frequently asked questions
 
