@@ -100,6 +100,21 @@ To run an input sample, certain properties need to be set on the file.
 | strandedness | Stranded-Forward, Stranded-Reverse, Unstranded |
 | pairing | Paired-end or Single-end |
 
+To input properties in DNAnexus, you can either use the web UI or the command line interface. Here, we provide a command line snippet to set properties on a file.
+
+```bash
+# you can run the following code snippet after filling in your values
+# to successfully prepare the file.
+
+file_id=<DNAnexus file ID>
+dx set_properties $file_id sample_name "<value>" # Should match the file name up to the first period character
+dx set_properties $file_id strandedness "<value>" # Stranded-Forward, Stranded-Reverse, or Unstranded
+dx set_properties $file_id library "<value>" # PolyA or Total
+dx set_properties $file_id readlength "<value>" # Integer number of base pairs in reads
+dx set_properties $file_id pairing "<value>" # Paired-end or Single-end
+
+```
+
 ## Hooking up inputs
 
 You will need to select reference counts files from your project. These can be specified in the `reference counts` data input.
