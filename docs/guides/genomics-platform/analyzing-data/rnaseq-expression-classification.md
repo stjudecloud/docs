@@ -86,7 +86,7 @@ Once you've uploaded data to your cloud workspace, click "Launch Tool" on the to
 
 ## Obtaining reference data
 
-Reference feature count data can be downloaded through the [Genomics Platform Data Browser](https://platform.stjude.cloud/data/diseases).
+Reference feature count data can be downloaded through the [Genomics Platform Data Browser](https://platform.stjude.cloud/data/publications?publication_accession=SJC-PB-1020). These must then be provided to the workflow through the `reference_counts` parameter. By default, all reference files will be used by the app, but this can be restricted to one of the three tumor types [Blood, Brain, Solid] through the app settings.
 
 ## Preparing input data
 
