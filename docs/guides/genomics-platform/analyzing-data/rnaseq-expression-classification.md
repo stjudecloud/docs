@@ -86,7 +86,7 @@ Once you've uploaded data to your cloud workspace, click "Launch Tool" on the to
 
 ## Obtaining reference data
 
-Reference feature count data can be downloaded through the [Genomics Platform Data Browser](https://platform.stjude.cloud/data/publications?publication_accession=SJC-PB-1020). These must then be provided to the workflow through the `reference_counts` parameter. By default, all reference files will be used by the app, but this can be restricted to one of the three tumor types [Blood, Brain, Solid] through the app settings.
+Reference feature count data can be retrieved through the [Genomics Platform Data Browser](https://platform.stjude.cloud/data/publications?publication_accession=SJC-PB-1020). These must then be provided to the workflow through the `reference_counts` parameter. By default, all reference files will be used by the app, but this can be restricted to one of the three tumor types [Blood, Brain, Solid] through the app settings.
 
 ## Preparing input data
 
@@ -102,15 +102,15 @@ To run an input sample, certain properties need to be set on the file.
 
 ## Hooking up inputs
 
-You will need to select reference counts files from your project. These can be specified in the reference counts data input.
+You will need to select reference counts files from your project. These can be specified in the `reference counts` data input.
 
 Next, you'll need to hook up either the counts file or the BAM file you uploaded in the upload data section. In this example, we are using the realignment version of the pipeline, so you can hook up the inputs by clicking on the in_bams slot and selecting the respective files. If you are using the counts-based workflow, the process is similar.
 
-![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/rnaseq-expression-main.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/rnaseq-expression-workflow.png)
 
-Additionally, a parameter selecting the tissue type to compare against can be selected. The available options are "Blood Cancers", "Brain Tumors", and "Solid Tumors". Based on the selection, a reference collection of tumors of that type will be selected from St. Jude Cloud data and the input samples will be compared against this reference collection.
+Additionally, a parameter selecting the tissue type to compare against can be selected. The available options are "Blood Cancer", "Brain Tumor", and "Solid Tumor". Based on the selection, a reference collection of tumors of that type will be selected from St. Jude Cloud data and the input samples will be compared against this reference collection.
 
-![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/tsne-param.png)
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/rnaseq-expression-options.png)
 
 ## Starting the workflow
 
