@@ -1,5 +1,5 @@
 # About Our Data
-    
+
 ## File Formats
 
 St. Jude Cloud hosts both raw genomic data files and processed results files:
@@ -11,7 +11,6 @@ St. Jude Cloud hosts both raw genomic data files and processed results files:
 | Somatic VCF    | Curated list of somatic variants produced by the St. Jude somatic variant analysis pipeline.                       | [Click here](#somatic-vcf-files)    |
 | CNV            | List of somatic copy number alterations produced by St. Jude CONSERTING pipeline.                                  | [Click here](#cnv-files)            |
 | Feature Counts | Curated list of read counts mapped to each gene produced by [HTSeq](https://htseq.readthedocs.io/en/master/)       | [Click here](#feature-counts-files) |
-
 
 ### BAM files
 
@@ -36,7 +35,6 @@ Somatic VCF files contain HG38 based SNV/Indel variant calls from the St. Jude s
     **Our Somatic VCF files were designed specifically for St. Jude Cloud visualization purposes. Variants in these files were manually curated from analyses across multiple sequencing types including WGS and WES.**  
     For more information on variants for each of the individuals, please refer to the relevant PCGP paper. For more information on the variant calling format (VCF), please see the latest specification for VCF document listed [here][hts-specs].
 
-
 ### CNV files
 
 CNV files contain copy number alteration (CNA) analysis results for paired tumor-normal WGS samples. Files are produced by running paired tumor-normal BAM files through the [CONSERTING][conserting] pipeline which identifies CNA through iterative analysis of (i) local segmentation by read depth within boundaries identified by structural variation (SV) breakpoints followed by (ii) segment merging and local SV analysis. [CREST][crest] was used to identify local SV breakpoints. CNV files contain the following information:
@@ -54,7 +52,6 @@ CNV files contain copy number alteration (CNA) analysis results for paired tumor
 | LogRatio      | Log2 ratio between tumor and normal coverage                                                                                                                 |
 | Quality score | A empirical score used in merging                                                                                                                            |
 | SV_Matching   | Whether the boundary of the segments were supported by SVs (3: both ends supported, 2: right end supported, 1: left end supported, 0: neither end supported) |
-
 
 [crest]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3527068/
 [conserting]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4591043/
@@ -76,19 +73,20 @@ CNV files contain copy number alteration (CNA) analysis results for paired tumor
 
 ### Feature Counts files
 
-Feature counts are text files that contain counts of reads aligned to genomic features. St. Jude Cloud feature files are generated using HTSeq. The detailed command is documented in our [RNA-Seq V2 RFC][rnaseq-rfc]. The files contain a count of the number of reads overlapping each genomic feature, in this case, genes as specified in [GENCODE V31][gencode]. St. Jude Cloud uses the gene name as feature key. The files are tab-delimited text and contain the feature key and read count for that feature. 
+Feature counts are text files that contain counts of reads aligned to genomic features. St. Jude Cloud feature files are generated using HTSeq. The detailed command is documented in our [RNA-Seq V2 RFC][rnaseq-rfc]. The files contain a count of the number of reads overlapping each genomic feature, in this case, genes as specified in [GENCODE V31][gencode]. St. Jude Cloud uses the gene name as feature key. The files are tab-delimited text and contain the feature key and read count for that feature.
 
 [rnaseq-rfc]: https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html#specification
 [gencode]: https://www.gencodegenes.org/human/release_31.html
 
-## Sequencing Information 
+## Sequencing Information
 
 ### Whole Genome and Whole Exome
+
 Whole Genome Sequence (WGS) and Whole Exome Sequence (WES) BAM files were produced by the [Microsoft Genomics Service][msgen] aligned to HG38 (GRCh38 no alt analysis set). For more information about how Microsoft Genomics produces BAM files or any other questions regarding data generation, please refer to [the official Microsoft Genomics whitepaper][msgen-whitepaper].
 
 ### RNA-Seq
 
-RNA-Seq BAM files are mapped to HG38. For alignment, `STAR` v2.7.1a 2-pass mapping is used. Below is the `STAR` command used during alignment. For more information about any of the parameters used, please refer to the [STAR manual][star-manual] for v2.7.1a. The complete RNA-Seq WDL pipeline is available on [GitHub](https://github.com/stjudecloud/workflows/blob/master/workflows/rnaseq/rnaseq-standard.wdl). The STAR alignment parameters are also available on [GitHub](https://github.com/stjudecloud/workflows/blob/master/tools/star.wdl). 
+RNA-Seq BAM files are mapped to HG38. For alignment, `STAR` v2.7.1a 2-pass mapping is used. Below is the `STAR` command used during alignment. For more information about any of the parameters used, please refer to the [STAR manual][star-manual] for v2.7.1a. The complete RNA-Seq WDL pipeline is available on [GitHub](https://github.com/stjudecloud/workflows/blob/master/workflows/rnaseq/rnaseq-standard.wdl). The STAR alignment parameters are also available on [GitHub](https://github.com/stjudecloud/workflows/blob/master/tools/star.wdl).
 
 ```bash
     STAR \
@@ -115,30 +113,35 @@ RNA-Seq BAM files are mapped to HG38. For alignment, `STAR` v2.7.1a 2-pass mappi
 ```
 
 ## Data Access Units
+
 We currently have the five [Data Access Units (DAU)](../requesting-data/glossary.md#data-access-unit) listed below. [Basic clinical data](#clinical-and-phenotypic-information) is available for relevant subjects in each DAU. Click on the DAU's abbreviation below to navigate directly to that DAU's [Study page](../../../guides/studies/index.md) for more detailed information.
 
 ### Pediatric Cancer Genome Project (PCGP)
+
 **[PCGP](https://stjude.cloud/studies/pediatric-cancer-genome-project) is a paired-tumor normal dataset focused on discovering the genetic origins of pediatric cancer.**
-The Pediatric Cancer Genome Project is a collaboration between St. Jude Children's Research Hospital and the McDonnell Genome Institute at Washington University School of Medicine that sequenced the genomes of over 600 pediatric cancer patients. 
+The Pediatric Cancer Genome Project is a collaboration between St. Jude Children's Research Hospital and the McDonnell Genome Institute at Washington University School of Medicine that sequenced the genomes of over 600 pediatric cancer patients.
 
 ### St. Jude Lifetime (SJLIFE)
+
 **[SJLIFE](https://sjlife.stjude.org/) is a germline-only dataset focused on studying the long-term adverse outcomes associated with cancer and cancer-related therapy.**
-St. Jude Lifetime (SJLIFE) is a longevity study from St. Jude Children's Research Hospital that aims to identify all inherited genome sequence and structural variants influencing the development of childhood cancer and occurrence of long-term adverse outcomes associated with cancer and cancer-related therapy. This cohort contains unpaired germline samples and does not contain tumor samples. 
+St. Jude Lifetime (SJLIFE) is a longevity study from St. Jude Children's Research Hospital that aims to identify all inherited genome sequence and structural variants influencing the development of childhood cancer and occurrence of long-term adverse outcomes associated with cancer and cancer-related therapy. This cohort contains unpaired germline samples and does not contain tumor samples.
 
 ### Clinical Genomics (Clinical Pilot, G4K, and RTCG)
+
 **[Clinical Genomics](https://stjude.cloud/studies/clinical-genomics) is a paired tumor-normal dataset focused on identifying variants that influence the development and behavior of childhood tumors.**
-Clinical Genomics is a cohort from St. Jude Children's Research Hospital, comprised of three studies: Clinical Pilot, Genomes4Kids, and Real-time Clinical Genomics. Clinical Pilot is a smaller, pilot study generated to asses the validity and accuracy of moving forward with the G4K study. The RTCG study aims to release Clinical Genomics data in real time to the research community. The goal of these studies is to identify all inherited and tumor-acquired (somatic) genome sequence and structural variants influencing the development and behavior of childhood tumors. 
+Clinical Genomics is a cohort from St. Jude Children's Research Hospital, comprised of three studies: Clinical Pilot, Genomes4Kids, and Real-time Clinical Genomics. Clinical Pilot is a smaller, pilot study generated to asses the validity and accuracy of moving forward with the G4K study. The RTCG study aims to release Clinical Genomics data in real time to the research community. The goal of these studies is to identify all inherited and tumor-acquired (somatic) genome sequence and structural variants influencing the development and behavior of childhood tumors.
 
 ### Sickle Cell Genome Project (SGP)
+
 **[SGP](https://sickle-cell.stjude.cloud/) is a germline-only dataset of Sickle Cell Disease (SCD) patients from birth to young adulthood.**
 The Sickle Cell Genome Project (SGP) is a collaboration between St. Jude Children’s Research Hospital and Baylor College of Medicine focused on identifying genetic modifiers that contribute to various health complications in SCD patients. Additional objectives include, but are not limited to, developing accurate methods to characterize germline structural variants in highly homologous globin locus and blood typing.
 
 ### Childhood Cancer Survivor Study (CCSS)
+
 **[CCSS](https://stjude.cloud/studies/clinical-genomics) is a germline-only dataset consisting of whole genome sequencing of childhood cancer survivors.**
-CCSS is a multi-institutional, multi-disciplinary, NCI-funded collaborative resource established to evaluate long-term outcomes among survivors of childhood cancer. It is a retrospective cohort consisting of >24,000 five-year survivors of childhood cancer who were diagnosed between 1970-1999 at one of 31 participating centers in the U.S. and Canada. The primary purpose of this sequencing of CCSS participants is to identify all inherited genome sequence and structural variants influencing the development of childhood cancer and occurrence of long-term adverse outcomes associated with cancer and cancer-related therapy. 
+CCSS is a multi-institutional, multi-disciplinary, NCI-funded collaborative resource established to evaluate long-term outcomes among survivors of childhood cancer. It is a retrospective cohort consisting of >24,000 five-year survivors of childhood cancer who were diagnosed between 1970-1999 at one of 31 participating centers in the U.S. and Canada. The primary purpose of this sequencing of CCSS participants is to identify all inherited genome sequence and structural variants influencing the development of childhood cancer and occurrence of long-term adverse outcomes associated with cancer and cancer-related therapy.
 
 !!! warning "CCSS: Potential Bacterial Contamination"
-
     Samples for the Childhood Cancer Survivorship Study were collected by sending out Buccal swab kits to enrolled participants and having them complete the kits at home. This mechanism of collecting saliva and buccal cells for sequencing is highly desirable because of its non-invasive nature and ease of execution. However, collection of samples in this manner also has higher probability of contamination from external sources (as compared to, say, samples collected using blood). We have observed some samples in this cohort which suffer from bacterial contamination. To address this issue, we have taken the following steps:
 
     1. We have estimated the bacterial contamination rate and annotated each of the samples in the CCSS cohort. For each sample, you will find the estimated contamination rate in the `Description` field of the `SAMPLE_INFO.txt` file that is vended with your data (and as a property on the DNAnexus file). For information on this field, see the [Metadata specification](#metadata).
@@ -148,9 +151,7 @@ CCSS is a multi-institutional, multi-disciplinary, NCI-funded collaborative reso
 
     With any questions on the nature or implications of this warning, please contact us at [support@stjude.cloud](mailto:support@stjude.cloud).
 
-
-
-## Metadata 
+## Metadata
 
 Each data request includes a text file called `SAMPLE_INFO.txt` that provides a number of file level properties (sample identifiers, clinical attributes, etc).
 
@@ -191,7 +192,7 @@ Also included is a set of phenotypic information queried from the physician or r
 
 !!! note
     During the release of the St. Jude Cloud paper, we undertook a massive effort to curate and harmonize diagnosis values within St. Jude Cloud. We provide two values for diagnosis, and you should select carefully which value you use based on your use case:
-    
+
     1. `sj_diseases`, which, since August 18, 2020, represents the harmonized diagnosis value curated by scientists on the St. Jude Cloud team (before that time it represented the diagnosis known at time of sequencing).
     2. `attr_diagnosis`, which contains the unharmonized diagnosis value directly as it was submitted to us from the lab or PI.
 
@@ -395,13 +396,10 @@ The `SAMPLE_INFO.txt` file that comes with your data request will contain the li
 | Solid Tumor            | Wilms                                                          | WT             | WT                          |
 | Solid Tumor            | Wilms, Bilateral                                               | WTB            | WT                          |
 
-
-
 [pubmed]: https://www.ncbi.nlm.nih.gov/pubmed/
 [ega]: https://www.ebi.ac.uk/ega/home
 [censusburea]: https://www.census.gov/mso/www/training/pdf/race-ethnicity-onepager.pdf
 [oncotree_2019_03_01]: http://oncotree.mskcc.org/#/home?version=oncotree_2019_03_01
-
 
 ## Similar Topics
 
