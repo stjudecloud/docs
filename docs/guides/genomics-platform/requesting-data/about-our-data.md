@@ -28,11 +28,15 @@ Somatic VCF files contain HG38 based SNV/Indel variant calls from the St. Jude s
 2. Post processing of aligned reads was performed using [Picard][picard] `CleanSam` and `MarkDuplicates`.
 3. Variants were called using the [Bambino][bambino-paper] variant caller (you can download Bambino [here][bambino-download] or by navigating to the [Zhang Lab page][bambino-program] where the  "Bambino package" is listed as a dependency under the CONSERTING section).
 4. Variants were post-processed using an in-house post-processing pipeline that cleans and annotates variants. This pipeline is not currently publicly available.
-5. Variants were manually reviewed by analysts and published with [the relevant Pediatric Cancer Genome Project (PCGP) paper][pcgp-landing-page].
-6. Post-publication, variants were lifted over to HG38 (the original HG19 coordinates are stored in the `HG19` INFO field.).
+5. Variants were manually reviewed by analysts and those in the PCGP cohort were published with [the relevant Pediatric Cancer Genome Project (PCGP) paper][pcgp-landing-page].
+6. Filtering based on metrics derived from the in-house post-processing pipeline and the input of analysts was applied.
+7. Variants were then converted to VCF format.
+8. The new VCFs were lifted over to GRCh38_no_alt using [Picard][picard] `LiftoverVcf`.
+9. Variants were then normalized using [`vt normalize`][vt].
+10. Finally, VCFs were annotated using [VEP v100][vep] and the `--everything` flag.
 
 !!! note
-    **Our Somatic VCF files were designed specifically for St. Jude Cloud visualization purposes. Variants in these files were manually curated from analyses across multiple sequencing types including WGS and WES.**  
+    **Variants in these files were manually curated from analyses across multiple sequencing types including WGS and WES.**  
     For more information on variants for each of the individuals, please refer to the relevant PCGP paper. For more information on the variant calling format (VCF), please see the latest specification for VCF document listed [here][hts-specs].
 
 ### CNV files
@@ -61,6 +65,8 @@ CNV files contain copy number alteration (CNA) analysis results for paired tumor
 [bambino-program]: https://www.stjuderesearch.org/site/lab/zhang
 [bambino-download]: http://ftp.stjude.org/pub/software/conserting/bambino-1.0.jar
 [pcgp-landing-page]: https://www.stjude.org/research/pediatric-cancer-genome-project.html
+[vt]: https://genome.sph.umich.edu/wiki/Vt
+[vep]: https://uswest.ensembl.org/info/docs/tools/vep/index.html
 [hts-specs]: https://samtools.github.io/hts-specs/
 [msgen]: https://azure.microsoft.com/en-us/services/genomics/
 [msgen-whitepaper]: https://azure.microsoft.com/en-us/resources/accelerate-precision-medicine-with-microsoft-genomics/
