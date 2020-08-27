@@ -40,12 +40,10 @@ The RNA-Seq Expression Classification pipeline produces the following outputs:
 
 ## Workflow Steps
 
-1. The aligned BAM is converted to FastQ and is aligned to `GRCh38_no_alt`
+1. [Only for realignment workflow] The aligned BAM is converted to FastQ and is aligned to `GRCh38_no_alt`
    using [standard STAR mapping](https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html).
-   * Only for realignment workflow
-2. A feature count (.count.txt) file is produced for comparison to
+2. [Only for realignment workflow] A feature count (.count.txt) file is produced for comparison to
    St. Jude Cloud reference data.
-   * Only for realignment workflow
 3. A visualization for genomic features is produced.
 
 ### Mapping
@@ -92,11 +90,15 @@ Once you've uploaded data to your cloud workspace, click "Launch Tool" on the to
 
 ## Obtaining reference data
 
-Reference feature count data can be retrieved through the [Genomics Platform Data Browser](https://platform.stjude.cloud/data/publications?publication_accession=SJC-PB-1020). These must then be provided to the workflow through the `reference_counts` parameter. By default, all reference files will be used by the app, but this can be restricted to one of the three tumor types [Blood, Brain, Solid] through the app settings.
+Reference feature count data can be retrieved through the [Genomics Platform Data Browser](https://platform.stjude.cloud/data/publications?publication_accession=SJC-PB-1020). 
+
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/Requesting-StJudeCloud-paper.gif)
+
+These must then be provided to the workflow through the `reference_counts` parameter. By default, all reference files will be used by the app, but this can be restricted to one of the three tumor types [Blood, Brain, Solid] through the app settings.
 
 ## Preparing input data
 
-To run an input sample, certain properties need to be set on the file.
+To run an input sample, certain properties need to be set on the file. These should be specified on the HTSeq count file for the counts-based pipeline or on the BAM file for the realignment-based workflow. 
 
 | Property Name | Values |
 |--|--|
@@ -128,7 +130,15 @@ The file ID can be retrieved from the DNAnexus web interface. Click on the file 
 
 You will need to select reference counts files from your project. These can be specified in the `reference counts` data input.
 
-Next, you'll need to hook up either the counts file or the BAM file you uploaded in the upload data section. In this example, we are using the realignment version of the pipeline, so you can hook up the inputs by clicking on the in_bams slot and selecting the respective files. If you are using the counts-based workflow, the process is similar.
+When specifying the `reference_counts`, select all HTSeq count files in the reference dataset. For the St. Jude Cloud paper dataset, there are 1576 total files to select.
+
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/input-selections.png)
+
+The UI will then display the number of selected reference files.
+
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/input-selected.png)
+
+Next, you'll need to hook up either the counts file or the BAM file you uploaded in the upload data section. In this example, we are using the counts-based version of the pipeline, so you can hook up the inputs by clicking on the input_counts slot and selecting the respective files. If you are using the realignment-based workflow, the process is similar with BAM input.
 
 ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/rnaseq-expression-workflow-new-ui.png)
 
@@ -136,9 +146,13 @@ Additionally, a parameter selecting the tissue type to compare against can be se
 
 ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/rnaseq-expression-workflow-options-new-ui.png)
 
+If running the realignment workflow, the input file should be specified as a BAM to realign. HTSeq will run on the realigned BAM and the result will be passed into the t-SNE app for plotting against the reference data. The reference data should be specified in the `reference_counts` parameter as an array of HTSeq count files. The BAM will be specified to the RNA-Seq V2 stage as `input_bam`. The BAM should have properties set as described above. These will automatically be applied to the new HTSeq count file.
+
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/rnaseq-expression-workflow-realignment-options-new-ui.png)
+
 ## Starting the workflow
 
-Once your input files are hooked up, you should be able to start the workflow by clicking the "Run as Analysis..." button in the top right hand corner of the workflow dialog.
+Once your input files are hooked up, you should be able to start the workflow by clicking the "Run Analysis" button in the top right hand corner of the workflow dialog.
 
 ## Monitoring run progress
 Once you have started one or more RNA-Seq Expression Classification runs, you can safely close your browser and come back later to check the status of the jobs. To do this, navigate to the tool's landing page. Next, click "View Results" then select the "View Running Jobs" option. You will be redirected to the job monitoring page. Each job you kicked off gets one row in this table.
