@@ -33,7 +33,20 @@ Somatic VCF files contain HG38 based SNV/Indel variant calls from the St. Jude s
 7. Variants were then converted to VCF format.
 8. The new VCFs were lifted over to GRCh38_no_alt using [Picard][picard] `LiftoverVcf`.
 9. Variants were then normalized using [`vt normalize`][vt].
-10. Finally, VCFs were annotated using [VEP v100][vep] and the `--everything` flag.
+10. VCFs were annotated using [VEP v100][vep] and the `--everything` flag.
+11. Finally, VCFs were bgzipped and tabixed before upload.
+
+Coding variants are assessed by analysts who make a determination about how confident they are that the variant is correctly called and present only in the tumor sample. This is a wholistic determination using read counts for all sequencing types available, along with computationally derived statistics created by our post-processing pipeline. We only keep variants with the 3 highest designations, "VALID", "LIKELY_VALID", and "PUTATIVE". This determination is stored in the VCFs under the `validation_status` info tag. Variants which were designated "PUTATIVE" are filtered out if they were not computationally determined to be of high quality according to an in-house metric. Any variants which were not manually reviewed by an analyst require this high quality designation to be included, and have a `validation_status` of `NA`.
+
+Bambino represents INDELs in a format incompatible with the VCF specification. When we convert variants to VCFs, we store the original Bambino representation in the `bambino_representation` tag of the info field. Note that this entry is always in HG19 coordinates.
+
+As part of our post-processing pipeline, some variants are annotated with the results of a variety of pathogenecity predictive algorithms. We include those results in the VCFs when they are present. Note that they were performed on the HG19 coordinates. Algorithms include [Likelihood Ratio Test (LRT)][lrt], [MutationAssessor][assessor], [MutationTaster][taster], and [FATHMM][fathmm].
+
+The newly created HG19 VCFs are lifted over using [Picard `LiftoverVcf`][picard]. [`hg19ToHg38.over.chain`][chain] is used as the chain file and `GRCh38_no_alt.fa` is used as the reference. [`bcftools annotate`][bcftools] is used to document the reference file and exact liftover command used in the VCF's header. The HG19 alleles and coordinates are stored by Picard in the `OriginalAlleles`, `OriginalContig`, and `OriginalStart` info tags. There is a bug in the version of Picard used (version 2.18.29) which rarely truncates some of the VCF's genotype fields. These are fields which we use to store read counts and depths for each sequencing type. A [bug report][bug_report] has been filed with Picard. In the current version of the pipeline we recover the dropped entries from the original HG19 VCF. While searching for and correcting these entries, we also reorder the FORMAT and genotype fields to a logical ordering, as opposed to the alphabetical output order of Picard.
+
+`vt normalize` is used to obtain consistent representations of all variants which may have multiple equivalent forms. If VT modifies a variant, it records the original form in the `OLD_VARIANT` info tag. [Click here][vt] to read about variant normalization.
+
+See the [VEP documentation][vep] for a full description of the annotations applied.
 
 !!! note
     **Variants in these files were manually curated from analyses across multiple sequencing types including WGS and WES.**  
@@ -67,6 +80,13 @@ CNV files contain copy number alteration (CNA) analysis results for paired tumor
 [pcgp-landing-page]: https://www.stjude.org/research/pediatric-cancer-genome-project.html
 [vt]: https://genome.sph.umich.edu/wiki/Vt
 [vep]: https://uswest.ensembl.org/info/docs/tools/vep/index.html
+[lrt]: https://genome.cshlp.org/content/19/9/1553.abstract
+[assessor]: http://mutationassessor.org/r3/
+[taster]: http://www.mutationtaster.org/info/documentation.html
+[fathmm]: http://fathmm.biocompute.org.uk/about.html
+[chain]: http://hgdownload.soe.ucsc.edu/goldenPath/hg19/liftOver/hg19ToHg38.over.chain.gz
+[bug_report]: https://github.com/broadinstitute/picard/issues/1558
+[bcftools]: http://samtools.github.io/bcftools/bcftools.html
 [hts-specs]: https://samtools.github.io/hts-specs/
 [msgen]: https://azure.microsoft.com/en-us/services/genomics/
 [msgen-whitepaper]: https://azure.microsoft.com/en-us/resources/accelerate-precision-medicine-with-microsoft-genomics/
