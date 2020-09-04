@@ -117,7 +117,7 @@ To input properties in DNAnexus, you can either use the web UI or the command li
 file_id=<DNAnexus file ID> # file ID or file path
 dx set_properties $file_id sample_name="<value>" # Should match the file name up to the first period character
 dx set_properties $file_id strandedness="<value>" # Stranded-Forward, Stranded-Reverse, or Unstranded
-dx set_properties $file_id library="<value>" # PolyA or Total
+dx set_properties $file_id library_type="<value>" # PolyA or Total
 dx set_properties $file_id read_length="<value>" # Integer number of base pairs in reads
 dx set_properties $file_id pairing="<value>" # Paired-end or Single-end
 ```
