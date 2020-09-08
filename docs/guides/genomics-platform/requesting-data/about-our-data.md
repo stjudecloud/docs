@@ -28,13 +28,16 @@ Somatic VCF files contain HG38 based SNV/Indel variant calls from the St. Jude s
 2. Post processing of aligned reads was performed using [Picard][picard] `CleanSam` and `MarkDuplicates`.
 3. Variants were called using the [Bambino][bambino-paper] variant caller (you can download Bambino [here][bambino-download] or by navigating to the [Zhang Lab page][bambino-program] where the  "Bambino package" is listed as a dependency under the CONSERTING section).
 4. Variants were post-processed using an in-house post-processing pipeline that cleans and annotates variants. This pipeline is not currently publicly available.
-5. Variants were manually reviewed by analysts and those in the PCGP cohort were published with [the relevant Pediatric Cancer Genome Project (PCGP) paper][pcgp-landing-page].
-6. Filtering based on metrics derived from the in-house post-processing pipeline and the input of analysts was applied.
+5. Depending on cohort, either all variants were manually reviewed by analysts or a subset consisting of all coding variants were manually reviewed.
+6. Filtering:
+   1. If a previous publication for a cohort had a published list of variants based on manual curation, that complete list of variants was used for VCF generation.
+   2. If there was not a canonical list of variants for a cohort, automated filtering based on metrics derived from the in-house post-processing pipeline and the input of analysts was applied.
 7. Variants were then converted to VCF format.
 8. The new VCFs were lifted over to GRCh38_no_alt using [Picard][picard] `LiftoverVcf`.
 9. Variants were then normalized using [`vt normalize`][vt].
 10. VCFs were annotated using [VEP v100][vep] and the `--everything` flag.
-11. Finally, VCFs were bgzipped and tabixed before upload.
+11. Finally, VCFs were bgzipped and tabixed.
+12. Before upload, VCFs are validated using [VCFtools' `vcf-validator`][validator].
 
 Coding variants are assessed by analysts who make a determination about how confident they are that the variant is correctly called and present only in the tumor sample. This is a wholistic determination using read counts for all sequencing types available, along with computationally derived statistics created by our post-processing pipeline. We only keep variants with the 3 highest designations, "VALID", "LIKELY_VALID", and "PUTATIVE". This determination is stored in the VCFs under the `validation_status` info tag. Variants which were designated "PUTATIVE" are filtered out if they were not computationally determined to be of high quality according to an in-house metric. Any variants which were not manually reviewed by an analyst require this high quality designation to be included, and have a `validation_status` of `NA`.
 
@@ -87,6 +90,7 @@ CNV files contain copy number alteration (CNA) analysis results for paired tumor
 [chain]: http://hgdownload.soe.ucsc.edu/goldenPath/hg19/liftOver/hg19ToHg38.over.chain.gz
 [bug_report]: https://github.com/broadinstitute/picard/issues/1558
 [bcftools]: http://samtools.github.io/bcftools/bcftools.html
+[validator]: https://vcftools.github.io/perl_module.html#vcf-validator
 [hts-specs]: https://samtools.github.io/hts-specs/
 [msgen]: https://azure.microsoft.com/en-us/services/genomics/
 [msgen-whitepaper]: https://azure.microsoft.com/en-us/resources/accelerate-precision-medicine-with-microsoft-genomics/
