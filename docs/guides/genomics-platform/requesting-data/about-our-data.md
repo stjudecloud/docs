@@ -52,8 +52,8 @@ The newly created HG19 VCFs are lifted over using [Picard `LiftoverVcf`][picard]
 See the [VEP documentation][vep] for a full description of the annotations applied.
 
 !!! note
-    **Variants in these files were manually curated from analyses across multiple sequencing types including WGS and WES.**  
-    For more information on variants for each of the individuals, please refer to the relevant PCGP paper. For more information on the variant calling format (VCF), please see the latest specification for VCF document listed [here][hts-specs].
+    **Variants in these files were curated from analyses across multiple sequencing types including WGS, WES, and RNA Transcriptome.**  
+    For more information on variants for each of the individuals, please refer to the cohort's relevant paper. For more information on the variant calling format (VCF), please see the latest specification for VCF document listed [here][hts-specs].
 
 ### CNV files
 
