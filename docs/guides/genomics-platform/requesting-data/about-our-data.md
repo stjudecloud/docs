@@ -54,15 +54,13 @@ Bambino represents indels in a format incompatible with the VCF specification. W
 
 Where possible, read evidence for each variant was determined across each sequencing data type available for the associated patient tumor normal pair. These can include WGS, WES and RNAseq data.
 
-TODO explain FORMAT and genotype fields.
-
 The newly created HG19 coordinate VCFs are lifted over using [Picard `LiftoverVcf`][picard]. [`hg19ToHg38.over.chain`][chain] is used as the chain file and `GRCh38_no_alt.fa` is used as the reference. [`bcftools annotate`][bcftools] is used to document the reference file and exact liftover command used in the VCF's header. Note that HG19 alleles and coordinates are stored by Picard in the `OriginalAlleles`, `OriginalContig`, and `OriginalStart` info tags within the final VCF file. Please also note that there is a bug in the version of Picard we used (version 2.18.29) which rarely truncates some of the VCF's genotype fields. These are fields which we use to store read counts and depths for each sequencing type (WGS, WES, RNAseq). A [bug report][bug_report] has been filed with Picard. In the current version of the pipeline we recover the dropped entries from the original HG19 VCF. While searching for and correcting these entries, we also reorder the FORMAT and genotype fields to a logical ordering, as opposed to the alphabetical output order of Picard.
 
 `vt normalize` is used to obtain consistent representations of all variants which may have multiple equivalent forms. If VT modifies a variant, it records the original form in the `OLD_VARIANT` info tag. [Click here][vt] to read about variant normalization.
 
 For a full description of the annotations determined for each variant, see the [VEP documentation][vep].
 
-For more information on the variant calling format (VCF), please see the latest specification for VCF document listed [here][hts-specs].
+The VCF headers will explain each annotation used, including the fields for read counts and depths of each sequencing type. For more information on the variant calling format (VCF), please see the version 4.2 specification for VCF documents [here][vcf-specs].
 
 ### CNV files
 
@@ -100,7 +98,7 @@ CNV files contain copy number alteration (CNA) analysis results for paired tumor
 [bug_report]: https://github.com/broadinstitute/picard/issues/1558
 [bcftools]: http://samtools.github.io/bcftools/bcftools.html
 [validator]: https://vcftools.github.io/perl_module.html#vcf-validator
-[hts-specs]: https://samtools.github.io/hts-specs/
+[vcf-specs]: https://samtools.github.io/hts-specs/VCFv4.2.pdf
 [msgen]: https://azure.microsoft.com/en-us/services/genomics/
 [msgen-whitepaper]: https://azure.microsoft.com/en-us/resources/accelerate-precision-medicine-with-microsoft-genomics/
 [gatk-haplotype-caller]: https://software.broadinstitute.org/gatk/documentation/tooldocs/3.8-0/org_broadinstitute_gatk_tools_walkers_haplotypecaller_HaplotypeCaller.php
