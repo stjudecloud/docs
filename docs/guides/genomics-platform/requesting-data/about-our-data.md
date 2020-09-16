@@ -28,7 +28,7 @@ Somatic VCF files available on St. Jude Cloud have been generated when possible 
 2. Post processing of aligned reads was performed using [Picard][picard] `CleanSam` and `MarkDuplicates`.
 3. Variants were called using the [Bambino][bambino-paper] variant caller (you can download Bambino [here][bambino-download] or by navigating to the [Zhang Lab page][bambino-program] where the  "Bambino package" is listed as a dependency under the CONSERTING section).
 4. Variants were post-processed using an in-house post-processing pipeline that cleans and annotates variants. This pipeline is not currently publicly available.
-5. Depending on cohort, either all variants were manually reviewed by analysts or a subset comprising all coding variants were manually reviewed.
+5. Depending on cohort, either all variants were manually reviewed by analysts or a subset comprising all coding variants were manually reviewed. PCGP had all variants manually reviewed, while in Clincal Pilot, G4K, and RTCG only coding variants were manually reviewed.
 6. Filtering:
       * If a previous publication for a cohort had a published list of variants based on manual curation, that complete list of variants was used for VCF generation. These inlcude the Clinical Pilot and PCGP cohorts.
       * If there was not a canonical list of variants for a cohort, automated filtering based on metrics derived from the in-house post-processing pipeline and the input of analysts was applied. These include the G4K and RTCG cohorts.
