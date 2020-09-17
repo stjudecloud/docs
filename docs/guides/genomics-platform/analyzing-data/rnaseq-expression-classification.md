@@ -7,7 +7,7 @@ St. Jude Cloud provides functionality for generating RNA-Seq Expression Classifi
 ### Requirements
 
 * The RNA-Seq Expression Classification pipeline reference data uses sequencing data from fresh, frozen tissue samples. It has not been evaluated for use with sequencing data generated from formalin-fixed paraffin-embedded (FFPE) specimens.
-* If running the count-based pipeline, alignment must be done against the [GRCh38_no_alt reference](ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz). It should use parameters as specifed in our [RNA-seq workflow](https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html) to minimize any discrepancies caused by differing alignment specification.
+* If running the count-based pipeline, alignment must be done against the [GRCh38_no_alt reference](ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz). It should use parameters as specified in our [RNA-seq workflow](https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html) to minimize any discrepancies caused by differing alignment specification.
 * If running the count-based pipeline, feature counts should be generated with htseq-count as described in our [RNA-seq workflow](https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html). This pipeline uses [Gencode v31](ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_31/gencode.v31.annotation.gtf.gz) annotations.
 
 ### Inputs
@@ -87,7 +87,7 @@ To get started, you need to navigate to the [RNA-Seq Expression Classification t
 
 The RNA-Seq Expression Classification pipeline takes either a htseq-count count file or a GRCh38_no_alt aligned BAM from human RNA-Seq. You can upload your input file(s) through the command line. See [Uploading Data from your Local Computer](../../../covid-19/upload-local).
 
-Once you have the `dx` doolkit, to upload a sample HTSeq count file `sample.counts.txt` to the `inputs` folder of the `project-rnaseq` cloud project, you could use the following command:
+Once you have the `dx` toolkit, to upload a sample HTSeq count file `sample.counts.txt` to the `inputs` folder of the `project-rnaseq` cloud project, you could use the following command:
 
 ```bash
 dx upload sample.counts.txt --destination "project-rnaseq:/inputs/"
@@ -201,7 +201,7 @@ There are a few known cautions with the RNA-Seq Expression Classification workfl
      
     If running the count-based RNA-Seq Expression Classification pipeline, alignment must be
     done against the [GRCh38_no_alt reference](ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz). 
-    It should use parameters as specifed in our [RNA-seq workflow](https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html) to minimize any discrepancies caused by differing alignment specification.
+    It should use parameters as specified in our [RNA-seq workflow](https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html) to minimize any discrepancies caused by differing alignment specification.
 
     If running the count-based RNA-Seq Expression Classification pipeline, feature counts should be generated
     with htseq-count as described in our [RNA-seq workflow](https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html). 
