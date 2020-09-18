@@ -1,6 +1,14 @@
 excluded_words:
   - SequencErr
   - sequencerr
+  - rnaseq
+  - Gencode
+  - project-rnaseq
+  - rnaseq-expression-classification
+  - Unstranded
+  - DNAnexus
+  - rnaseq-expression-workflow-options-new-ui
+  - rnaseq-expression-workflow-realignment-options-new-ui
 
   # Names
   - Dongren
