@@ -47,9 +47,7 @@ When variants are assessed by analysts, they make a determination about how conf
 
 We only consider variants for reporting with "VALID", "LIKELY_VALID", or "PUTATIVE" designations (three highest confidence designations) from the variant validation status assessment. This determination is stored in a patient somatic VCF file under the `validation_status` info tag. Note that variants designated "PUTATIVE" are filtered out if they were not computationally determined to be of high quality according to an in-house metric. Any variants which were not manually reviewed by an analyst (no 'validation_status') require this high quality designation to pass filtering. When variants are not manually reviewed, they receive a `validation_status` of "NA".
 
-#### Further notes on patient tumor sample VCF files
-
-##### Pre-annotation
+#### Pre-annotation
 
 As part of our post-processing pipeline, variants are processed by a variety of in-silico pathogenicity prediction algorithms that default VEP doesn't provide. We include those results as VCF `INFO` tags when applicable. Note that they were performed on the HG19 coordinates. Algorithms include [Likelihood Ratio Test (LRT)][lrt], [MutationAssessor][assessor], [MutationTaster][taster], and [FATHMM][fathmm].
 
@@ -57,7 +55,7 @@ Bambino represents indels in a format incompatible with the VCF specification. W
 
 Where possible, allele counts for each variant are determined across each sequencing type available for the associated patient tumor-normal pair. These can include WGS, WES and RNA-Seq data. These data are stored in the sample column of the VCF.
 
-##### Processing tools
+#### Processing tools
 
 The newly created HG19 coordinate VCFs are lifted over using [Picard `LiftoverVcf`][picard]. [`hg19ToHg38.over.chain`][chain] is used as the chain file and `GRCh38_no_alt.fa` is used as the reference. The HG38 build includes some reference contigs not present in the GRCh38_no_alt build, so variants which would map to one of those alternate sequences are excluded from the VCFs. Variants which fail Picard liftover may be reviewed by an analyst and lifted over manually. [`bcftools annotate`][bcftools] is used to document the reference file and exact liftover command used in the VCF's header. Note that HG19 alleles and coordinates are stored by Picard in the `OriginalAlleles`, `OriginalContig`, and `OriginalStart` info tags within the final VCF file. Please also note that there is a bug in the version of Picard we used (version 2.18.29) which rarely truncates some of the VCF's genotype fields. These are fields which we use to store read counts and depths for each sequencing type (WGS, WES, RNA-Seq). A [bug report][bug_report] has been filed with Picard. In the current version of the pipeline we recover the dropped entries from the original HG19 VCF. While searching for and correcting these entries, we also reorder the FORMAT and genotype fields to a logical ordering, as opposed to the alphabetical output order of Picard.
 
