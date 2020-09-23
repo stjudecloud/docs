@@ -39,6 +39,10 @@ Somatic VCF files available on St. Jude Cloud have been generated when possible 
 11. Variants were annotated using [VEP v100][vep] and the `--everything` flag.
 12. VCFs were bgzipped and tabixed and validated using [VCFtools' `vcf-validator`][validator].
 
+For more detailed information on steps 1-4, see the [Clinical Pilot paper][clinical-pilot] where they are described in depth.
+
+*Please note the variants in these files were not called from the HG38 BAMs available elsewhere on St. Jude Cloud, but are the results of a separate HG19 pipeline.*
+
 #### Variant Validation Status
 
 When variants are assessed by analysts, they make a determination about how confident they are that the variant is correctly called and present only in the tumor sample. This is a wholistic determination using read counts for all sequencing types available, along with computationally derived statistics created by our post-processing pipeline. Potential pathogenicity is not included in this evaluation.
@@ -101,6 +105,7 @@ CNV files contain copy number alteration (CNA) analysis results for paired tumor
 [bug_report]: https://github.com/broadinstitute/picard/issues/1558
 [bcftools]: http://samtools.github.io/bcftools/bcftools.html
 [validator]: https://vcftools.github.io/perl_module.html#vcf-validator
+[clinical-pilot]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6160438/
 [vcf-specs]: https://samtools.github.io/hts-specs/VCFv4.2.pdf
 [msgen]: https://azure.microsoft.com/en-us/services/genomics/
 [msgen-whitepaper]: https://azure.microsoft.com/en-us/resources/accelerate-precision-medicine-with-microsoft-genomics/
