@@ -83,6 +83,18 @@ We provide two versions of the RNA-Seq Expression Classification tool depending 
 
 To get started, you need to navigate to the [RNA-Seq Expression Classification tool page](https://platform.stjude.cloud/tools/rnaseq-expression-classification). You'll need to click the "Start" button in the left hand pane. This creates a cloud workspace in DNAnexus with the same name as the tool. After this, you will be able to upload your input files to that workspace.
 
+### Obtaining reference data
+
+Reference feature count data can be retrieved through the [Genomics Platform Data Browser](https://platform.stjude.cloud/data/publications?publication_accession=SJC-PB-1020). 
+
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/Requesting-StJudeCloud-paper.gif)
+
+These must then be provided to the workflow through the `reference_counts` parameter. By default, all reference files will be used by the app, but this can be restricted to one of the three tumor types [Blood, Brain, Solid] through the app settings.
+
+### Running the tool
+
+Once you've uploaded data to your cloud workspace, click "Launch Tool" on the tool's landing page. A dropdown will present the different presets for running the workflow. Here, you can select whether you wish to start with a counts file or a BAM file. Once the tool has been vended, **copy** the workflow to the project containing the reference data.
+
 ### Uploading data
 
 The RNA-Seq Expression Classification pipeline takes either a htseq-count count file or a GRCh38_no_alt aligned BAM from human RNA-Seq. You can upload your input file(s) through the command line. See [Uploading Data from your Local Computer](../../../covid-19/upload-local).
@@ -92,18 +104,6 @@ Once you have the `dx` toolkit, to upload a sample HTSeq count file `sample.coun
 ```bash
 dx upload sample.counts.txt --destination "project-rnaseq:/inputs/"
 ```
-
-### Running the tool
-
-Once you've uploaded data to your cloud workspace, click "Launch Tool" on the tool's landing page. A dropdown will present the different presets for running the workflow. Here, you can select whether you wish to start with a counts file or a BAM file.
-
-### Obtaining reference data
-
-Reference feature count data can be retrieved through the [Genomics Platform Data Browser](https://platform.stjude.cloud/data/publications?publication_accession=SJC-PB-1020). 
-
-![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/Requesting-StJudeCloud-paper.gif)
-
-These must then be provided to the workflow through the `reference_counts` parameter. By default, all reference files will be used by the app, but this can be restricted to one of the three tumor types [Blood, Brain, Solid] through the app settings.
 
 ### Preparing input data
 
@@ -117,7 +117,11 @@ To run an input sample, certain properties need to be set on the file. These sho
 | strandedness | Stranded-Forward, Stranded-Reverse, Unstranded |
 | pairing | Paired-end or Single-end |
 
-To input properties in DNAnexus, you can either use the web UI or the command line interface. Here, we provide a command line snippet to set properties on a file.
+Properties can be set at the job-level for all input files that do not have properties set. These function as defaults and will not override existing values on files. The options are limited to values in our reference cohort to ensure reliable results. 
+
+![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/dx_options.png)
+
+If a more granular control of covariates is needed, the input files can be annotated directly with properties. To input properties in DNAnexus, you can either use the web UI or the command line interface. Here, we provide a command line snippet to set properties on a file.
 
 ```bash
 # you can run the following code snippet after filling in your values
