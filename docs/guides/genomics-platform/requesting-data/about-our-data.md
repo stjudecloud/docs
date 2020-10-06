@@ -95,7 +95,7 @@ CNV files contain copy number alteration (CNA) analysis results for paired tumor
 [bambino-program]: https://www.stjuderesearch.org/site/lab/zhang
 [bambino-download]: http://ftp.stjude.org/pub/software/conserting/bambino-1.0.jar
 [pediatric-cancer-cohorts]: https://platform.stjude.cloud/data/cohorts/pediatric-cancer
-[vt]: https://genome.sph.umich.edu/wiki/Vt
+[vt]: https://genome.sph.umich.edu/wiki/Vt#Normalization
 [vep]: https://uswest.ensembl.org/info/docs/tools/vep/index.html
 [lrt]: https://genome.cshlp.org/content/19/9/1553.abstract
 [assessor]: http://mutationassessor.org/r3/
