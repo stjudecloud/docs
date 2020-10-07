@@ -27,19 +27,20 @@ Somatic VCF files available on St. Jude Cloud have been generated when possible 
 1. Whole-genome (WGS) and/or Whole-exome (WES) sequencing data were aligned to HG19 using [bwa backtrack][bwa] (`bwa aln` + `bwa sampe`) using default parameters.
 2. Post processing of aligned reads was performed using [Picard][picard] `CleanSam` and `MarkDuplicates`.
 3. Variants were called using the [Bambino][bambino-paper] variant caller (you can download Bambino [here][bambino-download] or by navigating to the [Zhang Lab page][bambino-program] where the  "Bambino package" is listed as a dependency under the CONSERTING section).
-4. If RNA-Sequencing was performed on a sample, we assess the presence of any called variants in a StrongARM aligned RNA-Seq BAM file.
-5. Variants were post-processed using an in-house post-processing pipeline that cleans and annotates variants. This pipeline is not currently publicly available.
-6. Depending on cohort, either all variants were manually reviewed by analysts (PCGP cohort) or a subset comprising all coding variants were manually reviewed (Clinical Pilot, G4K, and RTCG). This resulted in the assignment of a validation status for each variant (see below).
-7. Variant filtering:
+4. If RNA-Sequencing was performed on a tumor sample, we assess the presence of any called variants in a StrongARM aligned RNA-Seq BAM file.
+5. In some Clinical Pilot cases, validation capture analysis was performed, in which case the read counts of that experiment are reported.
+6. Variants were post-processed using an in-house post-processing pipeline that cleans and annotates variants. This pipeline is not currently publicly available.
+7. Depending on cohort, either all variants were manually reviewed by analysts (PCGP cohort) or a subset comprising all coding variants were manually reviewed (Clinical Pilot, G4K, and RTCG). This resulted in the assignment of a validation status for each variant [(see below)](#variant-validation-status).
+8. Variant filtering:
     * For patient samples where a complete set of variants has been manually curated and previously reported as part of an existing publication, this published set of variants was considered the complete set of variants for that patient tumor sample. This includes all samples in the Clinical Pilot cohort study;
-    * For currently unpublished patient tumor samples, we filtered variants based on metrics derived from the in-house post-processing pipeline and the input of analysts (see below). This includes patient tumor samples from the PCGP, G4K, and RTCG cohorts.
-8. Variants were converted to VCF format.
-9. Variant coordinates were lifted over to GRCh38_no_alt using [Picard][picard] `LiftoverVcf`.
-10. Variants were normalized using [`vt normalize`][vt].
-11. Variants were annotated using [VEP v100][vep] and the `--everything` flag.
-12. VCFs were bgzipped and tabixed and validated using [VCFtools' `vcf-validator`][validator].
+    * For currently unpublished patient tumor samples, we filtered variants based on metrics derived from the in-house post-processing pipeline and the input of analysts [(see below)](#variant-validation-status). This includes patient tumor samples from the PCGP, G4K, and RTCG cohorts.
+9. Variants were converted from our in-house format to VCF format.
+10. Variant coordinates were lifted over to GRCh38_no_alt using [Picard][picard] `LiftoverVcf`.
+11. Variants were normalized using [`vt normalize`][vt].
+12. Variants were annotated using [VEP v100][vep] and the `--everything` flag.
+13. VCFs were bgzipped and tabixed and validated using [VCFtools' `vcf-validator`][validator].
 
-For more detailed information on steps 1-4, see the [Clinical Pilot paper][clinical-pilot] where they are described in depth.
+For more detailed information on steps 1-5, see the [Clinical Pilot paper][clinical-pilot] where they are described in depth.
 
 *Please note the variants in these files were not called from the HG38 BAMs available elsewhere on St. Jude Cloud, but are the results of a separate HG19 pipeline.*
 
@@ -49,7 +50,7 @@ When variants are assessed by analysts, they make a determination about how conf
 
 #### Variant Filtering
 
-We only consider variants for reporting with "VALID", "LIKELY_VALID", or "PUTATIVE" designations (three highest confidence designations) from the variant validation status assessment. This determination is stored in a patient somatic VCF file under the `validation_status` info tag. Note that variants designated "PUTATIVE" are filtered out if they were not computationally determined to be of high quality according to an in-house metric. Any variants which were not manually reviewed by an analyst (no 'validation_status') require this high quality designation to pass filtering. When variants are not manually reviewed, they receive a `validation_status` of "NA".
+We only consider variants for reporting with "VALID", "LIKELY_VALID", or "PUTATIVE" designations (three highest confidence designations) from the variant validation status assessment. This determination is stored in a patient somatic VCF file under the `validation_status` info tag. Note that variants designated "PUTATIVE" are filtered out if they were not computationally determined to be of high quality according to an in-house metric. Any variants which were not manually reviewed by an analyst (no 'validation_status') require this high quality designation to pass filtering. When variants are not manually reviewed, they receive a `validation_status` of "NA" in the VCF.
 
 #### Pre-annotation
 
@@ -57,11 +58,11 @@ As part of our post-processing pipeline, variants are processed by a variety of 
 
 Bambino represents indels in a format incompatible with the VCF specification. When we convert variants to VCFs, we store the original Bambino representation in the `bambino_representation` tag of the info field. Note that this entry is always in HG19 coordinates.
 
-Where possible, allele counts for each variant are determined across each sequencing type available for the associated patient tumor-normal pair. These can include WGS, WES and RNA-Seq data. These data are stored in the sample column of the VCF.
+Where possible, allele counts and read depths for each variant are determined across each sequencing type available for the associated patient tumor-normal pair. These can include WGS, WES, RNA-Seq, and validation-capture (VALCAP) data. These data are stored in the sample column of the VCF.
 
 #### Processing tools
 
-The newly created HG19 coordinate VCFs are lifted over using [Picard `LiftoverVcf`][picard]. [`hg19ToHg38.over.chain`][chain] is used as the chain file and `GRCh38_no_alt.fa` is used as the reference. The HG38 build includes some reference contigs not present in the GRCh38_no_alt build, so variants which would map to one of those alternate sequences are excluded from the VCFs. Variants which fail Picard liftover may be reviewed by an analyst and lifted over manually. [`bcftools annotate`][bcftools] is used to document the reference file and exact liftover command used in the VCF's header. Note that HG19 alleles and coordinates are stored by Picard in the `OriginalAlleles`, `OriginalContig`, and `OriginalStart` info tags within the final VCF file. Please also note that there is a bug in the version of Picard we used (version 2.18.29) which rarely truncates some of the VCF's genotype fields. These are fields which we use to store read counts and depths for each sequencing type (WGS, WES, RNA-Seq). A [bug report][bug_report] has been filed with Picard. In the current version of the pipeline we recover the dropped entries from the original HG19 VCF. While searching for and correcting these entries, we also reorder the FORMAT and genotype fields to a logical ordering, as opposed to the alphabetical output order of Picard.
+The newly created HG19 coordinate VCFs are lifted over using [Picard `LiftoverVcf`][picard]. [`hg19ToHg38.over.chain`][chain] is used as the chain file and `GRCh38_no_alt.fa` is used as the reference. The HG38 build includes some reference contigs not present in the GRCh38_no_alt build, so variants which would map to one of those alternate sequences are excluded from the VCFs. Variants which fail Picard liftover may be reviewed by an analyst and lifted over manually. [`bcftools annotate`][bcftools] is used to document the reference file and exact liftover command used in the VCF's header. Note that HG19 alleles and coordinates are stored by Picard in the `OriginalAlleles`, `OriginalContig`, and `OriginalStart` info tags within the final VCF file. Please also note that there is a bug in the version of Picard we used (version 2.18.29) which rarely truncates some of the VCF's genotype fields. These are fields which we use to store read counts and depths for each sequencing type (WGS, WES, RNA-Seq, VALCAP). A [bug report][bug_report] has been filed with Picard. In the current version of the pipeline we recover the dropped entries from the original HG19 VCF. While searching for and correcting these entries, we also reorder the FORMAT and genotype fields to a logical ordering, as opposed to the alphabetical output order of Picard.
 
 `vt normalize` is used to obtain consistent representations of all variants which may have multiple equivalent forms. If VT modifies a variant, it records the original form in the `OLD_VARIANT` info tag. [Click here][vt] to read about variant normalization.
 
