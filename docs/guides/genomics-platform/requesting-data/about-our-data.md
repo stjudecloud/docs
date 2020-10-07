@@ -28,7 +28,7 @@ Somatic VCF files available on St. Jude Cloud have been generated when possible 
 2. Post processing of aligned reads was performed using [Picard][picard] `CleanSam` and `MarkDuplicates`.
 3. Variants were called using the [Bambino][bambino-paper] variant caller (you can download Bambino [here][bambino-download] or by navigating to the [Zhang Lab page][bambino-program] where the  "Bambino package" is listed as a dependency under the CONSERTING section).
 4. If RNA-Sequencing was performed on a tumor sample, we assess the presence of any called variants in a StrongARM aligned RNA-Seq BAM file.
-5. In some Clinical Pilot cases, validation capture analysis was performed, in which case the read counts of that experiment are reported.
+5. In some Clinical Pilot cases, validation by custom capture was performed, in which case the read counts of that experiment are reported.
 6. Variants were post-processed using an in-house post-processing pipeline that cleans and annotates variants. This pipeline is not currently publicly available.
 7. Depending on cohort, either all variants were manually reviewed by analysts (PCGP cohort) or a subset comprising all coding variants were manually reviewed (Clinical Pilot, G4K, and RTCG). This resulted in the assignment of a validation status for each variant [(see below)](#variant-validation-status).
 8. Variant filtering:
