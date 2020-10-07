@@ -70,6 +70,10 @@ For a full description of the annotations determined for each variant, see the [
 
 The VCF headers will explain each annotation used, including the fields for read counts and depths of each sequencing type. For more information on the variant calling format (VCF), please see the version 4.2 specification for VCF documents [here][vcf-specs].
 
+#### Additional Caveats
+
+It is possible for the same variant to be included more than once. This is most commonly caused by functionally equivalent indels being called with different forms at nearby locations in the original pipeline. However once the variants are normalized, it is revealed that they are the same variant. We make no attempt to select one entry when this occurs and opt to include all duplicates. They may have different read evidence or validation statuses. There may be other sources of these duplicates, but they are rare and we make no attempt to remove them.
+
 ### CNV files
 
 CNV files contain copy number alteration (CNA) analysis results for paired tumor-normal WGS samples. Files are produced by running paired tumor-normal BAM files through the [CONSERTING][conserting] pipeline which identifies CNA through iterative analysis of (i) local segmentation by read depth within boundaries identified by structural variation (SV) breakpoints followed by (ii) segment merging and local SV analysis. [CREST][crest] was used to identify local SV breakpoints. CNV files contain the following information:
