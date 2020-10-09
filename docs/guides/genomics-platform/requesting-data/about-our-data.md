@@ -66,7 +66,7 @@ The newly created HG19 coordinate VCFs are lifted over using [Picard `LiftoverVc
 
 `vt normalize` is used to obtain consistent representations of all variants which may have multiple equivalent forms. If VT modifies a variant, it records the original form in the `OLD_VARIANT` info tag. [Click here][vt] to read about variant normalization.
 
-For a full description of the annotations determined for each variant, see the [VEP documentation][vep].
+For a full description of the annotations VEP determined for each variant, see the [VEP documentation][vep].
 
 The VCF headers will explain each annotation used, including the fields for read counts and depths of each sequencing type. For more information on the variant calling format (VCF), please see the version 4.2 specification for VCF documents [here][vcf-specs].
 
