@@ -5,7 +5,7 @@ The [Data Access Agreement (DAA)](glossary.md#data-access-agreement) is a legal 
 Upon selection of your desired data, you will be prompted to complete a Data Access Agreement if you have not already been approved for access to the selected datasets. In order to simplify the data access request process, an [electronic data access agreement](#the-electronic-data-access-agreement-process) is available for US residents only.
 
 
-If you reside outside of the US, you must fill out the Data Access Agreement manually. You may click [here](../../../files/DAA_v4_10-1-2019.pdf) to download the latest version of the DAA. Please read the first 6 pages carefully, which consist of terms and conditions that you and your institution must agree to in order to access any data on St. Jude Cloud. Then, follow the directions starting at [Data Access Units](#data-access-units) to ensure that you have correctly filled out the DAA. Please note that there are [two additional required sections](#downloading-data) if you intend to download data to your local infrastructure.
+If you reside outside of the US, you must fill out the Data Access Agreement manually. You may click [here](../../../files/DataAccessAgreement_v4.2_10.13.20.pdf) to download the latest version of the DAA. Please read the first 6 pages carefully, which consist of terms and conditions that you and your institution must agree to in order to access any data on St. Jude Cloud. Then, follow the directions starting at [Data Access Units](#data-access-units) to ensure that you have correctly filled out the DAA. Please note that there are [two additional required sections](#downloading-data) if you intend to download data to your local infrastructure.
 
 ## The Data Access Agreement
 
