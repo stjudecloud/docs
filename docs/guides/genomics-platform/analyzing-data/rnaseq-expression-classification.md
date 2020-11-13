@@ -91,6 +91,9 @@ Reference feature count data can be retrieved through the [Genomics Platform Dat
 
 These must then be provided to the workflow through the `reference_counts` parameter. By default, all reference files will be used by the app, but this can be restricted to one of the three tumor types [Blood, Brain, Solid] through the app settings.
 
+!!! caution
+    The RNA-Seq Expression Classification tool does not allow the same sample name to be included more than once. If data from multiple projects is requested through St. Jude Cloud Genomics Platform, a sample may be included more than once. We offer an opinionated deduplication method at https://github.com/stjudecloud/utilities. 
+
 ### Running the tool
 
 Once you've uploaded data to your cloud workspace, click "Launch Tool" on the tool's landing page. A dropdown will present the different presets for running the workflow. Here, you can select whether you wish to start with a counts file or a BAM file. Once the tool has been vended, **copy** the workflow to the project containing the reference data.
@@ -174,7 +177,7 @@ You can click the "+" on any of the runs to check the status of individual steps
 
 ## Interpreting Results
 
-Once the resulting analysis job completes, an HTML plot of the results should be available. The plot is generated with the [Plotly R library](https://plot.ly/r/). The plot can be zoomed arbitrarily and group labels can be turned on/off for manual inspection. User input samples will be displayed in black marks with a label on the graph as well as an entry in the legend.
+Once the resulting analysis job completes, an HTML plot of the results should be available. The plot is generated with the [Protein Paint library](https://www.nature.com/articles/ng.3466). The plot can be zoomed arbitrarily and group labels can be turned on/off for manual inspection. User input samples will be displayed in black marks with a label on the graph as well as an entry in the legend.
 
 ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/rnaseq-expression-plot.png)
 
