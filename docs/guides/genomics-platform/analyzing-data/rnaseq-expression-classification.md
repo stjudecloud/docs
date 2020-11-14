@@ -177,7 +177,7 @@ You can click the "+" on any of the runs to check the status of individual steps
 
 ## Interpreting Results
 
-Once the resulting analysis job completes, an HTML plot of the results should be available. The plot is generated with the [Protein Paint library](https://www.nature.com/articles/ng.3466). The plot can be zoomed arbitrarily and group labels can be turned on/off for manual inspection. User input samples will be displayed in black marks with a label on the graph as well as an entry in the legend.
+Once the resulting analysis job completes, an HTML plot of the results should be available. The plot is generated with the [ProteinPaint library](https://www.nature.com/articles/ng.3466). The plot can be zoomed arbitrarily and group labels can be turned on/off for manual inspection. User input samples will be displayed in black marks with a label on the graph as well as an entry in the legend.
 
 ![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/rnaseq-expression-plot.png)
 
