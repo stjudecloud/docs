@@ -2218,6 +2218,10 @@ recommend submitting the sample to the realignment-based workflow.</p>
 <p>Reference feature count data can be retrieved through the <a href="https://platform.stjude.cloud/data/publications?publication_accession=SJC-PB-1020">Genomics Platform Data Browser</a>. </p>
 <p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/Requesting-StJudeCloud-paper.gif" /></p>
 <p>These must then be provided to the workflow through the <code>reference_counts</code> parameter. By default, all reference files will be used by the app, but this can be restricted to one of the three tumor types [Blood, Brain, Solid] through the app settings.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>The RNA-Seq Expression Classification tool does not allow the same sample name to be included more than once. If data from multiple projects is requested through St. Jude Cloud Genomics Platform, a sample may be included more than once. We offer an opinionated deduplication method at <a href="https://github.com/stjudecloud/utilities">https://github.com/stjudecloud/utilities</a>. </p>
+</div>
 <h3 id="running-the-tool">Running the tool<a class="headerlink" href="#running-the-tool" title="Permanent link">&para;</a></h3>
 <p>Once you've uploaded data to your cloud workspace, click "Launch Tool" on the tool's landing page. A dropdown will present the different presets for running the workflow. Here, you can select whether you wish to start with a counts file or a BAM file. Once the tool has been vended, <strong>copy</strong> the workflow to the project containing the reference data.</p>
 <h3 id="uploading-data">Uploading data<a class="headerlink" href="#uploading-data" title="Permanent link">&para;</a></h3>
@@ -2292,7 +2296,7 @@ dx set_properties <span class="nv">$file_id</span> <span class="nv">pairing</spa
 <p>Once you have started one or more RNA-Seq Expression Classification runs, you can safely close your browser and come back later to check the status of the jobs. To do this, navigate to the tool's landing page. Next, click "View Results" then select the "View Running Jobs" option. You will be redirected to the job monitoring page. Each job you kicked off gets one row in this table.</p>
 <p>You can click the "+" on any of the runs to check the status of individual steps of the RNA-Seq Expression Classification pipeline. Other information, such as time, cost of individual steps in the pipeline, and even viewing the job logs can accessed by clicking around the sub-items.</p>
 <h2 id="interpreting-results">Interpreting Results<a class="headerlink" href="#interpreting-results" title="Permanent link">&para;</a></h2>
-<p>Once the resulting analysis job completes, an HTML plot of the results should be available. The plot is generated with the <a href="https://plot.ly/r/">Plotly R library</a>. The plot can be zoomed arbitrarily and group labels can be turned on/off for manual inspection. User input samples will be displayed in black marks with a label on the graph as well as an entry in the legend.</p>
+<p>Once the resulting analysis job completes, an HTML plot of the results should be available. The plot is generated with the <a href="https://www.nature.com/articles/ng.3466">ProteinPaint library</a>. The plot can be zoomed arbitrarily and group labels can be turned on/off for manual inspection. User input samples will be displayed in black marks with a label on the graph as well as an entry in the legend.</p>
 <p><img alt="" src="../../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/rnaseq-expression-plot.png" /></p>
 <h2 id="batch-effect-corrections">Batch effect corrections<a class="headerlink" href="#batch-effect-corrections" title="Permanent link">&para;</a></h2>
 <p>When comparing numerous samples such as those included in this analysis, it is important to consider 
@@ -2407,7 +2411,7 @@ This pipeline uses <a href="ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_hu
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/3d04887">3d04887</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/40c694c">40c694c</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
