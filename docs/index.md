@@ -52,7 +52,7 @@ The following projects currently distribute data through St. Jude Cloud. Click [
 
 St. Jude shares a number of end-to-end analysis workflows as part of the Genomics Platform application. Click on the links below to learn more about the workflow.
 
-* [NeoepitopePred](https://platform.stjude.cloud/workflows/neoepitopepred)
+<!-- * [NeoepitopePred](https://platform.stjude.cloud/workflows/neoepitopepred) -->
 * [ChIP-Seq Peak Calling](https://platform.stjude.cloud/workflows/chip-seq)
 * [Rapid RNA-Seq Fusion Detection](https://platform.stjude.cloud/workflows/rapid_rna-seq)
 * [WARDEN Differential Expression Analysis](https://platform.stjude.cloud/workflows/warden)
