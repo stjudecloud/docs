@@ -32,13 +32,14 @@ Somatic VCF files available on St. Jude Cloud have been generated when possible 
 6. Variants were post-processed using an in-house post-processing pipeline that cleans and annotates variants. This pipeline is not currently publicly available.
 7. Depending on cohort, either all variants were manually reviewed by analysts (PCGP cohort) or a subset comprising all coding variants were manually reviewed (Clinical Pilot, G4K, and RTCG). This resulted in the assignment of a validation status for each variant [(see below)](#variant-validation-status).
 8. Variant filtering:
-    * For patient samples where a complete set of variants has been manually curated and previously reported as part of an existing publication, this published set of variants was considered the complete set of variants for that patient tumor sample. This includes samples in the Clinical Pilot cohort study;
+    * For patient samples where a complete set of variants has been manually curated and previously reported as part of an existing publication, this published set of variants was considered the complete set of variants for that patient tumor sample. This includes samples in the Clinical Pilot cohort study and some PCGP cohort samples.
     * For currently unpublished patient tumor samples, we filtered variants based on metrics derived from the in-house post-processing pipeline and the input of analysts [(see below)](#variant-validation-status). This includes patient tumor samples from the PCGP, G4K, and RTCG cohorts, and some Clincal Pilot samples.
 9. Variants were converted from our in-house formats to VCF format.
 10. Variant coordinates were lifted over to GRCh38_no_alt using [Picard][picard] `LiftoverVcf`.
 11. Variants were normalized using [`vt normalize`][vt].
 12. Variants were annotated using [VEP v100][vep] and the `--everything` flag.
-13. VCFs were bgzipped and tabixed and validated using [VCFtools' `vcf-validator`][validator].
+13. VCFs were bgzipped and tabixed and validated using [VCFtools' `vcf-validator`][vcf-validator].
+    * VCFtools' `vcf-validator` is outdated, and is being replaced with [GATK's `ValidateVariants`][gatk-validator] in future versions of the pipeline.
 
 For more detailed information on steps 1-5, see the [Clinical Pilot paper][clinical-pilot] where they are described in depth.
 
@@ -110,7 +111,8 @@ CNV files contain copy number alteration (CNA) analysis results for paired tumor
 [chain]: http://hgdownload.soe.ucsc.edu/goldenPath/hg19/liftOver/hg19ToHg38.over.chain.gz
 [bug_report]: https://github.com/broadinstitute/picard/issues/1558
 [bcftools]: http://samtools.github.io/bcftools/bcftools.html
-[validator]: https://vcftools.github.io/perl_module.html#vcf-validator
+[vcf-validator]: https://vcftools.github.io/perl_module.html#vcf-validator
+[gatk-validator]: https://gatk.broadinstitute.org/hc/en-us/articles/360037057272-ValidateVariants
 [clinical-pilot]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6160438/
 [vcf-specs]: https://samtools.github.io/hts-specs/VCFv4.2.pdf
 [msgen]: https://azure.microsoft.com/en-us/services/genomics/
