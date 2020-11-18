@@ -1,12 +1,14 @@
 
 In this guide, we will explain generally how to run, from end-to-end, any of our in house analysis workflows from within the DNAnexus cloud ecosystem. The [DNAnexus](https://www.dnanexus.com/) genomic ecosystem is the backbone for the computation and storage in St. Jude Cloud. If you'd like, you can read an introduction to the DNAnexus ecosystem [here](https://documentation.dnanexus.com/). If you haven't already, follow [this guide](../requesting-data/data-request.md) to request access to St. Jude data in this secure cloud ecosystem. 
 
+!!! note
+    If you have used the initial funds from creating your account and are still testing our workflows, please reach out to support@stjude.cloud and we can help you access additional collaboration funding.
 
 ## Getting started
 
 To get started with any St. Jude Cloud workflow, first navigate to the appropriate workflow page. Below is a complete list of the workflows we offer along with links to their corresponding tool page and documentation page.
 
-* NeoepitopePred [[tool page](https://platform.stjude.cloud/workflows/neoepitopepred)] [[documentation](neoepitope.md)]
+<!--* NeoepitopePred [[tool page](https://platform.stjude.cloud/workflows/neoepitopepred)] [[documentation](neoepitope.md)]-->
 * ChIP-Seq Peak Calling [[tool page](https://platform.stjude.cloud/workflows/chip-seq)] [[documentation](chipseq.md)]
 * Rapid RNA-Seq Fusion Detection [[tool page](https://platform.stjude.cloud/workflows/rapid_rna-seq)] [[documentation](rapid-rnaseq.md)]
 * WARDEN Differential Expression Analysis [[tool page](https://platform.stjude.cloud/workflows/warden)] [[documentation](warden.md)]
