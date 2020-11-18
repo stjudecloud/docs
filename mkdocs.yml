@@ -18,8 +18,6 @@ nav:
   - COVID-19 Quickstart:
       - Introduction: guides/covid-19/index.md
       - Getting started: guides/covid-19/getting-started.md
-      - Data upload (local): guides/covid-19/upload-local.md
-      - Data upload (HPC): guides/covid-19/upload-cluster.md
       - Creating a cloud app: guides/covid-19/creating-a-cloud-app-covid.md
       - Interactive nodes: guides/covid-19/interactive-node.md
       - Visualizing NGS data: guides/covid-19/visualizing-ngs-data.md
@@ -33,7 +31,8 @@ nav:
           - About our Decision Process & Terminology: guides/genomics-platform/requesting-data/glossary.md
       - Managing Data:
           - Managing Data Overview: guides/genomics-platform/managing-data/working-with-our-data.md
-          - Uploading/Downloading Data: guides/genomics-platform/managing-data/data-transfer-app.md
+          - Upload/Download Data (local): guides/genomics-platform/managing-data/upload-local.md
+          - Upload Data (HPC): guides/genomics-platform/managing-data/upload-cluster.md
           - Renewing your Data Access: guides/genomics-platform/managing-data/how-to-fill-out-Extension.md
       - Analyzing Data:
           - Command Line Interaction: guides/genomics-platform/analyzing-data/command-line.md
