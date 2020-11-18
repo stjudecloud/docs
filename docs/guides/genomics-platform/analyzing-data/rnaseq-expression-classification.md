@@ -85,9 +85,7 @@ To get started, you need to navigate to the [RNA-Seq Expression Classification t
 
 ### Obtaining reference data
 
-Reference feature count data can be retrieved through the [Genomics Platform Data Browser](https://platform.stjude.cloud/data/publications?publication_accession=SJC-PB-1020). 
-
-![](../../../images/guides/genomics-platform/analyzing-data/sj-workflows/rnaseq-expression-classification/Requesting-StJudeCloud-paper.gif)
+Reference data is vended to the project folder along with the workflow. It can be found in the “counts” folder.
 
 These must then be provided to the workflow through the `reference_counts` parameter. By default, all reference files will be used by the app, but this can be restricted to one of the three tumor types [Blood, Brain, Solid] through the app settings.
 
