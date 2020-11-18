@@ -42,7 +42,6 @@ nav:
               - cis-X: guides/genomics-platform/analyzing-data/cis-x.md
               - MethylationToActivity: guides/genomics-platform/analyzing-data/methylation-to-activity.md
               - Mutational Signatures: guides/genomics-platform/analyzing-data/mutational-signatures.md
-              - NeoepitopePred: guides/genomics-platform/analyzing-data/neoepitope.md
               - Rapid RNA-Seq Fusion Detection: guides/genomics-platform/analyzing-data/rapid-rnaseq.md
               - RNA-Seq Expression Classification: guides/genomics-platform/analyzing-data/rnaseq-expression-classification.md
               - SequencErr: guides/genomics-platform/analyzing-data/sequencerr.md
