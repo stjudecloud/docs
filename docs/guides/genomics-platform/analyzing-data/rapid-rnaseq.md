@@ -223,4 +223,4 @@ See [How can I run an analysis workflow on multiple sample files at the same tim
 
 [Running our Workflows](../analyzing-data/running-sj-workflows.md)  
 [Working with our Data Overview](../managing-data/working-with-our-data.md)   
-[Downloading/Uploading Data](../managing-data/data-transfer-app.md)   
+[Upload/Download Data (local)](../managing-data/upload-local.md)   

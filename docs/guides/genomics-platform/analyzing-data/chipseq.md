@@ -178,4 +178,4 @@ the analysis with a specified fragment length.
 
 [Running our Workflows](../analyzing-data/running-sj-workflows.md)  
 [Working with our Data Overview](../managing-data/working-with-our-data.md)   
-[Downloading/Uploading Data](../managing-data/data-transfer-app.md)   
+[Upload/Download Data (local)](../managing-data/upload-local.md)   

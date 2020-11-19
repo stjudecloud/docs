@@ -2,7 +2,7 @@
 
 Genomics Platform is an app that allows you to browse, request, host, and analyze raw next-generation sequencing data. This app is a collaboration between [St. Jude Children's Research Hospital](https://www.stjude.org/), [Microsoft Azure](https://azure.microsoft.com/en-us/), and [DNAnexus](https://www.dnanexus.com/). 
 
-We provide high quality next generation Whole Genome (WGS), Whole Exome (WES), and RNA-Seq data to researchers around the world. There is a [request process](./requesting-data/data-request.md) to protect this data even though it is de-identified. One of the benefits of partnering with DNAnexus is that users can not only access our data, but also upload their own. [Click here to learn how](../managing-data/data-transfer-app/#uploading-files). 
+We provide high quality next generation Whole Genome (WGS), Whole Exome (WES), and RNA-Seq data to researchers around the world. There is a [request process](./requesting-data/data-request.md) to protect this data even though it is de-identified. One of the benefits of partnering with DNAnexus is that users can not only access our data, but also upload their own. [Click here to learn how](./managing-data/upload-local.md). 
 
 ![](../../images/guides/genomics-platform/genomics-platform-home.png)
 

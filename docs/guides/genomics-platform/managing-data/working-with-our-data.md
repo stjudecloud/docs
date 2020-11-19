@@ -42,10 +42,10 @@ The `SAMPLE_INFO.txt` file provides all the [metadata](../requesting-data/about-
 There are two primary ways you can interact with data vended to you in St. Jude Cloud:
 
 * **Cloud access**. You can choose to work with the data in DNAnexus' genomics cloud ecosystem. This is our suggested method of interaction, as you can avoid downloading the data to your local servers (which both takes time and is error prone). If you choose to leverage this approach, you can either wrap your own analysis pipeline as a cloud app (see [our guide](../analyzing-data/creating-a-cloud-app.md)) or leverage any of DNAnexus' publicly available apps (see [DNAnexus' guide](https://documentation.dnanexus.com/user/running-apps-and-workflows).
-* **Download the data** (*not suggested*). The second way to interact with data vended to you in St. Jude Cloud is by downloading the data to your local servers. If you wish to do this, you can either leverage the St. Jude Cloud Data Transfer Application (see [our guide](data-transfer-app.md)) or you can download the data on the command line (see [our guide](../analyzing-data/command-line.md)). **Note that you must have indicated you wish to download the data in your [data access agreement](../requesting-data/how-to-fill-out-DAA.md#the-data-access-agreement).**
+* **Download the data** (*not suggested*). The second way to interact with data vended to you in St. Jude Cloud is by downloading the data to your local servers. If you wish to do this, you can download the data on the command line (see [our guide](../analyzing-data/command-line.md)). **Note that you must have indicated you wish to download the data in your [data access agreement](../requesting-data/how-to-fill-out-DAA.md#the-data-access-agreement).**
 
 ## Similar Topics
 
 [About our Data](../requesting-data/about-our-data.md)   
 [Making a Data Request](../requesting-data/data-request.md)  
-[Uploading/Downloading Data](data-transfer-app.md)   
+[Upload/Download Data (local)](../managing-data/upload-local.md)  
