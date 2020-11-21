@@ -38,7 +38,7 @@ nav:
       - Analyzing Data:
           - Command Line Interaction: guides/genomics-platform/analyzing-data/command-line.md
           - Running our Workflows: guides/genomics-platform/analyzing-data/running-sj-workflows.md
-          - SJ Cloud Workflows:
+          - Workflow Guides:
               - ChIP-Seq Peak Calling: guides/genomics-platform/analyzing-data/chipseq.md
               - cis-X: guides/genomics-platform/analyzing-data/cis-x.md
               - MethylationToActivity: guides/genomics-platform/analyzing-data/methylation-to-activity.md
