@@ -6,7 +6,7 @@ In this guide, we will explain generally how to run, from end-to-end, any of our
 
 To get started with any St. Jude Cloud workflow, first navigate to the appropriate workflow page. Below is a complete list of the workflows we offer along with links to their corresponding tool page and documentation page.
 
-* NeoepitopePred [[tool page](https://platform.stjude.cloud/workflows/neoepitopepred)] [[documentation](neoepitope.md)]
+<!-- * NeoepitopePred [[tool page](https://platform.stjude.cloud/workflows/neoepitopepred)] [[documentation](neoepitope.md)] -->
 * ChIP-Seq Peak Calling [[tool page](https://platform.stjude.cloud/workflows/chip-seq)] [[documentation](chipseq.md)]
 * Rapid RNA-Seq Fusion Detection [[tool page](https://platform.stjude.cloud/workflows/rapid_rna-seq)] [[documentation](rapid-rnaseq.md)]
 * WARDEN Differential Expression Analysis [[tool page](https://platform.stjude.cloud/workflows/warden)] [[documentation](warden.md)]

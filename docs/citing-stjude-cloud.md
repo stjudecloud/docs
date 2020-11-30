@@ -38,8 +38,7 @@ Please download the Schedule 1(s) (linked in table below) to find dataset specif
 | -------------------------------- | ----------------- |
 | ProteinPaint | [ProteinPaint paper](https://www.nature.com/articles/ng.3466) | 
 | GenomePaint | paper in progress | 
-| PeCan Pie | [PeCan Pie paper](https://genome.cshlp.org/content/29/9/1555.full) | 
-| NeoepitopePred | [NeoepitopePred paper](https://www.ncbi.nlm.nih.gov/pubmed/28854978) | 
+| PeCan Pie | [PeCan Pie paper](https://genome.cshlp.org/content/29/9/1555.full) |
 | ChIP-Seq Peak Calling | unpublished | 
 | Rapid RNA-Seq Fusion Detection | paper in progress | 
 | WARDEN  | unpublished | 
@@ -47,7 +46,7 @@ Please download the Schedule 1(s) (linked in table below) to find dataset specif
 | cis-x  | paper in progress | 
 | XenoCP  | paper in progress | 
 
-
+<!-- NeoepitopePred | [NeoepitopePred paper](https://www.ncbi.nlm.nih.gov/pubmed/28854978) -->
 
 ## Contact Us
 
