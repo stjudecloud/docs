@@ -1,18 +1,13 @@
+!!! warning "This page is primarily for employees of St. Jude Children's Research Hospital."
+    
 Please complete the following check-list to get started with using St. Jude
 Cloud.
 
-- [X] If applicable, apply for Discovery Sponsorship Program ([link](#apply-for-discovery-sponsorship-program)).
 - [x] Join St. Jude Cloud helpdesk channel on Slack ([link](#joining-slack)).
 - [x] Log in to your St. Jude Cloud account ([link](#login-to-st-jude-cloud)). 
 - [x] Enable Microsoft Azure ([link](#enable-microsoft-azure)). 
 - [x] Create your first project ([link](#create-your-first-project)).
 - [x] Set up your billing account ([link](#set-up-your-billing-account)).
-
-## Apply for Discovery Sponsorship Program
-
-Please see the **Discovery Sponsorship Program** (DSP) section in the figure below for an overview of program benefits. Applying for the program is easy - just fill out the [application form](../../files/DSPApplicationForm.pdf) and submit it to [discoveryprogram@stjude.org](mailto: discoveryprogram@stjude.org). The last day to apply is April 9th. 
-
-![COVID-19 Programs](../../images/guides/covid-19/levels-of-engagement.png)
     
 ## Joining Slack
 
@@ -28,7 +23,7 @@ If you have any issues with the instructions below, you can email [helpdesk@stju
 
 You should now see a screen similar to the one included below. You can type your questions into the chat box at the bottom. See you there!
    
-![Slack Helpdesk Channel](../../images/guides/covid-19/slack-messaging.png)
+![Slack Helpdesk Channel](../../../images/guides/genomics-platform/slack-messaging.png)
 
 
 ## Login to St. Jude Cloud
@@ -50,8 +45,8 @@ This should be sufficient for the purposes of this guide. For more detailed info
 
 1. Change your preferences to pull cloud resources from Microsoft Azure instead of Amazon AWS by default. To do this, (i) click on your profile in the top right corner, (ii) select "My Profile", and (iii) ensure "Azure US (West)" is checked. See the pictures below for more detail.
 
-![Step 1: Click "My Profile"](../../images/guides/covid-19/default-billing-region/1.png)
-![Step 2: Set default billing region](../../images/guides/covid-19/default-billing-region/2.png)
+![Step 1: Click "My Profile"](../../images/guides/genomics-platform/default-billing-region/1.png)
+![Step 2: Set default billing region](../../images/guides/genomics-platform/default-billing-region/2.png)
 
 ## Create your First Project
 
@@ -60,7 +55,7 @@ This should be sufficient for the purposes of this guide. For more detailed info
 1. Select "New Project" in the upper left part of the screen, fill in the form as instructed in the image below, and click "Create Project". You should be redirected to your first DNAnexus project.
 2. We highly recommend you read through [DNAnexus's dedicated guide](https://documentation.dnanexus.com/getting-started/key-concepts/projects#create-a-new-project) to learn about projects: how you can navigate them, how you can share them with collaborators, and how they are billed. 
 
-![Step 1: Create a project](../../images/guides/covid-19/create-a-project/1.png)
+![Step 1: Create a project](../../images/guides/genomics-platform/create-a-project/1.png)
 
 ## Set Up your Billing Account
 
@@ -68,16 +63,15 @@ Billing is handled in St. Jude Cloud by creating and managing a DNAnexus billing
 
 !!! info
 
-    We intend to prioritize funds for Discovery Sponsorship Program participants. However, there is the potential for left-over funds to be available. If you are a lab that would like to use the cloud but do not have funds available, please let us know at [support@stjude.cloud](mailto:support@stjude.cloud).
+    There is the potential for additional funds to be available. If you are a lab that would like to use the cloud but do not have funds available, please let us know at [support@stjude.cloud](mailto:support@stjude.cloud).
 
 **Steps**
 
-1. If your lab has been accepted into the Discovery Sponsorship Program, we will create an organization for you to bill your project against. If we have not already, we will be in contact with you shortly concerning this information.
-2. Otherwise, your lab will need to set up a billing org for itself. Please see our Account and Billing sections below. 
+1. Your lab will need to set up a billing org for itself. Please see our Account and Billing sections below. 
 
-    [Billing for St. Jude Employees](../../../account-and-billing/#billing)
+    [Billing for St. Jude Employees](../accounts-and-billing/#st-jude-employees)
 
-    [Billing for Non-St. Jude Employees](../../../account-and-billing/#billing_1)
+    [Billing for Non-St. Jude Employees](../accounts-and-billing/#non-st-jude-employees)
 
 
 [slack]: https://slack.com/
