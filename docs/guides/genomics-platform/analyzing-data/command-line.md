@@ -146,4 +146,4 @@ data request:
 [About our Data](../requesting-data/about-our-data.md)   
 [Making a Data Request](../requesting-data/data-request.md)   
 [Working with our Data Overview](../managing-data/working-with-our-data.md)   
-[Downloading/Uploading Data](../managing-data/data-transfer-app.md)    
+[Upload/Download Data (local)](../managing-data/upload-local.md)    

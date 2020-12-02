@@ -15,14 +15,6 @@ extra_css:
 nav:
   - Overview: index.md
   - About our Ecosystem: ecosystem.md
-  - COVID-19 Quickstart:
-      - Introduction: guides/covid-19/index.md
-      - Getting started: guides/covid-19/getting-started.md
-      - Data upload (local): guides/covid-19/upload-local.md
-      - Data upload (HPC): guides/covid-19/upload-cluster.md
-      - Creating a cloud app: guides/covid-19/creating-a-cloud-app-covid.md
-      - Interactive nodes: guides/covid-19/interactive-node.md
-      - Visualizing NGS data: guides/covid-19/visualizing-ngs-data.md
   - Genomics Platform:
       - Getting Started: guides/genomics-platform/index.md
       - Accounts and Billing: guides/genomics-platform/accounts-and-billing.md
@@ -33,7 +25,8 @@ nav:
           - About our Decision Process & Terminology: guides/genomics-platform/requesting-data/glossary.md
       - Managing Data:
           - Managing Data Overview: guides/genomics-platform/managing-data/working-with-our-data.md
-          - Uploading/Downloading Data: guides/genomics-platform/managing-data/data-transfer-app.md
+          - Upload/Download Data (local): guides/genomics-platform/managing-data/upload-local.md
+          - Upload Data (HPC): guides/genomics-platform/managing-data/upload-cluster.md
           - Renewing your Data Access: guides/genomics-platform/managing-data/how-to-fill-out-Extension.md
       - Analyzing Data:
           - Command Line Interaction: guides/genomics-platform/analyzing-data/command-line.md
@@ -51,6 +44,8 @@ nav:
               # RNA Indel: guides/genomics-platform/analyzing-data/rna-indel.md
               # FKPM: guides/genomics-platform/analyzing-data/fkpm.md
           - Creating your own Workflow: guides/genomics-platform/analyzing-data/creating-a-cloud-app.md
+          - Interactive nodes: guides/genomics-platform/analyzing-data/interactive-node.md
+          - Visualizing NGS data: guides/genomics-platform/analyzing-data/visualizing-ngs-data.md
       - Frequently Asked Questions: guides/genomics-platform/faq.md
   - PeCan:
       - Getting Started: guides/pecan/index.md

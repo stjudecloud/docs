@@ -27,7 +27,7 @@ For this tutorial I have requested the PCGP dataset, and once my access request 
 ![](../../../images/guides/genomics-platform/analyzing-data/creating-a-cloud-app-0.png)
 
 !!!note
-    If you do not yet have data in a DNAnexus project, you may request data from St. Jude Cloud by following the directions [here](../requesting-data/data-request.md) or you may upload your own data using the [data transfer app](../managing-data/data-transfer-app.md). In order to make a data request or upload your own data using the data transfer app, you must first [create a St. Jude Cloud account](../accounts-and-billing.md).
+    If you do not yet have data in a DNAnexus project, you may request data from St. Jude Cloud by following the directions [here](../requesting-data/data-request.md) or you may upload your own data using [the command line](../analyzing-data/command-line.md). In order to make a data request or upload your own data using the command line, you must first [create a St. Jude Cloud account](../accounts-and-billing.md).
 
 
 ## Writing the Application
@@ -474,5 +474,5 @@ If you have any questions or suggestions on how we can improve this tutorial, pl
 [About our Data](../requesting-data/about-our-data.md)   
 [Making a Data Request](../requesting-data/data-request.md)   
 [Working with our Data Overview](../managing-data/working-with-our-data.md)     
-[Downloading/Uploading Data](../managing-data/data-transfer-app.md)     
+[Upload/Download Data (local)](../managing-data/upload-local.md)    
 [Command Line Interaction](command-line.md)  

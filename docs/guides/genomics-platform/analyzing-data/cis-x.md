@@ -48,7 +48,7 @@ cis-X currently only works with hg19 (GRCh37).
 ### Input file configuration
 
 cis-X requires six tab-delimited input files to be prepared in advance. These
-files can be uploaded via the [data transfer application](../managing-data/data-transfer-app.md) or [command line](../analyzing-data/command-line.md).
+files can be uploaded via the [command line](../analyzing-data/command-line.md).
 
 
 !!! note
@@ -463,7 +463,7 @@ out on [our contact form](https://hospital.stjude.org/apps/forms/fb/st-jude-clou
 
 [Running our Workflows](../analyzing-data/running-sj-workflows.md)  
 [Working with our Data Overview](../managing-data/working-with-our-data.md)   
-[Downloading/Uploading Data](../managing-data/data-transfer-app.md)   
+[Upload/Download Data (local)](../managing-data/upload-local.md)   
 
 <h2 id="Footnotes">Footnotes</h2>
 
