@@ -1,8 +1,5 @@
 # Welcome to St. Jude Cloud Documentation!
 
-!!! info "COVID-19 Information"
-    See how St. Jude Cloud is responding to the coronavirus pandemic on our [COVID-19 Quickstart](guides/covid-19/index.md) page.
-
 ## Overview
 
 The St. Jude Cloud documentation includes authoritative guides for accessing St. Jude Cloud data, creating and running analysis workflows on the cloud, and exploring curated data from numerous published studies by St. Jude and our collaborating institutions.To learn more about our ecosystem, read this [guide](./ecosystem.md). 
