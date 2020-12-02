@@ -17,7 +17,6 @@ nav:
   - About our Ecosystem: ecosystem.md
   - Genomics Platform:
       - Getting Started: guides/genomics-platform/index.md
-      - St. Jude Employee Quick Start: guides/genomics-platform/employee-quick-start.md
       - Accounts and Billing: guides/genomics-platform/accounts-and-billing.md
       - Requesting Data:
           - About our Data: guides/genomics-platform/requesting-data/about-our-data.md
