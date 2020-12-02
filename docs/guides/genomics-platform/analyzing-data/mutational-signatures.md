@@ -111,10 +111,29 @@ samples are omitted.
 _Signature activities visualization_ is an HTML file that can be used for
 interactive plotting.
 
-When opened in a web browser, a set of controls allows plotting various
-stacked bar charts: activity by signature, activity by disease, and activity
-by sample per disease. The activity counts can be stacked as absolute values
-or as a percentage of the total.
+When opened in a web browser, multiple sections of (stacked) bar charts are
+presented: Cohort Signature Contribution Means, Sample Signature
+Contributions, and Sample Signature Activities.
+
+The Cohort Signature Contribution Means section has proportion of SNVs of a
+mutational signature for an entire cohort. The reference cohort can be
+further divided into categories, selectable in the reference dropdown. Click
+on the tick labels to toggle between reference and query samples. Hover over
+a stacked bar to display the absolute count, signature name, and etiology.
+
+The Sample Signature Contributions section shows the proportion of SNVs of a
+mutational signature for a single sample. Like the Cohort Signature
+Contribution Means section, each stacked bar can be hovered over to display
+the absolute count, the signature name, and etiology.
+
+Each sample has a total mutation burden, which is shown in the Sample
+Signature Activities section. This is the factor used to sort the samples,
+i.e, in descending total mutational burden order.
+
+At the bottom is the legend, which shows any mutational signature present in
+either the reference or query cohort. The legend item may have a proposed
+etiology and, when clicked, opens that mutational signature on COSMIC
+Mutational Signatures.
 
 ## Frequently asked questions
 
