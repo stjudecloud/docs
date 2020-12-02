@@ -12,13 +12,13 @@ Within any DNAnexus project, you can view the data in the IGV web browser by doi
 
 **Select "Visualize"**
 
-![](../../images/guides/covid-19/visualizer-igv-1.png)
+![](../../../images/guides/genomics-platform/analyzing-data/visualizer-igv-1.png)
 
 **Select IGV v2.0.0**
 
-![](../../images/guides/covid-19/visualizer-igv-2.png)
+![](../../../images/guides/genomics-platform/analyzing-data/visualizer-igv-2.png)
 
 **Select the files you want to view**
 
-![](../../images/guides/covid-19/visualizer-igv-3.png)
+![](../../../images/guides/genomics-platform/analyzing-data/visualizer-igv-3.png)
 

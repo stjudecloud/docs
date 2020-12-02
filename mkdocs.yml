@@ -46,6 +46,7 @@ nav:
               # FKPM: guides/genomics-platform/analyzing-data/fkpm.md
           - Creating your own Workflow: guides/genomics-platform/analyzing-data/creating-a-cloud-app.md
           - Interactive nodes: guides/genomics-platform/analyzing-data/interactive-node.md
+          - Visualizing NGS data: guides/genomics-platform/analyzing-data/visualizing-ngs-data.md
       - Frequently Asked Questions: guides/genomics-platform/faq.md
   - PeCan:
       - Getting Started: guides/pecan/index.md
