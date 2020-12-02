@@ -9,6 +9,9 @@ excluded_words:
   - DNAnexus
   - rnaseq-expression-workflow-options-new-ui
   - rnaseq-expression-workflow-realignment-options-new-ui
+  - stjude
+  - NeoepitopePred
+  - neoepitope
 
   # Names
   - Dongren
