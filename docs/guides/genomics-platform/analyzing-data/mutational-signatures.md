@@ -101,9 +101,9 @@ samples are omitted.
 <h5>Example</h5>
 
 
-| Samples          | SJMEL001001_D1 | … | SJNBL001_D |
-|------------------|---------------:|:-:|-----------:|
-| Signature Subs-0 |            233 | … |         13 |
+| Samples           | SJMEL001001_D1 | … | SJNBL001_D |
+|-------------------|---------------:|:-:|-----------:|
+| Signature Subs-01 |            233 | … |         13 |
 
 
 ### Signature activities visualization
