@@ -36,11 +36,11 @@ Declares all assay names. Example:
 
 ```javascript
 {
-   "assays":["H3K4me3","RNA-seq","Splice junctions"],
+   "assays":["H3K4me3","RNA-Seq","Splice junctions"],
    "H3K4me3":{
         ... ... 
    },
-   "RNA-seq":{
+   "RNA-Seq":{
         ... ... 
    },
    "Splice junctions":{
@@ -53,7 +53,7 @@ Declares all assay names. Example:
 
     -   "H3K4me3"
 
-    -   "RNA-seq"
+    -   "RNA-Seq"
 
     -   "Splice junctions"
 
@@ -92,7 +92,7 @@ Declares all assay names. Example:
 Declare an assay type for the bigWig track, e.g.:
 
 ```javascript
-"RNA-seq":{
+"RNA-Seq":{
     "config": {
             "type": "bigwig",
             "pcolor": "red",
@@ -339,7 +339,7 @@ Lists all mutation datasets for this cohort, and the mutation data files associa
         "cnv":"datadir/cnv"
      },
      {
-         "name":"RNA-seq",
+         "name":"RNA-Seq",
          "snvindel":"datadir/snvindel_rna",
          "fusion":"datadir/fusion"
      }
@@ -365,7 +365,7 @@ Mutation data type keys, each should point to a server-hosted text file.
 
     -   Structural variation OR fusion, they are in the same [tabular text format](https://plus.google.com/+XinZhou_s/posts/9FknbtqWKgZ)
 
-    -   Note that "sv" is used in "DNA", and "fusion" is used in "RNA-seq"
+    -   Note that "sv" is used in "DNA", and "fusion" is used in "RNA-Seq"
 
 -   **svfusion**
 
@@ -428,7 +428,7 @@ the protein-view.
     "keyname":"[name of the table field to query against, e.g. gene]",
     "tidy":"function(rows){rows.forEach(function(row){ ... })}",
     "config":{
-        "name":"RNA-seq",
+        "name":"RNA-Seq",
         "sampletype":"sample",
         "datatype":"FPKM",
         "ongene":true,
@@ -832,7 +832,7 @@ formats, the generic bed is the positional format.
 
 In the cohort definition, you have to first declare what the tracks are
 about, then the type/format of the track. The first layer is assay type,
-like RNA-seq, or it can be anything with a name. We will refer to it as
+like RNA-Seq, or it can be anything with a name. We will refer to it as
 "assay type".
 
 Assay types are predefined, allowed values are (case-sensitive):
@@ -885,12 +885,12 @@ config.
 
 ### Track: bedGraph
 
-!!! example "bedGraph track example for RNA-seq"
+!!! example "bedGraph track example for RNA-Seq"
 
     ```javascript
     "rnaseq":{
         "config":{
-            "name":"RNA-seq coverage",
+            "name":"RNA-Seq coverage",
             "tktype":"bedgraph",
             "pcolor":"#006600",
             "pcolor2":"#CC00B8",
@@ -911,12 +911,12 @@ config.
 
 ### Track: bigWig
 
-!!! example "bigWig example for RNA-seq"
+!!! example "bigWig example for RNA-Seq"
 
     ```javascript
     "rnaseq":{
         "config":{
-            "name":"RNA-seq coverage",
+            "name":"RNA-Seq coverage",
             "tktype":"bigwig",
             "pcolor":"#006600",
             "pcolor2":"#CC00B8",
@@ -948,7 +948,7 @@ Overlaying of two numerical tracks, noted by "track1" and "track2".
     ```javascript
     "rnaseq":{
         "config":{
-            "name":"RNA-seq",
+            "name":"RNA-Seq",
             "tktype":"numeric2",
         "track1":{
             "name":"coverage",
@@ -975,7 +975,7 @@ Overlaying of two numerical tracks, noted by "track1" and "track2".
     },
     ```
 
-### Track: junction (RNA-seq junction reads)
+### Track: junction (RNA-Seq junction reads)
 
 !!! example "**junction** example, along with a "browserview" trigger for displaying"
 

@@ -1,6 +1,8 @@
+dictionaries:
+  - en
+  - en_GB
+
 excluded_words:
-  - SequencErr
-  - sequencerr
   - rnaseq
   - Gencode
   - project-rnaseq
@@ -12,6 +14,33 @@ excluded_words:
   - stjude
   - NeoepitopePred
   - neoepitope
+  - ipynb
+  - bamqc
+  - qualimap
+  - GDC's
+  - gdc-mrnaseq-pipeline
+  - gdc-reference-genome
+  - ENCODE's
+  - encode-rnaseq-pipeline
+  - gtex-rnaseq-pipeline
+  - sjdbOverhang
+  - exome
+  - omics
+  - omics-based
+  - fastqc
+  - ngsderive
+  - SamToFastq
+  - fastq
+  - fastq-screen
+  - unstranded
+  - conda
+  - bioconda
+  - conda-forge
+  - multiqc
+  - fastqs
+  - fqlib
+  - readlen
+  - gtf
 
   # Names
   - Dongren

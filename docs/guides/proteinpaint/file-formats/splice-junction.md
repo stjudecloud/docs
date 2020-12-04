@@ -1,6 +1,6 @@
 **Splice junction with read count**
 
-The track can be used to represent RNA splice junction data from RNA-seq
+The track can be used to represent RNA splice junction data from RNA-Seq
 assays. Each file can contain information for 1 or more samples.
 
 ## File format of single sample data
