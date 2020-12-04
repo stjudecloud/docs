@@ -1,12 +1,14 @@
 
 In this guide, we will explain generally how to run, from end-to-end, any of our in house analysis workflows from within the DNAnexus cloud ecosystem. The [DNAnexus](https://www.dnanexus.com/) genomic ecosystem is the backbone for the computation and storage in St. Jude Cloud. If you'd like, you can read an introduction to the DNAnexus ecosystem [here](https://documentation.dnanexus.com/). If you haven't already, follow [this guide](../requesting-data/data-request.md) to request access to St. Jude data in this secure cloud ecosystem. 
 
+!!! note
+    If you use the initial $50 credit from creating your account and are interested in additional funding, please reach out to support@stjude.cloud as additional collaboration funds may be available.
 
 ## Getting started
 
 To get started with any St. Jude Cloud workflow, first navigate to the appropriate workflow page. Below is a complete list of the workflows we offer along with links to their corresponding tool page and documentation page.
 
-* NeoepitopePred [[tool page](https://platform.stjude.cloud/workflows/neoepitopepred)] [[documentation](neoepitope.md)]
+<!--* NeoepitopePred [[tool page](https://platform.stjude.cloud/workflows/neoepitopepred)] [[documentation](neoepitope.md)]-->
 * ChIP-Seq Peak Calling [[tool page](https://platform.stjude.cloud/workflows/chip-seq)] [[documentation](chipseq.md)]
 * Rapid RNA-Seq Fusion Detection [[tool page](https://platform.stjude.cloud/workflows/rapid_rna-seq)] [[documentation](rapid-rnaseq.md)]
 * WARDEN Differential Expression Analysis [[tool page](https://platform.stjude.cloud/workflows/warden)] [[documentation](warden.md)]
@@ -31,17 +33,8 @@ With subsequent runs, in place of the "Start" button will be two buttons "Launch
 
 Now that a DNAnexus cloud workspace has been created, you will be able to upload input files to that workspace. The specific documentation for each workflow will detail what input files you will need to upload. 
 
-You can upload these files using the [data transfer application](../managing-data/data-transfer-app.md)
-or by uploading them through [the command line](../analyzing-data/command-line.md). Both of the guides linked here will contain more details on how to upload data using that method, so we defer to those guides here.
+You can upload these files using the [the command line](../analyzing-data/command-line.md).
 
-!!! tip
-    If you plan to upload data through the St. Jude Cloud Data Transfer application
-    (recommended), you can click the "Upload Data" button the appears in the left panel after you click "Start". If you
-    have not already downloaded the app, do so by clicking "Download app". Once you
-    have the app, you can click "Open app" to open the app with the workflow's cloud 
-    workspace already opened and ready to drag-and-drop files into it!
-
-    For more information, check out the [data transfer application](../managing-data/data-transfer-app.md) guide.
 
 ## Running the Workflow
 
@@ -181,5 +174,5 @@ If you have any unanswered questions about how to run one of our in-house workfl
 
 [Command Line Interaction](../analyzing-data/command-line.md)  
 [Working with our Data Overview](../managing-data/working-with-our-data.md)   
-[Downloading/Uploading Data](../managing-data/data-transfer-app.md)  
+[Upload/Download Data (local)](../managing-data/upload-local.md)  
 [Technical FAQs](../../../faq.md#how-can-i-explore-and-manipulate-data-files-stored-on-the-cloud-without-downloading-the-files-to-my-local-machine)

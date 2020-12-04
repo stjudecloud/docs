@@ -75,8 +75,6 @@ To download all files in the `/results/` folder in the `project-alpha` cloud pro
 dx download -r "project-alpha:/results/"
 ```
 
-The `dx` command line utility and its `upload`/`download` subcommands have many options you can configure based on your use case. We recommend you view the help messages or reach out to us on [the St. Jude Cloud helpdesk Slack channel][slack-channel] for more information.
-
-[slack-channel]: getting-started.md#joining-slack
+The `dx` command line utility and its `upload`/`download` subcommands have many options you can configure based on your use case. We recommend you view the help messages or reach out to us at support@stjude.cloud for more information.
 
 [a DNAnexus authentication token]: https://documentation.dnanexus.com/user/login-and-logout#authentication-tokens

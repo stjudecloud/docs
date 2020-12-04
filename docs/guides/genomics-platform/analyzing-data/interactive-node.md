@@ -12,13 +12,12 @@ This guide assumes that you have a DNAnexus account and have `dxpy` installed on
 There are two different experiences for doing interactive or ad-hoc analysis in the cloud:
 
 * **Cloud Workstations**. Cloud workstations are a mature offering in the DNAnexus ecosystem, and you can use them in your production work. DNAnexus has [a full guide](https://documentation.dnanexus.com/developer/cloud-workstations) on how to use cloud workstations. Unfortunately, they do not fully replicate the experience of an interactive node on the cluster: each time you ssh into a new cloud workstation, you get a blank machine with no dependencies or data installed. Thus, you need to configure your environment, download data to the node using `dx`, and upload results back to DNAnexus using `dx`.
-* **Interactive Nodes**. Interactive nodes were created very recently between a partnership with St. Jude and DNAnexus. They offer a more complete alternative to interactive nodes in the HPC cluster, but the experience is currently in **alpha** (meaning that there are likely to be bugs and it is not ready for production use). We are actively looking for labs to partner with us to develop out this experience, so [apply for the Discovery Sponsorship Program] if you are interested!
+* **Interactive Nodes**. Interactive nodes were created very recently between a partnership with St. Jude and DNAnexus. They offer a more complete alternative to interactive nodes in the HPC cluster, but the experience is currently in **alpha** (meaning that there are likely to be bugs and it is not ready for production use). 
 
 In this guide, we will briefly mention how to use Cloud Workstations and then spend the rest of the guide explaining how to use our new Interactive Node experience.
 
-[creating and running cloud apps]: ./creating-a-cloud-app-covid.md
-[the local data upload guide]: ./upload-local.md
-[apply for the Discovery Sponsorship Program]: ./getting-started.md#apply-for-discovery-sponsorship-program
+[creating and running cloud apps]: ./creating-a-cloud-app.md
+[the local data upload guide]: ../managing-data/upload-local.md
 
 ## Cloud Workstations
 
@@ -41,7 +40,7 @@ or just `dx select` to select from a list of your projects interactively.
 Next, run `dx run app-cloud_workstation --ssh`. You can set the maximum session length for this session or continue with the default options.
 
 !!!tip
-    The default node size for the cloud workstations are mem1_ssd1_x2. If you want to request a larger node size, you can specify it by adding the `--instance-type` option. Check the [advanced options section](./interactive-node/#advanced-options) at the bottom for more information.
+    The default node size for the cloud workstations are mem1_ssd1_x2. If you want to request a larger node size, you can specify it by adding the `--instance-type` option. Check the [advanced options section](../interactive-node/#advanced-options) at the bottom for more information.
 
 ### Setting up workspace
 
@@ -75,24 +74,21 @@ For more information about cloud workstations, please refer to the [DNAnexus doc
 !!! danger
     The interactive node in the cloud experience was created specifically in response to the fully remote working situation. The experience is currently an **alpha release** and is not suitable for production use. Additionally, this guide will be updated each time we improve the experience, so please come back regularly to see how we are changing things.
 
-!!! info
-    We are looking for labs across St. Jude to partner with us and tell us about their experience using the interactive node. If you are interested, please [apply for the discovery sponsorship program].
-
 Cloud workstations are good for interactive work, but they require you to upload/download data from your projects. They also do not save your working environment so any tools you installed or changes you made to the machine will be lost when the session is terminated. The Interactive Node experience, sometimes referred to by its codename "CWIC" (cloud workstations in containers), solves these issues by saving your environment and letting you work with your data on the cloud without manually downloading it to the node.
 
 ### Setting up your Docker Hub account
 
-The workstation uses Docker images pushed to a Docker Hub repository to save your environment. To get started, go to [Docker Hub](https://hub.docker.com/) and sign in or create an account. Every Docker Hub account is given one free private repository. It is highly recommended to [use a private repository](./interactive-node/#making-a-docker-hub-repository-private) as this will be your working environment.
+The workstation uses Docker images pushed to a Docker Hub repository to save your environment. To get started, go to [Docker Hub](https://hub.docker.com/) and sign in or create an account. Every Docker Hub account is given one free private repository. It is highly recommended to [use a private repository](../interactive-node/#making-a-docker-hub-repository-private) as this will be your working environment.
 
 Once you have a Docker Hub account, go to your "Account Settings", then "Security" and create a new access token.
 
-![Creating a new Docker Hub access token](../../images/guides/covid-19/interactive-node-0.png)
+![Creating a new Docker Hub access token](../../../images/guides/genomics-platform/analyzing-data/interactive-node-0.png)
 
 You can give it a descriptive name and copy the token.
 
-![Naming Docker Hub access token](../../images/guides/covid-19/interactive-node-1.png)
+![Naming Docker Hub access token](../../../images/guides/genomics-platform/analyzing-data/interactive-node-1.png)
 
-![Saved Docker Hub access token](../../images/guides/covid-19/interactive-node-2.png)
+![Saved Docker Hub access token](../../../images/guides/genomics-platform/analyzing-data/interactive-node-2.png)
 
 The access token will be needed for the credentials file below.
 
@@ -116,7 +112,7 @@ Create a file with the template below and fill in your Docker Hub token and Dock
 
 Once you have made your credentials file on your computer, make a new DNAnexus project to save your credentials using `dx new project`. Upload the credentials file to your project by running `dx upload creds.txt`. It is recommended to save your credentials in a separate, private DNAnexus project to ensure that others do not have access to it.
 
-![Uploading credentials file](../../images/guides/covid-19/interactive-node-3.png)
+![Uploading credentials file](../../../images/guides/genomics-platform/analyzing-data/interactive-node-3.png)
 
 ### Starting an interactive terminal session
 
@@ -126,13 +122,13 @@ The following command will run the app using the credentials you provided and wi
 
 or replace `mycredentials` with the name of the DNAnexus project with your credentials file. If you have SSH issues while trying to connect to the job, make sure your SSH keys are [configured properly](https://documentation.dnanexus.com/developer/apps/execution-environment/connecting-to-jobs).
 
-![running CWIC app](../../images/guides/covid-19/interactive-node-4.png)
+![running CWIC app](../../../images/guides/genomics-platform/analyzing-data/interactive-node-4.png)
 
 ### Working on the CWIC node
 
 Once the node starts, you will be taken to the home directory of the CWIC node. This node is an ubuntu environment and you can install or run any commands you want.
 
-![CWIC terminal](../../images/guides/covid-19/interactive-node-5.png)
+![CWIC terminal](../../../images/guides/genomics-platform/analyzing-data/interactive-node-5.png)
 
 For example, you can install `samtools` by running `sudo apt install samtools`.
 
@@ -142,7 +138,7 @@ There are two main directories to work with data:
 
 * `/project/` - This directory contains your DNAnexus project and the data in it. If you copy or move files to this directory, it saves to your DNAnexus project, which is a persistent storage. You can go to `/project/<YOUR_DX_PROJECT_NAME>` and see the files in your DNAnexus project.
 
-![CWIC directories](../../images/guides/covid-19/interactive-node-6.png)
+![CWIC directories](../../../images/guides/genomics-platform/analyzing-data/interactive-node-6.png)
 
 Upload some data to your project from a local machine for testing in the interactive node — here, we assume a BAM file uploaded from a laptop called `sample.bam`. Once data is uploaded to your DNAnexus project, you can access it on your CWIC node at `/project/<YOUR_DX_PROJECT_NAME>/test.bam`. For instance, when running `samtools index /project/<YOUR_DX_PROJECT_NAME>/test.bam`, you will find the index file samtools creates is saved to your cloud project.
 
@@ -251,16 +247,16 @@ By default, the workstation creates a new public repository in Docker Hub. It is
 
 First, go to your repositories page and click on the repository you want to make private.
 
-![Docker Hub Repositories](../../images/guides/covid-19/make-dockerhub-repo-private/1.png)
+![Docker Hub Repositories](../../../images/guides/genomics-platform/analyzing-data/make-dockerhub-repo-private/1.png)
 
 Next, go to the 'Settings' tab and click on the 'Make private' button.
 
-![Docker Hub Repository Settings](../../images/guides/covid-19/make-dockerhub-repo-private/2.png)
+![Docker Hub Repository Settings](../../../images/guides/genomics-platform/analyzing-data/make-dockerhub-repo-private/2.png)
 
 Type the name of the repository and click on the 'Make private' button.
 
-![Docker Hub Repository Make Private](../../images/guides/covid-19/make-dockerhub-repo-private/3.png)
+![Docker Hub Repository Make Private](../../../images/guides/genomics-platform/analyzing-data/make-dockerhub-repo-private/3.png)
 
 Finally, you can see the repository is now set to private and you can continue using interactive sessions as normal.
 
-![Docker Hub Repositories with Private](../../images/guides/covid-19/make-dockerhub-repo-private/4.png)
+![Docker Hub Repositories with Private](../../../images/guides/genomics-platform/analyzing-data/make-dockerhub-repo-private/4.png)

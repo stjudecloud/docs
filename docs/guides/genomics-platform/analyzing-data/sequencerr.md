@@ -102,8 +102,7 @@ General users please refer to the following instructions.
 
 **Choose Input BAM and Index Files**
 
-Users can upload and download data files with the help of **Data Transfer App** as described [here](../../../guides/genomics-platform/managing-data/data-transfer-app.md) 
-or through **command line interactions** as described [here](../../../guides/genomics-platform/analyzing-data/command-line.md)
+Users can upload and download data files with **command line interactions** as described [here](../../../guides/genomics-platform/analyzing-data/command-line.md)
 
 ![](../../../files/guides/tools/sequencerr/Sequencerr_BAM_5.png)
 
@@ -150,4 +149,4 @@ Follow the similar steps to choose and select the corresponding BAM index file
 
 [Running our Workflows](../analyzing-data/running-sj-workflows.md)  
 [Working with our Data Overview](../managing-data/working-with-our-data.md)   
-[Downloading/Uploading Data](../managing-data/data-transfer-app.md)   
+[Upload/Download Data (local)](../managing-data/upload-local.md)   
