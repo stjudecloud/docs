@@ -33,7 +33,7 @@ Somatic VCF files available on St. Jude Cloud have been generated when possible 
 7. Depending on cohort, either all variants were manually reviewed by analysts (PCGP cohort) or a subset comprising all coding variants were manually reviewed (Clinical Pilot, G4K, and RTCG). This resulted in the assignment of a validation status for each variant [(see below)](#variant-validation-status).
 8. Variant filtering:
     * For patient samples where a complete set of variants has been manually curated and previously reported as part of an existing publication, this published set of variants was considered the complete set of variants for that patient tumor sample. This includes samples in the Clinical Pilot cohort study and some PCGP cohort samples.
-    * For currently unpublished patient tumor samples, we filtered variants based on metrics derived from the in-house post-processing pipeline and the input of analysts [(see below)](#variant-validation-status). This includes patient tumor samples from the PCGP, G4K, and RTCG cohorts, and some Clincal Pilot samples.
+    * For currently unpublished patient tumor samples, we filtered variants based on metrics derived from the in-house post-processing pipeline and the input of analysts [(see below)](#variant-validation-status). This includes patient tumor samples from the PCGP, G4K, and RTCG cohorts, and some Clinical Pilot samples.
 9. Variants were converted from our in-house formats to VCF format.
 10. Variant coordinates were lifted over to GRCh38_no_alt using [Picard][picard] `LiftoverVcf`.
 11. Variants were normalized using [`vt normalize`][vt].

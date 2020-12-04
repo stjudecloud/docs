@@ -41,6 +41,20 @@ excluded_words:
   - fqlib
   - readlen
   - gtf
+  - Indel
+  - aln
+  - bwa
+  - sampe
+  - LiftoverVcf
+  - vep
+  - bgzipped
+  - tabixed
+  - gatk-validator
+  - fathmm
+  - in-silico
+  - lrt
+  - bcftools
+  - isoforms
 
   # Names
   - Dongren
