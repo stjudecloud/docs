@@ -55,6 +55,8 @@ excluded_words:
   - lrt
   - bcftools
   - isoforms
+  - GATK
+  - GATK's
 
   # Names
   - Dongren
