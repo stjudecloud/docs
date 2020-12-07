@@ -698,13 +698,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#workflow-steps" class="md-nav__link">
-    Workflow Steps
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#creating-a-workspace" class="md-nav__link">
     Creating a workspace
   </a>
@@ -741,22 +734,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#raw-signatures" class="md-nav__link">
-    Raw signatures
+  <a href="#raw-signature-activities" class="md-nav__link">
+    Raw signature activities
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#signatures-visualization" class="md-nav__link">
-    Signatures visualization
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sample-sheet" class="md-nav__link">
-    Sample Sheet
+  <a href="#signature-activities-visualization" class="md-nav__link">
+    Signature activities visualization
   </a>
   
 </li>
@@ -767,22 +753,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    Troubleshooting
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#frequently-asked-questions" class="md-nav__link">
     Frequently asked questions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
   </a>
   
 </li>
@@ -1785,13 +1757,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#workflow-steps" class="md-nav__link">
-    Workflow Steps
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#creating-a-workspace" class="md-nav__link">
     Creating a workspace
   </a>
@@ -1828,22 +1793,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#raw-signatures" class="md-nav__link">
-    Raw signatures
+  <a href="#raw-signature-activities" class="md-nav__link">
+    Raw signature activities
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#signatures-visualization" class="md-nav__link">
-    Signatures visualization
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sample-sheet" class="md-nav__link">
-    Sample Sheet
+  <a href="#signature-activities-visualization" class="md-nav__link">
+    Signature activities visualization
   </a>
   
 </li>
@@ -1854,22 +1812,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    Troubleshooting
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#frequently-asked-questions" class="md-nav__link">
     Frequently asked questions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
   </a>
   
 </li>
@@ -1900,39 +1844,13 @@
                   <a href="https://github.com/stjudecloud/docs/edit/master/docs/guides/genomics-platform/analyzing-data/mutational-signatures.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Mutational Signatures</h1>
-                
-                <table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Authors</strong></td>
-<td>Scott Newman, Michael Macias</td>
-</tr>
-<tr>
-<td><strong>Publication</strong></td>
-<td>Mutational Signatures employs MutationalPatterns: "<a href="https://doi.org/10.1186/s13073-018-0539-0">MutationalPatterns: comprehensive genome-wide analysis of mutational processes.</a>"</td>
-</tr>
-<tr>
-<td><strong>Technical Support</strong></td>
-<td><a href="https://stjude.cloud/contact">Contact Us</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p><strong>Mutational Signatures</strong> finds and quantifies COSMIC mutational signatures
-across samples. This is done by finding the optimal non-negative linear
-combination of mutation signatures to reconstruct a mutation matrix. It
-builds the initial mutation matrix from multiple single-sample VCFs and, by
-default, fits it to <a href="https://cancer.sanger.ac.uk/cosmic/signatures">mutational signatures from COSMIC</a>. Mutational
-Signatures employs <a href="https://bioconductor.org/packages/release/bioc/html/MutationalPatterns.html">MutationalPatterns</a> (<a href="#references">Blokzijl, et al. (2018)</a>) to
-achieve this.</p>
-<p>Mutational Signatures supports both hg19 (GRCh37) and hg38 (GRCh38).</p>
+                <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p><strong>Mutational Signatures</strong> (abbreviated as <strong>mtsg</strong>) finds and quantifies
+<a href="https://cancer.sanger.ac.uk/cosmic/signatures">COSMIC mutational signatures</a> across samples.</p>
+<p>mtsg uses a base set of mutational signatures extracted by <a href="https://cancer.sanger.ac.uk/cosmic/signatures/sigprofiler.tt">SigProfiler</a> for
+<a href="https://cancer.sanger.ac.uk/cosmic/signatures/SBS/index.tt">single-base substitutions</a> (SBS), i.e., single-nucleotide variants (SNV),
+using 2780 whole-genome variant calls from the ICGC/TCGA <a href="https://dcc.icgc.org/pcawg">Pan-Cancer Analysis
+of Whole Genomes</a> (PCAWG) project.</p>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1947,163 +1865,25 @@ achieve this.</p>
 <tr>
 <td><a href="#vcfs">VCF(s)</a></td>
 <td>Array of files</td>
-<td>List of VCF inputs. Can be single-sample or multi-sample and uncompressed or gzipped.</td>
+<td>One or more VCF sources. The files can be either uncompressed or gzipped.</td>
 <td>[<code>*.vcf</code>, <code>*.vcf.gz</code>]</td>
-</tr>
-<tr>
-<td><a href="#sample-sheet">Sample sheet</a></td>
-<td>File</td>
-<td>Tab-delimited file (no headers) with sample ID and tag pairs [optional]</td>
-<td><code>*.txt</code></td>
 </tr>
 <tr>
 <td>Genome build</td>
 <td>String</td>
-<td>Genome build used as reference. Can be either "GRCh37" or "GRCh38". [default: "GRCh38"]</td>
+<td>The genome build used as reference. [default: "GRCh38"]</td>
 <td>GRCh38</td>
-</tr>
-<tr>
-<td>Minimum mutation burden</td>
-<td>Integer</td>
-<td>Minimum number of somatic SNVs a sample must have to be considered for analysis [default: 9]</td>
-<td>15</td>
-</tr>
-<tr>
-<td>Minimum signature contribution</td>
-<td>Integer</td>
-<td>Minimum number of mutations attributable to a single signature [default: 9]</td>
-<td>100</td>
-</tr>
-<tr>
-<td><a href="#output-prefix">Output prefix</a></td>
-<td>String</td>
-<td>Prefix to append to output filenames [optional]</td>
-<td>mtsg</td>
-</tr>
-<tr>
-<td><a href="#disabled-vcf-column">Disabled VCF column</a></td>
-<td>Integer</td>
-<td>VCF column (starting from sample names, zero-based) to ignore when reading VCFS [optional]</td>
-<td>1</td>
 </tr>
 </tbody>
 </table>
 <h3 id="input-configuration">Input configuration<a class="headerlink" href="#input-configuration" title="Permanent link">&para;</a></h3>
-<p>Mutational Signatures only requires VCFs as inputs. This can be a single multi-sample VCF, multiple single-sample VCFs, or a combination of both. All other inputs are optional.</p>
+<p>Mutational Signatures only requires VCFs as inputs. All other inputs are
+optional.</p>
 <h4 id="VCF(s)">VCF(s)</h4>
 
-<p><em>VCF(s)</em> is a list of VCF inputs. The inputs can be single-sample or
-multi-sample and uncompressed or gzipped. Sample names are taken from the VCF
-header.</p>
-<p>When using multi-sample VCFs, empty cells/absent variant calls must be
-denoted with <code>.:.</code>.</p>
-<p>gVCFs are not supported.</p>
-<h4 id="Sample Sheet">Sample Sheet</h4>
-
-<p><em>Sample sheet</em> is a tab-delimited file (no headers) with two columns: the
-sample ID and a tag. The tag is an arbitrary identifier used to group the
-samples, typically a disease abbreviation or tissue of origin.</p>
-<p>If not given, a sample sheet will be generated automatically.</p>
-<h5>Example</h5>
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>SJACT001_D</td>
-<td>ACT</td>
-</tr>
-<tr>
-<td>SJACT002_D</td>
-<td>ACT</td>
-</tr>
-<tr>
-<td>SJBALL063_D</td>
-<td>BALL</td>
-</tr>
-<tr>
-<td>SJHGG017_D</td>
-<td>HGG</td>
-</tr>
-</tbody>
-</table>
-<h4 id="output-prefix">Output prefix</h4>
-
-<p><em>Output prefix</em> is the prefix to append to the output filenames. By default,
-if a single input VCF is given, its basename is used as the output prefix. If
-multiple input VCFs are given, a default "mtsg" prefix is used. This behavior
-can be overridden by a user-defined prefix.</p>
-<h5>Example</h5>
-
-<table>
-<thead>
-<tr>
-<th>VCF(s)</th>
-<th>Prefix</th>
-<th>Output filename for raw signatures</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>[<code>pcgp.b38.refseq.goodbad.vcf</code>]</td>
-<td>pcgp.b38.refseq.goodbad</td>
-<td><code>pcgp.b38.refseq.goodbad.signatures.txt</code></td>
-</tr>
-<tr>
-<td>[<code>SJOS013_D.vcf</code>, <code>SJRHB007_D.vcf</code>]</td>
-<td>mtsg</td>
-<td><code>mtsg.signatures.txt</code></td>
-</tr>
-</tbody>
-</table>
-<h4 id="disabled-vcf-column">Disabled VCF column</h4>
-
-<p><em>Disabled VCF column</em> is the column index to ignore when reading VCFs. This
-is useful when the inputs are tumor-normal VCFs, and one column should be
-ignored. Otherwise, the results would likely be duplicated.</p>
-<p>The argument is a zero-based index relative to the sample names in the header
-of the VCF. For example, in a VCF with samples <code>SJEPD003_D</code> and <code>SJEPD003_G</code>,
-the germline sample (<code>SJEPD003_G</code>) can be discarded by setting the <em>disabled
-VCF column</em> to <code>1</code>.</p>
-<h5>Example</h5>
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th>0</th>
-<th>1</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>#CHROM</td>
-<td>POS</td>
-<td>ID</td>
-<td>REF</td>
-<td>ALT</td>
-<td>QUAL</td>
-<td>FILTER</td>
-<td>INFO</td>
-<td>FORMAT</td>
-<td>SJEPD003_D</td>
-<td>SJEPD003_G</td>
-</tr>
-</tbody>
-</table>
+<p><em>VCF(s)</em> is a list of VCF inputs. The inputs are expected to be single-sample
+and uncompressed or gzipped. The basename of the filename is used as the
+sample name.</p>
 <h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -2115,133 +1895,119 @@ VCF column</em> to <code>1</code>.</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="#raw-signatures">Raw signatures</a></td>
+<td><a href="#raw-signature-activities">Raw signature activities</a></td>
 <td>File</td>
-<td>Tab-delimited file of the raw results with sample contributions for each signature</td>
+<td>A tab-delimited file of the raw results with signature activities per sample</td>
 </tr>
 <tr>
-<td><a href="#signatures-visualization">Signatures visualization</a></td>
+<td><a href="#signature-activities-visualization">Signature activities visualization</a></td>
 <td>File</td>
 <td>HTML file for interactive plotting</td>
 </tr>
-<tr>
-<td><a href="#sample-sheet-out">Sample sheet</a></td>
-<td>File</td>
-<td>Tab-delimited file (no headers) with sample ID and tag pairs</td>
-</tr>
 </tbody>
 </table>
-<h2 id="workflow-steps">Workflow Steps<a class="headerlink" href="#workflow-steps" title="Permanent link">&para;</a></h2>
-<p>Mutational Signatures runs four steps using subcommands of <a href="https://github.com/stjude/mtsg">mtsg</a>.</p>
-<ol>
-<li>Split VCFs (single or multi-sample) to multiple single-sample VCFs.</li>
-<li>If not given, generate a sample sheet from the directory of single-sample
-     VCFs.</li>
-<li>Build a mutation matrix and reconstruct/fit it using COSMIC mutation
-     signatures.</li>
-<li>Create a visualization file using the fitted signatures.</li>
-</ol>
 <h2 id="creating-a-workspace">Creating a workspace<a class="headerlink" href="#creating-a-workspace" title="Permanent link">&para;</a></h2>
-<p>Before you can run one of our workflows, you must first create a workspace in DNAnexus for the run. Refer to <a href="../running-sj-workflows/#getting-started">the general workflow guide</a> to learn how to create a DNAnexus workspace for each workflow run.</p>
-<p>You can navigate to the Mutational Signatures workflow page <a href="https://platform.stjude.cloud/workflows/mutational_signatures">here</a>.</p>
+<p>Before you can run one of our workflows, you must first create a workspace in
+DNAnexus for the run. Refer to <a href="../running-sj-workflows/#getting-started">the general workflow
+guide</a> to learn how to create a
+DNAnexus workspace for each workflow run.</p>
+<p>You can navigate to the Mutational Signatures workflow page
+<a href="https://platform.stjude.cloud/workflows/mutational_signatures">here</a>.</p>
 <h2 id="uploading-input-files">Uploading Input Files<a class="headerlink" href="#uploading-input-files" title="Permanent link">&para;</a></h2>
-<p>Mutational Signatures requires at least one VCF and an optional sample sheet to be uploaded. </p>
-<p>Refer to <a href="../running-sj-workflows/#uploading-files">the general workflow guide</a> to learn how to upload input files to the workspace you just created.</p>
+<p>Mutational Signatures requires at least one VCF to be uploaded.</p>
+<p>Refer to <a href="../running-sj-workflows/#uploading-files">the general workflow
+guide</a> to learn how to upload input
+files to the workspace you just created.</p>
 <h2 id="running-the-workflow">Running the Workflow<a class="headerlink" href="#running-the-workflow" title="Permanent link">&para;</a></h2>
-<p>Refer to <a href="../running-sj-workflows/#running-the-workflow">the general workflow guide</a> to learn how to launch the workflow, hook up input files, adjust parameters, start a run, and monitor run progress.</p>
+<p>Refer to <a href="../running-sj-workflows/#running-the-workflow">the general workflow
+guide</a> to learn how to launch
+the workflow, hook up input files, adjust parameters, start a run, and
+monitor run progress.</p>
 <h2 id="analysis-of-results">Analysis of Results<a class="headerlink" href="#analysis-of-results" title="Permanent link">&para;</a></h2>
-<p>Each tool in St. Jude Cloud produces a visualization that makes understanding results more accessible than working with excel spreadsheet or tab delimited files. This is the primary way we recommend you work with your results. </p>
-<p>Refer to <a href="../running-sj-workflows/#custom-visualizations">the general workflow guide</a> to learn how to access these visualizations.</p>
-<p>We also include the raw output files for you to dig into if the visualization is not sufficient to answer your research question. </p>
-<p>Refer to <a href="../running-sj-workflows/#raw-results-files">the general workflow guide</a> to learn how to access raw results files.</p>
+<p>Each tool in St. Jude Cloud produces a visualization that makes understanding
+results more accessible than working with spreadsheets or tab-delimited
+files. This is the primary way we recommend you work with your results.</p>
+<p>Refer to <a href="../running-sj-workflows/#custom-visualizations">the general workflow
+guide</a> to learn how to access
+these visualizations.</p>
+<p>We also include the raw output files for you to dig into if the visualization
+is not sufficient to answer your research question.</p>
+<p>Refer to <a href="../running-sj-workflows/#raw-results-files">the general workflow
+guide</a> to learn how to access raw
+results files.</p>
 <h2 id="interpreting-results">Interpreting results<a class="headerlink" href="#interpreting-results" title="Permanent link">&para;</a></h2>
-<p>Upon a successful run of Mutational Signatures, three files are saved to the results directory: raw signature contributions, a visualization file, and a
-sample sheet.</p>
-<h3 id="raw-signatures">Raw signatures<a class="headerlink" href="#raw-signatures" title="Permanent link">&para;</a></h3>
-<p><em>Raw signatures</em> is a tab-delimited file of the raw results with sample
-contributions for each signature. Column 1 is the sample name, columns
-2-(N-1) are the COSMIC signatures contribution counts, and column N is the
-group tag, where N is the total number of columns. The number of columns is
-variable since if the signature has no contributions for all samples, it is
-completely omitted.</p>
-<p>Note that the last column <code>tissue</code> is a misnomer. It aligns to the arbitrary
-tag given in the <a href="#sample-sheet">sample sheet</a>.</p>
+<p>Upon a successful run of Mutational Signatures, two files are saved to the
+results directory: raw signature activities and a visualization file.</p>
+<h3 id="raw-signature-activities">Raw signature activities<a class="headerlink" href="#raw-signature-activities" title="Permanent link">&para;</a></h3>
+<p><em>Raw signature activities</em> is a tab-delimited file of the raw results with
+the signature activity counts for each input sample . Column 1 is the SBS
+signature identifier, and columns 2 through N are the counts of signature
+matches for each input sample. Signatures that have no matches across all
+samples are omitted.</p>
 <h5>Example</h5>
 
 <table>
 <thead>
 <tr>
-<th></th>
-<th align="right">Signature.1</th>
-<th align="right">Signature.2</th>
+<th>Samples</th>
+<th align="right">SJMEL001001_D1</th>
 <th align="center">…</th>
-<th align="right">Signature.30</th>
-<th>tissue</th>
+<th align="right">SJNBL001_D</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>SJACT001_D</td>
-<td align="right">1.71758029</td>
-<td align="right">131.033723</td>
+<td>Signature Subs-01</td>
+<td align="right">233</td>
 <td align="center">…</td>
-<td align="right">18.6910151</td>
-<td>ACT</td>
-</tr>
-<tr>
-<td>SJAMLM7005_D</td>
-<td align="right">51.9627312</td>
-<td align="right">7.10850351</td>
-<td align="center">…</td>
-<td align="right">0</td>
-<td>AMLM7</td>
+<td align="right">13</td>
 </tr>
 </tbody>
 </table>
-<h3 id="signatures-visualization">Signatures visualization<a class="headerlink" href="#signatures-visualization" title="Permanent link">&para;</a></h3>
-<p><em>Signatures visualization</em> is an HTML file that can be used for interactive
-plotting.</p>
-<p>When opened in a web browser, a set of controls allows plotting various
-stacked bar charts: total contributions by signature, total contributions by
-tag, and total contributions by sample per tag. The total contributions can be
-stacked as absolute values or as a percentage of the total.</p>
-<h3 id="sample-sheet">Sample Sheet<a class="headerlink" href="#sample-sheet" title="Permanent link">&para;</a></h3>
-<p>When no sample sheet is given as an input, one is generated automatically,
-but it is not guaranteed the derived tags will be of any use. This generated
-sample sheet is given as an output in the case the tags need to be manually
-edited, and the job is resubmitted with it as an input.</p>
-<p>When a sample sheet is given as an input, the sample sheet output is a copy
-of the input.</p>
-<p>See also the description for the input <a href="#sample-sheet">sample sheet</a>.</p>
-<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
-<p>To troubleshoot a failed run of Mutational Signatures, check the job log for
-details.</p>
-<h3 id="wrong-genome-build">Wrong genome build</h3>
-
-<p>If the "Building mutation matrix" step during <code>run</code> fails, it is likely that
-the selected genome build does not match the input VCF(s). Rerun the job with
-a matching genome build.</p>
-<h4>Example</h4>
-
-<div class="highlight"><pre><span></span><code>R: Building mutation matrix from 6 VCFs
-R: Error in mut_matrix(vcf_list = filtered_vcfs, ref_genome = ref_genome) :
-R:   Error in .Call2(&quot;solve_user_SEW&quot;, refwidths, start, end, width, translate.negative.coord,  :
-R:   solving row 526: &#39;allow.nonnarrowing&#39; is FALSE and the supplied start (79440206) is &gt; refwidth + 1
-</code></pre></div>
-
+<h3 id="signature-activities-visualization">Signature activities visualization<a class="headerlink" href="#signature-activities-visualization" title="Permanent link">&para;</a></h3>
+<p><em>Signature activities visualization</em> is an HTML file that can be used for
+interactive plotting.</p>
+<p>When opened in a web browser, multiple sections of (stacked) bar charts are
+presented: Cohort Signature Contribution Means, Sample Signature
+Contributions, and Sample Signature Activities.</p>
+<p>The Cohort Signature Contribution Means section has proportion of SNVs of a
+mutational signature for an entire cohort. The reference cohort can be
+further divided into categories, selectable in the reference dropdown. Click
+on the tick labels to toggle between reference and query samples. Hover over
+a stacked bar to display the absolute count, signature name, and etiology.</p>
+<p>The Sample Signature Contributions section shows the proportion of SNVs of a
+mutational signature for a single sample. Like the Cohort Signature
+Contribution Means section, each stacked bar can be hovered over to display
+the absolute count, the signature name, and etiology.</p>
+<p>Each sample has a total mutation burden, which is shown in the Sample
+Signature Activities section. This is the factor used to sort the samples,
+i.e, in descending total mutational burden order.</p>
+<p>At the bottom is the legend, which shows any mutational signature present in
+either the reference or query cohort. The legend item may have a proposed
+etiology and, when clicked, opens that mutational signature on COSMIC
+Mutational Signatures.</p>
 <h2 id="frequently-asked-questions">Frequently asked questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
-<p>None yet! If you have any questions not covered here, feel free to reach
-out on <a href="https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-contact/">our contact form</a>.</p>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<p>None yet! If you have any questions not covered here, feel free to reach out
+on <a href="https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-contact/">our contact
+form</a>.</p>
+<h1>References</h1>
 <ul>
-<li>Blokzijl F, Janssen R, van Boxtel R, Cuppen E (2018). "MutationalPatterns:
-    comprehensive genome-wide analysis of mutational processes." <em>Genome
-    Medicine</em>. doi: <a href="https://doi.org/10.1186/s13073-018-0539-0">10.1186/s13073-018-0539-0</a>. PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29695279">29695279</a>.</li>
+<li>
+<p>Alexandrov, L.B., Kim, J., Haradhvala, N.J. <em>et al</em>. The repertoire of
+    mutational signatures in human cancer. <em>Nature</em> <strong>578</strong>, 94–101 (2020).
+    <a href="https://doi.org/10.1038/s41586-020-1943-3">https://doi.org/10.1038/s41586-020-1943-3</a></p>
+</li>
+<li>
+<p>Bergstrom, E.N., Huang, M.N., Mahto, U. <em>et al</em>.
+    SigProfilerMatrixGenerator: a tool for visualizing and exploring patterns
+    of small mutational events. <em>BMC Genomics</em> <strong>20</strong>, 685 (2019).
+    <a href="https://doi.org/10.1186/s12864-019-6041-2">https://doi.org/10.1186/s12864-019-6041-2</a></p>
+</li>
 </ul>
 <h2 id="similar-topics">Similar Topics<a class="headerlink" href="#similar-topics" title="Permanent link">&para;</a></h2>
-<p><a href="../running-sj-workflows/">Running our Workflows</a><br />
-<a href="../../managing-data/working-with-our-data/">Working with our Data Overview</a> <br />
-<a href="../../managing-data/upload-local/">Upload/Download Data (local)</a>   </p>
+<p><a href="../running-sj-workflows/">Running our Workflows</a>
+<a href="../../managing-data/working-with-our-data/">Working with our Data Overview</a>
+<a href="../../managing-data/upload-local/">Upload/Download Data (local)</a></p>
                 
                   
                 
@@ -2304,7 +2070,7 @@ out on <a href="https://hospital.stjude.org/apps/forms/fb/st-jude-cloud-contact/
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/c796856">c796856</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/221f8ea">221f8ea</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
