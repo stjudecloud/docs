@@ -87,7 +87,7 @@ results files.
 
 ## Interpreting results
 
-Upon a successful run of Mutational Signatures, twp files are saved to the
+Upon a successful run of Mutational Signatures, two files are saved to the
 results directory: raw signature activities and a visualization file.
 
 ### Raw signature activities
