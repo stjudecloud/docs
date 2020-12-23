@@ -14,6 +14,10 @@ To get started with any St. Jude Cloud workflow, first navigate to the appropria
 * WARDEN Differential Expression Analysis [[tool page](https://platform.stjude.cloud/workflows/warden)] [[documentation](warden.md)]
 * Mutational Signatures [[tool page](https://platform.stjude.cloud/workflows/mutational_signatures)] [[documentation](mutational-signatures.md)]
 * SequencErr [[tool page](https://platform.stjude.cloud/workflows/sequencerr)] [[documentation](sequencerr.md)]
+* RNA-Seq Expression Classification [[tool page](https://platform.stjude.cloud/workflows/rnaseq-expression-classification)] [[documentation](rnaseq-expression-classification.md)]
+* cis-X [[tool page](https://platform.stjude.cloud/workflows/cis-x)] [[documentation](cis-x.md)]
+* MethylationToActivity [[tool page](https://platform.stjude.cloud/workflows/methylation-to-activity)] [[documentation](methylation-to-activity.md)]
+
 
 
 From the appropriate workflow page, click the "Start" button in the left hand pane. This creates a new DNAnexus cloud workspace (with the same name as the workflow) and imports the workflow.
