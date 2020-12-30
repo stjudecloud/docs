@@ -857,6 +857,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-can-i-run-an-analysis-workflow-on-multiple-sample-files-at-the-same-time" class="md-nav__link">
+    How can I run an analysis workflow on multiple sample files at the same time?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-can-i-work-with-genomics-data-in-the-cloud" class="md-nav__link">
     How can I work with genomics data in the cloud?
   </a>
@@ -1819,6 +1826,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-can-i-run-an-analysis-workflow-on-multiple-sample-files-at-the-same-time" class="md-nav__link">
+    How can I run an analysis workflow on multiple sample files at the same time?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-can-i-work-with-genomics-data-in-the-cloud" class="md-nav__link">
     How can I work with genomics data in the cloud?
   </a>
@@ -1874,6 +1888,7 @@
 <li><a href="#can-i-gain-access-to-further-clinical-information-than-what-is-currently-available">Can I gain access to further clinical information than what is currently available?</a></li>
 <li><a href="#can-i-get-a-copy-of-irb-consent-forms">Can I get a copy of IRB consent forms?</a></li>
 <li><a href="#can-i-request-fastq-files-on-st-jude-cloud">Can I request FASTQ files on St. Jude Cloud?</a></li>
+<li><a href="#how-can-i-run-an-analysis-workflow-on-multiple-sample-files-at-the-same-time">How can I run an analysis workflow on multiple sample files at the same time?</a></li>
 <li><a href="#how-can-i-work-with-genomics-data-in-the-cloud">How can I work with genomics data in the cloud?</a></li>
 <li><a href="#why-am-i-getting-a-connectivity-error-when-connecting-to-dnanexus-api-via-ssh">Why am I getting a connectivity error when connecting to DNAnexus API via SSH?</a></li>
 <li><a href="#how-can-i-delete-my-account">How can I delete my account?</a></li>
@@ -1964,6 +1979,17 @@ revert BAM to FASTQ files — we recommend using Picard SamToFastq to revert BAM
 files. You can efficiently revert BAMs to FASTQs in the cloud by wrapping the
 conversion tool of your choice into a <a href="../analyzing-data/creating-a-cloud-app/">Cloud
 App</a></p>
+<h2 id="how-can-i-run-an-analysis-workflow-on-multiple-sample-files-at-the-same-time">How can I run an analysis workflow on multiple sample files at the same time?<a class="headerlink" href="#how-can-i-run-an-analysis-workflow-on-multiple-sample-files-at-the-same-time" title="Permanent link">&para;</a></h2>
+<p>The DNAnexus interface does have a batch tool available; however, it is in early testing, so we recommend using dx-toolkit on the command line as the most reliable and user friendly approach to batch and submit jobs. You can find our documentation on how to install and get started with dx-toolkit <a href="./guides/genomics-platform/analyzing-data/command-line.md">here</a>. You may also refer to the sample script below that loops through all the BAM files in the <code>data</code> folder and submits a job using the BAM and matching index file. <br />
+<div class="highlight"><pre><span></span><code>for bam in $(dx ls &#39;/data/*.bam&#39;); do  
+  dx run \  
+    --yes \  
+    --input &quot;0.BAM=/data/$bam&quot; \
+    --input &quot;0.BAM_INDEX=/data/$bam.bai&quot; \
+    &quot;$PROJECT_ID:/Rapid RNA-Seq (BAM)&quot;
+done
+</code></pre></div>
+Note that this sample script assumes that the BAM and index files are in the <code>data</code> folder and the Rapid RNA-Seq analysis workflow is in the project. <code>$PROJECT_ID</code> can be set to your project dxid, and <code>Rapid RNA-Seq (BAM)</code> can be changed to the workflow you want to run.</p>
 <h2 id="how-can-i-work-with-genomics-data-in-the-cloud">How can I work with genomics data in the cloud?<a class="headerlink" href="#how-can-i-work-with-genomics-data-in-the-cloud" title="Permanent link">&para;</a></h2>
 <p>You can view <a href="../analyzing-data/creating-a-cloud-app/">this guide</a> to learn how
 create a cloud application.</p>
@@ -2049,7 +2075,7 @@ for it to be removed. You can do so by contacting DNAnexus support at
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/5f2e122">5f2e122</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/08c3ad1">08c3ad1</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
