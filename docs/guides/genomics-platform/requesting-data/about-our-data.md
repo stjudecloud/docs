@@ -60,7 +60,7 @@ As part of our post-processing pipeline, variants are processed by a variety of 
 
 Bambino represents indels in a format incompatible with the VCF specification. When we convert variants to VCFs, we store the original Bambino representation in the `bambino_representation` tag of the info field. Note that this entry is always in HG19 coordinates.
 
-Where possible, allele counts and read depths for each variant are determined across each sequencing type available for the associated patient tumor-normal pair. These can include WGS, WES, RNA-Seq, and validation-capture (VALCAP) data. These data are stored in the sample column of the VCF.
+Where possible, allele counts and read depths for each variant are determined across each sequencing type available for the associated patient tumor-normal pair. These can include WGS, WES, RNA-Seq, and validation-capture (VALCAP) data. These data are stored in the sample columns of the VCF.
 
 #### Processing tools
 
@@ -68,7 +68,7 @@ The newly created HG19 coordinate VCFs are lifted over using [Picard `LiftoverVc
 
 `vt normalize` is used to obtain consistent representations of all variants which may have multiple equivalent forms. If VT modifies a variant, it records the original form in the `OLD_VARIANT` info tag. [Click here][vt] to read about variant normalization.
 
-For a full description of the annotations VEP determined for each variant, see the [VEP documentation][vep].
+For a full description of the annotations VEP determines for each variant, see the [VEP documentation][vep].
 
 #### Naming convention
 
