@@ -70,6 +70,16 @@ The newly created HG19 coordinate VCFs are lifted over using [Picard `LiftoverVc
 
 For a full description of the annotations VEP determined for each variant, see the [VEP documentation][vep].
 
+#### Naming convention
+
+Somatic VCFs are the result of a paired tumor-normal analysis and are named to indicate the samples used in that analysis. We use the tumor sample name followed by the germline sample name. Usually, the tumor and germline sample names share the same initial prefix, and in this case we do not repeat the prefix. For example, an analysis with tumor sample `SJOS0123_D` and germline sample `SJOS0123_G` becomes `SJOS0123_D_G`. In some rare cases, the prefix differs. For example, with `SJHM030441_D2_SJOS030441_G1`, the germline sample was taken when the patient was being treated for Osteosarcoma, but the tumor sample was taken from the same patient at the time of treatment for Acute Myeloid Leukemia; since there is no shared prefix, they are appended in full length.
+
+The metadata file `SAMPLE_INFO.txt` contains the exact details for which samples are included in the analysis. The disease sample is under `sample_name`, and the normal sample is under `attr_control_sample`. Since these original files are from a wide-span of projects over the years, the exact sample naming conventions have changed and the VCF file names reflect those changes.
+
+An exception occurs when different germline samples were used in separate experiments comparing against the same disease sample. All somatic VCFs may contain data from up to four different experiments; WGS, WES, RNA-Seq, and VALCAP experiments can all be presented in the same file. In nearly all cases those 4 experiments will have been done using the same germline samples. But rarely one analysis (i.e. WGS analysis) was done using one germline sample, and another analysis (i.e. WES analysis) was done using another germline sample. In those cases we integrate the data and join the germline extensions using hyphens (`-`); for example `SJETV010_D_G-H`. The VCF header and the metadata file `SAMPLE_INFO.txt` will contain more details about which samples were used for which experiments.
+
+Filenames are not always reflective of the truth for a given sample, and the metadata should always be used during sample selection as it has been thoroughly curated by experts.
+
 #### Additional Caveats
 
 The VCF headers will explain each annotation used, including the fields for read counts and depths of each sequencing type. For more information on the variant calling format (VCF), please see the version 4.2 specification for VCF documents [here][vcf-specs].
