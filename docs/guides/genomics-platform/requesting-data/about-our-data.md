@@ -214,7 +214,10 @@ CCSS is a multi-institutional, multi-disciplinary, NCI-funded collaborative reso
 
     With any questions on the nature or implications of this warning, please contact us at [support@stjude.cloud](mailto:support@stjude.cloud).
 
-## Metadata
+### Pan-Acute Lymphoblastic Leukemia (PanALL)
+PanALL comprises cases of B-progenitor and T-lineage ALL encompassing the spectrum of ALL subtypes across the age continuum. Samples sequenced were obtained from multiple sites, centers and cooperative groups including St. Jude Children’s Research Hospital, The Children’s Oncology Group, The Alliance – Cancer and Leukemia Group B, the Eastern Cooperative Oncology Group, The Southwestern Oncology group, MD Anderson Cancer Center, City of Hope National Medical Center, Princess Margaret Cancer Center, Northern Italy Leukemia Group, and UKALL.
+
+## Metadata 
 
 Each data request includes a text file called `SAMPLE_INFO.txt` that provides a number of file level properties (sample identifiers, clinical attributes, etc).
 

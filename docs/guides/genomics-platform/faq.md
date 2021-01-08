@@ -112,6 +112,21 @@ files. You can efficiently revert BAMs to FASTQs in the cloud by wrapping the
 conversion tool of your choice into a [Cloud
 App](./analyzing-data/creating-a-cloud-app.md)
 
+
+## How can I run an analysis workflow on multiple sample files at the same time?  
+
+The DNAnexus interface does have a batch tool available; however, it is in early testing, so we recommend using dx-toolkit on the command line as the most reliable and user friendly approach to batch and submit jobs. You can find our documentation on how to install and get started with dx-toolkit [here](./guides/genomics-platform/analyzing-data/command-line.md). You may also refer to the sample script below that loops through all the BAM files in the `data` folder and submits a job using the BAM and matching index file.   
+~~~~
+for bam in $(dx ls '/data/*.bam'); do  
+  dx run \  
+    --yes \  
+    --input "0.BAM=/data/$bam" \
+    --input "0.BAM_INDEX=/data/$bam.bai" \
+    "$PROJECT_ID:/Rapid RNA-Seq (BAM)"
+done
+~~~~  
+Note that this sample script assumes that the BAM and index files are in the `data` folder and the Rapid RNA-Seq analysis workflow is in the project. `$PROJECT_ID` can be set to your project dxid, and `Rapid RNA-Seq (BAM)` can be changed to the workflow you want to run.
+
 ## How can I work with genomics data in the cloud?
 
 You can view [this guide](./analyzing-data/creating-a-cloud-app.md) to learn how
