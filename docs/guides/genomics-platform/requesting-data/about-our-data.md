@@ -38,7 +38,7 @@ Somatic VCF files available on St. Jude Cloud have been generated when possible 
 10. Variant coordinates were lifted over to GRCh38_no_alt using [Picard][picard] `LiftoverVcf`.
 11. Variants were normalized using [`vt normalize`][vt].
 12. Variants were annotated using [VEP v100][vep] and the `--everything` flag.
-13. VCFs were bgzipped and tabixed, then validated using [VCFtools' `vcf-validator`][vcf-validator].
+13. VCFs were compressed with bgzip and tabix indexed, then validated using [VCFtools' `vcf-validator`][vcf-validator].
     * VCFtools' `vcf-validator` is outdated, and is being replaced with [GATK's `ValidateVariants`][gatk-validator] in future versions of the pipeline.
 
 For more detailed information on steps 1-5, see the [Clinical Pilot paper][clinical-pilot] where they are described in depth.
@@ -48,7 +48,7 @@ For more detailed information on steps 1-5, see the [Clinical Pilot paper][clini
 
 #### Variant Validation Status
 
-When variants are assessed by analysts, they make a determination about how confident they are that the variant is correctly called and present only in the tumor sample. This is a wholistic determination using read counts for all sequencing types available, along with computationally derived statistics created by our post-processing pipeline. Potential pathogenicity is not included in this evaluation.
+When variants are assessed by analysts, they make a determination about how confident they are that the variant is correctly called and present only in the tumor sample. This determination uses read counts for all sequencing types available, along with computationally derived statistics created by our post-processing pipeline. Potential pathogenicity is not included in this evaluation.
 
 #### Variant Filtering
 

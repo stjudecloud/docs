@@ -57,6 +57,7 @@ excluded_words:
   - isoforms
   - GATK
   - GATK's
+  - amplicon
 
   # Names
   - Dongren
