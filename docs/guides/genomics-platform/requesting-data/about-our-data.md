@@ -27,7 +27,7 @@ Somatic VCF files available on St. Jude Cloud have been generated when possible 
 1. Whole genome (WGS) and/or Whole exome (WES) sequencing data were aligned to HG19 using [bwa backtrack][bwa] (`bwa aln` + `bwa sampe`) using default parameters.
 2. Post processing of aligned reads was performed using [Picard][picard] `CleanSam` and `MarkDuplicates`.
 3. Variants were called using the [Bambino][bambino-paper] variant caller (you can download Bambino [here][bambino-download]).
-4. If RNA-Sequencing was performed on a tumor sample, we assess the presence of any called variants in a StrongARM aligned RNA-Seq BAM file.
+4. If RNA-Sequencing was performed on a tumor sample, we assess the presence of any called variants in a [StrongARM][strong-arm] aligned RNA-Seq BAM file.
 5. In some Clinical Pilot cases, validation by custom capture was performed, in which case the read counts of that experiment are reported.
 6. Variants were post-processed using an in-house post-processing pipeline that cleans and annotates variants. This pipeline is not currently publicly available.
 7. Depending on cohort, either all variants were manually reviewed by analysts (PCGP cohort) or a subset comprising all coding variants were manually reviewed (Clinical Pilot, and G4K). This resulted in the assignment of a validation status for each variant [(see below)](#variant-validation-status).
@@ -41,7 +41,7 @@ Somatic VCF files available on St. Jude Cloud have been generated when possible 
 13. VCFs were compressed with bgzip and tabix indexed, then validated using [VCFtools' `vcf-validator`][vcf-validator].
     * VCFtools' `vcf-validator` is outdated, and is being replaced with [GATK's `ValidateVariants`][gatk-validator] in future versions of the pipeline.
 
-For more detailed information on steps 1-5, see the [Clinical Pilot paper][clinical-pilot] where they are described in depth.
+For more detailed information on steps 1-6, see the [Clinical Pilot paper][clinical-pilot] where they are described in depth.
 
 !!! warning
     The variants in these files were not called from the HG38 BAMs available elsewhere on St. Jude Cloud, but are the results of a separate HG19 pipeline.
@@ -122,7 +122,8 @@ CNV files contain copy number alteration (CNA) analysis results for paired tumor
 [bcftools]: http://samtools.github.io/bcftools/bcftools.html
 [vcf-validator]: https://vcftools.github.io/perl_module.html#vcf-validator
 [gatk-validator]: https://gatk.broadinstitute.org/hc/en-us/articles/360037057272-ValidateVariants
-[clinical-pilot]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6160438/
+[clinical-pilot]: https://www.nature.com/articles/s41467-018-06485-7
+[strong-arm]: https://www.nature.com/articles/ng.2938
 [vcf-specs]: https://samtools.github.io/hts-specs/VCFv4.2.pdf
 [msgen]: https://azure.microsoft.com/en-us/services/genomics/
 [msgen-whitepaper]: https://azure.microsoft.com/en-us/resources/accelerate-precision-medicine-with-microsoft-genomics/
