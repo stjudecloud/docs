@@ -58,6 +58,10 @@ excluded_words:
   - GATK
   - GATK's
   - amplicon
+  - Fasta
+  - missense
+  - xeno
+  - bgzip
 
   # Names
   - Dongren
