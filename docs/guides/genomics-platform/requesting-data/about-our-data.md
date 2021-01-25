@@ -48,7 +48,18 @@ For more detailed information on steps 1-6, see the [Clinical Pilot paper][clini
 
 #### Variant Validation Status
 
-When variants are assessed by analysts, they make a determination about how confident they are that the variant is correctly called and present only in the tumor sample. This determination uses read counts for all sequencing types available, along with computationally derived statistics created by our post-processing pipeline. Potential pathogenicity is not included in this evaluation.
+Validation of variants is done by multiple methods. Which method used depends on the individual project. The two methods frequently used are:
+
+* cross-validation
+* custom capture
+
+##### Cross-validation
+
+When available (e.g. ClinicalPilot, G4K, and RTCG), analysts examine supporting evidence for variant calls by aggregating across the available sequencing platforms. This allows for cross-validation of calls. The read counts from multiple sequencing platforms are combined with computationally derived statistics created by our post-processing pipeline. Potential pathogenicity is not included in this evaluation.
+
+##### Custom Capture
+
+For data sets where data from multiple sequencing platforms is not available for samples, variants are validated using custom capture techniques. For called variants, targeted probes are developed and deep sequencing is performed to provide validation. An analyst then reviews the deep sequencing results to assign a validation status.
 
 #### Variant Filtering
 
