@@ -48,10 +48,15 @@ For more detailed information on steps 1-6, see the [Clinical Pilot paper][clini
 
 #### Variant Validation Status
 
-Validation of variants is done by multiple methods. Which method used depends on the individual project. The two methods frequently used are:
+The validation_status is the analyst's determination of whether a variant is actually present in the genome based on available evidence, and not just a sequencing artifact. Note that this doesn't imply anything regarding variant significance, pathogenicity, or relation to disease. When considering evidence for a variant from sequence data from a given platform (WGS, WES, RNA-Seq), the analyst first makes a determination whether the variant should be marked as ‘Good’ or ‘Bad’. To make this assessment, the analyst considers 1) presented quality metric assigned to the variant (e.g. SJHQ – high quality, SJLQ – low quality); and 2) manual inspection of read evidence within sequencing data from the given sequencing platform. A ‘Good’ assignment to a variant on a given sequencing platform indicates, upon consideration of 1) and 2), the analyst has deemed the information to support a true variant call. Conversely a ‘Bad’ assignment is made if the analyst suspects the contrary. Note that regardless of ‘1’, if a concerning number of germline reads are observed to be present upon examination by the analyst, then a ‘Bad’ assignment is made. Upon consideration of ‘Good’/’Bad’ evidence assignments across each of the sequencing platform data, the analyst assigns each variant into one of the following four categories: ‘Valid’ (analyst determined to constitute a valid variant given available sequencing type data), ‘Likely Valid’ (analyst determined to constitute a valid variant however involving discordant or some disagreement among different sequencing platform data), ‘Putative’ (analyst determined to constitute a valid variant however with discordant or weaker evidence where data from sequencing types are not equally informative), or ‘Invalid’ (analyst determined variant not a valid call) according to the following definitions:
 
-* cross-validation
-* custom capture
+VALID = WGS Good, WES Good, RNA-Seq Good/Bad
+LIKELY_VALID = WGS Good, WES Bad, RNA-Seq Good/Bad
+PUTATIVE = WGS Good, WES Bad, RNA-Seq Bad
+PUTATIVE = WGS Bad, WES Good, RNA-Seq Good
+INVALID = any other combination of assignments 
+
+Further, in some cases, variants have been further validated using one or more of the following methodologies, depending on the study they were part of. The two methods that have been employed thus far are cross validation and custom capture.
 
 ##### Cross-validation
 
