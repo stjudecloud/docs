@@ -46,25 +46,31 @@ Somatic VCF files available on St. Jude Cloud have been generated when possible 
 !!! warning
     Please note, as indicated above, that the somatic variants recorded in these VCF files were called using hg19 aligned WGS/WES/RNA-Seq sequencing data, and not from the hg38 BAMs available elsewhere on St. Jude Cloud.
 
-#### Clinical Genomics Sample Variant Validation and Filtering
+#### Sample Variant Validation and Filtering
 
-For clinical genomics samples (Clinical Pilot and G4K study cohorts), the validation_status is the analyst's determination of whether a variant is actually present in the genome based on available evidence, and not just a sequencing artifact. Note that this doesn't imply anything regarding variant significance, pathogenicity, or relation to disease. When considering evidence for a variant from sequence data from a given platform (WGS, WES, RNA-Seq), the analyst first makes a determination whether the variant should be marked as ‘Good’ or ‘Bad’. To make this assessment, the analyst considers 1) presented quality metric assigned to the variant according to a computationally derived in-house metric; and 2) manual inspection of read evidence within sequencing data from the given sequencing platform. A ‘Good’ assignment to a variant on a given sequencing platform indicates, upon consideration of 1) and 2), the analyst has deemed the information to support a true variant call. Conversely a ‘Bad’ assignment is made if the analyst suspects the contrary. Note that regardless of ‘1’, if a concerning number of germline reads are observed to be present upon examination by the analyst, then a ‘Bad’ assignment is made. Upon consideration of ‘Good’/’Bad’ evidence assignments across each of the sequencing platform data, the analyst assigns each variant into one of the following four categories: ‘Valid’ (analyst determined to constitute a valid variant given available sequencing type data), ‘Likely Valid’ (analyst determined to constitute a valid variant however involving discordant or some disagreement among different sequencing platform data), ‘Putative’ (analyst determined to constitute a valid variant however with discordant or weaker evidence where data from sequencing types are not equally informative), or ‘Invalid’ (analyst determined variant not a valid call) according to the following definitions:
+The validation_status field indicates the status of validating the presence and origin (somatic/germline) of the variant using an orthogonal methodology. Note that this doesn't imply anything regarding variant significance, pathogenicity, or relation to disease. Typically, validation is performed either by secondary sequencing using a custom capture panel designed around the called variants (common in research studies) or by cross-validation using simultaneous sequencing by WGS, WES, and/or RNA-Seq (used in clinical genomics).
+ 
+For validation by a secondary method, "valid" indicates the variant was validated by the secondary method, "putative" indicates that the secondary method could neither confirm nor invalidate the variant (e.g. due to lack of read coverage by the secondary method), and "invalid" indicates a negative result from the secondary method.
+ 
+For cross-validation used by clinical genomics, SNVs and indels are first manually reviewed and called as "Good" or "Bad" for each sequencing methodology. To make this assessment, the analyst considers 1) quality metrics and tags assigned to the variant computationally based on read counts, base qualities, and realignment; and 2) manual inspection of tumor and germline read evidence within sequencing data from the given sequencing platform. The validation status is determined based on the support for the variant by the various methodologies as follows:
 
-| **Designation**  | **Criteria**                         |
+##### Fresh/Frozen Samples
+
+| Designation | Criteria |
 | ---------------- | ------------------------------------ |
-| **VALID**        | WGS Good, WES Good, RNA-Seq Good/Bad |
-| **LIKELY_VALID** | WGS Good, WES Bad, RNA-Seq Good/Bad  |
-| **PUTATIVE**     | WGS Good, WES Bad, RNA-Seq Bad       |
-| **PUTATIVE**     | WGS Bad, WES Good, RNA-Seq Good      |
-| **INVALID**      | any other combination of assignments |
+| Valid | Good in both WGS and WES |
+| Likely Valid | Good in WGS and RNA-Seq, but not WES (though not validated, the high fidelity of WGS means these have a high probability of being valid) |
+| Putative | Good in WGS only or Good in both WES and RNA-Seq |
+| Invalid | any other combination of assignments |
 
-As evident in the above description, the validation of sample variants from Clinical Genomics study cohorts (Clinical Pilot, G4K) is a result of analysts examining supporting evidence for variant calls via consideration/cross-validation of data across multiple sequencing platforms. Thus, read evidence from multiple sequencing platforms have been combined with computationally derived quality metrics assigned by our post-processing pipeline.
+##### FFPE samples
 
-Following this assessment, Clinical Genomics sample variants are filtered such that we only further consider those with "VALID", "LIKELY_VALID", or "PUTATIVE" designations (three highest confidence designations). For each patient sample, these variants have been used to populate the associated somatic VCF file where the validation_status is included in the `validation_status` info tag. Note that variants designated "PUTATIVE" are filtered out if they were not computationally determined to be of high quality according to an in-house metric. Any variants which were not manually reviewed by an analyst (no 'validation_status') require this high quality designation to pass filtering. When variants are not manually reviewed, they receive a `validation_status` of "NA" in the somatic VCF file.
-
-#### Custom Capture Variant Validation
-
-For select PCGP and Clinical Genomics' sample somatic variants, custom capture techniques were used to validate variant calls. For called variants, targeted probes were developed and deep sequencing performed to provide validation for these somatic variants. Subsequently, an analyst reviewed these deep sequencing data to assign a validation status for the variant.
+| Designation | Criteria |
+| ---------------- | ------------------------------------ |
+| Valid | Good in both WES and RNA |
+| Likely Valid | Good in WES but not RNA-Seq |
+| Putative | Generally not used |
+| Invalid | any other combination of assignments |
 
 #### Pre-annotation
 
