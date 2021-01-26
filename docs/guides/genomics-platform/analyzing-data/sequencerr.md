@@ -1,14 +1,9 @@
-## Measuring and suppressing sequencer errors in next generation sequencing
-
-
-!!! note
-    **To manuscript reviewers:** to ensure anonymous review, we have asked the editor to send you accounts so that you do not need to create your own account to keep your test run anonymous. Please contact the editor if you do not receive the account information.
-
+## Measuring and suppressing sequencer errors in next-generation sequencing data
 
 |                       |                                                                                                                                                                                                                                                    |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Authors**           | Eric M Davis, Yu Sun, Yanling Liu, Pandurang Kolekar, Ying Shao, Karol Szlachta, Heather L Mulder, Dongren Ren, Stephen V Rice, Zhaoming Wang, Joy Nakitandwe, Alex Gout, Leslie L Robison, Stanley Pounds, Jefferey Klco, John Easton, Xiaotu Ma* |
-| **Publication**       | In submission                                                                                                                                                                                                                                      |
+| **Authors**           | Eric M Davis, Yu Sun, Yanling Liu, Pandurang Kolekar, Ying Shao, Karol Szlachta, Heather L Mulder, Dongren Ren, Stephen V Rice, Zhaoming Wang, Joy Nakitandwe, Alex Gout, Bridget Shaner, Salina Hall, Leslie L Robison, Stanley Pounds, Jefferey Klco, John Easton, Xiaotu Ma* |
+| **Publication**       | Davis, E.M. _et al._ SequencErr: measuring and suppressing sequencer errors in next-generation sequencing data. **_Genome Biol_** 22(1):37 (2021). doi: [10.1186/s13059-020-02254-2](https://doi.org/10.1186/s13059-020-02254-2)                                                                                                                                                                                                                                        |
 | **Technical Support** | [Contact Us](https://stjude.cloud/contact)                                                                                                                                                                                                         |
 
 ## Overview
@@ -86,12 +81,7 @@ Please refer to the following steps to learn how to launch the workflow, hook up
 
 ![](../../../files/guides/tools/sequencerr/Sequencerr_log_in_1.png)
 
-!!! caution "For Manuscript Reviewers only" 
-    Please select **_DNAnexus account_** option to log in.
-    
-    Follow the stepwise instructions available in the **PDF [here](../../../files/guides/tools/sequencerr/SequencErr_Instructions.pdf)** .
-
-General users please refer to the following instructions.
+Please refer to the following instructions.
 
 ![](../../../files/guides/tools/sequencerr/Sequencerr_log_in_2.png)
 
