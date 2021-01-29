@@ -1,3 +1,7 @@
 {
-    "markdown.extension.toc.updateOnSave": false
+    "markdown.extension.toc.updateOnSave": false,
+    "markdownlint.config": {
+        "no-inline-html": { "allowed_elements": ["NA"] },
+        "code-block-style": false
+    }
 }

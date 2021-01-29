@@ -170,14 +170,14 @@ bigWig track attributes:
 
 Example: [https://proteinpaint.stjude.org/examples/bigwig.stranded.html](https://proteinpaint.stjude.org/examples/bigwig.stranded.html)
 
-For showing stranded RNA-seq coverage data as a pair of bigWig tracks,
+For showing stranded RNA-Seq coverage data as a pair of bigWig tracks,
 with forward strand on top and reverse strand on bottom.
 
 ![](./images/guides/proteinpaint/advanced-guides/using-custom-tracks/media/image4.png)
 
 ```javascript
 {
-    "name": "stranded RNA-seq coverage",
+    "name": "stranded RNA-Seq coverage",
     "type": "bigwigstranded",
      "strand1":{
         "file": "path/to/sample.forwardstrand.bw",
