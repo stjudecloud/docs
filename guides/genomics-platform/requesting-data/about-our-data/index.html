@@ -465,6 +465,67 @@
     Somatic VCF files
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-variant-validation-and-filtering" class="md-nav__link">
+    Sample Variant Validation and Filtering
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#freshfrozen-samples" class="md-nav__link">
+    Fresh/Frozen Samples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ffpe-samples" class="md-nav__link">
+    FFPE samples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-annotation" class="md-nav__link">
+    Pre-annotation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-tools" class="md-nav__link">
+    Processing tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naming-convention" class="md-nav__link">
+    Naming convention
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-caveats" class="md-nav__link">
+    Additional Caveats
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1815,6 +1876,67 @@
     Somatic VCF files
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-variant-validation-and-filtering" class="md-nav__link">
+    Sample Variant Validation and Filtering
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#freshfrozen-samples" class="md-nav__link">
+    Fresh/Frozen Samples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ffpe-samples" class="md-nav__link">
+    FFPE samples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-annotation" class="md-nav__link">
+    Pre-annotation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-tools" class="md-nav__link">
+    Processing tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naming-convention" class="md-nav__link">
+    Naming convention
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-caveats" class="md-nav__link">
+    Additional Caveats
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1992,7 +2114,7 @@
 <tbody>
 <tr>
 <td>BAM</td>
-<td>HG38 aligned BAM files produced by <a href="https://azure.microsoft.com/en-us/services/genomics/">Microsoft Genomics Service</a> (DNA-Seq) or STAR 2-pass mapping (RNA-Seq).</td>
+<td>hg38 aligned BAM files produced by <a href="https://azure.microsoft.com/en-us/services/genomics/">Microsoft Genomics Service</a> (DNA-Seq) or STAR 2-pass mapping (RNA-Seq).</td>
 <td><a href="#bam-files">Click here</a></td>
 </tr>
 <tr>
@@ -2018,24 +2140,112 @@
 </tbody>
 </table>
 <h3 id="bam-files">BAM files<a class="headerlink" href="#bam-files" title="Permanent link">&para;</a></h3>
-<p>In St. Jude Cloud, we store aligned sequence reads in BAM file format for whole genome sequencing, whole exome sequencing, and RNA-seq. For more information on SAM/BAM files, please refer to the <a href="https://samtools.github.io/hts-specs/SAMv1.pdf">SAM/BAM specification</a>. For research samples, we require the standard 30X coverage for whole genome and 100X for whole exome sequencing. For clinical samples, we require higher coverage, 45X, for whole genome sequencing due to tumor purity issues found in clinical tumor specimens. For RNA-Seq, since only a subset of genes are expressed in a specific tissue, we require 30% of the exons to have 20X coverage in order to ensure that at least 30% of the expressed genes have sufficient coverage.</p>
+<p>In St. Jude Cloud, we store aligned sequence reads in BAM file format for whole genome sequencing, whole exome sequencing, and RNA-Seq. For more information on SAM/BAM files, please refer to the <a href="https://samtools.github.io/hts-specs/SAMv1.pdf">SAM/BAM specification</a>. For research samples, we require the standard 30X coverage for whole genome and 100X for whole exome sequencing. For clinical samples, we require higher coverage, 45X, for whole genome sequencing due to tumor purity issues found in clinical tumor specimens. For RNA-Seq, since only a subset of genes are expressed in a specific tissue, we require 30% of the exons to have 20X coverage in order to ensure that at least 30% of the expressed genes have sufficient coverage.</p>
 <h3 id="gvcf-files">gVCF files<a class="headerlink" href="#gvcf-files" title="Permanent link">&para;</a></h3>
 <p>We provide gVCF files produced by the <a href="https://azure.microsoft.com/en-us/services/genomics/">Microsoft Genomics Service</a>. gVCF files are derived from the BAM files produced above as called by <a href="https://software.broadinstitute.org/gatk/documentation/tooldocs/3.8-0/org_broadinstitute_gatk_tools_walkers_haplotypecaller_HaplotypeCaller.php">GATK's haplotype caller</a>. Today, we defer to <a href="https://software.broadinstitute.org/gatk/documentation/article?id=11004">the official specification document</a> from the Broad Institute, as well as <a href="https://software.broadinstitute.org/gatk/documentation/article?id=4017">this discussion</a> on the difference between VCF and gVCF files. For more information about how Microsoft Genomics produces gVCF files or any other questions regarding data generation, please refer to <a href="https://azure.microsoft.com/en-us/resources/accelerate-precision-medicine-with-microsoft-genomics/">the official Microsoft Genomics whitepaper</a>.</p>
 <h3 id="somatic-vcf-files">Somatic VCF files<a class="headerlink" href="#somatic-vcf-files" title="Permanent link">&para;</a></h3>
-<p>Somatic VCF files contain HG38 based SNV/Indel variant calls from the St. Jude somatic variant analysis pipeline as follows. Broadly speaking:</p>
+<p>Somatic VCF files available on St. Jude Cloud have been generated when possible for tumor samples where a matching patient normal sample has also been sequenced. These include samples from the Pediatric Cancer Genome Project (PCGP), Clinical Pilot, and Genomes 4 Kids (G4K) <a href="https://platform.stjude.cloud/data/cohorts/pediatric-cancer">cohorts</a>. These somatic VCF files contain hg38 coordinate SNV/Indel variant calls generated by the St. Jude somatic variant analysis pipeline outlined below:</p>
 <ol>
-<li>Reads were aligned to HG19 using <a href="http://bio-bwa.sourceforge.net/">bwa backtrack</a> (<code>bwa aln</code> + <code>bwa sampe</code>) using default parameters.</li>
-<li>Post processing of aligned reads was performed using <a href="https://broadinstitute.github.io/picard/">Picard</a> <code>CleanSam</code> and <code>MarkDuplicates</code>.</li>
-<li>Variants were called using the <a href="https://academic.oup.com/bioinformatics/article/27/6/865/236751">Bambino</a> variant caller (you can download Bambino <a href="http://ftp.stjude.org/pub/software/conserting/bambino-1.0.jar">here</a> or by navigating to the <a href="https://www.stjuderesearch.org/site/lab/zhang">Zhang Lab page</a> where the  "Bambino package" is listed as a dependency under the CONSERTING section).</li>
-<li>Variants were post-processed using an in-house post-processing pipeline that cleans and annotates variants. This pipeline is not currently publicly available.</li>
-<li>Variants were manually reviewed by analysts and published with <a href="https://www.stjude.org/research/pediatric-cancer-genome-project.html">the relevant Pediatric Cancer Genome Project (PCGP) paper</a>.</li>
-<li>Post-publication, variants were lifted over to HG38 (the original HG19 coordinates are stored in the <code>HG19</code> INFO field.).</li>
+<li>Whole genome (WGS) and/or Whole exome (WES) sequencing data were aligned to hg19 using <a href="http://bio-bwa.sourceforge.net/">bwa backtrack</a> (<code>bwa aln</code> + <code>bwa sampe</code>) using default parameters.<strong>*</strong></li>
+<li>Post processing of aligned reads was performed using <a href="https://broadinstitute.github.io/picard/">Picard</a> <code>CleanSam</code> and <code>MarkDuplicates</code>.<strong>*</strong></li>
+<li>Variants were called using the <a href="https://academic.oup.com/bioinformatics/article/27/6/865/236751">Bambino</a> variant caller (you can download Bambino <a href="http://ftp.stjude.org/pub/software/conserting/bambino-1.0.jar">here</a>).<strong>*</strong></li>
+<li>If RNA-Sequencing was performed on a tumor sample, we assessed the presence of any WGS/WES called variants within a <a href="https://www.nature.com/articles/ng.2938">StrongARM</a> aligned RNA-Seq BAM file.<strong>*</strong></li>
+<li>In some Clinical Pilot cohort study cases, validation by custom capture was performed, in which case the read counts of that experiment were reported.<strong>*</strong></li>
+<li>Variants were post-processed using an in-house post-processing pipeline that cleans and annotates variants. This pipeline is not currently publicly available.<strong>*</strong></li>
+<li>Depending on the cohort, either all variants were manually reviewed by analysts (PCGP cohort) or a subset comprising all coding variants were manually reviewed (Clinical Pilot and G4K). This resulted in the assignment of a validation status for each variant <a href="#variant-validation-status">(see below)</a>.</li>
+<li>Variant filtering:<ul>
+<li>For patient samples where a complete set of variants have been manually curated and reported as part of an existing publication, the published set of variants was considered the complete set of variants for that patient tumor sample, and used to populate the associated somatic VCF file. This includes samples belonging to the Clinical Pilot cohort study and some of the PCGP cohort studies.</li>
+<li>For currently unpublished patient tumor samples, we filtered variants based on metrics derived from the in-house post-processing pipeline and the input of analysts <a href="#variant-validation-status">(see below)</a>. This includes the patient samples in the G4K study, along with some unpublished PCGP and Clinical Pilot cohort study samples.</li>
+</ul>
+</li>
+<li>Variants were converted from our in-house formats to VCF format.</li>
+<li>Variant coordinates were lifted over to GRCh38_no_alt using <a href="https://broadinstitute.github.io/picard/">Picard</a> <code>LiftoverVcf</code>.</li>
+<li>Variants were normalized using <a href="https://genome.sph.umich.edu/wiki/Vt#Normalization"><code>vt normalize</code></a>.</li>
+<li>Variants were annotated using <a href="https://uswest.ensembl.org/info/docs/tools/vep/index.html">VEP v100</a> and the <code>--everything</code> flag.</li>
+<li>VCFs were compressed with bgzip and tabix indexed, then validated using <a href="https://vcftools.github.io/perl_module.html#vcf-validator">VCFtools' <code>vcf-validator</code></a>.<ul>
+<li>VCFtools' <code>vcf-validator</code> is outdated, and is being replaced with <a href="https://gatk.broadinstitute.org/hc/en-us/articles/360037057272-ValidateVariants">GATK's <code>ValidateVariants</code></a> in future versions of the pipeline.</li>
+</ul>
+</li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>Our Somatic VCF files were designed specifically for St. Jude Cloud visualization purposes. Variants in these files were manually curated from analyses across multiple sequencing types including WGS and WES.</strong><br />
-For more information on variants for each of the individuals, please refer to the relevant PCGP paper. For more information on the variant calling format (VCF), please see the latest specification for VCF document listed <a href="https://samtools.github.io/hts-specs/">here</a>.</p>
+<p><strong>*</strong> For more detailed information on steps 1-6, see the <a href="https://www.nature.com/articles/s41467-018-06485-7">Clinical Pilot paper</a> where they are described in depth.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please note, as indicated above, that the somatic variants recorded in these VCF files were called using hg19 aligned WGS/WES/RNA-Seq sequencing data, and not from the hg38 BAMs available elsewhere on St. Jude Cloud.</p>
 </div>
+<h4 id="sample-variant-validation-and-filtering">Sample Variant Validation and Filtering<a class="headerlink" href="#sample-variant-validation-and-filtering" title="Permanent link">&para;</a></h4>
+<p>The validation_status field indicates the status of validating the presence and origin (somatic/germline) of the variant using an orthogonal methodology. Note that this doesn't imply anything regarding variant significance, pathogenicity, or relation to disease. Typically, validation is performed either by secondary sequencing using a custom capture panel designed around the called variants (common in research studies) or by cross-validation using simultaneous sequencing by WGS, WES, and/or RNA-Seq (used in clinical genomics).</p>
+<p>For validation by a secondary method, "valid" indicates the variant was validated by the secondary method, "putative" indicates that the secondary method could neither confirm nor invalidate the variant (e.g. due to lack of read coverage by the secondary method), and "invalid" indicates a negative result from the secondary method.</p>
+<p>Cross-validation of variant data across multiple sequencing methodologies (WGS, WES, RNA-Seq etc) has been used across clinical genomics studies (Clinical Pilot, G4K, and RTCG). Here SNVs and indels are first manually reviewed and called as "Good" or "Bad" for each sequencing methodology. To make this assessment, the analyst considers 1) computationally generated quality metrics and tags assigned to the variant based on read counts, base qualities, and realignment; and 2) manual inspection of tumor and germline read evidence within sequencing data from the given sequencing platform. The assigned validation status is determined based on the observed support for the variant across each of the sequencing methodologies as follows:</p>
+<h5 id="freshfrozen-samples">Fresh/Frozen Samples<a class="headerlink" href="#freshfrozen-samples" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>Designation</th>
+<th>Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Valid</td>
+<td>Good in both WGS and WES</td>
+</tr>
+<tr>
+<td>Likely Valid</td>
+<td>Good in WGS and RNA-Seq, but not WES (though not validated, the high fidelity of WGS means these have a high probability of being valid)</td>
+</tr>
+<tr>
+<td>Putative</td>
+<td>Good in WGS only or Good in both WES and RNA-Seq</td>
+</tr>
+<tr>
+<td>Invalid</td>
+<td>any other combination of assignments</td>
+</tr>
+</tbody>
+</table>
+<h5 id="ffpe-samples">FFPE samples<a class="headerlink" href="#ffpe-samples" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>Designation</th>
+<th>Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Valid</td>
+<td>Good in both WES and RNA</td>
+</tr>
+<tr>
+<td>Likely Valid</td>
+<td>Good in WES but not RNA-Seq</td>
+</tr>
+<tr>
+<td>Putative</td>
+<td>Generally not used</td>
+</tr>
+<tr>
+<td>Invalid</td>
+<td>any other combination of assignments</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pre-annotation">Pre-annotation<a class="headerlink" href="#pre-annotation" title="Permanent link">&para;</a></h4>
+<p>As part of our post-processing pipeline, variants are processed by a variety of in-silico pathogenicity prediction algorithms that default VEP doesn't provide. We include those results as VCF <code>INFO</code> tags when applicable. Note that they were performed on the hg19 coordinates. Algorithms include <a href="https://genome.cshlp.org/content/19/9/1553.abstract">Likelihood Ratio Test (LRT)</a>, <a href="http://mutationassessor.org/r3/">MutationAssessor</a>, <a href="http://www.mutationtaster.org/info/documentation.html">MutationTaster</a>, and <a href="http://fathmm.biocompute.org.uk/about.html">FATHMM</a>.</p>
+<p>Bambino represents indels in a format incompatible with the VCF specification. When we convert variants to VCFs, we store the original Bambino representation in the <code>bambino_representation</code> tag of the info field. Note that this entry is always in hg19 coordinates.</p>
+<p>Where possible, allele counts and read depths for each variant are determined across each sequencing type available for the associated patient tumor-normal pair. These can include WGS, WES, RNA-Seq, and validation-capture (VALCAP) data. These data are stored in the sample columns of the VCF.</p>
+<h4 id="processing-tools">Processing tools<a class="headerlink" href="#processing-tools" title="Permanent link">&para;</a></h4>
+<p>The newly created hg19 coordinate VCFs are lifted over using <a href="https://broadinstitute.github.io/picard/">Picard <code>LiftoverVcf</code></a>. <a href="http://hgdownload.soe.ucsc.edu/goldenPath/hg19/liftOver/hg19ToHg38.over.chain.gz"><code>hg19ToHg38.over.chain</code></a> is used as the chain file and <code>GRCh38_no_alt.fa</code> is used as the reference. The hg38 build includes some reference contigs not present in the GRCh38_no_alt build, so variants which would map to one of those alternate sequences are excluded from the VCFs. Variants which fail Picard liftover may be reviewed by an analyst and lifted over manually. <a href="http://samtools.github.io/bcftools/bcftools.html"><code>bcftools annotate</code></a> is used to document the reference file and exact liftover command used in the VCF's header. Note that hg19 alleles and coordinates are stored by Picard in the <code>OriginalAlleles</code>, <code>OriginalContig</code>, and <code>OriginalStart</code> info tags within the final VCF file. Please also note that there is a bug in the version of Picard we use (version 2.18.29) which rarely truncates some of the VCF's format and sample fields. These are fields which we use to store read counts and depths for each sequencing type (WGS, WES, RNA-Seq, VALCAP). A <a href="https://github.com/broadinstitute/picard/issues/1558">bug report</a> has been filed with Picard. In the current version of the pipeline we recover the dropped entries from the original hg19 VCF. While searching for and correcting these entries, we also reorder the FORMAT and genotype fields to a logical ordering, as opposed to the alphabetical output order of Picard.</p>
+<p><code>vt normalize</code> is used to obtain consistent representations of all variants which may have multiple equivalent forms. If VT modifies a variant, it records the original form in the <code>OLD_VARIANT</code> info tag. <a href="https://genome.sph.umich.edu/wiki/Vt#Normalization">Click here</a> to read about variant normalization.</p>
+<p>For a full description of the annotations VEP determines for each variant, see the <a href="https://uswest.ensembl.org/info/docs/tools/vep/index.html">VEP documentation</a>.</p>
+<h4 id="naming-convention">Naming convention<a class="headerlink" href="#naming-convention" title="Permanent link">&para;</a></h4>
+<p>Somatic VCFs are the result of a paired tumor-normal analysis and are named to indicate the samples used in that analysis. We use the tumor sample name followed by the germline sample name. Usually, the tumor and germline sample names share the same initial prefix, and in this case we do not repeat the prefix. For example, an analysis with tumor sample <code>SJOS0123_D</code> and germline sample <code>SJOS0123_G</code> becomes <code>SJOS0123_D_G</code>. In some rare cases, the prefix differs. For example, with <code>SJHM030441_D2_SJOS030441_G1</code>, the germline sample was taken when the patient was being treated for Osteosarcoma, but the tumor sample was taken from the same patient at the time of treatment for Acute Myeloid Leukemia; since there is no shared prefix, they are appended in full length.</p>
+<p>The metadata file <code>SAMPLE_INFO.txt</code> contains the exact details for which samples are included in the analysis. The disease sample is under <code>sample_name</code>, and the normal sample is under <code>attr_control_sample</code>. Since these original files are from a wide-span of projects over the years, the exact sample naming conventions have changed and the VCF file names reflect those changes.</p>
+<p>An exception occurs when different germline samples were used in separate experiments comparing against the same disease sample. All somatic VCFs may contain data from up to four different experiments; WGS, WES, RNA-Seq, and VALCAP experiments can all be presented in the same file. In nearly all cases those 4 experiments will have been done using the same germline samples. But rarely one analysis (i.e. WGS analysis) was done using one germline sample, and another analysis (i.e. WES analysis) was done using another germline sample. In those cases we integrate the data and join the germline extensions using hyphens (<code>-</code>); for example <code>SJETV010_D_G-H</code>. The VCF header and the metadata file <code>SAMPLE_INFO.txt</code> will contain more details about which samples were used for which experiments.</p>
+<p>Filenames are not always reflective of the truth for a given sample, and the metadata should always be used during sample selection as it has been thoroughly curated by experts.</p>
+<h4 id="additional-caveats">Additional Caveats<a class="headerlink" href="#additional-caveats" title="Permanent link">&para;</a></h4>
+<p>The VCF headers will explain each annotation used, including the fields for read counts and depths of each sequencing type. For more information on the variant calling format (VCF), please see the version 4.2 specification for VCF documents <a href="https://samtools.github.io/hts-specs/VCFv4.2.pdf">here</a>.</p>
+<p>It is possible for the same variant to be included more than once. This is most commonly caused by functionally equivalent indels being called with different forms at nearby locations in the original pipeline. However once the variants are normalized, it is revealed that they are the same variant. We make no attempt to select one entry when this occurs and opt to include all duplicates. They may have different read evidence or validation statuses. There may be other sources of these duplicates (such as liftover), but they are rare and we make no attempt to remove them.</p>
 <h3 id="cnv-files">CNV files<a class="headerlink" href="#cnv-files" title="Permanent link">&para;</a></h3>
 <p>CNV files contain copy number alteration (CNA) analysis results for paired tumor-normal WGS samples. Files are produced by running paired tumor-normal BAM files through the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4591043/">CONSERTING</a> pipeline which identifies CNA through iterative analysis of (i) local segmentation by read depth within boundaries identified by structural variation (SV) breakpoints followed by (ii) segment merging and local SV analysis. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3527068/">CREST</a> was used to identify local SV breakpoints. CNV files contain the following information:</p>
 <table>
@@ -2093,12 +2303,12 @@ For more information on variants for each of the individuals, please refer to th
 </tbody>
 </table>
 <h3 id="feature-counts-files">Feature Counts files<a class="headerlink" href="#feature-counts-files" title="Permanent link">&para;</a></h3>
-<p>Feature counts are text files that contain counts of reads aligned to genomic features. St. Jude Cloud feature files are generated using HTSeq. The detailed command is documented in our <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html#specification">RNA-Seq V2 RFC</a>. The files contain a count of the number of reads overlapping each genomic feature, in this case, genes as specified in <a href="https://www.gencodegenes.org/human/release_31.html">GENCODE V31</a>. St. Jude Cloud uses the gene name as feature key. The files are tab-delimited text and contain the feature key and read count for that feature. </p>
+<p>Feature counts are text files that contain counts of reads aligned to genomic features. St. Jude Cloud feature files are generated using HTSeq. The detailed command is documented in our <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html#specification">RNA-Seq V2 RFC</a>. The files contain a count of the number of reads overlapping each genomic feature, in this case, genes as specified in <a href="https://www.gencodegenes.org/human/release_31.html">GENCODE V31</a>. St. Jude Cloud uses the gene name as feature key. The files are tab-delimited text and contain the feature key and read count for that feature.</p>
 <h2 id="sequencing-information">Sequencing Information<a class="headerlink" href="#sequencing-information" title="Permanent link">&para;</a></h2>
 <h3 id="whole-genome-and-whole-exome">Whole Genome and Whole Exome<a class="headerlink" href="#whole-genome-and-whole-exome" title="Permanent link">&para;</a></h3>
-<p>Whole Genome Sequence (WGS) and Whole Exome Sequence (WES) BAM files were produced by the <a href="https://azure.microsoft.com/en-us/services/genomics/">Microsoft Genomics Service</a> aligned to HG38 (GRCh38 no alt analysis set). For more information about how Microsoft Genomics produces BAM files or any other questions regarding data generation, please refer to <a href="https://azure.microsoft.com/en-us/resources/accelerate-precision-medicine-with-microsoft-genomics/">the official Microsoft Genomics whitepaper</a>.</p>
+<p>Whole Genome Sequence (WGS) and Whole Exome Sequence (WES) BAM files were produced by the <a href="https://azure.microsoft.com/en-us/services/genomics/">Microsoft Genomics Service</a> aligned to hg38 (GRCh38 no alt analysis set). For more information about how Microsoft Genomics produces BAM files or any other questions regarding data generation, please refer to <a href="https://azure.microsoft.com/en-us/resources/accelerate-precision-medicine-with-microsoft-genomics/">the official Microsoft Genomics whitepaper</a>.</p>
 <h3 id="rna-seq">RNA-Seq<a class="headerlink" href="#rna-seq" title="Permanent link">&para;</a></h3>
-<p>RNA-Seq BAM files are mapped to HG38. For alignment, <code>STAR</code> v2.7.1a 2-pass mapping is used. Below is the <code>STAR</code> command used during alignment. For more information about any of the parameters used, please refer to the <a href="https://github.com/alexdobin/STAR/blob/a22ad18600c827841e3fcd74118e9baac75669f4/doc/STARmanual.pdf">STAR manual</a> for v2.7.1a. The complete RNA-Seq WDL pipeline is available on <a href="https://github.com/stjudecloud/workflows/blob/master/workflows/rnaseq/rnaseq-standard.wdl">GitHub</a>. The STAR alignment parameters are also available on <a href="https://github.com/stjudecloud/workflows/blob/master/tools/star.wdl">GitHub</a>. </p>
+<p>RNA-Seq BAM files are mapped to hg38. For alignment, <code>STAR</code> v2.7.1a 2-pass mapping is used. Below is the <code>STAR</code> command used during alignment. For more information about any of the parameters used, please refer to the <a href="https://github.com/alexdobin/STAR/blob/a22ad18600c827841e3fcd74118e9baac75669f4/doc/STARmanual.pdf">STAR manual</a> for v2.7.1a. The complete RNA-Seq WDL pipeline is available on <a href="https://github.com/stjudecloud/workflows/blob/master/workflows/rnaseq/rnaseq-standard.wdl">GitHub</a>. The STAR alignment parameters are also available on <a href="https://github.com/stjudecloud/workflows/blob/master/tools/star.wdl">GitHub</a>.</p>
 <div class="highlight"><pre><span></span><code>    STAR <span class="se">\</span>
              --readFilesIn <span class="k">$(</span>cat read_one_fastqs_sorted.txt<span class="k">)</span> <span class="k">$(</span>cat read_two_fastqs_sorted.txt<span class="k">)</span> <span class="se">\</span>
              --genomeDir ~<span class="o">{</span>stardb_dir<span class="o">}</span> <span class="se">\</span>
@@ -2126,19 +2336,19 @@ For more information on variants for each of the individuals, please refer to th
 <p>We currently have the five <a href="../glossary/#data-access-unit">Data Access Units (DAU)</a> listed below. <a href="#clinical-and-phenotypic-information">Basic clinical data</a> is available for relevant subjects in each DAU. Click on the DAU's abbreviation below to navigate directly to that DAU's <a href="../../../studies/">Study page</a> for more detailed information.</p>
 <h3 id="pediatric-cancer-genome-project-pcgp">Pediatric Cancer Genome Project (PCGP)<a class="headerlink" href="#pediatric-cancer-genome-project-pcgp" title="Permanent link">&para;</a></h3>
 <p><strong><a href="https://stjude.cloud/studies/pediatric-cancer-genome-project">PCGP</a> is a paired-tumor normal dataset focused on discovering the genetic origins of pediatric cancer.</strong>
-The Pediatric Cancer Genome Project is a collaboration between St. Jude Children's Research Hospital and the McDonnell Genome Institute at Washington University School of Medicine that sequenced the genomes of over 600 pediatric cancer patients. </p>
+The Pediatric Cancer Genome Project is a collaboration between St. Jude Children's Research Hospital and the McDonnell Genome Institute at Washington University School of Medicine that sequenced the genomes of over 600 pediatric cancer patients.</p>
 <h3 id="st-jude-lifetime-sjlife">St. Jude Lifetime (SJLIFE)<a class="headerlink" href="#st-jude-lifetime-sjlife" title="Permanent link">&para;</a></h3>
 <p><strong><a href="https://sjlife.stjude.org/">SJLIFE</a> is a germline-only dataset focused on studying the long-term adverse outcomes associated with cancer and cancer-related therapy.</strong>
-St. Jude Lifetime (SJLIFE) is a longevity study from St. Jude Children's Research Hospital that aims to identify all inherited genome sequence and structural variants influencing the development of childhood cancer and occurrence of long-term adverse outcomes associated with cancer and cancer-related therapy. This cohort contains unpaired germline samples and does not contain tumor samples. </p>
+St. Jude Lifetime (SJLIFE) is a longevity study from St. Jude Children's Research Hospital that aims to identify all inherited genome sequence and structural variants influencing the development of childhood cancer and occurrence of long-term adverse outcomes associated with cancer and cancer-related therapy. This cohort contains unpaired germline samples and does not contain tumor samples.</p>
 <h3 id="clinical-genomics-clinical-pilot-g4k-and-rtcg">Clinical Genomics (Clinical Pilot, G4K, and RTCG)<a class="headerlink" href="#clinical-genomics-clinical-pilot-g4k-and-rtcg" title="Permanent link">&para;</a></h3>
 <p><strong><a href="https://stjude.cloud/studies/clinical-genomics">Clinical Genomics</a> is a paired tumor-normal dataset focused on identifying variants that influence the development and behavior of childhood tumors.</strong>
-Clinical Genomics is a cohort from St. Jude Children's Research Hospital, comprised of three studies: Clinical Pilot, Genomes4Kids, and Real-time Clinical Genomics. Clinical Pilot is a smaller, pilot study generated to asses the validity and accuracy of moving forward with the G4K study. The RTCG study aims to release Clinical Genomics data in real time to the research community. The goal of these studies is to identify all inherited and tumor-acquired (somatic) genome sequence and structural variants influencing the development and behavior of childhood tumors. </p>
+Clinical Genomics is a cohort from St. Jude Children's Research Hospital, comprised of three studies: Clinical Pilot, Genomes4Kids, and Real-time Clinical Genomics. Clinical Pilot is a smaller, pilot study generated to asses the validity and accuracy of moving forward with the G4K study. The RTCG study aims to release Clinical Genomics data in real time to the research community. The goal of these studies is to identify all inherited and tumor-acquired (somatic) genome sequence and structural variants influencing the development and behavior of childhood tumors.</p>
 <h3 id="sickle-cell-genome-project-sgp">Sickle Cell Genome Project (SGP)<a class="headerlink" href="#sickle-cell-genome-project-sgp" title="Permanent link">&para;</a></h3>
 <p><strong><a href="https://sickle-cell.stjude.cloud/">SGP</a> is a germline-only dataset of Sickle Cell Disease (SCD) patients from birth to young adulthood.</strong>
 The Sickle Cell Genome Project (SGP) is a collaboration between St. Jude Children’s Research Hospital and Baylor College of Medicine focused on identifying genetic modifiers that contribute to various health complications in SCD patients. Additional objectives include, but are not limited to, developing accurate methods to characterize germline structural variants in highly homologous globin locus and blood typing.</p>
 <h3 id="childhood-cancer-survivor-study-ccss">Childhood Cancer Survivor Study (CCSS)<a class="headerlink" href="#childhood-cancer-survivor-study-ccss" title="Permanent link">&para;</a></h3>
 <p><strong><a href="https://stjude.cloud/studies/clinical-genomics">CCSS</a> is a germline-only dataset consisting of whole genome sequencing of childhood cancer survivors.</strong>
-CCSS is a multi-institutional, multi-disciplinary, NCI-funded collaborative resource established to evaluate long-term outcomes among survivors of childhood cancer. It is a retrospective cohort consisting of &gt;24,000 five-year survivors of childhood cancer who were diagnosed between 1970-1999 at one of 31 participating centers in the U.S. and Canada. The primary purpose of this sequencing of CCSS participants is to identify all inherited genome sequence and structural variants influencing the development of childhood cancer and occurrence of long-term adverse outcomes associated with cancer and cancer-related therapy. </p>
+CCSS is a multi-institutional, multi-disciplinary, NCI-funded collaborative resource established to evaluate long-term outcomes among survivors of childhood cancer. It is a retrospective cohort consisting of &gt;24,000 five-year survivors of childhood cancer who were diagnosed between 1970-1999 at one of 31 participating centers in the U.S. and Canada. The primary purpose of this sequencing of CCSS participants is to identify all inherited genome sequence and structural variants influencing the development of childhood cancer and occurrence of long-term adverse outcomes associated with cancer and cancer-related therapy.</p>
 <div class="admonition warning">
 <p class="admonition-title">CCSS: Potential Bacterial Contamination</p>
 <p>Samples for the Childhood Cancer Survivorship Study were collected by sending out Buccal swab kits to enrolled participants and having them complete the kits at home. This mechanism of collecting saliva and buccal cells for sequencing is highly desirable because of its non-invasive nature and ease of execution. However, collection of samples in this manner also has higher probability of contamination from external sources (as compared to, say, samples collected using blood). We have observed some samples in this cohort which suffer from bacterial contamination. To address this issue, we have taken the following steps:</p>
@@ -3501,7 +3711,7 @@ CCSS is a multi-institutional, multi-disciplinary, NCI-funded collaborative reso
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/74fc3a7">74fc3a7</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/eba8e43">eba8e43</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of

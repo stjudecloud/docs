@@ -1774,7 +1774,7 @@ Genome Project<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>
 <tr>
 <td>BAM files (<em>required</em> if using BAM inputs)</td>
 <td>Input file</td>
-<td>BAM files aligned against HG19/Hg38 (WGS, WES or RNA-Seq).</td>
+<td>BAM files aligned against hg19/Hg38 (WGS, WES or RNA-Seq).</td>
 <td>Sample.bam</td>
 </tr>
 <tr>
@@ -1861,7 +1861,7 @@ by users. </p>
 <p class="admonition-title">Notes on preparing the above file</p>
 <ul>
 <li>The chromosome requires a 'chr' prefix.</li>
-<li>The position requires a suffix of HG19/HG38 to indicate the human genome assembly version.</li>
+<li>The position requires a suffix of hg19/hg38 to indicate the human genome assembly version.</li>
 <li>Only the missense mutations/gene fusion is supported currently and
     the other types of mutations will not be processed.</li>
 </ul>
@@ -1933,9 +1933,9 @@ be highlighted in output file (default 500 nM). Below is an outline of internal 
 <li>Check the version of the genomic position of the input SNV/fusion
     file.</li>
 <li>Lift over the genomic coordinates if the reference genomic
-    position is not HG19. Currently, the internal genome annotation was
-    based on HG19 and the genome coordinates of the mutation files will
-    be adjusted to HG19 for peptide extraction.</li>
+    position is not hg19. Currently, the internal genome annotation was
+    based on hg19 and the genome coordinates of the mutation files will
+    be adjusted to hg19 for peptide extraction.</li>
 <li>Extract the peptide flanking the mutations.</li>
 <li>Run NetMHCcons to obtain the affinity prediction of the peptides.</li>
 <li>Produce the affinity report of each peptide.</li>
@@ -1946,7 +1946,7 @@ be highlighted in output file (default 500 nM). Below is an outline of internal 
 <h2 id="uploading-input-files">Uploading Input files<a class="headerlink" href="#uploading-input-files" title="Permanent link">&para;</a></h2>
 <p>NeoepitopePred takes the following files as <a href="#inputs">input</a>:</p>
 <ul>
-<li>A pair of Gzipped FastQ files or an HG19/HG38 aligned BAM file. These can be
+<li>A pair of Gzipped FastQ files or an hg19/hg38 aligned BAM file. These can be
   generated from whole genome sequencing, whole exome sequencing, or RNA-Seq. </li>
 <li>A file describing the mutations in a sample. </li>
 </ul>
@@ -1955,8 +1955,8 @@ be highlighted in output file (default 500 nM). Below is an outline of internal 
 <p>Refer to <a href="../running-sj-workflows/#running-the-workflow">the general workflow guide</a> to learn how to launch the workflow, hook up input files, adjust parameters, start a run, and monitor run progress.</p>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>This pipeline assumes HG19 coordinates in the mutation file. If the
-coordinates are based on HG38, the coordinates will lifted over to HG19
+<p>This pipeline assumes hg19 coordinates in the mutation file. If the
+coordinates are based on hg38, the coordinates will lifted over to hg19
 to perform epitope affinity prediction.</p>
 </div>
 <h2 id="analysis-of-results">Analysis of Results<a class="headerlink" href="#analysis-of-results" title="Permanent link">&para;</a></h2>
@@ -2017,7 +2017,7 @@ prediction. There will two major types files present here: affinity.out and flan
 </tr>
 <tr>
 <td>Position</td>
-<td>the chromosomal position of the variation. Currently, the position will be lifted over to HG19 to ensure correct translation of peptid sequences based on the internal annotation database of the pipeline. Therefore, the position will be labeled as HG19.</td>
+<td>the chromosomal position of the variation. Currently, the position will be lifted over to hg19 to ensure correct translation of peptide sequences based on the internal annotation database of the pipeline. Therefore, the position will be labeled as hg19.</td>
 </tr>
 <tr>
 <td>Class</td>
@@ -2049,7 +2049,7 @@ prediction. There will two major types files present here: affinity.out and flan
 </tr>
 <tr>
 <td>1-log50k</td>
-<td>Prediction score from netMHCcons</td>
+<td>Prediction score from netMHCons</td>
 </tr>
 <tr>
 <td>nM</td>
@@ -2060,8 +2060,8 @@ prediction. There will two major types files present here: affinity.out and flan
 <td>% Rank of prediction score to a set of 200.000 random natural 9mer peptides</td>
 </tr>
 <tr>
-<td>HLAtype</td>
-<td>All of the hla alleles predicted in the specific sample</td>
+<td>HLA-type</td>
+<td>All of the HLA alleles predicted in the specific sample</td>
 </tr>
 </tbody>
 </table>
@@ -2123,7 +2123,7 @@ predictions. Immunogenetics 2012, 64:177-186.&#160;<a class="footnote-backref" h
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/74fc3a7">74fc3a7</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/eba8e43">eba8e43</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of

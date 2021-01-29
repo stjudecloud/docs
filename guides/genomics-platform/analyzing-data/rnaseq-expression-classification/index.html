@@ -1998,12 +1998,12 @@
                 
                 <h1>RNA-Seq Expression Classification</h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>St. Jude Cloud provides functionality for generating RNA-Seq Expression Classification plots. This tool allows plotting of RNA-seq data by running through the St. Jude Cloud normalization <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.html">pipeline</a>. The generated count data is then compared to a reference set of data from a cohort of St. Jude samples and a plot is produced.</p>
+<p>St. Jude Cloud provides functionality for generating RNA-Seq Expression Classification plots. This tool allows plotting of RNA-Seq data by running through the St. Jude Cloud normalization <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.html">pipeline</a>. The generated count data is then compared to a reference set of data from a cohort of St. Jude samples and a plot is produced.</p>
 <h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h3>
 <ul>
 <li>The RNA-Seq Expression Classification pipeline reference data uses sequencing data from fresh, frozen tissue samples. It has not been evaluated for use with sequencing data generated from formalin-fixed paraffin-embedded (FFPE) specimens.</li>
-<li>If running the count-based pipeline, alignment must be done against the <a href="ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz">GRCh38_no_alt reference</a>. It should use parameters as specified in our <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html">RNA-seq workflow</a> to minimize any discrepancies caused by differing alignment specification.</li>
-<li>If running the count-based pipeline, feature counts should be generated with htseq-count as described in our <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html">RNA-seq workflow</a>. This pipeline uses <a href="ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_31/gencode.v31.annotation.gtf.gz">Gencode v31</a> annotations.</li>
+<li>If running the count-based pipeline, alignment must be done against the <a href="ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz">GRCh38_no_alt reference</a>. It should use parameters as specified in our <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html">RNA-Seq workflow</a> to minimize any discrepancies caused by differing alignment specification.</li>
+<li>If running the count-based pipeline, feature counts should be generated with htseq-count as described in our <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html">RNA-Seq workflow</a>. This pipeline uses <a href="ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_31/gencode.v31.annotation.gtf.gz">Gencode v31</a> annotations.</li>
 </ul>
 <h3 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h3>
 <p>The input can be either of the two entries below, based on whether you want to start
@@ -2243,9 +2243,9 @@ tissue samples. It has not been evaluated for use with sequencing data
 generated from formalin-fixed paraffin-embedded (FFPE) specimens.</p>
 <p>If running the count-based RNA-Seq Expression Classification pipeline, alignment must be
 done against the <a href="ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz">GRCh38_no_alt reference</a>. 
-It should use parameters as specified in our <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html">RNA-seq workflow</a> to minimize any discrepancies caused by differing alignment specification.</p>
+It should use parameters as specified in our <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html">RNA-Seq workflow</a> to minimize any discrepancies caused by differing alignment specification.</p>
 <p>If running the count-based RNA-Seq Expression Classification pipeline, feature counts should be generated
-with htseq-count as described in our <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html">RNA-seq workflow</a>. 
+with htseq-count as described in our <a href="https://stjudecloud.github.io/rfcs/0001-rnaseq-workflow-v2.0.0.html">RNA-Seq workflow</a>. 
 This pipeline uses <a href="ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_31/gencode.v31.annotation.gtf.gz">Gencode v31</a> annotations.</p>
 <p>Batch correction requires a minimum of two samples per batch to run properly. Introducing a single sample batch by adding an input sample with a unique protocol will cause unexpected results.</p>
 </div>
@@ -2315,7 +2315,7 @@ This pipeline uses <a href="ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_hu
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/74fc3a7">74fc3a7</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/eba8e43">eba8e43</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of

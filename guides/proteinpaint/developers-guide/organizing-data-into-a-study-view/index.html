@@ -1848,7 +1848,7 @@
         
           <li class="md-nav__item">
   <a href="#track-junction-rna-seq-junction-reads" class="md-nav__link">
-    Track: junction (RNA-seq junction reads)
+    Track: junction (RNA-Seq junction reads)
   </a>
   
 </li>
@@ -2412,7 +2412,7 @@
         
           <li class="md-nav__item">
   <a href="#track-junction-rna-seq-junction-reads" class="md-nav__link">
-    Track: junction (RNA-seq junction reads)
+    Track: junction (RNA-Seq junction reads)
   </a>
   
 </li>
@@ -2488,11 +2488,11 @@
 <h3 id="assays"><code>"assays":[]</code><a class="headerlink" href="#assays" title="Permanent link">&para;</a></h3>
 <p>Declares all assay names. Example:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-   <span class="s2">&quot;assays&quot;</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;H3K4me3&quot;</span><span class="p">,</span><span class="s2">&quot;RNA-seq&quot;</span><span class="p">,</span><span class="s2">&quot;Splice junctions&quot;</span><span class="p">],</span>
+   <span class="s2">&quot;assays&quot;</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;H3K4me3&quot;</span><span class="p">,</span><span class="s2">&quot;RNA-Seq&quot;</span><span class="p">,</span><span class="s2">&quot;Splice junctions&quot;</span><span class="p">],</span>
    <span class="s2">&quot;H3K4me3&quot;</span><span class="o">:</span><span class="p">{</span>
         <span class="p">...</span> <span class="p">...</span> 
    <span class="p">},</span>
-   <span class="s2">&quot;RNA-seq&quot;</span><span class="o">:</span><span class="p">{</span>
+   <span class="s2">&quot;RNA-Seq&quot;</span><span class="o">:</span><span class="p">{</span>
         <span class="p">...</span> <span class="p">...</span> 
    <span class="p">},</span>
    <span class="s2">&quot;Splice junctions&quot;</span><span class="o">:</span><span class="p">{</span>
@@ -2509,7 +2509,7 @@
 <p>"H3K4me3"</p>
 </li>
 <li>
-<p>"RNA-seq"</p>
+<p>"RNA-Seq"</p>
 </li>
 <li>
 <p>"Splice junctions"</p>
@@ -2570,7 +2570,7 @@
 </ul>
 <h3 id="bigwig-tracks">bigWig tracks<a class="headerlink" href="#bigwig-tracks" title="Permanent link">&para;</a></h3>
 <p>Declare an assay type for the bigWig track, e.g.:</p>
-<div class="highlight"><pre><span></span><code><span class="s2">&quot;RNA-seq&quot;</span><span class="o">:</span><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;RNA-Seq&quot;</span><span class="o">:</span><span class="p">{</span>
     <span class="s2">&quot;config&quot;</span><span class="o">:</span> <span class="p">{</span>
             <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;bigwig&quot;</span><span class="p">,</span>
             <span class="s2">&quot;pcolor&quot;</span><span class="o">:</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span>
@@ -2876,7 +2876,7 @@ the genome.</p>
         <span class="s2">&quot;cnv&quot;</span><span class="o">:</span><span class="s2">&quot;datadir/cnv&quot;</span>
      <span class="p">},</span>
      <span class="p">{</span>
-         <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;RNA-seq&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;RNA-Seq&quot;</span><span class="p">,</span>
          <span class="s2">&quot;snvindel&quot;</span><span class="o">:</span><span class="s2">&quot;datadir/snvindel_rna&quot;</span><span class="p">,</span>
          <span class="s2">&quot;fusion&quot;</span><span class="o">:</span><span class="s2">&quot;datadir/fusion&quot;</span>
      <span class="p">}</span>
@@ -2906,7 +2906,7 @@ separate text files.</p>
 <p>Structural variation OR fusion, they are in the same <a href="https://plus.google.com/+XinZhou_s/posts/9FknbtqWKgZ">tabular text format</a></p>
 </li>
 <li>
-<p>Note that "sv" is used in "DNA", and "fusion" is used in "RNA-seq"</p>
+<p>Note that "sv" is used in "DNA", and "fusion" is used in "RNA-Seq"</p>
 </li>
 </ul>
 </li>
@@ -2977,7 +2977,7 @@ the protein-view.</p>
     <span class="s2">&quot;keyname&quot;</span><span class="o">:</span><span class="s2">&quot;[name of the table field to query against, e.g. gene]&quot;</span><span class="p">,</span>
     <span class="s2">&quot;tidy&quot;</span><span class="o">:</span><span class="s2">&quot;function(rows){rows.forEach(function(row){ ... })}&quot;</span><span class="p">,</span>
     <span class="s2">&quot;config&quot;</span><span class="o">:</span><span class="p">{</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;RNA-seq&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;RNA-Seq&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sampletype&quot;</span><span class="o">:</span><span class="s2">&quot;sample&quot;</span><span class="p">,</span>
         <span class="s2">&quot;datatype&quot;</span><span class="o">:</span><span class="s2">&quot;FPKM&quot;</span><span class="p">,</span>
         <span class="s2">&quot;ongene&quot;</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span>
@@ -3330,7 +3330,7 @@ numerical, and positional. Bedgraph and bigWig are numerical track
 formats, the generic bed is the positional format.</p>
 <p>In the cohort definition, you have to first declare what the tracks are
 about, then the type/format of the track. The first layer is assay type,
-like RNA-seq, or it can be anything with a name. We will refer to it as
+like RNA-Seq, or it can be anything with a name. We will refer to it as
 "assay type".</p>
 <p>Assay types are predefined, allowed values are (case-sensitive):</p>
 <ul>
@@ -3406,10 +3406,10 @@ config.</p>
 </ul>
 <h3 id="track-bedgraph">Track: bedGraph<a class="headerlink" href="#track-bedgraph" title="Permanent link">&para;</a></h3>
 <div class="admonition example">
-<p class="admonition-title">bedGraph track example for RNA-seq</p>
+<p class="admonition-title">bedGraph track example for RNA-Seq</p>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;rnaseq&quot;</span><span class="o">:</span><span class="p">{</span>
     <span class="s2">&quot;config&quot;</span><span class="o">:</span><span class="p">{</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;RNA-seq coverage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;RNA-Seq coverage&quot;</span><span class="p">,</span>
         <span class="s2">&quot;tktype&quot;</span><span class="o">:</span><span class="s2">&quot;bedgraph&quot;</span><span class="p">,</span>
         <span class="s2">&quot;pcolor&quot;</span><span class="o">:</span><span class="s2">&quot;#006600&quot;</span><span class="p">,</span>
         <span class="s2">&quot;pcolor2&quot;</span><span class="o">:</span><span class="s2">&quot;#CC00B8&quot;</span><span class="p">,</span>
@@ -3431,10 +3431,10 @@ config.</p>
 </div>
 <h3 id="track-bigwig">Track: bigWig<a class="headerlink" href="#track-bigwig" title="Permanent link">&para;</a></h3>
 <div class="admonition example">
-<p class="admonition-title">bigWig example for RNA-seq</p>
+<p class="admonition-title">bigWig example for RNA-Seq</p>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;rnaseq&quot;</span><span class="o">:</span><span class="p">{</span>
     <span class="s2">&quot;config&quot;</span><span class="o">:</span><span class="p">{</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;RNA-seq coverage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;RNA-Seq coverage&quot;</span><span class="p">,</span>
         <span class="s2">&quot;tktype&quot;</span><span class="o">:</span><span class="s2">&quot;bigwig&quot;</span><span class="p">,</span>
         <span class="s2">&quot;pcolor&quot;</span><span class="o">:</span><span class="s2">&quot;#006600&quot;</span><span class="p">,</span>
         <span class="s2">&quot;pcolor2&quot;</span><span class="o">:</span><span class="s2">&quot;#CC00B8&quot;</span><span class="p">,</span>
@@ -3470,7 +3470,7 @@ config.</p>
 <p class="admonition-title"><strong>rnaseq</strong> coverage-FPKM overlay example</p>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;rnaseq&quot;</span><span class="o">:</span><span class="p">{</span>
     <span class="s2">&quot;config&quot;</span><span class="o">:</span><span class="p">{</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;RNA-seq&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;RNA-Seq&quot;</span><span class="p">,</span>
         <span class="s2">&quot;tktype&quot;</span><span class="o">:</span><span class="s2">&quot;numeric2&quot;</span><span class="p">,</span>
     <span class="s2">&quot;track1&quot;</span><span class="o">:</span><span class="p">{</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;coverage&quot;</span><span class="p">,</span>
@@ -3498,7 +3498,7 @@ config.</p>
 </code></pre></div>
 
 </div>
-<h3 id="track-junction-rna-seq-junction-reads">Track: junction (RNA-seq junction reads)<a class="headerlink" href="#track-junction-rna-seq-junction-reads" title="Permanent link">&para;</a></h3>
+<h3 id="track-junction-rna-seq-junction-reads">Track: junction (RNA-Seq junction reads)<a class="headerlink" href="#track-junction-rna-seq-junction-reads" title="Permanent link">&para;</a></h3>
 <div class="admonition example">
 <p class="admonition-title"><strong>junction</strong> example, along with a "browserview" trigger for displaying</p>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;junction&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -3700,7 +3700,7 @@ ProteinPaint, run:</p>
           </div>
         
         
-        built from <a href="https://github.com/stjudecloud/docs/tree/74fc3a7">74fc3a7</a> using
+        built from <a href="https://github.com/stjudecloud/docs/tree/eba8e43">eba8e43</a> using
         
         <a href="https://www.mkdocs.org">MkDocs</a>
         and a modified version of
