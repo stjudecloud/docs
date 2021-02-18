@@ -22,8 +22,8 @@ SEASEQ performs extensive analyses from the raw output of the experiment, includ
 
 ### Input configuration
 
-SEASEQ requires either or both FastQ files or SRA identifiers (SRRs).
-Genome Bowtie indexes, Blacklists are also optional.
+SEASEQ supports fastq files and SRA identifiers (SRRs) as input. A combination of both is also supported. 
+Bowtie genomic indexes and region-based blacklists are optional.
 
 [MEME suite motif databases]: https://meme-suite.org/meme/db/motifs
 
@@ -134,4 +134,3 @@ None yet!
 
 
 [seaseq]: https://github.com/stjude/seaseq
-
