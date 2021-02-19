@@ -12,8 +12,8 @@ SEASEQ performs extensive analyses from the raw output of the experiment, includ
 
 |   Name                        |   Type                | Description                                                 |  Example            |
 |-------------------------------|-----------------------|-------------------------------------------------------------|---------------------|
-|   FastQ files                 |   Array of files      |   One or more fastq files. The files should be gzipped.     |   [`*.gz`]          |
-|   SRA identifier (SRR)        |   Array of strings    |   One of more SRRs.                                         |   [`SRR12345678`]   |
+|   FASTQ files                 |   Array of files      |   One or more FASTQ files. The files should be gzipped.     |   [`*.gz`]          |
+|   SRA identifiers (SRR)       |   Array of strings    |   One of more SRRs.                                         |   [`SRR12345678`]   |
 |   Genome Reference            |   File                |   The genome reference.                                     |   [`*.fa`]          |
 |   Genome Bowtie indexes       |   Array of files      |   The genome bowtie v1 indexes. Should be six index files.  |   [`*.ebwt`]        |
 |   Gene Annotation             |   File                |   The gene annotation.                                      |   [`*.gtf`]         |
@@ -22,7 +22,7 @@ SEASEQ performs extensive analyses from the raw output of the experiment, includ
 
 ### Input configuration
 
-SEASEQ supports fastq files and SRA identifiers (SRRs) as input. A combination of both is also supported. 
+SEASEQ supports FASTQ files and SRA identifiers (SRRs) as input. A combination of both is also supported. 
 Bowtie genomic indexes and region-based blacklists are optional.
 
 [MEME suite motif databases]: https://meme-suite.org/meme/db/motifs
@@ -30,7 +30,7 @@ Bowtie genomic indexes and region-based blacklists are optional.
 ## Output
 
 SEASEQ provides multiple outputs from the different analyses offers. 
-Outputs are grouped into folders:
+Outputs are grouped into subdirectories:
 
 | Name                  | Type    | Description                                                                            |
 |-----------------------|---------|----------------------------------------------------------------------------------------|
@@ -40,9 +40,24 @@ Outputs are grouped into folders:
 |  PEAKS                | Folder  | Identified narrow peaks, broad peaks and linear-stitched peaks files.                  |
 |  PEAKS_Annotation     | Folder  | Genic annotation of peaks tables and plot.                                             |
 |  PEAKS_Display        | Folder  | Normalized signal data tracks in wiggle, tdf and bigwig formats.                       |
-|  [QC]                 | Folder  | Quality statistics and metrics of fastQs and peaks as tables and color-coded HTML.     |
+|  [QC]                 | Folder  | Quality statistics and metrics of FASTQs and peaks as tables and color-coded HTML.     |
 
 [QC]: #qc-metrics
+
+## Workflow Steps
+1. SRRs are downloaded as FASTQs using the [SRA Toolkit](http://www.ncbi.nlm.nih.gov/books/NBK158900/) if provided.
+
+2. Sequencing FASTQs are aligned to the reference genome using [Bowtie](https://doi.org/10.1186/gb-2009-10-3-r25).
+3. Mapped reads are further processed by removal of redundant reads and blacklisted regions. 
+4. Read density profiling in relevant genomic regions such as promoters and gene body usig [BamToGFF](https://github.com/stjude/BAM2GFF).
+5. Normalized and unnormalized coverage files for display are generated for the [UCSC genome browser](https://doi.org/10.1093/bib/bbs038) and [IGV](https://doi.org/10.1093/bib/bbs017). 
+6. Identification of enriched regions for two binding profiles:
+    * For factors that bind shorter regions, e.g. many sequence-specific transcription factors using [MACS](https://doi.org/10.1186/gb-2008-9-9-r137).
+    * For broad regions of enrichment, e.g. some histone modifications using [SICER](https://doi.org/10.1093/bioinformatics/btp340).
+7. Identification of stitched clusters of enriched regions and separates exceptionally large regions, e.g. super-enhancers from typical enhancers, using [ROSE](http://younglab.wi.mit.edu/super_enhancer_code.html).
+8. Characterization of overrepresentated sequences by motif discovery and enrichment using tools from the [MEME Suite](https://doi.org/10.1093/nar/gkv416).
+9. Genic annotation of peaks including promoters, gene bodies, gene-centric windows, and proximal genes.
+10. Assessment of quality by calculating relevant metrics including those recommmended by the [ENCODE consortium](https://doi.org/10.1101/gr.136184.111). More information is provided [here](#qc-metrics).
 
 ## Creating a workspace
 
