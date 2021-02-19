@@ -12,6 +12,11 @@ theme:
 extra_css:
   - css/extra.css
 
+plugins:
+  - redirects:
+      redirect_maps:
+        'guides/data/metadata': 'guides/genomics-platform/requesting-data/about-our-data.md'
+
 nav:
   - Overview: index.md
   - About our Ecosystem: ecosystem.md
@@ -61,7 +66,7 @@ nav:
     - Childhood Solid Tumor Network Portal: guides/cstn.md
     - Pediatric Brain Tumor Portal: guides/pbtp.md
   - ProteinPaint:
-    - ProteinPaint: 
+    - ProteinPaint:
         - Introduction: guides/proteinpaint/index.md
         - User Guide:
             - Getting Started: guides/proteinpaint/navigating-the-protein-diagram.md
