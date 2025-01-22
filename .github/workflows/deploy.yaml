@@ -74,31 +74,30 @@ jobs:
 
       - name: helm diff
         run: |
-          helm diff upgrade ${GITHUB_REPOSITORY##*/} ${{ inputs.chart }} \
+          helm diff upgrade docs ${{ inputs.chart }} \
             --version ${{ inputs.chart-version }} \
-            --namespace ${GITHUB_REPOSITORY##*/}-${{ inputs.scope }} \
+            --namespace docs-${{ inputs.scope }} \
             --values {{ inputs.values-file }} \
             --set image.tag=${{ inputs.image-tag }} \
             --set datadog.env=${{ inputs.scope }} \
-            --set datadog.service=${GITHUB_REPOSITORY##*/} \
+            --set datadog.service=docs \
             --allow-unreleased
 
       - name: helm upgrade
         run: |
-          helm upgrade --install ${GITHUB_REPOSITORY##*/} ${{ inputs.chart }} \
+          helm upgrade --install docs ${{ inputs.chart }} \
             --version ${{ inputs.chart-version }} \
-            --namespace ${GITHUB_REPOSITORY##*/}-${{ inputs.scope }} --create-namespace \
+            --namespace docs-${{ inputs.scope }} --create-namespace \
             --values {{ inputs.values-file }} \
             --set image.tag=${{ inputs.image-tag }} \
             --set datadog.env=${{ inputs.scope }} \
-            --set datadog.service=${GITHUB_REPOSITORY##*/} \
+            --set datadog.service=docs \
             --atomic \
             --cleanup-on-fail \
             --history-max 25
 
       - name: helm history
-        run: |
-          helm history ${GITHUB_REPOSITORY##*/} --namespace ${GITHUB_REPOSITORY##*/}-${{ inputs.scope }}
+        run: helm history docs --namespace docs-${{ inputs.scope }}
 
       - name: az logout
         run: |
