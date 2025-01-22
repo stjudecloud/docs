@@ -1,0 +1,27 @@
+{
+  "projectBaseUrl": "${projectDirectory}",
+  "ignorePatterns": [
+    {
+      "pattern": "mailto:*"
+    },
+    {
+      "pattern": "\\./"
+    },
+    {
+      "pattern": "\\.\\./"
+    },
+    {
+      "pattern": "/genomics-platform"
+    }
+  ],
+  "replacementPatterns": [
+    {
+      "pattern": "/img/(?<filename>.*)",
+      "replacement": "{{BASEURL}}/public/img/$<filename>"
+    },
+    {
+      "pattern": "files/(?<filename>.*)",
+      "replacement": "{{BASEURL}}/public/files/$<filename>"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+# markdown-spellcheck spelling configuration file
+# Format - lines beginning # are comments
+# global dictionary is at the start, file overrides afterwards
+# one word per line, to define a file override use ' - filename'
+# where filename is relative to this configuration file
+# Companies
+Auth0
+BeautifyTools
+DNAnexus
+DocuSign
+PubMed
+SJCRH
+# URLs
+dnanexus.com
+http
+https
+proteinpaint.stjude.org
+stjude.org
+stjude.cloud
+www.dnanexus.com
+www.htslib.org
+# Names
+Dongren
+Easton
+Frantz
+Klco
+Kolekar
+Liu
+Nakitandwe
+Pandurang
+Ren
+Shaner
+Shao
+Szlachta
+Xiaotu
+Yanling
+Ying
+Yu
+Zhaoming
+# Genomics/Biology Terms
+BAM
+BamToGFF
+BAMs
+bioinformatics
+Bowtie
+epigenetics
+epigenomic
+exome
+FASTQ
+FastQC
+FASTQs
+FileViewer
+fpkm
+FPKMlog2
+GenomePaint
+germline
+heatmap
+hg19
+hg38
+HTSeq
+HTSeq-count
+indel
+isoform
+isoforms
+JSON-BED
+Kaplan-Meier
+log10
+log2
+Log2Fold
+lymphoblastic
+MYCN-ATRX
+neuroblastoma
+oncoprint
+plotMDS
+ProteinPaint
+RefSeq
+SamToFastq
+SEAseq
+SequencErr
+strandedness
+t-SNE
+tSNE
+tStat
+unstranded
+Voom
+WGS
+WES
+# Azure/Cloud Terms
+subnet
+subnets
+uswest
+westus
+# File Extenstions
+bai
+bam
+gz
+gz.tbi
+html
+tbi
+txt
+vcf
+xlsx
+# General/Other Terms
+_blank
+autoscale
+breakpoint
+checkbox
+checkboxes
+dataset
+datasets
+dropdown
+e.g.
+entrypoint
+metadata
+i.e.
+python3
+rgb
+roadmap
+runtime
+tooltip
+url
+urls
+whitelist
+# Genomics Platform/DNAnexus Specific
+DAU
+DAUs
+dx-toolkit
+dx
+dxid
+# Viz Specific
+runproteinpaint
+VisCom
+VisEditor
+# Prose Components from Nuxt
+callout
+# Icons
+i-heroicons-arrows-right-left
+i-heroicons-document-text-solid
+i-heroicons-exclamation-circle
+i-heroicons-light-bulb
