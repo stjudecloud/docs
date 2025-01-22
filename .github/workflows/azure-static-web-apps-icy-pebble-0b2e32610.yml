@@ -1,4 +1,4 @@
-name: Azure Static Web Apps CI/CD
+name: Deployment
 
 on:
   push:
@@ -29,9 +29,11 @@ jobs:
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: "/" # App source code path
-          api_location: "" # Api source code path - optional
-          output_location: "" # Built app content directory - optional
+          api_location: ".output/server" # Api source code path - optional
+          output_location: ".output.public" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
+        env:
+          NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
