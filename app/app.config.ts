@@ -23,7 +23,7 @@ export default defineAppConfig({
     links: []
   },
   footer: {
-    credits: 'St. Jude Children\'s Research Hospital © 2024',
+    credits: 'St. Jude Children\'s Research Hospital © 2025',
     colorMode: false,
     links: [{
       'icon': 'i-simple-icons-nuxtdotjs',
