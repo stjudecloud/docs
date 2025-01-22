@@ -34,6 +34,7 @@ jobs:
           ###### End of Repository/Build Configurations ######
         env:
           NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
+          NUXT_PUBLIC_SITE_URL: https://icy-pebble-0b2e32610.4.azurestaticapps.net/
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
