@@ -77,7 +77,7 @@ jobs:
           helm diff upgrade docs ${{ inputs.chart }} \
             --version ${{ inputs.chart-version }} \
             --namespace docs-${{ inputs.scope }} \
-            --values {{ inputs.values-file }} \
+            --values ${{ inputs.values-file }} \
             --set image.tag=${{ inputs.image-tag }} \
             --set datadog.env=${{ inputs.scope }} \
             --set datadog.service=docs \
@@ -88,7 +88,7 @@ jobs:
           helm upgrade --install docs ${{ inputs.chart }} \
             --version ${{ inputs.chart-version }} \
             --namespace docs-${{ inputs.scope }} --create-namespace \
-            --values {{ inputs.values-file }} \
+            --values ${{ inputs.values-file }} \
             --set image.tag=${{ inputs.image-tag }} \
             --set datadog.env=${{ inputs.scope }} \
             --set datadog.service=docs \
