@@ -11,7 +11,7 @@ WORKDIR /src
 FROM base as build
 
 ARG NUXT_UI_PRO_LICENSE
-ARG NUXT_PUBLIC_SITE_URL
+ARG NUXT_PUBLIC_SITE_URL=docs.stjude.cloud
 
 COPY --link package.json pnpm-lock.yaml ./
 RUN pnpm install
