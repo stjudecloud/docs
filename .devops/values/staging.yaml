@@ -11,6 +11,7 @@ containerPorts:
   http: 3000
 
 service:
+  component: generic
   ports:
     - name: http
       protocol: TCP
