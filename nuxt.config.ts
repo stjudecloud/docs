@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxthq/studio',
-    'nuxt-og-image'
+    'nuxt-og-image',
+    '@nuxt/icon'
   ],
 
   content: {
@@ -39,6 +40,15 @@ export default defineNuxtConfig({
       ],
       crawlLinks: true
     }
+  },
+
+  icon: {
+    customCollections: [
+      {
+        prefix: 'sjc-icon',
+        dir: './assets/sjc-icons'
+      }
+    ]
   },
 
   routeRules: {
