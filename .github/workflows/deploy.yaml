@@ -26,7 +26,7 @@ on:
       chart-version:
         description: chart version
         required: true
-        default: 1.0.0
+        default: 1.1.0
       values-file:
         description: values file for deployment
         required: true
