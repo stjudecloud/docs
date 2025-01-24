@@ -24,8 +24,24 @@ export default defineAppConfig({
   },
   footer: {
     credits: 'St. Jude Children\'s Research Hospital © 2025',
-    colorMode: false,
-    links: []
+    links: [{
+      icon: 'sjc-icon:genomics-platform',
+      label: 'Genomics Platform',
+      to: 'https://platform.stjude.cloud',
+      target: '_blank'
+    },
+    {
+      icon: 'sjc-icon:pecan',
+      label: 'PeCan',
+      to: 'https://pecan.stjude.cloud',
+      target: '_blank'
+    },
+    {
+      icon: 'sjc-icon:viz',
+      label: 'Visualization Community',
+      to: 'https://viz.stjude.cloud',
+      target: '_blank'
+    }]
   },
   toc: {
     title: 'Table of Contents',

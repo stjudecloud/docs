@@ -3,21 +3,13 @@ const { footer } = useAppConfig()
 </script>
 
 <template>
-  <UFooter>
+  <UFooter :links="footer?.links">
     <template #left>
       {{ footer.credits }}
     </template>
 
     <template #right>
-      <UColorModeButton v-if="footer?.colorMode" />
-
-      <template v-if="footer?.links">
-        <UButton
-          v-for="(link, index) of footer?.links"
-          :key="index"
-          v-bind="{ color: 'gray', variant: 'ghost', ...link }"
-        />
-      </template>
+      <UButton aria-label="St. Jude Cloud Docs on GitHub" icon="i-simple-icons-github" to="https://github.com/stjudecloud/docs" target="_blank" color="gray" variant="link" />
     </template>
   </UFooter>
 </template>
