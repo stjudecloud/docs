@@ -15,8 +15,8 @@ export default defineAppConfig({
   header: {
     logo: {
       alt: 'St. Jude Cloud',
-      light: 'icons/stjude-cloud-logo-full-dark.svg',
-      dark: 'icons/stjude-cloud-logo-full.svg'
+      light: '/icons/stjude-cloud-logo-full-dark.svg',
+      dark: '/icons/stjude-cloud-logo-full.svg'
     },
     search: true,
     colorMode: true,
