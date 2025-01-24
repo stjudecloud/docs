@@ -1,41 +1,30 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-@layer base {
-  @font-face {
-      font-family: "St Jude Sans";
-      font-weight: normal;
-      src: url("https://design.stjude.cloud/fonts/stjude-sans/sjs-regular.eot"); /* IE9 Compat Modes */
-      src: url("https://design.stjude.cloud/fonts/stjude-sans/sjs-regular.woff2") format("woff2"),
-      url("https://design.stjude.cloud/fonts/stjude-sans/sjs-regular.woff") format("woff"),
-      url("https://design.stjude.cloud/fonts/stjude-sans/sjs-regular.ttf") format("truetype"); /* Safari, Android, iOS */
-      font-display: fallback;
-  }
-
-  @font-face {
-      font-family: "St Jude Sans";
-      font-weight: bold;
-      src: url("https://design.stjude.cloud/fonts/stjude-sans/sjs-bold.eot");
-      src: url("https://design.stjude.cloud/fonts/stjude-sans/sjs-bold.woff2") format("woff2"),
-      url("https://design.stjude.cloud/fonts/stjude-sans/sjs-bold.woff") format("woff"),
-      url("https://design.stjude.cloud/fonts/stjude-sans/sjs-bold.ttf") format("truetype");
-      font-display: fallback;
-  }
-
-  @font-face {
-      font-family: "St Jude Sans";
-      font-weight: light;
-      src: url("https://design.stjude.cloud/fonts/stjude-sans/sjs-light.eot");
-      src: url("https://design.stjude.cloud/fonts/stjude-sans/sjs-light.woff2") format("woff2"),
-      url("https://design.stjude.cloud/fonts/stjude-sans/sjs-light.woff") format("woff"),
-      url("https://design.stjude.cloud/fonts/stjude-sans/sjs-light.ttf") format("truetype");
-      font-display: fallback;
-  }
+@font-face {
+    font-family: "St. Jude Sans";
+    font-weight: normal;
+    src: url("https://design.stjude.cloud/assets/fonts/stjude-sans/sjs-regular.eot"); /* IE9 Compat Modes */
+    src: url("https://design.stjude.cloud/assets/fonts/stjude-sans/sjs-regular.woff2") format("woff2"),
+    url("https://design.stjude.cloud/assets/fonts/stjude-sans/sjs-regular.woff") format("woff"),
+    url("https://design.stjude.cloud/assets/fonts/stjude-sans/sjs-regular.ttf") format("truetype"); /* Safari, Android, iOS */
+    font-display: swap;
 }
 
-body {
-  font-family: "St. Jude Sans", "Open Sans", "Helvetica Neue", "Helvetica", arial, sans-serif !important;
-  font-smooth: auto;
-  -webkit-font-smoothing: subpixel-antialiased;
+@font-face {
+    font-family: "St. Jude Sans";
+    font-weight: bold;
+    src: url("https://design.stjude.cloud/assets/fonts/stjude-sans/sjs-bold.eot");
+    src: url("https://design.stjude.cloud/assets/fonts/stjude-sans/sjs-bold.woff2") format("woff2"),
+    url("https://design.stjude.cloud/assets/fonts/stjude-sans/sjs-bold.woff") format("woff"),
+    url("https://design.stjude.cloud/assets/fonts/stjude-sans/sjs-bold.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "St. Jude Sans";
+    font-weight: light;
+    src: url("https://design.stjude.cloud/assets/fonts/stjude-sans/sjs-light.eot");
+    src: url("https://design.stjude.cloud/assets/fonts/stjude-sans/sjs-light.woff2") format("woff2"),
+    url("https://design.stjude.cloud/assets/fonts/stjude-sans/sjs-light.woff") format("woff"),
+    url("https://design.stjude.cloud/assets/fonts/stjude-sans/sjs-light.ttf") format("truetype");
+    font-display: swap;
 }
