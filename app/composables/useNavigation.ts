@@ -7,7 +7,7 @@ const _useNavigation = () => {
     return [{
       label: 'St. Jude Cloud',
       description: 'Guides that span across St. Jude Cloud.',
-      icon: 'sjc-icon:blue-circle-logo',
+      icon: 'sjc-icon:child-logo',
       to: '/overview',
       active: route.path.startsWith('/overview')
     }, {
