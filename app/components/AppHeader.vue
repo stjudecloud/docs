@@ -10,7 +10,7 @@ const { header } = useAppConfig()
   <UHeader>
     <template #logo>
       <template v-if="header?.logo?.dark || header?.logo?.light">
-        <UColorModeImage v-bind="{ class: 'h-6 w-auto', ...header?.logo }" /><UBadge
+        <UColorModeImage v-bind="{ class: 'h-8 w-auto', ...header?.logo }" /><UBadge
           label="Docs"
           variant="subtle"
           class="mb-0.5"
