@@ -5,7 +5,8 @@ export default <Partial<Config>>{
   theme: {
     extend: {
       fontFamily: {
-        sans: ['DM Sans', ...defaultTheme.fontFamily.sans]
+        sans: ['"St. Jude Sans"', '"Open Sans"', '"Helvetica Neue"', 'Helvetica', 'arial', 'sans-serif'],
+        mono: ['Roboto Mono', 'monospace'],
       },
       colors: {
         blue: {

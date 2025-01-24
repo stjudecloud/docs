@@ -13,6 +13,10 @@ export default defineNuxtConfig({
     '@nuxt/icon'
   ],
 
+  css: [
+    './assets/css/main.css'
+  ],
+
   content: {
     highlight: {
       langs: ["bash", "python", "js", "javascript", "json", "r"]
