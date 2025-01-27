@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  markdown-lint:
+  spellcheck:
     runs-on: ubuntu-latest
 
     steps:
