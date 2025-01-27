@@ -11,10 +11,15 @@ const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', {
 
 useHead({
   meta: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { name: 'apple-mobile-web-app-title', content: 'Docs - St. Jude Cloud' }
   ],
   link: [
-    { rel: 'icon', href: '/favicon.ico' }
+    { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' },
+    { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+    { rel: 'shortcut icon', href: '/favicon.ico' },
+    { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
+    { rel: 'manifest', href: '/site.webmanifest' }
   ],
   htmlAttrs: {
     lang: 'en'
