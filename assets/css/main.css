@@ -18,13 +18,3 @@
     url("https://design.stjude.cloud/assets/fonts/stjude-sans/sjs-bold.ttf") format("truetype");
     font-display: swap;
 }
-
-@font-face {
-    font-family: "St. Jude Sans";
-    font-weight: light;
-    src: url("https://design.stjude.cloud/assets/fonts/stjude-sans/sjs-light.eot");
-    src: url("https://design.stjude.cloud/assets/fonts/stjude-sans/sjs-light.woff2") format("woff2"),
-    url("https://design.stjude.cloud/assets/fonts/stjude-sans/sjs-light.woff") format("woff"),
-    url("https://design.stjude.cloud/assets/fonts/stjude-sans/sjs-light.ttf") format("truetype");
-    font-display: swap;
-}
