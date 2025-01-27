@@ -34,4 +34,4 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: lint
-        run: pnpm spellcheck
+        run: pnpm mdspell --ignore-numbers --ignore-acronyms --en-us --no-suggestions --report content/**/*.md

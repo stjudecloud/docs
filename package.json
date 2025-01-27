@@ -10,7 +10,6 @@
     "postinstall": "nuxt prepare",
     "linkcheck": "markdown-link-check -c .mlc_config.json content/**/*.md",
     "lint": "eslint .",
-    "spellcheck": "mdspell --ignore-numbers --ignore-acronyms --en-us --no-suggestions --report content/**/*.md",
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
