@@ -22,7 +22,7 @@ const navigationLinks = computed(() => {
     <UPage>
       <template #left>
         <UAside>
-          <UAsideLinks :links="links" :ui="{ icon: { active: 'bg-gray dark:bg-gray ring-2', inactive: 'group-hover:bg-gray group-hover:ring-2' } }" />
+          <UAsideLinks :links="links" :ui="{ icon: { active: 'bg-gray dark:bg-gray', inactive: 'group-hover:bg-gray' } }" />
           <UDivider type="dashed" class="mb-6" />
 
           <UNavigationTree :links="navigationLinks" default-open :multiple="false" class="pb-10" />
