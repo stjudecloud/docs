@@ -21,8 +21,7 @@ const navigationLinks = computed(() => {
   <UContainer>
     <UPage>
       <template #left>
-        <UAside>
-          <UAsideLinks :links="links" :ui="{ icon: { active: 'bg-gray dark:bg-gray', inactive: 'group-hover:bg-gray' } }" />
+        <UAside :links="links">
           <UDivider type="dashed" class="mb-6" />
 
           <UNavigationTree :links="navigationLinks" default-open :multiple="false" class="pb-10" />
