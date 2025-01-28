@@ -89,10 +89,7 @@ const links = computed(() => [toc?.bottom?.edit && {
             class="hidden lg:block space-y-6"
             :class="{ '!mt-6': page.body?.toc?.links?.length }"
           >
-            <UDivider
-              v-if="page.body?.toc?.links?.length"
-              type="dashed"
-            />
+            <UDivider v-if="page.body?.toc?.links?.length" />
 
             <UPageLinks
               :title="toc.bottom.title"
