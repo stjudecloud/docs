@@ -32,7 +32,7 @@ def main():
         }
       }
     ],
-    'timeout': '90s'
+    'timeout': '45s'
   }
 
   for root, dirs, files in os.walk("content"):
