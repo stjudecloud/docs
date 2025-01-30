@@ -191,7 +191,7 @@
       "replacement": "{{BASEURL}}/content/2.genomics-platform/3.getting-started/3.filling-out-the-daa.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/2truncation",
+      "pattern": "^/visualization-community/proteinpaint/truncation",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/20.truncation.md"
     },
     {
@@ -199,19 +199,19 @@
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/5.viewing-snv-indel-mutations.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/1sv-and-fusion-transcript",
+      "pattern": "^/visualization-community/proteinpaint/sv-and-fusion-transcript",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/16.sv-and-fusion-transcript.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/3study-view",
+      "pattern": "^/visualization-community/proteinpaint/study-view",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/34.study-view.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/1internal-tandem-duplications",
+      "pattern": "^/visualization-community/proteinpaint/internal-tandem-duplications",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/18.internal-tandem-duplications.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/2add-custom-protein-domains",
+      "pattern": "^/visualization-community/proteinpaint/add-custom-protein-domains",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/25.add-custom-protein-domains.md"
     },
     {
@@ -219,19 +219,15 @@
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/7.viewing-expression-data.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/2splice-hunction",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/22.splice-hunction.md"
-    },
-    {
-      "pattern": "^/visualization-community/proteinpaint/1copy-number-variants",
+      "pattern": "^/visualization-community/proteinpaint/copy-number-variants",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/17.copy-number-variants.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/1intragenic-deletion",
+      "pattern": "^/visualization-community/proteinpaint/intragenic-deletion",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/19.intragenic-deletion.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/3using-vcf-file",
+      "pattern": "^/visualization-community/proteinpaint/using-vcf-file",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/31.using-vcf-file.md"
     },
     {
@@ -239,23 +235,23 @@
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/8.filtering-mutations.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/1snv-and-indel",
+      "pattern": "^/visualization-community/proteinpaint/snv-and-indel",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/15.snv-and-indel.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/1stratifying-mutations-by-cancer-subtype",
+      "pattern": "^/visualization-community/proteinpaint/stratifying-mutations-by-cancer-subtype",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/14.stratifying-mutations-by-cancer-subtype.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/3embedding-proteinpaint",
+      "pattern": "^/visualization-community/proteinpaint/embedding-proteinpaint",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/32.embedding-proteinpaint.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/2bampile",
+      "pattern": "^/visualization-community/proteinpaint/bampile",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/24.bampile.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/3loading-tcga-maf-file",
+      "pattern": "^/visualization-community/proteinpaint/loading-tcga-maf-file",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/30.loading-tcga-maf-file.md"
     },
     {
@@ -267,15 +263,15 @@
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/2.introduction.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/2uploaded-mutation-data",
+      "pattern": "^/visualization-community/proteinpaint/uploaded-mutation-data",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/29.uploaded-mutation-data.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/1using-disease-pie-charts",
+      "pattern": "^/visualization-community/proteinpaint/using-disease-pie-charts",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/13.using-disease-pie-charts.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/1using-the-sample-table",
+      "pattern": "^/visualization-community/proteinpaint/using-the-sample-table",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/11.using-the-sample-table.md"
     },
     {
@@ -283,15 +279,19 @@
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/1.proteinpaint.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/2json-bed",
+      "pattern": "^/visualization-community/proteinpaint/json-bed",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/21.json-bed.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/2profile-gene-value",
+      "pattern": "^/visualization-community/proteinpaint/splice-junction",
+      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/22.splice-junction.md"
+    },
+    {
+      "pattern": "^/visualization-community/proteinpaint/profile-gene-value",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/23.profile-gene-value.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/2loading-mutations-from-file",
+      "pattern": "^/visualization-community/proteinpaint/loading-mutations-from-file",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/28.loading-mutations-from-file.md"
     },
     {
@@ -299,19 +299,19 @@
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/3.getting-started.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/2visualize-your-mutation-data",
+      "pattern": "^/visualization-community/proteinpaint/visualize-your-mutation-data",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/27.visualize-your-mutation-data.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/1using-the-gene-table",
+      "pattern": "^/visualization-community/proteinpaint/using-the-gene-table",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/10.using-the-gene-table.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/3url-parameters",
+      "pattern": "^/visualization-community/proteinpaint/url-parameters",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/33.url-parameters.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/1using-the-heatmap",
+      "pattern": "^/visualization-community/proteinpaint/using-the-heatmap",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/12.using-the-heatmap.md"
     },
     {
@@ -319,7 +319,7 @@
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/6.viewing-gene-fusions.md"
     },
     {
-      "pattern": "^/visualization-community/proteinpaint/2using-custom-tracks",
+      "pattern": "^/visualization-community/proteinpaint/using-custom-tracks",
       "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/26.using-custom-tracks.md"
     },
     {
@@ -359,15 +359,15 @@
       "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/7.expression-rank.md"
     },
     {
-      "pattern": "^/visualization-community/code-block-library/1ma-volcano",
+      "pattern": "^/visualization-community/code-block-library/ma-volcano",
       "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/12.ma-volcano.md"
     },
     {
-      "pattern": "^/visualization-community/code-block-library/1splice-junctions-cohort",
+      "pattern": "^/visualization-community/code-block-library/splice-junctions-cohort",
       "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/16.splice-junctions-cohort.md"
     },
     {
-      "pattern": "^/visualization-community/code-block-library/1profile-gene-value",
+      "pattern": "^/visualization-community/code-block-library/profile-gene-value",
       "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/13.profile-gene-value.md"
     },
     {
@@ -379,7 +379,7 @@
       "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/3.arc.md"
     },
     {
-      "pattern": "^/visualization-community/code-block-library/1lollipop",
+      "pattern": "^/visualization-community/code-block-library/lollipop",
       "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/11.lollipop.md"
     },
     {
@@ -387,7 +387,7 @@
       "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/2.allelic-imbalance.md"
     },
     {
-      "pattern": "^/visualization-community/code-block-library/1single-cell",
+      "pattern": "^/visualization-community/code-block-library/single-cell",
       "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/15.single-cell.md"
     },
     {
@@ -399,11 +399,11 @@
       "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/8.hi-c.md"
     },
     {
-      "pattern": "^/visualization-community/code-block-library/1rna-splice-junction",
+      "pattern": "^/visualization-community/code-block-library/rna-splice-junction",
       "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/14.rna-splice-junction.md"
     },
     {
-      "pattern": "^/visualization-community/code-block-library/1t-sne",
+      "pattern": "^/visualization-community/code-block-library/t-sne",
       "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/18.t-sne.md"
     },
     {
@@ -411,15 +411,15 @@
       "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/9.heatmap.md"
     },
     {
-      "pattern": "^/visualization-community/code-block-library/1track-list-and-facet-table",
+      "pattern": "^/visualization-community/code-block-library/track-list-and-facet-table",
       "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/17.track-list-and-facet-table.md"
     },
     {
-      "pattern": "^/visualization-community/code-block-library/1vcf",
+      "pattern": "^/visualization-community/code-block-library/vcf",
       "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/19.vcf.md"
     },
     {
-      "pattern": "^/visualization-community/code-block-library/1json-bed",
+      "pattern": "^/visualization-community/code-block-library/json-bed",
       "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/10.json-bed.md"
     },
     {
@@ -431,7 +431,7 @@
       "replacement": "{{BASEURL}}/content/4.visualization-community/2.getting-started/8.embedding.md"
     },
     {
-      "pattern": "^/visualization-community/getting-started/1new-data-download",
+      "pattern": "^/visualization-community/getting-started/new-data-download",
       "replacement": "{{BASEURL}}/content/4.visualization-community/2.getting-started/10.new-data-download.md"
     },
     {
@@ -470,11 +470,13 @@
   "httpHeaders": [
     {
       "urls": [
-        "https://platform.stjude.cloud"
+        "https://platform.stjude.cloud",
+        "https://ensembl.org"
       ],
       "headers": {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
       }
     }
-  ]
+  ],
+  "timeout": "90s"
 }

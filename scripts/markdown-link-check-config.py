@@ -23,12 +23,13 @@ def main():
     ],
     'httpHeaders': [
       {
-        'urls': ['https://platform.stjude.cloud'],
+        'urls': ['https://platform.stjude.cloud', 'https://ensembl.org'],
         'headers': {
           'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
         }
       }
-    ]
+    ],
+    'timeout': '90s'
   }
 
   for root, dirs, files in os.walk("content"):
@@ -40,7 +41,7 @@ def main():
       if file == '_dir.yml':
         continue
 
-      pattern = re.sub(r'\d\.', '', '^' + os.sep + f'{os.sep}'.join(path[1:]) + os.sep + file)
+      pattern = re.sub(r'\d+\.', '', '^' + os.sep + f'{os.sep}'.join(path[1:]) + os.sep + file)
       replacement = '{{BASEURL}}' + os.sep + f'{os.sep}'.join(path) + os.sep + file
 
       config['replacementPatterns'].append({'pattern': pattern[:-3], 'replacement': replacement})
@@ -50,6 +51,7 @@ def main():
 
   with open('.mlc_config.json', 'w') as f:
     f.write(json.dumps(config, indent=2))
+    f.write("\n")
 
 
 if __name__ == "__main__":
