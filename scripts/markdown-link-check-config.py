@@ -9,6 +9,9 @@ def main():
     'ignorePatterns': [
       {
         'pattern': 'https://home.stjude.org'
+      },
+      {
+        'pattern': 'https://viz.stjude.cloud/signin'
       }
     ],
     'replacementPatterns': [
