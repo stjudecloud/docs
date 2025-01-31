@@ -36,6 +36,9 @@ def main():
       },
       {
         'pattern': 'https://www.nejm.org*'
+      },
+      {
+        'pattern': 'https://gatk.broadinstitute.org*'
       }
     ],
     'replacementPatterns': [
