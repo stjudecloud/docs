@@ -33,5 +33,5 @@ jobs:
       - name: pnpm install
         run: pnpm install --frozen-lockfile
 
-      - name: lint
-        run: pnpm markdown-link-check -c .mlc_config.ci.json content/**/*.md
+      - name: check
+        run: pnpm markdown-link-check -c .mlc_config.ci.json content/**/**/*.md
