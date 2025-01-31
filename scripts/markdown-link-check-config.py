@@ -32,10 +32,10 @@ def main():
         'pattern': 'https://ascopubs.org*'
       },
       {
-        'pattern': 'https://pnas.org*'
+        'pattern': 'https://www.pnas.org*'
       },
       {
-        'pattern': 'https://nejm.org*'
+        'pattern': 'https://www.nejm.org*'
       }
     ],
     'replacementPatterns': [
