@@ -483,6 +483,7 @@
     {
       "urls": [
         "https://platform.stjude.cloud",
+        "https://pecan.stjude.cloud",
         "https://ensembl.org"
       ],
       "headers": {
