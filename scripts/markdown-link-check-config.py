@@ -15,6 +15,9 @@ def main():
       },
       {
         'pattern': 'https://aacrjournals.org*'
+      },
+      {
+        'pattern': 'https://proteinpaint.stjude.org*'
       }
     ],
     'replacementPatterns': [
