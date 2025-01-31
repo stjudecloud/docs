@@ -11,6 +11,9 @@ def main():
         'pattern': 'https://home.stjude.org'
       },
       {
+        'pattern': 'https://wiki.stjude.org'
+      },
+      {
         'pattern': 'https://viz.stjude.cloud/signin'
       },
       {
