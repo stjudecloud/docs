@@ -18,6 +18,9 @@ def main():
       },
       {
         'pattern': 'https://proteinpaint.stjude.org*'
+      },
+      {
+        'pattern': 'https://doi.org*'
       }
     ],
     'replacementPatterns': [
