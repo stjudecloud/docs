@@ -12,6 +12,9 @@ def main():
       },
       {
         'pattern': 'https://viz.stjude.cloud/signin'
+      },
+      {
+        'pattern': 'https://aacrjournals.org*'
       }
     ],
     'replacementPatterns': [
@@ -49,10 +52,10 @@ def main():
 
       config['replacementPatterns'].append({'pattern': pattern[:-3], 'replacement': replacement})
 
-  if os.path.exists('.mlc_config.json'):
-    os.remove('.mlc_config.json')
+  if os.path.exists('.mlc_config.ci.json'):
+    os.remove('.mlc_config.ci.json')
 
-  with open('.mlc_config.json', 'w') as f:
+  with open('.mlc_config.ci.json', 'w') as f:
     f.write(json.dumps(config, indent=2))
     f.write("\n")
 
