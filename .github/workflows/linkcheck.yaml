@@ -1,6 +1,8 @@
 name: Link Check
 
 on:
+  schedule:
+    - cron: 37 21 * * *
   pull_request:
     branches:
       - main
