@@ -21,6 +21,21 @@ def main():
       },
       {
         'pattern': 'https://doi.org*'
+      },
+      {
+        'pattern': 'https://doi.org*'
+      },
+      {
+        'pattern': 'https://academic.oup.com*'
+      },
+      {
+        'pattern': 'https://ascopubs.org*'
+      },
+      {
+        'pattern': 'https://pnas.org*'
+      },
+      {
+        'pattern': 'https://nejm.org*'
       }
     ],
     'replacementPatterns': [
