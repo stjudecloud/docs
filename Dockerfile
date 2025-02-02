@@ -14,7 +14,7 @@ ARG NUXT_UI_PRO_LICENSE
 ARG NUXT_PUBLIC_SITE_URL=docs.stjude.cloud
 
 COPY --link package.json pnpm-lock.yaml ./
-RUN pnpm install --frozen-lockfile --prod
+RUN pnpm install --frozen-lockfile
 
 COPY --link . .
 
