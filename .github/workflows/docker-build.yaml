@@ -69,7 +69,6 @@ jobs:
 
       - name: tag latest
         if: ${{ github.event_name != 'pull_request' }}
-        run:
-          docker pull ${{ secrets.STJUDECLOUD_REGISTRY_URL }}/${{ env.REPOSITORY }}:${{ env.IMAGE_TAG }}
+        run: |
           docker tag ${{ secrets.STJUDECLOUD_REGISTRY_URL }}/${{ env.REPOSITORY }}:${{ env.IMAGE_TAG }} ${{ secrets.STJUDECLOUD_REGISTRY_URL }}/${{ env.REPOSITORY }}:latest
           docker push ${{ secrets.STJUDECLOUD_REGISTRY_URL }}/${{ env.REPOSITORY }}:latest
