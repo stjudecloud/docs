@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxthq/studio',
+    'nuxt-3-intercom',
     'nuxt-og-image',
     '@nuxt/icon'
   ],
@@ -16,6 +17,10 @@ export default defineNuxtConfig({
   css: [
     './assets/css/main.css'
   ],
+
+  intercom: {
+    appId: 'zxn8gz0o'
+  },
 
   content: {
     highlight: {
