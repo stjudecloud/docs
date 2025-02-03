@@ -72,4 +72,3 @@ jobs:
         run:
           docker tag ${{ secrets.STJUDECLOUD_REGISTRY_URL }}/${{ env.REPOSITORY }}:${{ env.IMAGE_TAG }} ${{ secrets.STJUDECLOUD_REGISTRY_URL }}/${{ env.REPOSITORY }}:latest
           docker push ${{ secrets.STJUDECLOUD_REGISTRY_URL }}/${{ env.REPOSITORY }}:latest
-
