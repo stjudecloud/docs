@@ -3,7 +3,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: docs
-  namespace: docs-${ENVIRONMENT}
+  namespace: docs-pr${ENVIRONMENT}
 spec:
   interval: 30m
   chart:
@@ -58,7 +58,7 @@ spec:
             secretName: {{ .Values.ingress.hostname }}-tls
     image:
       repository: stjudecloud/docs
-      tag: latest # {"$imagepolicy": "flux-system:docs-${ENVIRONMENT}:tag"}
+      tag: latest # {"$imagepolicy": "flux-system:docs-pr${ENVIRONMENT}:tag"}
     podAnnotations:
       linkerd.io/inject: enabled
       config.linkerd.io/proxy-cpu-request: 20m
@@ -72,7 +72,7 @@ spec:
           targetPort: http
     ingress:
       enabled: true
-      hostname: docs-${ENVIRONMENT}.staging.stjude.cloud
+      hostname: docs-pr${ENVIRONMENT}.staging.stjude.cloud
       path: /
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
