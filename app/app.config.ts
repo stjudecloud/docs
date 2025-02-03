@@ -49,6 +49,11 @@ export default defineAppConfig({
       title: 'Community',
       edit: 'https://github.com/stjudecloud/docs/edit/main/content',
       links: [{
+        icon: 'i-heroicons-bug-ant',
+        label: 'Report an Issue',
+        to: 'https://github.com/stjudecloud/docs/issues',
+        target: '_blank'
+      }, {
         icon: 'i-heroicons-star',
         label: 'Star on GitHub',
         to: 'https://github.com/stjudecloud/docs',
