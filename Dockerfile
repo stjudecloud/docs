@@ -4,7 +4,10 @@ FROM node:lts-slim as base
 
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
-RUN corepack enable
+
+# pnpm/npm issue https://github.com/nodejs/corepack/issues/612
+ENV COREPACK_INTEGRITY_KEYS=0
+RUN corepack use pnpm@9.12.2 && corepack enable
 
 WORKDIR /src
 
