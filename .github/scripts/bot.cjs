@@ -99,6 +99,7 @@ async function commentUserNotAllowed(github, issue, username) {
  * Creates a preview environment for this PR
  * @param {*} github GitHub object reference
  * @param {*} issue GitHub issue object
+ * @param {*} branch Github PR branch
  */
 async function cmdPreview(github, issue, branch) {
   // Pull preview app template
@@ -143,6 +144,7 @@ async function cmdPreview(github, issue, branch) {
  * Destroys the preview environment for this PR
  * @param {*} github GitHub object reference
  * @param {*} issue GitHub issue object
+ * @param {*} branch Github PR branch
  */
 async function cmdDestroy(github, issue, branch) {
   // Pull preview app file
