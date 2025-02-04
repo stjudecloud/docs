@@ -92,6 +92,7 @@ async function cmdPreview(github, issue) {
   const template = await github.rest.repos.getContent({
     owner: issue.owner,
     repo: issue.repo,
+    branch: issue.branch,
     path: 'deployment/preview/app.tmpl.yaml'
   })
 
@@ -104,6 +105,7 @@ async function cmdPreview(github, issue) {
   await github.rest.repos.createOrUpdateFileContents({
     owner: issue.owner,
     repo: issue.repo,
+    branch: issue.branch,
     path: `deployment/preview/app-pr${issue.number}.yaml`,
     message: `ci: :rocket: creates preview environment for pr${issue.number}`,
     committer: {
@@ -134,6 +136,7 @@ async function cmdDestroy(github, issue) {
   const file = await github.rest.repos.getContent({
     owner: issue.owner,
     repo: issue.repo,
+    branch: issue.branch,
     path: `deployment/preview/app-pr${issue.number}.yaml`,
   })
 
@@ -141,6 +144,7 @@ async function cmdDestroy(github, issue) {
   await github.rest.repos.deleteFile({
     owner: issue.owner,
     repo: issue.repo,
+    branch: issue.branch,
     path: `/deployment/preview/app-pr${issue.number}.yaml`,
     sha: file.data.sha,
     message: `ci: :fire: removes preview environment for pr${issue.number}`,
