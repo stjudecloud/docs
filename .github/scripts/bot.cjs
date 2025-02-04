@@ -88,6 +88,15 @@ async function commentUserNotAllowed(github, issue, username) {
  * @param {*} issue GitHub issue object
  */
 async function cmdPreview(github, issue) {
+  // Get pull request
+  const pull = await github.rest.pulls.get({
+    owner: issue.owner,
+    repo: issue.repo,
+    pull_number: issue.number,
+  })
+
+  console.log(pull)
+
   // Pull preview app template
   const template = await github.rest.repos.getContent({
     owner: issue.owner,
