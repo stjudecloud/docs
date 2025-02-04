@@ -56,6 +56,9 @@ async function handleIssueCommentCreate({ github, context }) {
     case '/preview':
       await cmdPreview(github, issue)
       break
+    case '/destroy':
+      await cmdDestroy(github, issue)
+      break
     default:
       console.log(
         `[handleIssueCommentCreate] command ${command} not found, exiting.`
