@@ -149,7 +149,7 @@ async function cmdDestroy(github, issue, branch) {
   const file = await github.rest.repos.getContent({
     owner: issue.owner,
     repo: issue.repo,
-    branch: branch,
+    ref: branch,
     path: `deployment/preview/pr${issue.number}/app.yaml`,
   })
 
