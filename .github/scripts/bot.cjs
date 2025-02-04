@@ -120,7 +120,7 @@ async function cmdPreview(github, issue, branch) {
     repo: issue.repo,
     branch: branch,
     path: `deployment/preview/pr${issue.number}/app.yaml`,
-    message: `ci: :rocket: creates preview environment for pr${issue.number}`,
+    message: `ci: :rocket: creates preview environment for pr${issue.number} [skip ci]`,
     committer: {
       name: 'stjudecloud-cloudy',
       email: 'stjudecloud-cloudy@users.noreply.github.com'
@@ -160,7 +160,7 @@ async function cmdDestroy(github, issue, branch) {
     branch: branch,
     path: `deployment/preview/pr${issue.number}/app.yaml`,
     sha: file.data.sha,
-    message: `ci: :fire: removes preview environment for pr${issue.number}`,
+    message: `ci: :fire: removes preview environment for pr${issue.number} [skip ci]`,
     committer: {
       name: 'stjudecloud-cloudy',
       email: 'stjudecloud-cloudy@users.noreply.github.com'
