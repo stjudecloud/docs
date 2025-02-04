@@ -119,7 +119,7 @@ async function cmdPreview(github, issue, branch) {
     owner: issue.owner,
     repo: issue.repo,
     branch: branch,
-    path: `deployment/preview/app-pr${issue.number}.yaml`,
+    path: `deployment/preview/pr${issue.number}/app.yaml`,
     message: `ci: :rocket: creates preview environment for pr${issue.number}`,
     committer: {
       name: 'stjudecloud-cloudy',
@@ -150,7 +150,7 @@ async function cmdDestroy(github, issue, branch) {
     owner: issue.owner,
     repo: issue.repo,
     branch: branch,
-    path: `deployment/preview/app-pr${issue.number}.yaml`,
+    path: `deployment/preview/pr${issue.number}/app.yaml`,
   })
 
   // Remove the preview file
@@ -158,7 +158,7 @@ async function cmdDestroy(github, issue, branch) {
     owner: issue.owner,
     repo: issue.repo,
     branch: branch,
-    path: `deployment/preview/app-pr${issue.number}.yaml`,
+    path: `deployment/preview/pr${issue.number}/app.yaml`,
     sha: file.data.sha,
     message: `ci: :fire: removes preview environment for pr${issue.number}`,
     committer: {
