@@ -102,18 +102,22 @@ async function cmdPreview(github, issue) {
   const encodedPreviewContent = Buffer.from(previewContent, 'utf8').toString('base64')
 
   // Push the file
-  await github.rest.repos.createOrUpdateFileContents({
-    owner: issue.owner,
-    repo: issue.repo,
-    branch: issue.branch,
-    path: `deployment/preview/app-pr${issue.number}.yaml`,
-    message: `ci: :rocket: creates preview environment for pr${issue.number}`,
-    committer: {
-      name: 'stjudecloud-cloudy',
-      email: 'stjudecloud-cloudy@users.noreply.github.com'
-    },
-    content: encodedPreviewContent,
-  })
+  try {
+    await github.rest.repos.createOrUpdateFileContents({
+      owner: issue.owner,
+      repo: issue.repo,
+      branch: issue.branch,
+      path: `deployment/preview/app-pr${issue.number}.yaml`,
+      message: `ci: :rocket: creates preview environment for pr${issue.number}`,
+      committer: {
+        name: 'stjudecloud-cloudy',
+        email: 'stjudecloud-cloudy@users.noreply.github.com'
+      },
+      content: encodedPreviewContent,
+    })
+  } catch (err) {
+    console.log(err)
+  }
 
   // Label with preview
   await github.rest.issues.addLabels({
