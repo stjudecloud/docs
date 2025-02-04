@@ -115,7 +115,6 @@ async function cmdPreview(github, issue, branch) {
   const encodedPreviewContent = Buffer.from(previewContent, 'utf8').toString('base64')
 
   // Push the file
-  console.log(issue)
   await github.rest.repos.createOrUpdateFileContents({
     owner: issue.owner,
     repo: issue.repo,
