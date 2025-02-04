@@ -145,7 +145,7 @@ async function cmdDestroy(github, issue) {
     owner: issue.owner,
     repo: issue.repo,
     branch: issue.branch,
-    path: `/deployment/preview/app-pr${issue.number}.yaml`,
+    path: `deployment/preview/app-pr${issue.number}.yaml`,
     sha: file.data.sha,
     message: `ci: :fire: removes preview environment for pr${issue.number}`,
     committer: {
