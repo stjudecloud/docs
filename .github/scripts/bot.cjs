@@ -92,7 +92,7 @@ async function cmdPreview(github, issue) {
   const template = await github.rest.repos.getContent({
     owner: issue.owner,
     repo: issue.repo,
-    path: '/deployment/preview/app.tmpl.yaml'
+    path: 'deployment/preview/app.tmpl.yaml'
   })
 
   // Modify to match this PR
@@ -104,7 +104,7 @@ async function cmdPreview(github, issue) {
   await github.rest.repos.createOrUpdateFileContents({
     owner: issue.owner,
     repo: issue.repo,
-    path: `/deployment/preview/app-pr${issue.number}.yaml`,
+    path: `deployment/preview/app-pr${issue.number}.yaml`,
     message: `ci: :rocket: creates preview environment for pr${issue.number}`,
     committer: {
       name: 'stjudecloud-cloudy',
@@ -134,7 +134,7 @@ async function cmdDestroy(github, issue) {
   const file = await github.rest.repos.getContent({
     owner: issue.owner,
     repo: issue.repo,
-    path: `/deployment/preview/app-pr${issue.number}.yaml`,
+    path: `deployment/preview/app-pr${issue.number}.yaml`,
   })
 
   // Remove the preview file
