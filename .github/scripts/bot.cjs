@@ -20,6 +20,7 @@ async function handleIssueCommentCreate({ github, context }) {
   const payload = context.payload
   const issue = context.issue
   const username = context.actor.toLowerCase()
+  const isFromPulls = !!payload.issue.pull_request
   const commentBody = ((payload.comment.body || '') + '').trim()
 
   console.log(`    Issue(owner/repo/number): ${issue.owner}/${issue.repo}/${issue.number}
@@ -27,6 +28,11 @@ async function handleIssueCommentCreate({ github, context }) {
     CommentID: ${payload.comment.id}
     CreatedAt: ${payload.comment.created_at}`
   )
+
+  if (!isFromPulls) {
+    // Not from pull request
+    return
+  }
 
   if (!commentBody || !commentBody.startsWith('/')) {
     // Not a command
@@ -52,12 +58,19 @@ async function handleIssueCommentCreate({ github, context }) {
     return
   }
 
+  // Get pull request
+  const pull = await github.rest.pulls.get({
+    owner: issue.owner,
+    repo: issue.repo,
+    pull_number: issue.number,
+  })
+
   switch (command) {
     case '/preview':
-      await cmdPreview(github, issue)
+      await cmdPreview(github, issue, pull.data.head.ref)
       break
     case '/destroy':
-      await cmdDestroy(github, issue)
+      await cmdDestroy(github, issue, pull.data.head.ref)
       break
     default:
       console.log(
@@ -87,21 +100,12 @@ async function commentUserNotAllowed(github, issue, username) {
  * @param {*} github GitHub object reference
  * @param {*} issue GitHub issue object
  */
-async function cmdPreview(github, issue) {
-  // Get pull request
-  const pull = await github.rest.pulls.get({
-    owner: issue.owner,
-    repo: issue.repo,
-    pull_number: issue.number,
-  })
-
-  console.log(pull)
-
+async function cmdPreview(github, issue, branch) {
   // Pull preview app template
   const template = await github.rest.repos.getContent({
     owner: issue.owner,
     repo: issue.repo,
-    branch: issue.branch,
+    branch: branch,
     path: 'deployment/preview/app.tmpl.yaml'
   })
 
@@ -115,7 +119,7 @@ async function cmdPreview(github, issue) {
   await github.rest.repos.createOrUpdateFileContents({
     owner: issue.owner,
     repo: issue.repo,
-    branch: issue.branch,
+    branch: branch,
     path: `deployment/preview/app-pr${issue.number}.yaml`,
     message: `ci: :rocket: creates preview environment for pr${issue.number}`,
     committer: {
@@ -141,12 +145,12 @@ async function cmdPreview(github, issue) {
  * @param {*} github GitHub object reference
  * @param {*} issue GitHub issue object
  */
-async function cmdDestroy(github, issue) {
+async function cmdDestroy(github, issue, branch) {
   // Pull preview app file
   const file = await github.rest.repos.getContent({
     owner: issue.owner,
     repo: issue.repo,
-    branch: issue.branch,
+    branch: branch,
     path: `deployment/preview/app-pr${issue.number}.yaml`,
   })
 
@@ -154,7 +158,7 @@ async function cmdDestroy(github, issue) {
   await github.rest.repos.deleteFile({
     owner: issue.owner,
     repo: issue.repo,
-    branch: issue.branch,
+    branch: branch,
     path: `deployment/preview/app-pr${issue.number}.yaml`,
     sha: file.data.sha,
     message: `ci: :fire: removes preview environment for pr${issue.number}`,
