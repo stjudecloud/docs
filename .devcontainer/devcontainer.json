@@ -15,7 +15,7 @@
       ]
     }
   },
-  "postStartCommand": "pnpm install && pnpm dev:prepare",
+  "postStartCommand": "pnpm install && pnpm dev",
   "mounts": [
     "type=volume,target=${containerWorkspaceFolder}/node_modules"
   ]
