@@ -22,7 +22,7 @@ jobs:
       - name: comment analyzer
         uses: actions/github-script@v6
         with:
-          github-token: ${{secrets.CLOUDY_TOKEN}}
+          github-token: ${{ secrets.CLOUDY_TOKEN }}
           script: |
             const script = require('./.github/scripts/bot.cjs')
             await script({github, context})
