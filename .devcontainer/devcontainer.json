@@ -4,9 +4,15 @@
   "name": "stjudecloud-docs",
   "build": { "dockerfile": "Dockerfile" },
   "features": {},
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [
+    3000
+  ],
   "customizations": {
     "vscode": {
-      "settings": {},
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/zsh"
+      },
       "extensions": [
         "ms-azuretools.vscode-docker",
         "dbaeumer.vscode-eslint",
