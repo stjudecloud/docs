@@ -78,5 +78,5 @@ jobs:
       - name: tag release
         run: |
           docker pull ${{ secrets.STJUDECLOUD_REGISTRY_URL }}/${GITHUB_REPOSITORY}:latest
-          docker tag ${{ secrets.STJUDECLOUD_REGISTRY_URL }}/${{ env.REPOSITORY }}:latest ${{ secrets.STJUDECLOUD_REGISTRY_URL }}/${{ env.REPOSITORY }}:v${{ env.VERSION }}
-          docker push ${{ secrets.STJUDECLOUD_REGISTRY_URL }}/${{ env.REPOSITORY }}:v${{ env.VERSION }}
+          docker tag ${{ secrets.STJUDECLOUD_REGISTRY_URL }}/${GITHUB_REPOSITORY}:latest ${{ secrets.STJUDECLOUD_REGISTRY_URL }}/${GITHUB_REPOSITORY}:v${{ env.VERSION }}
+          docker push ${{ secrets.STJUDECLOUD_REGISTRY_URL }}/${GITHUB_REPOSITORY}:v${{ env.VERSION }}
