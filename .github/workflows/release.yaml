@@ -44,11 +44,14 @@ jobs:
           GIT_COMMITER_EMAIL: <>
         run: |
           pnpm semantic-release
+
           if test -f .VERSION; then
             echo "created=true" >> $GITHUB_OUTPUT
           else
             echo "created=false" >> $GITHUB_OUTPUT
           fi
+
+          ls -al
 
       - name: upload artifact
         if: ${{ hashFiles('.VERSION') != '' }}
