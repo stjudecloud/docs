@@ -51,14 +51,13 @@ jobs:
             echo "created=false" >> $GITHUB_OUTPUT
           fi
 
-          ls -al
-
       - name: upload artifact
         if: ${{ hashFiles('.VERSION') != '' }}
         uses: actions/upload-artifact@v4
         with:
           name: version
           path: .VERSION
+          include-hidden-files: true
 
   publish:
     needs: release
