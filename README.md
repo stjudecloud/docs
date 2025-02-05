@@ -52,6 +52,31 @@ pnpm install
 pnpm dev
 ```
 
+### Development
+
+Development of the St. Jude Cloud Docs codebase is relatively simple.
+Follow these guidelines to keep you between the rails 👍:
+
+1. Use [the commands in the quick start section](#quick-start) to set up the code base, install dependencies, and run a development server.
+2. This project enforces [conventional commits] using the [`conventional-changelog`] verbs.
+   A large chunk of automation is built off of this convention, so please follow it!
+   - Reading the above material is suggested, but not required for development.
+   - If, in practice, you use `git cz` (which calls [`commitizen`] underneath the hood) instead of `git commit`, then this will be taken care of.
+     This is the suggested method for beginners. 
+   - If you're updating content (e.g. the documentation) and not source code, be sure to use the appropriate verb (e.g. use `docs:` for documentation upgrades).
+3. The following integrations have been enabled or are in development. As such, you don't need to do anything other than commit!
+    - [x] Automated building with [Nuxt] and [Nuxt UI] 🧰.
+    - [x] Automated versioning with [conventional commits], [`conventional-changelog`], and [semantic-release] 🗂.
+    - [x] Automated production release and internal branch previews 🚀.
+    - [x] Automated integration with [Intercom] for support questions in browser 💬.
+    - [x] Automated spell checking 📚.
+    - [x] Automated link validation 🔗.
+
+### General Guidelines
+
+- Prefer 1 sentence per line of markdown.
+- Format code using back-ticks to avoid it being reported as a spelling error.
+
 ### Contact
 
 With any issues you encounter with the repo, please file an issue report. For any other questions, please contact us at [support@stjude.cloud](mailto:support@stjude.cloud).
@@ -59,3 +84,11 @@ With any issues you encounter with the repo, please file an issue report. For an
 #### COPYRIGHT 
 
 Copyright © 2025 St. Jude Children's Research Hospital.
+
+[Nuxt]: https://nuxt.com/
+[Nuxt UI]: https://ui.nuxt.com/
+[commitizen]: https://www.npmjs.com/package/commitizen
+[conventional commits]: https://www.conventionalcommits.org/en/v1.0.0/#summary
+[`conventional-changelog`]: https://github.com/conventional-changelog/conventional-changelog
+[Intercom]: https://www.intercom.com/
+[semantic-release]: https://semantic-release.gitbook.io/semantic-release/
