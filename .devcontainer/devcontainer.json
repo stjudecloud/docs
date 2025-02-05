@@ -2,8 +2,24 @@
 // https://containers.dev/implementors/json_reference/
 {
   "name": "stjudecloud-docs",
-  "build": { "dockerfile": "Dockerfile" },
-  "features": {},
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": "true",
+      "username": "node",
+      "upgradePackages": "true"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "none"
+    },
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest",
+      "ppa": "false"
+    }
+  },
+  "remoteUser": "node",
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   "forwardPorts": [
     3000
