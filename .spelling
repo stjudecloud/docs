@@ -493,7 +493,7 @@ i-heroicons-document-text-solid
 i-heroicons-exclamation-circle
 i-heroicons-light-bulb
 
-- content/2.genomics-platform/4.about-our-data/2.file-formats-and-sequencing-information.md
+- content/2.genomics-platform/2.about-our-data/2.file-formats-and-sequencing-information.md
 bwa
 chrom
 haplotype
@@ -508,7 +508,7 @@ v2.7.1a
 v2.7.1a.
 validation_status
 
-- content/2.genomics-platform/4.about-our-data/4.st-jude-cloud-disease-ontology.md
+- content/2.genomics-platform/2.about-our-data/4.st-jude-cloud-disease-ontology.md
 2024.02.09.579680v1.full
 astrocytoma
 chondroblastic
@@ -538,13 +538,13 @@ v0.0
 v0.1
 v0.1.
 
-- content/2.genomics-platform/5.managing-data/2.upload-download-data-local.md
+- content/2.genomics-platform/3.managing-data/2.upload-download-data-local.md
 3.X
 
-- content/2.genomics-platform/6.analyzing-data/2.running-our-workflows.md
+- content/2.genomics-platform/4.analyzing-data/2.running-our-workflows.md
 Neoepitope
 
-- content/2.genomics-platform/6.analyzing-data/3.creating-a-cloud-app.md
+- content/2.genomics-platform/4.analyzing-data/3.creating-a-cloud-app.md
 dx-fastqc-example-app
 execDepends
 fastqc-report
@@ -552,13 +552,13 @@ runSpec
 v0.11.8
 v0.291.1
 
-- content/2.genomics-platform/6.analyzing-data/4.interactive-nodes.md
+- content/2.genomics-platform/4.analyzing-data/4.interactive-nodes.md
 mem1_ssd1_x2
 
-- content/2.genomics-platform/6.analyzing-data/5.visualizing-ngs-data.md
+- content/2.genomics-platform/4.analyzing-data/5.visualizing-ngs-data.md
 v2.0.0
 
-- content/2.genomics-platform/7.workflow-guides/1.chipseq.md
+- content/2.genomics-platform/5.workflow-guides/1.chipseq.md
 50bp
 dm3
 H2A.Z
@@ -578,7 +578,7 @@ Immunoprecipitation
 Sample_R1.fastq.gz
 Sample_R2.fastq.gz
 
-- content/2.genomics-platform/7.workflow-guides/2.cisx.md
+- content/2.genomics-platform/5.workflow-guides/2.cisx.md
 3.30872245021211e
 4.60632106249222e
 4.69553625126628e
@@ -673,7 +673,7 @@ unk
 v10
 white_list
 
-- content/2.genomics-platform/7.workflow-guides/3.methylation-to-activity.md
+- content/2.genomics-platform/5.workflow-guides/3.methylation-to-activity.md
 1000bp
 bisulfite
 chrom
@@ -691,14 +691,14 @@ SampleName_Input.bw
 SampleName_H3K27ac.bw
 SampleName_H3K4me3.bw
 
-- content/2.genomics-platform/7.workflow-guides/4.mutational-signatures.md
+- content/2.genomics-platform/5.workflow-guides/4.mutational-signatures.md
 mtsg
 SigProfilerMatrixGenerator
 SJMEL001001_D1
 SJNBL001_D
 Subs-01
 
-- content/2.genomics-platform/7.workflow-guides/5.rapid-rnaseq.md
+- content/2.genomics-platform/5.workflow-guides/5.rapid-rnaseq.md
 Coverage_bw
 ITDs
 KIAA1549-BRAF
@@ -713,7 +713,7 @@ Sample_R1.fastq.gz
 Sample_R2.fastq.gz
 Trimmomatic
 
-- content/2.genomics-platform/7.workflow-guides/6.rnaseq-expression-classification.md
+- content/2.genomics-platform/5.workflow-guides/6.rnaseq-expression-classification.md
 batch_corrected
 covariates
 Gencode
@@ -731,7 +731,7 @@ variance_stabilized
 varianceStabilizingTransformation
 v31
 
-- content/2.genomics-platform/7.workflow-guides/7.seaseq.md
+- content/2.genomics-platform/5.workflow-guides/7.seaseq.md
 100bp
 BAM_Density
 BAM_files
@@ -747,7 +747,7 @@ SRRs
 tdf
 v1
 
-- content/2.genomics-platform/7.workflow-guides/8.sequencerr.md
+- content/2.genomics-platform/5.workflow-guides/8.sequencerr.md
 aln
 bwa
 doi
@@ -760,7 +760,7 @@ s13059-020-02254-2
 Sample.bam
 Sample.bam.bai
 
-- content/2.genomics-platform/7.workflow-guides/9.warden.md
+- content/2.genomics-platform/5.workflow-guides/9.warden.md
 condition1
 condition1.png
 condition2
