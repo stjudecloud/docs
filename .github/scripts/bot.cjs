@@ -17,11 +17,11 @@ module.exports = async ({ github, context }) => {
 }
 
 async function handleIssueCommentCreate({ github, context }) {
-  console.log(JSON.stringify(context, null, 2))
   const payload = context.payload
   const issue = context.issue
   const username = context.actor.toLowerCase()
   const isFromPulls = !!payload.issue.pull_request
+  const comment = payload.comment
   const commentBody = ((payload.comment.body || '') + '').trim()
 
   console.log(`    Issue(owner/repo/number): ${issue.owner}/${issue.repo}/${issue.number}
@@ -60,18 +60,20 @@ async function handleIssueCommentCreate({ github, context }) {
   }
 
   // Get pull request
-  const pull = await github.rest.pulls.get({
+  const pull_request_data = await github.rest.pulls.get({
     owner: issue.owner,
     repo: issue.repo,
     pull_number: issue.number,
   })
 
+  const pull_request = pull_request_data.data
+
   switch (command) {
     case '/preview':
-      await cmdPreview(github, issue, pull.data.head.ref)
+      await cmdPreview(github, issue, pull_request, comment)
       break
     case '/destroy':
-      await cmdDestroy(github, issue, pull.data.head.ref)
+      await cmdDestroy(github, issue, pull_request, comment)
       break
     default:
       console.log(
@@ -100,20 +102,29 @@ async function commentUserNotAllowed(github, issue, username) {
  * Creates a preview environment for this PR
  * @param {*} github GitHub object reference
  * @param {*} issue GitHub issue object
- * @param {*} branch Github PR branch
+ * @param {*} pull_request GitHub pull request object
+ * @param {*} comment GitHub comment object
  */
-async function cmdPreview(github, issue, branch) {
+async function cmdPreview(github, issue, pull_request, comment) {
+  // React to the comment
+  await github.rest.reactions.createForIssueComment({
+    owner: issue.owner,
+    repo: issue.repo,
+    comment_id: comment.id,
+    content: 'rocket'
+  })
+
   // Pull preview app template
   const template = await github.rest.repos.getContent({
     owner: issue.owner,
     repo: issue.repo,
-    branch: branch,
+    branch: pull_request.head.ref,
     path: 'deployment/preview/app.tmpl.yaml'
   })
 
   // Modify to match this PR
   const templateContent = Buffer.from(template.data.content, 'base64').toString('utf8')
-  const previewContent = templateContent.replaceAll('${ENVIRONMENT}', issue.number)
+  const previewContent = templateContent.replaceAll('${ENVIRONMENT}', pull_request.number)
   const encodedPreviewContent = Buffer.from(previewContent, 'utf8').toString('base64')
 
   // Push the file
@@ -121,8 +132,8 @@ async function cmdPreview(github, issue, branch) {
     owner: issue.owner,
     repo: issue.repo,
     branch: branch,
-    path: `deployment/preview/pr${issue.number}/app.yaml`,
-    message: `ci: :rocket: creates preview environment for pr${issue.number} [skip ci]`,
+    path: `deployment/preview/pr${pull_request.number}/app.yaml`,
+    message: `ci: :rocket: creates preview environment for pr${pull_request.number} [skip ci]`,
     committer: {
       name: 'stjudecloud-cloudy',
       email: 'stjudecloud-cloudy@users.noreply.github.com'
@@ -145,15 +156,24 @@ async function cmdPreview(github, issue, branch) {
  * Destroys the preview environment for this PR
  * @param {*} github GitHub object reference
  * @param {*} issue GitHub issue object
- * @param {*} branch Github PR branch
+ * @param {*} pull_request GitHub pull request object
+ * @param {*} comment GitHub comment object
  */
-async function cmdDestroy(github, issue, branch) {
+async function cmdDestroy(github, issue, pull_request, comment) {
+  // React to the comment
+  await github.rest.reactions.createForIssueComment({
+    owner: issue.owner,
+    repo: issue.repo,
+    comment_id: comment.id,
+    content: 'fire'
+  })
+
   // Pull preview app file
   const file = await github.rest.repos.getContent({
     owner: issue.owner,
     repo: issue.repo,
-    ref: branch,
-    path: `deployment/preview/pr${issue.number}/app.yaml`,
+    ref: pull_request.head.ref,
+    path: `deployment/preview/pr${pull_request.number}/app.yaml`,
   })
 
   // Remove the preview file
@@ -161,9 +181,9 @@ async function cmdDestroy(github, issue, branch) {
     owner: issue.owner,
     repo: issue.repo,
     branch: branch,
-    path: `deployment/preview/pr${issue.number}/app.yaml`,
+    path: `deployment/preview/pr${pull_request.number}/app.yaml`,
     sha: file.data.sha,
-    message: `ci: :fire: removes preview environment for pr${issue.number} [skip ci]`,
+    message: `ci: :fire: removes preview environment for pr${pull_request.number} [skip ci]`,
     committer: {
       name: 'stjudecloud-cloudy',
       email: 'stjudecloud-cloudy@users.noreply.github.com'
