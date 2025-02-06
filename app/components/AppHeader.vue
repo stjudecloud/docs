@@ -7,13 +7,13 @@ const { header } = useAppConfig()
 </script>
 
 <template>
-  <UHeader>
+  <UHeader :ui="{ logo: 'items-center' }">
     <template #logo>
       <template v-if="header?.logo?.dark || header?.logo?.light">
         <UColorModeImage v-bind="{ class: 'h-8 w-auto', ...header?.logo }" /><UBadge
           label="Docs"
           variant="subtle"
-          class="mb-0.5"
+          class="mb-0.5 mt-1"
         />
       </template>
       <template v-else>
