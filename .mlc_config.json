@@ -78,120 +78,120 @@
       "replacement": "{{BASEURL}}/content/3.pecan/3.pecan-pie/1.what-is-pie.md"
     },
     {
-      "pattern": "^/genomics-platform/glossary",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/2.glossary.md"
-    },
-    {
-      "pattern": "^/genomics-platform/overview",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/1.overview.md"
-    },
-    {
-      "pattern": "^/genomics-platform/analyzing-data/running-our-workflows",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/6.analyzing-data/2.running-our-workflows.md"
-    },
-    {
-      "pattern": "^/genomics-platform/analyzing-data/interactive-nodes",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/6.analyzing-data/4.interactive-nodes.md"
-    },
-    {
-      "pattern": "^/genomics-platform/analyzing-data/creating-a-cloud-app",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/6.analyzing-data/3.creating-a-cloud-app.md"
-    },
-    {
-      "pattern": "^/genomics-platform/analyzing-data/visualizing-ngs-data",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/6.analyzing-data/5.visualizing-ngs-data.md"
-    },
-    {
-      "pattern": "^/genomics-platform/analyzing-data/command-line-interaction",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/6.analyzing-data/1.command-line-interaction.md"
-    },
-    {
-      "pattern": "^/genomics-platform/managing-data/upload-download-data-cluster",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.managing-data/3.upload-download-data-cluster.md"
-    },
-    {
-      "pattern": "^/genomics-platform/managing-data/renewing-your-daa",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.managing-data/5.renewing-your-daa.md"
-    },
-    {
-      "pattern": "^/genomics-platform/managing-data/upload-download-data-local",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.managing-data/2.upload-download-data-local.md"
-    },
-    {
-      "pattern": "^/genomics-platform/managing-data/upload-download-data-dnanexus",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.managing-data/4.upload-download-data-dnanexus.md"
-    },
-    {
-      "pattern": "^/genomics-platform/managing-data/overview",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.managing-data/1.overview.md"
-    },
-    {
-      "pattern": "^/genomics-platform/about-our-data/metadata-and-clinical-information",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/4.about-our-data/3.metadata-and-clinical-information.md"
-    },
-    {
-      "pattern": "^/genomics-platform/about-our-data/st-jude-cloud-disease-ontology",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/4.about-our-data/4.st-jude-cloud-disease-ontology.md"
-    },
-    {
-      "pattern": "^/genomics-platform/about-our-data/file-formats-and-sequencing-information",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/4.about-our-data/2.file-formats-and-sequencing-information.md"
-    },
-    {
-      "pattern": "^/genomics-platform/about-our-data/data-sets-and-data-access-units",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/4.about-our-data/1.data-sets-and-data-access-units.md"
-    },
-    {
-      "pattern": "^/genomics-platform/workflow-guides/chipseq",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/7.workflow-guides/1.chipseq.md"
-    },
-    {
-      "pattern": "^/genomics-platform/workflow-guides/cisx",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/7.workflow-guides/2.cisx.md"
-    },
-    {
-      "pattern": "^/genomics-platform/workflow-guides/rnaseq-expression-classification",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/7.workflow-guides/6.rnaseq-expression-classification.md"
-    },
-    {
-      "pattern": "^/genomics-platform/workflow-guides/mutational-signatures",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/7.workflow-guides/4.mutational-signatures.md"
-    },
-    {
-      "pattern": "^/genomics-platform/workflow-guides/sequencerr",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/7.workflow-guides/8.sequencerr.md"
-    },
-    {
-      "pattern": "^/genomics-platform/workflow-guides/warden",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/7.workflow-guides/9.warden.md"
-    },
-    {
-      "pattern": "^/genomics-platform/workflow-guides/methylation-to-activity",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/7.workflow-guides/3.methylation-to-activity.md"
-    },
-    {
-      "pattern": "^/genomics-platform/workflow-guides/rapid-rnaseq",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/7.workflow-guides/5.rapid-rnaseq.md"
-    },
-    {
-      "pattern": "^/genomics-platform/workflow-guides/seaseq",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/7.workflow-guides/7.seaseq.md"
+      "pattern": "^/genomics-platform/getting-started/accounts-and-billing",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/1.getting-started/2.accounts-and-billing.md"
     },
     {
       "pattern": "^/genomics-platform/getting-started/faq",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/3.getting-started/4.faq.md"
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/1.getting-started/4.faq.md"
     },
     {
-      "pattern": "^/genomics-platform/getting-started/making-a-data-request",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/3.getting-started/2.making-a-data-request.md"
-    },
-    {
-      "pattern": "^/genomics-platform/getting-started/accounts-and-billing",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/3.getting-started/1.accounts-and-billing.md"
+      "pattern": "^/genomics-platform/getting-started/glossary",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/1.getting-started/6.glossary.md"
     },
     {
       "pattern": "^/genomics-platform/getting-started/filling-out-the-daa",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/3.getting-started/3.filling-out-the-daa.md"
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/1.getting-started/3.filling-out-the-daa.md"
+    },
+    {
+      "pattern": "^/genomics-platform/getting-started/making-a-data-request",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/1.getting-started/5.making-a-data-request.md"
+    },
+    {
+      "pattern": "^/genomics-platform/getting-started/overview",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/1.getting-started/1.overview.md"
+    },
+    {
+      "pattern": "^/genomics-platform/analyzing-data/running-our-workflows",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/4.analyzing-data/2.running-our-workflows.md"
+    },
+    {
+      "pattern": "^/genomics-platform/analyzing-data/interactive-nodes",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/4.analyzing-data/4.interactive-nodes.md"
+    },
+    {
+      "pattern": "^/genomics-platform/analyzing-data/creating-a-cloud-app",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/4.analyzing-data/3.creating-a-cloud-app.md"
+    },
+    {
+      "pattern": "^/genomics-platform/analyzing-data/visualizing-ngs-data",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/4.analyzing-data/5.visualizing-ngs-data.md"
+    },
+    {
+      "pattern": "^/genomics-platform/analyzing-data/command-line-interaction",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/4.analyzing-data/1.command-line-interaction.md"
+    },
+    {
+      "pattern": "^/genomics-platform/workflow-guides/chipseq",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.workflow-guides/1.chipseq.md"
+    },
+    {
+      "pattern": "^/genomics-platform/workflow-guides/cisx",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.workflow-guides/2.cisx.md"
+    },
+    {
+      "pattern": "^/genomics-platform/workflow-guides/rnaseq-expression-classification",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.workflow-guides/6.rnaseq-expression-classification.md"
+    },
+    {
+      "pattern": "^/genomics-platform/workflow-guides/mutational-signatures",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.workflow-guides/4.mutational-signatures.md"
+    },
+    {
+      "pattern": "^/genomics-platform/workflow-guides/sequencerr",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.workflow-guides/8.sequencerr.md"
+    },
+    {
+      "pattern": "^/genomics-platform/workflow-guides/warden",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.workflow-guides/9.warden.md"
+    },
+    {
+      "pattern": "^/genomics-platform/workflow-guides/methylation-to-activity",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.workflow-guides/3.methylation-to-activity.md"
+    },
+    {
+      "pattern": "^/genomics-platform/workflow-guides/rapid-rnaseq",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.workflow-guides/5.rapid-rnaseq.md"
+    },
+    {
+      "pattern": "^/genomics-platform/workflow-guides/seaseq",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.workflow-guides/7.seaseq.md"
+    },
+    {
+      "pattern": "^/genomics-platform/about-our-data/metadata-and-clinical-information",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/2.about-our-data/3.metadata-and-clinical-information.md"
+    },
+    {
+      "pattern": "^/genomics-platform/about-our-data/st-jude-cloud-disease-ontology",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/2.about-our-data/4.st-jude-cloud-disease-ontology.md"
+    },
+    {
+      "pattern": "^/genomics-platform/about-our-data/file-formats-and-sequencing-information",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/2.about-our-data/2.file-formats-and-sequencing-information.md"
+    },
+    {
+      "pattern": "^/genomics-platform/about-our-data/data-sets-and-data-access-units",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/2.about-our-data/1.data-sets-and-data-access-units.md"
+    },
+    {
+      "pattern": "^/genomics-platform/managing-data/upload-download-data-cluster",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/3.managing-data/3.upload-download-data-cluster.md"
+    },
+    {
+      "pattern": "^/genomics-platform/managing-data/renewing-your-daa",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/3.managing-data/5.renewing-your-daa.md"
+    },
+    {
+      "pattern": "^/genomics-platform/managing-data/upload-download-data-local",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/3.managing-data/2.upload-download-data-local.md"
+    },
+    {
+      "pattern": "^/genomics-platform/managing-data/upload-download-data-dnanexus",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/3.managing-data/4.upload-download-data-dnanexus.md"
+    },
+    {
+      "pattern": "^/genomics-platform/managing-data/overview",
+      "replacement": "{{BASEURL}}/content/2.genomics-platform/3.managing-data/1.overview.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/truncation",
@@ -474,6 +474,7 @@
     {
       "urls": [
         "https://platform.stjude.cloud",
+        "https://pecan.stjude.cloud",
         "https://ensembl.org"
       ],
       "headers": {
