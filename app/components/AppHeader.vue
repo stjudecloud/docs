@@ -20,7 +20,7 @@ const { header } = useAppConfig()
         St. Jude Cloud <UBadge
           label="Docs"
           variant="subtle"
-          class="mb-0.5"
+          class="mb-0.5 mt-1"
         />
       </template>
     </template>
