@@ -131,7 +131,7 @@ async function cmdPreview(github, issue, pull_request, comment) {
   await github.rest.repos.createOrUpdateFileContents({
     owner: issue.owner,
     repo: issue.repo,
-    branch: branch,
+    branch: pull_request.head.ref,
     path: `deployment/preview/pr${pull_request.number}/app.yaml`,
     message: `ci: :rocket: creates preview environment for pr${pull_request.number} [skip ci]`,
     committer: {
@@ -180,7 +180,7 @@ async function cmdDestroy(github, issue, pull_request, comment) {
   await github.rest.repos.deleteFile({
     owner: issue.owner,
     repo: issue.repo,
-    branch: branch,
+    branch: pull_request.head.ref,
     path: `deployment/preview/pr${pull_request.number}/app.yaml`,
     sha: file.data.sha,
     message: `ci: :fire: removes preview environment for pr${pull_request.number} [skip ci]`,
