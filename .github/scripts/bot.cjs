@@ -17,7 +17,7 @@ module.exports = async ({ github, context }) => {
 }
 
 async function handleIssueCommentCreate({ github, context }) {
-  console.log(context);
+  console.log(JSON.stringify(context, null, 2))
   const payload = context.payload
   const issue = context.issue
   const username = context.actor.toLowerCase()
