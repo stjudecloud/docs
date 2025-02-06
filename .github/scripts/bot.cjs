@@ -165,7 +165,7 @@ async function cmdDestroy(github, issue, pull_request, comment) {
     owner: issue.owner,
     repo: issue.repo,
     comment_id: comment.id,
-    content: 'fire'
+    content: '+1'
   })
 
   // Pull preview app file
