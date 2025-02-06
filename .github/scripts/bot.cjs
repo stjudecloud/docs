@@ -106,6 +106,11 @@ async function commentUserNotAllowed(github, issue, username) {
  * @param {*} comment GitHub comment object
  */
 async function cmdPreview(github, issue, pull_request, comment) {
+  if (pull_request.labels.map(label => label.name).includes('preview')) {
+    console.log(`[cmdPreview] already run, exiting.`)
+    return
+  }
+
   // React to the comment
   await github.rest.reactions.createForIssueComment({
     owner: issue.owner,
@@ -160,6 +165,11 @@ async function cmdPreview(github, issue, pull_request, comment) {
  * @param {*} comment GitHub comment object
  */
 async function cmdDestroy(github, issue, pull_request, comment) {
+  if (!pull_request.labels.map(label => label.name).includes('preview')) {
+    console.log(`[cmdPreview] already run, exiting.`)
+    return
+  }
+
   // React to the comment
   await github.rest.reactions.createForIssueComment({
     owner: issue.owner,
