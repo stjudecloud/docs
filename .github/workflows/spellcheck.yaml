@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - content/**
+      - .spelling
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -33,5 +34,5 @@ jobs:
       - name: pnpm install
         run: pnpm install --frozen-lockfile
 
-      - name: lint
-        run: pnpm mdspell --ignore-numbers --ignore-acronyms --en-us --no-suggestions --report content/**/*.md
+      - name: spellcheck
+        run: pnpm mdspell --ignore-numbers --ignore-acronyms --en-us --no-suggestions --report content/**/**/*.md
