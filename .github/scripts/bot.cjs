@@ -193,7 +193,7 @@ async function cmdDestroy(github, issue, pull_request, comment) {
     branch: pull_request.head.ref,
     path: `deployment/preview/pr${pull_request.number}/app.yaml`,
     sha: file.data.sha,
-    message: `ci: :fire: removes preview environment for pr${pull_request.number} [skip ci]`,
+    message: `ci: :fire: removes preview environment for pr${pull_request.number}`,
     committer: {
       name: 'stjudecloud-cloudy',
       email: 'stjudecloud-cloudy@users.noreply.github.com'
