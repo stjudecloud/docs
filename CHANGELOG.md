@@ -1,3 +1,38 @@
+## [1.1.0](https://github.com/stjudecloud/docs/compare/v1.0.0...v1.1.0) (2025-02-06)
+
+### Features (New)
+
+* :sparkles: use system setting preference for color mode ([501cbf7](https://github.com/stjudecloud/docs/commit/501cbf7b0b139970baacc47c3668e59f44c2f913))
+
+### Bug Fixes
+
+* :bug: fixes dead links to genomics platform overview and glossary ([4c1ee10](https://github.com/stjudecloud/docs/commit/4c1ee10310dbefd4f5025b8399b9a5933b92b7fe))
+
+### Style Updates
+
+* :lipstick: better aligns badge with logo in header ([b8d9fea](https://github.com/stjudecloud/docs/commit/b8d9fea2bb517d1102d6db6f6be816114051f63d))
+* :lipstick: updates badge margin if no header logo ([a84b326](https://github.com/stjudecloud/docs/commit/a84b32661452382cf1b817c3bdfa8efa528633a1))
+
+### Code Refactoring
+
+* :art: restructures genomics platform docs ([9b064a8](https://github.com/stjudecloud/docs/commit/9b064a8e9241fb34129ed637cac447d07b6f96ff))
+
+### CI
+
+* :bug: changes reaction to thumbs on destroy command ([16fcdab](https://github.com/stjudecloud/docs/commit/16fcdab4af7304f8f8a4533a74c219b3a3cbe4fd))
+* :bug: corrects spelling file paths ([f716576](https://github.com/stjudecloud/docs/commit/f71657668e94d510798e7c27ef27af23b721ee49))
+* :bug: removes references to branch ([1741e16](https://github.com/stjudecloud/docs/commit/1741e160923d807e71c9dba8df64aeaf209792fd))
+* :fire: removes preview environment for pr51 [skip ci] ([955ddf9](https://github.com/stjudecloud/docs/commit/955ddf9805ec7976cbfb0ccb602a04fb37103afe))
+* :rocket: creates preview environment for pr51 [skip ci] ([92b3b8a](https://github.com/stjudecloud/docs/commit/92b3b8a408890fe8563981db249ae43052e00acf))
+* :sparkles: adds reactions to comments ([c1ec018](https://github.com/stjudecloud/docs/commit/c1ec01842982d5993d8bca033215943811538413))
+* :wrench: adds image policy to production tag ([128ef12](https://github.com/stjudecloud/docs/commit/128ef1235f665b30bfbaddd0ff52889a141ec5e7))
+* :wrench: debugging bot script ([ff125cb](https://github.com/stjudecloud/docs/commit/ff125cba7dfdcb657dba5948c0128de45477dd79))
+* :wrench: only build docker image when certain paths change ([2b04c14](https://github.com/stjudecloud/docs/commit/2b04c14ad8b222273b009ec95b819825445e7790))
+* :wrench: prevents commands from being run twice ([f3bebae](https://github.com/stjudecloud/docs/commit/f3bebae528ee34ab1825d155467372a2be126e19))
+* :wrench: prints full context in json ([3b1d71f](https://github.com/stjudecloud/docs/commit/3b1d71f9bfb2446118f6fe6f3b186b3c551a89b2))
+* :wrench: removes skip ci tag from destory command commit message ([4f275a6](https://github.com/stjudecloud/docs/commit/4f275a613fe228a1f40a6c0ea480fb191428a442))
+* :wrench: updates to spellcheck workflow ([ca18538](https://github.com/stjudecloud/docs/commit/ca185389267f0ab359996262483d5315b20136a3))
+
 ## 1.0.0 (2025-02-05)
 
 ### Features (New)
