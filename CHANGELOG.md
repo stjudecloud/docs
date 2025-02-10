@@ -1,3 +1,14 @@
+## [1.1.1](https://github.com/stjudecloud/docs/compare/v1.1.0...v1.1.1) (2025-02-10)
+
+### Bug Fixes
+
+* :memo: reorders content in genomics platform getting started ([f5bc14e](https://github.com/stjudecloud/docs/commit/f5bc14eaf9afb0def2f7cdf5b01116e14836a235))
+* :wrench: updates paths for link check ([e44366b](https://github.com/stjudecloud/docs/commit/e44366b1141242b772165b34ae4617a24d4bcf17))
+
+### Style Updates
+
+* :lipstick: updates margin for docs badge ([1b70e5c](https://github.com/stjudecloud/docs/commit/1b70e5c922aa187434974ac994a7f1a0cc0c274c))
+
 ## [1.1.0](https://github.com/stjudecloud/docs/compare/v1.0.0...v1.1.0) (2025-02-06)
 
 ### Features (New)
