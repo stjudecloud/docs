@@ -13,14 +13,12 @@ const { header } = useAppConfig()
         <UColorModeImage v-bind="{ class: 'h-8 w-auto', ...header?.logo }" /><UBadge
           label="Docs"
           variant="subtle"
-          class="mb-0.5 mt-1"
         />
       </template>
       <template v-else>
         St. Jude Cloud <UBadge
           label="Docs"
           variant="subtle"
-          class="mb-0.5 mt-1"
         />
       </template>
     </template>
