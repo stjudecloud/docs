@@ -24,6 +24,11 @@ spec:
       config.linkerd.io/proxy-cpu-request: 20m
     containerPorts:
       http: 3000
+    resources:
+      limits:
+        cpu: 1000m
+      requests:
+        cpu: 100m
     service:
       ports:
         - name: http
