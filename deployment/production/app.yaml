@@ -29,6 +29,10 @@ spec:
         cpu: 1000m
       requests:
         cpu: 100m
+    autoscaling:
+      enabled: true
+    pdb:
+      create: true
     service:
       ports:
         - name: http
