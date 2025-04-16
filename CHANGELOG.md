@@ -1,3 +1,28 @@
+## [1.2.0](https://github.com/stjudecloud/docs/compare/v1.1.1...v1.2.0) (2025-04-16)
+
+### Features (New)
+
+* :sparkles: adds microsoft genomics whitepaper hard copy ([5f4fd77](https://github.com/stjudecloud/docs/commit/5f4fd775cbd47b3372dfb1bbe2e5697a8251f2e2))
+* :sparkles: updates dnanexus billing support section ([c86c499](https://github.com/stjudecloud/docs/commit/c86c4990a54b72005badf5cda5f52b73f5906dd1))
+
+### Bug Fixes
+
+* **doc:** update extension addendum warning message style ([#60](https://github.com/stjudecloud/docs/issues/60)) ([7389255](https://github.com/stjudecloud/docs/commit/738925504020482985b2725b4557a3c8b3acbb06))
+
+### Documentation Updates
+
+* update extension addendum ([#57](https://github.com/stjudecloud/docs/issues/57)) ([a13120b](https://github.com/stjudecloud/docs/commit/a13120b02b5013933d85c56958a884a3c174f485))
+
+### Code Refactoring
+
+* :fire: removes msgen links ([d7d5713](https://github.com/stjudecloud/docs/commit/d7d57137b426b0eff263b163aa43329c861e3e78))
+
+### CI
+
+* :fire: removes preview environment for pr59 ([2b0980d](https://github.com/stjudecloud/docs/commit/2b0980d64862357898ab46a0bbae6e86a949e01d))
+* :rocket: creates preview environment for pr54 [skip ci] ([932f32e](https://github.com/stjudecloud/docs/commit/932f32eadb35f9b90fdb49889a0cc0af6c915bb6))
+* :rocket: creates preview environment for pr59 [skip ci] ([7990617](https://github.com/stjudecloud/docs/commit/799061719e2938098e38a0d946c8e0b1e3913233))
+
 ## [1.1.1](https://github.com/stjudecloud/docs/compare/v1.1.0...v1.1.1) (2025-02-10)
 
 ### Bug Fixes
