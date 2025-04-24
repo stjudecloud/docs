@@ -1,0 +1,88 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: docs
+  namespace: docs-pr63
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: generic
+      version: 1.1.x
+      sourceRef:
+        kind: HelmRepository
+        name: stjudecloud
+        namespace: flux-system
+      interval: 1h
+  values:
+    nameOverride: docs
+    extraDeploy:
+      - |
+        apiVersion: v1
+        kind: Service
+        metadata:
+          name: {{ template "common.names.fullname" . }}-oauth-bridge
+          labels: {{- include "common.labels.standard" . | nindent 4 }}
+            {{- if .Values.commonLabels }}
+            {{- include "common.tplvalues.render" ( dict "value" .Values.commonLabels "context" $ ) | nindent 4 }}
+            {{- end }}
+          {{- if .Values.commonAnnotations }}
+          annotations: {{- include "common.tplvalues.render" ( dict "value" .Values.commonAnnotations "context" $ ) | nindent 4 }}
+          {{- end }}
+        spec:
+          type: ExternalName
+          externalName: oauth2-proxy.oauth2-proxy
+      - |
+        ---
+        apiVersion: networking.k8s.io/v1
+        kind: Ingress
+        metadata:
+          name: {{ .Release.Name }}-oauth
+        spec:
+          ingressClassName: nginx
+          rules:
+          - host: {{ .Values.ingress.hostname }}
+            http:
+              paths:
+                - backend:
+                    service:
+                      name: {{ template "common.names.fullname" . }}-oauth-bridge
+                      port:
+                        number: 80
+                  path: /oauth2
+                  pathType: ImplementationSpecific
+          tls:
+          - hosts:
+            - {{ .Values.ingress.hostname }}
+            secretName: {{ .Values.ingress.hostname }}-tls
+    image:
+      repository: stjudecloud/docs
+      tag: latest # {"$imagepolicy": "flux-system:docs-pr63:tag"}
+    podAnnotations:
+      linkerd.io/inject: enabled
+      config.linkerd.io/proxy-cpu-request: 20m
+    containerPorts:
+      http: 3000
+    service:
+      ports:
+        - name: http
+          protocol: TCP
+          port: 3000
+          targetPort: http
+    ingress:
+      enabled: true
+      hostname: docs-pr63.staging.stjude.cloud
+      path: /
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+        linkerd.io/inject: ingress
+        nginx.ingress.kubernetes.io/auth-signin: https://$host/oauth2/start?rd=$escaped_request_uri
+        nginx.ingress.kubernetes.io/auth-url: https://$host/oauth2/auth
+        nginx.ingress.kubernetes.io/service-upstream: "true"
+        nginx.ingress.kubernetes.io/enable-modsecurity: "true"
+        nginx.ingress.kubernetes.io/enable-owasp-core-rules: "true"
+      tls:
+        enabled: true
+    datadog:
+      enabled: false
