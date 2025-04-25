@@ -1,3 +1,38 @@
+## [1.3.0](https://github.com/stjudecloud/docs/compare/v1.2.0...v1.3.0) (2025-04-25)
+
+### Features (New)
+
+* :memo: updates content for variant prevalence changes ([1b7a63a](https://github.com/stjudecloud/docs/commit/1b7a63a9c5b6353823acb03776171241b458004d))
+* :sparkles: adds ccdi line to variant prevalence data table ([d3153e1](https://github.com/stjudecloud/docs/commit/d3153e18db98cade0b4cd63e4e1fb864385d2c79))
+* :sparkles: adds link to data and methods from variants ([f07dc76](https://github.com/stjudecloud/docs/commit/f07dc7630c18a75560542fd00c1b0422e3939ac0))
+* :sparkles: adds new variant docs ([4cd5909](https://github.com/stjudecloud/docs/commit/4cd5909664017c015b31affca8ad0ae6dd91b7d8))
+* :sparkles: adds new version of disease ontology ([84e6617](https://github.com/stjudecloud/docs/commit/84e6617cc763862eed15011478bab150e7370dbf))
+* :sparkles: adds ontology hard copies and download links ([a830a51](https://github.com/stjudecloud/docs/commit/a830a51a19e3d1048a291985526a7f4865ec774e))
+
+### Bug Fixes
+
+* :lipstick: correct list spacing ([d729ab0](https://github.com/stjudecloud/docs/commit/d729ab01ed2636639ec9592960ecf7c1be09dec3))
+* :pencil2: adds dash to x-axis ([1a6568f](https://github.com/stjudecloud/docs/commit/1a6568ff82989d661d19a1f41d49a304d4d1f3f8))
+* :pencil2: adds periods after figure descriptions ([0963634](https://github.com/stjudecloud/docs/commit/09636341db0d91c49c509b3f354c202548941cbb))
+* :pencil2: capitalize all instances of sunburst ([b9955e2](https://github.com/stjudecloud/docs/commit/b9955e2ad92e829a96ee6b30d45b7898ff3db911))
+* :pencil2: correct use of their ([462d700](https://github.com/stjudecloud/docs/commit/462d7000932b82c75f996514368d35324221f5d8))
+* :pencil2: corrects spelling errors ([de96a2d](https://github.com/stjudecloud/docs/commit/de96a2d889b0d9047ed63d684504f1dee9c13f6a))
+
+### Code Refactoring
+
+* :fire: removes permalink for ontology ([cc392ae](https://github.com/stjudecloud/docs/commit/cc392aef2d6ddad911e1ab78e3ce03df6539673e))
+* :pencil2: adds spelling bypasses to file ([20527d9](https://github.com/stjudecloud/docs/commit/20527d9ed384ba366aad81033593478ea556c795))
+* :pencil2: corrects de novo spelling issue ([9a81f98](https://github.com/stjudecloud/docs/commit/9a81f98f9e6cea3887b23c6da594afcb8571c6fb))
+* :pencil2: corrects spelling issues ([79798c5](https://github.com/stjudecloud/docs/commit/79798c54988ce124eccdf7fe9735a11152122bed))
+* :rotating_light: updates headers to verify no duplicate headings ([456dcac](https://github.com/stjudecloud/docs/commit/456dcac114209dd11a5af08c2b5b03e646e30b2d))
+
+### CI
+
+* :fire: removes preview environment for pr61 ([cc4500b](https://github.com/stjudecloud/docs/commit/cc4500bc8ea3068566b040a87e6e7ab03bce4496))
+* :fire: removes preview environment for pr63 ([0667e50](https://github.com/stjudecloud/docs/commit/0667e503b065b8e0a79dcb1b6021e06df2b0fab5))
+* :rocket: creates preview environment for pr61 [skip ci] ([63a281d](https://github.com/stjudecloud/docs/commit/63a281d444569290cc5732e050b9fe7d4852ac61))
+* :rocket: creates preview environment for pr63 [skip ci] ([b703b7e](https://github.com/stjudecloud/docs/commit/b703b7e695e20c0525933b2812ac9ecab724ce3d))
+
 ## [1.2.0](https://github.com/stjudecloud/docs/compare/v1.1.1...v1.2.0) (2025-04-16)
 
 ### Features (New)
