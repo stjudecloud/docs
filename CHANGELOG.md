@@ -1,3 +1,18 @@
+## [1.4.0](https://github.com/stjudecloud/docs/compare/v1.3.0...v1.4.0) (2025-07-16)
+
+### Features (New)
+
+* **overview:** adds new sjlife schedule 1 ([d118f1b](https://github.com/stjudecloud/docs/commit/d118f1bf8751dea00a28a7466f1df92b93596a0e))
+* **overview:** updates sjlife schedule 1 ([7a1efeb](https://github.com/stjudecloud/docs/commit/7a1efeb8240a26ab0307636eddb11e4b8c3de283))
+
+### Documentation Updates
+
+* add FAQ for expression data facet ([#70](https://github.com/stjudecloud/docs/issues/70)) ([fad090b](https://github.com/stjudecloud/docs/commit/fad090bc4b067616e1204325692ff5e788dd49c9))
+
+### Code Refactoring
+
+* **overview:** removes sjlife schedule 1 ([fbd83b7](https://github.com/stjudecloud/docs/commit/fbd83b72999d169dcc71b514a21ae486733e3a24))
+
 ## [1.3.0](https://github.com/stjudecloud/docs/compare/v1.2.0...v1.3.0) (2025-04-25)
 
 ### Features (New)
