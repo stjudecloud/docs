@@ -539,6 +539,8 @@ v0.1
 v0.1.
 v0.2
 v0.2.
+v0.3
+v0.3.
 Umeda
 pAML
 myelodysplasia-related
@@ -547,6 +549,16 @@ Megakaryoblastic
 WHO5-aligned
 GLISr
 AMLs
+SJMDS018205_D1
+SJAML016494_D1
+SJALL016496_D1
+HGNC-recommended
+KMT2A-PTD
+FLT3-ITD
+UBTF-TD
+myeloproliferative
+Myeloproliferative
+Rhabdomyosarcoma
 
 - content/2.genomics-platform/3.managing-data/2.upload-download-data-local.md
 3.X
