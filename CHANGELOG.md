@@ -1,3 +1,28 @@
+## [1.5.0](https://github.com/stjudecloud/docs/compare/v1.4.0...v1.5.0) (2025-07-21)
+
+### Features (New)
+
+* **genomics-platform:** adds v0.3 of the disease ontology ([7275654](https://github.com/stjudecloud/docs/commit/727565412e22d88ab01b08bc613ac7e7744854c1))
+
+### Documentation Updates
+
+* **genomics-platform:** adds hard copy of v0.3 ontology ([299ccb5](https://github.com/stjudecloud/docs/commit/299ccb54df309318b4313c8da1f87853c072358e))
+
+### Style Updates
+
+* **genomics-platform:** :lipstick: corrects markdownlint errors ([15c0c4b](https://github.com/stjudecloud/docs/commit/15c0c4b5e695fbbb1f49cf3937661aa454439b8e))
+* **genomics-platform:** indents sub lists ([64271bf](https://github.com/stjudecloud/docs/commit/64271bf2617e809d7a52358760ea6a6026029558))
+* **genomics-platform:** other improvements ([79ec04c](https://github.com/stjudecloud/docs/commit/79ec04c92eb0c76214aac9cdb46fbde119e9f1c6))
+
+### Code Refactoring
+
+* **genomics-platform:** :lipstick: corrects spelling issues ([7d65e81](https://github.com/stjudecloud/docs/commit/7d65e81e9da8eeb26ab657bd1f83963f1296ced9))
+
+### CI
+
+* :fire: removes preview environment for pr72 ([114ade7](https://github.com/stjudecloud/docs/commit/114ade7beaa634090e56eed13aaaad52a4e1e724))
+* :rocket: creates preview environment for pr72 [skip ci] ([7f1c11c](https://github.com/stjudecloud/docs/commit/7f1c11c01d322e17b4a707ee0f9a1a6ae8f0c77a))
+
 ## [1.4.0](https://github.com/stjudecloud/docs/compare/v1.3.0...v1.4.0) (2025-07-16)
 
 ### Features (New)
