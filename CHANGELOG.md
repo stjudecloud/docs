@@ -1,3 +1,9 @@
+## [1.5.1](https://github.com/stjudecloud/docs/compare/v1.5.0...v1.5.1) (2025-07-28)
+
+### Bug Fixes
+
+* **genomics-platform:** updates 0.3 version of ontology excel sheet ([94c7e9e](https://github.com/stjudecloud/docs/commit/94c7e9e46e255bf2ef640ba8f2fc4e26ac68e183))
+
 ## [1.5.0](https://github.com/stjudecloud/docs/compare/v1.4.0...v1.5.0) (2025-07-21)
 
 ### Features (New)
