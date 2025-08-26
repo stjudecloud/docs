@@ -493,22 +493,7 @@ i-heroicons-document-text-solid
 i-heroicons-exclamation-circle
 i-heroicons-light-bulb
 
-- content/3.genomics-platform/2.about-our-data/2.file-formats-and-sequencing-information.md
-bwa
-chrom
-haplotype
-in-silico
-loc.end
-loc.start
-MutationTaster
-Pre-annotation
-StrongARM
-v100
-v2.7.1a
-v2.7.1a.
-validation_status
-
-- content/3.genomics-platform/2.about-our-data/4.st-jude-cloud-disease-ontology.md
+- content/2.cc4k/1.index.md
 2024.02.09.579680v1.full
 astrocytoma
 chondroblastic
@@ -559,6 +544,21 @@ UBTF-TD
 myeloproliferative
 Myeloproliferative
 Rhabdomyosarcoma
+
+- content/3.genomics-platform/2.about-our-data/2.file-formats-and-sequencing-information.md
+bwa
+chrom
+haplotype
+in-silico
+loc.end
+loc.start
+MutationTaster
+Pre-annotation
+StrongARM
+v100
+v2.7.1a
+v2.7.1a.
+validation_status
 
 - content/3.genomics-platform/3.managing-data/2.upload-download-data-local.md
 3.X
@@ -826,12 +826,12 @@ MoR
 - content/4.pecan/2.data-facets/4.histology.md
 Slidescale
 
-- content/4.pecan/4.pecan-pie/1.what-is-pie.md
+- content/4.pecan/3.pecan-pie/1.what-is-pie.md
 app-stjude_medal_ceremony
 app-stjude_vep_plus
 pecanpie_ASHG_2017.pptx
 
-- content/4.pecan/4.pecan-pie/2.faq.md
+- content/4.pecan/3.pecan-pie/2.faq.md
 medaling
 pre-HTSlib
 table_S1_gene_list_5_categories_v2.xlsx
@@ -1198,7 +1198,7 @@ Variant_gene_assoc
 vafs1
 Vcf_cohort
 
-- content/5.visualization-community/5.genomepaint/3.genomepaint-user-guide.md
+- content/5.visualization-community/5.genomepaint/2.genomepaint-user-guide.md
 amplicon
 ase
 atrx
