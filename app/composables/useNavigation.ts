@@ -11,7 +11,12 @@ const _useNavigation = () => {
       to: '/overview',
       active: route.path.startsWith('/overview')
     }, {
-      label: 'Genomics Platform',
+      label: 'CC4K',
+      description: 'Cancer classifications for kids.',
+      icon: 'sjc-icon:sitemap',
+      to: '/cc4k',
+      active: route.path.startsWith('/cc4k')
+    }, {label: 'Genomics Platform',
       description: 'Genomics data and bioinformatics workflows.',
       icon: 'sjc-icon:genomics-platform',
       to: '/genomics-platform',
