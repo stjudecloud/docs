@@ -13,7 +13,7 @@ const _useNavigation = () => {
     }, {
       label: 'CC4K',
       description: 'Cancer classifications for kids.',
-      icon: 'sjc-icon:sitemap',
+      icon: 'sjc-icon:ontology-tree',
       to: '/cc4k',
       active: route.path.startsWith('/cc4k')
     }, {label: 'Genomics Platform',
