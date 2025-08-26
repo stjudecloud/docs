@@ -35,439 +35,439 @@
     },
     {
       "pattern": "^/pecan/overview/videos",
-      "replacement": "{{BASEURL}}/content/3.pecan/1.overview/3.videos.md"
+      "replacement": "{{BASEURL}}/content/4.pecan/1.overview/3.videos.md"
     },
     {
       "pattern": "^/pecan/overview/methods-and-data",
-      "replacement": "{{BASEURL}}/content/3.pecan/1.overview/2.methods-and-data.md"
+      "replacement": "{{BASEURL}}/content/4.pecan/1.overview/2.methods-and-data.md"
     },
     {
       "pattern": "^/pecan/overview/faq",
-      "replacement": "{{BASEURL}}/content/3.pecan/1.overview/4.faq.md"
+      "replacement": "{{BASEURL}}/content/4.pecan/1.overview/4.faq.md"
     },
     {
       "pattern": "^/pecan/overview/getting-started",
-      "replacement": "{{BASEURL}}/content/3.pecan/1.overview/1.getting-started.md"
+      "replacement": "{{BASEURL}}/content/4.pecan/1.overview/1.getting-started.md"
     },
     {
       "pattern": "^/pecan/data-facets/use-cases",
-      "replacement": "{{BASEURL}}/content/3.pecan/2.data-facets/5.use-cases.md"
+      "replacement": "{{BASEURL}}/content/4.pecan/2.data-facets/5.use-cases.md"
     },
     {
       "pattern": "^/pecan/data-facets/variants",
-      "replacement": "{{BASEURL}}/content/3.pecan/2.data-facets/1.variants.md"
+      "replacement": "{{BASEURL}}/content/4.pecan/2.data-facets/1.variants.md"
     },
     {
       "pattern": "^/pecan/data-facets/histology",
-      "replacement": "{{BASEURL}}/content/3.pecan/2.data-facets/4.histology.md"
+      "replacement": "{{BASEURL}}/content/4.pecan/2.data-facets/4.histology.md"
     },
     {
       "pattern": "^/pecan/data-facets/expression",
-      "replacement": "{{BASEURL}}/content/3.pecan/2.data-facets/3.expression.md"
+      "replacement": "{{BASEURL}}/content/4.pecan/2.data-facets/3.expression.md"
     },
     {
       "pattern": "^/pecan/data-facets/mutational-signatures",
-      "replacement": "{{BASEURL}}/content/3.pecan/2.data-facets/2.mutational-signatures.md"
+      "replacement": "{{BASEURL}}/content/4.pecan/2.data-facets/2.mutational-signatures.md"
     },
     {
       "pattern": "^/pecan/pecan-pie/faq",
-      "replacement": "{{BASEURL}}/content/3.pecan/3.pecan-pie/2.faq.md"
+      "replacement": "{{BASEURL}}/content/4.pecan/4.pecan-pie/2.faq.md"
     },
     {
       "pattern": "^/pecan/pecan-pie/what-is-pie",
-      "replacement": "{{BASEURL}}/content/3.pecan/3.pecan-pie/1.what-is-pie.md"
+      "replacement": "{{BASEURL}}/content/4.pecan/4.pecan-pie/1.what-is-pie.md"
     },
     {
       "pattern": "^/genomics-platform/getting-started/making-a-data-request",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/1.getting-started/3.making-a-data-request.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/1.getting-started/3.making-a-data-request.md"
     },
     {
       "pattern": "^/genomics-platform/getting-started/accounts-and-billing",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/1.getting-started/2.accounts-and-billing.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/1.getting-started/2.accounts-and-billing.md"
     },
     {
       "pattern": "^/genomics-platform/getting-started/glossary",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/1.getting-started/6.glossary.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/1.getting-started/6.glossary.md"
     },
     {
       "pattern": "^/genomics-platform/getting-started/filling-out-the-daa",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/1.getting-started/4.filling-out-the-daa.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/1.getting-started/4.filling-out-the-daa.md"
     },
     {
       "pattern": "^/genomics-platform/getting-started/faq",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/1.getting-started/5.faq.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/1.getting-started/5.faq.md"
     },
     {
       "pattern": "^/genomics-platform/getting-started/overview",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/1.getting-started/1.overview.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/1.getting-started/1.overview.md"
     },
     {
       "pattern": "^/genomics-platform/analyzing-data/running-our-workflows",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/4.analyzing-data/2.running-our-workflows.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/4.analyzing-data/2.running-our-workflows.md"
     },
     {
       "pattern": "^/genomics-platform/analyzing-data/interactive-nodes",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/4.analyzing-data/4.interactive-nodes.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/4.analyzing-data/4.interactive-nodes.md"
     },
     {
       "pattern": "^/genomics-platform/analyzing-data/creating-a-cloud-app",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/4.analyzing-data/3.creating-a-cloud-app.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/4.analyzing-data/3.creating-a-cloud-app.md"
     },
     {
       "pattern": "^/genomics-platform/analyzing-data/visualizing-ngs-data",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/4.analyzing-data/5.visualizing-ngs-data.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/4.analyzing-data/5.visualizing-ngs-data.md"
     },
     {
       "pattern": "^/genomics-platform/analyzing-data/command-line-interaction",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/4.analyzing-data/1.command-line-interaction.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/4.analyzing-data/1.command-line-interaction.md"
     },
     {
       "pattern": "^/genomics-platform/workflow-guides/chipseq",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.workflow-guides/1.chipseq.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/5.workflow-guides/1.chipseq.md"
     },
     {
       "pattern": "^/genomics-platform/workflow-guides/cisx",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.workflow-guides/2.cisx.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/5.workflow-guides/2.cisx.md"
     },
     {
       "pattern": "^/genomics-platform/workflow-guides/rnaseq-expression-classification",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.workflow-guides/6.rnaseq-expression-classification.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/5.workflow-guides/6.rnaseq-expression-classification.md"
     },
     {
       "pattern": "^/genomics-platform/workflow-guides/mutational-signatures",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.workflow-guides/4.mutational-signatures.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/5.workflow-guides/4.mutational-signatures.md"
     },
     {
       "pattern": "^/genomics-platform/workflow-guides/sequencerr",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.workflow-guides/8.sequencerr.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/5.workflow-guides/8.sequencerr.md"
     },
     {
       "pattern": "^/genomics-platform/workflow-guides/warden",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.workflow-guides/9.warden.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/5.workflow-guides/9.warden.md"
     },
     {
       "pattern": "^/genomics-platform/workflow-guides/methylation-to-activity",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.workflow-guides/3.methylation-to-activity.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/5.workflow-guides/3.methylation-to-activity.md"
     },
     {
       "pattern": "^/genomics-platform/workflow-guides/rapid-rnaseq",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.workflow-guides/5.rapid-rnaseq.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/5.workflow-guides/5.rapid-rnaseq.md"
     },
     {
       "pattern": "^/genomics-platform/workflow-guides/seaseq",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/5.workflow-guides/7.seaseq.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/5.workflow-guides/7.seaseq.md"
     },
     {
       "pattern": "^/genomics-platform/about-our-data/metadata-and-clinical-information",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/2.about-our-data/3.metadata-and-clinical-information.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/2.about-our-data/3.metadata-and-clinical-information.md"
     },
     {
       "pattern": "^/genomics-platform/about-our-data/st-jude-cloud-disease-ontology",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/2.about-our-data/4.st-jude-cloud-disease-ontology.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/2.about-our-data/4.st-jude-cloud-disease-ontology.md"
     },
     {
       "pattern": "^/genomics-platform/about-our-data/file-formats-and-sequencing-information",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/2.about-our-data/2.file-formats-and-sequencing-information.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/2.about-our-data/2.file-formats-and-sequencing-information.md"
     },
     {
       "pattern": "^/genomics-platform/about-our-data/data-sets-and-data-access-units",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/2.about-our-data/1.data-sets-and-data-access-units.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/2.about-our-data/1.data-sets-and-data-access-units.md"
     },
     {
       "pattern": "^/genomics-platform/managing-data/upload-download-data-cluster",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/3.managing-data/3.upload-download-data-cluster.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/3.managing-data/3.upload-download-data-cluster.md"
     },
     {
       "pattern": "^/genomics-platform/managing-data/renewing-your-daa",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/3.managing-data/5.renewing-your-daa.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/3.managing-data/5.renewing-your-daa.md"
     },
     {
       "pattern": "^/genomics-platform/managing-data/upload-download-data-local",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/3.managing-data/2.upload-download-data-local.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/3.managing-data/2.upload-download-data-local.md"
     },
     {
       "pattern": "^/genomics-platform/managing-data/upload-download-data-dnanexus",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/3.managing-data/4.upload-download-data-dnanexus.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/3.managing-data/4.upload-download-data-dnanexus.md"
     },
     {
       "pattern": "^/genomics-platform/managing-data/overview",
-      "replacement": "{{BASEURL}}/content/2.genomics-platform/3.managing-data/1.overview.md"
+      "replacement": "{{BASEURL}}/content/3.genomics-platform/3.managing-data/1.overview.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/truncation",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/20.truncation.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/20.truncation.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/viewing-snv-indel-mutations",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/5.viewing-snv-indel-mutations.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/5.viewing-snv-indel-mutations.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/sv-and-fusion-transcript",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/16.sv-and-fusion-transcript.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/16.sv-and-fusion-transcript.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/study-view",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/34.study-view.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/34.study-view.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/internal-tandem-duplications",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/18.internal-tandem-duplications.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/18.internal-tandem-duplications.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/add-custom-protein-domains",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/25.add-custom-protein-domains.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/25.add-custom-protein-domains.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/viewing-expression-data",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/7.viewing-expression-data.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/7.viewing-expression-data.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/copy-number-variants",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/17.copy-number-variants.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/17.copy-number-variants.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/intragenic-deletion",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/19.intragenic-deletion.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/19.intragenic-deletion.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/using-vcf-file",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/31.using-vcf-file.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/31.using-vcf-file.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/filtering-mutations",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/8.filtering-mutations.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/8.filtering-mutations.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/snv-and-indel",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/15.snv-and-indel.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/15.snv-and-indel.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/stratifying-mutations-by-cancer-subtype",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/14.stratifying-mutations-by-cancer-subtype.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/14.stratifying-mutations-by-cancer-subtype.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/embedding-proteinpaint",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/32.embedding-proteinpaint.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/32.embedding-proteinpaint.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/bampile",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/24.bampile.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/24.bampile.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/loading-tcga-maf-file",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/30.loading-tcga-maf-file.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/30.loading-tcga-maf-file.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/exporting-figures-and-data",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/9.exporting-figures-and-data.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/9.exporting-figures-and-data.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/introduction",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/2.introduction.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/2.introduction.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/uploaded-mutation-data",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/29.uploaded-mutation-data.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/29.uploaded-mutation-data.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/using-disease-pie-charts",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/13.using-disease-pie-charts.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/13.using-disease-pie-charts.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/using-the-sample-table",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/11.using-the-sample-table.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/11.using-the-sample-table.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/proteinpaint",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/1.proteinpaint.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/1.proteinpaint.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/json-bed",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/21.json-bed.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/21.json-bed.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/splice-junction",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/22.splice-junction.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/22.splice-junction.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/profile-gene-value",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/23.profile-gene-value.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/23.profile-gene-value.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/loading-mutations-from-file",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/28.loading-mutations-from-file.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/28.loading-mutations-from-file.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/getting-started",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/3.getting-started.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/3.getting-started.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/visualize-your-mutation-data",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/27.visualize-your-mutation-data.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/27.visualize-your-mutation-data.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/using-the-gene-table",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/10.using-the-gene-table.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/10.using-the-gene-table.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/url-parameters",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/33.url-parameters.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/33.url-parameters.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/using-the-heatmap",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/12.using-the-heatmap.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/12.using-the-heatmap.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/viewing-gene-fusions",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/6.viewing-gene-fusions.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/6.viewing-gene-fusions.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/using-custom-tracks",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/26.using-custom-tracks.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/26.using-custom-tracks.md"
     },
     {
       "pattern": "^/visualization-community/proteinpaint/loading-datasets",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/4.proteinpaint/4.loading-datasets.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/4.proteinpaint/4.loading-datasets.md"
     },
     {
       "pattern": "^/visualization-community/overview/faq",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/1.overview/4.faq.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/1.overview/4.faq.md"
     },
     {
       "pattern": "^/visualization-community/overview/data-types-and-graphs",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/1.overview/3.data-types-and-graphs.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/1.overview/3.data-types-and-graphs.md"
     },
     {
       "pattern": "^/visualization-community/overview/what-is-visualization-community",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/1.overview/1.what-is-visualization-community.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/1.overview/1.what-is-visualization-community.md"
     },
     {
       "pattern": "^/visualization-community/overview/what-are-proteinpaint-and-genome-paint",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/1.overview/2.what-are-proteinpaint-and-genome-paint.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/1.overview/2.what-are-proteinpaint-and-genome-paint.md"
     },
     {
       "pattern": "^/visualization-community/genomepaint/genomepaint",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/5.genomepaint/1.genomepaint.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/5.genomepaint/1.genomepaint.md"
     },
     {
       "pattern": "^/visualization-community/genomepaint/genomepaint-user-guide",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/5.genomepaint/2.genomepaint-user-guide.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/5.genomepaint/3.genomepaint-user-guide.md"
     },
     {
       "pattern": "^/visualization-community/code-block-library/bigwig-stranded",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/6.bigwig-stranded.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/3.code-block-library/6.bigwig-stranded.md"
     },
     {
       "pattern": "^/visualization-community/code-block-library/expression-rank",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/7.expression-rank.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/3.code-block-library/7.expression-rank.md"
     },
     {
       "pattern": "^/visualization-community/code-block-library/ma-volcano",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/12.ma-volcano.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/3.code-block-library/12.ma-volcano.md"
     },
     {
       "pattern": "^/visualization-community/code-block-library/splice-junctions-cohort",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/16.splice-junctions-cohort.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/3.code-block-library/16.splice-junctions-cohort.md"
     },
     {
       "pattern": "^/visualization-community/code-block-library/profile-gene-value",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/13.profile-gene-value.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/3.code-block-library/13.profile-gene-value.md"
     },
     {
       "pattern": "^/visualization-community/code-block-library/bigwig",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/5.bigwig.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/3.code-block-library/5.bigwig.md"
     },
     {
       "pattern": "^/visualization-community/code-block-library/arc",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/3.arc.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/3.code-block-library/3.arc.md"
     },
     {
       "pattern": "^/visualization-community/code-block-library/lollipop",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/11.lollipop.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/3.code-block-library/11.lollipop.md"
     },
     {
       "pattern": "^/visualization-community/code-block-library/allelic-imbalance",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/2.allelic-imbalance.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/3.code-block-library/2.allelic-imbalance.md"
     },
     {
       "pattern": "^/visualization-community/code-block-library/single-cell",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/15.single-cell.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/3.code-block-library/15.single-cell.md"
     },
     {
       "pattern": "^/visualization-community/code-block-library/bam",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/4.bam.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/3.code-block-library/4.bam.md"
     },
     {
       "pattern": "^/visualization-community/code-block-library/hi-c",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/8.hi-c.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/3.code-block-library/8.hi-c.md"
     },
     {
       "pattern": "^/visualization-community/code-block-library/rna-splice-junction",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/14.rna-splice-junction.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/3.code-block-library/14.rna-splice-junction.md"
     },
     {
       "pattern": "^/visualization-community/code-block-library/t-sne",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/18.t-sne.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/3.code-block-library/18.t-sne.md"
     },
     {
       "pattern": "^/visualization-community/code-block-library/heatmap",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/9.heatmap.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/3.code-block-library/9.heatmap.md"
     },
     {
       "pattern": "^/visualization-community/code-block-library/track-list-and-facet-table",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/17.track-list-and-facet-table.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/3.code-block-library/17.track-list-and-facet-table.md"
     },
     {
       "pattern": "^/visualization-community/code-block-library/vcf",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/19.vcf.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/3.code-block-library/19.vcf.md"
     },
     {
       "pattern": "^/visualization-community/code-block-library/json-bed",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/10.json-bed.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/3.code-block-library/10.json-bed.md"
     },
     {
       "pattern": "^/visualization-community/code-block-library/code-block-basics",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/3.code-block-library/1.code-block-basics.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/3.code-block-library/1.code-block-basics.md"
     },
     {
       "pattern": "^/visualization-community/getting-started/embedding",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/2.getting-started/8.embedding.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/2.getting-started/8.embedding.md"
     },
     {
       "pattern": "^/visualization-community/getting-started/new-data-download",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/2.getting-started/10.new-data-download.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/2.getting-started/10.new-data-download.md"
     },
     {
       "pattern": "^/visualization-community/getting-started/how-to-use-the-viseditor",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/2.getting-started/3.how-to-use-the-viseditor.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/2.getting-started/3.how-to-use-the-viseditor.md"
     },
     {
       "pattern": "^/visualization-community/getting-started/videos",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/2.getting-started/9.videos.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/2.getting-started/9.videos.md"
     },
     {
       "pattern": "^/visualization-community/getting-started/how-to-sign-in",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/2.getting-started/2.how-to-sign-in.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/2.getting-started/2.how-to-sign-in.md"
     },
     {
       "pattern": "^/visualization-community/getting-started/collections-and-communities",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/2.getting-started/6.collections-and-communities.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/2.getting-started/6.collections-and-communities.md"
     },
     {
       "pattern": "^/visualization-community/getting-started/tracks-and-apps",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/2.getting-started/4.tracks-and-apps.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/2.getting-started/4.tracks-and-apps.md"
     },
     {
       "pattern": "^/visualization-community/getting-started/manage-your-data",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/2.getting-started/5.manage-your-data.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/2.getting-started/5.manage-your-data.md"
     },
     {
       "pattern": "^/visualization-community/getting-started/public-vs-private-visualizations",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/2.getting-started/7.public-vs-private-visualizations.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/2.getting-started/7.public-vs-private-visualizations.md"
     },
     {
       "pattern": "^/visualization-community/getting-started/overview",
-      "replacement": "{{BASEURL}}/content/4.visualization-community/2.getting-started/1.overview.md"
+      "replacement": "{{BASEURL}}/content/5.visualization-community/2.getting-started/1.overview.md"
     }
   ],
   "httpHeaders": [

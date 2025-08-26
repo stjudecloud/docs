@@ -493,7 +493,7 @@ i-heroicons-document-text-solid
 i-heroicons-exclamation-circle
 i-heroicons-light-bulb
 
-- content/2.genomics-platform/2.about-our-data/2.file-formats-and-sequencing-information.md
+- content/3.genomics-platform/2.about-our-data/2.file-formats-and-sequencing-information.md
 bwa
 chrom
 haplotype
@@ -508,7 +508,7 @@ v2.7.1a
 v2.7.1a.
 validation_status
 
-- content/2.genomics-platform/2.about-our-data/4.st-jude-cloud-disease-ontology.md
+- content/3.genomics-platform/2.about-our-data/4.st-jude-cloud-disease-ontology.md
 2024.02.09.579680v1.full
 astrocytoma
 chondroblastic
@@ -560,13 +560,13 @@ myeloproliferative
 Myeloproliferative
 Rhabdomyosarcoma
 
-- content/2.genomics-platform/3.managing-data/2.upload-download-data-local.md
+- content/3.genomics-platform/3.managing-data/2.upload-download-data-local.md
 3.X
 
-- content/2.genomics-platform/4.analyzing-data/2.running-our-workflows.md
+- content/3.genomics-platform/4.analyzing-data/2.running-our-workflows.md
 Neoepitope
 
-- content/2.genomics-platform/4.analyzing-data/3.creating-a-cloud-app.md
+- content/3.genomics-platform/4.analyzing-data/3.creating-a-cloud-app.md
 dx-fastqc-example-app
 execDepends
 fastqc-report
@@ -574,13 +574,13 @@ runSpec
 v0.11.8
 v0.291.1
 
-- content/2.genomics-platform/4.analyzing-data/4.interactive-nodes.md
+- content/3.genomics-platform/4.analyzing-data/4.interactive-nodes.md
 mem1_ssd1_x2
 
-- content/2.genomics-platform/4.analyzing-data/5.visualizing-ngs-data.md
+- content/3.genomics-platform/4.analyzing-data/5.visualizing-ngs-data.md
 v2.0.0
 
-- content/2.genomics-platform/5.workflow-guides/1.chipseq.md
+- content/3.genomics-platform/5.workflow-guides/1.chipseq.md
 50bp
 dm3
 H2A.Z
@@ -600,7 +600,7 @@ Immunoprecipitation
 Sample_R1.fastq.gz
 Sample_R2.fastq.gz
 
-- content/2.genomics-platform/5.workflow-guides/2.cisx.md
+- content/3.genomics-platform/5.workflow-guides/2.cisx.md
 3.30872245021211e
 4.60632106249222e
 4.69553625126628e
@@ -695,7 +695,7 @@ unk
 v10
 white_list
 
-- content/2.genomics-platform/5.workflow-guides/3.methylation-to-activity.md
+- content/3.genomics-platform/5.workflow-guides/3.methylation-to-activity.md
 1000bp
 bisulfite
 chrom
@@ -713,14 +713,14 @@ SampleName_Input.bw
 SampleName_H3K27ac.bw
 SampleName_H3K4me3.bw
 
-- content/2.genomics-platform/5.workflow-guides/4.mutational-signatures.md
+- content/3.genomics-platform/5.workflow-guides/4.mutational-signatures.md
 mtsg
 SigProfilerMatrixGenerator
 SJMEL001001_D1
 SJNBL001_D
 Subs-01
 
-- content/2.genomics-platform/5.workflow-guides/5.rapid-rnaseq.md
+- content/3.genomics-platform/5.workflow-guides/5.rapid-rnaseq.md
 Coverage_bw
 ITDs
 KIAA1549-BRAF
@@ -735,7 +735,7 @@ Sample_R1.fastq.gz
 Sample_R2.fastq.gz
 Trimmomatic
 
-- content/2.genomics-platform/5.workflow-guides/6.rnaseq-expression-classification.md
+- content/3.genomics-platform/5.workflow-guides/6.rnaseq-expression-classification.md
 batch_corrected
 covariates
 Gencode
@@ -753,7 +753,7 @@ variance_stabilized
 varianceStabilizingTransformation
 v31
 
-- content/2.genomics-platform/5.workflow-guides/7.seaseq.md
+- content/3.genomics-platform/5.workflow-guides/7.seaseq.md
 100bp
 BAM_Density
 BAM_files
@@ -769,7 +769,7 @@ SRRs
 tdf
 v1
 
-- content/2.genomics-platform/5.workflow-guides/8.sequencerr.md
+- content/3.genomics-platform/5.workflow-guides/8.sequencerr.md
 aln
 bwa
 doi
@@ -782,7 +782,7 @@ s13059-020-02254-2
 Sample.bam
 Sample.bam.bai
 
-- content/2.genomics-platform/5.workflow-guides/9.warden.md
+- content/3.genomics-platform/5.workflow-guides/9.warden.md
 condition1
 condition1.png
 condition2
@@ -808,30 +808,30 @@ v24
 v31
 xpressio
 
-- content/3.pecan/1.overview/2.methods-and-data.md
+- content/4.pecan/1.overview/2.methods-and-data.md
 DESeq2
 DESeq2's
 NCI-TARGET
 de
 novo
 
-- content/3.pecan/2.data-facets/1.variants.md
+- content/4.pecan/2.data-facets/1.variants.md
 pathogneic
 whole-transcriptome
 
-- content/3.pecan/2.data-facets/3.expression.md
+- content/4.pecan/2.data-facets/3.expression.md
 4f
 MoR
 
-- content/3.pecan/2.data-facets/4.histology.md
+- content/4.pecan/2.data-facets/4.histology.md
 Slidescale
 
-- content/3.pecan/3.pecan-pie/1.what-is-pie.md
+- content/4.pecan/4.pecan-pie/1.what-is-pie.md
 app-stjude_medal_ceremony
 app-stjude_vep_plus
 pecanpie_ASHG_2017.pptx
 
-- content/3.pecan/3.pecan-pie/2.faq.md
+- content/4.pecan/4.pecan-pie/2.faq.md
 medaling
 pre-HTSlib
 table_S1_gene_list_5_categories_v2.xlsx
@@ -839,29 +839,29 @@ TCGA-subtracted
 vcf-validator
 vcftools
 
-- content/4.visualization-community/1.overview/1.what-is-visualization-community.md
+- content/5.visualization-community/1.overview/1.what-is-visualization-community.md
 1k
 
-- content/4.visualization-community/1.overview/3.data-types-and-graphs.md
+- content/5.visualization-community/1.overview/3.data-types-and-graphs.md
 FusionEditor
 Ase
 MAF-timeline
 
-- content/4.visualization-community/2.getting-started/3.how-to-use-the-viseditor.md
+- content/5.visualization-community/2.getting-started/3.how-to-use-the-viseditor.md
 mode_hm
 pyramidup
 refgene
 un
 unhide
 
-- content/4.visualization-community/2.getting-started/5.manage-your-data.md
+- content/5.visualization-community/2.getting-started/5.manage-your-data.md
 24h
 ppr1
 
-- content/4.visualization-community/3.code-block-library/1.code-block-basics.md
+- content/5.visualization-community/3.code-block-library/1.code-block-basics.md
 30m
 
-- content/4.visualization-community/3.code-block-library/3.arc.md
+- content/5.visualization-community/3.code-block-library/3.arc.md
 bedfile
 bedindexURL
 bedURL
@@ -869,21 +869,21 @@ mode_arc
 mode_hm
 percentile_max
 
-- content/4.visualization-community/3.code-block-library/8.hi-c.md
+- content/5.visualization-community/3.code-block-library/8.hi-c.md
 percentile_max
 pyramidup
 
-- content/4.visualization-community/3.code-block-library/13.profile-gene-value.md
+- content/5.visualization-community/3.code-block-library/13.profile-gene-value.md
 pvg
 
-- content/4.visualization-community/4.proteinpaint/5.viewing-snv-indel-mutations.md
+- content/5.visualization-community/4.proteinpaint/5.viewing-snv-indel-mutations.md
 p.R248Q
 heterozygosity
 
-- content/4.visualization-community/4.proteinpaint/6.viewing-gene-fusions.md
+- content/5.visualization-community/4.proteinpaint/6.viewing-gene-fusions.md
 1b
 
-- content/4.visualization-community/4.proteinpaint/12.using-the-heatmap.md
+- content/5.visualization-community/4.proteinpaint/12.using-the-heatmap.md
 1q
 5p
 borderwidth
@@ -896,10 +896,10 @@ samplegroup
 sampletype
 sortorder
 
-- content/4.visualization-community/4.proteinpaint/14.stratifying-mutations-by-cancer-subtype.md
+- content/5.visualization-community/4.proteinpaint/14.stratifying-mutations-by-cancer-subtype.md
 Non-BS-HGG
 
-- content/4.visualization-community/4.proteinpaint/15.snv-and-indel.md
+- content/5.visualization-community/4.proteinpaint/15.snv-and-indel.md
 aachange
 frameshift
 maf-coverage
@@ -913,7 +913,7 @@ sampletype
 total_in_normal
 total_in_tumor
 
-- content/4.visualization-community/4.proteinpaint/16.sv-and-fusion-transcript.md
+- content/5.visualization-community/4.proteinpaint/16.sv-and-fusion-transcript.md
 chr_a
 chr_b
 gene_a
@@ -925,21 +925,21 @@ position_b
 strand_a
 strand_b
 
-- content/4.visualization-community/4.proteinpaint/18.internal-tandem-duplications.md
+- content/5.visualization-community/4.proteinpaint/18.internal-tandem-duplications.md
 chr_start
 chr_stop
 rnaDuplength
 
-- content/4.visualization-community/4.proteinpaint/19.intragenic-deletion.md
+- content/5.visualization-community/4.proteinpaint/19.intragenic-deletion.md
 chr_start
 chr_stop
 rnaDellength
 rnaDuplength
 
-- content/4.visualization-community/4.proteinpaint/20.truncation.md
+- content/5.visualization-community/4.proteinpaint/20.truncation.md
 Losstype
 
-- content/4.visualization-community/4.proteinpaint/21.json-bed.md
+- content/5.visualization-community/4.proteinpaint/21.json-bed.md
 cdslen
 chromHMM
 codingstart
@@ -953,12 +953,12 @@ stackspace
 translatecoding
 UTRs
 
-- content/4.visualization-community/4.proteinpaint/22.splice-junction.md
+- content/5.visualization-community/4.proteinpaint/22.splice-junction.md
 cohortsetting
 sample1
 sample2
 
-- content/4.visualization-community/4.proteinpaint/23.profile-gene-value.md
+- content/5.visualization-community/4.proteinpaint/23.profile-gene-value.md
 chromHMM
 genevaluematchname
 genevaluetklst
@@ -969,14 +969,14 @@ phosphorylation
 proteomics
 sampleID
 
-- content/4.visualization-community/4.proteinpaint/24.bampile.md
+- content/5.visualization-community/4.proteinpaint/24.bampile.md
 bampilefile
 Basepair
 SAMPLE.gz
 SAMPLE.gz.tbi
 v6.0
 
-- content/4.visualization-community/4.proteinpaint/26.using-custom-tracks.md
+- content/5.visualization-community/4.proteinpaint/26.using-custom-tracks.md
 allheight
 bedj
 bigwigstranded
@@ -1007,7 +1007,7 @@ Typecode
 usegrade
 VAF-coverage
 
-- content/4.visualization-community/4.proteinpaint/30.loading-tcga-maf-file.md
+- content/5.visualization-community/4.proteinpaint/30.loading-tcga-maf-file.md
 cDNA_Change
 Hugo_Symbol
 PR_TCGA_SKCM_PAIR_Capture_All_Pairs_QCPASS.aggregated.capture.tcga.uuid.somatic.maf
@@ -1017,7 +1017,7 @@ Start_position
 Tumor_Sample_Barcode
 Variant_Classification
 
-- content/4.visualization-community/4.proteinpaint/31.using-vcf-file.md
+- content/5.visualization-community/4.proteinpaint/31.using-vcf-file.md
 3_prime_UTR_variant
 5_prime_UTR_variant
 als
@@ -1108,7 +1108,7 @@ vcfcohortrack
 vcfinfofilter
 vcfurl
 
-- content/4.visualization-community/4.proteinpaint/32.embedding-proteinpaint.md
+- content/5.visualization-community/4.proteinpaint/32.embedding-proteinpaint.md
 altallele
 dataname
 dbexpression
@@ -1144,10 +1144,10 @@ yourpage.html
 yourvariable
 yourvariable.node
 
-- content/4.visualization-community/4.proteinpaint/33.url-parameters.md
+- content/5.visualization-community/4.proteinpaint/33.url-parameters.md
 v2.0
 
-- content/4.visualization-community/4.proteinpaint/34.study-view.md
+- content/5.visualization-community/4.proteinpaint/34.study-view.md
 assaytracks
 bedgraph
 Browserview
@@ -1198,7 +1198,7 @@ Variant_gene_assoc
 vafs1
 Vcf_cohort
 
-- content/4.visualization-community/5.genomepaint/2.genomepaint-user-guide.md
+- content/5.visualization-community/5.genomepaint/3.genomepaint-user-guide.md
 amplicon
 ase
 atrx

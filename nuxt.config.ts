@@ -65,7 +65,8 @@ export default defineNuxtConfig({
     '/': { redirect: '/overview', prerender: false },
     '/genomics-platform': { redirect: '/genomics-platform/getting-started/overview', prerender: false },
     '/pecan': { redirect: '/pecan/overview/getting-started', prerender: false },
-    '/visualization-community': { redirect: '/visualization-community/overview/what-is-visualization-community', prerender: false }
+    '/visualization-community': { redirect: '/visualization-community/overview/what-is-visualization-community', prerender: false },
+    '/genomics-platform/about-our-data/st-jude-cloud-disease-ontology': { redirect: '/cc4k', prerender: false },
   },
 
   devtools: {
