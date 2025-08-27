@@ -65,6 +65,7 @@ Benjamini-Hochberg
 Benshang
 Bensheng
 Bergstrom
+Bruford
 Cheng
 Chunliang
 Daly
@@ -74,9 +75,13 @@ E.N.
 Easton
 Edmonson
 Finkelstein
+Fleischhack
 Foy
 Frantz
 Geralyn
+Ghasemi
+Gruber
+Gu
 Haradhvala
 Hu
 Hyle
@@ -85,10 +90,12 @@ J.Z.
 Jian
 Jinghui
 Jobin
+Joshi
 Ju
 Kandali
 Klco
 Kolekar
+Kundra
 L.B.
 Liqing
 Liu
@@ -98,12 +105,14 @@ Mahto
 Maoxiang
 McMurry
 Meshinchi
+Milde
 Mudunuri
 Mullighan
 N.J.
 Naina
 Nakitandwe
 Nedra
+Pajtler
 Pamella
 Pandurang
 Pappo
@@ -112,6 +121,7 @@ Rahul
 Rahbarinia
 Ren
 Robison
+Rooij
 Rusch
 Serang
 Shaela
@@ -544,6 +554,14 @@ UBTF-TD
 myeloproliferative
 Myeloproliferative
 Rhabdomyosarcoma
+megakaryoblastic
+Neuro
+Oncol
+leukaemia
+Commun
+bioRxiv
+Non-WNT
+Clin
 
 - content/3.genomics-platform/2.about-our-data/2.file-formats-and-sequencing-information.md
 bwa
