@@ -536,6 +536,8 @@ v0.2
 v0.2.
 v0.3
 v0.3.
+v0.4
+v0.4.
 Umeda
 pAML
 myelodysplasia-related
@@ -562,6 +564,16 @@ Commun
 bioRxiv
 Non-WNT
 Clin
+leukemias
+Hematolymphoid
+BCR-ABL1
+Haploidy
+hyperdiploid
+hyperdiploidy
+hypodiploid
+hypodiploidy
+Near-Haploidy
+Low-Hypodiploidy
 
 - content/3.genomics-platform/2.about-our-data/2.file-formats-and-sequencing-information.md
 bwa
