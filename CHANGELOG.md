@@ -1,3 +1,39 @@
+## [1.6.0](https://github.com/stjudecloud/docs/compare/v1.5.1...v1.6.0) (2025-09-03)
+
+### Features (New)
+
+* **cc4k:** adds initial version of v0.4 ([212c903](https://github.com/stjudecloud/docs/commit/212c903d020a8b7a3e1550ae52c986519bed7fef))
+* **cc4k:** adds v0.4 download ([7cc0402](https://github.com/stjudecloud/docs/commit/7cc040266b3030e83e3ec9ec538606948a256c4b))
+* moves St. Jude Ontology to new CC4K top level page ([b5c4d37](https://github.com/stjudecloud/docs/commit/b5c4d375eeb12e0d8f4b7a227c5dc581e461c779))
+
+### Bug Fixes
+
+* **cc4k:** updates superscripts in v0.0 ([59a65fc](https://github.com/stjudecloud/docs/commit/59a65fcfbb43d9d128c69f9d2283b572548d271d))
+* **cc4k:** updates typos in whitepaper ([18e3d7c](https://github.com/stjudecloud/docs/commit/18e3d7c59231659f54c3201f8ed0b9fd3bdba0d0))
+* uses ontology tree icon for nav ([6ab1bd8](https://github.com/stjudecloud/docs/commit/6ab1bd83a88090920646adfd129b45656275ca88))
+
+### Style Updates
+
+* **cc4k:** adds spaces before superscripts in section titles ([787f235](https://github.com/stjudecloud/docs/commit/787f2357fa74f01d9d2f65c3660e317f88433f90))
+* updates spelling file ([ccb59f3](https://github.com/stjudecloud/docs/commit/ccb59f30aee517e29d0182d3ca76eb763383d83d))
+
+### Code Refactoring
+
+* **cc4k:** adds uncommon spellings to ignore list ([31b513a](https://github.com/stjudecloud/docs/commit/31b513a575c2fd53dde52ac7ca1ef27a55160863))
+* **cc4k:** changes references to full citations ([d1c8539](https://github.com/stjudecloud/docs/commit/d1c85393e82554ce95c0ed684788ad82bff9913f))
+* **cc4k:** replaces all sjc-do references with new cc4k ([343fe04](https://github.com/stjudecloud/docs/commit/343fe04f9d4c3d2f427e873cb8f98ce6ffa24e75))
+* **cc4k:** updates brain tumor ontology image ([36fa463](https://github.com/stjudecloud/docs/commit/36fa46326463949f6e44149c3e183b50069ff1b6))
+* changes navigation title to overview ([aab2883](https://github.com/stjudecloud/docs/commit/aab28836be480b61a25e4f318a4590545dccba11))
+
+### CI
+
+* :fire: removes preview environment for pr73 ([beb4dca](https://github.com/stjudecloud/docs/commit/beb4dcab050063a287062d6bda137f18a69f8ea7))
+* :fire: removes preview environment for pr74 ([510c61d](https://github.com/stjudecloud/docs/commit/510c61de409baf5003cf992e97bfedc5b08888b5))
+* :fire: removes preview environment for pr75 ([a472bb9](https://github.com/stjudecloud/docs/commit/a472bb99a909d08c7044d8274ae1049eed668ea3))
+* :rocket: creates preview environment for pr73 [skip ci] ([8500cf3](https://github.com/stjudecloud/docs/commit/8500cf3d0fe4b3272f5f2d27029b770b3b0f8b14))
+* :rocket: creates preview environment for pr74 [skip ci] ([3e9296b](https://github.com/stjudecloud/docs/commit/3e9296bd47aa6ecb494f6b5b8973564b647ca78b))
+* :rocket: creates preview environment for pr75 [skip ci] ([c0533f0](https://github.com/stjudecloud/docs/commit/c0533f08097c83017343e65063c71f2c87cb54fb))
+
 ## [1.5.1](https://github.com/stjudecloud/docs/compare/v1.5.0...v1.5.1) (2025-07-28)
 
 ### Bug Fixes
