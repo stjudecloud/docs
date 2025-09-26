@@ -1,3 +1,28 @@
+## [1.7.0](https://github.com/stjudecloud/docs/compare/v1.6.0...v1.7.0) (2025-09-26)
+
+### Features (New)
+
+* **genomics-platform:** removes embargo date table from glossary ([8907e69](https://github.com/stjudecloud/docs/commit/8907e69bccc6ef1d26c4b14c7c8a90be18856677))
+* **genomics-platform:** updates 1.1 to embargo date ([426cbc7](https://github.com/stjudecloud/docs/commit/426cbc71c78e205822fa2f14f8de2a2347a060bc))
+* **genomics-platform:** updates embargo date section ([25def93](https://github.com/stjudecloud/docs/commit/25def9332e56e5b3b59b6a53a43bb895a4223efb))
+
+### Bug Fixes
+
+* **genomics-platform:** corrects hyperlink text for nih dms policy ([4fe998f](https://github.com/stjudecloud/docs/commit/4fe998f773eb6000ce538f56a796dd318ddafceb))
+* **genomics-platform:** corrects link placement in embargo date section ([6703baf](https://github.com/stjudecloud/docs/commit/6703baf4b4bf916ff5eb68a352014a10cad69bf9))
+
+### Features (Revisions)
+
+* clarify that variants come from a DB ([9d12649](https://github.com/stjudecloud/docs/commit/9d1264920ea26c184cbda0564139fee66b817928))
+
+### CI
+
+* :fire: removes preview environment for pr78 ([ac751e1](https://github.com/stjudecloud/docs/commit/ac751e1e6c530fb31007e010c21c2fd422dda719))
+* :rocket: creates preview environment for pr78 [skip ci] ([59ef3bf](https://github.com/stjudecloud/docs/commit/59ef3bf2f75c149b41bb70db05fe0740442b11c1))
+* revert to pull request trigger ([2257535](https://github.com/stjudecloud/docs/commit/2257535e6dc46cd85cb82a4933d2b56d73b414db))
+* use docker login action ([a4e6d9d](https://github.com/stjudecloud/docs/commit/a4e6d9d0cb1ba773ee86194488363547a7ebc71e))
+* uses pull request target to allow forks to be manually run ([04e3898](https://github.com/stjudecloud/docs/commit/04e3898aee4a34be8cd0a0f55037ccf5d60a38f9))
+
 ## [1.6.0](https://github.com/stjudecloud/docs/compare/v1.5.1...v1.6.0) (2025-09-03)
 
 ### Features (New)
