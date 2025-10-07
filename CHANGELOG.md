@@ -1,3 +1,9 @@
+## [1.8.0](https://github.com/stjudecloud/docs/compare/v1.7.0...v1.8.0) (2025-10-07)
+
+### Features (Revisions)
+
+* remove 50$ credit mentions ([#79](https://github.com/stjudecloud/docs/issues/79)) ([ce8d33c](https://github.com/stjudecloud/docs/commit/ce8d33c0b1a0e98a8d2385f660f5a1b160fc019e))
+
 ## [1.7.0](https://github.com/stjudecloud/docs/compare/v1.6.0...v1.7.0) (2025-09-26)
 
 ### Features (New)
