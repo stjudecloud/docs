@@ -18,7 +18,7 @@ spec:
     nameOverride: docs
     image:
       repository: stjudecloud/docs
-      tag: v1.7.0 # {"$imagepolicy": "flux-system:docs:tag"}
+      tag: v1.8.0 # {"$imagepolicy": "flux-system:docs:tag"}
     podAnnotations:
       linkerd.io/inject: enabled
       config.linkerd.io/proxy-cpu-request: 20m
