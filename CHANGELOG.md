@@ -1,3 +1,9 @@
+## [1.9.0](https://github.com/stjudecloud/docs/compare/v1.8.0...v1.9.0) (2025-10-08)
+
+### Features (Revisions)
+
+* Add PanALL to Glossary ([#80](https://github.com/stjudecloud/docs/issues/80)) ([e6bb870](https://github.com/stjudecloud/docs/commit/e6bb870956869277f5db839e8af361ce525f606f))
+
 ## [1.8.0](https://github.com/stjudecloud/docs/compare/v1.7.0...v1.8.0) (2025-10-07)
 
 ### Features (Revisions)
