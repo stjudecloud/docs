@@ -1,3 +1,9 @@
+## [1.10.0](https://github.com/stjudecloud/docs/compare/v1.9.0...v1.10.0) (2025-10-15)
+
+### Features (Revisions)
+
+* replace deadlinks with live ones ([#83](https://github.com/stjudecloud/docs/issues/83)) ([1d881f1](https://github.com/stjudecloud/docs/commit/1d881f16b57bf263d7fffb6932e08f4efdf81fac))
+
 ## [1.9.0](https://github.com/stjudecloud/docs/compare/v1.8.0...v1.9.0) (2025-10-08)
 
 ### Features (Revisions)
