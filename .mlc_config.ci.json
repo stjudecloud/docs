@@ -104,11 +104,11 @@
     },
     {
       "pattern": "^/pecan/pecan-pie/faq",
-      "replacement": "{{BASEURL}}/content/4.pecan/4.pecan-pie/2.faq.md"
+      "replacement": "{{BASEURL}}/content/4.pecan/3.pecan-pie/2.faq.md"
     },
     {
       "pattern": "^/pecan/pecan-pie/what-is-pie",
-      "replacement": "{{BASEURL}}/content/4.pecan/4.pecan-pie/1.what-is-pie.md"
+      "replacement": "{{BASEURL}}/content/4.pecan/3.pecan-pie/1.what-is-pie.md"
     },
     {
       "pattern": "^/genomics-platform/getting-started/making-a-data-request",
