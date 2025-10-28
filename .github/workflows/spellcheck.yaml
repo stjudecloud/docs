@@ -20,19 +20,8 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
 
-      - name: setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          run_install: false
-
-      - name: setup node
-        uses: actions/setup-node@v4
-        with:
-          node-version: lts/jod
-          cache: pnpm
-
-      - name: pnpm install
-        run: pnpm install --frozen-lockfile
-
       - name: spellcheck
-        run: pnpm mdspell --ignore-numbers --ignore-acronyms --en-us --no-suggestions --report content/**/**/*.md
+        uses: matheus23/md-spellcheck-action@v4.2.2
+        with:
+          files-to-check: content/**/**/*.md
+          words-to-ignore-file: .spelling
