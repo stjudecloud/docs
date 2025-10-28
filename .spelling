@@ -159,6 +159,9 @@ Zhang
 Zhaoming
 Zhou
 # Genomics/Biology Terms
+ALS-frontotemporal
+ALS-FTD
+amyotrophic
 BAM
 BamToGFF
 BAMs
@@ -242,6 +245,7 @@ MethylationToActivity
 missense
 multi-omic
 multi-omics
+multisystem
 MYCN-ATRX
 Myelodysplastic
 neuroblastoma
@@ -257,6 +261,7 @@ PAX5-JAK2
 Paxalisib
 PedAML
 plotMDS
+proteinopathy
 ProteinPaint
 proteomic
 PolyA
@@ -305,6 +310,7 @@ westus
 BMF_MDS-Schedule1
 CCSS-Schedule1
 ClinGen-Schedule1
+CReATe-Schedule1
 DMG-H3K27a-Schedule1
 MBPRG-Schedule1
 MBPRP-Schedule1
