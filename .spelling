@@ -578,10 +578,13 @@ Low-Hypodiploidy
 - content/3.genomics-platform/2.about-our-data/2.file-formats-and-sequencing-information.md
 bwa
 chrom
+gVCFs
 haplotype
+hg38m1x
 in-silico
 loc.end
 loc.start
+ms_opt
 MutationTaster
 Pre-annotation
 StrongARM
