@@ -1,3 +1,9 @@
+## [1.12.0](https://github.com/stjudecloud/docs/compare/v1.11.0...v1.12.0) (2025-12-04)
+
+### Features (New)
+
+* **pecan:** adds images for image search docs ([#87](https://github.com/stjudecloud/docs/issues/87)) ([f99e936](https://github.com/stjudecloud/docs/commit/f99e936d55114fb3b9eb2a6e9597ba2b094f9df6))
+
 ## [1.10.0](https://github.com/stjudecloud/docs/compare/v1.9.0...v1.10.0) (2025-10-15)
 
 ### Features (Revisions)
