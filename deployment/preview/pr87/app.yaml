@@ -1,4 +1,3 @@
----
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
@@ -58,7 +57,7 @@ spec:
             secretName: {{ .Values.ingress.hostname }}-tls
     image:
       repository: stjudecloud/docs
-      tag: latest # {"$imagepolicy": "flux-system:docs-pr87:tag"}
+      tag: pr87-a7ea183-218 # {"$imagepolicy": "flux-system:docs-pr87:tag"}
     podAnnotations:
       linkerd.io/inject: enabled
       config.linkerd.io/proxy-cpu-request: 20m
