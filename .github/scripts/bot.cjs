@@ -2,7 +2,8 @@
 // IMPORTANT: Make sure usernames are lower-cased
 // TODO: Read owners from OWNERS file.
 const owners = [
-  'kevin-benton'
+  'kevin-benton',
+  'mkirk111'
 ]
 
 module.exports = async ({ github, context }) => {
