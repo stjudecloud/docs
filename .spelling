@@ -564,7 +564,6 @@ Myeloproliferative
 Rhabdomyosarcoma
 megakaryoblastic
 Neuro
-Neurodegeneration
 Oncol
 leukaemia
 Commun
@@ -581,6 +580,9 @@ hypodiploid
 hypodiploidy
 Near-Haploidy
 Low-Hypodiploidy
+
+- content/3.genomics-platform/2.about-our-data/1.data-sets-and-data-access-units.md
+Neurodegeneration
 
 - content/3.genomics-platform/2.about-our-data/2.file-formats-and-sequencing-information.md
 bwa
