@@ -1,3 +1,13 @@
+## [1.14.0](https://github.com/stjudecloud/docs/compare/v1.13.0...v1.14.0) (2026-01-23)
+
+### Features (New)
+
+* adds CReATe dataset ([#84](https://github.com/stjudecloud/docs/issues/84)) ([a91b3e2](https://github.com/stjudecloud/docs/commit/a91b3e21bfd1273b7e09d345a39bedc15883d5b2))
+
+### CI
+
+* adds to list for preview creation ([277f9a0](https://github.com/stjudecloud/docs/commit/277f9a0f46de34c6ed367a99eb6e267be604d7c8))
+
 ## [1.12.0](https://github.com/stjudecloud/docs/compare/v1.11.0...v1.12.0) (2025-12-04)
 
 ### Features (New)
