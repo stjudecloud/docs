@@ -57,7 +57,7 @@ spec:
             secretName: {{ .Values.ingress.hostname }}-tls
     image:
       repository: stjudecloud/docs
-      tag: pr133-c99a060-241 # {"$imagepolicy": "flux-system:docs-pr133:tag"}
+      tag: pr133-9cac7f6-242 # {"$imagepolicy": "flux-system:docs-pr133:tag"}
     podAnnotations:
       linkerd.io/inject: enabled
       config.linkerd.io/proxy-cpu-request: 20m
