@@ -1,3 +1,22 @@
+## [1.16.0](https://github.com/stjudecloud/docs/compare/v1.15.0...v1.16.0) (2026-02-02)
+
+### Features (New)
+
+* trigger release after squash merge ([1a6a1a2](https://github.com/stjudecloud/docs/commit/1a6a1a22a01cdfec52dfdebd76c394b486f1dd99))
+
+### Documentation Updates
+
+* EA-Updates-1-27-26 ([e1d02ba](https://github.com/stjudecloud/docs/commit/e1d02ba3b0269095bb68a72fce051f0962049c00))
+* spelling revisions ([72e303a](https://github.com/stjudecloud/docs/commit/72e303ad7efcd22f292f92423e1e80a58c92285b))
+
+### Features (Revisions)
+
+* updates from review and format ([50348d3](https://github.com/stjudecloud/docs/commit/50348d3df61dd607652470c7d02f2141cfab822b))
+
+### CI
+
+* :rocket: creates preview environment for pr132 [skip ci] ([986da0f](https://github.com/stjudecloud/docs/commit/986da0fa83875cb7e2bb3b3a7fea261fc377d86d))
+
 ## [1.14.0](https://github.com/stjudecloud/docs/compare/v1.13.0...v1.14.0) (2026-01-23)
 
 ### Features (New)
