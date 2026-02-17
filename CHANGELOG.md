@@ -1,3 +1,26 @@
+## [1.17.0](https://github.com/stjudecloud/docs/compare/v1.16.0...v1.17.0) (2026-02-17)
+
+### Features (New)
+
+* add doc for keyboard shortcuts ([0c03f6f](https://github.com/stjudecloud/docs/commit/0c03f6f1dc7f8541d329d722ee012d0fba587ebe))
+* add doc for keyboard shortcuts ([1a3d640](https://github.com/stjudecloud/docs/commit/1a3d64013f6bdc30dc19071a9fe04acc8740e35f))
+
+### Documentation Updates
+
+* format revision ([9fd42f4](https://github.com/stjudecloud/docs/commit/9fd42f490d4c01d5213ad5590484fa70a8f3f637))
+* link correction ([9fcd771](https://github.com/stjudecloud/docs/commit/9fcd771049d546514016ea301b7b7bf4cd2d2317))
+* side navigation and tag removal ([abe2b5b](https://github.com/stjudecloud/docs/commit/abe2b5be227d07e1bdde7a5d3f21371393a3fc63))
+* side navigation update ([19342fc](https://github.com/stjudecloud/docs/commit/19342fcb6eec92fcd07d777ab1547f0641460121))
+* side navigation update ([c187b5a](https://github.com/stjudecloud/docs/commit/c187b5a85b7b34df5fc2defe696a5ca0cba426d5))
+* spelling ([62d1a67](https://github.com/stjudecloud/docs/commit/62d1a6787d1bdc9f55dc63f0d27fe585463460a7))
+* tag removal and side navigation ([c6e9397](https://github.com/stjudecloud/docs/commit/c6e939772c823740860ba22d16459ba38a14f6fe))
+
+### CI
+
+* :fire: removes preview environment for pr133 ([20a3e94](https://github.com/stjudecloud/docs/commit/20a3e941347d0666ec278dc4dbe862d9c9290d9c))
+* :rocket: creates preview environment for pr133 [skip ci] ([ab39491](https://github.com/stjudecloud/docs/commit/ab39491f075911fcf8496feae39030fd8fd9ac96))
+* :rocket: creates preview environment for pr135 [skip ci] ([e2333e1](https://github.com/stjudecloud/docs/commit/e2333e1f4ba1081cbea5bbde1e97eba6a92c5528))
+
 ## [1.16.0](https://github.com/stjudecloud/docs/compare/v1.15.0...v1.16.0) (2026-02-02)
 
 ### Features (New)
