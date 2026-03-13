@@ -1,3 +1,9 @@
+## [1.19.0](https://github.com/stjudecloud/docs/compare/v1.18.0...v1.19.0) (2026-03-13)
+
+### Features (New)
+
+* Cc4kv0.5 1.22.26 ([#131](https://github.com/stjudecloud/docs/issues/131)) ([fbc901b](https://github.com/stjudecloud/docs/commit/fbc901b69986ce7e3e26a5030f519b08bdeec922))
+
 ## [1.17.0](https://github.com/stjudecloud/docs/compare/v1.16.0...v1.17.0) (2026-02-17)
 
 ### Features (New)
