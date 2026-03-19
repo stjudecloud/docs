@@ -1,3 +1,9 @@
+## [1.20.0](https://github.com/stjudecloud/docs/compare/v1.19.0...v1.20.0) (2026-03-19)
+
+### Features (New)
+
+* dau sample updatet ([1d16384](https://github.com/stjudecloud/docs/commit/1d163843bd6c3f27473bd36278fcfb974aa1dd85))
+
 ## [1.19.0](https://github.com/stjudecloud/docs/compare/v1.18.0...v1.19.0) (2026-03-13)
 
 ### Features (New)
