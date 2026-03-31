@@ -20,6 +20,9 @@
   "platformAutomerge": false,
   "minimumReleaseAge": "7 days",
   "stabilityDays": 7,
+  "allowedPostUpgradeCommands": [
+    "pnpm install"
+  ],
   "lockFileMaintenance": {
     "enabled": true
   },
