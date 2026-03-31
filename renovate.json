@@ -1,8 +1,136 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
+    "config:recommended",
+    ":semanticCommits",
+    ":semanticCommitTypeAll(chore)",
     "github>nuxt/renovate-config-nuxt"
   ],
+  "gitAuthor": "stjudecloud-cloudy <support@stjude.cloud>",
+  "labels": [
+    "dependencies"
+  ],
+  "prHourlyLimit": 2,
+  "prConcurrentLimit": 5,
+  "schedule": [
+    "at any time"
+  ],
+  "timezone": "America/Chicago",
+  "automerge": false,
+  "platformAutomerge": false,
+  "minimumReleaseAge": "7 days",
+  "stabilityDays": 7,
   "lockFileMaintenance": {
     "enabled": true
-  }
+  },
+  "packageRules": [
+    {
+      "description": "Group GitHub actions together",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "groupName": "github actions",
+      "matchPackagePatterns": [
+        "^actions/",
+        "^github/"
+      ]
+    },
+    {
+      "description": "Group all npm devDependencies",
+      "matchManagers": [
+        "npm"
+      ],
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "groupName": "npm dev dependencies"
+    },
+    {
+      "description": "Group all Nuxt dependencies together",
+      "groupName": "nuxt packages",
+      "matchPackagePatterns": [
+        "^nuxt$",
+        "^@nuxt/"
+      ]
+    },
+    {
+      "description": "Group semantic-release packages",
+      "groupName": "semantic-release",
+      "matchPackageNames": [
+        "/^@semantic-release//",
+        "/^semantic-release$/",
+        "/^conventional-changelog/"
+      ]
+    },
+    {
+      "description": "Group commitlint packages",
+      "groupName": "commitlint",
+      "matchPackageNames": [
+        "/^@commitlint//",
+        "/^commitlint$/",
+        "/^cz-conventional-changelog$/"
+      ]
+    },
+    {
+      "description": "Group Iconify JSON packages",
+      "groupName": "iconify-json",
+      "matchPackagePatterns": [
+        "^@iconify-json/"
+      ]
+    },
+    {
+      "description": "Group markdown tooling",
+      "groupName": "markdown tools",
+      "matchPackagePatterns": [
+        "^markdown-link-check$",
+        "^markdown-spellcheck$",
+        "^markdown-table-formatter$",
+        "^markdownlint-cli2$"
+      ]
+    },
+    {
+      "description": "Group linting tools",
+      "groupName": "linting",
+      "matchPackagePatterns": [
+        "^eslint$",
+        "^@nuxt/eslint$"
+      ]
+    },
+    {
+      "description": "Group husky (git hooks)",
+      "groupName": "husky",
+      "matchPackagePatterns": [
+        "^husky$"
+      ]
+    },
+    {
+      "description": "Group Vue typecheck",
+      "groupName": "typecheck",
+      "matchPackagePatterns": [
+        "^vue-tsc$"
+      ]
+    },
+    {
+      "description": "Group package manager updates (pnpm)",
+      "matchManagers": [
+        "npm"
+      ],
+      "matchDepTypes": [
+        "packageManager"
+      ],
+      "groupName": "pnpm"
+    },
+    {
+      "description": "Major updates - require manual review, don't recreate if closed",
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": false,
+      "recreateWhen": "never",
+      "labels": [
+        "dependencies",
+        "breaking"
+      ]
+    }
+  ]
 }
