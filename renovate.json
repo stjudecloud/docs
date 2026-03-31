@@ -25,6 +25,23 @@
   },
   "packageRules": [
     {
+      "description": "Default: run pnpm install after any npm-managed upgrade",
+      "matchManagers": [
+        "npm"
+      ],
+      "matchPackageFiles": [
+        "package.json"
+      ],
+      "postUpgradeTasks": {
+        "commands": [
+          "pnpm install"
+        ],
+        "fileFilters": [
+          "pnpm-lock.yaml"
+        ]
+      }
+    },
+    {
       "description": "Group GitHub actions together",
       "matchManagers": [
         "github-actions"
@@ -37,9 +54,6 @@
     },
     {
       "description": "Group all npm devDependencies",
-      "matchManagers": [
-        "npm"
-      ],
       "matchDepTypes": [
         "devDependencies"
       ],
@@ -111,10 +125,14 @@
       ]
     },
     {
-      "description": "Group package manager updates (pnpm)",
+      "description": "Group Docker base image updates",
       "matchManagers": [
-        "npm"
+        "dockerfile"
       ],
+      "groupName": "docker base images"
+    },
+    {
+      "description": "Group package manager updates (pnpm)",
       "matchDepTypes": [
         "packageManager"
       ],
