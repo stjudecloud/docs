@@ -72,25 +72,53 @@
       ]
     },
     {
-      "description": "Separate tflint plugin updates - new rules may break CI",
-      "matchManagers": [
-        "tflint-plugin"
-      ],
-      "groupName": "tflint plugins",
-      "labels": [
-        "dependencies",
-        "tflint"
+      "description": "Group Iconify JSON packages",
+      "groupName": "iconify-json",
+      "matchPackagePatterns": [
+        "^@iconify-json/"
       ]
     },
     {
-      "description": "Group yarn packageManager updates",
+      "description": "Group markdown tooling",
+      "groupName": "markdown tools",
+      "matchPackagePatterns": [
+        "^markdown-link-check$",
+        "^markdown-spellcheck$",
+        "^markdown-table-formatter$",
+        "^markdownlint-cli2$"
+      ]
+    },
+    {
+      "description": "Group linting tools",
+      "groupName": "linting",
+      "matchPackagePatterns": [
+        "^eslint$",
+        "^@nuxt/eslint$"
+      ]
+    },
+    {
+      "description": "Group husky (git hooks)",
+      "groupName": "husky",
+      "matchPackagePatterns": [
+        "^husky$"
+      ]
+    },
+    {
+      "description": "Group Vue typecheck",
+      "groupName": "typecheck",
+      "matchPackagePatterns": [
+        "^vue-tsc$"
+      ]
+    },
+    {
+      "description": "Group package manager updates (pnpm)",
       "matchManagers": [
         "npm"
       ],
       "matchDepTypes": [
         "packageManager"
       ],
-      "groupName": "yarn"
+      "groupName": "pnpm"
     },
     {
       "description": "Major updates - require manual review, don't recreate if closed",
@@ -104,6 +132,5 @@
         "breaking"
       ]
     }
-  ],
-
+  ]
 }
