@@ -1,3 +1,10 @@
+## [1.22.0](https://github.com/stjudecloud/docs/compare/v1.21.0...v1.22.0) (2026-04-15)
+
+### Features (New)
+
+* add Renovate configuration and workflow for automated dependenc… ([#155](https://github.com/stjudecloud/docs/issues/155)) ([7e9abdd](https://github.com/stjudecloud/docs/commit/7e9abdd61663614642657c934df317b275ff1ce3))
+* cc4k-v0.5.1.1 ([6aadee2](https://github.com/stjudecloud/docs/commit/6aadee2b1a516050b8103b802b5532d520392096))
+
 ## [1.21.0](https://github.com/stjudecloud/docs/compare/v1.20.0...v1.21.0) (2026-03-31)
 
 ### Features (New)
