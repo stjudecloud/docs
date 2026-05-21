@@ -1,3 +1,17 @@
+## [1.24.0](https://github.com/stjudecloud/docs/compare/v1.23.0...v1.24.0) (2026-05-21)
+
+### Features (New)
+
+* image fix ([a07f842](https://github.com/stjudecloud/docs/commit/a07f8421564c0b9c31cdcf95083de152eeca2feb))
+* image fix ([5e0f3ed](https://github.com/stjudecloud/docs/commit/5e0f3eddf1d9c63fe22b1bd43c3657594e52286d))
+* subtype_tree_image and spelling ([42e7293](https://github.com/stjudecloud/docs/commit/42e7293177d75d99560b6ff007527cd2624516ba))
+
+### Bug Fixes
+
+* format ([c9d6531](https://github.com/stjudecloud/docs/commit/c9d6531fb82506944200a1959157ff9f422f7776))
+* link revision ([0bf235d](https://github.com/stjudecloud/docs/commit/0bf235d56fa34a28357743b289b784543090959c))
+* spelling ([32e65a7](https://github.com/stjudecloud/docs/commit/32e65a72b163b83de3f9254a5ba50ff92d2a1190))
+
 ## [1.23.0](https://github.com/stjudecloud/docs/compare/v1.22.0...v1.23.0) (2026-05-21)
 
 ### Features (New)
