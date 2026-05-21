@@ -1,3 +1,21 @@
+## [1.23.0](https://github.com/stjudecloud/docs/compare/v1.22.0...v1.23.0) (2026-05-21)
+
+### Features (New)
+
+* subtype_tree_releasenotes ([09d904b](https://github.com/stjudecloud/docs/commit/09d904bd8c45ad78ad8d62f1ca57bbdc8165c3ab))
+
+### Features (Revisions)
+
+* format ([9a7fd9c](https://github.com/stjudecloud/docs/commit/9a7fd9c1525d612c0af0d8ef56a131ecde129629))
+* format ([ca85cff](https://github.com/stjudecloud/docs/commit/ca85cff6c4dfd04795306857ebc2d851f7b68aaa))
+* format change ([fd55e9a](https://github.com/stjudecloud/docs/commit/fd55e9a9128ad2d371e7d4be800dfec019af1454))
+* format change ([61d6872](https://github.com/stjudecloud/docs/commit/61d6872a028a4b47dbc9c2eeb1d69757ed8248ba))
+* image addition ([401c51a](https://github.com/stjudecloud/docs/commit/401c51ace54d79368ca0497c2f4a52e465853884))
+* review updates ([db0f5a8](https://github.com/stjudecloud/docs/commit/db0f5a82f06b0ea462def89e48e10e4fbe862838))
+* spelling ([fc378cd](https://github.com/stjudecloud/docs/commit/fc378cd4a190918a4293871981675f78f411b3a8))
+* spelling ([a330fc2](https://github.com/stjudecloud/docs/commit/a330fc2e81646b867956de2bd0a78a59b1838466))
+* spelling changes ([ff17057](https://github.com/stjudecloud/docs/commit/ff17057217c26a22ecf2f054abe65a1d320f2d26))
+
 ## [1.22.0](https://github.com/stjudecloud/docs/compare/v1.21.0...v1.22.0) (2026-04-15)
 
 ### Features (New)
