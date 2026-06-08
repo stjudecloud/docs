@@ -1,3 +1,13 @@
+## [1.25.0](https://github.com/stjudecloud/docs/compare/v1.24.0...v1.25.0) (2026-06-08)
+
+### Features (New)
+
+* oncoprint and june release notes ([0cbff90](https://github.com/stjudecloud/docs/commit/0cbff903fa18511371e1f2556937d0b192ad65bd))
+
+### Features (Revisions)
+
+* spelling and variant prev ([b12c432](https://github.com/stjudecloud/docs/commit/b12c432c540220cd7a159bbe2f6fb44dd3eb26a2))
+
 ## [1.24.0](https://github.com/stjudecloud/docs/compare/v1.23.0...v1.24.0) (2026-05-21)
 
 ### Features (New)
