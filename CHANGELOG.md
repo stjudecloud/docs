@@ -1,3 +1,22 @@
+## [1.26.0](https://github.com/stjudecloud/docs/compare/v1.25.0...v1.26.0) (2026-07-01)
+
+### Features (New)
+
+* cc4k v0.5.2 ([74388e3](https://github.com/stjudecloud/docs/commit/74388e3f204bf99d596005298c3f5c5376724981))
+* cc4kv0.5.2 release notes ([38a0060](https://github.com/stjudecloud/docs/commit/38a0060f4df143a50ea5e52feb3e65527e4b32a9))
+* sample_type and dau updates ([8107266](https://github.com/stjudecloud/docs/commit/8107266a8f62dc84d441269dd295550435fe7737))
+* sample_type update ([880c854](https://github.com/stjudecloud/docs/commit/880c8545c980405606ad5499a7b57a6ea87c436c))
+
+### Features (Revisions)
+
+* format fix and downloadable tree ([4aad0f2](https://github.com/stjudecloud/docs/commit/4aad0f215d2754167b92210470f0b66e6286a085))
+
+### CI
+
+* :fire: removes preview environment for pr180 ([c17e05e](https://github.com/stjudecloud/docs/commit/c17e05eadc74ef3b0195d3e3ec6f6bb266350ee6))
+* :rocket: creates preview environment for pr180 [skip ci] ([5bccc54](https://github.com/stjudecloud/docs/commit/5bccc545d4522a900946d848c4531c4a9493cd53))
+* updates helm release versions in staging cluster deployments ([8a5e10f](https://github.com/stjudecloud/docs/commit/8a5e10f3e181effb6c7dcca39b9eb647f7c03173))
+
 ## [1.25.0](https://github.com/stjudecloud/docs/compare/v1.24.0...v1.25.0) (2026-06-08)
 
 ### Features (New)
