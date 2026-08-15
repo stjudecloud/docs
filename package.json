@@ -38,7 +38,7 @@
     "markdown-table-formatter": "^1.6.1",
     "markdownlint-cli2": "^0.17.2",
     "semantic-release": "^24.2.1",
-    "vue-tsc": "^2.1.6"
+    "vue-tsc": "^2.2.12"
   },
   "release": {
     "branches": [
