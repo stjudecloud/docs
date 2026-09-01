@@ -1,6 +1,6 @@
 # syntax = docker/dockerfile:1.4
 
-FROM node:lts-slim as base
+FROM node:24.14.1-slim as base
 
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
