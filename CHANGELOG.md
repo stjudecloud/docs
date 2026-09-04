@@ -1,3 +1,9 @@
+## [1.27.0](https://github.com/stjudecloud/docs/compare/v1.26.0...v1.27.0) (2026-09-04)
+
+### Features (New)
+
+* cc4k downloadable tree ([04f23d5](https://github.com/stjudecloud/docs/commit/04f23d5036ef15c81bf8feb3b873edd01a4cf1bb))
+
 ## [1.26.0](https://github.com/stjudecloud/docs/compare/v1.25.0...v1.26.0) (2026-07-01)
 
 ### Features (New)
