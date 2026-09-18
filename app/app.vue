@@ -35,6 +35,26 @@ useSeoMeta({
 })
 
 provide('navigation', navigation)
+
+onMounted(() => {
+  const handleIntercomLink = (event: MouseEvent) => {
+    const target = event.target as HTMLElement
+    const link = target.closest('a[href="#intercom-ticket"]')
+
+    if (!link) {
+      return
+    }
+
+    event.preventDefault()
+    window.Intercom?.('show')
+  }
+
+  document.addEventListener('click', handleIntercomLink)
+
+  onBeforeUnmount(() => {
+    document.removeEventListener('click', handleIntercomLink)
+  })
+})
 </script>
 
 <template>
