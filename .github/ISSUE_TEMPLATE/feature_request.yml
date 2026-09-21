@@ -2,6 +2,11 @@ name: Feature Request
 description: Suggest an idea or improvement
 labels: ["enhancement"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        This template is for requests specific to https://docs.stjude.cloud.
+        If you have a request related to St. Jude Cloud that is not specific to the documentation site, please contact [support@stjude.cloud](mailto:support@stjude.cloud).
   - type: textarea
     id: problem
     attributes:

@@ -2,6 +2,11 @@ name: Bug Report
 description: Report a problem with the site or documentation
 labels: ["bug"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        This template is for issues specific to https://docs.stjude.cloud.
+        If you have an issue related to St. Jude Cloud that is not specific to the documentation site, please contact [support@stjude.cloud](mailto:support@stjude.cloud).
   - type: textarea
     id: description
     attributes:
