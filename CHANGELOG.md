@@ -1,3 +1,15 @@
+## [1.28.0](https://github.com/stjudecloud/docs/compare/v1.27.0...v1.28.0) (2026-09-21)
+
+### Features (New)
+
+* passes issue link directly to new issue creation ([#189](https://github.com/stjudecloud/docs/issues/189)) ([162cc5d](https://github.com/stjudecloud/docs/commit/162cc5df1184e1a8b4f5db471ba7e754c6f02a21))
+
+### CI
+
+* adds bug report and feature requests issue templates ([53457e3](https://github.com/stjudecloud/docs/commit/53457e3a590e4bd28bd9e2ba1af383109a054d33))
+* adds support email to issue templates ([af582d8](https://github.com/stjudecloud/docs/commit/af582d87b8d3f1b35b807faff53a8b8d34dbe3c1))
+* prevents blank issues ([8f2ea47](https://github.com/stjudecloud/docs/commit/8f2ea476d64c18989b4fba402073ccb29e3de4d9))
+
 ## [1.27.0](https://github.com/stjudecloud/docs/compare/v1.26.0...v1.27.0) (2026-09-04)
 
 ### Features (New)
