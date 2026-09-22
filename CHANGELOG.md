@@ -1,3 +1,15 @@
+## [1.29.0](https://github.com/stjudecloud/docs/compare/v1.28.0...v1.29.0) (2026-09-22)
+
+### Features (New)
+
+* cohort building release 1 ([c375ab4](https://github.com/stjudecloud/docs/commit/c375ab467fdb0126fca512f84246fa7e344d870f))
+
+### Features (Revisions)
+
+* copilot review changes ([035f437](https://github.com/stjudecloud/docs/commit/035f437054a26591db354e1bdfc2872d51e24e81))
+* release notes ([2fc37a0](https://github.com/stjudecloud/docs/commit/2fc37a0da20ca73f77196dc8663179f3b50bf3dd))
+* review comments ([189d1f8](https://github.com/stjudecloud/docs/commit/189d1f873ad0b3cbbaac852dcbc34e2c8f8c8e8c))
+
 ## [1.28.0](https://github.com/stjudecloud/docs/compare/v1.27.0...v1.28.0) (2026-09-21)
 
 ### Features (New)
