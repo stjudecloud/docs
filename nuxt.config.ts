@@ -44,10 +44,23 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
+      // `/` is a redirect (see `routeRules`) and isn't prerendered, so the
+      // crawler needs a real page to start from.
       routes: [
-        '/'
+        '/overview'
       ],
       crawlLinks: true
+    }
+  },
+
+  image: {
+    ipxStatic: {
+      // Sharp counts every frame of an animated GIF towards the pixel limit, so
+      // some of our GIFs fail to process. IPX only runs at build time (`nuxt
+      // generate`) on our own images, so the limit isn't needed.
+      sharpOptions: {
+        limitInputPixels: false
+      }
     }
   },
 
