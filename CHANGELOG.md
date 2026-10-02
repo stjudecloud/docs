@@ -1,3 +1,52 @@
+## [1.29.0](https://github.com/stjudecloud/docs/compare/v1.28.0...v1.29.0) (2026-09-22)
+
+### Features (New)
+
+* cohort building release 1 ([c375ab4](https://github.com/stjudecloud/docs/commit/c375ab467fdb0126fca512f84246fa7e344d870f))
+
+### Features (Revisions)
+
+* copilot review changes ([035f437](https://github.com/stjudecloud/docs/commit/035f437054a26591db354e1bdfc2872d51e24e81))
+* release notes ([2fc37a0](https://github.com/stjudecloud/docs/commit/2fc37a0da20ca73f77196dc8663179f3b50bf3dd))
+* review comments ([189d1f8](https://github.com/stjudecloud/docs/commit/189d1f873ad0b3cbbaac852dcbc34e2c8f8c8e8c))
+
+## [1.28.0](https://github.com/stjudecloud/docs/compare/v1.27.0...v1.28.0) (2026-09-21)
+
+### Features (New)
+
+* passes issue link directly to new issue creation ([#189](https://github.com/stjudecloud/docs/issues/189)) ([162cc5d](https://github.com/stjudecloud/docs/commit/162cc5df1184e1a8b4f5db471ba7e754c6f02a21))
+
+### CI
+
+* adds bug report and feature requests issue templates ([53457e3](https://github.com/stjudecloud/docs/commit/53457e3a590e4bd28bd9e2ba1af383109a054d33))
+* adds support email to issue templates ([af582d8](https://github.com/stjudecloud/docs/commit/af582d87b8d3f1b35b807faff53a8b8d34dbe3c1))
+* prevents blank issues ([8f2ea47](https://github.com/stjudecloud/docs/commit/8f2ea476d64c18989b4fba402073ccb29e3de4d9))
+
+## [1.27.0](https://github.com/stjudecloud/docs/compare/v1.26.0...v1.27.0) (2026-09-04)
+
+### Features (New)
+
+* cc4k downloadable tree ([04f23d5](https://github.com/stjudecloud/docs/commit/04f23d5036ef15c81bf8feb3b873edd01a4cf1bb))
+
+## [1.26.0](https://github.com/stjudecloud/docs/compare/v1.25.0...v1.26.0) (2026-07-01)
+
+### Features (New)
+
+* cc4k v0.5.2 ([74388e3](https://github.com/stjudecloud/docs/commit/74388e3f204bf99d596005298c3f5c5376724981))
+* cc4kv0.5.2 release notes ([38a0060](https://github.com/stjudecloud/docs/commit/38a0060f4df143a50ea5e52feb3e65527e4b32a9))
+* sample_type and dau updates ([8107266](https://github.com/stjudecloud/docs/commit/8107266a8f62dc84d441269dd295550435fe7737))
+* sample_type update ([880c854](https://github.com/stjudecloud/docs/commit/880c8545c980405606ad5499a7b57a6ea87c436c))
+
+### Features (Revisions)
+
+* format fix and downloadable tree ([4aad0f2](https://github.com/stjudecloud/docs/commit/4aad0f215d2754167b92210470f0b66e6286a085))
+
+### CI
+
+* :fire: removes preview environment for pr180 ([c17e05e](https://github.com/stjudecloud/docs/commit/c17e05eadc74ef3b0195d3e3ec6f6bb266350ee6))
+* :rocket: creates preview environment for pr180 [skip ci] ([5bccc54](https://github.com/stjudecloud/docs/commit/5bccc545d4522a900946d848c4531c4a9493cd53))
+* updates helm release versions in staging cluster deployments ([8a5e10f](https://github.com/stjudecloud/docs/commit/8a5e10f3e181effb6c7dcca39b9eb647f7c03173))
+
 ## [1.25.0](https://github.com/stjudecloud/docs/compare/v1.24.0...v1.25.0) (2026-06-08)
 
 ### Features (New)

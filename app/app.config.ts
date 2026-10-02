@@ -51,7 +51,7 @@ export default defineAppConfig({
       links: [{
         icon: 'i-heroicons-bug-ant',
         label: 'Report an Issue',
-        to: 'https://github.com/stjudecloud/docs/issues',
+        to: 'https://github.com/stjudecloud/docs/issues/new',
         target: '_blank'
       }, {
         icon: 'i-heroicons-star',
