@@ -1,3 +1,13 @@
+## [1.30.0](https://github.com/stjudecloud/docs/compare/v1.29.0...v1.30.0) (2026-10-05)
+
+### Features (New)
+
+* cc4k v0.5.3 ([cb8b05a](https://github.com/stjudecloud/docs/commit/cb8b05a62f09302838c23333802e56480adb94c4))
+
+### Features (Revisions)
+
+* Update CC4K hematologic malignancy hierarchy to v0.5.3 ([0a980f6](https://github.com/stjudecloud/docs/commit/0a980f6b9c7c10ed36c16882d8b2eb8a557d1775))
+
 ## [1.29.0](https://github.com/stjudecloud/docs/compare/v1.28.0...v1.29.0) (2026-09-22)
 
 ### Features (New)
