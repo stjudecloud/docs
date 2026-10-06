@@ -1,3 +1,9 @@
+## [1.31.0](https://github.com/stjudecloud/docs/compare/v1.30.0...v1.31.0) (2026-10-06)
+
+### Features (New)
+
+* cc4k tree update ([782d432](https://github.com/stjudecloud/docs/commit/782d432ae4a9710209826ac9e76e22936d7d64ef))
+
 ## [1.30.0](https://github.com/stjudecloud/docs/compare/v1.29.0...v1.30.0) (2026-10-05)
 
 ### Features (New)
