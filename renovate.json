@@ -19,7 +19,6 @@
   "automerge": false,
   "platformAutomerge": false,
   "minimumReleaseAge": "7 days",
-  "stabilityDays": 7,
   "lockFileMaintenance": {
     "enabled": true
   },
@@ -30,9 +29,9 @@
         "github-actions"
       ],
       "groupName": "github actions",
-      "matchPackagePatterns": [
-        "^actions/",
-        "^github/"
+      "matchPackageNames": [
+        "/^actions//",
+        "/^github//"
       ]
     },
     {
@@ -48,9 +47,9 @@
     {
       "description": "Group all Nuxt dependencies together",
       "groupName": "nuxt packages",
-      "matchPackagePatterns": [
-        "^nuxt$",
-        "^@nuxt/"
+      "matchPackageNames": [
+        "/^nuxt$/",
+        "/^@nuxt//"
       ]
     },
     {
@@ -74,40 +73,40 @@
     {
       "description": "Group Iconify JSON packages",
       "groupName": "iconify-json",
-      "matchPackagePatterns": [
-        "^@iconify-json/"
+      "matchPackageNames": [
+        "/^@iconify-json//"
       ]
     },
     {
       "description": "Group markdown tooling",
       "groupName": "markdown tools",
-      "matchPackagePatterns": [
-        "^markdown-link-check$",
-        "^markdown-spellcheck$",
-        "^markdown-table-formatter$",
-        "^markdownlint-cli2$"
+      "matchPackageNames": [
+        "/^markdown-link-check$/",
+        "/^markdown-spellcheck$/",
+        "/^markdown-table-formatter$/",
+        "/^markdownlint-cli2$/"
       ]
     },
     {
       "description": "Group linting tools",
       "groupName": "linting",
-      "matchPackagePatterns": [
-        "^eslint$",
-        "^@nuxt/eslint$"
+      "matchPackageNames": [
+        "/^eslint$/",
+        "/^@nuxt/eslint$/"
       ]
     },
     {
       "description": "Group husky (git hooks)",
       "groupName": "husky",
-      "matchPackagePatterns": [
-        "^husky$"
+      "matchPackageNames": [
+        "/^husky$/"
       ]
     },
     {
       "description": "Group Vue typecheck",
       "groupName": "typecheck",
-      "matchPackagePatterns": [
-        "^vue-tsc$"
+      "matchPackageNames": [
+        "/^vue-tsc$/"
       ]
     },
     {
