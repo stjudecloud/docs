@@ -515,6 +515,7 @@ astrocytoma
 chondroblastic
 CIC-rearranged
 composable
+CC4K
 desmoplastic
 Dysembryoplastic
 ependymal
@@ -910,6 +911,12 @@ whole-transcriptome
 - content/4.pecan/2.data-facets/3.expression.md
 4f
 MoR
+(MoR)
+[Figure 4f of McLeod et al.]
+pathogenic
+whole-genome
+whole-exome
+whole-transcriptome (RNA-seq)
 
 - content/4.pecan/2.data-facets/4.histology.md
 Slidescale
