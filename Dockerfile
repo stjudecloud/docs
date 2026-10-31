@@ -25,7 +25,7 @@ ENV NUXT_UI_PRO_LICENSE=${NUXT_UI_PRO_LICENSE} \
 RUN pnpm generate
 
 # The site is fully static (`nuxt generate`), so serve it with nginx rather than Node.
-FROM nginxinc/nginx-unprivileged:1-alpine
+FROM nginxinc/nginx-unprivileged:1.26.3-alpine
 
 COPY --link <<'EOF' /etc/nginx/conf.d/default.conf
 server {
