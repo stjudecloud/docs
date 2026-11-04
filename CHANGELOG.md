@@ -1,3 +1,13 @@
+## [1.32.0](https://github.com/stjudecloud/docs/compare/v1.31.0...v1.32.0) (2026-11-04)
+
+### Features (New)
+
+* release_notes_102026 ([6110a1f](https://github.com/stjudecloud/docs/commit/6110a1f4c5b53bac09ab29530ef1588ce868285e))
+
+### Features (Revisions)
+
+* spelling ([01a339c](https://github.com/stjudecloud/docs/commit/01a339cb1dad1b6daa8869c84279b62366aad78f))
+
 ## [1.31.0](https://github.com/stjudecloud/docs/compare/v1.30.0...v1.31.0) (2026-10-06)
 
 ### Features (New)
