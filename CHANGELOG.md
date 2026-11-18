@@ -1,3 +1,5 @@
+## [1.32.1](https://github.com/stjudecloud/docs/compare/v1.32.0...v1.32.1) (2026-11-18)
+
 ## [1.32.0](https://github.com/stjudecloud/docs/compare/v1.31.0...v1.32.0) (2026-11-04)
 
 ### Features (New)
