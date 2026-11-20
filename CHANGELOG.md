@@ -1,3 +1,13 @@
+## [1.33.0](https://github.com/stjudecloud/docs/compare/v1.32.1...v1.33.0) (2026-11-20)
+
+### Bug Fixes
+
+* update stale PeCan paths and terms in .spelling ([6c3fde5](https://github.com/stjudecloud/docs/commit/6c3fde5d925abdea88959516716d011223096d41))
+
+### Features (Revisions)
+
+* variants links, figure numbering, spelling, and markdown ([6c04980](https://github.com/stjudecloud/docs/commit/6c049804dc0551ebfdb731cf5d80f1185afb89f4))
+
 ## [1.32.1](https://github.com/stjudecloud/docs/compare/v1.32.0...v1.32.1) (2026-11-18)
 
 ## [1.32.0](https://github.com/stjudecloud/docs/compare/v1.31.0...v1.32.0) (2026-11-04)
