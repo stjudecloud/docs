@@ -217,6 +217,7 @@ GRCh38
 GRCh38_no_alt
 gVCF
 heatmap
+resize
 heatmaps
 hematopoietic
 heterozygosity
@@ -904,11 +905,17 @@ NCI-TARGET
 de
 novo
 
-- content/4.pecan/2.data-facets/1.variants.md
-pathogneic
+- content/4.pecan/3.data-facets/1.variants.md
+chromothripsis
+DepMap
+hypermutation
+PedDep
+whole-exome
+whole-genome
 whole-transcriptome
+whole-transcriptome (RNA-seq)
 
-- content/4.pecan/2.data-facets/3.expression.md
+- content/4.pecan/3.data-facets/3.expression.md
 4f
 MoR
 (MoR)
@@ -918,15 +925,15 @@ whole-genome
 whole-exome
 whole-transcriptome (RNA-seq)
 
-- content/4.pecan/2.data-facets/4.histology.md
+- content/4.pecan/3.data-facets/4.histology.md
 Slidescale
 
-- content/4.pecan/3.pecan-pie/1.what-is-pie.md
+- content/4.pecan/5.pecan-pie/1.what-is-pie.md
 app-stjude_medal_ceremony
 app-stjude_vep_plus
 pecanpie_ASHG_2017.pptx
 
-- content/4.pecan/3.pecan-pie/2.faq.md
+- content/4.pecan/5.pecan-pie/2.faq.md
 medaling
 pre-HTSlib
 table_S1_gene_list_5_categories_v2.xlsx
