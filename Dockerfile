@@ -25,7 +25,7 @@ ENV NUXT_UI_PRO_LICENSE=${NUXT_UI_PRO_LICENSE} \
 RUN pnpm generate
 
 # The site is fully static (`nuxt generate`), so serve it with nginx rather than Node.
-FROM nginx:1.31.9-alpine
+FROM nginx:1.31.10-alpine
 
 # The official image starts nginx as root. Run it unprivileged instead (as the
 # now-archived nginxinc/nginx-unprivileged image did): no `user` directive, and
